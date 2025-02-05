@@ -1,0 +1,1715 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the dlr_kitchen
+# Extracted from: C:/Users/francesca/Documents/EurobinSimulation/dlr_kitchen/dlr_kitchen/dlr_kitchen.urdf
+
+PROTO dlr_kitchen [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "dlr_kitchen"  # Is Robot.name.
+  field  SFString    controller      "void"         # Is Robot.controller.
+  field  MFString    controllerArgs  []             # Is Robot.controllerArgs.
+  field  SFString    customData      ""             # Is Robot.customData.
+  field  SFBool      supervisor      FALSE          # Is Robot.supervisor.
+  field  SFBool      synchronization TRUE           # Is Robot.synchronization.
+  field  SFBool      selfCollision   FALSE          # Is Robot.selfCollision.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Solid {
+        translation 2.464700 3.965840 0.786209
+        rotation 0.000000 0.000000 1.000000 1.570800
+        children [
+          Pose {
+            translation 0.013879 0.007004 -0.310907
+            rotation 0.999079 -0.030735 0.029949 1.581669
+            children [
+              Shape {
+                appearance DEF SM_kitchenette_visual_0_material PBRAppearance {
+                  baseColor 0.900000 0.900000 0.900000
+                  roughness 1.000000
+                  metalness 0
+                }
+                geometry DEF Kitchenette Mesh {
+                  url "meshes/stl/Kitchenette.stl"
+                }
+              }
+            ]
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_02_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_02_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.148000 0.616000 -0.157000
+              children [
+                Pose {
+                  translation 0.078329 -0.000814 -0.042876
+                  rotation 0.699370 0.000084 0.714760 3.141753
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_02_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_02 Mesh {
+                        url "meshes/stl/Drawer_02.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.209939 0.001170 0.025767
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_02_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF DrawerHandle Mesh {
+                            url "meshes/stl/DrawerHandle.stl"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_02_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          DEF UCX_DrawerHandle_001 Mesh {
+                            url "meshes/stl/UCX_DrawerHandle_001.stl"
+                          }
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          DEF UCX_DrawerHandle_002 Mesh {
+                            url "meshes/stl/UCX_DrawerHandle_002.stl"
+                          }
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          DEF UCX_DrawerHandle_003 Mesh {
+                            url "meshes/stl/UCX_DrawerHandle_003.stl"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_02"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.114080 0.000000 -0.086387
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_02_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.174428 -0.000845 -0.037920
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_02_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.393941 -0.000802 -0.019887
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_02_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.277802 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_02_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.276198 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_02_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.275024 -0.051164
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_02_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.275024 -0.051164
+                    rotation 0.561802 0.607255 0.561802 2.050119
+                    children [
+                      DEF UCX_Drawer_02_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_02_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 6.183145
+                centerOfMass [ 0.071881 -0.000248 -0.062874 ]
+                inertiaMatrix [
+                  2.637778e-01 3.152993e-01 5.102969e-01
+                  -3.025269e-05 3.228943e-02 7.401129e-05
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_03_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_03_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.097000 0.616000 -0.522000
+              children [
+                Pose {
+                  translation -0.017180 -0.001582 -0.051239
+                  rotation -0.777145 -0.000308 -0.629322 3.140957
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_03_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_03 Mesh {
+                        url "meshes/stl/Drawer_03.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.260729 0.000440 0.189908
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_03_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_03_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_03"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.060116 0.275024 -0.113865
+                    rotation 0.561801 0.607255 0.561801 2.050119
+                    children [
+                      DEF UCX_Drawer_03_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 -0.275024 -0.113865
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_03_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 0.276198 0.043913
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_03_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 -0.277802 0.043913
+                    rotation 0.577350 0.577350 0.577350 2.094395
+                    children [
+                      DEF UCX_Drawer_03_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.343152 -0.000365 -0.047587
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_03_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.225218 -0.000845 0.026222
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_03_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.063291 0.000000 -0.149087
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_03_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_03_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 7.757068
+                centerOfMass [ -0.009162 -0.000328 -0.073106 ]
+                inertiaMatrix [
+                  4.029598e-01 4.764734e-01 6.256948e-01
+                  -3.040269e-04 6.446399e-02 3.367331e-04
+                ]
+              }
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 -1.000000 0.000000
+              anchor -0.316000 0.004000 -0.486000
+            }
+            device [
+              RotationalMotor {
+                name "oven_door_joint"
+                maxVelocity 1000.0
+                maxPosition 1.5708000659942627
+                maxTorque 1000.0
+              }
+              PositionSensor {
+                name "oven_door_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.316000 0.004000 -0.486000
+              children [
+                Pose {
+                  translation -0.006091 0.010208 0.231772
+                  rotation 1.000000 0.000000 0.000000 1.570796
+                  children [
+                    Shape {
+                      appearance DEF SM_oven_door_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF OvenDoor Mesh {
+                        url "meshes/stl/OvenDoor.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.046933 0.015960 0.415079
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.004212 0.002279 -0.004971
+                      rotation 0.000054 0.000078 1.000000 2.049588
+                      children [
+                        Shape {
+                          appearance DEF SM_oven_door_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF OvenDoorHandle Mesh {
+                            url "meshes/stl/OvenDoorHandle.stl"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                  name "oven_door_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.015237 0.007637 0.221701
+                        rotation 0.376103 0.655190 0.655189 2.422118
+                        children [
+                          DEF UCX_OvenDoorHandle_001 Mesh {
+                            url "meshes/stl/UCX_OvenDoorHandle_001.stl"
+                          }
+                        ]
+                      }
+                      Pose {
+                        translation 0.015237 0.007637 -0.232883
+                        rotation 0.376103 0.655190 0.655189 2.422118
+                        children [
+                          DEF UCX_OvenDoorHandle_002 Mesh {
+                            url "meshes/stl/UCX_OvenDoorHandle_002.stl"
+                          }
+                        ]
+                      }
+                      Pose {
+                        translation -0.005734 -0.001790 -0.005443
+                        rotation 0.000000 0.000000 1.000000 1.570796
+                        children [
+                          DEF UCX_OvenDoorHandle_003 Mesh {
+                            url "meshes/stl/UCX_OvenDoorHandle_003.stl"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.276021
+                    centerOfMass [ -0.001679 0.000033 -0.006125 ]
+                    inertiaMatrix [
+                      7.072341e-03 1.302058e-03 5.791936e-03
+                      -3.212909e-07 1.429262e-07 2.679103e-03
+                    ]
+                  }
+                }
+              ]
+              name "oven_door"
+              boundingObject Pose {
+                translation -0.006090 0.010208 0.234273
+                rotation 1.000000 0.000000 0.000000 1.570796
+                children [
+                  DEF UCX_OvenDoor_001 Mesh {
+                    url "meshes/stl/UCX_OvenDoor_001.stl"
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 3.353979
+                centerOfMass [ -0.006090 0.010208 0.231773 ]
+                inertiaMatrix [
+                  3.392876e-01 2.408380e-01 9.859467e-02
+                  -1.578418e-15 1.817181e-08 1.243530e-08
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "oven_drawer_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "oven_drawer_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.148000 0.016000 -0.557000
+              children [
+                Pose {
+                  translation 0.078329 -0.000814 -0.042876
+                  rotation 0.699370 0.000084 0.714760 3.141753
+                  children [
+                    Shape {
+                      appearance DEF SM_oven_drawer_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF OvenDrawer Mesh {
+                        url "meshes/stl/OvenDrawer.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.209939 0.001170 0.025767
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_oven_drawer_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "oven_drawer_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "oven_drawer"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.114080 -0.002000 -0.086387
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_OvenDrawer_001 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.174428 -0.000845 -0.042920
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_OvenDrawer_002 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.393941 -0.000802 -0.019887
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_OvenDrawer_003 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.277802 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_OvenDrawer_004 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.274198 0.036613
+                    rotation 0.577350 0.577350 0.577350 2.094395
+                    children [
+                      DEF UCX_OvenDrawer_005 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.275024 -0.051164
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_OvenDrawer_006 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.272923 -0.052538
+                    rotation 0.562169 0.606574 0.562169 2.051115
+                    children [
+                      DEF UCX_OvenDrawer_007 Mesh {
+                        url "meshes/stl/UCX_OvenDrawer_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 5.985869
+                centerOfMass [ 0.070583 -0.009504 -0.063551 ]
+                inertiaMatrix [
+                  2.476534e-01 3.070784e-01 4.871589e-01
+                  -6.238047e-03 -3.138412e-02 -1.557158e-03
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_04_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_04_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.148000 -0.584000 0.043000
+              children [
+                Pose {
+                  translation 0.078329 -0.000814 -0.042876
+                  rotation 0.699370 0.000084 0.714760 3.141753
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_04_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_04 Mesh {
+                        url "meshes/stl/Drawer_04.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.209939 0.001170 0.025767
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_04_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_04_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_04"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.114080 0.000000 -0.086387
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_04_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.174428 -0.000845 -0.037920
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_04_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.393941 -0.000802 -0.019887
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_04_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.277802 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_04_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.276198 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_04_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.275024 -0.051164
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_04_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.275024 -0.051164
+                    rotation 0.561802 0.607255 0.561802 2.050119
+                    children [
+                      DEF UCX_Drawer_04_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_04_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 6.183145
+                centerOfMass [ 0.071881 -0.000248 -0.062874 ]
+                inertiaMatrix [
+                  2.637778e-01 3.152993e-01 5.102969e-01
+                  -3.025269e-05 3.228943e-02 7.401129e-05
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_05_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_05_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.148000 -0.584000 -0.157000
+              children [
+                Pose {
+                  translation 0.078329 -0.000814 -0.042876
+                  rotation 0.699370 0.000084 0.714760 3.141753
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_05_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_05 Mesh {
+                        url "meshes/stl/Drawer_05.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.209939 0.001170 0.025767
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_05_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_05_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_05"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.114080 0.000000 -0.086387
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_05_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.174428 -0.000845 -0.037920
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_05_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.393941 -0.000802 -0.019887
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_05_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.277802 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_05_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.276198 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_05_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.275024 -0.051164
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_05_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.275024 -0.051164
+                    rotation 0.561802 0.607255 0.561802 2.050119
+                    children [
+                      DEF UCX_Drawer_05_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_05_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 6.183145
+                centerOfMass [ 0.071881 -0.000248 -0.062874 ]
+                inertiaMatrix [
+                  2.637778e-01 3.152993e-01 5.102969e-01
+                  -3.025269e-05 3.228943e-02 7.401129e-05
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_06_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_06_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.097000 -0.584000 -0.522000
+              children [
+                Pose {
+                  translation -0.017180 -0.001582 -0.051239
+                  rotation -0.777145 -0.000308 -0.629322 3.140957
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_06_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_06 Mesh {
+                        url "meshes/stl/Drawer_06.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.260729 0.000440 0.189908
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_06_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_06_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_06"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.060116 0.275024 -0.113865
+                    rotation 0.561801 0.607255 0.561801 2.050119
+                    children [
+                      DEF UCX_Drawer_06_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 -0.275024 -0.113865
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_06_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 0.276198 0.043913
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_06_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.060116 -0.277802 0.043913
+                    rotation 0.577350 0.577350 0.577350 2.094395
+                    children [
+                      DEF UCX_Drawer_06_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.343152 -0.000365 -0.047587
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_06_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.225218 -0.000845 0.026222
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_06_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.063291 0.000000 -0.149087
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_06_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_06_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 7.757068
+                centerOfMass [ -0.009162 -0.000328 -0.073106 ]
+                inertiaMatrix [
+                  4.029598e-01 4.764734e-01 6.256948e-01
+                  -3.040269e-04 6.446399e-02 3.367331e-04
+                ]
+              }
+            }
+          }
+          SliderJoint {
+            jointParameters JointParameters {
+              axis -1.000000 0.000000 0.000000
+            }
+            device [
+              LinearMotor {
+                name "drawer_01_joint"
+                maxVelocity 1000.0
+                maxPosition 0.4000000059604645
+                maxForce 1000.0
+              }
+              PositionSensor {
+                name "drawer_01_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.148000 0.616000 0.043000
+              children [
+                Pose {
+                  translation 0.078329 -0.000814 -0.042876
+                  rotation 0.699370 0.000084 0.714760 3.141753
+                  children [
+                    Shape {
+                      appearance DEF SM_drawer_01_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF Drawer_01 Mesh {
+                        url "meshes/stl/Drawer_01.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.209939 0.001170 0.025767
+                  rotation -1.000000 0.000000 0.000000 1.570800
+                  children [
+                    Pose {
+                      translation 0.009244 0.000000 0.000033
+                      rotation 0.000004 0.000010 1.000000 1.570957
+                      children [
+                        Shape {
+                          appearance DEF SM_drawer_01_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry USE DrawerHandle
+                        }
+                      ]
+                    }
+                  ]
+                  name "drawer_01_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.000002 0.001206 0.000001
+                        children [
+                          USE UCX_DrawerHandle_001
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 0.159461
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_002
+                        ]
+                      }
+                      Pose {
+                        translation 0.018012 0.001206 -0.159456
+                        rotation 0.707107 0.000000 0.707107 3.141593
+                        children [
+                          USE UCX_DrawerHandle_003
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.083983
+                    centerOfMass [ 0.002653 0.001206 -0.000007 ]
+                    inertiaMatrix [
+                      9.694583e-04 2.658308e-05 9.495900e-04
+                      -1.230550e-08 1.694905e-09 1.297068e-04
+                    ]
+                  }
+                }
+              ]
+              name "drawer_01"
+              boundingObject Group {
+                children [
+                  Pose {
+                    translation 0.114080 0.000000 -0.086387
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_01_001 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_001.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation -0.174428 -0.000845 -0.037920
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_01_002 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_002.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.393941 -0.000802 -0.019887
+                    rotation 1.000000 0.000000 0.000000 1.570796
+                    children [
+                      DEF UCX_Drawer_01_003 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_003.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.277802 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_01_004 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_004.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.276198 0.036613
+                    rotation 0.707107 0.000000 0.707107 3.141593
+                    children [
+                      DEF UCX_Drawer_01_005 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_005.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 -0.275024 -0.051164
+                    rotation 0.591736 0.547445 0.591736 2.139834
+                    children [
+                      DEF UCX_Drawer_01_006 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_006.stl"
+                      }
+                    ]
+                  }
+                  Pose {
+                    translation 0.110905 0.275024 -0.051164
+                    rotation 0.561802 0.607255 0.561802 2.050119
+                    children [
+                      DEF UCX_Drawer_01_007 Mesh {
+                        url "meshes/stl/UCX_Drawer_01_007.stl"
+                      }
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 6.183145
+                centerOfMass [ 0.071881 -0.000248 -0.062874 ]
+                inertiaMatrix [
+                  2.637778e-01 3.152993e-01 5.102969e-01
+                  -3.025269e-05 3.228943e-02 7.401129e-05
+                ]
+              }
+            }
+          }
+        ]
+        name "kitchenette"
+        boundingObject Group {
+          children [
+            Pose {
+              translation -0.020835 -0.887791 -0.284695
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_001 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_001.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.029884 -0.001068 0.126306
+              rotation 0.577350 -0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_002 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_002.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.029361 -0.001068 -0.732209
+              rotation 0.577350 -0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_003 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_003.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.272165 0.014696 -0.284695
+              rotation 1.000000 0.000000 0.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_004 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_004.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.020835 0.312196 -0.284695
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_005 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_005.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.020835 -0.282804 -0.284695
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_006 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_006.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.004652 -0.236304 -0.250687
+              rotation 0.577350 0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_007 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_007.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.004652 0.265696 -0.250687
+              rotation 0.577350 0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_008 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_008.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.020668 0.014696 0.043965
+              rotation 0.707107 0.000000 0.707107 3.141593
+              children [
+                DEF UCX_Kitchenette_009 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_009.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.321926 0.014553 0.043965
+              rotation 1.000000 0.000000 0.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_010 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_010.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.004652 0.014696 -0.048289
+              rotation 0.577350 -0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_011 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_011.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.004652 0.014696 -0.458037
+              rotation 0.577350 -0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_012 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_012.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.337790 0.234696 0.047812
+              rotation 0.000000 0.000000 1.000000 0.000005
+              children [
+                DEF UCX_Kitchenette_013 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_013.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.337565 -0.205304 0.047812
+              rotation 0.000000 0.000000 1.000000 0.000005
+              children [
+                DEF UCX_Kitchenette_014 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_014.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.020835 0.907696 -0.284695
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Kitchenette_015 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_015.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.034073 0.014845 0.147291
+              rotation 0.577350 -0.577350 0.577350 2.094395
+              children [
+                DEF UCX_Kitchenette_016 Mesh {
+                  url "meshes/stl/UCX_Kitchenette_016.stl"
+                }
+              ]
+            }
+          ]
+        }
+        physics Physics {
+        }
+      }
+      Solid {
+        translation 1.196500 3.903700 0.926806
+        rotation 0.000000 0.000000 1.000000 1.570800
+        children [
+          Pose {
+            translation 0.011898 -0.000350 0.019825
+            rotation 0.021347 0.022475 0.999519 1.495676
+            children [
+              Shape {
+                appearance DEF SM_fridge_visual_0_material PBRAppearance {
+                  baseColor 0.900000 0.900000 0.900000
+                  roughness 1.000000
+                  metalness 0
+                }
+                geometry DEF Fridge Mesh {
+                  url "meshes/stl/Fridge.stl"
+                }
+              }
+            ]
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor -0.255000 -0.298000 0.411000
+            }
+            device [
+              RotationalMotor {
+                name "fridge_door_joint"
+                maxVelocity 1000.0
+                maxPosition 1.5708000659942627
+                maxTorque 1000.0
+              }
+              PositionSensor {
+                name "fridge_door_joint_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation -0.255000 -0.298000 0.411000
+              children [
+                Pose {
+                  translation -0.018724 0.297203 -0.000445
+                  rotation 0.991920 0.079916 0.098527 0.000835
+                  children [
+                    Shape {
+                      appearance DEF SM_fridge_door_visual_0_material PBRAppearance {
+                        baseColor 0.900000 0.900000 0.900000
+                        roughness 1.000000
+                        metalness 0
+                      }
+                      geometry DEF FridgeDoor Mesh {
+                        url "meshes/stl/FridgeDoor.stl"
+                      }
+                    }
+                  ]
+                }
+                Solid {
+                  translation -0.065515 0.576221 -0.393906
+                  children [
+                    Pose {
+                      translation 0.007368 0.003459 -0.000018
+                      rotation -0.000166 0.000050 -1.000000 0.680150
+                      children [
+                        Shape {
+                          appearance DEF SM_fridge_door_handle_visual_0_material PBRAppearance {
+                            baseColor 0.900000 0.900000 0.900000
+                            roughness 1.000000
+                            metalness 0
+                          }
+                          geometry DEF FridgeDoorHandle Mesh {
+                            url "meshes/stl/FridgeDoorHandle.stl"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                  name "fridge_door_handle"
+                  boundingObject Group {
+                    children [
+                      Pose {
+                        translation 0.012037 0.012078 0.000023
+                        rotation 0.000000 0.000000 1.000000 1.570796
+                        children [
+                          DEF UCX_FridgeDoorHandle_001 Mesh {
+                            url "meshes/stl/UCX_FridgeDoorHandle_001.stl"
+                          }
+                        ]
+                      }
+                      Pose {
+                        translation -0.000602 -0.006220 0.000023
+                        children [
+                          DEF UCX_FridgeDoorHandle_002 Mesh {
+                            url "meshes/stl/UCX_FridgeDoorHandle_002.stl"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.073447
+                    centerOfMass [ 0.006625 0.004243 0.000023 ]
+                    inertiaMatrix [
+                      2.213817e-04 1.155938e-04 1.126947e-04
+                      -8.497826e-09 7.954652e-09 9.477768e-05
+                    ]
+                  }
+                }
+              ]
+              name "fridge_door"
+              boundingObject Pose {
+                translation -0.018694 0.297744 -0.000025
+                children [
+                  DEF UCX_FridgeDoor_001 Mesh {
+                    url "meshes/stl/UCX_FridgeDoor_001.stl"
+                  }
+                ]
+              }
+              physics Physics {
+                density -1
+                mass 22.043718
+                centerOfMass [ -0.018694 0.297744 -0.000025 ]
+                inertiaMatrix [
+                  2.608146e+00 4.422137e+00 1.822936e+00
+                  -9.485472e-16 -3.432263e-08 -1.136147e-07
+                ]
+              }
+            }
+          }
+        ]
+        name "fridge"
+        boundingObject Group {
+          children [
+            Pose {
+              translation 0.046301 -0.001007 0.912662
+              rotation 0.707107 0.000000 0.707107 3.141593
+              children [
+                DEF UCX_Fridge_001 Mesh {
+                  url "meshes/stl/UCX_Fridge_001.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.046301 -0.001007 -0.344838
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Fridge_002 Mesh {
+                  url "meshes/stl/UCX_Fridge_002.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.273076 -0.001007 -0.502571
+              children [
+                DEF UCX_Fridge_003 Mesh {
+                  url "meshes/stl/UCX_Fridge_003.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.308071 0.291721 -0.194463
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Fridge_004 Mesh {
+                  url "meshes/stl/UCX_Fridge_004.stl"
+                }
+              ]
+            }
+            Pose {
+              translation -0.320838 0.272211 -0.194463
+              children [
+                DEF UCX_Fridge_005 Mesh {
+                  url "meshes/stl/UCX_Fridge_005.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.046301 0.271494 0.553194
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Fridge_006 Mesh {
+                  url "meshes/stl/UCX_Fridge_006.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.046301 -0.273506 0.553194
+              rotation 0.000000 0.000000 1.000000 1.570796
+              children [
+                DEF UCX_Fridge_007 Mesh {
+                  url "meshes/stl/UCX_Fridge_007.stl"
+                }
+              ]
+            }
+            Pose {
+              translation 0.231299 -0.001004 0.553194
+              children [
+                DEF UCX_Fridge_008 Mesh {
+                  url "meshes/stl/UCX_Fridge_008.stl"
+                }
+              ]
+            }
+          ]
+        }
+        physics Physics {
+        }
+      }
+    ]
+    name IS name
+  }
+}

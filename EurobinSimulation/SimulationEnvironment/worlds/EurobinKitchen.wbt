@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/dlr_kitchen.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.0599797661949728 0.9645148774701185 -0.2571254145081704 0.47454481770224377
+  position -7.069309425865455 -3.6871250041744186 4.387202744409341
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.12 -7.35 0
+  rotation 0 1 0 0.523599
+  floorSize 10 10
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 2.7
+}
+dlr_kitchen {
+  translation 0 -6.95 0
+}

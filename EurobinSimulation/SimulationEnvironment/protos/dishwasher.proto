@@ -1,0 +1,60 @@
+#VRML_SIM R2023b utf8
+# License: Apache License 2.0
+# License URL: http://www.apache.org/licenses/LICENSE-2.0
+# Extracted from: C:/Users/francesca/Documents/EurobinSimulation/models/dishwasher/urdf
+# URDF file from https://gitlab.inria.fr/eurobin-horizon/models/-/tree/2518a141a8f6c5ef0dd8314af509c28a46eab7c2/dishwasher/urdf
+
+PROTO dishwasher [
+  field SFVec3f translation 3.35 -2.73 0
+  field SFRotation rotation 0 0 1 -1.57
+  field SFString name "dishwasher"
+]
+
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller "void"
+    controllerArgs []
+    synchronization TRUE
+    selfCollision FALSE
+    children [
+      Transform {
+        children [
+          DEF dishwasher_base_visual CadShape {
+            url "dishwasher_description/meshes/dishwasher_base.dae"
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              anchor 0 0 0.5  # Adjust anchor position
+              axis 0 1 0      # Rotation around the y-axis
+            }
+            device [
+              RotationalMotor {
+                name "door"
+              }
+            ]
+            endPoint Solid {
+              name "door"
+              children [
+                DEF dishwasher_door_visual CadShape {
+                  url "dishwasher_description/meshes/dishwasher_door.dae"
+                }
+              ]
+              boundingObject Box {
+                size 0.5 0.05 0.7  # Adjust dimensions for the door
+              }
+              physics Physics {
+                mass 0.5
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+
+
+
