@@ -1,22 +1,24 @@
-from controller import Robot, Keyboard, Camera, RangeFinder, CameraRecognitionObject
+from controller import Robot, Camera, RangeFinder, CameraRecognitionObject, Lidar
 import math
 import numpy as np
-import cv2
-from ultralytics import YOLO  
 
 # Constants
-TIME_STEP = 32  # time step
-MAX_SPEED = 7.0  # Maximum motor speed
-
-# Load YOLOv8 model (pretrained on COCO dataset)
-model = YOLO("yolov8n.pt")  # Use 'yolov8n' for fast inference
+TIME_STEP = 8  # Time step for updates
+MAX_SPEED = 5  # Maximum motor speed
+SAFE_DISTANCE = 2.5  # Minimum safe distance from obstacles (in meters)
+TARGET_OBJECT = "fridge"  # Object to detect and approach
+STOP_DISTANCE = 0.3  # Distance at which the robot stops near the object
+ORIENTATION_THRESHOLD = 0.05  # More precise threshold for orientation correction
+TURNING_GAIN = 3.0  # Increased gain for smoother turning
+SLOW_DOWN_DISTANCE = 1.0  # Distance at which to start reducing speed
+WHEELBASE = 0.4  # Distance between wheels (in meters)
+AVOIDANCE_TURN_TIME = 5  # Time steps to turn when avoiding an obstacle
+STUCK_THRESHOLD = 50  # Number of cycles before considering the robot stuck
+BACKUP_TIME = 20  # Time steps to move backward when stuck
+RECOGNITION_INTERVAL = 100  # More frequent object recognition attempts
 
 # Initialize robot
 robot = Robot()
-
-# Enable keyboard
-keyboard = Keyboard()
-keyboard.enable(TIME_STEP)
 
 # Enable RGB and Depth Cameras
 rgb_camera = robot.getDevice("Astra rgb")
@@ -25,11 +27,19 @@ rgb_camera.enable(TIME_STEP)
 depth_camera = robot.getDevice("Astra depth")
 depth_camera.enable(TIME_STEP)
 
+# Enable Eurobin Camera and Recognition
 eurobin_camera = robot.getDevice("camera")
 eurobin_camera.enable(TIME_STEP)
 eurobin_camera.recognitionEnable(TIME_STEP)
 
+# Enable Lidar Sensor
+lidar = robot.getDevice("Hokuyo URG-04LX-UG01")
+lidar.enable(TIME_STEP)
+lidar.enablePointCloud()
 
+# Allow LiDAR time to initialize
+for _ in range(10):
+    robot.step(TIME_STEP)
 
 # Get motors
 motor_names = [
@@ -37,7 +47,6 @@ motor_names = [
     "arm_2_joint", "arm_3_joint", "arm_4_joint", "arm_5_joint",
     "arm_6_joint", "arm_7_joint", "wheel_left_joint", "wheel_right_joint"
 ]
-
 robot_parts = {name: robot.getDevice(name) for name in motor_names}
 
 # Set initial positions
@@ -46,88 +55,105 @@ for name, target in zip(motor_names, target_positions):
     robot_parts[name].setPosition(target)
     robot_parts[name].setVelocity(robot_parts[name].getMaxVelocity() / 2.0)
 
-# Motor control (left and right wheels)
 left_motor = robot_parts["wheel_left_joint"]
 right_motor = robot_parts["wheel_right_joint"]
 
-def check_keyboard():
-    """Handles keyboard input for robot movement."""
-    key = keyboard.getKey()
-    speeds_left, speeds_right = 0.0, 0.0
+# Ensure motors are in velocity mode
+left_motor.setPosition(float('inf'))
+right_motor.setPosition(float('inf'))
 
-    if key == Keyboard.UP:
-        speeds_left, speeds_right = MAX_SPEED, MAX_SPEED
-    elif key == Keyboard.DOWN:
-        speeds_left, speeds_right = -MAX_SPEED, -MAX_SPEED
-    elif key == Keyboard.RIGHT:
-        speeds_left, speeds_right = MAX_SPEED, -MAX_SPEED
-    elif key == Keyboard.LEFT:
-        speeds_left, speeds_right = -MAX_SPEED, MAX_SPEED
+# Keep the arm raised
+robot_parts["arm_6_joint"].setPosition(1.0)
+robot_parts["arm_7_joint"].setPosition(1.0)
 
-    left_motor.setVelocity(speeds_left)
-    right_motor.setVelocity(speeds_right)
+# Object storage
+target_position = None
+found_target = False
+robot_reached_target = False
+robot_position = [0.0, 0.0, 0.0]  # x, y, theta (heading angle in radians)
+stuck_counter = 0  # Counter to detect if the robot is stuck
+step_counter = 0  # Counter to track when to run recognition again
 
-def process_camera_data():
-    """Captures and processes images from the RGB camera using YOLOv8."""
-    width, height = rgb_camera.getWidth(), rgb_camera.getHeight()
-    image = rgb_camera.getImage()
 
-    if image:
-        # Convert Webots image to OpenCV format
-        img_array = np.frombuffer(image, dtype=np.uint8).reshape((height, width, 4))
-        img_rgb = cv2.cvtColor(img_array, cv2.COLOR_BGRA2BGR)  # Convert BGRA to BGR
+def check_lidar_for_obstacles():
+    """Checks LiDAR for obstacles and ensures a clear path."""
+    lidar_data = lidar.getRangeImage()
+    if lidar_data is None or len(lidar_data) == 0:
+        return False
+    front_distance = np.mean(lidar_data[len(lidar_data)//2 - 10 : len(lidar_data)//2 + 10])
+    return front_distance < SAFE_DISTANCE
 
-        # Run YOLOv8 object detection
-        results = model(img_rgb)[0]  # Perform inference
-        
-        # Draw detections on image
-        for box in results.boxes:
-            x1, y1, x2, y2 = map(int, box.xyxy[0])  # Bounding box coordinates
-            label = f"{results.names[int(box.cls[0])]} {box.conf[0]:.2f}"  # Class name + confidence
 
-            # Draw bounding box
-            cv2.rectangle(img_rgb, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            cv2.putText(img_rgb, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
-        # Display the image with detections
-        cv2.imshow("Robot Camera View - YOLOv8 Detection", img_rgb)
-        cv2.waitKey(1)  # Refresh image display
-
-        # Print detected objects
-        for box in results.boxes:
-            class_id = int(box.cls[0])
-            confidence = box.conf[0]
-            object_name = results.names[class_id]
-            print(f"Detected: {object_name} ({confidence:.2f})")
-
-    else:
-        print("No RGB image data available.")
-
-    # Process depth image
-    depth_image = depth_camera.getRangeImage()
-    if depth_image:
-        depth_value = depth_image[0]  # Get depth at (0,0)
-        print(f"Depth at [0,0]: {depth_value:.2f} meters")
-    else:
-        print("No depth data available.")
-
-print("You can drive this robot using the keyboard arrows.")
-
-initial_time = robot.getTime()
-
-# Main loop
-while robot.step(TIME_STEP) != -1:
-    check_keyboard()
-    # process_camera_data()
+def recognize_objects():
+    """Detects the target object and starts navigation towards it."""
+    global target_position, found_target
     objects = eurobin_camera.getRecognitionObjects()
     for obj in objects:
-        print(f"Object ID: {obj.getId()}, Position: {obj.getPosition()}")
+        model_name = obj.getModel()
+        if model_name == TARGET_OBJECT:
+            target_position = obj.getPosition()
+            found_target = True
+            print(f"{TARGET_OBJECT} detected at position: {target_position}")
+            navigate_to_target()
+            return True
+    return False
 
-    # "Hello" movement
-    time_elapsed = robot.getTime() - initial_time
-    robot_parts["arm_6_joint"].setPosition(0.3 * math.sin(5.0 * time_elapsed) - 0.3)
 
-# Cleanup OpenCV window when exiting
-cv2.destroyAllWindows()
+def navigate_to_target():
+    """Navigates towards the target while avoiding obstacles dynamically."""
+    global target_position, robot_reached_target
+    while target_position and not robot_reached_target:
+        if check_lidar_for_obstacles():
+            left_motor.setVelocity(-MAX_SPEED / 4)
+            right_motor.setVelocity(MAX_SPEED / 4)
+            robot.step(TIME_STEP * 10)
+            continue
+        
+        direction_x = target_position[0] - robot_position[0]
+        direction_y = target_position[1] - robot_position[1]
+        distance_to_target = math.sqrt(direction_x**2 + direction_y**2)
+        angle_to_target = math.atan2(direction_y, direction_x)
+        
+        turn_speed = TURNING_GAIN * angle_to_target
+        left_motor.setVelocity(-turn_speed)
+        right_motor.setVelocity(turn_speed)
+        
+        if abs(angle_to_target) <= ORIENTATION_THRESHOLD:
+            left_motor.setVelocity(MAX_SPEED)
+            right_motor.setVelocity(MAX_SPEED)
+        
+        robot.step(TIME_STEP)
+        if distance_to_target <= STOP_DISTANCE:
+            left_motor.setVelocity(0)
+            right_motor.setVelocity(0)
+            robot_reached_target = True
+            print("TARGET REACHED! Robot has stopped.")
+            move_forward_after_reaching_target()
+            return
 
 
+def move_forward_after_reaching_target():
+    """Moves the robot 1 meter forward after reaching the target."""
+    print("Moving 1 meter forward after reaching the target...")
+    distance_moved = 0.0
+    while distance_moved < 4.0:
+        left_motor.setVelocity(MAX_SPEED / 2)
+        right_motor.setVelocity(MAX_SPEED / 2)
+        robot.step(TIME_STEP)
+        distance_moved += (MAX_SPEED / 2) * (TIME_STEP / 1000.0)
+    left_motor.setVelocity(0)
+    right_motor.setVelocity(0)
+    print("Final movement completed.")
+
+
+print("Robot is recognizing objects...")
+while robot.step(TIME_STEP) != -1:
+    if step_counter % RECOGNITION_INTERVAL == 0:
+        found = recognize_objects()
+        if not found:
+            left_motor.setVelocity(MAX_SPEED / 2)
+            right_motor.setVelocity(MAX_SPEED / 2)
+    if robot_reached_target:
+        print("Simulation running, but robot stopped.")
+        break  # Stop robot movement but keep simulation running
+    step_counter += 1
