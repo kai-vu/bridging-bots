@@ -1,0 +1,91 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix kenv:   <http://example.org/kitchenEnvironment#> .
+@prefix kobj:   <http://example.org/kitchenObjects#> .
+
+
+## euROBIN Ontology ##
+<http://example.org/kitchenEnvironment> a owl:Ontology ;
+    rdfs:label "euRobin Kitchen Environment Ontology" .
+
+# Component
+kenv:Component  a   owl:Class ;
+    rdfs:label  "Kitchen Component" .
+
+
+###########################################
+# Component Type
+###########################################
+
+kenv:ComponentType          a   owl:Class ;
+    rdfs:label              "Component Type" .
+
+kenv:SolidComponent         a   owl:Class ;
+    rdfs:label              "Solid Component" ;
+    rdfs:subClassOf         kenv:ComponentType .
+
+kenv:RobotComponent         a   owl:Class ;
+    rdfs:label              "Robot Component" ;
+    rdfs:subClassOf         kenv:ComponentType .
+
+
+###########################################
+# Component Shape
+###########################################
+
+kenv:ComponentShape         a   owl:Class ;
+    rdfs:label              "Component Shape" .
+
+# Component appearance
+
+kenv:ComponentAppearance    a   owl:Class ;
+    rdfs:label              "Component Appearance" ;
+    rdfs:subClassOf         kenv:ComponentShape .
+
+kenv:Appearance             a   owl:Class ;
+    rdfs:label              "Appearance" ;
+    rdfs:subClassOf         kenv:ComponentAppearance .
+
+kenv:Material               a   owl:Class ;
+    rdfs:label              "Material" ;
+    rdfs:subClassOf         kenv:Appearance .
+
+kenv:PBRAppearance          a   owl:Class ;
+    rdfs:label              "PBR Appearance" ;
+    rdfs:subClassOf         kenv:ComponentAppearance .
+
+# Component Geometry
+
+kenv:ComponentGeometry      a   owl:Class ;
+    rdfs:label              "Geometry" ;
+    rdfs:subClassOf         kenv:ComponentShape .
+
+kenv:Plane                  a   owl:Class ;
+    rdfs:label              "Plane" ;
+    rdfs:subClassOf         kenv:Geometry .
+
+kenv:IndexedFaceSet         a   owl:Class ;
+    rdfs:label              "Indexed Face Set" ;
+    rdfs:subClassOf         kenv:Geometry .
+
+kenv:Coordinate             a   owl:Class ;
+    rdfs:label              "Coordinate" ;
+    rdfs:subClassOf         kenv:IndexedFaceSet .
+
+
+###########################################
+# Component Pose
+###########################################
+
+kenv:Pose                   a   owl:Class ;
+    rdfs:label              "Pose" .
+
+kenv:PoseBox                a   owl:Class ;
+    rdfs:label              "Pose Box" ;
+    rdfs:subClassOf         kenv:Pose .
+
+kenv:HingeJoint             a   owl:Class ;
+    rdfs:label              ""

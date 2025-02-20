@@ -1,0 +1,168 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix kenv:   <http://example.org/kitchenEnvironment#> .
+@prefix kobj:   <http://example.org/kitchenObjects#> .
+
+
+###########################################
+# Component Type
+###########################################
+
+kenv:hasComponentType       a   owl:ObjectProperty ;
+    rdfs:label              "has component type" ;
+    rdfs:domain             kenv:Component ;
+    rdfs:range              kenv:ComponentType .
+
+kenv:hasComponentName       a   owl:DataProperty ;
+    rdfs:label              "has component name" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              xsd:string .
+
+kenv:hasComponentTranslation    a   owl:DataProperty ;
+    rdfs:label              "has component translation" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              xsd:string .
+
+kenv:hasComponentRotation   a   owl:DataProperty ;
+    rdfs:label              "has component rotation" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              xsd:string .
+
+kenv:hasComponentModel      a   owl:DataProperty ;
+    rdfs:label              "has component model" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              xsd:string .
+
+kenv:hasRecognitionColors   a   owl:DataProperty ;
+    rdfs:label              "has recognition colors" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              xsd:string .
+
+
+###########################################
+# Component Shape
+###########################################
+
+kenv:hasComponentShape      a   owl:ObjectProperty ;
+    rdfs:label              "has component shape" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              kenv:ComponentShape .
+
+
+###########################################
+# Component Component Appearance
+###########################################
+
+kenv:hasAppearance          a   owl:ObjectProperty ;
+    rdfs:label              "has appearance" ;
+    rdfs:domain             kenv:ComponentShape ;
+    rdfs:range              kenv:ComponentAppearance .
+
+kenv:hasBaseColor           a   owl:DataProperty ;
+    rdfs:label              "has base color" ;
+    rdfs:domain             kenv:PBRAppearance ;
+    rdfs:range              xsd:string .
+
+kenv:hasRoughness           a   owl:DataProperty ;
+    rdfs:label              "has roughness" ;
+    rdfs:domain             kenv:PBRAppearance ;
+    rdfs:range              xsd:string .
+
+kenv:hasMetalness           a   owl:DataProperty ;
+    rdfs:label              "has metalness" ;
+    rdfs:domain             kenv:PBRAppearance ;
+    rdfs:range              xsd:string .
+
+kenv:hasMaterial            a   owl:ObjectProperty ;
+    rdfs:label              "has material" ;
+    rdfs:domain             kenv:Appearance ;
+    rdfs:range              kenv:Material .
+
+kenv:hasDiffuseColor        a   owl:DataProperty ;
+    rdfs:label              "has diffuse color" ;
+    rdfs:domain             kenv:Material ;
+    rdfs:range              xsd:string .
+
+kenv:hasEmissiveColor       a   owl:DataProperty ;
+    rdfs:label              "has emissive color" ;
+    rdfs:domain             kenv:Material ;
+    rdfs:range              xsd:string .
+
+kenv:hasShininess           a   owl:DataProperty ;
+    rdfs:label              "has shininess" ;
+    rdfs:domain             kenv:Material ;
+    rdfs:range              xsd:string .
+
+
+###########################################
+# Component Geometry
+###########################################
+
+kenv:hasGeometry            a   owl:ObjectProperty ;
+    rdfs:label              "has geometry" ;
+    rdfs:domain             kenv:ComponentShape ;
+    rdfs:range              kenv:ComponentGeometry .
+
+kenv:hasPlane               a   owl:ObjectProperty ;
+    rdfs:label              "has plane" ;
+    rdfs:domain             kenv:Geometry ;
+    rdfs:range              kenv:Plane .
+
+kenv:hasPlaneSize           a   owl:DataProperty ;
+    rdfs:label              "has plane size" ;
+    rdfs:domain             kenv:Plane ;
+    rdfs:range              xsd:string .
+
+kenv:hasCoordinatePoint     a   owl:DataProperty ;
+    rdfs:label              "has coordinate point" ;
+    rdfs:domain             kenv:Coordinate ;
+    rdfs:range              xsd:string .
+
+kenv:hasCoordIndex          a   owl:DataProperty ;
+    rdfs:label              "has coordinate index" ;
+    rdfs:domain             kenv:IndexedFaceSet ;
+    rdfs:range              xsd:string .
+
+kenv:hasCreaseAngle         a   owl:DataProperty ;
+    rdfs:label              "has crease angle" ;
+    rdfs:domain             kenv:IndexedFaceSet ;
+    rdfs:range              xsd:string .
+
+
+###########################################
+# Component Bounding Object
+###########################################
+
+kenv:hasBoundingObject      a   owl:ObjectProperty ;
+    rdfs:label              "has bounding object" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              kenv:Pose .
+
+kenv:hasPoseTranslation     a   owl:DataProperty ;
+    rdfs:label              "has pose translation" ;
+    rdfs:domain             kenv:Pose ;
+    rdfs:range              xsd:string .
+
+kenv:hasPoseBox             a   owl:ObjectProperty ;
+    rdfs:label              "has pose box" ;
+    rdfs:domain             kenv:Pose ;
+    rdfs:range              kenv:PoseBox .
+
+kenv:hasBoxSize             a   owl:DataProperty ;
+    rdfs:label              "has box size" ;
+    rdfs:domain             kenv:PoseBox ;
+    rdfs:range              xsd:string .
+
+
+###########################################
+# Component Pose
+###########################################
+
+kenv:hasPose                a   owl:ObjectProperty ;
+    rdfs:label              " has pose" ;
+    rdfs:domain             kenv:ComponentType ;
+    rdfs:range              kenv:Pose .
+
