@@ -1,0 +1,40 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the washing-machine
+# Extracted from: C:\Users\francesca\Documents\EurobinSimulation\washing-machine.urdf
+
+PROTO washing-machine [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "washing-machine"  # Is `Robot.name`.
+  field  SFString    controller      "void"             # Is `Robot.controller`.
+  field  MFString    controllerArgs  []                 # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""                 # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE              # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE               # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE              # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      DEF base_link_visual CadShape {
+        url "e:"C:/Users/francesca/Documents/euROBIN/EurobinSimulation/SimulationEnvironment/protos/washing-machine/base_link.dae"
+      }
+    ]
+    name IS name
+    boundingObject DEF base_link Mesh {
+      url "e:C:/Users/francesca/Documents/euROBIN/EurobinSimulation/SimulationEnvironment/protos/washing-machine/base_link.stl"
+    }
+    physics Physics {
+    }
+  }
+}
