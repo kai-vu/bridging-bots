@@ -8,9 +8,6 @@
 :FoodItem a owl:Class ;
     rdfs:subClassOf :KitchenObject .
 
-:Utensil a owl:Class ;
-    rdfs:subClassOf :KitchenObject .
-
 :dishwasher_door a :Component ;
     :hasLocation :dishwasher_door_Location ;
     :hasName "dishwasher door" ;
@@ -62,11 +59,6 @@
     :hasName "kitchen towel" ;
     :hasOrientation :kitchen_towel_Orientation .
 
-:table a :Furniture ;
-    :hasLocation :table_Location ;
-    :hasName "table" ;
-    :hasOrientation :table_Orientation .
-
 :Appliance a owl:Class ;
     rdfs:subClassOf :KitchenObject .
 
@@ -77,49 +69,87 @@
     rdfs:subClassOf :KitchenObject .
 
 :dishwasher_door_Location a :Location ;
-    :hasCoordinate_X "6.95499901659651"^^xsd:float ;
-    :hasCoordinate_Y "-0.5003459224763495"^^xsd:float .
+    :hasCoordinate_X "5.215232623245343"^^xsd:float ;
+    :hasCoordinate_Y "-0.5201781433071928"^^xsd:float .
 
 :dishwasher_door_Orientation a :Orientation ;
-    :hasCoordinate_Z "-0.351954454152192"^^xsd:float .
+    :hasCoordinate_Z "2.6473322392386316"^^xsd:float .
 
 :freezer_door_Location a :Location ;
-    :hasCoordinate_X "5.017463959436796"^^xsd:float ;
-    :hasCoordinate_Y "0.5203652852763238"^^xsd:float .
+    :hasCoordinate_X "3.322241163993658"^^xsd:float ;
+    :hasCoordinate_Y "0.6016518139900627"^^xsd:float .
 
 :freezer_door_Orientation a :Orientation ;
-    :hasCoordinate_Z "1.7029850884545508"^^xsd:float .
+    :hasCoordinate_Z "-0.7064009342336497"^^xsd:float .
 
 :fridge_Location a :Location ;
-    :hasCoordinate_X "5.299223274150842"^^xsd:float ;
-    :hasCoordinate_Y "-0.1360536128339671"^^xsd:float .
+    :hasCoordinate_X "3.65130797216077"^^xsd:float ;
+    :hasCoordinate_Y "-0.04201260518357752"^^xsd:float .
 
 :fridge_Orientation a :Orientation ;
-    :hasCoordinate_Z "1.9013094823414698"^^xsd:float .
+    :hasCoordinate_Z "-0.7940644140782114"^^xsd:float .
 
 :fridge_door_Location a :Location ;
-    :hasCoordinate_X "5.022469551456203"^^xsd:float ;
-    :hasCoordinate_Y "-0.37916894177345173"^^xsd:float .
+    :hasCoordinate_X "3.328671912072278"^^xsd:float ;
+    :hasCoordinate_Y "-0.2978935657364167"^^xsd:float .
 
 :fridge_door_Orientation a :Orientation ;
-    :hasCoordinate_Z "1.6672852224144963"^^xsd:float .
+    :hasCoordinate_Z "-0.7418143291098063"^^xsd:float .
+
+:glass_Location a :Location ;
+    :hasCoordinate_X "0.8641133177202678"^^xsd:float ;
+    :hasCoordinate_Y "-0.30047636900977104"^^xsd:float .
+
+:glass_Orientation a :Orientation ;
+    :hasCoordinate_Z "-0.1962017115496609"^^xsd:float .
 
 :kitchen_towel_Location a :Location ;
-    :hasCoordinate_X "5.881625402731768"^^xsd:float ;
-    :hasCoordinate_Y "-0.14608608159213698"^^xsd:float .
+    :hasCoordinate_X "3.57828688699952"^^xsd:float ;
+    :hasCoordinate_Y "-0.04967502773797913"^^xsd:float .
 
 :kitchen_towel_Orientation a :Orientation ;
-    :hasCoordinate_Z "1.2752022184504834"^^xsd:float .
+    :hasCoordinate_Z "-1.639368422338843"^^xsd:float .
 
 :partOf a owl:ObjectProperty ;
     rdfs:range :KitchenObject .
 
+:plate_Location a :Location ;
+    :hasCoordinate_X "0.7983074791338731"^^xsd:float ;
+    :hasCoordinate_Y "-0.23105942865939977"^^xsd:float .
+
+:plate_Orientation a :Orientation ;
+    :hasCoordinate_Z "-0.4268026570160277"^^xsd:float .
+
 :table_Location a :Location ;
-    :hasCoordinate_X "2.535449508278378"^^xsd:float ;
-    :hasCoordinate_Y "-0.5209930647748867"^^xsd:float .
+    :hasCoordinate_X "0.48797640517918706"^^xsd:float ;
+    :hasCoordinate_Y "-0.8665340140387039"^^xsd:float .
 
 :table_Orientation a :Orientation ;
-    :hasCoordinate_Z "-2.9016351005391634"^^xsd:float .
+    :hasCoordinate_Z "-0.8436506723171961"^^xsd:float .
+
+:Utensil a owl:Class ;
+    rdfs:subClassOf :KitchenObject .
+
+:glass a :Utensil ;
+    :closeTo :plate ;
+    :hasLocation :glass_Location ;
+    :hasName "glass" ;
+    :hasOrientation :glass_Orientation ;
+    :onTopOf :table .
+
+:plate a :Utensil ;
+    :closeTo :glass ;
+    :hasLocation :plate_Location ;
+    :hasName "plate" ;
+    :hasOrientation :plate_Orientation ;
+    :onTopOf :table .
+
+:table a :Furniture ;
+    :hasLocation :table_Location ;
+    :hasName "table" ;
+    :hasOrientation :table_Orientation ;
+    :isDownOf :glass,
+        :plate .
 
 :Component a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
