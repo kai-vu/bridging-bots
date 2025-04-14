@@ -14,8 +14,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.23597772521814075 0.662281021185527 -0.711124716332042 0.9289659610491157
-  position -10.939081743244582 8.569030794331272 12.796536488916429
+  orientation 0.25271289478903997 0.490149949494362 -0.8341997481526939 1.1071705346793606
+  position -8.583727028635373 11.557934621706393 11.071026677729275
 }
 TexturedBackground {
 }
@@ -33,8 +33,8 @@ RectangleArena {
   }
 }
 Solid {
-  translation -1.86 -1.05 0.7399411400000002
-  rotation -0.9963609381592443 0.08523418950341498 0.00011768656103290682 4.501502577005118e-15
+  translation -1.86 -1.05 0.739941140000009
+  rotation -0.9855538697949572 0.16936022183330296 -0.0008276428934523788 5.347582725350561e-15
   children [
     Pose {
       children [
@@ -103,56 +103,10 @@ Solid {
   ]
 }
 Tiago {
-  hidden position_0_0 2.9527055102539594
-  hidden position_0_1 9.239491014180913
-  hidden position_0_2 -0.0005225554419635992
-  hidden position_0_3 -0.0015487473845598118
-  hidden position_0_4 0.0010961063477904903
-  hidden position_0_5 0.0018453532337956782
-  hidden position_1_0 -0.0002553892829776013
-  hidden translation_2 0 0 0.5997446107170223
-  hidden position_2_0 -4.299096056893433e-08
-  hidden position_3_0 0.07114933649007642
-  hidden translation_4 0.025099999998884927 0.19400001493364896 -0.171
-  hidden rotation_4 0 0 1 0.010149336488078855
-  hidden position_4_0 -6.743900674804651e-05
-  hidden rotation_5 0.9999999988629993 3.3719379490051146e-05 -3.3719503348459186e-05 1.5708000011369865
-  hidden position_5_0 9.715481611834924e-08
-  hidden rotation_6 -0.5774169545809897 -0.5773168955608436 0.5773169516499627 2.0944600560988285
-  hidden position_6_0 2.623819675367441e-05
-  hidden rotation_7 -0.5773603682619853 -0.5773452196086176 -0.5773452195657827 2.0943848514362915
-  hidden position_7_0 -1.034390671048399e-09
-  hidden rotation_8 5.171934723686665e-10 -1 -5.171953456864424e-10 1.5707999999999855
-  hidden position_8_0 2.25690293562161e-08
-  hidden rotation_9 -0.5773502778764384 -0.5773502648462381 -0.5773502648462007 2.094399986969747
-  hidden position_9_0 -2.245979404435133e-10
-  hidden rotation_10 0.5773502691276193 0.5773502693136395 0.5773502691276186 2.094399999813956
-  hidden position_12_0 -1.0789352169382914e-06
-  hidden position_12_1 2.15698232556923e-06
-  hidden translation_33 1.0789352169382914e-06 0 0
-  hidden translation_34 2.15698232556923e-06 0 0
-  hidden rotation_35 0 0 -1 4.2146848510894035e-08
-  hidden position_35_0 -7.030431250498737e-07
-  hidden rotation_36 0.9999999999998765 3.5152027131648453e-07 -3.515215625249081e-07 1.5708000000001165
-  hidden translation_48 1.5646769035981833e-07 -2.8235211457783294e-07 0.029991887789825783
-  hidden rotation_48 0.04257225186019027 -0.1038749115875364 -0.9936788244268036 8.699260782402254e-10
-  hidden rotation_52 0.0668313285883593 0.7055245979837017 -0.7055271895250039 3.0081289517523575
-  hidden rotation_53 -0.06555569115662072 -0.7055844364559294 0.7055870282170345 3.2725162200002584
-  hidden rotation_54 0 0 -1 0.0005225554417507217
-  hidden position_54_0 21.71958439711329
-  hidden rotation_55 0.09615936892833095 -0.7038287208287825 -0.7038313061407719 3.3333211922135506
-  hidden rotation_56 0 0 -1 0.0015487473845477565
-  hidden position_56_0 31.617686608592667
-  hidden rotation_57 0.9899086457260441 -0.10020179478348516 -0.10020216284590613 4.702242864108138
-  hidden rotation_58 0 0 1 0.0010961063478692678
-  hidden position_58_0 21.97722074465619
-  hidden rotation_59 0.004924260631021024 -0.7070969093912154 -0.707099506707952 3.1514410590748594
-  hidden rotation_60 0 0 1 0.001845353233884565
-  hidden position_60_0 31.721192236431996
-  hidden rotation_61 0.9771447595842654 -0.15031292830588608 -0.15031348043711062 4.689266897271253
-  translation -2.469318699361433 2.2674283718882524 0.08821705510467073
-  rotation 0.020618008157318193 -0.03853821524727714 -0.9990443952623823 0.938643
-  controller "navigation_fridge"
+  hidden rotation_10 0.5773502690843956 0.577350269400087 0.5773502690843945 2.094399999684285
+  translation -2.4672888949514014 2.263916943516184 0.08820955400635128
+  rotation 0.04453804524620132 0.00018826274636693282 -0.9990076711831525 0.9383447262019999
+  controller "spatial_reasoning"
   controllerArgs [
     ""
   ]
@@ -345,8 +299,8 @@ Solid {
   ]
 }
 Solid {
-  translation -1.6199999999999999 -1.7099999999999997 0.7389607600000002
-  rotation 0.4141281680171061 -0.9076601479103727 -0.068197627158984 1.1761764000221087e-14
+  translation -1.6199999999999999 -1.71 0.7389607600000059
+  rotation 0.33395533843323333 -0.9360869334870928 -0.11052187515001469 1.121717430212551e-14
   children [
     Shape {
       appearance DEF APPEARANCE PBRAppearance {
@@ -1111,8 +1065,8 @@ Solid {
   ]
 }
 Solid {
-  translation -1.1699999999999937 -0.8600000000000013 0.7378038000000002
-  rotation -0.5259427572340589 -0.8505199651944207 -7.013356575105451e-05 9.36180634358934e-13
+  translation -1.1699999999999915 -0.8600000000000029 0.7378038000000293
+  rotation -0.525791860495525 -0.8506132607062966 -1.213490860385083e-05 2.018497883030772e-12
   children [
     Shape {
       appearance PBRAppearance {
@@ -1209,8 +1163,8 @@ Solid {
   ]
 }
 Solid {
-  translation 3.4100000000000006 -0.42999999999999894 0.7708488458434561
-  rotation -0.5161790239467782 -0.8564778231424739 0.0022256914612264356 6.861248838557908e-13
+  translation 3.4100000000000006 -0.4299999999999979 0.7708488470588372
+  rotation -0.5084045945870487 -0.8610991916633786 -0.005740236881425318 6.83953415438693e-13
   children [
     Shape {
       appearance PBRAppearance {
@@ -1311,8 +1265,8 @@ Robot {
   rotation 0 0 1 -1.5707953071795862
   children [
     Solid {
-      translation 2.4647800761621514 3.9666462633710355 0.6940814650874227
-      rotation -0.0003477587854327163 0.00033337831883355277 0.9999998839613552 1.5707979377627828
+      translation 2.46479913648838 3.967132148808675 0.6920137103779072
+      rotation -0.00082188258376268 0.0008493594532114815 0.9999993015485249 1.5707970181985718
       children [
         Pose {
           translation 0.013879 0.007004 -0.310907
@@ -1334,7 +1288,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position 7.216795009898248e-07
+            position 6.190870735336553e-07
             axis -1 0 0
           }
           device [
@@ -1349,7 +1303,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.14800072167950099 0.616 -0.157
+            translation -0.14800061908707351 0.616 -0.157
             children [
               Pose {
                 translation 0.078329 -0.000814 -0.042876
@@ -1539,7 +1493,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position -0.00011968590213269858
+            position -0.00015275876638149095
             axis -1 0 0
           }
           device [
@@ -1555,7 +1509,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.0968803140978673 0.616 -0.522
+            translation -0.09684724123361851 0.616 -0.522
             children [
               Pose {
                 translation -0.01718 -0.001582 -0.051239
@@ -1729,7 +1683,7 @@ Robot {
         }
         HingeJoint {
           jointParameters HingeJointParameters {
-            position 8.058926222765502e-06
+            position 7.4775888313732646e-06
             axis 0 -1 0
             anchor -0.316 0.004 -0.486
           }
@@ -1746,7 +1700,7 @@ Robot {
           ]
           endPoint Solid {
             translation -0.316 0.004 -0.486
-            rotation 0 -1 0 9.533482977804382e-06
+            rotation 0 -1 0 8.952113650399894e-06
             children [
               Pose {
                 translation -0.006091 0.010208 0.231772
@@ -1867,7 +1821,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position -0.00012112118084361006
+            position -0.00015409062933706983
             axis -1 0 0
           }
           device [
@@ -1883,7 +1837,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.15787877158100383 0.016 -0.557
+            translation -0.15784580213251037 0.016 -0.557
             children [
               Pose {
                 translation 0.078329 -0.000814 -0.042876
@@ -2057,7 +2011,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position 7.195976842826242e-07
+            position 6.170117541979733e-07
             axis -1 0 0
           }
           device [
@@ -2072,7 +2026,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.1579999642611601 -0.584 0.043
+            translation -0.15799986167523 -0.584 0.043
             children [
               Pose {
                 translation 0.078329 -0.000814 -0.042876
@@ -2246,7 +2200,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position 7.215221437953606e-07
+            position 6.188958006404765e-07
             axis -1 0 0
           }
           device [
@@ -2261,7 +2215,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.14800072152214377 -0.584 -0.157
+            translation -0.14800061889580063 -0.584 -0.157
             children [
               Pose {
                 translation 0.078329 -0.000814 -0.042876
@@ -2435,7 +2389,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position -0.00011956467226872567
+            position -0.0001526333487519583
             axis -1 0 0
           }
           device [
@@ -2451,7 +2405,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.09688043532773127 -0.584 -0.522
+            translation -0.09684736665124805 -0.584 -0.522
             children [
               Pose {
                 translation -0.01718 -0.001582 -0.051239
@@ -2625,7 +2579,7 @@ Robot {
         }
         SliderJoint {
           jointParameters JointParameters {
-            position 7.198478797322405e-07
+            position 6.172849956007809e-07
             axis -1 0 0
           }
           device [
@@ -2640,7 +2594,7 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.1480007198478797 0.616 0.043
+            translation -0.14800061728499558 0.616 0.043
             children [
               Pose {
                 translation 0.078329 -0.000814 -0.042876
@@ -3032,7 +2986,7 @@ Solid {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -0.00043918474414983313
+        position -0.00048313354518277296
         axis 0 0 1
         anchor 0.36 0.34 1.55
         minStop -0.01
@@ -3041,7 +2995,7 @@ Solid {
       }
       endPoint Solid {
         translation 0.36 0.34 1.55
-        rotation 0 0 -1 0.00043918474465027814
+        rotation 0 0 -1 0.00048313354473364384
         children [
           Pose {
             translation 0.078 -0.57 -0.19
@@ -3109,7 +3063,7 @@ Solid {
             }
           }
         ]
-        name "upper fridge door"
+        name "freezer door"
         model "freezer door"
         boundingObject Group {
           children [
@@ -3153,7 +3107,7 @@ Solid {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.0004391848810137968
+        position 0.0005709013872701014
         axis 0 0 1
         anchor 0.36 0.34 0.65
         minStop -0.01
@@ -3161,8 +3115,8 @@ Solid {
         dampingConstant 1
       }
       endPoint Solid {
-        translation 0.36 0.34 0.65
-        rotation 0 0 1 0.0004431112169396917
+        translation 0.35999999467934146 0.3400000014228075 0.6497491115798226
+        rotation 0.11226258024328155 0.08618536252123717 0.9899339353533668 0.0004887273673928516
         children [
           Pose {
             translation 0.078 -0.57 0.54
@@ -3230,7 +3184,7 @@ Solid {
             }
           }
         ]
-        name "lower fridge door"
+        name "fridge door"
         model "fridge door"
         boundingObject Group {
           children [
