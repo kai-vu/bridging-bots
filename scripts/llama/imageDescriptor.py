@@ -13,7 +13,7 @@ def encode_image(image_path):
     base64_image = base64.b64encode(image_file.read()).decode('utf-8')
     return base64_image
   
-def get_response(client, user_query, base64_image, llm_model):
+def get_response(client, user_query, base64_image, vlm_model):
     chat_completion = client.chat.completions.create(
         messages=[
             {
@@ -29,17 +29,21 @@ def get_response(client, user_query, base64_image, llm_model):
                 ],
             }
         ],
-        model=llm_model,
+        model=vlm_model,
     )
     response = chat_completion.choices[0].message.content
     return response
-  
-def main(llm_model, api_key, image_path, user_query):
-   client = get_client(api_key)
-   base64_image = encode_image(image_path)
-   response = get_response(client, user_query, base64_image, llm_model)
-   print(response)
 
+def save_response_to_file(image_path, output_path, response):
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(response)
+    return 
+
+def main(api_key, image_path, output_path, user_query, vlm_model):
+    client = get_client(api_key)
+    base64_image = encode_image(image_path)
+    response = get_response(client, user_query, base64_image, vlm_model)
+    save_response_to_file(image_path, output_path, response)
 
 if __name__ == "__main__":
 
@@ -47,10 +51,11 @@ if __name__ == "__main__":
     dotenv_path = os.path.join(current_dir, ".env")
     load_dotenv(dotenv_path)
 
-    llm_model = os.getenv("MODEL")
+    vlm_model = os.getenv("VLM_MODEL")
     api_key = os.getenv("API_KEY")
     image_path = os.getenv("IMAGE_PATH")
+    output_path = os.getenv("OUTPUT_PATH")
 
-    user_query = "What's in this image?"
+    user_query = "Give a detailed description of the image."
 
-    main(llm_model, api_key, image_path, user_query)
+    main(api_key, image_path, output_path, user_query, vlm_model)

@@ -1,9 +1,13 @@
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix ros:    <http://example.org/ontoRos/>.
+@prefix ros:    <http://example.org/ontoRos#>.
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-### CLASSES ###
+
+<http://example.org/ontoRos#>   a   owl:Ontology ;
+    rdfs:label                      "OntoROS ontology" ;
+    owl:versionInfo                 "0.1" .
+
 
 ros:KitchenEnvironment  a   owl:Class ;
     rdfs:label              "Kitchen Environment" .
@@ -19,9 +23,6 @@ ros:Component           a   owl:Class ;
 ros:ObjectsStack        a   owl:Class ;
     rdfs:label              "Objects Group" ;
     rdfs:comment            "representing a group of objects that are stacked" .
-
-
-### PROPERTIES ###
 
 ros:hasObject           a   owl:ObjectProperty ;
     rdfs:label              "has object" ;

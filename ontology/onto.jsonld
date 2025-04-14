@@ -1,0 +1,105 @@
+{
+    "@context": {
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "ros": "http://example.org/ontoRos#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "http://example.org/ontoRos#",
+        "@type": "owl:Ontology",
+        "rdfs:label": "OntoROS ontology",
+        "owl:versionInfo": "0.1"
+      },
+      {
+        "@id": "ros:KitchenEnvironment",
+        "@type": "owl:Class",
+        "rdfs:label": "Kitchen Environment"
+      },
+      {
+        "@id": "ros:Object",
+        "@type": "owl:Class",
+        "rdfs:label": "Kitchen Object",
+        "rdfs:comment": "representing the moovable objects in the kitchen e.g. milk carton, cereal box etc.."
+      },
+      {
+        "@id": "ros:Component",
+        "@type": "owl:Class",
+        "rdfs:label": "Kitchen Component",
+        "rdfs:comment": "representing the components making the kitchen e.g. fridge, dishwasher, cabinets etc.."
+      },
+      {
+        "@id": "ros:ObjectsStack",
+        "@type": "owl:Class",
+        "rdfs:label": "Objects Group",
+        "rdfs:comment": "representing a group of objects that are stacked"
+      },
+      {
+        "@id": "ros:hasObject",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "has object",
+        "rdfs:domain": {
+          "@id": "ros:KitchenEnvironment"
+        },
+        "rdfs:range": {
+          "@id": "ros:Object"
+        }
+      },
+      {
+        "@id": "ros:hasComponent",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "has component",
+        "rdfs:domain": {
+          "@id": "ros:KitchenEnvironment"
+        },
+        "rdfs:range": {
+          "@id": "ros:Component"
+        }
+      },
+      {
+        "@id": "ros:hasCurrentLocation",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "hasCurrentLocation",
+        "rdfs:domain": {
+          "@id": "ros:Object"
+        },
+        "rdfs:range": {
+          "@id": "ros:Component"
+        }
+      },
+      {
+        "@id": "ros:hasTargetLocation",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "hasCurrentLocation",
+        "rdfs:domain": {
+          "@id": "ros:Object"
+        },
+        "rdfs:range": {
+          "@id": "ros:Component"
+        }
+      },
+      {
+        "@id": "ros:hasStackObject",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "has stack object",
+        "rdfs:domain": {
+          "@id": "ros:ObjectsStack"
+        },
+        "rdfs:range": {
+          "@id": "ros:Object"
+        }
+      },
+      {
+        "@id": "ros:hasOrderInStack",
+        "@type": "owl:DataProperty",
+        "rdfs:label": "has order in stack",
+        "rdfs:domain": {
+          "@id": "ros:Object"
+        },
+        "rdfs:range": {
+          "@id": "xsd:int"
+        }
+      }
+    ]
+  }
