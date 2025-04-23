@@ -1,0 +1,133 @@
+#VRML_SIM R2025a utf8
+# A simple robot with a fisheye camera mounted at 1.5 meters and two wheels.
+
+PROTO FisheyeBot [
+  field SFVec3f    translation  0 0 0.1
+  field SFRotation rotation     0 1 0 0
+  field SFString   name         "FisheyeBot"
+  field SFString   controller   "<generic>"
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    children [
+      # Base body
+      Solid {
+        translation 0 0 0.1
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.3 0.3 0.3
+            }
+            geometry Box {
+              size 0.4 0.3 0.2
+            }
+          }
+        ]
+        boundingObject Box {
+          size 0.4 0.3 0.2
+        }
+        physics Physics {
+          density -1
+          mass 3
+        }
+      }
+
+      # Left wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          anchor -0.2 0.15 0.1
+          axis 0 1 0
+        }
+        device [
+          RotationalMotor {
+            name "left_motor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.2 0.15 0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+              }
+              geometry Cylinder {
+                radius 0.05
+                height 0.02
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            radius 0.05
+            height 0.02
+          }
+          physics Physics {
+            density -1
+            mass 0.2
+          }
+        }
+      }
+
+      # Right wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          anchor -0.2 -0.15 0.1
+          axis 0 1 0
+        }
+        device [
+          RotationalMotor {
+            name "right_motor"
+          }
+        ]
+        endPoint Solid {
+          translation -0.2 -0.15 0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+              }
+              geometry Cylinder {
+                radius 0.05
+                height 0.02
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            radius 0.05
+            height 0.02
+          }
+          physics Physics {
+            density -1
+            mass 0.2
+          }
+        }
+      }
+
+      # Fisheye camera on a tall mast
+      Solid {
+        translation 0 0 1.5
+        children [
+          Camera {
+            name "fisheye_camera"
+            width 640
+            height 480
+            fieldOfView 3.1416
+            lens {
+              type "fisheye"
+              focalLength 0.03
+              center [0.5 0.5]
+              k [0.0 0.0 0.0 0.0 0.0]
+            }
+          }
+        ]
+        physics Physics {
+          density -1
+          mass 0.1
+        }
+      }
+    ]
+  }
+}

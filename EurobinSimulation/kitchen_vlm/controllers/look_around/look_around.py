@@ -5,7 +5,10 @@ import math
 # User settings
 rotation_steps = 8
 rotation_angle_deg = 40
-screenshot_dir = f"screenshots_{rotation_angle_deg}degrees_{rotation_steps}images"
+# fov = 1.047 # typical camera
+# fov = 2.097 # for humans
+fov = 1.4
+screenshot_dir = f"screenshots_{fov}fov_{rotation_angle_deg}degrees_{rotation_steps}images"
 wheel_radius = 0.033  # meters, typical for TIAGo LITE
 axle_length = 0.16    # distance between wheels (meters)
 
@@ -24,7 +27,7 @@ if camera is None:
     raise RuntimeError("No camera found.")
 
 camera.enable(timestep)
-
+camera.setFov(fov)
 # Find wheel motors
 left_motor = None
 right_motor = None

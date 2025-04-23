@@ -42,11 +42,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/pal_robotics/tiago_lite/protos/TiagoLite.proto"
 
 WorldInfo {
+  basicTimeStep 16
+  FPS 30
 }
 Viewpoint {
   fieldOfView 1.1
-  orientation -0.023047627817442854 0.9939452611722468 -0.107431953557696 0.650946683619183
-  position -2.763444592218961 0.07091031775554865 4.145818877621535
+  orientation -0.12073420623075172 0.17470799911780488 0.9771900360165794 0.7726831038006694
+  position -1.9709476916687267 -1.3368677359358667 2.1878306105455447
   exposure 0.7999999999999999
 }
 TexturedBackground {
@@ -267,7 +269,17 @@ Floor {
 }
 TiagoLite {
   controller "look_around"
-  supervisor TRUE
+  cameraSlot [
+    Camera {
+      rotation 1 0 0 -1.5707953071795862
+      fieldOfView 1.5
+      width 1600
+      height 1280
+      zoom Zoom {
+        maxFieldOfView 2.2
+      }
+    }
+  ]
 }
 Floor {
   translation -0.5 -3 0
