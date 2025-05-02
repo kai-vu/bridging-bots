@@ -1,16 +1,14 @@
 import os
-import base64
+import json
+from pathlib import Path
 
 from dotenv import load_dotenv
 
 from typing import Literal
 from llama_index.llms.groq import Groq
 from llama_index.core import Document, PropertyGraphIndex
-from llama_index.core.indices.property_graph import (
-    SimpleLLMPathExtractor,
-    SchemaLLMPathExtractor,
-    DynamicLLMPathExtractor,
-)
+from llama_index.core.indices.property_graph import SchemaLLMPathExtractor
+
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
 
@@ -20,19 +18,34 @@ def get_llm(api_key, llm_model):
     return llm
 
 def define_schema():
-    entities = Literal["KitchenEnvironment", "Object", "Component", "ObjectsStack"]
-    relations = Literal["isA", "label", "comment", "domain", "range", "hasObject", "hasComponent", "hasCurrentLocation", "hasTargetLocation", "hasStackObject", "hasOrderInStack"]
+    entities = ["Environment", "Component", "Location", "Appliance", 
+                "Furniture", "Object", "Affordance", "Closing", "Opening",
+                "Pulling", "Pushing", "Dropping", "PickingUp", "PuttingDown", 
+                "Grasping", "Action", "Task", "Workflow", "Instruction"]
+    relations = ["isInstanceOf", "hasComponent", "hasLocation", "sfContains", 
+                 "sfWithin", "sfOverlaps", "hasAffordance", "isAffordedBy", 
+                 "actsOn", "isExecutedIn", "precedes", "follows", "hasTask", 
+                 "hasWorkflow", "hasNaturalLanguage"]
     schema = {
-        "KitchenEnvironment": ["isA", "label", "comment"],
-        "Object": ["isA", "label", "comment"],
-        "Component": ["isA", "label", "comment"],
-        "ObjectsStack": ["isA", "label", "comment"],
-        "hasObject": ["isA", "label", "comment", "domain", "range"],
-        "hasComponent": ["isA", "label", "comment", "domain", "range"],
-        "hasCurrentLocation": ["isA", "label", "comment", "domain", "range"],
-        "hasTargetLocation": ["isA", "label", "comment", "domain", "range"],
-        "hasStackObject": ["isA", "label", "comment", "domain", "range"],
-        "hasOrderInStack": ["isA", "label", "comment", "domain", "range"],
+        "Environment": ["hasComponent"],
+        "Component": ["hasLocation", "hasAffordance"],
+        "Location": ["sfContains", "sfWithin", "sfOverlaps"],
+        "Appliance": ["isInstanceOf"],
+        "Furniture": ["isInstanceOf"],
+        "Object": ["isInstanceOf"],
+        "Affordance": ["label", "comment"],
+        "Closing": ["isInstanceOf"],
+        "Opening": ["isInstanceOf"],
+        "Pulling": ["isInstanceOf"],
+        "Pushing": ["isInstanceOf"],
+        "Dropping": ["isInstanceOf"],
+        "PickingUp": ["isInstanceOf"],
+        "PuttingDown": ["isInstanceOf"],
+        "Grasping": ["isInstanceOf"],
+        "Action": ["isAffordedBy", "actsOn"],
+        "Task": ["isExecutedIn", "precedes", "follows"],
+        "Workflow": ["hasTask"],
+        "Instruction": ["hasWorkflow", "hasNaturalLanguage"]
     }
     return entities, relations, schema
 
@@ -50,7 +63,9 @@ def make_kg_extractor(llm):
     return kg_extractor
 
 def make_schema_index(description_path, llm, kg_extractor):
-    content = open(description_path, 'r', encoding='utf-8').read()
+    with open(description_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    content = data['choices'][0]['message']['content']
     document = Document(text=content)
     schema_index = PropertyGraphIndex.from_documents(
         [document],
@@ -59,6 +74,7 @@ def make_schema_index(description_path, llm, kg_extractor):
         kg_extractors=[kg_extractor],
         show_progress=True,
     )
+
     return schema_index
 
 def save_graph(schema_index, output_path):
@@ -81,8 +97,8 @@ if __name__ == "__main__":
     load_dotenv(dotenv_path)
 
     llm_model = os.getenv("LLM_MODEL")
-    api_key = os.getenv("API_KEY")
-    description_path = os.getenv("OUTPUT_PATH")
+    api_key = os.getenv("GROQ_KEY")
+    description_path = "../output/llama-image-description.json"
     output_path = os.path.join(os.path.split(description_path)[0], 'llama_graph_schemaExtractor.html')
 
     main(llm_model, api_key, description_path, output_path)

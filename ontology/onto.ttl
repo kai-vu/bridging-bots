@@ -11,71 +11,50 @@
 # CLASSES
 ###################################
 
-:Instruction a owl:Class ;
+:Instruction a owl:Class, dul:Entity ;
     rdfs:label "Instruction"@en ;
     rdfs:comment "An instruction is a command or directive given to a system or user."@en .
 
-:Workflow a owl:Class ;
+:Workflow a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Workflow ;
     rdfs:label "Workflow"@en ;
     rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
 
-:Task a owl:Class ;
-    rdfs:subClassOf dul:Task ;
-    rdfs:label "Task"@en ;
-    rdfs:comment "A task is a specific piece of work or activity that is part of a workflow."@en .
-
-:Action a owl:Class ;
-    rdfs:subClassOf dul:Action ;
-    rdfs:label "Action"@en ;
-    rdfs:comment "An action is a specific operation or function that can be performed as part of a task."@en .
-
-:Agent a owl:Class ;
-    rdfs:subClassOf dul:Agent ;
-    rdfs:label "Agent"@en ;
-    rdfs:comment "An agent is an entity that can perform actions or tasks."@en .
-
-:Component a owl:Class ;
+:Component a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of a system that can be used to perform tasks or actions."@en .
 
-:Appliance a dul:Component ;
+:Affordance a owl:Class, dul:Entity ;
+    rdfs:label "Affordance"@en ;
+    rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
+
+:Appliance a owl:Class, dul:Entity ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a device or machine that performs a specific function."@en .
 
-:Furniture a dul:Component ;
+:Furniture a owl:Class, dul:Entity ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "Furniture refers to movable objects intended to support various human activities."@en .
 
-:Object a dul:Component ;
+:Object a owl:Class, dul:Entity ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a material thing that can be perceived by the senses."@en .
 
-:Location a owl:Class ;
-    rdfs:subClassOf soma:Location ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "A location is a specific place or position where an action or task can take place."@en .
-
-:Environment a owl:Class ;
+:Environment a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Entity ;
     rdfs:label "Environment"@en ;
     rdfs:comment "An environment is a surrounding area or context in which an action or task occurs."@en .
 
-:StateType a owl:Class ;
-    rdfs:subClassOf soma:StateType ;
-    rdfs:label "State Type"@en ;
-    rdfs:comment "A state type is a specific condition of the environment."@en .
-
-:InitialState a :StateType ;
+:InitialState a owl:Class, dul:Entity, soma:StateType ;
     rdfs:label "Initial State"@en ;
     rdfs:comment "The initial state of the environment before any actions are performed."@en .
 
-:CurrentState a :StateType ;
+:CurrentState a owl:Class, dul:Entity, soma:StateType ;
     rdfs:label "Current State"@en ;
     rdfs:comment "The current state of the environment during the execution of actions."@en .
 
-:FinalState a :StateType ;
+:FinalState a owl:Class, dul:Entity, soma:StateType ;
     rdfs:label "Final State"@en ;
     rdfs:comment "The final state of the environment after all actions have been performed."@en .
 
@@ -92,86 +71,27 @@
 :hasTask a owl:ObjectProperty ;
     rdfs:subPropertyOf dul:hasTask ;
     rdfs:domain :Workflow ;
-    rdfs:range :Task ;
+    rdfs:range dul:Task ;
     rdfs:label "has task"@en ;
     rdfs:comment "A workflow consists of one or more tasks."@en .
 
-:precedes a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:precedes ;
-    rdfs:domain :Task ;
-    rdfs:range :Task ;
-    rdfs:label "precedes"@en ;
-    rdfs:comment "A task can precede another task in a workflow."@en .
-
-:follows a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:follows ;
-    rdfs:domain :Task ;
-    rdfs:range :Task ;
-    rdfs:label "follows"@en ;
-    rdfs:comment "A task can follow another task in a workflow."@en .
-
-:isExecutedIn a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:isExecutedIn ;
-    rdfs:domain :Task ;
-    rdfs:range :Action ;
-    rdfs:label "is executed in"@en ;
-    rdfs:comment "A task is executed in the context of an action."@en .
-
-:isPerformedBy a owl:ObjectProperty ;
-    rdfs:subPropertyOf soma:isPerformedBy ;
-    rdfs:domain :Action ;
-    rdfs:range :Agent ;
-    rdfs:label "is performed by"@en ;
-    rdfs:comment "An action is performed by an agent."@en .
-
-:hasComponent a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:hasComponent ;
+:actsOn a owl:ObjectProperty ;
     rdfs:domain :Action ;
     rdfs:range :Component ;
-    rdfs:label "has component"@en ;
-    rdfs:comment "An action can have one or more components."@en .
+    rdfs:label "acts on"@en ;
+    rdfs:comment "An action is acted on one or more components."@en .
 
-:hasLocation a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:hasLocation ;
+:hasAffordance a owl:ObjectProperty ;
     rdfs:domain :Component ;
-    rdfs:range :Location ;
-    rdfs:label "has location"@en ;
-    rdfs:comment "A component can have a specific location."@en .
+    rdfs:range :Affordance ;
+    rdfs:label "has affordance"@en ;
+    rdfs:comment "A component has one or more affordances that indicate how it can be used."@en .
 
-:contains a owl:ObjectProperty ;
-    rdfs:subPropertyOf geo:sfContains ;
-    rdfs:domain :Location ;
-    rdfs:range :Component ;
-    rdfs:label "contains"@en ;
-    rdfs:comment "A location can contain other locations."@en .
-
-:within a owl:ObjectProperty ;
-    rdfs:subPropertyOf geo:sfWithin ;
-    rdfs:domain :Component ;
-    rdfs:range :Location ;
-    rdfs:label "within"@en ;
-    rdfs:comment "A component can be within a specific location."@en .
-
-:overlaps a owl:ObjectProperty ;
-    rdfs:subPropertyOf geo:sfOverlaps ;
-    rdfs:domain :Location ;
-    rdfs:range :Location ;
-    rdfs:label "overlaps"@en ;
-    rdfs:comment "Two locations can overlap each other."@en .
-
-:hasComponentType a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:hasComponent ;
-    rdfs:domain :Environment ;
-    rdfs:range :Component ;
-    rdfs:label "has component type"@en ;
-    rdfs:comment "An Environment can have one or more components."@en .
-
-:hasStateType a owl:ObjectProperty ;
-    rdfs:subPropertyOf soma:hasStateType ;
-    rdfs:domain :Environment ;
-    rdfs:range :StateType ;
-    rdfs:label "has state type"@en ;
-    rdfs:comment "An Environment can have one or more state types."@en .
+:isAffordedBy a owl:ObjectProperty ;
+    rdfs:domain :Action ;
+    rdfs:range :Affordance ;
+    rdfs:label "is afforded by"@en ;
+    rdfs:comment "An action is afforded by one affordance."@en .
 
 ###################################
 # DATA PROPERTIES
@@ -182,10 +102,3 @@
     rdfs:range xsd:string ;
     rdfs:label "has natural language"@en ;
     rdfs:comment "The instruction is expressed in a natural language."@en .
-
-:asWKT a owl:DatatypeProperty ;
-    rdfs:subPropertyOf soma:asWKT ;
-    rdfs:domain :Location ;
-    rdfs:range xsd:string ;
-    rdfs:label "as WKT"@en ;
-    rdfs:comment "The location is represented in Well-Known Text (WKT) format."@en .
