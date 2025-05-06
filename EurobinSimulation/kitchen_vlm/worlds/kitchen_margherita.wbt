@@ -47,8 +47,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 1.1
-  orientation -0.12073420623075172 0.17470799911780488 0.9771900360165794 0.7726831038006694
-  position -1.9709476916687267 -1.3368677359358667 2.1878306105455447
+  orientation 0.6337695908520051 0.7248542185338376 0.27004160343358524 0.09500943952423777
+  position -0.5915571940391935 -0.16582296969779695 1.2681684027983149
   exposure 0.7999999999999999
 }
 TexturedBackground {
@@ -267,12 +267,32 @@ Floor {
   appearance Parquetry {
   }
 }
+Plate {
+  translation 1.52 -0.17 0.89
+  name "plate(1)"
+}
+Plate {
+  translation 1.52 -0.17 0.9
+  name "plate(2)"
+}
+Plate {
+  translation 1.52 -0.17 0.91
+  name "plate(3)"
+}
+Plate {
+  translation 1.52 -0.17 0.92
+  name "plate(4)"
+}
+Plate {
+  translation 1.52 -0.17 0.93
+  name "plate(5)"
+}
 TiagoLite {
   controller "look_around"
   cameraSlot [
     Camera {
       rotation 1 0 0 -1.5707953071795862
-      fieldOfView 1.5
+      fieldOfView 1.4
       width 1600
       height 1280
       zoom Zoom {
@@ -816,14 +836,27 @@ JamJar {
   rotation 0 0 1 3.14159
 }
 CerealBox {
-  translation 2.02479 0.333777 0.889608
-  rotation 0 0 1 -2.618905307179586
+  translation 2.02139 0.741534 0.889608
+  rotation 0 0 1 3.14068
   name "cereal box(1)"
 }
 CerealBox {
-  translation 2.05319 0.0376474 0.889608
+  translation 1.84516 0.19741 0.929608
+  rotation 0.7040838637378145 0.09236788212393418 -0.7040838637378145 2.95738
+  name "cereal box(3)"
+}
+CerealBox {
+  translation 1.97798 -0.242424 0.889608
   rotation 0 0 1 2.87916
   name "cereal box(2)"
+  textureUrl [
+    "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+  ]
+}
+CerealBox {
+  translation 1.5779 0.196334 1.00961
+  rotation -0.7040477782260549 0.09291637073148906 -0.7040477782260549 -2.956295307179586
+  name "cereal box(4)"
   textureUrl [
     "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
   ]
