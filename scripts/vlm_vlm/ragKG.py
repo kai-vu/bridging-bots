@@ -28,7 +28,6 @@ def extract_sections_from_json(description_path):
     section2 = sections[1].strip()
     return section1, section2
 
-
 def make_output_file_path(output_path, dir_name, output_file):
     full_output_dir = os.path.join(output_path, dir_name)
     if os.path.exists(full_output_dir):
@@ -71,39 +70,39 @@ def get_response(llm, embedding_model, description_path, ontology_path):
     index = make_vector_store_index(ontology_path, embed_model, llm)
     query_engine = index.as_query_engine(llm)
     response = query_engine.query(f"""
-## INSTRUCTIONS ##
-You are an intelligent assistant that generates Knowledge Graphs for robotics planning tasks.
+    ## INSTRUCTIONS ##
+    You are an intelligent assistant that generates Knowledge Graphs for robotics planning tasks.
 
-You are provided with:
-- A description of a physical environment.
-- A workflow of ordered actions for a robot to perform a certain task.
-- An ontology (retrieved from context) that defines the allowed vocabulary: classes, properties, and relations.
+    You are provided with:
+    - A description of a physical environment.
+    - A workflow of ordered actions for a robot to perform a certain task.
+    - An ontology (retrieved from context) that defines the allowed vocabulary: classes, properties, and relations.
 
-## TASK ##
-You must use the ontology **as a strict schema** to construct a Knowledge Graph.
-This means:
-- Use **only** the classes and properties defined in the ontology.
-- Do **not invent or infer** terms not explicitly defined in the ontology.
-- All entities and relations must conform to the structure and semantics of the ontology.
+    ## TASK ##
+    You must use the ontology **as a strict schema** to construct a Knowledge Graph.
+    This means:
+    - Use **only** the classes and properties defined in the ontology.
+    - Do **not invent or infer** terms not explicitly defined in the ontology.
+    - All entities and relations must conform to the structure and semantics of the ontology.
 
-## OUTPUT FORMAT ##
-- Output only text, with no extra explanations.
-- Output must consist of triples in turtle format.
-- Organize your output into two clearly labeled sections:
+    ## OUTPUT FORMAT ##
+    - Output only text, with no extra explanations.
+    - Output must consist of triples in turtle format.
+    - Organize your output into two clearly labeled sections:
 
-### Triples from Environment Description ###
-(triples based on Section 1)
+    ### Triples from Environment Description ###
+    (triples based on Section 1)
 
-### Triples from Robot Actions ###
-(triples based on Section 2)
+    ### Triples from Robot Actions ###
+    (triples based on Section 2)
 
-## INPUT ##
-### Section 1: Environment Description ###
-{section1}
+    ## INPUT ##
+    ### Section 1: Environment Description ###
+    {section1}
 
-### Section 2: Ordered Robot Actions ###
-{section2}
-""")
+    ### Section 2: Ordered Robot Actions ###
+    {section2}
+    """)
     return response
 
 def save_llm_kg_response(response, output_path):
