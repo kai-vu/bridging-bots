@@ -67,6 +67,7 @@ if __name__ == "__main__":
     nebula_key = os.getenv("NEBULA_KEY")
     nebula_url = os.getenv("NEBULA_URL")
     vlm_model = os.getenv("VLM_MODEL")
+    robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../images"
     output_path = "../../output/vlm_vlm/llama-image-description.json"
@@ -77,7 +78,7 @@ if __name__ == "__main__":
     These images together represent the complete layout and state of the environment in which a robot must perform a task.
     Carefully analyse all visual details from the images. 
     
-    The robot must perform the following task in the environment: [Reorganise the kitchen]
+    The robot must perform the following task in the environment: [{robot_task}]
 
     ## OUTPUT FORMAT ##
     You must return only text output, with no introductory text or explanations.

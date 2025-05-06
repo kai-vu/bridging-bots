@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "room", "label": "room", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "back wall", "label": "back wall", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "furniture pieces and appliances", "label": "furniture pieces and appliances", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "refrigerator", "label": "refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "left side of the image", "label": "left side of the image", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "clock", "label": "clock", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "sink", "label": "sink", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dishes", "label": "dishes", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "center of the image", "label": "center of the image", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "oven", "label": "oven", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "directly below the sink", "label": "directly below the sink", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "drawers", "label": "drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "handles", "label": "handles", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen area", "label": "kitchen area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "cabinets", "label": "cabinets", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "in front of the cabinets", "label": "in front of the cabinets", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dining table", "label": "dining table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "chair", "label": "chair", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pushed", "label": "pushed", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pushed under the dining table", "label": "pushed under the dining table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "middle of the image", "label": "middle of the image", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "couch", "label": "couch", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "hanging above the couch", "label": "hanging above the couch", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "study or workspace", "label": "study or workspace", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "desk", "label": "desk", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "computer monitor", "label": "computer monitor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on top of the desk", "label": "on top of the desk", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bookcase", "label": "bookcase", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "shelves", "label": "shelves", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "next to the desk", "label": "next to the desk", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "books", "label": "books", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on the shelves", "label": "on the shelves", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen counter", "label": "kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "coffee maker", "label": "coffee maker", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "blender", "label": "blender", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on the kitchen counter", "label": "on the kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "mini-fridge", "label": "mini-fridge", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "adjacent to the kitchen counter", "label": "adjacent to the kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "wine rack", "label": "wine rack", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bottles", "label": "bottles", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on the wine rack", "label": "on the wine rack", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "tiles", "label": "tiles", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on the floor", "label": "on the floor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "floor", "label": "floor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "walls", "label": "walls", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "paint", "label": "paint", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on the walls", "label": "on the walls", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bowl", "label": "bowl", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on a tabletop", "label": "on a tabletop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "tabletop", "label": "tabletop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "remote control", "label": "remote control", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "on one of the couches", "label": "on one of the couches", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "d2891d41-3149-454b-9f63-9c5cb766d26b", "label": "d2891d41-3149-454b-9f63-9c5cb766d26b", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "room", "label": "hasLocation", "to": "back wall", "width": 1}, {"arrows": "to", "from": "room", "label": "contains", "to": "furniture pieces and appliances", "width": 1}, {"arrows": "to", "from": "back wall", "label": "hasComponent", "to": "refrigerator", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "hasLocation", "to": "left side of the image", "width": 1}, {"arrows": "to", "from": "left side of the image", "label": "hasComponent", "to": "clock", "width": 1}, {"arrows": "to", "from": "left side of the image", "label": "hasComponent", "to": "sink", "width": 1}, {"arrows": "to", "from": "sink", "label": "hasComponent", "to": "dishes", "width": 1}, {"arrows": "to", "from": "center of the image", "label": "hasComponent", "to": "oven", "width": 1}, {"arrows": "to", "from": "oven", "label": "hasLocation", "to": "directly below the sink", "width": 1}, {"arrows": "to", "from": "directly below the sink", "label": "hasComponent", "to": "drawers", "width": 1}, {"arrows": "to", "from": "drawers", "label": "hasAffordance", "to": "handles", "width": 1}, {"arrows": "to", "from": "kitchen area", "label": "hasComponent", "to": "cabinets", "width": 1}, {"arrows": "to", "from": "cabinets", "label": "hasLocation", "to": "in front of the cabinets", "width": 1}, {"arrows": "to", "from": "in front of the cabinets", "label": "hasComponent", "to": "dining table", "width": 1}, {"arrows": "to", "from": "dining table", "label": "hasComponent", "to": "chair", "width": 1}, {"arrows": "to", "from": "dining table", "label": "isAffordedBy", "to": "pushed", "width": 1}, {"arrows": "to", "from": "chair", "label": "hasLocation", "to": "pushed under the dining table", "width": 1}, {"arrows": "to", "from": "middle of the image", "label": "hasComponent", "to": "dining table", "width": 1}, {"arrows": "to", "from": "couch", "label": "hasLocation", "to": "left side of the image", "width": 1}, {"arrows": "to", "from": "clock", "label": "hasLocation", "to": "hanging above the couch", "width": 1}, {"arrows": "to", "from": "hanging above the couch", "label": "hasComponent", "to": "couch", "width": 1}, {"arrows": "to", "from": "study or workspace", "label": "hasComponent", "to": "desk", "width": 1}, {"arrows": "to", "from": "desk", "label": "hasComponent", "to": "computer monitor", "width": 1}, {"arrows": "to", "from": "computer monitor", "label": "hasLocation", "to": "on top of the desk", "width": 1}, {"arrows": "to", "from": "on top of the desk", "label": "hasComponent", "to": "desk", "width": 1}, {"arrows": "to", "from": "bookcase", "label": "hasComponent", "to": "shelves", "width": 1}, {"arrows": "to", "from": "bookcase", "label": "hasLocation", "to": "next to the desk", "width": 1}, {"arrows": "to", "from": "next to the desk", "label": "hasComponent", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "shelves", "label": "hasComponent", "to": "books", "width": 1}, {"arrows": "to", "from": "books", "label": "hasLocation", "to": "on the shelves", "width": 1}, {"arrows": "to", "from": "on the shelves", "label": "hasComponent", "to": "shelves", "width": 1}, {"arrows": "to", "from": "kitchen counter", "label": "hasComponent", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "kitchen counter", "label": "hasComponent", "to": "blender", "width": 1}, {"arrows": "to", "from": "coffee maker", "label": "hasLocation", "to": "on the kitchen counter", "width": 1}, {"arrows": "to", "from": "on the kitchen counter", "label": "hasComponent", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "blender", "label": "hasLocation", "to": "on the kitchen counter", "width": 1}, {"arrows": "to", "from": "mini-fridge", "label": "hasLocation", "to": "adjacent to the kitchen counter", "width": 1}, {"arrows": "to", "from": "adjacent to the kitchen counter", "label": "hasComponent", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "wine rack", "label": "hasComponent", "to": "bottles", "width": 1}, {"arrows": "to", "from": "wine rack", "label": "hasLocation", "to": "adjacent to the kitchen counter", "width": 1}, {"arrows": "to", "from": "bottles", "label": "hasLocation", "to": "on the wine rack", "width": 1}, {"arrows": "to", "from": "on the wine rack", "label": "hasComponent", "to": "wine rack", "width": 1}, {"arrows": "to", "from": "tiles", "label": "hasLocation", "to": "on the floor", "width": 1}, {"arrows": "to", "from": "on the floor", "label": "hasComponent", "to": "floor", "width": 1}, {"arrows": "to", "from": "floor", "label": "hasComponent", "to": "tiles", "width": 1}, {"arrows": "to", "from": "walls", "label": "hasComponent", "to": "paint", "width": 1}, {"arrows": "to", "from": "walls", "label": "hasLocation", "to": "on the walls", "width": 1}, {"arrows": "to", "from": "on the walls", "label": "hasComponent", "to": "walls", "width": 1}, {"arrows": "to", "from": "paint", "label": "hasLocation", "to": "on the walls", "width": 1}, {"arrows": "to", "from": "bowl", "label": "hasLocation", "to": "on a tabletop", "width": 1}, {"arrows": "to", "from": "on a tabletop", "label": "hasComponent", "to": "tabletop", "width": 1}, {"arrows": "to", "from": "tabletop", "label": "hasComponent", "to": "bowl", "width": 1}, {"arrows": "to", "from": "remote control", "label": "hasLocation", "to": "on one of the couches", "width": 1}, {"arrows": "to", "from": "on one of the couches", "label": "hasComponent", "to": "couch", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
