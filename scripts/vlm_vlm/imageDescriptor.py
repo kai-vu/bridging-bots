@@ -3,9 +3,8 @@ import json
 import base64
 import requests
 
-from groq import Groq
 from dotenv import load_dotenv
-
+from pathlib import Path
 
 def convert_image_to_base64(file_path):
     with open(file_path, "rb") as image_file:
@@ -63,16 +62,33 @@ def main(images_folder_path, nebula_key, nebula_url, vlm_model, user_query, outp
 if __name__ == "__main__":
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    dotenv_path = os.path.join(current_dir, ".env")
-    load_dotenv(dotenv_path)
+    load_dotenv(dotenv_path=Path('../.env'))
 
     nebula_key = os.getenv("NEBULA_KEY")
     nebula_url = os.getenv("NEBULA_URL")
     vlm_model = os.getenv("VLM_MODEL")
 
-    images_folder_path = "../images"
-    output_path = "../output/llama-image-description.json"
+    images_folder_path = "../../images"
+    output_path = "../../output/vlm_vlm/llama-image-description.json"
 
-    user_query = "Describe the images as they represent one single scene"
+    user_query = """
+    ## INSTRUCTIONS ##
+    You are given a set of images taken from the same environment at different angles. 
+    These images together represent the complete layout and state of the environment in which a robot must perform a task.
+    Carefully analyse all visual details from the images. 
+    
+    The robot must perform the following task: [Reorganise the kitchen]
+
+    ## OUTPUT FORMAT ##
+    You must return only text output, with no introductory text or explanations.
+    Format your output into exaclty three sections, each clearly separated by a section title as shown below.
+
+    ## SECTION TITLES AND EXPECTED CONTENT ## 
+    1. Environment Description: describe the environment as seen from all images combined. Include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
+
+    2. Ordered Robot Actions:list the robot's actions in order to complete the task, such that: each step is a single, atomic, clear action; the plan is physically and logically valid; actions reference specific objects and locations based on the environment description
+    """
+
+    # 3. Final Environment Description: describe how the environment should look after the task is completed. Include: the new positions of any moved objects
 
     main(images_folder_path, nebula_key, nebula_url, vlm_model, user_query, output_path)

@@ -1,0 +1,8 @@
+#
+
+<http://find-a-name.org/Environment> a <http://www.w3.org/2002/07/owl#Class> .
+<http://find-a-name.org/Environment> a <http://find-a-name.org/Location> .
+<http://find-a-name.org/Environment> rdfs:comment "An open-concept space that includes both a kitchen and living area." .
+<http://find-a-name.org/Environment> rdfs:label "Open-concept space" .
+<http://find-a-name.org/Environment> rdfs:subClassOf <http://www.ease-crc.org/ont/SOMA.owl#Location> .
+<http://find-a-name.org/Environment> asWKT "POLYGON ((-122.084051 37.385348, -122.084051 37.385348, -122.084051 37.385348))" .

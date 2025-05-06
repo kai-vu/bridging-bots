@@ -1,7 +1,9 @@
 import os
+import re
 import json
-from pathlib import Path
+import shutil
 
+from pathlib import Path
 from dotenv import load_dotenv
 from rdflib import Graph, URIRef, Literal, Namespace
 
@@ -15,6 +17,13 @@ from llama_index.core import Settings
 def get_llm(api_key, llm_model):
     llm = Groq(model= llm_model, api_key=api_key)
     return llm
+
+def make_output_dir(output_path, dir_name):
+    full_output_path = os.path.join(output_path, dir_name)
+    if os.path.exists(full_output_path):
+        shutil.rmtree(full_output_path)
+    os.makedirs(full_output_path)
+    return full_output_path
 
 def define_schema():
     entities = ["Environment", "Component", "Location", "Appliance", 
@@ -48,6 +57,16 @@ def define_schema():
     }
     return entities, relations, schema
 
+def extract_sections_from_json(description_path):
+    with open(description_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    content = data['choices'][0]['message']['content']
+    pattern = r'Section 1:.*?\n[-]+\n(.*?)\nSection 2:.*?\n[-]+\n(.*?)\n'
+    match = re.search(pattern, content, re.DOTALL)
+    section1 = match.group(1).strip()
+    section2 = match.group(2).strip()
+    return section1, section2
+
 def make_kg_extractor(llm):
     entities, relations, schema = define_schema()
     kg_extractor = DynamicLLMPathExtractor(
@@ -63,25 +82,31 @@ def make_kg_extractor(llm):
     return kg_extractor
 
 def make_dynamic_index(description_path, llm, kg_extractor):
-    with open(description_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    content = data['choices'][0]['message']['content']
-    document = Document(text=content)
-    dynamic_index = PropertyGraphIndex.from_documents(
-        [document],
+    section1, section2 = extract_sections_from_json(description_path)
+    document1 = Document(text=section1)
+    document2 = Document(text=section2)
+    dynamic_index_1 = PropertyGraphIndex.from_documents(
+        [document1],
         llm=llm,
         embed_kg_nodes=False,
         kg_extractors=[kg_extractor],
         show_progress=True,
     )
-    return dynamic_index
+    dynamic_index_2 = PropertyGraphIndex.from_documents(
+        [document2],
+        llm=llm,
+        embed_kg_nodes=False,
+        kg_extractors=[kg_extractor],
+        show_progress=True,
+    )
+    return dynamic_index_1, dynamic_index_2
 
-def save_index(dynamic_index, output_path_index):
-    dynamic_index.storage_context.persist(persist_dir=output_path_index)
+def save_index(dynamic_index, full_output_path):
+    dynamic_index.storage_context.persist(persist_dir=full_output_path)
     return
 
-def save_turtle(output_path_index, output_path_turtle):
-    json_path = Path(output_path_index+"/property_graph_store.json")
+def save_turtle(full_output_path):
+    json_path = os.path.join(full_output_path, "property_graph_store.json")
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     triplets = data.get("triplets", [])
@@ -93,36 +118,42 @@ def save_turtle(output_path_index, output_path_turtle):
         pred_uri = ns[pred.replace(" ", "_")]
         obj_uri  = ns[obj.replace(" ", "_")]
         g.add((subj_uri, pred_uri, obj_uri))
+    output_path_turtle = os.path.join(full_output_path, "kg.ttl")
     g.serialize(destination=output_path_turtle, format="turtle")
-    print(f"Turtle file saved to: {output_path_turtle}")
     return
 
-def save_network_graph(dynamic_index, output_path_network_graph):
+def save_network_graph(dynamic_index, full_output_path):
+    output_path_network_graph = os.path.join(full_output_path, "kg.html")
     dynamic_index.property_graph_store.save_networkx_graph(
         name=output_path_network_graph
     )
     return 
 
-def main(llm_model, api_key, description_path, output_path_index, output_path_turtle, output_path_network_graph):
+def main(llm_model, api_key, description_path, output_path):
     llm = get_llm(api_key, llm_model)
+    output_path_og = make_output_dir(output_path, "observationGraph")
+    output_path_ag = make_output_dir(output_path, "actionGraph")
+
     kg_extractor = make_kg_extractor(llm)
-    dynamic_index = make_dynamic_index(description_path, llm, kg_extractor)
-    save_index(dynamic_index, output_path_index)
-    save_turtle(output_path_index, output_path_turtle)
-    save_network_graph(dynamic_index, output_path_network_graph)
+    dynamic_index_1, dynamic_index_2 = make_dynamic_index(description_path, llm, kg_extractor)
+
+    save_index(dynamic_index_1, output_path_og)
+    save_index(dynamic_index_2, output_path_ag)
+
+    save_turtle(output_path_og)
+    save_turtle(output_path_ag)
+
+    save_network_graph(dynamic_index_1, output_path_og)
+    save_network_graph(dynamic_index_2, output_path_ag)
 
 if __name__ == "__main__":
 
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    dotenv_path = os.path.join(current_dir, ".env")
-    load_dotenv(dotenv_path)
+    load_dotenv(dotenv_path=Path('../.env'))
 
     llm_model = os.getenv("LLM_MODEL")
     api_key = os.getenv("GROQ_KEY")
-    description_path = "../output/llama-image-description.json"
-    output_path_index = "../output/dynamicWithOntology/dynamic_index"
-    output_path_turtle = "../output/dynamicWithOntology/dynamicWithOntology.ttl"
-    output_path_network_graph = "../output/dynamicWithOntology/dynamicWithOntology.html"
+    description_path = "../../output/vlm_vlm/llama-image-description.json"
+    output_path = "../../output/vlm_vlm/dynamicKG"
 
-    main(llm_model, api_key, description_path, output_path_index, output_path_turtle, output_path_network_graph)
+    main(llm_model, api_key, description_path, output_path)
     
