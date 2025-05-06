@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "kitchen counter", "label": "kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "coffee maker", "label": "coffee maker", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen", "label": "kitchen", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "counter", "label": "counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "drawers", "label": "drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen area with drawers", "label": "kitchen area with drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "blender", "label": "blender", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "computer monitor", "label": "computer monitor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "sink", "label": "sink", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "refrigerator", "label": "refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "remote control", "label": "remote control", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "oven", "label": "oven", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "mini-fridge", "label": "mini-fridge", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bowl", "label": "bowl", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "wine rack", "label": "wine rack", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bookcase", "label": "bookcase", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the kitchen counter", "label": "Move to the kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the coffee maker", "label": "Pick up the coffee maker", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the coffee maker to the kitchen area with the drawers", "label": "Move the coffee maker to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the coffee maker on the counter next to the drawers", "label": "Place the coffee maker on the counter next to the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the blender", "label": "Pick up the blender", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the blender to the kitchen area with the drawers", "label": "Move the blender to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the blender on the counter next to the coffee maker", "label": "Place the blender on the counter next to the coffee maker", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the kitchen area with the drawers", "label": "Move to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Open the drawers", "label": "Open the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Remove any unnecessary items from the drawers", "label": "Remove any unnecessary items from the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Close the drawers", "label": "Close the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the dining table", "label": "Move to the dining table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dining table", "label": "dining table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Push the chair away from the table", "label": "Push the chair away from the table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "chair", "label": "chair", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Clear the table of any objects", "label": "Clear the table of any objects", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "table", "label": "table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the mini-fridge", "label": "Pick up the mini-fridge", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the mini-fridge to the kitchen area with the drawers", "label": "Move the mini-fridge to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the mini-fridge on the counter next to the drawers", "label": "Place the mini-fridge on the counter next to the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the area set up for meal preparation or as a bar", "label": "Move to the area set up for meal preparation or as a bar", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "area set up for meal preparation or as a bar", "label": "area set up for meal preparation or as a bar", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the wine rack", "label": "Pick up the wine rack", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the wine rack to the kitchen area with the drawers", "label": "Move the wine rack to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the wine rack on the counter next to the drawers", "label": "Place the wine rack on the counter next to the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the study or workspace area", "label": "Move to the study or workspace area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "study or workspace area", "label": "study or workspace area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the bookcase", "label": "Pick up the bookcase", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the bookcase to the kitchen area with the drawers", "label": "Move the bookcase to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the bookcase on the counter next to the drawers", "label": "Place the bookcase on the counter next to the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Clear the bookcase of any unnecessary items", "label": "Clear the bookcase of any unnecessary items", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pick up the bowl", "label": "Pick up the bowl", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move the bowl to the kitchen area with the drawers", "label": "Move the bowl to the kitchen area with the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Place the bowl on the counter next to the drawers", "label": "Place the bowl on the counter next to the drawers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Move to the couch", "label": "Move to the couch", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "couch", "label": "couch", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "e92171c2-75c0-4e8b-b1b8-58bd3a2070ba", "label": "e92171c2-75c0-4e8b-b1b8-58bd3a2070ba", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "kitchen counter", "label": "hasComponent", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "kitchen counter", "label": "hasLocation", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "coffee maker", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "coffee maker", "label": "hasComponent", "to": "drawers", "width": 1}, {"arrows": "to", "from": "coffee maker", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "blender", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "computer monitor", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "sink", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "refrigerator", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "remote control", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "oven", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "mini-fridge", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "bowl", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "wine rack", "width": 1}, {"arrows": "to", "from": "kitchen area with drawers", "label": "hasComponent", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "blender", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "blender", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "blender", "label": "hasComponent", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "mini-fridge", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "mini-fridge", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "wine rack", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "wine rack", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "bookcase", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "bookcase", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "bowl", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "bowl", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "remote control", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "remote control", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "computer monitor", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "computer monitor", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "oven", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "oven", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "sink", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "sink", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "hasLocation", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "hasComponent", "to": "counter", "width": 1}, {"arrows": "to", "from": "Move to the kitchen counter", "label": "actsOn", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "Move to the kitchen counter", "label": "isExecutedIn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "Pick up the coffee maker", "label": "actsOn", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "Pick up the coffee maker", "label": "isExecutedIn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "Move the coffee maker to the kitchen area with the drawers", "label": "actsOn", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "Move the coffee maker to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Place the coffee maker on the counter next to the drawers", "label": "actsOn", "to": "coffee maker", "width": 1}, {"arrows": "to", "from": "Place the coffee maker on the counter next to the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Pick up the blender", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Pick up the blender", "label": "actsOn", "to": "blender", "width": 1}, {"arrows": "to", "from": "Move the blender to the kitchen area with the drawers", "label": "actsOn", "to": "blender", "width": 1}, {"arrows": "to", "from": "Move the blender to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Place the blender on the counter next to the coffee maker", "label": "actsOn", "to": "blender", "width": 1}, {"arrows": "to", "from": "Place the blender on the counter next to the coffee maker", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Open the drawers", "label": "actsOn", "to": "drawers", "width": 1}, {"arrows": "to", "from": "Open the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Remove any unnecessary items from the drawers", "label": "actsOn", "to": "drawers", "width": 1}, {"arrows": "to", "from": "Remove any unnecessary items from the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Close the drawers", "label": "actsOn", "to": "drawers", "width": 1}, {"arrows": "to", "from": "Close the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move to the dining table", "label": "isExecutedIn", "to": "dining table", "width": 1}, {"arrows": "to", "from": "Push the chair away from the table", "label": "actsOn", "to": "chair", "width": 1}, {"arrows": "to", "from": "Push the chair away from the table", "label": "isExecutedIn", "to": "dining table", "width": 1}, {"arrows": "to", "from": "Clear the table of any objects", "label": "actsOn", "to": "table", "width": 1}, {"arrows": "to", "from": "Clear the table of any objects", "label": "isExecutedIn", "to": "dining table", "width": 1}, {"arrows": "to", "from": "Pick up the mini-fridge", "label": "isExecutedIn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "Pick up the mini-fridge", "label": "actsOn", "to": "mini-fridge", "width": 1}, {"arrows": "to", "from": "Move the mini-fridge to the kitchen area with the drawers", "label": "actsOn", "to": "mini-fridge", "width": 1}, {"arrows": "to", "from": "Move the mini-fridge to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Place the mini-fridge on the counter next to the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Place the mini-fridge on the counter next to the drawers", "label": "actsOn", "to": "mini-fridge", "width": 1}, {"arrows": "to", "from": "Move to the area set up for meal preparation or as a bar", "label": "isExecutedIn", "to": "area set up for meal preparation or as a bar", "width": 1}, {"arrows": "to", "from": "Pick up the wine rack", "label": "isExecutedIn", "to": "area set up for meal preparation or as a bar", "width": 1}, {"arrows": "to", "from": "Pick up the wine rack", "label": "actsOn", "to": "wine rack", "width": 1}, {"arrows": "to", "from": "Move the wine rack to the kitchen area with the drawers", "label": "actsOn", "to": "wine rack", "width": 1}, {"arrows": "to", "from": "Move the wine rack to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Place the wine rack on the counter next to the drawers", "label": "actsOn", "to": "wine rack", "width": 1}, {"arrows": "to", "from": "Place the wine rack on the counter next to the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move to the study or workspace area", "label": "isExecutedIn", "to": "study or workspace area", "width": 1}, {"arrows": "to", "from": "Pick up the bookcase", "label": "actsOn", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "Pick up the bookcase", "label": "isExecutedIn", "to": "study or workspace area", "width": 1}, {"arrows": "to", "from": "Move the bookcase to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move the bookcase to the kitchen area with the drawers", "label": "actsOn", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "Place the bookcase on the counter next to the drawers", "label": "actsOn", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "Place the bookcase on the counter next to the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Clear the bookcase of any unnecessary items", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Clear the bookcase of any unnecessary items", "label": "actsOn", "to": "bookcase", "width": 1}, {"arrows": "to", "from": "Pick up the bowl", "label": "isExecutedIn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "Pick up the bowl", "label": "actsOn", "to": "bowl", "width": 1}, {"arrows": "to", "from": "Move the bowl to the kitchen area with the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move the bowl to the kitchen area with the drawers", "label": "actsOn", "to": "bowl", "width": 1}, {"arrows": "to", "from": "Place the bowl on the counter next to the drawers", "label": "actsOn", "to": "bowl", "width": 1}, {"arrows": "to", "from": "Place the bowl on the counter next to the drawers", "label": "isExecutedIn", "to": "kitchen area with drawers", "width": 1}, {"arrows": "to", "from": "Move to the couch", "label": "isExecutedIn", "to": "couch", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

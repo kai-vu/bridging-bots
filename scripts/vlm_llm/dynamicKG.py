@@ -5,16 +5,14 @@ import shutil
 
 from pathlib import Path
 from dotenv import load_dotenv
-from pyvis.network import Network
 from rdflib import Graph, URIRef, Literal, Namespace
 
-from typing import Literal
 from llama_index.llms.groq import Groq
 from llama_index.core import Document, PropertyGraphIndex
-from llama_index.core.indices.property_graph import SchemaLLMPathExtractor
-from llama_index.core.chat_engine import SimpleChatEngine
+from llama_index.core.indices.property_graph import DynamicLLMPathExtractor
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
+from llama_index.core.chat_engine import SimpleChatEngine
 
 
 def get_llm(api_key, llm_model):
@@ -27,29 +25,69 @@ def extract_description_from_json(description_path):
     description = data['choices'][0]['message']['content']
     return description
 
+def make_output_dir(output_path, dir_name):
+    full_output_path = os.path.join(output_path, dir_name)
+    if os.path.exists(full_output_path):
+        shutil.rmtree(full_output_path)
+    os.makedirs(full_output_path)
+    return full_output_path
+
+def define_schema():
+    entities = ["Environment", "Component", "Location", "Appliance", 
+                "Furniture", "Object", "Affordance", "Closing", "Opening",
+                "Pulling", "Pushing", "Dropping", "PickingUp", "PuttingDown", 
+                "Grasping", "Action", "Task", "Workflow", "Instruction"]
+    relations = ["isInstanceOf", "hasComponent", "hasLocation", "sfContains", 
+                 "sfWithin", "sfOverlaps", "hasAffordance", "isAffordedBy", 
+                 "actsOn", "isExecutedIn", "precedes", "follows", "hasTask", 
+                 "hasWorkflow", "hasNaturalLanguage"]
+    schema = {
+        "Environment": ["hasComponent"],
+        "Component": ["hasLocation", "hasAffordance"],
+        "Location": ["sfContains", "sfWithin", "sfOverlaps"],
+        "Appliance": ["isInstanceOf"],
+        "Furniture": ["isInstanceOf"],
+        "Object": ["isInstanceOf"],
+        "Affordance": ["label", "comment"],
+        "Closing": ["isInstanceOf"],
+        "Opening": ["isInstanceOf"],
+        "Pulling": ["isInstanceOf"],
+        "Pushing": ["isInstanceOf"],
+        "Dropping": ["isInstanceOf"],
+        "PickingUp": ["isInstanceOf"],
+        "PuttingDown": ["isInstanceOf"],
+        "Grasping": ["isInstanceOf"],
+        "Action": ["isAffordedBy", "actsOn"],
+        "Task": ["isExecutedIn", "precedes", "follows"],
+        "Workflow": ["hasTask"],
+        "Instruction": ["hasWorkflow", "hasNaturalLanguage"]
+    }
+    return entities, relations, schema
+
 def make_kg_extractor(llm):
-    kg_extractor = SchemaLLMPathExtractor(
+    entities, relations, schema = define_schema()
+    kg_extractor = DynamicLLMPathExtractor(
         llm=llm,
         max_triplets_per_chunk=50,
         num_workers=4,
-        strict=False,
-        possible_entities=None,
-        possible_relations=None,
-        possible_relation_props=None,
-        possible_entity_props=None,
+        allowed_entity_types=entities,
+        allowed_entity_props=["isA", "label", "comment"],
+        allowed_relation_types=relations,
+        allowed_relation_props=["isA", "label", "domain", "range"],
+        #kg_validation_schema=schema,
     )
     return kg_extractor
 
-def make_schema_index(text, llm, kg_extractor):
+def make_dynamic_index(text, llm, kg_extractor):
     document = Document(text=text)
-    schema_index = PropertyGraphIndex.from_documents(
+    dynamic_index = PropertyGraphIndex.from_documents(
         [document],
         llm=llm,
         embed_kg_nodes=False,
         kg_extractors=[kg_extractor],
         show_progress=True,
     )
-    return schema_index
+    return dynamic_index
 
 def get_response(llm, robot_task, description):
     chat_engine = SimpleChatEngine.from_defaults(llm=llm)
@@ -74,15 +112,8 @@ def get_response(llm, robot_task, description):
     response = chat_engine.chat(prompt)
     return response
 
-def make_output_dir(output_path, dir_name):
-    full_output_path = os.path.join(output_path, dir_name)
-    if os.path.exists(full_output_path):
-        shutil.rmtree(full_output_path)
-    os.makedirs(full_output_path)
-    return full_output_path
-
-def save_index(schema_index, full_output_path):
-    schema_index.storage_context.persist(persist_dir=full_output_path)
+def save_index(dynamic_index, full_output_path):
+    dynamic_index.storage_context.persist(persist_dir=full_output_path)
     return
 
 def save_turtle(full_output_path):
@@ -102,9 +133,9 @@ def save_turtle(full_output_path):
     g.serialize(destination=output_path_turtle, format="turtle")
     return
 
-def save_network_graph(schema_index, full_output_path):
+def save_network_graph(dynamic_index, full_output_path):
     output_path_network_graph = os.path.join(full_output_path, "kg.html")
-    schema_index.property_graph_store.save_networkx_graph(
+    dynamic_index.property_graph_store.save_networkx_graph(
         name=output_path_network_graph
     )
     return 
@@ -118,17 +149,17 @@ def main(llm_model, api_key, robot_task, description_path, output_path):
     description = extract_description_from_json(description_path)
     response = get_response(llm, robot_task, description)
 
-    schema_index_obs = make_schema_index(description, llm, kg_extractor)
-    schema_index_acs = make_schema_index(str(response), llm, kg_extractor)
+    dynamic_index_obs = make_dynamic_index(description, llm, kg_extractor)
+    dynamic_index_acs = make_dynamic_index(str(response), llm, kg_extractor)
 
-    save_index(schema_index_obs, output_path_og)
-    save_index(schema_index_acs, output_path_ag)
+    save_index(dynamic_index_obs, output_path_og)
+    save_index(dynamic_index_acs, output_path_ag)
 
     save_turtle(output_path_og)
     save_turtle(output_path_ag)
 
-    save_network_graph(schema_index_obs, output_path_og)
-    save_network_graph(schema_index_acs, output_path_ag)
+    save_network_graph(dynamic_index_obs, output_path_og)
+    save_network_graph(dynamic_index_acs, output_path_ag)
 
 if __name__ == "__main__":
 
@@ -139,7 +170,7 @@ if __name__ == "__main__":
     robot_task = os.getenv("ROBOT_TASK")
 
     description_path = "../../output/vlm_llm/llama-image-description.json"
-    output_path = "../../output/vlm_llm/schemaKG"
+    output_path = "../../output/vlm_llm/dynamicKG"
 
     main(llm_model, api_key, robot_task, description_path, output_path)
     

@@ -1,0 +1,137 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Clear_the_bookcase_of_any_unnecessary_items kitchen:actsOn kitchen:bookcase ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Clear_the_table_of_any_objects kitchen:actsOn kitchen:table ;
+    kitchen:isExecutedIn kitchen:dining_table .
+
+kitchen:Close_the_drawers kitchen:actsOn kitchen:drawers ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_blender_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:blender ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_bookcase_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:bookcase ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_bowl_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:bowl ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_coffee_maker_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:coffee_maker ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_mini-fridge_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:mini-fridge ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_the_wine_rack_to_the_kitchen_area_with_the_drawers kitchen:actsOn kitchen:wine_rack ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_to_the_area_set_up_for_meal_preparation_or_as_a_bar kitchen:isExecutedIn kitchen:area_set_up_for_meal_preparation_or_as_a_bar .
+
+kitchen:Move_to_the_couch kitchen:isExecutedIn kitchen:couch .
+
+kitchen:Move_to_the_dining_table kitchen:isExecutedIn kitchen:dining_table .
+
+kitchen:Move_to_the_kitchen_area_with_the_drawers kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Move_to_the_kitchen_counter kitchen:actsOn kitchen:kitchen ;
+    kitchen:isExecutedIn kitchen:kitchen_counter .
+
+kitchen:Move_to_the_study_or_workspace_area kitchen:isExecutedIn kitchen:study_or_workspace_area .
+
+kitchen:Open_the_drawers kitchen:actsOn kitchen:drawers ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Pick_up_the_blender kitchen:actsOn kitchen:blender ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Pick_up_the_bookcase kitchen:actsOn kitchen:bookcase ;
+    kitchen:isExecutedIn kitchen:study_or_workspace_area .
+
+kitchen:Pick_up_the_bowl kitchen:actsOn kitchen:bowl ;
+    kitchen:isExecutedIn kitchen:kitchen_counter .
+
+kitchen:Pick_up_the_coffee_maker kitchen:actsOn kitchen:coffee_maker ;
+    kitchen:isExecutedIn kitchen:kitchen_counter .
+
+kitchen:Pick_up_the_mini-fridge kitchen:actsOn kitchen:mini-fridge ;
+    kitchen:isExecutedIn kitchen:kitchen_counter .
+
+kitchen:Pick_up_the_wine_rack kitchen:actsOn kitchen:wine_rack ;
+    kitchen:isExecutedIn kitchen:area_set_up_for_meal_preparation_or_as_a_bar .
+
+kitchen:Place_the_blender_on_the_counter_next_to_the_coffee_maker kitchen:actsOn kitchen:blender ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Place_the_bookcase_on_the_counter_next_to_the_drawers kitchen:actsOn kitchen:bookcase ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Place_the_bowl_on_the_counter_next_to_the_drawers kitchen:actsOn kitchen:bowl ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Place_the_coffee_maker_on_the_counter_next_to_the_drawers kitchen:actsOn kitchen:coffee_maker ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Place_the_mini-fridge_on_the_counter_next_to_the_drawers kitchen:actsOn kitchen:mini-fridge ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Place_the_wine_rack_on_the_counter_next_to_the_drawers kitchen:actsOn kitchen:wine_rack ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:Push_the_chair_away_from_the_table kitchen:actsOn kitchen:chair ;
+    kitchen:isExecutedIn kitchen:dining_table .
+
+kitchen:Remove_any_unnecessary_items_from_the_drawers kitchen:actsOn kitchen:drawers ;
+    kitchen:isExecutedIn kitchen:kitchen_area_with_drawers .
+
+kitchen:computer_monitor kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:oven kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:refrigerator kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:remote_control kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:sink kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:blender kitchen:hasComponent kitchen:coffee_maker,
+        kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:bowl kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:kitchen_counter kitchen:hasComponent kitchen:coffee_maker ;
+    kitchen:hasLocation kitchen:kitchen .
+
+kitchen:mini-fridge kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:wine_rack kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:bookcase kitchen:hasComponent kitchen:counter ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:coffee_maker kitchen:hasComponent kitchen:counter,
+        kitchen:drawers ;
+    kitchen:hasLocation kitchen:kitchen_area_with_drawers .
+
+kitchen:kitchen_area_with_drawers kitchen:hasComponent kitchen:blender,
+        kitchen:bookcase,
+        kitchen:bowl,
+        kitchen:coffee_maker,
+        kitchen:computer_monitor,
+        kitchen:mini-fridge,
+        kitchen:oven,
+        kitchen:refrigerator,
+        kitchen:remote_control,
+        kitchen:sink,
+        kitchen:wine_rack .
+
