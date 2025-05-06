@@ -1,0 +1,13 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Living_Room kitchen:hasComponent kitchen:Coffee_Table,
+        kitchen:Sofa,
+        kitchen:TV ;
+    kitchen:hasLocation kitchen:House .
+
+kitchen:Coffee_Table kitchen:hasAffordance kitchen:Holding .
+
+kitchen:Sofa kitchen:hasAffordance kitchen:Seating .
+
+kitchen:TV kitchen:hasAffordance kitchen:Watching .
+

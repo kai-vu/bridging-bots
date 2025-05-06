@@ -21,14 +21,11 @@ def get_llm(api_key, llm_model):
     llm = Groq(model= llm_model, api_key=api_key)
     return llm
 
-def extract_sections_from_json(description_path):
+def extract_description_from_json(description_path):
     with open(description_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
-    content = data['choices'][0]['message']['content']
-    sections = content.strip().split('\n\n')
-    section1 = sections[0].strip()
-    section2 = sections[1].strip()
-    return section1, section2
+    description = data['choices'][0]['message']['content']
+    return description
 
 def make_kg_extractor(llm):
     kg_extractor = SchemaLLMPathExtractor(
@@ -44,28 +41,16 @@ def make_kg_extractor(llm):
     return kg_extractor
 
 def make_schema_index(description_path, llm, kg_extractor):
-    section1, section2 = extract_sections_from_json(description_path)
-    document1 = Document(text=section1)
-    document2 = Document(text=section2)
-    # schema index section 1
-    schema_index_1 = PropertyGraphIndex.from_documents(
-        [document1],
+    description = extract_description_from_json(description_path)
+    document = Document(text=description)
+    schema_index = PropertyGraphIndex.from_documents(
+        [document],
         llm=llm,
         embed_kg_nodes=False,
         kg_extractors=[kg_extractor],
         show_progress=True,
     )
-
-    # schema index section 2
-    schema_index_2 = PropertyGraphIndex.from_documents(
-        [document2],
-        llm=llm,
-        embed_kg_nodes=False,
-        kg_extractors=[kg_extractor],
-        show_progress=True,
-    )
-
-    return schema_index_1, schema_index_2
+    return schema_index
 
 def make_output_dir(output_path, dir_name):
     full_output_path = os.path.join(output_path, dir_name)
@@ -125,8 +110,8 @@ if __name__ == "__main__":
 
     llm_model = os.getenv("LLM_MODEL")
     api_key = os.getenv("GROQ_KEY")
-    description_path = "../../output/vlm_vlm/llama-image-description.json"
-    output_path = "../../output/vlm_vlm/schemaKG"
+    description_path = "../../output/vlm_llm/llama-image-description.json"
+    output_path = "../../output/vlm_llm/schemaKG"
 
     main(llm_model, api_key, description_path, output_path)
     

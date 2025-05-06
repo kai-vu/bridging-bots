@@ -69,24 +69,22 @@ if __name__ == "__main__":
     vlm_model = os.getenv("VLM_MODEL")
 
     images_folder_path = "../../images"
-    output_path = "../../output/vlm_vlm/llama-image-description.json"
+    output_path = "../../output/vlm_llm/llama-image-description.json"
 
     user_query = """
     ## INSTRUCTIONS ##
-    You are given a set of images taken from the same environment at different angles. 
-    These images together represent the complete layout and state of the environment in which a robot must perform a task.
-    Carefully analyse all visual details from the images. 
-    
-    The robot must perform the following task in the environment: [Reorganise the kitchen]
+    You are given a set of images taken from the same environment at different angles.  
+    These images together represent the complete layout and state of the environment.  
+    Carefully analyse all visual details from the images.  
+
+    Your task is to produce a comprehensive description of the environment as seen in the images.
 
     ## OUTPUT FORMAT ##
-    You must return only text output, with no introductory text or explanations.
-    Format your output into exactly two sections, each clearly separated by a section title as shown below.
+    You must return only text output, with no introductory text or explanations.  
+    Format your output into exactly one section, clearly marked by the section title below.
 
-    ## SECTION TITLES AND EXPECTED CONTENT ## 
-    1. Environment Description: describe the environment as seen from all images combined. Include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
-
-    2. Ordered Robot Actions:list the robot's actions in order to complete the task, such that: each step is a single, atomic, clear action; the plan is physically and logically valid; actions reference specific objects and locations based on the environment description
+    ## SECTION TITLE AND EXPECTED CONTENT ##
+    1. Environment Description: describe the environment as seen from all images combined. Include: all visible objects, their positions relative to each other and to the environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
     """
 
     # 3. Final Environment Description: describe how the environment should look after the task is completed. Include: the new positions of any moved objects

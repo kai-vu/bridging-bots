@@ -1,0 +1,5 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Environment_Description kitchen:HAS kitchen:Environment ;
+    kitchen:IS_A kitchen:Description .
+

@@ -61,10 +61,9 @@ def extract_sections_from_json(description_path):
     with open(description_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
     content = data['choices'][0]['message']['content']
-    pattern = r'Section 1:.*?\n[-]+\n(.*?)\nSection 2:.*?\n[-]+\n(.*?)\n'
-    match = re.search(pattern, content, re.DOTALL)
-    section1 = match.group(1).strip()
-    section2 = match.group(2).strip()
+    sections = content.strip().split('\n\n')
+    section1 = sections[0].strip()
+    section2 = sections[1].strip()
     return section1, section2
 
 def make_kg_extractor(llm):
