@@ -47,8 +47,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 1.1
-  orientation 0.6337695908520051 0.7248542185338376 0.27004160343358524 0.09500943952423777
-  position -0.5915571940391935 -0.16582296969779695 1.2681684027983149
+  orientation 0.2872884602565593 0.6221985910734331 -0.7282405192446038 0.27512750426530597
+  position -0.9933955727385475 0.2585195540073467 1.5161983520993818
   exposure 0.7999999999999999
 }
 TexturedBackground {
@@ -846,11 +846,12 @@ CerealBox {
   name "cereal box(3)"
 }
 CerealBox {
-  translation 1.97798 -0.242424 0.889608
-  rotation 0 0 1 2.87916
+  translation 1.55708 -0.46067 0.899608
+  rotation 0 0 1 -0.26243530717958663
   name "cereal box(2)"
+  size 0.03 0.2 0.1
   textureUrl [
-    "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+    "../../../../../Downloads/euROBIN_Objects-Copy of Original.jpg"
   ]
 }
 CerealBox {
@@ -862,10 +863,11 @@ CerealBox {
   ]
 }
 CerealBox {
-  translation 1.85996 -0.607243 0.889608
+  translation 1.72591 -0.643788 0.889608
   rotation 0 0 1 2.87972
+  size 0.06 0.1 0.15
   textureUrl [
-    "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/textures/cracotte_box.jpg"
+    "../resources/alpen_salz.jpg"
   ]
 }
 BiscuitBox {
