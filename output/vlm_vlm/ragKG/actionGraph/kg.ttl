@@ -5,619 +5,182 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://find-a-name.org/Robot> a owl:Thing ;
-  rdfs:comment "A robot performing tasks in the environment" ;
-  rdfs:label "Robot" .
-
-<http://find-a-name.org/Robot> owl:sameAs <http://find-a-name.org/Agent> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Action> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Task> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Workflow> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Location> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Object> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/StateType> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Component> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Appliance> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/CurrentState> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <http://find-a-name.org/Environment> .
-
-<http://find-a-name.org/Robot> rdfs:seeAlso <
+  rdfs:label "Robot" ;
+  rdfs:comment "A robot is an artificial agent that can perform actions or tasks." .
+
+<http://find-a-name.org/Action1> a owl:Thing ;
+  rdfs:label "Access the kitchen" ;
+  rdfs:comment "Access the kitchen by entering through the central door." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action2> .
+
+<http://find-a-name.org/Action2> a owl:Thing ;
+  rdfs:label "Enter the kitchen" ;
+  rdfs:comment "Enter the kitchen through the central door." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action1> .
+
+<http://find-a-name.org/Action3> a owl:Thing ;
+  rdfs:label "Open the refrigerator" ;
+  rdfs:comment "Open the refrigerator and take out any fresh ingredients for cooking or meal preparation." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action4> .
+
+<http://find-a-name.org/Action4> a owl:Thing ;
+  rdfs:label "Take out ingredients" ;
+  rdfs:comment "Take out any fresh ingredients for cooking or meal preparation." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action3> .
+
+<http://find-a-name.org/Action5> a owl:Thing ;
+  rdfs:label "Find utensils" ;
+  rdfs:comment "Walk to the countertop and find appropriate utensils or tools in the knife block for preparing food, if necessary." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action6> .
+
+<http://find-a-name.org/Action6> a owl:Thing ;
+  rdfs:label "Walk to the countertop" ;
+  rdfs:comment "Walk to the countertop." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action5> .
+
+<http://find-a-name.org/Action7> a owl:Thing ;
+  rdfs:label "Turn on the light" ;
+  rdfs:comment "Turn on the kitchen light fixture to ensure good visibility while working in the space." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action8> .
+
+<http://find-a-name.org/Action8> a owl:Thing ;
+  rdfs:label "Turn on the kitchen light" ;
+  rdfs:comment "Turn on the kitchen light fixture." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action7> .
+
+<http://find-a-name.org/Action9> a owl:Thing ;
+  rdfs:label "Prepare a meal" ;
+  rdfs:comment "Prepare a simple meal using the available ingredients and any kitchen appliances or utensils." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action10> .
+
+<http://find-a-name.org/Action10> a owl:Thing ;
+  rdfs:label "Prepare the meal" ;
+  rdfs:comment "Prepare a simple meal." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action9> .
+
+<http://find-a-name.org/Action11> a owl:Thing ;
+  rdfs:label "Set the table" ;
+  rdfs:comment "Once the meal is prepared, walk to the dining area and set the table with appropriate serving dishes for the food being prepared." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action12> .
+
+<http://find-a-name.org/Action12> a owl:Thing ;
+  rdfs:label "Walk to the dining area" ;
+  rdfs:comment "Walk to the dining area." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action11> .
+
+<http://find-a-name.org/Action13> a owl:Thing ;
+  rdfs:label "Sit down" ;
+  rdfs:comment "Sit down at the dining table and enjoy the meal." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action14> .
+
+<http://find-a-name.org/Action14> a owl:Thing ;
+  rdfs:label "Enjoy the meal" ;
+  rdfs:comment "Enjoy the meal." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action13> .
+
+<http://find-a-name.org/Action15> a owl:Thing ;
+  rdfs:label "Do laundry" ;
+  rdfs:comment "After finishing the meal, walk to the laundry area, if necessary, for doing any laundry that needs to be done or has been left out during the cooking process." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action16> .
+
+<http://find-a-name.org/Action16> a owl:Thing ;
+  rdfs:label "Walk to the laundry area" ;
+  rdfs:comment "Walk to the laundry area." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action15> .
+
+<http://find-a-name.org/Action17> a owl:Thing ;
+  rdfs:label "Clean up" ;
+  rdfs:comment "Return to the kitchen to clean up after preparing the meal and doing the laundry." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action18> .
+
+<http://find-a-name.org/Action18> a owl:Thing ;
+  rdfs:label "Clean the kitchen" ;
+  rdfs:comment "Clean up the kitchen." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action17> .
+
+<http://find-a-name.org/Action19> a owl:Thing ;
+  rdfs:label "Close the refrigerator" ;
+  rdfs:comment "Once everything is cleaned up and the kitchen is back in order, close the refrigerator door securely to preserve freshness of ingredients inside." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action20> .
+
+<http://find-a-name.org/Action20> a owl:Thing ;
+  rdfs:label "Close the refrigerator door" ;
+  rdfs:comment "Close the refrigerator door." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action19> .
+
+<http://find-a-name.org/Action21> a owl:Thing ;
+  rdfs:label "Leave the kitchen" ;
+  rdfs:comment "Leave the kitchen area and return to the living space or another designated area outside of the kitchen and dining areas for any additional tasks that may need to be performed (e.g., watching TV, washing dishes)." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action22> .
+
+<http://find-a-name.org/Action22> a owl:Thing ;
+  rdfs:label "Leave the kitchen area" ;
+  rdfs:comment "Leave the kitchen area." ;
+  owl:onProperty <http://find-a-name.org/Action> ;
+  owl:someValuesFrom <http://find-a-name.org/Task> ;
+  owl:inverseOf <http://find-a-name.org/Action21> .
+
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action1> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action2> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action3> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action4> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action5> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action6> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action7> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action8> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action9> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action10> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action11> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action12> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action13> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action14> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action15> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action16> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action17> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action18> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action19> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action20> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action21> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Robot> <http://find-a-name.org/Action22> <http://find-a-name.org/Task> .

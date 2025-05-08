@@ -12,7 +12,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from llama_index.llms.groq import Groq
-from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core import StorageContext, Settings
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
@@ -60,11 +59,11 @@ def make_vector_store_index(ontology_path, embed_model, llm):
     index = VectorStoreIndex.from_documents(
         ontology, storage_context=storage_context, embed_model=embed_model, llm=llm,
     )
-    return index
+    return chroma_collection, index
 
 def get_response(llm, embedding_model, description, ontology_path, robot_task):
     embed_model = HuggingFaceEmbedding(model_name=embedding_model)
-    index = make_vector_store_index(ontology_path, embed_model, llm)
+    chroma_collection, index = make_vector_store_index(ontology_path, embed_model, llm)
     query_engine = index.as_query_engine(llm)
     response_obs = query_engine.query(f"""
     ## INSTRUCTIONS ##
@@ -131,9 +130,7 @@ def get_response(llm, embedding_model, description, ontology_path, robot_task):
     ### Robot Task ###
     {robot_task}
     """)
-    return response_obs, response_acs
-
-import re
+    return response_obs, response_acs, chroma_collection
 
 def trim_before_prefixes(text):
     match = re.search(r'(^|\n)(@prefix|PREFIX)\s', text)
@@ -156,11 +153,17 @@ def save_llm_kg_response(response_obs, response_acs, output_path):
         f.write(response_acs_text)
     return 
 
+def clean_up_chroma(chroma_collection):
+    doc_ids = chroma_collection.get()["ids"]
+    chroma_collection.delete(ids=doc_ids)
+    return
+
 def main(llm_model, api_key, robot_task, embedding_model, description_path, output_path, ontology_path):
-    llm = Groq(model= llm_model, api_key=api_key)
+    llm = Groq(model=llm_model, api_key=api_key)
     description = extract_description_from_json(description_path)
-    response_obs, response_acs = get_response(llm, embedding_model, description, ontology_path, robot_task)
+    response_obs, response_acs, chroma_collection = get_response(llm, embedding_model, description, ontology_path, robot_task)
     save_llm_kg_response(response_obs, response_acs, output_path)
+    clean_up_chroma(chroma_collection)
 
 if __name__ == "__main__":
 
