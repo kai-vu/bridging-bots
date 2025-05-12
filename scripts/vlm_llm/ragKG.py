@@ -71,7 +71,7 @@ def get_response(llm, embedding_model, description, ontology_path, robot_task):
 
     You are provided with:
     - A description of a physical environment.
-    - An ontology (retrieved from context) that defines the allowed vocabulary: classes, properties, and relations.
+    - An ontology (stored in the vector) that defines the allowed vocabulary: classes, properties, and relations.
 
     ## TASK ##
     You must use the ontology **as a strict schema** to construct a Knowledge Graph based solely on the environment description.
@@ -174,8 +174,8 @@ if __name__ == "__main__":
     robot_task = os.getenv("ROBOT_TASK")
     embedding_model = "BAAI/bge-small-en"
 
-    description_path = "../../output/vlm_vlm/llama-image-description.json"
-    output_path = "../../output/vlm_vlm/ragKG"
+    description_path = "../../output/vlm_llm/llama-image-description.json"
+    output_path = "../../output/vlm_llm/ragKG"
     ontology_path = "../../ontology/onto.jsonld"
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
