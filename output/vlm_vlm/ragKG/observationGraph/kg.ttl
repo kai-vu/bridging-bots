@@ -1,6 +1,43 @@
-#
+### Triples from Environment Description ###
 
-<http://find-a-name.org/Environment> a <http://www.w3.org/2002/07/owl#Class> .
-<http://find-a-name.org/Environment> rdfs:comment "An environment is a surrounding area or context in which an action or task occurs." .
-<http://find-a-name.org/Environment> rdfs:label "Environment" .
-<http://find-a-name.org/Environment> rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Kitchen" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Dining Area" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Laundry Area" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "TV" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Light Fixture" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Door" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Floor" .
+<http://find-a-name.org/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Rug" .
+
+<http://find-a-name.org/Location> <http://find-a-name.org/contains> <http://find-a-name.org/Object> .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Sink" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Countertop" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Knife Block" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Oven" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Refrigerator" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Table" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Chairs" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Clock" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Picture" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Washing Machine" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Dryer" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "TV" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Light Fixture" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Door" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Laminate" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Rug" .
+
+<http://find-a-name.org/Location> <http://find-a-name.org/follows> <http://find-a-name.org/Task> .
+<http://find-a-name.org/Task> <http://find-a-name.org/hasComponent> <http://find-a-name.org/Object> .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Enter through the central door" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Open the refrigerator" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Take out fresh ingredients" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Find utensils or tools" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Turn on the kitchen light" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Prepare a meal" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Set the table" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Sit down and enjoy the meal" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Do laundry" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Clean up the kitchen" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Close the refrigerator door" .
+<http://find-a-name.org/Object> <http://www.w3.org/2000/01/rdf-schema#label> "Leave the kitchen" .
