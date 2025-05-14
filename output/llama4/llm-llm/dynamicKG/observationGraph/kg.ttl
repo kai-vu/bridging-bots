@@ -1,0 +1,76 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:door kitchen:hasLocation kitchen:dining_area .
+
+kitchen:floors kitchen:hasLocation kitchen:kitchen .
+
+kitchen:light_fixture kitchen:hasLocation kitchen:dining_area .
+
+kitchen:walls kitchen:hasLocation kitchen:kitchen .
+
+kitchen:Alpen_Salt kitchen:hasLocation kitchen:kitchen ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:Rice_Bubbles_cereal kitchen:hasLocation kitchen:kitchen ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:bottle_of_water kitchen:sfWithin kitchen:dining_area .
+
+kitchen:cabinets kitchen:hasLocation kitchen:kitchen .
+
+kitchen:cake kitchen:sfWithin kitchen:dining_area,
+        kitchen:plate .
+
+kitchen:chairs kitchen:hasLocation kitchen:dining_area .
+
+kitchen:countertops kitchen:hasLocation kitchen:kitchen .
+
+kitchen:exhaust_hood kitchen:hasLocation kitchen:kitchen .
+
+kitchen:jar_of_jam kitchen:isNear kitchen:box_of_Jello ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:paper_plates kitchen:hasLocation kitchen:kitchen ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:refrigerator kitchen:hasLocation kitchen:kitchen .
+
+kitchen:sink kitchen:hasLocation kitchen:kitchen .
+
+kitchen:stovetop kitchen:hasLocation kitchen:kitchen .
+
+kitchen:table kitchen:hasLocation kitchen:dining_area .
+
+kitchen:yellow_mug kitchen:hasLocation kitchen:kitchen ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:box_of_Jello kitchen:isNear kitchen:puzzle_book ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:plate kitchen:sfWithin kitchen:dining_area .
+
+kitchen:puzzle_book kitchen:hasLocation kitchen:kitchen ;
+    kitchen:hasTitle kitchen:Chucky ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:dining_area kitchen:sfContains kitchen:bottle_of_water,
+        kitchen:cake,
+        kitchen:chairs,
+        kitchen:plate,
+        kitchen:table .
+
+kitchen:kitchen kitchen:sfContains kitchen:Alpen_Salt,
+        kitchen:Rice_Bubbles_cereal,
+        kitchen:box_of_Jello,
+        kitchen:cabinets,
+        kitchen:countertops,
+        kitchen:exhaust_hood,
+        kitchen:jar_of_jam,
+        kitchen:paper_plates,
+        kitchen:puzzle_book,
+        kitchen:refrigerator,
+        kitchen:sink,
+        kitchen:stovetop,
+        kitchen:yellow_mug ;
+    kitchen:sfWithin kitchen:small_kitchen_and_dining_area .
+

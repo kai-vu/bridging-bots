@@ -1,0 +1,48 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:bottle_of_water kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:box_of_Alpen_Salt kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:box_of_Jello kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:box_of_Rice_Bubbles_cereal kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:cabinets kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:chairs kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:countertops kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:door kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:exhaust_hood kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:flooring kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:jar_of_jam kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:light_fixture kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:plate_with_a_slice_of_cake kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:puzzle_book kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:puzzle_book_on_table kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:refrigerator kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:sink kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:stack_of_paper_plates kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:stovetop kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:table kitchen:LOCATED_IN kitchen:dining_area .
+
+kitchen:walls kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:yellow_mug kitchen:LOCATED_IN kitchen:kitchen .
+
+kitchen:kitchen kitchen:PART_OF kitchen:dining_area .
+

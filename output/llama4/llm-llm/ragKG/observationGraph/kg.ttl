@@ -1,0 +1,54 @@
+### Triples from Environment Description ###
+
+<http://find-a-name.org/Kitchen> a <http://find-a-name.org/Location> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/asWKT> "Kitchen Location" .
+<http://find-a-name.org/DiningArea> a <http://find-a-name.org/Location> .
+<http://find-a-name.org/DiningArea> <http://find-a-name.org/asWKT> "Dining Area Location" .
+
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/Cabinets> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/Countertops> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/Appliances> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/Sink> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/Stovetop> .
+<http://find-a-name.org/Kitchen> <http://find-a-name.org/contains> <http://find-a-name.org/ExhaustHood> .
+
+<http://find-a-name.org/DiningArea> <http://find-a-name.org/contains> <http://find-a-name.org/Table> .
+<http://find-a-name.org/DiningArea> <http://find-a-name.org/contains> <http://find-a-name.org/Chairs> .
+
+<http://find-a-name.org/Cabinets> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Cabinets> <http://find-a-name.org/hasComponent> <http://find-a-name.org/DarkGrayCabinets> .
+
+<http://find-a-name.org/Countertops> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Countertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/LightColoredMarbledCountertops> .
+
+<http://find-a-name.org/Appliances> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Appliances> <http://find-a-name.org/hasComponent> <http://find-a-name.org/WhiteRefrigerator> .
+
+<http://find-a-name.org/Sink> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Sink> <http://find-a-name.org/hasComponent> <http://find-a-name.org/StainlessSteelSink> .
+
+<http://find-a-name.org/Stovetop> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Stovetop> <http://find-a-name.org/hasComponent> <http://find-a-name.org/BuiltInStovetop> .
+
+<http://find-a-name.org/ExhaustHood> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/ExhaustHood> <http://find-a-name.org/hasComponent> <http://find-a-name.org/WoodenExhaustHood> .
+
+<http://find-a-name.org/Table> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Table> <http://find-a-name.org/hasComponent> <http://find-a-name.org/LightColoredWoodenTable> .
+
+<http://find-a-name.org/Chairs> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/Chairs> <http://find-a-name.org/hasComponent> <http://find-a-name.org/WhiteChairs> .
+
+<http://find-a-name.org/ItemsOnCountertops> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/JarOfJam> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/BoxOfJello> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/BoxOfAlpenSalt> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/PuzzleBook> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/YellowMug> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/BoxOfRiceBubblesCereal> .
+<http://find-a-name.org/ItemsOnCountertops> <http://find-a-name.org/hasComponent> <http://find-a-name.org/StackOfPaperPlates> .
+
+<http://find-a-name.org/ItemsOnTable> a <http://find-a-name.org/Object> .
+<http://find-a-name.org/ItemsOnTable> <http://find-a-name.org/hasComponent> <http://find-a-name.org/BottleOfWater> .
+<http://find-a-name.org/ItemsOnTable> <http://find-a-name.org/hasComponent> <http://find-a-name.org/PlateWithSliceOfCake> .
+<http://find-a-name.org/ItemsOnTable> <http://find-a-name.org/hasComponent> <http://find-a-name.org/PuzzleBookOnTable> .

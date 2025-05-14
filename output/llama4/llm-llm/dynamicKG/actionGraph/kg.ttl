@@ -1,0 +1,49 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:bottle_of_water kitchen:sfMovedTo kitchen:countertop ;
+    kitchen:sfWithin kitchen:dining_table .
+
+kitchen:box_of_Alpen_Salt kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:box_of_Jello kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:box_of_Rice_Bubbles_cereal kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:ensure kitchen:actsOn kitchen:cabinet_doors ;
+    kitchen:hasTask kitchen:Task .
+
+kitchen:jar_of_jam kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:move kitchen:hasTask kitchen:Task .
+
+kitchen:organize kitchen:actsOn kitchen:items ;
+    kitchen:hasTask kitchen:Task ;
+    kitchen:isExecutedIn kitchen:cabinet .
+
+kitchen:plate_with_a_slice_of_cake kitchen:sfMovedTo kitchen:countertop ;
+    kitchen:sfWithin kitchen:dining_table .
+
+kitchen:puzzle_book kitchen:sfMovedTo kitchen:cabinet,
+        kitchen:countertop ;
+    kitchen:sfWithin kitchen:countertop,
+        kitchen:dining_table .
+
+kitchen:stack_of_paper_plates kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:wipe_down kitchen:actsOn kitchen:countertops ;
+    kitchen:hasTask kitchen:Task .
+
+kitchen:yellow_mug kitchen:sfMovedTo kitchen:cabinet ;
+    kitchen:sfWithin kitchen:countertop .
+
+kitchen:cabinet_doors kitchen:sfEnsure kitchen:closed .
+
+kitchen:countertops kitchen:sfEnsure kitchen:clear_and_clean .
+
+kitchen:items kitchen:sfWithin kitchen:cabinet .
+
