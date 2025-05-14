@@ -1,0 +1,15 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:kitchen kitchen:LOCATED_IN kitchen:Jello,
+        kitchen:cabinets,
+        kitchen:cereal,
+        kitchen:chairs,
+        kitchen:jar_of_jam,
+        kitchen:plates,
+        kitchen:puzzle_box,
+        kitchen:refrigerator,
+        kitchen:sink,
+        kitchen:stove,
+        kitchen:table,
+        kitchen:water_bottle .
+

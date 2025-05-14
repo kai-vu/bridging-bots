@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-05850b95-7830-4118-81fd-400b6ec7c99d",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "## Environment Description\nThe environment consists of a kitchen and a dining room. The kitchen has dark grey cabinets with blue handles, a light-colored marble countertop, and a sink on the left side. Above the counter, there are more dark grey cabinets. A white refrigerator is located on the right side of the kitchen, adjacent to the dining room. The dining room has a wooden table with white chairs and a light fixture on the ceiling. The floor in both rooms is made of dark wood parquet.\n\nThe objects in the environment include:\n- A refrigerator\n- A table\n- Chairs\n- Cabinets\n- A sink\n- A stove\n- Various food items and kitchen supplies such as a water bottle, plates, a jar of jam, Jello, cereal, and a puzzle box.\n\n## Ordered Robot Actions\n1. Move to the kitchen counter and pick up the jar of jam.\n2. Move to the dining table and place the jar of jam on it.\n3. Move to the kitchen counter and pick up the Jello box.\n4. Move to the dining table and place the Jello box next to the jar of jam.\n5. Move to the kitchen counter and pick up the cereal box.\n6. Move to the dining table and place the cereal box next to the Jello box.\n7. Move to the kitchen and open the refrigerator.\n8. Retrieve a glass from the refrigerator and move to the kitchen counter.\n9. Move to the dining table and pick up the puzzle box.\n10. Place the puzzle box on the kitchen counter.\n11. Close the refrigerator door.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747145516,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 324,
+        "prompt_tokens": 12593,
+        "total_tokens": 12917,
+        "completion_time": 0.771778518,
+        "prompt_time": 0.464598286,
+        "queue_time": 4.388323088,
+        "total_time": 1.236376804
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jv4zsn36feq8z1yj0x1fa937"
+    }
+}

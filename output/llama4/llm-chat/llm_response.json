@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-3eacf716-6da6-4f11-9e13-88624963e886",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "1. Move to the kitchen area.\n2. Open the refrigerator.\n3. Take the bottle of water from the refrigerator.\n4. Move to the dining area.\n5. Pour water from the bottle into a glass on the table.\n6. Place the bottle on the table.\n7. Open the box of Rice Bubbles.\n8. Take a plate from the stack on the kitchen counter.\n9. Move to the dining area.\n10. Place the plate on the table.\n11. Move to the kitchen area.\n12. Open the box of shortbread.\n13. Take the shortbread from the box.\n14. Move to the dining area.\n15. Place the shortbread on the plate on the table.\n16. Move to the kitchen area.\n17. Open the jar of strawberry jam.\n18. Move to the dining area.\n19. Pour the jam onto the shortbread on the plate.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747147758,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_42ae451038",
+    "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 12486,
+        "total_tokens": 12669,
+        "completion_time": 0.434689694,
+        "prompt_time": 0.432264015,
+        "queue_time": 4.413121342999999,
+        "total_time": 0.866953709
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jv51y2nhfnkvryq7qftrjpqm"
+    }
+}

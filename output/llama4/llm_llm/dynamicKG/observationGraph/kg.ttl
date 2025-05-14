@@ -1,0 +1,20 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:kitchen kitchen:hasComponent kitchen:dark_grey_cabinets,
+        kitchen:light-colored_marble_countertop,
+        kitchen:sink,
+        kitchen:white_refrigerator ;
+    kitchen:hasFloor kitchen:dark_wood_parquet ;
+    kitchen:sfShares kitchen:dining_room ;
+    kitchen:sfWithin kitchen:kitchen_area .
+
+kitchen:dark_grey_cabinets kitchen:hasComponent kitchen:blue_handles .
+
+kitchen:white_refrigerator kitchen:sfAdjacentTo kitchen:dining_room .
+
+kitchen:dining_room kitchen:hasComponent kitchen:light_fixture,
+        kitchen:white_chairs,
+        kitchen:wooden_table ;
+    kitchen:hasFloor kitchen:dark_wood_parquet ;
+    kitchen:sfWithin kitchen:dining_room_area .
+
