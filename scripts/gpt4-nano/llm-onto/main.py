@@ -3,7 +3,7 @@ import json
 import base64
 import requests
 
-from groq import Groq
+from openai import OpenAI
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -19,9 +19,8 @@ def get_all_images_base64(images_folder_path):
             base64_images.append(convert_image_to_base64(file_path))
     return base64_images
 
-def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
-
-    client = Groq(api_key=groq_key)
+def chat_with_model(gpt_key, images_folder_path, user_query, llm_model):
+    client = OpenAI(api_key=gpt_key)
     base64_images = get_all_images_base64(images_folder_path)
     content = [{"type": "text", "text": user_query}]
     for base64_image in base64_images:
@@ -41,7 +40,6 @@ def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
     ],
     model=llm_model,
     )
-
     response = chat_completion
     return response
 
@@ -50,7 +48,7 @@ def save_response_to_file(output_path, response):
         json.dump(response.to_dict(), f, ensure_ascii=False, indent=4)
     return 
 
-def main(groq_key, images_folder_path, user_query, llm_model):
+def main(groq_key, images_folder_path, user_query, llm_model, output_path):
     response = chat_with_model(groq_key, images_folder_path, user_query, llm_model)
     save_response_to_file(output_path, response)
 
@@ -59,12 +57,12 @@ if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     load_dotenv(dotenv_path=Path('../.env'))
 
-    groq_key = os.getenv("GROQ_KEY")
+    gpt_key = os.getenv("GPT_KEY")
     llm_model = os.getenv("LLM_MODEL")
     robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/llama4/llm-onto/vlm_response.json"
+    output_path = "../../../output/gpt4-nano/llm-onto/llm-response.json"
     ontology_path = "../../../ontology/onto.ttl"
 
     with open(ontology_path, "r", encoding="utf-8") as f:
@@ -97,6 +95,5 @@ if __name__ == "__main__":
     {ontology_ttl}
     """
 
-    # 3. Final Environment Description: describe how the environment should look after the task is completed. Include: the new positions of any moved objects
+    main(gpt_key, images_folder_path, user_query, llm_model, output_path)
 
-    main(groq_key, images_folder_path, user_query, llm_model)
