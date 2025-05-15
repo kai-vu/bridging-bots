@@ -1,7 +1,6 @@
 import os
 import json
 import base64
-import requests
 
 from openai import OpenAI
 from pathlib import Path
