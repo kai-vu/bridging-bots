@@ -1,0 +1,121 @@
+#
+{
+  "subject": "kitchen",
+  "predicate": "has component",
+  "object": "countertop"
+}
+{
+  "subject": "kitchen",
+  "predicate": "has component",
+  "object": "cabinets"
+}
+{
+  "subject": "kitchen",
+  "predicate": "has component",
+  "object": "dining table"
+}
+{
+  "subject": "countertop",
+  "predicate": "contains",
+  "object": "stacked plates"
+}
+{
+  "subject": "countertop",
+  "predicate": "contains",
+  "object": "box of shortbread"
+}
+{
+  "subject": "countertop",
+  "predicate": "contains",
+  "object": "box of rice bubbles cereal"
+}
+{
+  "subject": "countertop",
+  "predicate": "contains",
+  "object": "jar of jam"
+}
+{
+  "subject": "countertop",
+  "predicate": "contains",
+  "object": "box of Jello strawberry dessert"
+}
+{
+  "subject": "kitchen",
+  "predicate": "has component",
+  "object": "sink"
+}
+{
+  "subject": "sink",
+  "predicate": "is performed by",
+  "object": "embedded"
+}
+{
+  "subject": "wall",
+  "predicate": "has component",
+  "object": "white"
+}
+{
+  "subject": "range hood",
+  "predicate": "is performed by",
+  "object": "above stove"
+}
+{
+  "subject": "dining area",
+  "predicate": "has component",
+  "object": "wooden table"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "pitcher"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "wine glass"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "box of rice bubbles cereal"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "jar of jam"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "bottle of water"
+}
+{
+  "subject": "wooden table",
+  "predicate": "contains",
+  "object": "box of Chucky chips"
+}
+{
+  "subject": "room",
+  "predicate": "has component",
+  "object": "white walls"
+}
+{
+  "subject": "room",
+  "predicate": "has component",
+  "object": "wooden floor"
+}
+{
+  "subject": "door",
+  "predicate": "has component",
+  "object": "silver handle"
+}
+{
+  "subject": "ceiling light fixture",
+  "predicate": "is visible"
+}
+{
+  "subject": "environment",
+  "predicate": "is tidy and organized",
+  "object": ""
+}
+}

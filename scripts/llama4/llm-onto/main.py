@@ -7,7 +7,6 @@ from groq import Groq
 from pathlib import Path
 from dotenv import load_dotenv
 
-
 def convert_image_to_base64(file_path):
     with open(file_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
@@ -51,10 +50,9 @@ def save_response_to_file(output_path, response):
         json.dump(response.to_dict(), f, ensure_ascii=False, indent=4)
     return 
 
-def main(groq_key, images_folder_path, user_query, llm_model, output_path):
+def main(groq_key, images_folder_path, user_query, llm_model):
     response = chat_with_model(groq_key, images_folder_path, user_query, llm_model)
     save_response_to_file(output_path, response)
-
 
 if __name__ == "__main__":
 
@@ -66,7 +64,11 @@ if __name__ == "__main__":
     robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/llama4/llm-all/llama-image-description.json"
+    output_path = "../../../output/llama4/llm-onto/vlm_response.json"
+    ontology_path = "../../../ontology/onto.jsonld"
+
+    with open(ontology_path, "r", encoding="utf-8") as f:
+        ontology_ttl = f.read()
 
     user_query = """
     ## INSTRUCTIONS ##
@@ -78,12 +80,23 @@ if __name__ == "__main__":
 
     ## OUTPUT FORMAT ##
     You must return only text output, with no introductory text or explanations.
-    Format your output into exactly two sections, each clearly separated by a section title as shown below.
+    Structure your output as a **knowledge graph** using RDF triples in the format: (subject, predicate, object)
+
+    Use URIs or local names that are consistent with the ontology definitions.
 
     ## SECTION TITLES AND EXPECTED CONTENT ## 
     1. Environment Description: describe the environment as seen from all images combined. Include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
 
     2. Ordered Robot Actions:list the robot's actions in order to complete the task, such that: each step is a single, atomic, clear action; the plan is physically and logically valid; actions reference specific objects and locations based on the environment description
+    
+    ## ONTOLOGY ##
+    The following ontology defines the classes and properties to use in the knowledge graph.
+    It is written in Turtle (TTL) syntax:
+
+    ```ttl
+    {ontology_ttl}
     """
 
-    main(groq_key, images_folder_path, user_query, llm_model, output_path)
+    # 3. Final Environment Description: describe how the environment should look after the task is completed. Include: the new positions of any moved objects
+
+    main(groq_key, images_folder_path, user_query, llm_model)
