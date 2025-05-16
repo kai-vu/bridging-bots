@@ -1,13 +1,11 @@
-import warnings
-warnings.filterwarnings('ignore')
-
 import os
 import re
 import json
+import base64
 
+from openai import OpenAI
 from pathlib import Path
 from dotenv import load_dotenv
-from groq import Groq
 
 
 def extract_description_from_json(description_path):
@@ -59,23 +57,25 @@ def save_response(response, output_path):
         f.write(ttl_response)
     return 
 
-def main(llm_model, groq_key, ontology_path, description_path, prompt_tmpl, output_path):
-    client = Groq(api_key=groq_key)
+def main(gpt_key, ontology_path, description_path, prompt_tmpl, llm_model):
+    client = OpenAI(api_key=gpt_key)
     response = get_response(ontology_path, description_path, prompt_tmpl, llm_model, client)
     save_response(response, output_path)
 
+
 if __name__ == "__main__":
 
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     load_dotenv(dotenv_path=Path('../.env'))
 
+    gpt_key = os.getenv("GPT_KEY")
     llm_model = os.getenv("LLM_MODEL")
-    groq_key = os.getenv("GROQ_KEY")
 
-    description_path = "../../../output/llama4-scout/observation-graph/image-description.json"
-    output_path = "../../../output/llama4-scout/observation-graph/promptKG"
+    description_path = "../../../output/gpt4-nano/observation-graph/image-description.json"
+    output_path = "../../../output/gpt4-nano/observation-graph/promptKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
-
-    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    with open(ontology_path, 'r', encoding='utf-8') as file:
+        ontology_txt = file.read()
 
     prompt_tmpl = """
 Ontology as context information is below.
@@ -99,5 +99,5 @@ Output format:
 Input Environment Description:
 {description_txt}
 """
-
-    main(llm_model, groq_key, ontology_path, description_path, prompt_tmpl, output_path)
+        
+    main(gpt_key, ontology_path, description_path, prompt_tmpl, llm_model)

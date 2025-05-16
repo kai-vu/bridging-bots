@@ -1,11 +1,11 @@
 import os
 import json
 import base64
-import requests
 
 from openai import OpenAI
 from pathlib import Path
 from dotenv import load_dotenv
+
 
 def convert_image_to_base64(file_path):
     with open(file_path, "rb") as image_file:
@@ -44,13 +44,15 @@ def chat_with_model(gpt_key, images_folder_path, user_query, llm_model):
     return response
 
 def save_response_to_file(output_path, response):
+    response_json = response.to_dict()
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(response.to_dict(), f, ensure_ascii=False, indent=4)
+        json.dump(response_json, f, ensure_ascii=False, indent=4)
     return 
 
-def main(groq_key, images_folder_path, user_query, llm_model, output_path):
-    response = chat_with_model(groq_key, images_folder_path, user_query, llm_model)
+def main(images_folder_path, gpt_key, llm_model, user_query, output_path):
+    response = chat_with_model(gpt_key, images_folder_path, user_query, llm_model)
     save_response_to_file(output_path, response)
+
 
 if __name__ == "__main__":
 
@@ -59,41 +61,21 @@ if __name__ == "__main__":
 
     gpt_key = os.getenv("GPT_KEY")
     llm_model = os.getenv("LLM_MODEL")
-    robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/gpt4-nano/llm-onto/llm-response.json"
-    ontology_path = "../../../ontology/onto.ttl"
-
-    with open(ontology_path, "r", encoding="utf-8") as f:
-        ontology_ttl = f.read()
+    output_path = "../../../output/gpt4-nano/observation-graph/image-description.json"
 
     user_query = """
     ## INSTRUCTIONS ##
     You are given a set of images taken from the same environment at different angles. 
     These images together represent the complete layout and state of the environment in which a robot must perform a task.
-    Carefully analyse all visual details from the images. 
-    
-    The robot must perform the following task in the environment: [{robot_task}]
+    Your task is to carefully analyse all visual details from the images and provide a description of the environment as seen from all images combines. 
+    Specifically, include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
 
     ## OUTPUT FORMAT ##
     You must return only text output, with no introductory text or explanations.
-    Structure your output as a **knowledge graph** using RDF triples in the format: (subject, predicate, object)
-
-    Use URIs or local names that are consistent with the ontology definitions.
-
-    ## SECTION TITLES AND EXPECTED CONTENT ## 
-    1. Environment Description: describe the environment as seen from all images combined. Include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
-
-    2. Ordered Robot Actions:list the robot's actions in order to complete the task, such that: each step is a single, atomic, clear action; the plan is physically and logically valid; actions reference specific objects and locations based on the environment description
-    
-    ## ONTOLOGY ##
-    The following ontology defines the classes and properties to use in the knowledge graph.
-    It is written in Turtle (TTL) syntax:
-
-    ```ttl
-    {ontology_ttl}
     """
 
-    main(gpt_key, images_folder_path, user_query, llm_model, output_path)
+    main(images_folder_path, gpt_key, llm_model, user_query, output_path)
+
 

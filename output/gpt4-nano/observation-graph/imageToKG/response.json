@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BXymXrJ5AiAKtJ5epbfwf5M6Ovhtc",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psrTask-ontology#> .\n\npsr:Environment1 a psr:Environment ;\n    rdfs:label \"Kitchen Environment\"@en ;\n    dul:hasComponent psr:Fridge, psr:Table, psr:Wall ;\n\npsr:Fridge a psr:Object, psr:Appliance ;\n    rdfs:label \"Refrigerator\"@en ;\n    dul:hasLocation psr:Location1 ;\n    psr:hasAffordance psr:Closing, psr:Delivering ;\n\npsr:Location1 a soma:Location ;\n    geo:sfContains psr:Fridge ;\n    rdfs:label \"Location of Fridge\"@en ;\n\npsr:Table a psr:Furniture ;\n    rdfs:label \"Kitchen Table\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasComponent psr:Object1, psr:Object2, psr:Object3, psr:Object4, psr:Object5, psr:Object6, psr:Object7, psr:Object8, psr:Object9, psr:Object10, psr:Object11, psr:Object12 ;\n\npsr:Location2 a soma:Location ;\n    geo:sfContains psr:Table ;\n    rdfs:label \"Location of Table\"@en ;\n\npsr:Object1 a psr:Object ;\n    rdfs:label \"Box of Rice Bubbles\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;\n\npsr:Object2 a psr:Object ;\n    rdfs:label \"Box of Shortbread\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;\n\npsr:Object3 a psr:Object ;\n    rdfs:label \"Jug\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;\n\npsr:Object4 a psr:Object ;\n    rdfs:label \"Water Bottle\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;\n\npsr:Object5 a psr:Object ;\n    rdfs:label \"Plate\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown ;\n\npsr:Object6 a psr:Object ;\n    rdfs:label \"Bowl\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown ;\n\npsr:Object7 a psr:Object ;\n    rdfs:label \"Glass\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;\n\npsr:Object8 a psr:Object ;\n    rdfs:label \"Fruits Basket\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Holding, psr:PuttingDown ;\n\npsr:Object9 a psr:Object ;\n    rdfs:label \"Cup\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;\n\npsr:Object10 a psr:Object ;\n    rdfs:label \"Food Pack\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;\n\npsr:Object11 a psr:Object ;\n    rdfs:label \"Cereal Box\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;\n\npsr:Object12 a psr:Object ;\n    rdfs:label \"Candy\"@en ;\n    dul:hasLocation psr:Location2 ;\n    psr:hasAffordance psr:PickingUp, psr:PuttingDown .\n\n# Additional layout for the kitchen environment's walls and cupboards\npsr:Wall a psr:Furniture ;\n    rdfs:label \"Wall\"@en .\n\npsr:Cupboard a psr:Furniture ;\n    rdfs:label \"Cupboard\"@en .\n\n# The environment encompasses all components\npsr:Environment1 psr:hasComponent psr:Wall, psr:Cupboard, psr:Table, psr:Fridge .\n\n# Core relations for placements and locations\npsr:Fridge dul:hasLocation psr:Location1 .\npsr:Table dul:hasLocation psr:Location2 .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747438169,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 1195,
+        "prompt_tokens": 20126,
+        "total_tokens": 21321,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

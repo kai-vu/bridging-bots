@@ -70,7 +70,6 @@ if __name__ == "__main__":
 
     llm_model = os.getenv("LLM_MODEL")
     groq_key = os.getenv("GROQ_KEY")
-    embedding_model = "BAAI/bge-small-en"
 
     description_path = "../../../output/llama4-maverick/observation-graph/image-description.json"
     output_path = "../../../output/llama4-maverick/observation-graph/promptKG"
