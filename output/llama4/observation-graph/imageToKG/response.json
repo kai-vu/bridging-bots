@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-13beb293-9ee4-4872-9b59-ccf1bfcc1e2d",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psrTask-ontology#> .\n\npsr:kitchen a psr:Environment ;\n  rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance, psr:Component ;\n  rdfs:label \"refrigerator\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:cabinet a psr:Furniture, psr:Component ;\n  rdfs:label \"cabinet\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture, psr:Component ;\n  rdfs:label \"table\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:chair a psr:Furniture, psr:Component ;\n  rdfs:label \"chair\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:dining_room a psr:Environment ;\n  rdfs:label \"dining room\"@en .\n\npsr:milk_bottle a psr:Object, psr:Component ;\n  rdfs:label \"milk bottle\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:plate a psr:Object, psr:Component ;\n  rdfs:label \"plate\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:jar a psr:Object, psr:Component ;\n  rdfs:label \"jar\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:jello_box a psr:Object, psr:Component ;\n  rdfs:label \"jello box\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:alpen_box a psr:Object, psr:Component ;\n  rdfs:label \"alpen box\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:rice_bubbles_box a psr:Object, psr:Component ;\n  rdfs:label \"rice bubbles box\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:chucky_puzzle a psr:Object, psr:Component ;\n  rdfs:label \"chucky puzzle\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:shortbread_box a psr:Object, psr:Component ;\n  rdfs:label \"shortbread box\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:has_affordance psr:milk_bottle, psr:Opening .\n\npsr:has_affordance psr:plate, psr:PuttingDown .\n\npsr:has_affordance psr:jar, psr:Opening .\n\npsr:has_affordance psr:jello_box, psr:Opening .\n\npsr:has_affordance psr:alpen_box, psr:Opening .\n\npsr:has_affordance psr:rice_bubbles_box, psr:Opening .\n\npsr:has_affordance psr:chucky_puzzle, psr:PickingUp .\n\npsr:has_affordance psr:shortbread_box, psr:Opening .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747435170,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 765,
+        "prompt_tokens": 13857,
+        "total_tokens": 14622,
+        "completion_time": 1.691790053,
+        "prompt_time": 0.459849426,
+        "queue_time": 2.6974865120000002,
+        "total_time": 2.151639479
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdm17geezsbbz3yp24jsc2s"
+    }
+}

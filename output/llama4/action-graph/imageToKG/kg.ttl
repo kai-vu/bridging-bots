@@ -1,0 +1,123 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psrTask-ontology#> .
+
+### Knowledge Graph of Actions
+
+## Define Instruction
+psr:reorganiseKitchenInstruction a psr:Instruction ;
+    psr:hasNaturalLanguage "Reorganise the kitchen."@en .
+
+## Define Workflow
+psr:reorganiseKitchenWorkflow a psr:Workflow .
+
+## Define Actions
+psr:pickUpMilk a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpJello a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpSalt a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpMarmite a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpPlates a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpBook a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:pickUpCup a dul:Action ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:moveToTable a dul:Action .
+
+psr:moveToCounter a dul:Action .
+
+psr:putDownMilk a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownJello a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownSalt a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownMarmite a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownPlates a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownBook a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:putDownCup a dul:Action ;
+    psr:isAffordedBy soma:PuttingDown .
+
+## Define Objects and Affordances
+psr:milk a psr:Object ;
+    soma:PickingUp psr:pickUpMilk ;
+    soma:PuttingDown psr:putDownMilk .
+
+psr:jello a psr:Object ;
+    soma:PickingUp psr:pickUpJello ;
+    soma:PuttingDown psr:putDownJello .
+
+psr:salt a psr:Object ;
+    soma:PickingUp psr:pickUpSalt ;
+    soma:PuttingDown psr:putDownSalt .
+
+psr:maramite a psr:Object ;
+    soma:PickingUp psr:pickUpMarmite ;
+    soma:PuttingDown psr:putDownMarmite .
+
+psr:plates a psr:Object ;
+    soma:PickingUp psr:pickUpPlates ;
+    soma:PuttingDown psr:putDownPlates .
+
+psr:book a psr:Object ;
+    soma:PickingUp psr:pickUpBook ;
+    soma:PuttingDown psr:putDownBook .
+
+psr:cup a psr:Object ;
+    soma:PickingUp psr:pickUpCup ;
+    soma:PuttingDown psr:putDownCup .
+
+## Relationships
+psr:reorganiseKitchenInstruction psr:hasWorkflow psr:reorganiseKitchenWorkflow .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpMilk .
+psr:pickUpMilk dul:precedes psr:putDownMilk .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpJello .
+psr:pickUpJello dul:precedes psr:putDownJello .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpSalt .
+psr:pickUpSalt dul:precedes psr:putDownSalt .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpMarmite .
+psr:pickUpMarmite dul:precedes psr:putDownMarmite .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpPlates .
+psr:pickUpPlates dul:precedes psr:putDownPlates .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpBook .
+psr:pickUpBook dul:precedes psr:putDownBook .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpCup .
+psr:pickUpCup dul:precedes psr:putDownCup .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:moveToTable .
+psr:moveToTable dul:precedes psr:putDownMilk .
+
+psr:reorganiseKitchenWorkflow psr:hasAction psr:moveToCounter .
+psr:moveToCounter dul:precedes psr:putDownJello, psr:putDownSalt, psr:putDownMarmite, psr:putDownPlates, psr:putDownBook, psr:putDownCup .

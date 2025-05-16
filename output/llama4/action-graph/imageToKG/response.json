@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-acb57dd0-620e-486d-9252-f59c26cada50",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psrTask-ontology#> .\n\n### Knowledge Graph of Actions\n\n## Define Instruction\npsr:reorganiseKitchenInstruction a psr:Instruction ;\n    psr:hasNaturalLanguage \"Reorganise the kitchen.\"@en .\n\n## Define Workflow\npsr:reorganiseKitchenWorkflow a psr:Workflow .\n\n## Define Actions\npsr:pickUpMilk a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpJello a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpSalt a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpMarmite a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpPlates a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpBook a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:pickUpCup a dul:Action ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:moveToTable a dul:Action .\n\npsr:moveToCounter a dul:Action .\n\npsr:putDownMilk a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownJello a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownSalt a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownMarmite a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownPlates a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownBook a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:putDownCup a dul:Action ;\n    psr:isAffordedBy soma:PuttingDown .\n\n## Define Objects and Affordances\npsr:milk psr:Object ;\n    soma:PickingUp psr:pickUpMilk ;\n    soma:PuttingDown psr:putDownMilk .\n\npsr:jello psr:Object ;\n    soma:PickingUp psr:pickUpJello ;\n    soma:PuttingDown psr:putDownJello .\n\npsr:salt psr:Object ;\n    soma:PickingUp psr:pickUpSalt ;\n    soma:PuttingDown psr:putDownSalt .\n\npsr:maramite psr:Object ;\n    soma:PickingUp psr:pickUpMarmite ;\n    soma:PuttingDown psr:putDownMarmite .\n\npsr:plates psr:Object ;\n    soma:PickingUp psr:pickUpPlates ;\n    soma:PuttingDown psr:putDownPlates .\n\npsr:book psr:Object ;\n    soma:PickingUp psr:pickUpBook ;\n    soma:PuttingDown psr:putDownBook .\n\npsr:cup psr:Object ;\n    soma:PickingUp psr:pickUpCup ;\n    soma:PuttingDown psr:putDownCup .\n\n## Relationships\npsr:reorganiseKitchenInstruction psr:hasWorkflow psr:reorganiseKitchenWorkflow .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpMilk .\npsr:pickUpMilk dul:precedes psr:putDownMilk .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpJello .\npsr:pickUpJello dul:precedes psr:putDownJello .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpSalt .\npsr:pickUpSalt dul:precedes psr:putDownSalt .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpMarmite .\npsr:pickUpMarmite dul:precedes psr:putDownMarmite .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpPlates .\npsr:pickUpPlates dul:precedes psr:putDownPlates .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpBook .\npsr:pickUpBook dul:precedes psr:putDownBook .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:pickUpCup .\npsr:pickUpCup dul:precedes psr:putDownCup .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:moveToTable .\npsr:moveToTable dul:precedes psr:putDownMilk .\n\npsr:reorganiseKitchenWorkflow psr:hasAction psr:moveToCounter .\npsr:moveToCounter dul:precedes psr:putDownJello, psr:putDownSalt, psr:putDownMarmite, psr:putDownPlates, psr:putDownBook, psr:putDownCup .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747436131,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_42ae451038",
+    "usage": {
+        "completion_tokens": 1261,
+        "prompt_tokens": 14129,
+        "total_tokens": 15390,
+        "completion_time": 2.6078478,
+        "prompt_time": 0.490008327,
+        "queue_time": 1.7764538820000002,
+        "total_time": 3.097856127
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdmyjn9efa8hhsjvtvjc66v"
+    }
+}

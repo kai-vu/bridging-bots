@@ -1,0 +1,68 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psrTask-ontology#> .
+
+psr:kitchen a psr:Environment ;
+  rdfs:label "kitchen"@en .
+
+psr:refrigerator a psr:Appliance, psr:Component ;
+  rdfs:label "refrigerator"@en ;
+  dul:hasLocation psr:kitchen .
+
+psr:cabinet a psr:Furniture, psr:Component ;
+  rdfs:label "cabinet"@en ;
+  dul:hasLocation psr:kitchen .
+
+psr:table a psr:Furniture, psr:Component ;
+  rdfs:label "table"@en ;
+  dul:hasLocation psr:dining_room .
+
+psr:chair a psr:Furniture, psr:Component ;
+  rdfs:label "chair"@en ;
+  dul:hasLocation psr:dining_room .
+
+psr:dining_room a psr:Environment ;
+  rdfs:label "dining room"@en .
+
+psr:milk_bottle a psr:Object, psr:Component ;
+  rdfs:label "milk bottle"@en ;
+  dul:hasLocation psr:kitchen ;
+  psr:has_affordance psr:Opening .
+
+psr:plate a psr:Object, psr:Component ;
+  rdfs:label "plate"@en ;
+  dul:hasLocation psr:kitchen ;
+  psr:has_affordance psr:PuttingDown .
+
+psr:jar a psr:Object, psr:Component ;
+  rdfs:label "jar"@en ;
+  dul:hasLocation psr:kitchen ;
+  psr:has_affordance psr:Opening .
+
+psr:jello_box a psr:Object, psr:Component ;
+  rdfs:label "jello box"@en ;
+  dul:hasLocation psr:kitchen ;
+  psr:has_affordance psr:Opening .
+
+psr:alpen_box a psr:Object, psr:Component ;
+  rdfs:label "alpen box"@en ;
+  dul:hasLocation psr:kitchen ;
+  psr:has_affordance psr:Opening .
+
+psr:rice_bubbles_box a psr:Object, psr:Component ;
+  rdfs:label "rice bubbles box"@en ;
+  dul:hasLocation psr:dining_room ;
+  psr:has_affordance psr:Opening .
+
+psr:chucky_puzzle a psr:Object, psr:Component ;
+  rdfs:label "chucky puzzle"@en ;
+  dul:hasLocation psr:dining_room ;
+  psr:has_affordance psr:PickingUp .
+
+psr:shortbread_box a psr:Object, psr:Component ;
+  rdfs:label "shortbread box"@en ;
+  dul:hasLocation psr:dining_room ;
+  psr:has_affordance psr:Opening .

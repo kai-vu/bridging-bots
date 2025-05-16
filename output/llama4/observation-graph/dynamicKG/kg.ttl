@@ -1,0 +1,40 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:floor kitchen:madeOf kitchen:dark_wood_parquet .
+
+kitchen:refrigerator kitchen:nextTo kitchen:cabinets .
+
+kitchen:walls kitchen:hasProperty kitchen:white .
+
+kitchen:dining_area kitchen:adjacentTo kitchen:kitchen ;
+    kitchen:hasComponent kitchen:table ;
+    kitchen:partOf kitchen:environment .
+
+kitchen:kitchen kitchen:connectedTo kitchen:dining_area ;
+    kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertop ;
+    kitchen:partOf kitchen:environment .
+
+kitchen:range_hood kitchen:onTopOf kitchen:stove .
+
+kitchen:table kitchen:hasComponent kitchen:chairs ;
+    kitchen:sfContains kitchen:book,
+        kitchen:bottle_of_water,
+        kitchen:box_of_shortbread,
+        kitchen:mug,
+        kitchen:plate .
+
+kitchen:cabinets kitchen:hasAffordance kitchen:handles .
+
+kitchen:countertop kitchen:sfContains kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:jar_of_jam,
+        kitchen:pot,
+        kitchen:puzzle_box,
+        kitchen:sink,
+        kitchen:stove,
+        kitchen:yellow_cup .
+
+kitchen:stove kitchen:hasLocation kitchen:countertop,
+        kitchen:range_hood .
+
