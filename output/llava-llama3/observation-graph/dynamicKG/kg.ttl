@@ -1,0 +1,23 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:dining_area kitchen:hasComponent kitchen:cupboard,
+        kitchen:white_chair,
+        kitchen:wooden_dining_table .
+
+kitchen:kitchen kitchen:hasComponent kitchen:dark_wooden_cabinets,
+        kitchen:red_and_white_container,
+        kitchen:stainless_steel_fridge,
+        kitchen:wall_cabinet,
+        kitchen:white_countertop,
+        kitchen:wooden_floor .
+
+kitchen:room kitchen:hasAffordance kitchen:well-organized ;
+    kitchen:isInstanceOf kitchen:kitchen_and_dining_area .
+
+kitchen:stainless_steel_fridge kitchen:hasComponent kitchen:food_items .
+
+kitchen:white_countertop kitchen:hasComponent kitchen:faucet,
+        kitchen:sink .
+
+kitchen:wooden_dining_table kitchen:hasComponent kitchen:box_of_cereal .
+

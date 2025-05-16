@@ -1,0 +1,75 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix :       <http://find-a-name.org/> .
+
+:Kitchen a :Environment .
+:DiningArea a :Environment .
+
+:Countertop a :Component, :Appliance .
+:Sink a :Component, :Object .
+:Faucet a :Component, :Object .
+:Cabinet a :Component, :Furniture .
+:Fridge a :Component, :Appliance .
+:FoodItems a :Component, :Object .
+:Container a :Component, :Object .
+:WallCabinet a :Component, :Furniture .
+:Utensils a :Component, :Object .
+:WoodenFloor a :Component, :Object .
+:Table a :Component, :Furniture .
+:Chair a :Component, :Furniture .
+:Box a :Component, :Object .
+:Cupboard a :Component, :Furniture .
+
+:Kitchen dul:hasComponent :Countertop .
+:Kitchen dul:hasComponent :Sink .
+:Kitchen dul:hasComponent :Faucet .
+:Kitchen dul:hasComponent :Cabinet .
+:Kitchen dul:hasComponent :Fridge .
+:Kitchen dul:hasComponent :FoodItems .
+:Kitchen dul:hasComponent :Container .
+:Kitchen dul:hasComponent :WallCabinet .
+:Kitchen dul:hasComponent :Utensils .
+:Kitchen dul:hasComponent :WoodenFloor .
+
+:DiningArea dul:hasComponent :Table .
+:DiningArea dul:hasComponent :Chair .
+:DiningArea dul:hasComponent :Box .
+:DiningArea dul:hasComponent :Cupboard .
+
+:Countertop :hasAffordance soma:Pulling .
+:Countertop :hasAffordance soma:Pushing .
+:Fridge :hasAffordance soma:Opening .
+:Fridge :hasAffordance soma:Closing .
+:Container :hasAffordance soma:Grasping .
+:Container :hasAffordance soma:Opening .
+:Container :hasAffordance soma:Closing .
+:Chair :hasAffordance soma:Pulling .
+:Chair :hasAffordance soma:Pushing .
+:Cupboard :hasAffordance soma:Opening .
+:Cupboard :hasAffordance soma:Closing .
+
+:Countertop dul:hasLocation :Kitchen .
+:Sink dul:hasLocation :Countertop .
+:Faucet dul:hasLocation :Countertop .
+:Cabinet dul:hasLocation :Kitchen .
+:Fridge dul:hasLocation :Kitchen .
+:FoodItems dul:hasLocation :Fridge .
+:Container dul:hasLocation :Countertop .
+:WallCabinet dul:hasLocation :Kitchen .
+:Utensils dul:hasLocation :WallCabinet .
+:WoodenFloor dul:hasLocation :Kitchen .
+:Table dul:hasLocation :DiningArea .
+:Chair dul:hasLocation :Table .
+:Box dul:hasLocation :Table .
+:Cupboard dul:hasLocation :DiningArea .
+
+:Sink geo:sfWithin :Countertop .
+:Faucet geo:sfWithin :Countertop .
+:Container geo:sfWithin :Countertop .
+:FoodItems geo:sfWithin :Fridge .
+:Utensils geo:sfWithin :WallCabinet .
+:Chair geo:sfWithin :DiningArea .
+:Box geo:sfWithin :Table .

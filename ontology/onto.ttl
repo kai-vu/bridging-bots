@@ -20,24 +20,24 @@
     rdfs:label "Workflow"@en ;
     rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
 
+:Affordance a owl:Class, dul:Entity ;
+    rdfs:label "Affordance"@en ;
+    rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
+
 :Component a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of a system that can be used to perform tasks or actions."@en .
 
-:Affordance a owl:Class, dul:Entity ;
-    rdfs:label "Affordance"@en ;
-    rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
-
-:Appliance a owl:Class, dul:Entity ;
+:Appliance a owl:Class, dul:Entity, :Component ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a device or machine that performs a specific function."@en .
 
-:Furniture a owl:Class, dul:Entity ;
+:Furniture a owl:Class, dul:Entity, :Component ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "Furniture refers to movable objects intended to support various human activities."@en .
 
-:Object a owl:Class, dul:Entity ;
+:Object a owl:Class, dul:Entity, :Component ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a material thing that can be perceived by the senses."@en .
 

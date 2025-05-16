@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-34b89d69-23bd-4dc0-b9ce-4e4e3a9059a1",
+    "created": 1747397256,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The image shows a room that appears to be a modern kitchen and adjacent dining area. In the kitchen:\n- A white countertop with a sink and a faucet.\n- Dark wooden cabinets above and below the counter.\n- A stainless steel fridge on the right, partially visible.\n- An assortment of food items including what seems to be a loaf of bread, cereal, and possibly a cake or muffin box on top of the refrigerator.\n- A red and white container that could be a jar of jam or another spreadable item near the sink.\n- A wall cabinet with some utensils like a knife and spoon, possibly above the countertop.\n- A wooden floor under the countertops.\n- The far end of the table against the back wall.\n\nIn the dining area:\n- A white chair pushed in under the table, indicating that it can be used for extra seating when needed.\n- A wooden dining table with a dark top.\n- A box of cereal or similar items on top of the table near the chair.\n- The far end of the table has two empty spots where one could place dishes or other items.\n- The corner of the room contains a cupboard and possibly more storage, although it's not fully visible from this angle.\n\nOverall, the space is well-organized with modern appliances and furnishings, suggesting a recently renovated or newly decorated interior. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 70.02,
+        "prompt_token/s": 1796.68,
+        "total_duration": 7797724668,
+        "load_duration": 1579354813,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 1705926038,
+        "eval_count": 313,
+        "completion_tokens": 313,
+        "eval_duration": 4470040143,
+        "approximate_total": "0h0m7s",
+        "total_tokens": 3378,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

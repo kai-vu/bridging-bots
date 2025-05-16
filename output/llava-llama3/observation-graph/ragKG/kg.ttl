@@ -1,0 +1,77 @@
+@prefix : <http://find-a-name.org/> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+:Kitchen a :Environment .
+:DiningArea a :Environment .
+
+:Countertop a :Component .
+:Sink a :Component .
+:Faucet a :Component .
+:Cabinets a :Component .
+:Fridge a :Component .
+:FoodItems a :Component .
+:Container a :Component .
+:WallCabinet a :Component .
+:Utensils a :Component .
+:Floor a :Component .
+:Table a :Component .
+:Chair a :Component .
+:Cupboard a :Component .
+
+:Kitchen dul:hasComponent :Countertop .
+:Kitchen dul:hasComponent :Sink .
+:Kitchen dul:hasComponent :Faucet .
+:Kitchen dul:hasComponent :Cabinets .
+:Kitchen dul:hasComponent :Fridge .
+:Kitchen dul:hasComponent :FoodItems .
+:Kitchen dul:hasComponent :Container .
+:Kitchen dul:hasComponent :WallCabinet .
+:Kitchen dul:hasComponent :Utensils .
+:Kitchen dul:hasComponent :Floor .
+
+:DiningArea dul:hasComponent :Table .
+:DiningArea dul:hasComponent :Chair .
+:DiningArea dul:hasComponent :Cupboard .
+
+:Countertop dul:hasLocation :Kitchen .
+:Sink dul:hasLocation :Countertop .
+:Faucet dul:hasLocation :Sink .
+:Cabinets dul:hasLocation :Kitchen .
+:Fridge dul:hasLocation :Kitchen .
+:FoodItems dul:hasLocation :Fridge .
+:Container dul:hasLocation :Countertop .
+:WallCabinet dul:hasLocation :Kitchen .
+:Utensils dul:hasLocation :WallCabinet .
+:Floor dul:hasLocation :Kitchen .
+:Table dul:hasLocation :DiningArea .
+:Chair dul:hasLocation :Table .
+:Cupboard dul:hasLocation :DiningArea .
+
+:Countertop :onTopOf :Floor .
+:Table :onTopOf :Floor .
+:Chair :onTopOf :Floor .
+:Cupboard :onTopOf :Floor .
+
+:Container :hasAffordance soma:Grasping .
+:Container :hasAffordance soma:Holding .
+:Container :hasAffordance soma:Opening .
+:Container :hasAffordance soma:Closing .
+
+:Chair :hasAffordance soma:Grasping .
+:Chair :hasAffordance soma:Holding .
+:Chair :hasAffordance soma:Pushing .
+:Chair :hasAffordance soma:Pulling .
+
+:Table :hasAffordance soma:Grasping .
+:Table :hasAffordance soma:Holding .
+:Table :hasAffordance soma:Pushing .
+:Table :hasAffordance soma:Pulling .
+
+:Cupboard :hasAffordance soma:Grasping .
+:Cupboard :hasAffordance soma:Holding .
+:Cupboard :hasAffordance soma:Opening .
+:Cupboard :hasAffordance soma:Closing .

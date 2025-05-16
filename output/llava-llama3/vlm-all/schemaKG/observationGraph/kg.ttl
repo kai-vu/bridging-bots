@@ -1,4 +1,0 @@
-@prefix kitchen: <http://example.org/kitchen#> .
-
-kitchen:SECTION_TITLES_AND_EXPECTED_CONTENT kitchen:HAS kitchen:CONTENT .
-
