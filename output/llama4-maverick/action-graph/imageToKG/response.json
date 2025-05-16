@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-026c6b57-fcf5-4f44-b4df-b27792289651",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psrTask-ontology#> .\n\npsr:ReorganiseKitchen_Instruction a psr:Instruction ;\n    psr:hasWorkflow psr:ReorganiseKitchen_Workflow ;\n    psr:hasNaturalLanguage \"Reorganise the kitchen\"@en .\n\npsr:ReorganiseKitchen_Workflow a psr:Workflow ;\n    psr:hasAction psr:PickJelloBox_Action, psr:PickAlpenSalt_Action, psr:PickChuckyBox_Action, psr:PickRiceBubblesBox_Action, psr:OpenFridgeDoor_Action, psr:PutJelloBoxInFridge_Action, psr:PutAlpenSaltInFridge_Action, psr:PutChuckyBoxInFridge_Action, psr:PutRiceBubblesInFridge_Action, psr:CloseFridgeDoor_Action, psr:PickMarmaladeJar_Action, psr:PickChocolateJar_Action, psr:PutMarmaladeInCabinet_Action, psr:PutChocolateInCabinet_Action, psr:PickWaterBottle_Action, psr:PutWaterBottleOnTable_Action .\n\npsr:PickJelloBox_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:JelloBox ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PickAlpenSalt_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:AlpenSalt ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PickChuckyBox_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:ChuckyBox ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PickRiceBubblesBox_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:RiceBubblesBox ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:OpenFridgeDoor_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:FridgeDoor ;\n    psr:isAffordedBy soma:Opening .\n\npsr:PutJelloBoxInFridge_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:JelloBox ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PutAlpenSaltInFridge_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:AlpenSalt ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PutChuckyBoxInFridge_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:ChuckyBox ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PutRiceBubblesInFridge_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:RiceBubblesBox ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:CloseFridgeDoor_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:FridgeDoor ;\n    psr:isAffordedBy soma:Closing .\n\npsr:PickMarmaladeJar_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:MarmaladeJar ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PickChocolateJar_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:ChocolateJar ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PutMarmaladeInCabinet_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:MarmaladeJar ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PutChocolateInCabinet_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:ChocolateJar ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PickWaterBottle_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:WaterBottle ;\n    psr:isAffordedBy soma:PickingUp .\n\npsr:PutWaterBottleOnTable_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot ;\n    psr:actsOn psr:WaterBottle ;\n    psr:isAffordedBy soma:PuttingDown .\n\npsr:PickJelloBox_Action psr:precedes psr:PickAlpenSalt_Action .\npsr:PickAlpenSalt_Action psr:precedes psr:PickChuckyBox_Action .\npsr:PickChuckyBox_Action psr:precedes psr:PickRiceBubblesBox_Action .\npsr:PickRiceBubblesBox_Action psr:precedes psr:OpenFridgeDoor_Action .\npsr:OpenFridgeDoor_Action psr:precedes psr:PutJelloBoxInFridge_Action .\npsr:PutJelloBoxInFridge_Action psr:precedes psr:PutAlpenSaltInFridge_Action .\npsr:PutAlpenSaltInFridge_Action psr:precedes psr:PutChuckyBoxInFridge_Action .\npsr:PutChuckyBoxInFridge_Action psr:precedes psr:PutRiceBubblesInFridge_Action .\npsr:PutRiceBubblesInFridge_Action psr:precedes psr:CloseFridgeDoor_Action .\npsr:CloseFridgeDoor_Action psr:precedes psr:PickMarmaladeJar_Action .\npsr:PickMarmaladeJar_Action psr:precedes psr:PickChocolateJar_Action .\npsr:PickChocolateJar_Action psr:precedes psr:PutMarmaladeInCabinet_Action .\npsr:PutMarmaladeInCabinet_Action psr:precedes psr:PutChocolateInCabinet_Action .\npsr:PutChocolateInCabinet_Action psr:precedes psr:PickWaterBottle_Action .\npsr:PickWaterBottle_Action psr:precedes psr:PutWaterBottleOnTable_Action .\n\npsr:JelloBox a psr:Object .\npsr:AlpenSalt a psr:Object .\npsr:ChuckyBox a psr:Object .\npsr:RiceBubblesBox a psr:Object .\npsr:FridgeDoor a psr:Appliance .\npsr:MarmaladeJar a psr:Object .\npsr:ChocolateJar a psr:Object .\npsr:WaterBottle a psr:Object .\npsr:Robot a dul:Agent .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747436982,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_fcf8b6b0bf",
+    "usage": {
+        "completion_tokens": 1698,
+        "prompt_tokens": 14125,
+        "total_tokens": 15823,
+        "completion_time": 9.674188892,
+        "prompt_time": 0.400175247,
+        "queue_time": 5.4508861490000005,
+        "total_time": 10.074364139
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdnrf0bf9wv7a3v8awp41p7"
+    }
+}

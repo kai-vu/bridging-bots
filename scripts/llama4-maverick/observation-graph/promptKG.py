@@ -72,8 +72,8 @@ if __name__ == "__main__":
     groq_key = os.getenv("GROQ_KEY")
     embedding_model = "BAAI/bge-small-en"
 
-    description_path = "../../../output/llama4/observation-graph/image-description.json"
-    output_path = "../../../output/llama4/observation-graph/promptKG"
+    description_path = "../../../output/llama4-maverick/observation-graph/image-description.json"
+    output_path = "../../../output/llama4-maverick/observation-graph/promptKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"

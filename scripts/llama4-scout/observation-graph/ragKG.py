@@ -122,8 +122,8 @@ if __name__ == "__main__":
     api_key = os.getenv("GROQ_KEY")
     embedding_model = "BAAI/bge-small-en"
 
-    description_path = "../../../output/llama4/observation-graph/image-description.json"
-    output_path = "../../../output/llama4/observation-graph/ragKG"
+    description_path = "../../../output/llama4-scout/observation-graph/image-description.json"
+    output_path = "../../../output/llama4-scout/observation-graph/ragKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
 
     token_counter = TokenCountingHandler(

@@ -73,7 +73,7 @@ if __name__ == "__main__":
     robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/llama4/action-graph/imageToKG"
+    output_path = "../../../output/llama4-maverick/action-graph/imageToKG"
     ontology_path = "../../../ontology/ontoActionGraph.ttl"
     with open(ontology_path, 'r', encoding='utf-8') as file:
         ontology_txt = file.read()

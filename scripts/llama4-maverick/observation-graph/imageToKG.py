@@ -71,7 +71,7 @@ if __name__ == "__main__":
     llm_model = os.getenv("LLM_MODEL")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/llama4/observation-graph/imageToKG"
+    output_path = "../../../output/llama4-maverick/observation-graph/imageToKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
     with open(ontology_path, 'r', encoding='utf-8') as file:
         ontology_txt = file.read()

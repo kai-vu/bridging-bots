@@ -1,0 +1,62 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psrTask-ontology#> .
+
+psr:Kitchen a psr:Environment ;
+    dul:hasComponent psr:Table, psr:Cabinet, psr:Refrigerator, psr:Sink, psr:Stove, psr:Fridge .
+
+psr:Table a psr:Furniture ;
+    dul:hasLocation psr:DiningArea ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
+
+psr:Cabinet a psr:Furniture ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:Refrigerator a psr:Appliance ;
+    dul:hasLocation psr:KitchenCorner ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:Sink a psr:Appliance ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:hasAffordance soma:Delivering .
+
+psr:Stove a psr:Appliance ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
+
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:KitchenCorner ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:DiningArea a soma:Location ;
+    geo:sfContains psr:Table .
+
+psr:KitchenCounter a soma:Location ;
+    geo:sfContains psr:Cabinet, psr:Sink, psr:Stove .
+
+psr:KitchenCorner a soma:Location ;
+    geo:sfContains psr:Refrigerator .
+
+psr:Jar a psr:Object ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
+
+psr:Box a psr:Object ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:hasAffordance soma:PickingUp .
+
+psr:Glass a psr:Object ;
+    dul:hasLocation psr:Table ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
+
+psr:Bottle a psr:Object ;
+    dul:hasLocation psr:Table ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
+
+psr:Book a psr:Object ;
+    dul:hasLocation psr:Table ;
+    psr:hasAffordance soma:PickingUp, soma:Holding .

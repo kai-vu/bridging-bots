@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-496a8735-1448-499d-bc11-99aa239d3c46",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psrTask-ontology#> .\n\npsr:Kitchen a psr:Environment ;\n    dul:hasComponent psr:Table, psr:Cabinet, psr:Refrigerator, psr:Sink, psr:Stove, psr:Fridge .\n\npsr:Table a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Holding, soma:PickingUp .\n\npsr:Cabinet a psr:Furniture ;\n    dul:hasLocation psr:KitchenCounter ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Refrigerator a psr:Appliance ;\n    dul:hasLocation psr:KitchenCorner ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:KitchenCounter ;\n    psr:hasAffordance soma:Delivering .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:KitchenCounter ;\n    psr:hasAffordance soma:Holding, soma:PickingUp .\n\npsr:Fridge a psr:Appliance ;\n    dul:hasLocation psr:KitchenCorner ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:DiningArea a soma:Location ;\n    geo:sfContains psr:Table .\n\npsr:KitchenCounter a soma:Location ;\n    geo:sfContains psr:Cabinet, psr:Sink, psr:Stove .\n\npsr:KitchenCorner a soma:Location ;\n    geo:sfContains psr:Refrigerator .\n\npsr:Jar a psr:Object ;\n    dul:hasLocation psr:KitchenCounter ;\n    psr:hasAffordance soma:Holding, soma:PickingUp .\n\npsr:Box a psr:Object ;\n    dul:hasLocation psr:KitchenCounter ;\n    psr:hasAffordance soma:PickingUp .\n\npsr:Glass a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:hasAffordance soma:Holding, soma:PickingUp .\n\npsr:Bottle a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:hasAffordance soma:Holding, soma:PickingUp .\n\npsr:Book a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:hasAffordance soma:PickingUp, soma:Holding .\n```",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747436924,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 645,
+        "prompt_tokens": 13853,
+        "total_tokens": 14498,
+        "completion_time": 3.081480054,
+        "prompt_time": 0.358142863,
+        "queue_time": 7.749027948999999,
+        "total_time": 3.439622917
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdnpkg9f8btejn9dt6kf0ee"
+    }
+}

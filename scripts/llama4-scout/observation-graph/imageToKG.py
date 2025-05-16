@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import base64
 import requests
@@ -6,7 +7,6 @@ import requests
 from groq import Groq
 from pathlib import Path
 from dotenv import load_dotenv
-
 
 def convert_image_to_base64(file_path):
     with open(file_path, "rb") as image_file:
@@ -44,9 +44,17 @@ def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
     return response
 
 def save_response_to_file(output_path, response):
+    json_response_path = os.path.join(output_path, "response.json")
     response_json = response.to_dict()
-    with open(output_path, 'w', encoding='utf-8') as f:
+    with open(json_response_path, 'w', encoding='utf-8') as f:
         json.dump(response_json, f, ensure_ascii=False, indent=4)
+    ttl_response_path = os.path.join(output_path, "kg.ttl")
+    ttl_response = str(response_json['choices'][0]['message']['content'])
+    ttl_response = re.sub(r"^```[^\n]*\n", "", ttl_response.strip())
+    ttl_response = re.sub(r"```$", "", ttl_response.strip())
+    ttl_response = ttl_response.strip()
+    with open(ttl_response_path, 'w') as f:
+        f.write(ttl_response)
     return 
 
 def main(images_folder_path, groq_key, llm_model, user_query, output_path):
@@ -63,17 +71,32 @@ if __name__ == "__main__":
     llm_model = os.getenv("LLM_MODEL")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/llama4/observation-graph/image-description.json"
+    output_path = "../../../output/llama4-scout/observation-graph/imageToKG"
+    ontology_path = "../../../ontology/ontoObservationGraph.ttl"
+    with open(ontology_path, 'r', encoding='utf-8') as file:
+        ontology_txt = file.read()
 
-    user_query = """
-    ## INSTRUCTIONS ##
-    You are given a set of images taken from the same environment at different angles. 
-    These images together represent the complete layout and state of the environment in which a robot must perform a task.
-    Your task is to carefully analyse all visual details from the images and provide a description of the environment as seen from all images combines. 
-    Specifically, include: all visible objects, their positions relative to each other and to environment; stacked or nested relationships (e.g., “a bowl inside a plate on top of a placemat”); spatial orientation (e.g., “to the left of the sink”, “at the far end of the table”)
+    user_query = f"""
+Ontology as context information is below.
+---------------------
+{ontology_txt}
+---------------------
 
-    ## OUTPUT FORMAT ##
-    You must return only text output, with no introductory text or explanations.
-    """
+Given the ontology information, your task is to generates a Knowledge Graph from a set of images.
+The images are taken from the same environment at different angles. 
+These images together represent the complete layout and state of the environment.
+
+Instructions:
+- Analyze the images carefully to understand the complete layout of the environment, objects, and relevant affordances.
+- Based on the ontology, **generate a Knowledge Graph describing the environment**.
+- Use **only** the classes and properties defined in the ontology.
+- Do **not invent or infer** terms not explicitly defined in the ontology.
+- All entities and relations must conform to the structure and semantics of the ontology.
+
+Output format:
+- Output only text, no extra explanations.
+- Use Turtle format for the output.
+- Include the prefixes and namespaces at the beginning.
+"""
 
     main(images_folder_path, groq_key, llm_model, user_query, output_path)
