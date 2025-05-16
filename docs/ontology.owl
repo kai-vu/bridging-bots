@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/psrTask-ontology#"
-     xml:base="https://w3id.org/psrTask-ontology"
+<rdf:RDF xmlns="https://w3id.org/psr-task#"
+     xml:base="https://w3id.org/psr-task"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,7 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="https://w3id.org/psrTask-ontology#">
+    <owl:Ontology rdf:about="https://w3id.org/psr-task#">
         <dc:creator rdf:nodeID="genid1"/>
         <dc:creator rdf:nodeID="genid4"/>
         <dc:creator rdf:nodeID="genid6"/>
@@ -21,7 +21,7 @@
         <dc:title xml:lang="en">Personal Service Robot (PSR) - Task Ontology</dc:title>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-16</terms:created>
         <vann:preferredNamespacePrefix>psr</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://w3id.org/psrTask-ontology#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/psr-task#</vann:preferredNamespaceUri>
         <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
@@ -240,8 +240,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Environment"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Environment"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
         <rdfs:comment xml:lang="en">An environment has one or more components.</rdfs:comment>
         <rdfs:label xml:lang="en">has component</rdfs:label>
     </owl:ObjectProperty>
@@ -252,8 +252,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Location"/>
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Location"/>
         <rdfs:comment xml:lang="en">A component has a location within the environment, which can refer to another component.</rdfs:comment>
         <rdfs:label xml:lang="en">has location</rdfs:label>
     </owl:ObjectProperty>
@@ -271,8 +271,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
     </owl:ObjectProperty>
     
 
@@ -281,8 +281,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfOverlaps">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
     </owl:ObjectProperty>
     
 
@@ -291,28 +291,28 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#actsOn -->
+    <!-- https://w3id.org/psr-task#actsOn -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#actsOn">
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#actsOn">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
         <rdfs:comment xml:lang="en">An action acts on a component.</rdfs:comment>
         <rdfs:label xml:lang="en">acts on</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#follows -->
+    <!-- https://w3id.org/psr-task#follows -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#follows">
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#follows">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
@@ -322,11 +322,11 @@
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#hasAction -->
+    <!-- https://w3id.org/psr-task#hasAction -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#hasAction">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Workflow"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#hasAction">
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Workflow"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
         <rdfs:comment xml:lang="en">A workflow has one or multiple clear atomic actions.</rdfs:comment>
         <rdfs:label xml:lang="en">has action</rdfs:label>
@@ -334,58 +334,58 @@
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#hasAffordance -->
+    <!-- https://w3id.org/psr-task#hasAffordance -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#hasAffordance">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#hasAffordance">
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Affordance"/>
         <rdfs:comment xml:lang="en">A component has one or more affordances that indicate how it can be used.</rdfs:comment>
         <rdfs:label xml:lang="en">has affordance</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#hasWorkflow -->
+    <!-- https://w3id.org/psr-task#hasWorkflow -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#hasWorkflow">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Instruction"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Workflow"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#hasWorkflow">
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Instruction"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Workflow"/>
         <rdfs:comment xml:lang="en">An instruction has a workflow that needs to be executed.</rdfs:comment>
         <rdfs:label xml:lang="en">has workflow</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#isAffordedBy -->
+    <!-- https://w3id.org/psr-task#isAffordedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#isAffordedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#isAffordedBy">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Affordance"/>
         <rdfs:comment xml:lang="en">An action is afforded by an affordance.</rdfs:comment>
         <rdfs:label xml:lang="en">is afforded by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#onTopOf -->
+    <!-- https://w3id.org/psr-task#onTopOf -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#onTopOf">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Location"/>
-        <rdfs:range rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#onTopOf">
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Location"/>
+        <rdfs:range rdf:resource="https://w3id.org/psr-task#Component"/>
         <rdfs:comment xml:lang="en">The location of component can be on top of another component.</rdfs:comment>
         <rdfs:label xml:lang="en">on top of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#precedes -->
+    <!-- https://w3id.org/psr-task#precedes -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/psrTask-ontology#precedes">
+    <owl:ObjectProperty rdf:about="https://w3id.org/psr-task#precedes">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
@@ -407,11 +407,11 @@
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#:hasNaturalLanguage -->
+    <!-- https://w3id.org/psr-task#:hasNaturalLanguage -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/psrTask-ontology#:hasNaturalLanguage">
-        <rdfs:domain rdf:resource="https://w3id.org/psrTask-ontology#Instruction"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/psr-task#:hasNaturalLanguage">
+        <rdfs:domain rdf:resource="https://w3id.org/psr-task#Instruction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The instruction is expressed in a natural language.</rdfs:comment>
         <rdfs:label xml:lang="en">has natural language</rdfs:label>
@@ -557,66 +557,66 @@
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Affordance -->
+    <!-- https://w3id.org/psr-task#Affordance -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Affordance"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Affordance"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Appliance -->
+    <!-- https://w3id.org/psr-task#Appliance -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Appliance"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Appliance"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Component -->
+    <!-- https://w3id.org/psr-task#Component -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Component"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Component"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Environment -->
+    <!-- https://w3id.org/psr-task#Environment -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Environment"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Environment"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Furniture -->
+    <!-- https://w3id.org/psr-task#Furniture -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Furniture"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Furniture"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Instruction -->
+    <!-- https://w3id.org/psr-task#Instruction -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Instruction"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Instruction"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Location -->
+    <!-- https://w3id.org/psr-task#Location -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Location"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Location"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Object -->
+    <!-- https://w3id.org/psr-task#Object -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Object"/>
+    <owl:Class rdf:about="https://w3id.org/psr-task#Object"/>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Workflow -->
+    <!-- https://w3id.org/psr-task#Workflow -->
 
 
-    <owl:Class rdf:about="https://w3id.org/psrTask-ontology#Workflow">
+    <owl:Class rdf:about="https://w3id.org/psr-task#Workflow">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"/>
     </owl:Class>
     
@@ -639,7 +639,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Closing">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -649,7 +649,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Delivering">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -659,7 +659,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Grasping">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -669,7 +669,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Holding">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -688,7 +688,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Opening">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -698,7 +698,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#PickingUp">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -708,7 +708,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Pulling">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -718,7 +718,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Pushing">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -728,7 +728,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/SOMA.owl#PuttingDown">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Affordance"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Affordance"/>
     </owl:NamedIndividual>
     
 
@@ -778,76 +778,76 @@
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Affordance -->
+    <!-- https://w3id.org/psr-task#Affordance -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Affordance">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Affordance">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Appliance -->
+    <!-- https://w3id.org/psr-task#Appliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Appliance">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Appliance">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Component"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Component -->
+    <!-- https://w3id.org/psr-task#Component -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Component">
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/psrTask-ontology#Environment -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Environment">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Component">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Furniture -->
+    <!-- https://w3id.org/psr-task#Environment -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Furniture">
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/psrTask-ontology#Instruction -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Instruction">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Environment">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Object -->
+    <!-- https://w3id.org/psr-task#Furniture -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Object">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Furniture">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
-        <rdf:type rdf:resource="https://w3id.org/psrTask-ontology#Component"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Component"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/psrTask-ontology#Workflow -->
+    <!-- https://w3id.org/psr-task#Instruction -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/psrTask-ontology#Workflow">
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Instruction">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/psr-task#Object -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Object">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdf:type rdf:resource="https://w3id.org/psr-task#Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/psr-task#Workflow -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Workflow">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
     </owl:NamedIndividual>
     
@@ -922,35 +922,35 @@
         <rdfs:comment xml:lang="en">The location of a component can be within another component.</rdfs:comment>
         <rdfs:label xml:lang="en">is within</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Affordance">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Affordance">
         <rdfs:comment xml:lang="en">An affordance is a property of an object that indicates how it can be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Affordance</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Appliance">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Appliance">
         <rdfs:comment xml:lang="en">An appliance is a type of component.</rdfs:comment>
         <rdfs:label xml:lang="en">Appliance</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Component">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Component">
         <rdfs:comment xml:lang="en">A component is a part of an environment that can be used to perform tasks or actions.</rdfs:comment>
         <rdfs:label xml:lang="en">Component</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Environment">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Environment">
         <rdfs:comment xml:lang="en">An environment is an area or context in which components are found.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Furniture">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Furniture">
         <rdfs:comment xml:lang="en">A furniture is a type of component.</rdfs:comment>
         <rdfs:label xml:lang="en">Furniture</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Instruction">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Instruction">
         <rdfs:comment xml:lang="en">An instruction is a command or directive given to a robot.</rdfs:comment>
         <rdfs:label xml:lang="en">Instruction</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Object">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Object">
         <rdfs:comment xml:lang="en">An object is a type of component.</rdfs:comment>
         <rdfs:label xml:lang="en">Object</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/psrTask-ontology#Workflow">
+    <rdf:Description rdf:about="https://w3id.org/psr-task#Workflow">
         <rdfs:comment xml:lang="en">A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction.</rdfs:comment>
         <rdfs:label xml:lang="en">Workflow</rdfs:label>
     </rdf:Description>

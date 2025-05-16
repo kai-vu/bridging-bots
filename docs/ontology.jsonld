@@ -154,7 +154,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -170,7 +170,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -186,7 +186,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -202,7 +202,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -232,7 +232,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -248,7 +248,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -264,7 +264,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -280,7 +280,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -296,7 +296,7 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -368,14 +368,14 @@
     "@value" : "An environment has one or more components."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Environment"
+    "@id" : "https://w3id.org/psr-task#Environment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
   "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation",
@@ -385,14 +385,14 @@
     "@value" : "A component has a location within the environment, which can refer to another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Location"
+    "@id" : "https://w3id.org/psr-task#Location"
   } ]
 }, {
   "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes",
@@ -408,14 +408,14 @@
     "@value" : "The location of a component can be contained in another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Location"
+    "@id" : "https://w3id.org/psr-task#Location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "contains"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#sfOverlaps",
@@ -428,14 +428,14 @@
     "@value" : "The location of a component can overlaps with another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Location"
+    "@id" : "https://w3id.org/psr-task#Location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "overlaps"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#sfWithin",
@@ -448,14 +448,14 @@
     "@value" : "The location of a component can be within another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Location"
+    "@id" : "https://w3id.org/psr-task#Location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is within"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -476,7 +476,7 @@
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#",
+  "@id" : "https://w3id.org/psr-task#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@id" : "_:genid1"
@@ -506,20 +506,20 @@
     "@value" : "psr"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://w3id.org/psrTask-ontology#"
+    "@value" : "https://w3id.org/psr-task#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#:hasNaturalLanguage",
+  "@id" : "https://w3id.org/psr-task#:hasNaturalLanguage",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The instruction is expressed in a natural language."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Instruction"
+    "@id" : "https://w3id.org/psr-task#Instruction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -529,7 +529,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Affordance",
+  "@id" : "https://w3id.org/psr-task#Affordance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
@@ -543,12 +543,12 @@
     "@value" : "Affordance"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Appliance",
+  "@id" : "https://w3id.org/psr-task#Appliance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -559,7 +559,7 @@
     "@value" : "Appliance"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Component",
+  "@id" : "https://w3id.org/psr-task#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
@@ -573,7 +573,7 @@
     "@value" : "Component"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Environment",
+  "@id" : "https://w3id.org/psr-task#Environment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
@@ -587,12 +587,12 @@
     "@value" : "Environment"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Furniture",
+  "@id" : "https://w3id.org/psr-task#Furniture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -603,7 +603,7 @@
     "@value" : "Furniture"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Instruction",
+  "@id" : "https://w3id.org/psr-task#Instruction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
@@ -617,15 +617,15 @@
     "@value" : "Instruction"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Location",
+  "@id" : "https://w3id.org/psr-task#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Object",
+  "@id" : "https://w3id.org/psr-task#Object",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
   }, {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -636,7 +636,7 @@
     "@value" : "Object"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#Workflow",
+  "@id" : "https://w3id.org/psr-task#Workflow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"
@@ -653,7 +653,7 @@
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#actsOn",
+  "@id" : "https://w3id.org/psr-task#actsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -667,10 +667,10 @@
     "@value" : "acts on"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#follows",
+  "@id" : "https://w3id.org/psr-task#follows",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -689,14 +689,14 @@
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#hasAction",
+  "@id" : "https://w3id.org/psr-task#hasAction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A workflow has one or multiple clear atomic actions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Workflow"
+    "@id" : "https://w3id.org/psr-task#Workflow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -706,41 +706,41 @@
     "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#hasAffordance",
+  "@id" : "https://w3id.org/psr-task#hasAffordance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A component has one or more affordances that indicate how it can be used."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has affordance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#hasWorkflow",
+  "@id" : "https://w3id.org/psr-task#hasWorkflow",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An instruction has a workflow that needs to be executed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Instruction"
+    "@id" : "https://w3id.org/psr-task#Instruction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has workflow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Workflow"
+    "@id" : "https://w3id.org/psr-task#Workflow"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#isAffordedBy",
+  "@id" : "https://w3id.org/psr-task#isAffordedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -754,27 +754,27 @@
     "@value" : "is afforded by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Affordance"
+    "@id" : "https://w3id.org/psr-task#Affordance"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#onTopOf",
+  "@id" : "https://w3id.org/psr-task#onTopOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The location of component can be on top of another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Location"
+    "@id" : "https://w3id.org/psr-task#Location"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "on top of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/psrTask-ontology#Component"
+    "@id" : "https://w3id.org/psr-task#Component"
   } ]
 }, {
-  "@id" : "https://w3id.org/psrTask-ontology#precedes",
+  "@id" : "https://w3id.org/psr-task#precedes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",

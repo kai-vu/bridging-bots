@@ -1,23 +1,23 @@
-@prefix : <https://w3id.org/psrTask-ontology#> .
+@prefix : <https://w3id.org/psr-task#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/psrTask-ontology#> .
+@base <https://w3id.org/psr-task#> .
 
-<https://w3id.org/psrTask-ontology#> rdf:type owl:Ontology ;
-                                      <http://purl.org/dc/elements/1.1/creator> _:genid1 ,
-                                                                                _:genid4 ,
-                                                                                _:genid6 ,
-                                                                                _:genid8 ;
-                                      <http://purl.org/dc/elements/1.1/description> "An ontology to model environments, components, affordances, instructions, workflows, and actions related to robotic task execution."@en ;
-                                      <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                      <http://purl.org/dc/elements/1.1/title> "Personal Service Robot (PSR) - Task Ontology"@en ;
-                                      <http://purl.org/dc/terms/created> "2025-05-16"^^xsd:date ;
-                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "psr" ;
-                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/psrTask-ontology#" ;
-                                      owl:versionInfo "1.0.0" .
+<https://w3id.org/psr-task#> rdf:type owl:Ontology ;
+                              <http://purl.org/dc/elements/1.1/creator> _:genid1 ,
+                                                                        _:genid4 ,
+                                                                        _:genid6 ,
+                                                                        _:genid8 ;
+                              <http://purl.org/dc/elements/1.1/description> "An ontology to model environments, components, affordances, instructions, workflows, and actions related to robotic task execution."@en ;
+                              <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                              <http://purl.org/dc/elements/1.1/title> "Personal Service Robot (PSR) - Task Ontology"@en ;
+                              <http://purl.org/dc/terms/created> "2025-05-16"^^xsd:date ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "psr" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/psr-task#" ;
+                              owl:versionInfo "1.0.0" .
 
 _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
           <http://schema.org/identifier> _:genid2 ;
@@ -181,7 +181,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                 rdfs:range :Component .
 
 
-###  https://w3id.org/psrTask-ontology#actsOn
+###  https://w3id.org/psr-task#actsOn
 :actsOn rdf:type owl:ObjectProperty ;
         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
         rdfs:range :Component ;
@@ -189,7 +189,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "acts on"@en .
 
 
-###  https://w3id.org/psrTask-ontology#follows
+###  https://w3id.org/psr-task#follows
 :follows rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows> ;
          rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -198,7 +198,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "follow" .
 
 
-###  https://w3id.org/psrTask-ontology#hasAction
+###  https://w3id.org/psr-task#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            rdfs:domain :Workflow ;
            rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -206,7 +206,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "has action"@en .
 
 
-###  https://w3id.org/psrTask-ontology#hasAffordance
+###  https://w3id.org/psr-task#hasAffordance
 :hasAffordance rdf:type owl:ObjectProperty ;
                rdfs:domain :Component ;
                rdfs:range :Affordance ;
@@ -214,7 +214,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has affordance"@en .
 
 
-###  https://w3id.org/psrTask-ontology#hasWorkflow
+###  https://w3id.org/psr-task#hasWorkflow
 :hasWorkflow rdf:type owl:ObjectProperty ;
              rdfs:domain :Instruction ;
              rdfs:range :Workflow ;
@@ -222,7 +222,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "has workflow"@en .
 
 
-###  https://w3id.org/psrTask-ontology#isAffordedBy
+###  https://w3id.org/psr-task#isAffordedBy
 :isAffordedBy rdf:type owl:ObjectProperty ;
               rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
               rdfs:range :Affordance ;
@@ -230,7 +230,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "is afforded by"@en .
 
 
-###  https://w3id.org/psrTask-ontology#onTopOf
+###  https://w3id.org/psr-task#onTopOf
 :onTopOf rdf:type owl:ObjectProperty ;
          rdfs:domain :Location ;
          rdfs:range :Component ;
@@ -238,7 +238,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "on top of"@en .
 
 
-###  https://w3id.org/psrTask-ontology#precedes
+###  https://w3id.org/psr-task#precedes
 :precedes rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> ;
           rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -251,12 +251,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/psrTask-ontology#:hasNaturalLanguage
-<https://w3id.org/psrTask-ontology#:hasNaturalLanguage> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:domain :Instruction ;
-                                                        rdfs:range xsd:string ;
-                                                        rdfs:comment "The instruction is expressed in a natural language."@en ;
-                                                        rdfs:label "has natural language"@en .
+###  https://w3id.org/psr-task#:hasNaturalLanguage
+<https://w3id.org/psr-task#:hasNaturalLanguage> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain :Instruction ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "The instruction is expressed in a natural language."@en ;
+                                                rdfs:label "has natural language"@en .
 
 
 #################################################################
@@ -335,39 +335,39 @@ owl:Property rdf:type owl:Class .
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Affordance
+###  https://w3id.org/psr-task#Affordance
 :Affordance rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Appliance
+###  https://w3id.org/psr-task#Appliance
 :Appliance rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Component
+###  https://w3id.org/psr-task#Component
 :Component rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Environment
+###  https://w3id.org/psr-task#Environment
 :Environment rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Furniture
+###  https://w3id.org/psr-task#Furniture
 :Furniture rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Instruction
+###  https://w3id.org/psr-task#Instruction
 :Instruction rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Location
+###  https://w3id.org/psr-task#Location
 :Location rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Object
+###  https://w3id.org/psr-task#Object
 :Object rdf:type owl:Class .
 
 
-###  https://w3id.org/psrTask-ontology#Workflow
+###  https://w3id.org/psr-task#Workflow
 :Workflow rdf:type owl:Class ;
           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow> .
 
@@ -460,45 +460,45 @@ owl:Property rdf:type owl:Class .
                                                          owl:Property .
 
 
-###  https://w3id.org/psrTask-ontology#Affordance
+###  https://w3id.org/psr-task#Affordance
 :Affordance rdf:type owl:NamedIndividual ,
                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psrTask-ontology#Appliance
+###  https://w3id.org/psr-task#Appliance
 :Appliance rdf:type owl:NamedIndividual ,
                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
                     :Component .
 
 
-###  https://w3id.org/psrTask-ontology#Component
+###  https://w3id.org/psr-task#Component
 :Component rdf:type owl:NamedIndividual ,
                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psrTask-ontology#Environment
+###  https://w3id.org/psr-task#Environment
 :Environment rdf:type owl:NamedIndividual ,
                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psrTask-ontology#Furniture
+###  https://w3id.org/psr-task#Furniture
 :Furniture rdf:type owl:NamedIndividual ,
                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
                     :Component .
 
 
-###  https://w3id.org/psrTask-ontology#Instruction
+###  https://w3id.org/psr-task#Instruction
 :Instruction rdf:type owl:NamedIndividual ,
                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psrTask-ontology#Object
+###  https://w3id.org/psr-task#Object
 :Object rdf:type owl:NamedIndividual ,
                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
                  :Component .
 
 
-###  https://w3id.org/psrTask-ontology#Workflow
+###  https://w3id.org/psr-task#Workflow
 :Workflow rdf:type owl:NamedIndividual ,
                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
