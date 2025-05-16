@@ -10,7 +10,7 @@ ORKA = Namespace("http://w3id.org/def/orka#")
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
 SSN = Namespace("http://www.w3.org/ns/ssn/")
 OBOE = Namespace("http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#")
-
+OBOE_CHAR = Namespace("http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#")
 def extract_color_from_node(node):
     shape = None
     children = node.getField("children")
@@ -90,7 +90,7 @@ def scan_world_objects(supervisor):
 
     return object_data
 
-def create_obs_graph(owl_path, data, output_path="orka_updated.owl"):
+def create_obs_graph(owl_path, data, output_path="obs_graph.ttl"):
     g = Graph()
     g.parse(owl_path, format="xml")
 
@@ -98,36 +98,47 @@ def create_obs_graph(owl_path, data, output_path="orka_updated.owl"):
     g.bind("sosa", SOSA)
     g.bind("ssn", SSN)
     g.bind("oboe", OBOE)
+    g.bind("oboe-char", OBOE_CHAR)
 
 
-    timestamp = datetime.datetime.utcnow().isoformat()
+    timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
         
 
     robot_uri = URIRef(f"Tiago")
     g.add((robot_uri, RDF.type, ORKA.Robot))
+    print(data)
     
     for obj in data:
-        obs_uri = URIRef(f"{ORKA}Obs_{obj['id']}_{timestamp}")
+        
         ent_uri = URIRef(f"{ORKA}Ent_{obj['id']}_{timestamp}")
+        obs_uri = URIRef(f"{ORKA}Obs_{obj['id']}_{timestamp}")
         g.add((obs_uri, RDF.type, OBOE.Observation))
+        g.add((ent_uri, RDF.type, OBOE.Entity))
         g.add((obs_uri, OBOE.ofEntity, ent_uri))
         g.add((obs_uri, ORKA.hasID, Literal(obj['id'])))
         
         if obj.get("name"):
+            print(f"Adding name: {obj['name']}")
             char_name_uri = URIRef(f"{ORKA}char_name_{obj['id']}_{timestamp}")
+            g.add((char_name_uri, RDF.type, OBOE_CHAR.Name))
             g.add((ent_uri, ORKA.hasCharacteristic, char_name_uri))
             g.add((char_name_uri, ORKA.hasValue, Literal(obj["name"])))
         if obj.get("typename"):
+            print(f"Adding typename: {obj['typename']}")
             class_name_uri = URIRef(f"{ORKA}typename_{obj['id']}_{timestamp}")
+            g.add((class_name_uri, RDF.type, ORKA.ObjectType))
             g.add((ent_uri, ORKA.hasCharacteristic, class_name_uri))
             g.add((class_name_uri, ORKA.hasValue, Literal(obj["typename"])))
         if obj.get("position"):
+            print(f"Adding position: {obj['position']}")
             loc_uri = URIRef(f"{ORKA}Loc_{obj['id']}_{timestamp}")
             loc_str = Literal(",".join([str(round(v, 3)) for v in obj["position"]]))
+            g.add((loc_uri, RDF.type, ORKA.Location))
             g.add((loc_uri, ORKA.hasValue, loc_str))
+            g.add((ent_uri, ORKA.hasCharacteristic, loc_uri))
             g.add((ent_uri, ORKA.hasLocation, loc_uri))
 
-    g.serialize(destination="orka_updated.ttl", format="turtle")
+    g.serialize(destination=output_path, format="turtle")
     print(f"Updated ontology written to {output_path}")
 
 

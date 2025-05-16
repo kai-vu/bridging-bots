@@ -1,0 +1,3718 @@
+@prefix : <https://w3id.org/def/orka#> .
+@prefix oboe: <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#> .
+@prefix oboe-char: <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#> .
+@prefix oboe-core: <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#> .
+@prefix orka: <http://w3id.org/def/orka#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<Tiago> a orka:Robot .
+
+oboe-core:Protocol a owl:Class ;
+    owl:equivalentClass sosa:Procedure .
+
+oboe-core:hasPrecision rdfs:subPropertyOf :hasSensorCharacteristic .
+
+oboe-core:hasValue a owl:ObjectProperty ;
+    owl:equivalentProperty sosa:hasResult .
+
+oboe-core:usesProtocol a owl:ObjectProperty ;
+    owl:equivalentProperty sosa:usedProcedure .
+
+terms:description a owl:AnnotationProperty .
+
+terms:license a owl:AnnotationProperty .
+
+terms:title a owl:AnnotationProperty .
+
+swrla:isRuleEnabled a owl:AnnotationProperty .
+
+orka:Obs_10000_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10000_2025_05_16_22_16_46 ;
+    orka:hasID 10000 .
+
+orka:Obs_10015_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10015_2025_05_16_22_16_46 ;
+    orka:hasID 10015 .
+
+orka:Obs_10026_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10026_2025_05_16_22_16_46 ;
+    orka:hasID 10026 .
+
+orka:Obs_10041_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10041_2025_05_16_22_16_46 ;
+    orka:hasID 10041 .
+
+orka:Obs_10055_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10055_2025_05_16_22_16_46 ;
+    orka:hasID 10055 .
+
+orka:Obs_10069_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10069_2025_05_16_22_16_46 ;
+    orka:hasID 10069 .
+
+orka:Obs_10083_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10083_2025_05_16_22_16_46 ;
+    orka:hasID 10083 .
+
+orka:Obs_10108_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10108_2025_05_16_22_16_46 ;
+    orka:hasID 10108 .
+
+orka:Obs_10124_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10124_2025_05_16_22_16_46 ;
+    orka:hasID 10124 .
+
+orka:Obs_10143_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10143_2025_05_16_22_16_46 ;
+    orka:hasID 10143 .
+
+orka:Obs_10155_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10155_2025_05_16_22_16_46 ;
+    orka:hasID 10155 .
+
+orka:Obs_10168_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10168_2025_05_16_22_16_46 ;
+    orka:hasID 10168 .
+
+orka:Obs_10181_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10181_2025_05_16_22_16_46 ;
+    orka:hasID 10181 .
+
+orka:Obs_116_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_116_2025_05_16_22_16_46 ;
+    orka:hasID 116 .
+
+orka:Obs_1473_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_1473_2025_05_16_22_16_46 ;
+    orka:hasID 1473 .
+
+orka:Obs_1_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_1_2025_05_16_22_16_46 ;
+    orka:hasID 1 .
+
+orka:Obs_2427_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_2427_2025_05_16_22_16_46 ;
+    orka:hasID 2427 .
+
+orka:Obs_2924_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_2924_2025_05_16_22_16_46 ;
+    orka:hasID 2924 .
+
+orka:Obs_2_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_2_2025_05_16_22_16_46 ;
+    orka:hasID 2 .
+
+orka:Obs_3876_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_3876_2025_05_16_22_16_46 ;
+    orka:hasID 3876 .
+
+orka:Obs_3_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_3_2025_05_16_22_16_46 ;
+    orka:hasID 3 .
+
+orka:Obs_6203_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6203_2025_05_16_22_16_46 ;
+    orka:hasID 6203 .
+
+orka:Obs_6215_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6215_2025_05_16_22_16_46 ;
+    orka:hasID 6215 .
+
+orka:Obs_6229_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6229_2025_05_16_22_16_46 ;
+    orka:hasID 6229 .
+
+orka:Obs_6243_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6243_2025_05_16_22_16_46 ;
+    orka:hasID 6243 .
+
+orka:Obs_6257_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6257_2025_05_16_22_16_46 ;
+    orka:hasID 6257 .
+
+orka:Obs_6271_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6271_2025_05_16_22_16_46 ;
+    orka:hasID 6271 .
+
+orka:Obs_6338_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6338_2025_05_16_22_16_46 ;
+    orka:hasID 6338 .
+
+orka:Obs_694_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_694_2025_05_16_22_16_46 ;
+    orka:hasID 694 .
+
+orka:Obs_7323_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7323_2025_05_16_22_16_46 ;
+    orka:hasID 7323 .
+
+orka:Obs_7345_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7345_2025_05_16_22_16_46 ;
+    orka:hasID 7345 .
+
+orka:Obs_7375_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7375_2025_05_16_22_16_46 ;
+    orka:hasID 7375 .
+
+orka:Obs_7396_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7396_2025_05_16_22_16_46 ;
+    orka:hasID 7396 .
+
+orka:Obs_7417_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7417_2025_05_16_22_16_46 ;
+    orka:hasID 7417 .
+
+orka:Obs_7438_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7438_2025_05_16_22_16_46 ;
+    orka:hasID 7438 .
+
+orka:Obs_7459_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7459_2025_05_16_22_16_46 ;
+    orka:hasID 7459 .
+
+orka:Obs_7479_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7479_2025_05_16_22_16_46 ;
+    orka:hasID 7479 .
+
+orka:Obs_7500_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7500_2025_05_16_22_16_46 ;
+    orka:hasID 7500 .
+
+orka:Obs_7521_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7521_2025_05_16_22_16_46 ;
+    orka:hasID 7521 .
+
+orka:Obs_7541_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7541_2025_05_16_22_16_46 ;
+    orka:hasID 7541 .
+
+orka:Obs_7663_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7663_2025_05_16_22_16_46 ;
+    orka:hasID 7663 .
+
+orka:Obs_7987_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7987_2025_05_16_22_16_46 ;
+    orka:hasID 7987 .
+
+orka:Obs_8004_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8004_2025_05_16_22_16_46 ;
+    orka:hasID 8004 .
+
+orka:Obs_8021_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8021_2025_05_16_22_16_46 ;
+    orka:hasID 8021 .
+
+orka:Obs_8038_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8038_2025_05_16_22_16_46 ;
+    orka:hasID 8038 .
+
+orka:Obs_8055_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8055_2025_05_16_22_16_46 ;
+    orka:hasID 8055 .
+
+orka:Obs_8072_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8072_2025_05_16_22_16_46 ;
+    orka:hasID 8072 .
+
+orka:Obs_8089_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8089_2025_05_16_22_16_46 ;
+    orka:hasID 8089 .
+
+orka:Obs_8106_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8106_2025_05_16_22_16_46 ;
+    orka:hasID 8106 .
+
+orka:Obs_8123_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8123_2025_05_16_22_16_46 ;
+    orka:hasID 8123 .
+
+orka:Obs_8140_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8140_2025_05_16_22_16_46 ;
+    orka:hasID 8140 .
+
+orka:Obs_8158_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8158_2025_05_16_22_16_46 ;
+    orka:hasID 8158 .
+
+orka:Obs_8351_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8351_2025_05_16_22_16_46 ;
+    orka:hasID 8351 .
+
+orka:Obs_8533_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8533_2025_05_16_22_16_46 ;
+    orka:hasID 8533 .
+
+orka:Obs_8617_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8617_2025_05_16_22_16_46 ;
+    orka:hasID 8617 .
+
+orka:Obs_8649_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8649_2025_05_16_22_16_46 ;
+    orka:hasID 8649 .
+
+orka:Obs_8681_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8681_2025_05_16_22_16_46 ;
+    orka:hasID 8681 .
+
+orka:Obs_8713_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8713_2025_05_16_22_16_46 ;
+    orka:hasID 8713 .
+
+orka:Obs_8745_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8745_2025_05_16_22_16_46 ;
+    orka:hasID 8745 .
+
+orka:Obs_8772_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8772_2025_05_16_22_16_46 ;
+    orka:hasID 8772 .
+
+orka:Obs_8804_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8804_2025_05_16_22_16_46 ;
+    orka:hasID 8804 .
+
+orka:Obs_8816_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8816_2025_05_16_22_16_46 ;
+    orka:hasID 8816 .
+
+orka:Obs_8860_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8860_2025_05_16_22_16_46 ;
+    orka:hasID 8860 .
+
+orka:Obs_8865_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8865_2025_05_16_22_16_46 ;
+    orka:hasID 8865 .
+
+orka:Obs_8870_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8870_2025_05_16_22_16_46 ;
+    orka:hasID 8870 .
+
+orka:Obs_8891_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8891_2025_05_16_22_16_46 ;
+    orka:hasID 8891 .
+
+orka:Obs_9141_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9141_2025_05_16_22_16_46 ;
+    orka:hasID 9141 .
+
+orka:Obs_9375_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9375_2025_05_16_22_16_46 ;
+    orka:hasID 9375 .
+
+orka:Obs_9390_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9390_2025_05_16_22_16_46 ;
+    orka:hasID 9390 .
+
+orka:Obs_9428_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9428_2025_05_16_22_16_46 ;
+    orka:hasID 9428 .
+
+orka:Obs_9466_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9466_2025_05_16_22_16_46 ;
+    orka:hasID 9466 .
+
+orka:Obs_9504_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9504_2025_05_16_22_16_46 ;
+    orka:hasID 9504 .
+
+orka:Obs_9534_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9534_2025_05_16_22_16_46 ;
+    orka:hasID 9534 .
+
+orka:Obs_9557_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9557_2025_05_16_22_16_46 ;
+    orka:hasID 9557 .
+
+orka:Obs_9579_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9579_2025_05_16_22_16_46 ;
+    orka:hasID 9579 .
+
+orka:Obs_9601_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9601_2025_05_16_22_16_46 ;
+    orka:hasID 9601 .
+
+orka:Obs_9623_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9623_2025_05_16_22_16_46 ;
+    orka:hasID 9623 .
+
+orka:Obs_9645_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9645_2025_05_16_22_16_46 ;
+    orka:hasID 9645 .
+
+orka:Obs_9668_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9668_2025_05_16_22_16_46 ;
+    orka:hasID 9668 .
+
+orka:Obs_9679_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9679_2025_05_16_22_16_46 ;
+    orka:hasID 9679 .
+
+orka:Obs_9690_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9690_2025_05_16_22_16_46 ;
+    orka:hasID 9690 .
+
+orka:Obs_9712_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9712_2025_05_16_22_16_46 ;
+    orka:hasID 9712 .
+
+orka:Obs_9734_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9734_2025_05_16_22_16_46 ;
+    orka:hasID 9734 .
+
+orka:Obs_9752_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9752_2025_05_16_22_16_46 ;
+    orka:hasID 9752 .
+
+orka:Obs_9770_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9770_2025_05_16_22_16_46 ;
+    orka:hasID 9770 .
+
+orka:Obs_9781_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9781_2025_05_16_22_16_46 ;
+    orka:hasID 9781 .
+
+orka:Obs_9791_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9791_2025_05_16_22_16_46 ;
+    orka:hasID 9791 .
+
+orka:Obs_9801_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9801_2025_05_16_22_16_46 ;
+    orka:hasID 9801 .
+
+orka:Obs_9813_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9813_2025_05_16_22_16_46 ;
+    orka:hasID 9813 .
+
+orka:Obs_9825_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9825_2025_05_16_22_16_46 ;
+    orka:hasID 9825 .
+
+orka:Obs_9837_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9837_2025_05_16_22_16_46 ;
+    orka:hasID 9837 .
+
+orka:Obs_9849_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9849_2025_05_16_22_16_46 ;
+    orka:hasID 9849 .
+
+orka:Obs_9861_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9861_2025_05_16_22_16_46 ;
+    orka:hasID 9861 .
+
+orka:Obs_9873_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9873_2025_05_16_22_16_46 ;
+    orka:hasID 9873 .
+
+orka:Obs_9885_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9885_2025_05_16_22_16_46 ;
+    orka:hasID 9885 .
+
+orka:Obs_9897_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9897_2025_05_16_22_16_46 ;
+    orka:hasID 9897 .
+
+orka:Obs_9939_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9939_2025_05_16_22_16_46 ;
+    orka:hasID 9939 .
+
+orka:Obs_9957_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9957_2025_05_16_22_16_46 ;
+    orka:hasID 9957 .
+
+orka:Obs_9972_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9972_2025_05_16_22_16_46 ;
+    orka:hasID 9972 .
+
+orka:Obs_9985_2025_05_16_22_16_46 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9985_2025_05_16_22_16_46 ;
+    orka:hasID 9985 .
+
+skos:altLabel a owl:AnnotationProperty .
+
+sosa:FeatureOfInterest a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+sosa:Result a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ssn:hasInputType a owl:ObjectProperty ;
+    rdfs:comment "Describes the input types of e.g. algorithms." ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ssn:hasOutputType a owl:ObjectProperty ;
+    rdfs:comment "Describes the output types of e.g. algorithms." ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ssn:implementedBy a owl:ObjectProperty ;
+    owl:equivalentProperty :implementedOn .
+
+<http://www.w3.org/ns/ssn/systems/Condition> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/OperatingProperty> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/OperatingRange> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/SurvivalProperty> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/SurvivalRange> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/SystemCapability> a owl:Class .
+
+<http://www.w3.org/ns/ssn/systems/SystemProperty> a owl:Class .
+
+<https://w3id.org/def/orka> a owl:Ontology ;
+    terms:description "The Ontology for Robotic Knowledge Acqusition aims at providing a shared understanding and vocabulary for describing robotic perception pipelines including sensors, algorithms and the characteristics of the environment and the objects contained within. The ontology also concerns external sources of knowledge, such as knowledge repositories and The Semantic Web." ;
+    terms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    terms:title "Ontology for Robotic Knowledge Acqusition" ;
+    owl:imports <file://owl/sosa-fixed.owl/>,
+        <file://owl/ssn-fixed.owl/>,
+        <file://owl/ssn-systems-fixed.owl/>,
+        <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl>,
+        <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl>,
+        <http://ecoinformatics.org/oboe/oboe.1.2/oboe.owl> ;
+    owl:versionInfo 1.0 .
+
+:Active_Optical a owl:Class ;
+    rdfs:label "Active Optical" ;
+    rdfs:comment "A sensor that uses light to actively measure position or distance." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Position_Sensor .
+
+:Activity a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+:ActivityType a owl:Class ;
+    rdfs:subClassOf oboe-core:IdentifyingCharacteristic .
+
+:Airplane a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Apple a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Backpack a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Banana a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Barometric_Altimeter a owl:Class ;
+    rdfs:subClassOf :Altitude_Sensor .
+
+:Baseball_bat a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Baseball_glove a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bear a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bed a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bench a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bicycle a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bird a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Boat a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Book a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bottle a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bowl a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Broccoli a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Bumper a owl:Class ;
+    rdfs:label "Bumper"@en ;
+    rdfs:comment "A type of touch sensor that detects physical collisions or impacts, typically used in robotic applications to detect obstacles. Examples include bump sensors on robotic vacuum cleaners and collision detection bumpers on automated guided vehicles."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:Bus a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Cake a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Camera a owl:Class ;
+    rdfs:label "Camera" ;
+    rdfs:comment "An optical sensor that captures visual information in the form of images or video. Examples are digital cameras in smartphones and surveillance systems." ;
+    rdfs:subClassOf :Distance_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor,
+        :Passive_Sensor,
+        :Speed_Sensor ;
+    :hasWeBotsName "camera" .
+
+:Capacitive_Sensor a owl:Class ;
+    rdfs:label "Capacitive Sensor" ;
+    rdfs:comment "A sensor that detects changes in capacitance to measure distance or presence." ;
+    rdfs:subClassOf :Distance_Sensor,
+        :Exteroceptor_Sensor,
+        :Passive_Sensor .
+
+:Capacity_Encoder a owl:Class ;
+    rdfs:label "Capacity Encoder" ;
+    rdfs:comment "A sensor that measures the rotational position using changes in capacitance." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Motor_Sensor .
+
+:Car a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Carrot a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Cat a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Cell_phone a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Chair a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Clock a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Compass a owl:Class ;
+    rdfs:label "Compass"@en ;
+    rdfs:comment "A sensor that detects the Earth's magnetic field to determine the direction relative to the North. Examples are magnetic compasses used in handheld navigation devices and smartphones."@en ;
+    rdfs:subClassOf :Heading_Sensor,
+        :Passive_Sensor ;
+    :hasWeBotsName "compass" .
+
+:ComplexStructure a owl:Class ;
+    rdfs:subClassOf :Structure ;
+    owl:disjointWith :SimpleStructure .
+
+:Contact_Array a owl:Class ;
+    rdfs:label "Contact Array" ;
+    rdfs:comment "A sensor composed of multiple contact points arranged in an array to detect touch or pressure across a surface. Examples include touch-sensitive surfaces in robotics and multitouch screens."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:Couch a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Cow a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Cup a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:DataSet a owl:Class .
+
+:DepthCamera a owl:Class ;
+    rdfs:label "Depth Camera" ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor,
+        :Position_Sensor ;
+    :hasWeBotsName "range_finder" .
+
+:DepthEstimationAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:DetectableEntity a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+:Dining_table a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Dog a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Donut a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Doppler_Radar a owl:Class ;
+    rdfs:label "Doppler Radar" ;
+    rdfs:comment "A radar sensor that measures the frequency shift of returned signals to determine the speed of an object. Doppler radar is used in weather forecasting and traffic speed monitoring." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom oboe-char:Speed ;
+            owl:onProperty sosa:observes ],
+        :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Speed_Sensor .
+
+:Doppler_Sound a owl:Class ;
+    rdfs:label "Doppler Sound Sensor" ;
+    rdfs:comment "A sensor that uses the Doppler effect to measure the speed of sound waves reflecting off moving objects." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom oboe-char:Speed ;
+            owl:onProperty sosa:observes ],
+        :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Speed_Sensor .
+
+:Elephant a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Fire_hydrant a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Force_Sensor a owl:Class ;
+    rdfs:label "Force Sensor"@en ;
+    rdfs:comment "A sensor that measures the amount of force applied to an object. Examples include load cells used in weighing scales and force-sensitive resistors used in haptic devices."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:Fork a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Frisbee a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:GPS a owl:Class ;
+    rdfs:label "GPS" ;
+    rdfs:comment """A satellite-based sensor system that provides location and time information anywhere on Earth. GPS receivers used in navigation devices and smartphones.
+
+TODO: Need to add frame of reference as coordinates (measurements)""" ;
+    rdfs:subClassOf :Active_Sensor,
+        :Position_Sensor,
+        :ProprioceptorSensor ;
+    :hasWeBotsName "gps" .
+
+:GPS_Altimeter a owl:Class ;
+    rdfs:subClassOf :Altitude_Sensor .
+
+:Giraffe a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Hair_drier a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Handbag a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Horse a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Hot_dog a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:HumanFace a owl:Class ;
+    rdfs:label "Human Face" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "L2CSNET" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Humidity a owl:Class ;
+    rdfs:subClassOf :EnvironmentProperty .
+
+:ImageSegmentationAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:ImageToTextAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:Inclination a owl:Class ;
+    rdfs:label "Inclination" ;
+    rdfs:comment "The angle of tilt of an object relative to gravity." ;
+    rdfs:subClassOf :Angle .
+
+:Inclinometer a owl:Class ;
+    rdfs:label "Inclinometer" ;
+    rdfs:comment "A sensor that measures the angle of tilt or inclination of an object relative to gravity. Inclinometers used in construction equipment and mobile devices to detect orientation." ;
+    rdfs:subClassOf :Heading_Sensor,
+        :Passive_Sensor .
+
+:Inductive_Encoder a owl:Class ;
+    rdfs:label "Inductive Encoder" ;
+    rdfs:comment "A sensor that measures position by detecting changes in inductance. Used in harsh environments for industrial applications." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Motor_Sensor .
+
+:Inertial_Unit a owl:Class ;
+    rdfs:label "Inertial Measurement Unit" ;
+    rdfs:comment "Inertial Measurement Unit consists of an accelerometer and a gyroscope and optionally a magnetometer." ;
+    rdfs:subClassOf :Heading_Sensor,
+        :Speed_Sensor ;
+    skos:altLabel "IMU",
+        "Inertial Unit" ;
+    :hasWeBotsName "inertial_unit" .
+
+:Keyboard a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Kite a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Knife a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:L2CSNET_GazeDetector a owl:Class ;
+    rdfs:subClassOf :GazeDetector .
+
+:Laptop a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Latitude a owl:Class ;
+    rdfs:subClassOf :Position .
+
+:LinearForce a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:LocobotWX250s a owl:Class ;
+    rdfs:subClassOf :Robot .
+
+:Magnetic_Encoder a owl:Class ;
+    rdfs:label "Magnetic Encoder" ;
+    rdfs:comment "A sensor that uses a magnetic field to determine position or rotation. Magnetic encoders used in motor control." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Motor_Sensor .
+
+:Magnetic_Sensor a owl:Class ;
+    rdfs:label "Magnetic Sensor" ;
+    rdfs:comment "A sensor that detects magnetic fields to measure position or movement. Examples are Hall effect sensors used in motor control and proximity sensing." ;
+    rdfs:subClassOf :Distance_Sensor,
+        :Exteroceptor_Sensor .
+
+:Microphone a owl:Class ;
+    rdfs:subClassOf :Sound .
+
+:Microwave a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Motorcycle a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Mouse a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:ObjectType a owl:Class ;
+    rdfs:subClassOf oboe-core:IdentifyingCharacteristic .
+
+:Optical_Barrier a owl:Class ;
+    rdfs:label "Optical Barrier" ;
+    rdfs:comment "A sensor that detects the interruption of a light beam to determine the presence or absence of an object. Examples include photoelectric sensors used in security systems and safety light curtains in industrial automation."@en ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Touch_Sensor .
+
+:Optical_Encoder a owl:Class ;
+    rdfs:label "Optical Encoder" ;
+    rdfs:comment "A sensor that uses light to measure position or rotational speed. Optical encoders used in printers and CNC machines." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Motor_Sensor .
+
+:Oven a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Parking_meter a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Person a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        [ a owl:Restriction ;
+            owl:hasValue "L2CSNET" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Photodiode a owl:Class ;
+    rdfs:subClassOf :Light_Sensor ;
+    owl:disjointWith :Phototransistor .
+
+:Pizza a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Potentiometer a owl:Class ;
+    rdfs:label "Potentiometer" ;
+    rdfs:comment "A variable resistor used to measure angular position." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Angular_position ;
+            owl:onProperty sosa:observes ],
+        :Motor_Sensor,
+        :Passive_Sensor .
+
+:Potted_plant a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:PromptedObjectDetectionAlgorithm a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :canDetect ;
+            owl:someValuesFrom :PhysicalEntity ],
+        :ComputerVisionAlgorithm .
+
+:Proximity_Sensor a owl:Class ;
+    rdfs:label "Proximity Sensor"@en ;
+    rdfs:comment "A sensor that measures changes in electrical resistance to detect touch or pressure. Examples include resistive touchscreens and pressure-sensitive resistors used in various applications."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:RF_Beacon a owl:Class ;
+    rdfs:label "Radio Frequency Beacon" ;
+    rdfs:comment "A device that emits radio frequency signals used for positioning or navigation. Used in indoor positioning systems." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Position_Sensor .
+
+:RPLIDAR_A2 a owl:Class ;
+    rdfs:label "RPLiDAR A2" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 12000 ;
+            owl:onProperty :hasMaxRange ],
+        [ a owl:Restriction ;
+            owl:hasValue 0.225 ;
+            owl:onProperty :hasAngularResolution ],
+        [ a owl:Restriction ;
+            owl:hasValue 200 ;
+            owl:onProperty :hasMinRange ],
+        [ a owl:Restriction ;
+            owl:hasValue 10 ;
+            owl:onProperty :hasScanningFrequency ],
+        :Lidar .
+
+:Radar a owl:Class ;
+    rdfs:label "Radar" ;
+    rdfs:comment "A sensor that uses radio waves to detect objects and measure their distance and speed. Examples of radar systems are used in aviation." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Distance_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor ;
+    :hasWeBotsName "radar" .
+
+:Radar_Altimeter a owl:Class ;
+    rdfs:subClassOf :Altitude_Sensor .
+
+:Radio_Frequency_Identification a owl:Class ;
+    rdfs:label "RFID" ;
+    rdfs:comment "A technology that uses electromagnetic fields to automatically identify and track tags attached to objects. RFID tags are used in inventory tracking and access control systems." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor .
+
+:Reflective_Beacon a owl:Class ;
+    rdfs:label "Reflective Beacon" ;
+    rdfs:comment "A sensor that uses reflected signals to determine position or distance. Reflective beacons used in robotic navigation and tracking systems." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Position_Sensor .
+
+:Refrigerator a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Remote a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Resistive_Sensor a owl:Class ;
+    rdfs:label "Resistive Sensor"@en ;
+    rdfs:comment "A sensor that measures changes in electrical resistance to detect touch or pressure. Examples include resistive touchscreens and pressure-sensitive resistors used in various applications."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:Resolver a owl:Class ;
+    rdfs:label "Resolver" ;
+    rdfs:comment "An electromechanical device that measures the angular position of a shaft. Resolvers used in aerospace and military applications for precise position measurement." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Angular_position ;
+            owl:onProperty sosa:observes ],
+        :Active_Sensor,
+        :Motor_Sensor .
+
+:SIFT a owl:Class ;
+    rdfs:subClassOf :FeatureDescriptor .
+
+:Sandwich a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Scissors a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Sheep a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Sink a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Skateboard a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Skis a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Slam a owl:Class ;
+    rdfs:subClassOf :LocalisationProcedure .
+
+:Snowboard a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Sonar a owl:Class ;
+    rdfs:label "Sonar" ;
+    rdfs:comment "A sensor that uses sound waves to detect objects and measure distances (mostly underwater)." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Distance_Sensor,
+        :Exteroceptor_Sensor .
+
+:Spoon a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Sports_ball a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Stop_sign a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Structures_Light a owl:Class ;
+    rdfs:label "Structures Light" ;
+    rdfs:comment "A sensor that projects a known pattern of light onto a surface and measures the deformation to determine shape or distance. Structured light sensors used in 3D scanning and gesture recognition." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( oboe-core:IdentifyingCharacteristic :Shape ) ] ;
+            owl:onProperty sosa:observes ],
+        :Distance_Sensor .
+
+:Suitcase a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Surfboard a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Switch a owl:Class ;
+    rdfs:label "Switch"@en ;
+    rdfs:comment "Similar to Bumpers, a switch is a simple sensor that detects the opening or closing of an electrical circuit. Examples include mechanical switches used in keyboards and limit switches used in industrial machinery."@en ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Touch_Sensor .
+
+:TV a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Teddy_bear a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Temperature a owl:Class ;
+    rdfs:subClassOf :EnvironmentProperty,
+        :ThermalProperty .
+
+:Tennis_racket a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Tie a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Toaster a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Toilet a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Toothbrush a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Torque_Sensor a owl:Class ;
+    rdfs:label "Torque Sensor"@en ;
+    rdfs:comment "A sensor that measures the rotational force (torque) applied to an object. Examples include torque transducers used in motor control systems and torque sensors used in robotics to monitor joint movements." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :AngularForce ;
+            owl:onProperty sosa:observes ],
+        :Motor_Sensor,
+        :Passive_Sensor .
+
+:Traffic_light a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Train a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Truck a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:TurtleBot3Burger a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass :Accelerometer ;
+                        owl:onProperty sosa:hosts ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass :Gyroscope ;
+                        owl:onProperty sosa:hosts ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass :Lidar ;
+                        owl:onProperty sosa:hosts ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass :Brush_Encoder ;
+                        owl:onProperty sosa:hosts ;
+                        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ] ) ],
+        :Robot .
+
+:Ultrasound a owl:Class ;
+    rdfs:label "Ultrasound Sensor" ;
+    rdfs:comment "A sensor that uses high-frequency sound waves to detect objects and measure distances. Examples of ultrasonic sensors are used in medical imaging and parking assistance systems." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Distance_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor .
+
+:Ultrasound_Beacon a owl:Class ;
+    rdfs:label "Ultrasound Beacon" ;
+    rdfs:comment "A sensor that uses ultrasonic waves to determine distance or position. Ultrasonic beacons used in indoor navigation and positioning systems." ;
+    rdfs:subClassOf :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :Position_Sensor .
+
+:Umbrella a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Vase a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:VideoClassificationAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:WheelDropSensor a owl:Class ;
+    rdfs:label "Wheel Drop Sensor" ;
+    rdfs:subClassOf :Touch_Sensor .
+
+:Wine_glass a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:Zebra a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        :PhysicalEntity .
+
+:canBeDetectedBy a owl:ObjectProperty ;
+    rdfs:label "can be detected by" ;
+    rdfs:comment "A relationship between an entity and an algorithm" ;
+    owl:inverseOf :canDetect .
+
+:hasAccuracy a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasColor a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasDensity a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasDetectionRange a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasDetectionThreshold a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+:hasEnergyConsumption a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasFLOPsat640 a owl:DatatypeProperty ;
+    rdfs:label "Floating Point Operations per Second at a model input size of 640 pixels" ;
+    rdfs:comment "Floating Point Operations per Second at a model input size of 640 pixels, measured in billions. This metric estimates the computational complexity of a single forward pass through the model. Higher FLOPs indicate a more computationally intensive model, which can impact inference speed and power consumption." ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+:hasInferenceSpeedV100b1 a owl:DatatypeProperty ;
+    rdfs:comment "The inference speed on an NVIDIA V100 GPU (Graphics Processing Unit) for a single image (batch size = 1), measured in milliseconds. This metric shows the model's performance on high-end GPU hardware, relevant for environments where fast processing times are critical." ;
+    rdfs:subPropertyOf :hasInferenceSpeed .
+
+:hasInferenceSpeedV100b32 a owl:DatatypeProperty ;
+    rdfs:comment "The inference speed on an NVIDIA V100 GPU (Graphics Processing Unit) for a single image (batch size = 32), measured in milliseconds. This metric shows the model's performance on high-end GPU hardware, relevant for environments where fast processing times are critical." ;
+    rdfs:subPropertyOf :hasInferenceSpeed .
+
+:hasNumberOfParameters a owl:DatatypeProperty ;
+    rdfs:label "number of parameters" ;
+    rdfs:comment "Indicates the number of trainable parameters of the mode, measured in millions. Gives an idea of the model's complexity and size." ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+:hasOrientation a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasProbability a owl:DatatypeProperty .
+
+:hasServiceName a owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:hasSize a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasValue a owl:DatatypeProperty ;
+    rdfs:domain ssn:Property .
+
+:hasWeBotsName a owl:AnnotationProperty ;
+    rdfs:comment "Representing the sensors available in the WeBots simulation environment, in a non-case-sensitve manner." .
+
+:hasWeight a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasWordNetSynset a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasExternalDescription .
+
+:inferrableProperty a owl:ObjectProperty ;
+    rdfs:label "inferrable property" ;
+    rdfs:comment "A property between a Characteristic and a Sensor, which is not the directly observed characteristic of the device." ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range oboe-core:Characteristic .
+
+:observesOther a owl:ObjectProperty ;
+    rdfs:subPropertyOf sosa:observes ;
+    owl:propertyDisjointWith :observesSelf .
+
+:sparqlEndpoint a owl:DatatypeProperty ;
+    rdfs:label "has sparql endpoint" ;
+    rdfs:comment "The SPARQL endpoint of a Semantic Web Knowledge Repository" ;
+    rdfs:domain :Knowledge_Repository ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:test_orange a owl:NamedIndividual,
+        :Orange .
+
+:test_path a owl:NamedIndividual,
+        :Path .
+
+oboe-core:characteristicFor a owl:ObjectProperty .
+
+orka:Ent_10000_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10000_2025_05_16_22_16_46,
+        orka:char_name_10000_2025_05_16_22_16_46,
+        orka:typename_10000_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10000_2025_05_16_22_16_46 .
+
+orka:Ent_10015_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10015_2025_05_16_22_16_46,
+        orka:char_name_10015_2025_05_16_22_16_46,
+        orka:typename_10015_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10015_2025_05_16_22_16_46 .
+
+orka:Ent_10026_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10026_2025_05_16_22_16_46,
+        orka:char_name_10026_2025_05_16_22_16_46,
+        orka:typename_10026_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10026_2025_05_16_22_16_46 .
+
+orka:Ent_10041_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10041_2025_05_16_22_16_46,
+        orka:char_name_10041_2025_05_16_22_16_46,
+        orka:typename_10041_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10041_2025_05_16_22_16_46 .
+
+orka:Ent_10055_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10055_2025_05_16_22_16_46,
+        orka:char_name_10055_2025_05_16_22_16_46,
+        orka:typename_10055_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10055_2025_05_16_22_16_46 .
+
+orka:Ent_10069_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10069_2025_05_16_22_16_46,
+        orka:char_name_10069_2025_05_16_22_16_46,
+        orka:typename_10069_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10069_2025_05_16_22_16_46 .
+
+orka:Ent_10083_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10083_2025_05_16_22_16_46,
+        orka:char_name_10083_2025_05_16_22_16_46,
+        orka:typename_10083_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10083_2025_05_16_22_16_46 .
+
+orka:Ent_10108_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10108_2025_05_16_22_16_46,
+        orka:char_name_10108_2025_05_16_22_16_46,
+        orka:typename_10108_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10108_2025_05_16_22_16_46 .
+
+orka:Ent_10124_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10124_2025_05_16_22_16_46,
+        orka:char_name_10124_2025_05_16_22_16_46,
+        orka:typename_10124_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10124_2025_05_16_22_16_46 .
+
+orka:Ent_10143_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10143_2025_05_16_22_16_46,
+        orka:char_name_10143_2025_05_16_22_16_46,
+        orka:typename_10143_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10143_2025_05_16_22_16_46 .
+
+orka:Ent_10155_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10155_2025_05_16_22_16_46,
+        orka:char_name_10155_2025_05_16_22_16_46,
+        orka:typename_10155_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10155_2025_05_16_22_16_46 .
+
+orka:Ent_10168_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10168_2025_05_16_22_16_46,
+        orka:char_name_10168_2025_05_16_22_16_46,
+        orka:typename_10168_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10168_2025_05_16_22_16_46 .
+
+orka:Ent_10181_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10181_2025_05_16_22_16_46,
+        orka:char_name_10181_2025_05_16_22_16_46,
+        orka:typename_10181_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_10181_2025_05_16_22_16_46 .
+
+orka:Ent_116_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_116_2025_05_16_22_16_46,
+        orka:char_name_116_2025_05_16_22_16_46,
+        orka:typename_116_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_116_2025_05_16_22_16_46 .
+
+orka:Ent_1473_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_1473_2025_05_16_22_16_46,
+        orka:char_name_1473_2025_05_16_22_16_46,
+        orka:typename_1473_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_1473_2025_05_16_22_16_46 .
+
+orka:Ent_1_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_1_2025_05_16_22_16_46,
+        orka:typename_1_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_1_2025_05_16_22_16_46 .
+
+orka:Ent_2427_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_2427_2025_05_16_22_16_46,
+        orka:char_name_2427_2025_05_16_22_16_46,
+        orka:typename_2427_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_2427_2025_05_16_22_16_46 .
+
+orka:Ent_2924_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_2924_2025_05_16_22_16_46,
+        orka:char_name_2924_2025_05_16_22_16_46,
+        orka:typename_2924_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_2924_2025_05_16_22_16_46 .
+
+orka:Ent_2_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_2_2025_05_16_22_16_46,
+        orka:typename_2_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_2_2025_05_16_22_16_46 .
+
+orka:Ent_3876_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_3876_2025_05_16_22_16_46,
+        orka:char_name_3876_2025_05_16_22_16_46,
+        orka:typename_3876_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_3876_2025_05_16_22_16_46 .
+
+orka:Ent_3_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_3_2025_05_16_22_16_46,
+        orka:typename_3_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_3_2025_05_16_22_16_46 .
+
+orka:Ent_6203_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6203_2025_05_16_22_16_46,
+        orka:char_name_6203_2025_05_16_22_16_46,
+        orka:typename_6203_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6203_2025_05_16_22_16_46 .
+
+orka:Ent_6215_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6215_2025_05_16_22_16_46,
+        orka:char_name_6215_2025_05_16_22_16_46,
+        orka:typename_6215_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6215_2025_05_16_22_16_46 .
+
+orka:Ent_6229_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6229_2025_05_16_22_16_46,
+        orka:char_name_6229_2025_05_16_22_16_46,
+        orka:typename_6229_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6229_2025_05_16_22_16_46 .
+
+orka:Ent_6243_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6243_2025_05_16_22_16_46,
+        orka:char_name_6243_2025_05_16_22_16_46,
+        orka:typename_6243_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6243_2025_05_16_22_16_46 .
+
+orka:Ent_6257_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6257_2025_05_16_22_16_46,
+        orka:char_name_6257_2025_05_16_22_16_46,
+        orka:typename_6257_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6257_2025_05_16_22_16_46 .
+
+orka:Ent_6271_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6271_2025_05_16_22_16_46,
+        orka:char_name_6271_2025_05_16_22_16_46,
+        orka:typename_6271_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6271_2025_05_16_22_16_46 .
+
+orka:Ent_6338_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6338_2025_05_16_22_16_46,
+        orka:char_name_6338_2025_05_16_22_16_46,
+        orka:typename_6338_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_6338_2025_05_16_22_16_46 .
+
+orka:Ent_694_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_694_2025_05_16_22_16_46,
+        orka:char_name_694_2025_05_16_22_16_46,
+        orka:typename_694_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_694_2025_05_16_22_16_46 .
+
+orka:Ent_7323_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7323_2025_05_16_22_16_46,
+        orka:char_name_7323_2025_05_16_22_16_46,
+        orka:typename_7323_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7323_2025_05_16_22_16_46 .
+
+orka:Ent_7345_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7345_2025_05_16_22_16_46,
+        orka:char_name_7345_2025_05_16_22_16_46,
+        orka:typename_7345_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7345_2025_05_16_22_16_46 .
+
+orka:Ent_7375_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7375_2025_05_16_22_16_46,
+        orka:char_name_7375_2025_05_16_22_16_46,
+        orka:typename_7375_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7375_2025_05_16_22_16_46 .
+
+orka:Ent_7396_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7396_2025_05_16_22_16_46,
+        orka:char_name_7396_2025_05_16_22_16_46,
+        orka:typename_7396_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7396_2025_05_16_22_16_46 .
+
+orka:Ent_7417_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7417_2025_05_16_22_16_46,
+        orka:char_name_7417_2025_05_16_22_16_46,
+        orka:typename_7417_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7417_2025_05_16_22_16_46 .
+
+orka:Ent_7438_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7438_2025_05_16_22_16_46,
+        orka:char_name_7438_2025_05_16_22_16_46,
+        orka:typename_7438_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7438_2025_05_16_22_16_46 .
+
+orka:Ent_7459_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7459_2025_05_16_22_16_46,
+        orka:char_name_7459_2025_05_16_22_16_46,
+        orka:typename_7459_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7459_2025_05_16_22_16_46 .
+
+orka:Ent_7479_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7479_2025_05_16_22_16_46,
+        orka:char_name_7479_2025_05_16_22_16_46,
+        orka:typename_7479_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7479_2025_05_16_22_16_46 .
+
+orka:Ent_7500_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7500_2025_05_16_22_16_46,
+        orka:char_name_7500_2025_05_16_22_16_46,
+        orka:typename_7500_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7500_2025_05_16_22_16_46 .
+
+orka:Ent_7521_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7521_2025_05_16_22_16_46,
+        orka:char_name_7521_2025_05_16_22_16_46,
+        orka:typename_7521_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7521_2025_05_16_22_16_46 .
+
+orka:Ent_7541_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7541_2025_05_16_22_16_46,
+        orka:char_name_7541_2025_05_16_22_16_46,
+        orka:typename_7541_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7541_2025_05_16_22_16_46 .
+
+orka:Ent_7663_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7663_2025_05_16_22_16_46,
+        orka:char_name_7663_2025_05_16_22_16_46,
+        orka:typename_7663_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7663_2025_05_16_22_16_46 .
+
+orka:Ent_7987_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7987_2025_05_16_22_16_46,
+        orka:char_name_7987_2025_05_16_22_16_46,
+        orka:typename_7987_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_7987_2025_05_16_22_16_46 .
+
+orka:Ent_8004_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8004_2025_05_16_22_16_46,
+        orka:char_name_8004_2025_05_16_22_16_46,
+        orka:typename_8004_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8004_2025_05_16_22_16_46 .
+
+orka:Ent_8021_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8021_2025_05_16_22_16_46,
+        orka:char_name_8021_2025_05_16_22_16_46,
+        orka:typename_8021_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8021_2025_05_16_22_16_46 .
+
+orka:Ent_8038_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8038_2025_05_16_22_16_46,
+        orka:char_name_8038_2025_05_16_22_16_46,
+        orka:typename_8038_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8038_2025_05_16_22_16_46 .
+
+orka:Ent_8055_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8055_2025_05_16_22_16_46,
+        orka:char_name_8055_2025_05_16_22_16_46,
+        orka:typename_8055_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8055_2025_05_16_22_16_46 .
+
+orka:Ent_8072_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8072_2025_05_16_22_16_46,
+        orka:char_name_8072_2025_05_16_22_16_46,
+        orka:typename_8072_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8072_2025_05_16_22_16_46 .
+
+orka:Ent_8089_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8089_2025_05_16_22_16_46,
+        orka:char_name_8089_2025_05_16_22_16_46,
+        orka:typename_8089_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8089_2025_05_16_22_16_46 .
+
+orka:Ent_8106_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8106_2025_05_16_22_16_46,
+        orka:char_name_8106_2025_05_16_22_16_46,
+        orka:typename_8106_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8106_2025_05_16_22_16_46 .
+
+orka:Ent_8123_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8123_2025_05_16_22_16_46,
+        orka:char_name_8123_2025_05_16_22_16_46,
+        orka:typename_8123_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8123_2025_05_16_22_16_46 .
+
+orka:Ent_8140_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8140_2025_05_16_22_16_46,
+        orka:char_name_8140_2025_05_16_22_16_46,
+        orka:typename_8140_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8140_2025_05_16_22_16_46 .
+
+orka:Ent_8158_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8158_2025_05_16_22_16_46,
+        orka:char_name_8158_2025_05_16_22_16_46,
+        orka:typename_8158_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8158_2025_05_16_22_16_46 .
+
+orka:Ent_8351_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8351_2025_05_16_22_16_46,
+        orka:char_name_8351_2025_05_16_22_16_46,
+        orka:typename_8351_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8351_2025_05_16_22_16_46 .
+
+orka:Ent_8533_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8533_2025_05_16_22_16_46,
+        orka:char_name_8533_2025_05_16_22_16_46,
+        orka:typename_8533_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8533_2025_05_16_22_16_46 .
+
+orka:Ent_8617_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8617_2025_05_16_22_16_46,
+        orka:char_name_8617_2025_05_16_22_16_46,
+        orka:typename_8617_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8617_2025_05_16_22_16_46 .
+
+orka:Ent_8649_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8649_2025_05_16_22_16_46,
+        orka:char_name_8649_2025_05_16_22_16_46,
+        orka:typename_8649_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8649_2025_05_16_22_16_46 .
+
+orka:Ent_8681_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8681_2025_05_16_22_16_46,
+        orka:char_name_8681_2025_05_16_22_16_46,
+        orka:typename_8681_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8681_2025_05_16_22_16_46 .
+
+orka:Ent_8713_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8713_2025_05_16_22_16_46,
+        orka:char_name_8713_2025_05_16_22_16_46,
+        orka:typename_8713_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8713_2025_05_16_22_16_46 .
+
+orka:Ent_8745_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8745_2025_05_16_22_16_46,
+        orka:char_name_8745_2025_05_16_22_16_46,
+        orka:typename_8745_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8745_2025_05_16_22_16_46 .
+
+orka:Ent_8772_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8772_2025_05_16_22_16_46,
+        orka:char_name_8772_2025_05_16_22_16_46,
+        orka:typename_8772_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8772_2025_05_16_22_16_46 .
+
+orka:Ent_8804_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8804_2025_05_16_22_16_46,
+        orka:char_name_8804_2025_05_16_22_16_46,
+        orka:typename_8804_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8804_2025_05_16_22_16_46 .
+
+orka:Ent_8816_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8816_2025_05_16_22_16_46,
+        orka:char_name_8816_2025_05_16_22_16_46,
+        orka:typename_8816_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8816_2025_05_16_22_16_46 .
+
+orka:Ent_8860_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8860_2025_05_16_22_16_46,
+        orka:char_name_8860_2025_05_16_22_16_46,
+        orka:typename_8860_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8860_2025_05_16_22_16_46 .
+
+orka:Ent_8865_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8865_2025_05_16_22_16_46,
+        orka:char_name_8865_2025_05_16_22_16_46,
+        orka:typename_8865_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8865_2025_05_16_22_16_46 .
+
+orka:Ent_8870_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8870_2025_05_16_22_16_46,
+        orka:char_name_8870_2025_05_16_22_16_46,
+        orka:typename_8870_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8870_2025_05_16_22_16_46 .
+
+orka:Ent_8891_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8891_2025_05_16_22_16_46,
+        orka:char_name_8891_2025_05_16_22_16_46,
+        orka:typename_8891_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_8891_2025_05_16_22_16_46 .
+
+orka:Ent_9141_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9141_2025_05_16_22_16_46,
+        orka:char_name_9141_2025_05_16_22_16_46,
+        orka:typename_9141_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9141_2025_05_16_22_16_46 .
+
+orka:Ent_9375_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9375_2025_05_16_22_16_46,
+        orka:char_name_9375_2025_05_16_22_16_46,
+        orka:typename_9375_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9375_2025_05_16_22_16_46 .
+
+orka:Ent_9390_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9390_2025_05_16_22_16_46,
+        orka:char_name_9390_2025_05_16_22_16_46,
+        orka:typename_9390_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9390_2025_05_16_22_16_46 .
+
+orka:Ent_9428_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9428_2025_05_16_22_16_46,
+        orka:char_name_9428_2025_05_16_22_16_46,
+        orka:typename_9428_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9428_2025_05_16_22_16_46 .
+
+orka:Ent_9466_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9466_2025_05_16_22_16_46,
+        orka:char_name_9466_2025_05_16_22_16_46,
+        orka:typename_9466_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9466_2025_05_16_22_16_46 .
+
+orka:Ent_9504_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9504_2025_05_16_22_16_46,
+        orka:char_name_9504_2025_05_16_22_16_46,
+        orka:typename_9504_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9504_2025_05_16_22_16_46 .
+
+orka:Ent_9534_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9534_2025_05_16_22_16_46,
+        orka:char_name_9534_2025_05_16_22_16_46,
+        orka:typename_9534_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9534_2025_05_16_22_16_46 .
+
+orka:Ent_9557_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9557_2025_05_16_22_16_46,
+        orka:char_name_9557_2025_05_16_22_16_46,
+        orka:typename_9557_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9557_2025_05_16_22_16_46 .
+
+orka:Ent_9579_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9579_2025_05_16_22_16_46,
+        orka:char_name_9579_2025_05_16_22_16_46,
+        orka:typename_9579_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9579_2025_05_16_22_16_46 .
+
+orka:Ent_9601_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9601_2025_05_16_22_16_46,
+        orka:char_name_9601_2025_05_16_22_16_46,
+        orka:typename_9601_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9601_2025_05_16_22_16_46 .
+
+orka:Ent_9623_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9623_2025_05_16_22_16_46,
+        orka:char_name_9623_2025_05_16_22_16_46,
+        orka:typename_9623_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9623_2025_05_16_22_16_46 .
+
+orka:Ent_9645_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9645_2025_05_16_22_16_46,
+        orka:char_name_9645_2025_05_16_22_16_46,
+        orka:typename_9645_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9645_2025_05_16_22_16_46 .
+
+orka:Ent_9668_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9668_2025_05_16_22_16_46,
+        orka:char_name_9668_2025_05_16_22_16_46,
+        orka:typename_9668_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9668_2025_05_16_22_16_46 .
+
+orka:Ent_9679_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9679_2025_05_16_22_16_46,
+        orka:char_name_9679_2025_05_16_22_16_46,
+        orka:typename_9679_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9679_2025_05_16_22_16_46 .
+
+orka:Ent_9690_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9690_2025_05_16_22_16_46,
+        orka:char_name_9690_2025_05_16_22_16_46,
+        orka:typename_9690_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9690_2025_05_16_22_16_46 .
+
+orka:Ent_9712_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9712_2025_05_16_22_16_46,
+        orka:char_name_9712_2025_05_16_22_16_46,
+        orka:typename_9712_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9712_2025_05_16_22_16_46 .
+
+orka:Ent_9734_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9734_2025_05_16_22_16_46,
+        orka:char_name_9734_2025_05_16_22_16_46,
+        orka:typename_9734_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9734_2025_05_16_22_16_46 .
+
+orka:Ent_9752_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9752_2025_05_16_22_16_46,
+        orka:char_name_9752_2025_05_16_22_16_46,
+        orka:typename_9752_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9752_2025_05_16_22_16_46 .
+
+orka:Ent_9770_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9770_2025_05_16_22_16_46,
+        orka:char_name_9770_2025_05_16_22_16_46,
+        orka:typename_9770_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9770_2025_05_16_22_16_46 .
+
+orka:Ent_9781_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9781_2025_05_16_22_16_46,
+        orka:char_name_9781_2025_05_16_22_16_46,
+        orka:typename_9781_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9781_2025_05_16_22_16_46 .
+
+orka:Ent_9791_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9791_2025_05_16_22_16_46,
+        orka:char_name_9791_2025_05_16_22_16_46,
+        orka:typename_9791_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9791_2025_05_16_22_16_46 .
+
+orka:Ent_9801_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9801_2025_05_16_22_16_46,
+        orka:char_name_9801_2025_05_16_22_16_46,
+        orka:typename_9801_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9801_2025_05_16_22_16_46 .
+
+orka:Ent_9813_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9813_2025_05_16_22_16_46,
+        orka:char_name_9813_2025_05_16_22_16_46,
+        orka:typename_9813_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9813_2025_05_16_22_16_46 .
+
+orka:Ent_9825_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9825_2025_05_16_22_16_46,
+        orka:char_name_9825_2025_05_16_22_16_46,
+        orka:typename_9825_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9825_2025_05_16_22_16_46 .
+
+orka:Ent_9837_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9837_2025_05_16_22_16_46,
+        orka:char_name_9837_2025_05_16_22_16_46,
+        orka:typename_9837_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9837_2025_05_16_22_16_46 .
+
+orka:Ent_9849_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9849_2025_05_16_22_16_46,
+        orka:char_name_9849_2025_05_16_22_16_46,
+        orka:typename_9849_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9849_2025_05_16_22_16_46 .
+
+orka:Ent_9861_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9861_2025_05_16_22_16_46,
+        orka:char_name_9861_2025_05_16_22_16_46,
+        orka:typename_9861_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9861_2025_05_16_22_16_46 .
+
+orka:Ent_9873_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9873_2025_05_16_22_16_46,
+        orka:char_name_9873_2025_05_16_22_16_46,
+        orka:typename_9873_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9873_2025_05_16_22_16_46 .
+
+orka:Ent_9885_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9885_2025_05_16_22_16_46,
+        orka:char_name_9885_2025_05_16_22_16_46,
+        orka:typename_9885_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9885_2025_05_16_22_16_46 .
+
+orka:Ent_9897_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9897_2025_05_16_22_16_46,
+        orka:char_name_9897_2025_05_16_22_16_46,
+        orka:typename_9897_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9897_2025_05_16_22_16_46 .
+
+orka:Ent_9939_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9939_2025_05_16_22_16_46,
+        orka:char_name_9939_2025_05_16_22_16_46,
+        orka:typename_9939_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9939_2025_05_16_22_16_46 .
+
+orka:Ent_9957_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9957_2025_05_16_22_16_46,
+        orka:char_name_9957_2025_05_16_22_16_46,
+        orka:typename_9957_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9957_2025_05_16_22_16_46 .
+
+orka:Ent_9972_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9972_2025_05_16_22_16_46,
+        orka:char_name_9972_2025_05_16_22_16_46,
+        orka:typename_9972_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9972_2025_05_16_22_16_46 .
+
+orka:Ent_9985_2025_05_16_22_16_46 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9985_2025_05_16_22_16_46,
+        orka:char_name_9985_2025_05_16_22_16_46,
+        orka:typename_9985_2025_05_16_22_16_46 ;
+    orka:hasLocation orka:Loc_9985_2025_05_16_22_16_46 .
+
+orka:char_name_10000_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "spoon" .
+
+orka:char_name_10015_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "knife" .
+
+orka:char_name_10026_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate" .
+
+orka:char_name_10041_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(6)" .
+
+orka:char_name_10055_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(7)" .
+
+orka:char_name_10069_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "glass" .
+
+orka:char_name_10083_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wine glass" .
+
+orka:char_name_10108_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "honey jar" .
+
+orka:char_name_10124_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "jam jar(1)" .
+
+orka:char_name_10143_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cereal box(3)" .
+
+orka:char_name_10155_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cereal box(4)" .
+
+orka:char_name_10168_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "biscuit box" .
+
+orka:char_name_10181_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "salt" .
+
+orka:char_name_116_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet(1)" .
+
+orka:char_name_1473_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet(3)" .
+
+orka:char_name_2427_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet(4)" .
+
+orka:char_name_2924_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet(5)" .
+
+orka:char_name_3876_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet" .
+
+orka:char_name_6203_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "floor(1)" .
+
+orka:char_name_6215_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(1)" .
+
+orka:char_name_6229_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(2)" .
+
+orka:char_name_6243_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(3)" .
+
+orka:char_name_6257_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(4)" .
+
+orka:char_name_6271_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "plate(5)" .
+
+orka:char_name_6338_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "TIAGo LITE" .
+
+orka:char_name_694_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cabinet(2)" .
+
+orka:char_name_7323_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "floor" .
+
+orka:char_name_7345_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "ceiling" .
+
+orka:char_name_7375_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(1)" .
+
+orka:char_name_7396_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(2)" .
+
+orka:char_name_7417_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(3)" .
+
+orka:char_name_7438_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(4)" .
+
+orka:char_name_7459_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(5)" .
+
+orka:char_name_7479_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(6)" .
+
+orka:char_name_7500_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(7)" .
+
+orka:char_name_7521_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall(8)" .
+
+orka:char_name_7541_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wall" .
+
+orka:char_name_7663_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "door" .
+
+orka:char_name_7987_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(1)" .
+
+orka:char_name_8004_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(2)" .
+
+orka:char_name_8021_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(3)" .
+
+orka:char_name_8038_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(4)" .
+
+orka:char_name_8055_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(5)" .
+
+orka:char_name_8072_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(6)" .
+
+orka:char_name_8089_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(7)" .
+
+orka:char_name_8106_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(8)" .
+
+orka:char_name_8123_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box(9)" .
+
+orka:char_name_8140_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "box" .
+
+orka:char_name_8158_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "window(1)" .
+
+orka:char_name_8351_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "window" .
+
+orka:char_name_8533_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "fridge" .
+
+orka:char_name_8617_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "worktop(1)" .
+
+orka:char_name_8649_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "worktop(2)" .
+
+orka:char_name_8681_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "worktop(3)" .
+
+orka:char_name_8713_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "worktop(4)" .
+
+orka:char_name_8745_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "worktop" .
+
+orka:char_name_8772_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "sink" .
+
+orka:char_name_8804_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "hot plate" .
+
+orka:char_name_8816_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "oven" .
+
+orka:char_name_8860_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "solid(1)" .
+
+orka:char_name_8865_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "solid(2)" .
+
+orka:char_name_8870_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "solid" .
+
+orka:char_name_8891_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "table(1)" .
+
+orka:char_name_9141_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "table" .
+
+orka:char_name_9375_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "ceiling light" .
+
+orka:char_name_9390_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "chair(2)" .
+
+orka:char_name_9428_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "chair(4)" .
+
+orka:char_name_9466_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "chair(5)" .
+
+orka:char_name_9504_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "carafe" .
+
+orka:char_name_9534_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "water bottle(1)" .
+
+orka:char_name_9557_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "water bottle(2)" .
+
+orka:char_name_9579_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "water bottle(3)" .
+
+orka:char_name_9601_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "water bottle(4)" .
+
+orka:char_name_9623_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "water bottle" .
+
+orka:char_name_9645_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "beer bottle(1)" .
+
+orka:char_name_9668_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "can(1)" .
+
+orka:char_name_9679_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "can" .
+
+orka:char_name_9690_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "beer bottle(2)" .
+
+orka:char_name_9712_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "beer bottle" .
+
+orka:char_name_9734_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "fruit bowl(1)" .
+
+orka:char_name_9752_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "fruit bowl" .
+
+orka:char_name_9770_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "apple(1)" .
+
+orka:char_name_9781_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "apple(2)" .
+
+orka:char_name_9791_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "apple" .
+
+orka:char_name_9801_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(1)" .
+
+orka:char_name_9813_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(2)" .
+
+orka:char_name_9825_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(3)" .
+
+orka:char_name_9837_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(4)" .
+
+orka:char_name_9849_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(5)" .
+
+orka:char_name_9861_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(6)" .
+
+orka:char_name_9873_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange(7)" .
+
+orka:char_name_9885_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "orange" .
+
+orka:char_name_9897_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "cookware" .
+
+orka:char_name_9939_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "lid" .
+
+orka:char_name_9957_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "wooden spoon" .
+
+orka:char_name_9972_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "fork" .
+
+orka:char_name_9985_2025_05_16_22_16_46 a oboe-char:Name ;
+    orka:hasValue "spoon(1)" .
+
+orka:typename_10000_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Spoon" .
+
+orka:typename_10015_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Knife" .
+
+orka:typename_10026_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+orka:typename_10041_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+orka:typename_10055_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+orka:typename_10069_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Glass" .
+
+orka:typename_10083_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wineglass" .
+
+orka:typename_10108_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "HoneyJar" .
+
+orka:typename_10124_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "JamJar" .
+
+orka:typename_10143_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_10155_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "CerealBox" .
+
+orka:typename_10168_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "BiscuitBox" .
+
+orka:typename_10181_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_116_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_1473_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_1_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WorldInfo" .
+
+orka:typename_2427_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_2924_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_2_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Viewpoint" .
+
+orka:typename_3876_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_3_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "TexturedBackground" .
+
+orka:typename_6203_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6215_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6229_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6243_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6257_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6271_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_6338_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "TiagoLite" .
+
+orka:typename_694_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+orka:typename_7323_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Floor" .
+
+orka:typename_7345_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Ceiling" .
+
+orka:typename_7375_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7396_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7417_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7438_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7459_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7479_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7500_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7521_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7541_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Wall" .
+
+orka:typename_7663_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Door" .
+
+orka:typename_7987_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8004_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8021_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8038_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8055_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8072_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8089_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8106_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8123_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8140_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
+
+orka:typename_8158_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Window" .
+
+orka:typename_8351_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Window" .
+
+orka:typename_8533_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Fridge" .
+
+orka:typename_8617_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Worktop" .
+
+orka:typename_8649_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Worktop" .
+
+orka:typename_8681_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Worktop" .
+
+orka:typename_8713_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Worktop" .
+
+orka:typename_8745_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Worktop" .
+
+orka:typename_8772_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Sink" .
+
+orka:typename_8804_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "HotPlate" .
+
+orka:typename_8816_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Oven" .
+
+orka:typename_8860_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_8865_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_8870_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+orka:typename_8891_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Table" .
+
+orka:typename_9141_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Table" .
+
+orka:typename_9375_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "CeilingLight" .
+
+orka:typename_9390_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Chair" .
+
+orka:typename_9428_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Chair" .
+
+orka:typename_9466_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Chair" .
+
+orka:typename_9504_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Carafe" .
+
+orka:typename_9534_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
+
+orka:typename_9557_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
+
+orka:typename_9579_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
+
+orka:typename_9601_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
+
+orka:typename_9623_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
+
+orka:typename_9645_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
+
+orka:typename_9668_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Can" .
+
+orka:typename_9679_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Can" .
+
+orka:typename_9690_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
+
+orka:typename_9712_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
+
+orka:typename_9734_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "FruitBowl" .
+
+orka:typename_9752_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "FruitBowl" .
+
+orka:typename_9770_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Apple" .
+
+orka:typename_9781_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Apple" .
+
+orka:typename_9791_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Apple" .
+
+orka:typename_9801_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9813_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9825_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9837_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9849_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9861_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9873_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9885_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Orange" .
+
+orka:typename_9897_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Cookware" .
+
+orka:typename_9939_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Lid" .
+
+orka:typename_9957_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "WoodenSpoon" .
+
+orka:typename_9972_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Fork" .
+
+orka:typename_9985_2025_05_16_22_16_46 a orka:ObjectType ;
+    orka:hasValue "Spoon" .
+
+sosa:Observation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:ObservableProperty ;
+            owl:onProperty sosa:observes ] .
+
+sosa:Platform a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+sosa:hasResult a owl:ObjectProperty .
+
+sosa:observedProperty a owl:ObjectProperty .
+
+sosa:usedProcedure a owl:ObjectProperty .
+
+ssn:Property a owl:Class .
+
+ssn:System a owl:Class ;
+    rdfs:subClassOf oboe-core:Entity .
+
+:Accelerometer a owl:Class ;
+    rdfs:label "Accelerometer" ;
+    rdfs:comment "A sensor that measures acceleration forces. Accelerometers used in smartphones and fitness trackers to detect movement and orientation." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sosa:observes ;
+            owl:someValuesFrom :Orientation ],
+        :Exteroceptor_Sensor,
+        :Passive_Sensor,
+        :Speed_Sensor ;
+    :hasWeBotsName "accelerometer" .
+
+:Age a owl:Class ;
+    rdfs:subClassOf :TemporalProperty .
+
+:Altitude a owl:Class ;
+    rdfs:subClassOf :Position .
+
+:AngularForce a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:Brightness a owl:Class ;
+    rdfs:subClassOf :EnvironmentProperty .
+
+:Brush_Encoder a owl:Class ;
+    rdfs:label "Brush Encoder" ;
+    rdfs:comment "A type of encoder that uses brushes to make contact with a commutator to measure position. Used in older types of motors and machinery to provide position feedback on the motor" ;
+    rdfs:subClassOf :Motor_Sensor,
+        :Passive_Sensor .
+
+:Color a owl:Class ;
+    rdfs:subClassOf :VisualCharactersitic .
+
+:Context a owl:Class ;
+    rdfs:label "Context" ;
+    rdfs:comment "A placeholder representation for the context the robot is deployed in. It involves the required entity (as a representation of the task)." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasRequiredEntity ;
+            owl:someValuesFrom oboe-core:Entity ] .
+
+:CreationDate a owl:Class ;
+    rdfs:subClassOf :TemporalProperty .
+
+:Density a owl:Class ;
+    rdfs:subClassOf :MaterialProperty .
+
+:Depth a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:DestructionDate a owl:Class ;
+    rdfs:subClassOf :TemporalProperty .
+
+:ExpirationDate a owl:Class ;
+    rdfs:subClassOf :TemporalProperty .
+
+:FeatureDescriptor a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:Flexibility a owl:Class ;
+    rdfs:subClassOf :MaterialProperty .
+
+:GazeDetector a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "L2CSNET" ;
+            owl:onProperty :trainedOnDataSet ],
+        :HumanPoseEstimationAlgorithm .
+
+:Gyroscope a owl:Class ;
+    rdfs:label "Gyroscope" ;
+    rdfs:comment "A sensor that measures the rate of rotation around a particular axis. Gyroscopes used in drones and smartphones to maintain orientation and stability." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :RadianPerSecond ;
+            owl:onProperty :measuresUsingStandard ],
+        :Heading_Sensor,
+        :Passive_Sensor ;
+    :hasWeBotsName "gyro" .
+
+:Height a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:HumanPoseEstimationAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:Length a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:LocalisationProcedure a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty :calculatesCharacteristic ],
+        sosa:Procedure .
+
+:MaterialName a owl:Class ;
+    rdfs:subClassOf :MaterialProperty .
+
+:ObjectDetectionAlgorithm a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:Orange a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "https://dbpedia.org/resource/Orange_(fruit)" ;
+            owl:onProperty :hasDBpediaURI ],
+        [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :inDataSet ],
+        [ a owl:Restriction ;
+            owl:hasValue "https://www.wikidata.org/wiki/Q13191" ;
+            owl:onProperty :hasWikiDataURI ],
+        :PhysicalEntity .
+
+:Path a owl:Class ;
+    rdfs:subClassOf :PhysicalEntity .
+
+:Pattern a owl:Class ;
+    rdfs:subClassOf :VisualCharactersitic .
+
+:Phototransistor a owl:Class ;
+    rdfs:subClassOf :Light_Sensor .
+
+:Pitch a owl:Class ;
+    rdfs:subClassOf :Angle .
+
+:RadianPerSecond a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( oboe-core:Measurement [ a owl:Restriction ;
+                                owl:allValuesFrom :Orientation ;
+                                owl:onProperty oboe-core:ofCharacteristic ] ) ] ;
+            owl:onProperty oboe-core:standardFor ],
+        [ a owl:Restriction ;
+            owl:onProperty oboe-core:hasUnit ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf ( oboe-core:DerivedUnit [ a owl:Restriction ;
+                                owl:allValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Second> ;
+                                owl:onProperty oboe-core:hasUnit ] [ a owl:Restriction ;
+                                owl:hasValue -1 ;
+                                owl:onProperty oboe-core:hasPower ] ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty oboe-core:hasUnit ;
+            owl:someValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Radian> ],
+        oboe-core:CompositeUnit .
+
+:Roll a owl:Class ;
+    rdfs:subClassOf :Angle .
+
+:SimpleStructure a owl:Class ;
+    rdfs:subClassOf :Structure .
+
+:Sound a owl:Class ;
+    rdfs:label "Sound Sensor" ;
+    rdfs:comment "A sensor that detects and measures sound waves. Examplse are microphones that are used in audio recording and voice recognition systems." ;
+    rdfs:subClassOf :Exteroceptor_Sensor,
+        :IdentificationSensor,
+        :Passive_Sensor .
+
+:SurfaceArea a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:Volume a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:Weight a owl:Class ;
+    rdfs:subClassOf :MaterialProperty .
+
+:Width a owl:Class ;
+    rdfs:subClassOf :SizeProperty .
+
+:YOLOv5l a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 430 ;
+            owl:onProperty :hasInferenceSpeedCPUb1 ],
+        :YOLO .
+
+:YOLOv5l6 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 1784 ;
+            owl:onProperty :hasInferenceSpeedCPUb1 ],
+        [ a owl:Restriction ;
+            owl:hasValue 1280 ;
+            owl:onProperty :hasInputSize ],
+        :YOLO .
+
+:YOLOv5m a owl:Class ;
+    rdfs:subClassOf :YOLO .
+
+:YOLOv5m6 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 1280 ;
+            owl:onProperty :hasInputSize ],
+        :YOLO .
+
+:YOLOv5n a owl:Class ;
+    rdfs:subClassOf :YOLO .
+
+:YOLOv5n6 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 1280 ;
+            owl:onProperty :hasInputSize ],
+        :YOLO .
+
+:YOLOv5s a owl:Class ;
+    rdfs:subClassOf :YOLO .
+
+:YOLOv5s6 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 1280 ;
+            owl:onProperty :hasInputSize ],
+        [ a owl:Restriction ;
+            owl:hasValue 44.8 ;
+            owl:onProperty :hasmAPval50-95 ],
+        [ a owl:Restriction ;
+            owl:hasValue 8.2 ;
+            owl:onProperty :hasInferenceSpeedCPUb1 ],
+        :YOLO .
+
+:YOLOv5x a owl:Class ;
+    rdfs:subClassOf :YOLO .
+
+:YOLOv5x6 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue 1280 ;
+            owl:onProperty :hasInputSize ],
+        :YOLO .
+
+:Yaw a owl:Class ;
+    rdfs:subClassOf :Angle .
+
+:calculatesCharacteristic a owl:ObjectProperty ;
+    rdfs:label "calculates characteristic" ;
+    rdfs:comment "a relationship between a procedure/protocol and a characteristic" ;
+    rdfs:domain sosa:Procedure ;
+    rdfs:range oboe-core:Characteristic .
+
+:describedBy a owl:ObjectProperty ;
+    rdfs:label "described by" ;
+    rdfs:comment "Connects the entities to some external Knowledge Repository that describes the given entity." ;
+    rdfs:domain oboe-core:Entity ;
+    rdfs:range :Knowledge_Repository .
+
+:hasAlgorithmCharacteristic a owl:DatatypeProperty .
+
+:hasAngularResolution a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasDBpediaURI a owl:DatatypeProperty ;
+    rdfs:label "has DBpedia URI" ;
+    rdfs:subPropertyOf :hasExternalDescription .
+
+:hasMaxRange a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasMeasurementRange a owl:DatatypeProperty ;
+    rdfs:label "has measurement range" ;
+    rdfs:comment "The measurement range of the sensor device" ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range xsd:float .
+
+:hasMinRange a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasRequiredEntity a owl:ObjectProperty ;
+    rdfs:label "has required entity" ;
+    rdfs:comment "This property connects the context to the entities required by the context" ;
+    rdfs:domain :Context ;
+    rdfs:range oboe-core:Entity .
+
+:hasScanningFrequency a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasSensorCharacteristic .
+
+:hasWikiDataURI a owl:DatatypeProperty ;
+    rdfs:label "has WikiData URI" ;
+    rdfs:subPropertyOf :hasExternalDescription .
+
+:hasmAPval50-95 a owl:DatatypeProperty ;
+    rdfs:comment "This is a metric that evaluates the accuracy of an object detector algorithm. The value defines the mean Average Percision for detections that have an overlap with the ground truth value (Intersection over Union) of 50% to 95% with 5% increments." ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+:implementedOn a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:measuresUsingStandard a owl:ObjectProperty ;
+    rdfs:label "measures using standard" ;
+    rdfs:comment "A relationship between a sensor and a measurement standard" ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range oboe-core:Standard ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ( sosa:madeObservation oboe-core:usesStandard ) .
+
+:observesCharacteristic a owl:ObjectProperty .
+
+:observesSelf a owl:ObjectProperty ;
+    rdfs:subPropertyOf sosa:observes .
+
+oboe-core:Measurement a owl:Class ;
+    owl:equivalentClass sosa:Observation .
+
+oboe-core:Observation a owl:Class .
+
+oboe-core:ofEntity a owl:ObjectProperty ;
+    owl:inverseOf :observedIn .
+
+orka:Loc_10000_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.849,-1.021,0.742" .
+
+orka:Loc_10015_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.99,-1.151,0.739" .
+
+orka:Loc_10026_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.97,-1.03,0.74" .
+
+orka:Loc_10041_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.3,-0.71,0.74" .
+
+orka:Loc_10055_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.3,-0.71,0.75" .
+
+orka:Loc_10069_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.8,-1.0,0.739" .
+
+orka:Loc_10083_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.788,-1.098,0.74" .
+
+orka:Loc_10108_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.714,0.704,0.889" .
+
+orka:Loc_10124_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.712,-0.302,0.889" .
+
+orka:Loc_10143_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.845,0.197,0.93" .
+
+orka:Loc_10155_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.578,0.196,1.007" .
+
+orka:Loc_10168_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.34,-1.41,0.74" .
+
+orka:Loc_10181_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.63,-0.62,0.95" .
+
+orka:Loc_116_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.15,-1.0,0.83" .
+
+orka:Loc_1473_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.15,-0.1,1.4" .
+
+orka:Loc_1_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+orka:Loc_2427_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.37,1.647,1.4" .
+
+orka:Loc_2924_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.79,1.48,0.15" .
+
+orka:Loc_2_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+orka:Loc_3876_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.15,-0.12,0.15" .
+
+orka:Loc_3_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+orka:Loc_6203_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.0,-0.17,0.0" .
+
+orka:Loc_6215_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.887" .
+
+orka:Loc_6229_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.897" .
+
+orka:Loc_6243_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.907" .
+
+orka:Loc_6257_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.918" .
+
+orka:Loc_6271_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.928" .
+
+orka:Loc_6338_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.0,0.0,0.095" .
+
+orka:Loc_694_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.11,1.65,0.15" .
+
+orka:Loc_7323_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.5,-3.0,0.0" .
+
+orka:Loc_7345_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.0,-1.1,2.4" .
+
+orka:Loc_7375_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.8,1.75,0.0" .
+
+orka:Loc_7396_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.25,-0.15,0.0" .
+
+orka:Loc_7417_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.75,1.75,0.0" .
+
+orka:Loc_7438_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.25,1.35,0.0" .
+
+orka:Loc_7459_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.25,-0.45,0.0" .
+
+orka:Loc_7479_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.25,-2.985,0.0" .
+
+orka:Loc_7500_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.5,-3.92,0.0" .
+
+orka:Loc_7521_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.25,-2.986,0.0" .
+
+orka:Loc_7541_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.75,-2.05,0.0" .
+
+orka:Loc_7663_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.25,-1.45,0.0" .
+
+orka:Loc_7987_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.55,-0.12,0.07" .
+
+orka:Loc_8004_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.65,1.08,0.07" .
+
+orka:Loc_8021_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.9,-1.12,0.07" .
+
+orka:Loc_8038_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.25,1.415,0.07" .
+
+orka:Loc_8055_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-1.23,1.645,0.03" .
+
+orka:Loc_8072_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.145,0.345,0.03" .
+
+orka:Loc_8089_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.145,-2.885,0.03" .
+
+orka:Loc_8106_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.645,-1.945,0.03" .
+
+orka:Loc_8123_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.145,-2.88,0.03" .
+
+orka:Loc_8140_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.495,-3.815,0.03" .
+
+orka:Loc_8158_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-2.25,0.45,0.0" .
+
+orka:Loc_8351_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.05,1.75,0.0" .
+
+orka:Loc_8533_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.8,-1.57,0.0" .
+
+orka:Loc_8617_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.345,1.31,0.86" .
+
+orka:Loc_8649_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.78,1.531,0.86" .
+
+orka:Loc_8681_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.78,1.003,0.86" .
+
+orka:Loc_8713_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.22,1.306,0.86" .
+
+orka:Loc_8745_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.79,0.435,0.86" .
+
+orka:Loc_8772_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "0.78,1.33,0.87" .
+
+orka:Loc_8804_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.629,1.15,0.86" .
+
+orka:Loc_8816_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.11,1.24,0.17" .
+
+orka:Loc_8860_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.01,1.48,2.09" .
+
+orka:Loc_8865_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.8,1.3,1.742" .
+
+orka:Loc_8870_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.8,1.3,1.692" .
+
+orka:Loc_8891_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-1.21,1.31,0.0" .
+
+orka:Loc_9141_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.65,-1.43,0.0" .
+
+orka:Loc_9375_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.7,-1.5,2.4" .
+
+orka:Loc_9390_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.64,-2.33,0.0" .
+
+orka:Loc_9428_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-1.09,-1.05,0.0" .
+
+orka:Loc_9466_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.18,-1.62,0.0" .
+
+orka:Loc_9504_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.63,-0.735,0.739" .
+
+orka:Loc_9534_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.032,-1.387,0.583" .
+
+orka:Loc_9557_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.481,-1.156,0.738" .
+
+orka:Loc_9579_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.042,-1.645,0.583" .
+
+orka:Loc_9601_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.026,-1.732,0.583" .
+
+orka:Loc_9623_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.047,-1.825,0.583" .
+
+orka:Loc_9645_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "2.041,-1.611,0.297" .
+
+orka:Loc_9668_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.942,-1.537,0.361" .
+
+orka:Loc_9679_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.722,-1.517,0.361" .
+
+orka:Loc_9690_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.887,-1.712,0.297" .
+
+orka:Loc_9712_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.895,-1.384,0.297" .
+
+orka:Loc_9734_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.772,-1.627,0.05" .
+
+orka:Loc_9752_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.686,-1.754,0.74" .
+
+orka:Loc_9770_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.743,-1.698,0.799" .
+
+orka:Loc_9781_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.643,-0.498,0.94" .
+
+orka:Loc_9791_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.643,-1.81,0.799" .
+
+orka:Loc_9801_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.691,-1.752,0.865" .
+
+orka:Loc_9813_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.714,-1.57,0.109" .
+
+orka:Loc_9825_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.64,-1.697,0.799" .
+
+orka:Loc_9837_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.718,-1.685,0.109" .
+
+orka:Loc_9849_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.844,-1.7,0.155" .
+
+orka:Loc_9861_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.689,-1.628,0.186" .
+
+orka:Loc_9873_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.846,-1.553,0.16" .
+
+orka:Loc_9885_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.798,-1.625,0.109" .
+
+orka:Loc_9897_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.667,1.32,0.89" .
+
+orka:Loc_9939_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.667,1.32,0.96" .
+
+orka:Loc_9957_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "1.249,1.376,0.889" .
+
+orka:Loc_9972_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.97,-0.901,0.741" .
+
+orka:Loc_9985_2025_05_16_22_16_46 a orka:Location ;
+    orka:hasValue "-0.97,-1.221,0.74" .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/c> a swrl:Variable .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> a swrl:Variable .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/loc> a swrl:Variable .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> a swrl:Variable .
+
+sosa:madeBySensor a owl:ObjectProperty .
+
+sosa:madeObservation a owl:ObjectProperty .
+
+:Angular_position a owl:Class ;
+    rdfs:subClassOf :Location .
+
+:DeepLearningModel a owl:Class ;
+    rdfs:subClassOf :ComputerVisionAlgorithm .
+
+:Lidar a owl:Class ;
+    rdfs:label "LiDAR" ;
+    rdfs:comment "A sensor that measures distance by emitting a laser beam and calculating the time it takes for the beam to reflect back. Lidar sensors used in autonomous vehicles and mapping." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty sosa:observes ],
+        :Active_Sensor,
+        :Exteroceptor_Sensor,
+        :IdentificationSensor ;
+    :hasWeBotsName "lidar" .
+
+:Light_Sensor a owl:Class ;
+    rdfs:label "Light Sensor" ;
+    rdfs:comment "Sensors that observe the presence of light above a certain threshold." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Brightness ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor,
+        :Exteroceptor_Sensor ;
+    :hasWeBotsName "light_sensor" .
+
+:Position a owl:Class ;
+    rdfs:subClassOf :Location .
+
+:Shape a owl:Class ;
+    rdfs:subClassOf :GeometricProperty .
+
+:hasLocation a owl:ObjectProperty ;
+    rdfs:domain oboe-core:Entity ;
+    rdfs:range :Location ;
+    rdfs:subPropertyOf :hasObservableCharacteristic .
+
+:hasPowerRequirement a owl:DatatypeProperty ;
+    rdfs:label "has power requirement" ;
+    rdfs:comment "Used to indicate the power requirement of the sensor devices" ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:oneOf [ a rdf:List ;
+                    rdf:first "high" ;
+                    rdf:rest [ a rdf:List ;
+                            rdf:first "low" ;
+                            rdf:rest () ] ] ] ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:observedIn a owl:ObjectProperty ;
+    rdfs:label "observed in" ;
+    rdfs:comment "Relates an entity to an observation" ;
+    rdfs:domain oboe-core:Entity ;
+    rdfs:range oboe-core:Observation ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+oboe-char:Speed a owl:Class .
+
+oboe-core:hasMeasurement a owl:ObjectProperty .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> a swrl:Variable .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> a swrl:Variable .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/sens> a swrl:Variable .
+
+:Altitude_Sensor a owl:Class ;
+    rdfs:label "Altitude Sensor" ;
+    rdfs:comment """A sensory device that returns a measurement corresponding to the altitude the sensor is located at.
+
+TODO: need to add sensors that can measure altitude based on the orientation of the sensor (e.g. distance sensor)""" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sosa:observes ;
+            owl:someValuesFrom :Altitude ],
+        sosa:Sensor,
+        :ProprioceptorSensor ;
+    :hasWeBotsName "altimeter" .
+
+:EnvironmentProperty a owl:Class ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+:Knowledge_Repository a owl:Class ;
+    rdfs:label "Knowledge Repository" ;
+    rdfs:comment "This class represents the external sources of knowledge ORKA can utilise such as WikiData and DBpedia." .
+
+:Robot a owl:Class ;
+    rdfs:comment "TODO: Needs to express the equivalentclass that proprioception requires" ;
+    rdfs:subClassOf sosa:Platform .
+
+:Structure a owl:Class ;
+    rdfs:subClassOf :GeometricProperty .
+
+:ThermalProperty a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:canDetect a owl:ObjectProperty ;
+    rdfs:label "can detect" ;
+    rdfs:comment "Defines the relationship between an obejct detection algorithm and entities" ;
+    rdfs:domain sosa:Procedure ;
+    rdfs:range oboe-core:Entity .
+
+:hasCharacteristic a owl:ObjectProperty ;
+    rdfs:label "has characteristic" ;
+    rdfs:comment "Links entities to the characteristics possessed by the entity" ;
+    rdfs:domain oboe-core:Entity ;
+    rdfs:range oboe-core:Characteristic ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ( :observedIn oboe-core:hasMeasurement oboe-core:ofCharacteristic ) .
+
+:hasExternalDescription a owl:DatatypeProperty ;
+    rdfs:label "has external description" .
+
+:hasInferenceSpeed a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+:hasInferenceSpeedCPUb1 a owl:DatatypeProperty ;
+    rdfs:comment "The inference speed on a CPU (Central Processing Unit) for a single image (batch size = 1), measured in milliseconds. It indicates how fast the model can process images on a standard computer without GPU acceleration" ;
+    rdfs:subPropertyOf :hasInferenceSpeed .
+
+:trainedOnDataSet a owl:DatatypeProperty .
+
+oboe-core:Characteristic a owl:Class ;
+    owl:equivalentClass sosa:ObservableProperty .
+
+oboe-core:IdentifyingCharacteristic a owl:Class .
+
+oboe-core:ofCharacteristic a owl:ObjectProperty ;
+    owl:equivalentProperty sosa:observedProperty .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> a swrl:Variable .
+
+:Angle a owl:Class ;
+    rdfs:subClassOf :Orientation .
+
+:GeometricProperty a owl:Class ;
+    rdfs:subClassOf :VisualCharactersitic .
+
+:Heading_Sensor a owl:Class ;
+    rdfs:label "Heading Sensor"@en ;
+    rdfs:comment "A sensor used to determine the orientation or direction of an object. Examples are gyroscopes and magnetic compasses used in navigation systems."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Orientation ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor,
+        :Passive_Sensor,
+        :ProprioceptorSensor .
+
+:SpatialProperty a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> a swrl:Variable .
+
+sosa:ObservableProperty a owl:Class .
+
+:Orientation a owl:Class ;
+    rdfs:subClassOf :SpatialProperty .
+
+:Speed_Sensor a owl:Class ;
+    rdfs:label "Speed Sensor" ;
+    rdfs:comment "Sensors that measures the speed of an object, such as speedometers and tachometers used in vehicles and machinery." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sosa:observes ;
+            owl:someValuesFrom oboe-char:Speed ],
+        sosa:Sensor .
+
+:TemporalProperty a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:VisualCharactersitic a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:hasInputSize a owl:DatatypeProperty ;
+    rdfs:label "has input size" ;
+    rdfs:comment "Refers to the size of the image (in pixels) that is used as an input" ;
+    rdfs:subPropertyOf :hasDeepLearningModelCharacteristic .
+
+<http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> a swrl:Variable .
+
+sosa:Procedure a owl:Class .
+
+sosa:hosts a owl:ObjectProperty .
+
+:MaterialProperty a owl:Class ;
+    rdfs:subClassOf :ObjectProperty .
+
+:Position_Sensor a owl:Class ;
+    rdfs:label "Position Sensor" ;
+    rdfs:comment "A sensor that detects the position of an object." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor ;
+    :hasWeBotsName "position_sensor" .
+
+:ProprioceptorSensor a owl:Class ;
+    rdfs:label "Proprioceptor Sensor" ;
+    rdfs:comment "A class of sensors that measure the internal state of the robot, or parts of the robot" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Restriction ;
+                    owl:allValuesFrom [ a owl:Class ;
+                            owl:intersectionOf ( :Robot [ a owl:Restriction ;
+                                        owl:onProperty sosa:hosts ;
+                                        owl:someValuesFrom :ProprioceptorSensor ] ) ] ;
+                    owl:onProperty oboe-core:characteristicFor ] ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor .
+
+:hasDeepLearningModelCharacteristic a owl:DatatypeProperty ;
+    rdfs:domain :DeepLearningModel ;
+    rdfs:subPropertyOf :hasAlgorithmCharacteristic .
+
+:hasObservableCharacteristic a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasCharacteristic .
+
+:Distance_Sensor a owl:Class ;
+    rdfs:label "Ranging Sensor" ;
+    rdfs:comment """A sensor that measures the distance to an object.
+For example, laser rangefinders and ultrasonic distance sensors used in robotics and surveying.""" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor,
+        :Exteroceptor_Sensor ;
+    skos:altLabel "Distance Sensor" ;
+    :hasWeBotsName "distance_sensor" .
+
+:IdentificationSensor a owl:Class ;
+    rdfs:label "Identification Sensor" ;
+    rdfs:comment "Sensors used to identify objects or individuals based on specific characteristics or signals. Examples are biometric scanners and RFID readers used in security and inventory management." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sosa:observes ;
+            owl:someValuesFrom oboe-core:IdentifyingCharacteristic ],
+        sosa:Sensor .
+
+:ObjectProperty a owl:Class ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+:SizeProperty a owl:Class ;
+    rdfs:subClassOf :GeometricProperty .
+
+:Motor_Sensor a owl:Class ;
+    rdfs:label "Motor Sensor" ;
+    rdfs:comment """Sensors that monitor and measure various parameters of a motor's operation. Examples are encoders and tachometers used in industrial machinery to monitor motor speed and position.
+
+TODO: Add motor as observed entity, and as part_of Robot""" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor,
+        :ProprioceptorSensor .
+
+:hasSensorCharacteristic a owl:DatatypeProperty .
+
+:ComputerVisionAlgorithm a owl:Class ;
+    rdfs:subClassOf sosa:Procedure .
+
+:Touch_Sensor a owl:Class ;
+    rdfs:label "Touch Sensor"@en ;
+    rdfs:comment """A sensor that detects and measures physical contact or touch.
+When these sensors activate, the activation implies the location of an entity at the range of the sensor. Examples include capacitive touchscreens, force-sensitive resistors, and tactile sensors used in robotics."""@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "0.0"^^xsd:float ;
+            owl:onProperty :hasMeasurementRange ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Location ;
+            owl:onProperty sosa:observes ],
+        sosa:Sensor,
+        :Exteroceptor_Sensor ;
+    :hasWeBotsName "touch_sensor" .
+
+:YOLO a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "MSCOCO" ;
+            owl:onProperty :trainedOnDataSet ],
+        :DeepLearningModel,
+        :ObjectDetectionAlgorithm .
+
+:Location a owl:Class ;
+    rdfs:subClassOf :SpatialProperty ;
+    owl:disjointWith :Orientation .
+
+oboe-core:Entity a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :describedBy ;
+            owl:someValuesFrom :Knowledge_Repository ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasCharacteristic ;
+            owl:someValuesFrom oboe-core:Characteristic ] .
+
+sosa:Sensor a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:ObservableProperty ;
+            owl:onProperty sosa:observes ],
+        ssn:System .
+
+:Passive_Sensor a owl:Class ;
+    rdfs:label "Passive Sensor"@en ;
+    rdfs:comment "TODO: Power requirement needs to be further defined",
+        "A sensor that does not require an external power source and relies on detecting energy emitted or reflected by objects."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "low" ;
+            owl:onProperty :hasPowerRequirement ],
+        sosa:Sensor .
+
+:Active_Sensor a owl:Class ;
+    rdfs:label "Active Sensor"@en ;
+    rdfs:comment "TODO: Power requirement needs to be further defined",
+        "A sensor that requires an external power source to operate and emits its own signal which interacts with the environment and measures the return signal."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue "high" ;
+            owl:onProperty :hasPowerRequirement ],
+        sosa:Sensor .
+
+sosa:observes a owl:ObjectProperty ;
+    owl:equivalentProperty :observesCharacteristic ;
+    owl:propertyChainAxiom ( sosa:madeObservation oboe-core:ofCharacteristic ) .
+
+:Exteroceptor_Sensor a owl:Class ;
+    rdfs:label "Exteroceptor Sensor"@en ;
+    rdfs:comment "A sensor that provides information about the external environment surrounding the device."@en ;
+    rdfs:subClassOf sosa:Sensor .
+
+:PhysicalEntity a owl:Class ;
+    rdfs:label "Physical Entity" ;
+    rdfs:comment """Entities that have some form of physical existence. Used to denote entities that possess some characteristics that everyday objects possess (e.g. weight, color, size, etc.).
+Despite the name, these entities can be virtual.""" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasCharacteristic ;
+            owl:someValuesFrom :Location ],
+        oboe-core:Entity .
+
+:inDataSet a owl:DatatypeProperty .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Shape :SizeProperty :Structure ) .
+
+[] a swrl:Imp ;
+    rdfs:label "CanDetect" ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment "" ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:DatavaluedPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
+                    swrl:propertyPredicate :inDataSet ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:DatavaluedPropertyAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
+                            swrl:propertyPredicate :trainedOnDataSet ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:ClassAtom ;
+                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                                    swrl:classPredicate sosa:Procedure ] ;
+                            rdf:rest () ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:IndividualPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                    swrl:propertyPredicate :canDetect ] ;
+            rdf:rest () ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Age :CreationDate :DestructionDate :ExpirationDate ) .
+
+[] a swrl:Imp ;
+    rdfs:label "Touch Sensor Detection" ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment "If a touch sensor is activated, it means there is an entity with characteristic Location same as the location of the sensor itself" ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/sens> ;
+                    swrl:classPredicate :Touch_Sensor ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/sens> ;
+                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/loc> ;
+                            swrl:propertyPredicate :hasLocation ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/sens> ;
+                                    swrl:propertyPredicate sosa:madeBySensor ] ;
+                            rdf:rest [ a swrl:AtomList ;
+                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                            swrl:propertyPredicate oboe-core:hasMeasurement ] ;
+                                    rdf:rest [ a swrl:AtomList ;
+                                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                                                    swrl:propertyPredicate oboe-core:ofEntity ] ;
+                                            rdf:rest [ a swrl:AtomList ;
+                                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/c> ;
+                                                            swrl:propertyPredicate oboe-core:ofCharacteristic ] ;
+                                                    rdf:rest () ] ] ] ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/c> ;
+                    swrl:classPredicate :Location ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/loc> ;
+                            swrl:propertyPredicate :hasLocation ] ;
+                    rdf:rest () ] ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :YOLOv5l :YOLOv5l6 :YOLOv5m :YOLOv5m6 :YOLOv5n :YOLOv5n6 :YOLOv5s :YOLOv5s6 :YOLOv5x :YOLOv5x6 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Color :GeometricProperty :Pattern ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MaterialProperty :SpatialProperty :TemporalProperty :ThermalProperty :VisualCharactersitic ) .
+
+[] a swrl:Imp ;
+    rdfs:label "Proprioception" ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment "" ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                    swrl:classPredicate :ProprioceptorSensor ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:ClassAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                            swrl:classPredicate oboe-core:Measurement ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:ClassAtom ;
+                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                    swrl:classPredicate oboe-core:Observation ] ;
+                            rdf:rest [ a swrl:AtomList ;
+                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
+                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                                            swrl:propertyPredicate sosa:hosts ] ;
+                                    rdf:rest [ a swrl:AtomList ;
+                                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                                                    swrl:propertyPredicate sosa:madeBySensor ] ;
+                                            rdf:rest [ a swrl:AtomList ;
+                                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                                            swrl:propertyPredicate oboe-core:hasMeasurement ] ;
+                                                    rdf:rest () ] ] ] ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:IndividualPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
+                    swrl:propertyPredicate oboe-core:ofEntity ] ;
+            rdf:rest () ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Density :Flexibility :MaterialName :Weight ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Depth :Height :Length :SurfaceArea :Volume :Width ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MaterialProperty :SpatialProperty :ThermalProperty :VisualCharactersitic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Pitch :Roll :Yaw ) .
+

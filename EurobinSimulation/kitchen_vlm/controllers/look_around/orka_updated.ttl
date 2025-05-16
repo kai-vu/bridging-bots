@@ -1,6 +1,6 @@
 @prefix : <https://w3id.org/def/orka#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oboe: <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#> .
+@prefix oboe-char: <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#> .
 @prefix oboe-core: <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#> .
 @prefix orka: <http://w3id.org/def/orka#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,6 +11,7 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <Tiago> a orka:Robot .
@@ -26,412 +27,412 @@ oboe-core:hasValue a owl:ObjectProperty ;
 oboe-core:usesProtocol a owl:ObjectProperty ;
     owl:equivalentProperty sosa:usedProcedure .
 
-dcterms:description a owl:AnnotationProperty .
+terms:description a owl:AnnotationProperty .
 
-dcterms:license a owl:AnnotationProperty .
+terms:license a owl:AnnotationProperty .
 
-dcterms:title a owl:AnnotationProperty .
+terms:title a owl:AnnotationProperty .
 
 swrla:isRuleEnabled a owl:AnnotationProperty .
 
-<http://w3id.org/def/orka#Obs_10000_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10000_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10000_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10000_2025-05-16T22:11:15.109777> ;
     orka:hasID 10000 .
 
-<http://w3id.org/def/orka#Obs_10015_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10015_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10015_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10015_2025-05-16T22:11:15.109777> ;
     orka:hasID 10015 .
 
-<http://w3id.org/def/orka#Obs_10026_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10026_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10026_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10026_2025-05-16T22:11:15.109777> ;
     orka:hasID 10026 .
 
-<http://w3id.org/def/orka#Obs_10041_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10041_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10041_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10041_2025-05-16T22:11:15.109777> ;
     orka:hasID 10041 .
 
-<http://w3id.org/def/orka#Obs_10055_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10055_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10055_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10055_2025-05-16T22:11:15.109777> ;
     orka:hasID 10055 .
 
-<http://w3id.org/def/orka#Obs_10069_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10069_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10069_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10069_2025-05-16T22:11:15.109777> ;
     orka:hasID 10069 .
 
-<http://w3id.org/def/orka#Obs_10083_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10083_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10083_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10083_2025-05-16T22:11:15.109777> ;
     orka:hasID 10083 .
 
-<http://w3id.org/def/orka#Obs_10108_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10108_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10108_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10108_2025-05-16T22:11:15.109777> ;
     orka:hasID 10108 .
 
-<http://w3id.org/def/orka#Obs_10124_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10124_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10124_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10124_2025-05-16T22:11:15.109777> ;
     orka:hasID 10124 .
 
-<http://w3id.org/def/orka#Obs_10143_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10143_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10143_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10143_2025-05-16T22:11:15.109777> ;
     orka:hasID 10143 .
 
-<http://w3id.org/def/orka#Obs_10155_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10155_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10155_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10155_2025-05-16T22:11:15.109777> ;
     orka:hasID 10155 .
 
-<http://w3id.org/def/orka#Obs_10168_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10168_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10168_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10168_2025-05-16T22:11:15.109777> ;
     orka:hasID 10168 .
 
-<http://w3id.org/def/orka#Obs_10181_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_10181_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_10181_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_10181_2025-05-16T22:11:15.109777> ;
     orka:hasID 10181 .
 
-<http://w3id.org/def/orka#Obs_116_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_116_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_116_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_116_2025-05-16T22:11:15.109777> ;
     orka:hasID 116 .
 
-<http://w3id.org/def/orka#Obs_1473_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_1473_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_1473_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_1473_2025-05-16T22:11:15.109777> ;
     orka:hasID 1473 .
 
-<http://w3id.org/def/orka#Obs_1_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_1_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_1_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_1_2025-05-16T22:11:15.109777> ;
     orka:hasID 1 .
 
-<http://w3id.org/def/orka#Obs_2427_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_2427_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_2427_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_2427_2025-05-16T22:11:15.109777> ;
     orka:hasID 2427 .
 
-<http://w3id.org/def/orka#Obs_2924_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_2924_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_2924_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_2924_2025-05-16T22:11:15.109777> ;
     orka:hasID 2924 .
 
-<http://w3id.org/def/orka#Obs_2_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_2_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_2_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_2_2025-05-16T22:11:15.109777> ;
     orka:hasID 2 .
 
-<http://w3id.org/def/orka#Obs_3876_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_3876_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_3876_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_3876_2025-05-16T22:11:15.109777> ;
     orka:hasID 3876 .
 
-<http://w3id.org/def/orka#Obs_3_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_3_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_3_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_3_2025-05-16T22:11:15.109777> ;
     orka:hasID 3 .
 
-<http://w3id.org/def/orka#Obs_6203_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6203_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6203_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6203_2025-05-16T22:11:15.109777> ;
     orka:hasID 6203 .
 
-<http://w3id.org/def/orka#Obs_6215_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6215_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6215_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6215_2025-05-16T22:11:15.109777> ;
     orka:hasID 6215 .
 
-<http://w3id.org/def/orka#Obs_6229_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6229_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6229_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6229_2025-05-16T22:11:15.109777> ;
     orka:hasID 6229 .
 
-<http://w3id.org/def/orka#Obs_6243_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6243_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6243_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6243_2025-05-16T22:11:15.109777> ;
     orka:hasID 6243 .
 
-<http://w3id.org/def/orka#Obs_6257_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6257_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6257_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6257_2025-05-16T22:11:15.109777> ;
     orka:hasID 6257 .
 
-<http://w3id.org/def/orka#Obs_6271_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6271_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6271_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6271_2025-05-16T22:11:15.109777> ;
     orka:hasID 6271 .
 
-<http://w3id.org/def/orka#Obs_6338_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_6338_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_6338_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_6338_2025-05-16T22:11:15.109777> ;
     orka:hasID 6338 .
 
-<http://w3id.org/def/orka#Obs_694_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_694_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_694_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_694_2025-05-16T22:11:15.109777> ;
     orka:hasID 694 .
 
-<http://w3id.org/def/orka#Obs_7323_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7323_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7323_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7323_2025-05-16T22:11:15.109777> ;
     orka:hasID 7323 .
 
-<http://w3id.org/def/orka#Obs_7345_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7345_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7345_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7345_2025-05-16T22:11:15.109777> ;
     orka:hasID 7345 .
 
-<http://w3id.org/def/orka#Obs_7375_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7375_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7375_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7375_2025-05-16T22:11:15.109777> ;
     orka:hasID 7375 .
 
-<http://w3id.org/def/orka#Obs_7396_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7396_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7396_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7396_2025-05-16T22:11:15.109777> ;
     orka:hasID 7396 .
 
-<http://w3id.org/def/orka#Obs_7417_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7417_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7417_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7417_2025-05-16T22:11:15.109777> ;
     orka:hasID 7417 .
 
-<http://w3id.org/def/orka#Obs_7438_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7438_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7438_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7438_2025-05-16T22:11:15.109777> ;
     orka:hasID 7438 .
 
-<http://w3id.org/def/orka#Obs_7459_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7459_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7459_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7459_2025-05-16T22:11:15.109777> ;
     orka:hasID 7459 .
 
-<http://w3id.org/def/orka#Obs_7479_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7479_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7479_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7479_2025-05-16T22:11:15.109777> ;
     orka:hasID 7479 .
 
-<http://w3id.org/def/orka#Obs_7500_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7500_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7500_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7500_2025-05-16T22:11:15.109777> ;
     orka:hasID 7500 .
 
-<http://w3id.org/def/orka#Obs_7521_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7521_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7521_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7521_2025-05-16T22:11:15.109777> ;
     orka:hasID 7521 .
 
-<http://w3id.org/def/orka#Obs_7541_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7541_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7541_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7541_2025-05-16T22:11:15.109777> ;
     orka:hasID 7541 .
 
-<http://w3id.org/def/orka#Obs_7663_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7663_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7663_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7663_2025-05-16T22:11:15.109777> ;
     orka:hasID 7663 .
 
-<http://w3id.org/def/orka#Obs_7987_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_7987_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_7987_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_7987_2025-05-16T22:11:15.109777> ;
     orka:hasID 7987 .
 
-<http://w3id.org/def/orka#Obs_8004_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8004_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8004_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8004_2025-05-16T22:11:15.109777> ;
     orka:hasID 8004 .
 
-<http://w3id.org/def/orka#Obs_8021_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8021_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8021_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8021_2025-05-16T22:11:15.109777> ;
     orka:hasID 8021 .
 
-<http://w3id.org/def/orka#Obs_8038_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8038_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8038_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8038_2025-05-16T22:11:15.109777> ;
     orka:hasID 8038 .
 
-<http://w3id.org/def/orka#Obs_8055_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8055_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8055_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8055_2025-05-16T22:11:15.109777> ;
     orka:hasID 8055 .
 
-<http://w3id.org/def/orka#Obs_8072_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8072_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8072_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8072_2025-05-16T22:11:15.109777> ;
     orka:hasID 8072 .
 
-<http://w3id.org/def/orka#Obs_8089_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8089_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8089_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8089_2025-05-16T22:11:15.109777> ;
     orka:hasID 8089 .
 
-<http://w3id.org/def/orka#Obs_8106_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8106_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8106_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8106_2025-05-16T22:11:15.109777> ;
     orka:hasID 8106 .
 
-<http://w3id.org/def/orka#Obs_8123_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8123_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8123_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8123_2025-05-16T22:11:15.109777> ;
     orka:hasID 8123 .
 
-<http://w3id.org/def/orka#Obs_8140_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8140_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8140_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8140_2025-05-16T22:11:15.109777> ;
     orka:hasID 8140 .
 
-<http://w3id.org/def/orka#Obs_8158_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8158_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8158_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8158_2025-05-16T22:11:15.109777> ;
     orka:hasID 8158 .
 
-<http://w3id.org/def/orka#Obs_8351_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8351_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8351_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8351_2025-05-16T22:11:15.109777> ;
     orka:hasID 8351 .
 
-<http://w3id.org/def/orka#Obs_8533_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8533_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8533_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8533_2025-05-16T22:11:15.109777> ;
     orka:hasID 8533 .
 
-<http://w3id.org/def/orka#Obs_8617_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8617_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8617_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8617_2025-05-16T22:11:15.109777> ;
     orka:hasID 8617 .
 
-<http://w3id.org/def/orka#Obs_8649_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8649_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8649_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8649_2025-05-16T22:11:15.109777> ;
     orka:hasID 8649 .
 
-<http://w3id.org/def/orka#Obs_8681_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8681_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8681_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8681_2025-05-16T22:11:15.109777> ;
     orka:hasID 8681 .
 
-<http://w3id.org/def/orka#Obs_8713_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8713_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8713_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8713_2025-05-16T22:11:15.109777> ;
     orka:hasID 8713 .
 
-<http://w3id.org/def/orka#Obs_8745_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8745_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8745_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8745_2025-05-16T22:11:15.109777> ;
     orka:hasID 8745 .
 
-<http://w3id.org/def/orka#Obs_8772_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8772_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8772_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8772_2025-05-16T22:11:15.109777> ;
     orka:hasID 8772 .
 
-<http://w3id.org/def/orka#Obs_8804_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8804_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8804_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8804_2025-05-16T22:11:15.109777> ;
     orka:hasID 8804 .
 
-<http://w3id.org/def/orka#Obs_8816_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8816_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8816_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8816_2025-05-16T22:11:15.109777> ;
     orka:hasID 8816 .
 
-<http://w3id.org/def/orka#Obs_8860_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8860_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8860_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8860_2025-05-16T22:11:15.109777> ;
     orka:hasID 8860 .
 
-<http://w3id.org/def/orka#Obs_8865_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8865_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8865_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8865_2025-05-16T22:11:15.109777> ;
     orka:hasID 8865 .
 
-<http://w3id.org/def/orka#Obs_8870_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8870_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8870_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8870_2025-05-16T22:11:15.109777> ;
     orka:hasID 8870 .
 
-<http://w3id.org/def/orka#Obs_8891_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_8891_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_8891_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_8891_2025-05-16T22:11:15.109777> ;
     orka:hasID 8891 .
 
-<http://w3id.org/def/orka#Obs_9141_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9141_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9141_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9141_2025-05-16T22:11:15.109777> ;
     orka:hasID 9141 .
 
-<http://w3id.org/def/orka#Obs_9375_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9375_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9375_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9375_2025-05-16T22:11:15.109777> ;
     orka:hasID 9375 .
 
-<http://w3id.org/def/orka#Obs_9390_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9390_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9390_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9390_2025-05-16T22:11:15.109777> ;
     orka:hasID 9390 .
 
-<http://w3id.org/def/orka#Obs_9428_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9428_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9428_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9428_2025-05-16T22:11:15.109777> ;
     orka:hasID 9428 .
 
-<http://w3id.org/def/orka#Obs_9466_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9466_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9466_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9466_2025-05-16T22:11:15.109777> ;
     orka:hasID 9466 .
 
-<http://w3id.org/def/orka#Obs_9504_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9504_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9504_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9504_2025-05-16T22:11:15.109777> ;
     orka:hasID 9504 .
 
-<http://w3id.org/def/orka#Obs_9534_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9534_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9534_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9534_2025-05-16T22:11:15.109777> ;
     orka:hasID 9534 .
 
-<http://w3id.org/def/orka#Obs_9557_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9557_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9557_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9557_2025-05-16T22:11:15.109777> ;
     orka:hasID 9557 .
 
-<http://w3id.org/def/orka#Obs_9579_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9579_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9579_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9579_2025-05-16T22:11:15.109777> ;
     orka:hasID 9579 .
 
-<http://w3id.org/def/orka#Obs_9601_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9601_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9601_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9601_2025-05-16T22:11:15.109777> ;
     orka:hasID 9601 .
 
-<http://w3id.org/def/orka#Obs_9623_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9623_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9623_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9623_2025-05-16T22:11:15.109777> ;
     orka:hasID 9623 .
 
-<http://w3id.org/def/orka#Obs_9645_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9645_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9645_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9645_2025-05-16T22:11:15.109777> ;
     orka:hasID 9645 .
 
-<http://w3id.org/def/orka#Obs_9668_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9668_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9668_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9668_2025-05-16T22:11:15.109777> ;
     orka:hasID 9668 .
 
-<http://w3id.org/def/orka#Obs_9679_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9679_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9679_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9679_2025-05-16T22:11:15.109777> ;
     orka:hasID 9679 .
 
-<http://w3id.org/def/orka#Obs_9690_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9690_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9690_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9690_2025-05-16T22:11:15.109777> ;
     orka:hasID 9690 .
 
-<http://w3id.org/def/orka#Obs_9712_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9712_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9712_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9712_2025-05-16T22:11:15.109777> ;
     orka:hasID 9712 .
 
-<http://w3id.org/def/orka#Obs_9734_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9734_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9734_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9734_2025-05-16T22:11:15.109777> ;
     orka:hasID 9734 .
 
-<http://w3id.org/def/orka#Obs_9752_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9752_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9752_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9752_2025-05-16T22:11:15.109777> ;
     orka:hasID 9752 .
 
-<http://w3id.org/def/orka#Obs_9770_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9770_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9770_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9770_2025-05-16T22:11:15.109777> ;
     orka:hasID 9770 .
 
-<http://w3id.org/def/orka#Obs_9781_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9781_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9781_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9781_2025-05-16T22:11:15.109777> ;
     orka:hasID 9781 .
 
-<http://w3id.org/def/orka#Obs_9791_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9791_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9791_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9791_2025-05-16T22:11:15.109777> ;
     orka:hasID 9791 .
 
-<http://w3id.org/def/orka#Obs_9801_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9801_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9801_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9801_2025-05-16T22:11:15.109777> ;
     orka:hasID 9801 .
 
-<http://w3id.org/def/orka#Obs_9813_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9813_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9813_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9813_2025-05-16T22:11:15.109777> ;
     orka:hasID 9813 .
 
-<http://w3id.org/def/orka#Obs_9825_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9825_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9825_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9825_2025-05-16T22:11:15.109777> ;
     orka:hasID 9825 .
 
-<http://w3id.org/def/orka#Obs_9837_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9837_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9837_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9837_2025-05-16T22:11:15.109777> ;
     orka:hasID 9837 .
 
-<http://w3id.org/def/orka#Obs_9849_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9849_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9849_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9849_2025-05-16T22:11:15.109777> ;
     orka:hasID 9849 .
 
-<http://w3id.org/def/orka#Obs_9861_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9861_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9861_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9861_2025-05-16T22:11:15.109777> ;
     orka:hasID 9861 .
 
-<http://w3id.org/def/orka#Obs_9873_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9873_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9873_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9873_2025-05-16T22:11:15.109777> ;
     orka:hasID 9873 .
 
-<http://w3id.org/def/orka#Obs_9885_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9885_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9885_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9885_2025-05-16T22:11:15.109777> ;
     orka:hasID 9885 .
 
-<http://w3id.org/def/orka#Obs_9897_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9897_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9897_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9897_2025-05-16T22:11:15.109777> ;
     orka:hasID 9897 .
 
-<http://w3id.org/def/orka#Obs_9939_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9939_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9939_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9939_2025-05-16T22:11:15.109777> ;
     orka:hasID 9939 .
 
-<http://w3id.org/def/orka#Obs_9957_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9957_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9957_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9957_2025-05-16T22:11:15.109777> ;
     orka:hasID 9957 .
 
-<http://w3id.org/def/orka#Obs_9972_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9972_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9972_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9972_2025-05-16T22:11:15.109777> ;
     orka:hasID 9972 .
 
-<http://w3id.org/def/orka#Obs_9985_2025-05-12T17:09:48.507894> a oboe:Observation ;
-    oboe:ofEntity <http://w3id.org/def/orka#Ent_9985_2025-05-12T17:09:48.507894> ;
+<http://w3id.org/def/orka#Obs_9985_2025-05-16T22:11:15.109777> a oboe:Observation ;
+    oboe:ofEntity <http://w3id.org/def/orka#Ent_9985_2025-05-16T22:11:15.109777> ;
     orka:hasID 9985 .
 
 skos:altLabel a owl:AnnotationProperty .
@@ -471,9 +472,9 @@ ssn:implementedBy a owl:ObjectProperty ;
 <http://www.w3.org/ns/ssn/systems/SystemProperty> a owl:Class .
 
 <https://w3id.org/def/orka> a owl:Ontology ;
-    dcterms:description "The Ontology for Robotic Knowledge Acqusition aims at providing a shared understanding and vocabulary for describing robotic perception pipelines including sensors, algorithms and the characteristics of the environment and the objects contained within. The ontology also concerns external sources of knowledge, such as knowledge repositories and The Semantic Web." ;
-    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    dcterms:title "Ontology for Robotic Knowledge Acqusition" ;
+    terms:description "The Ontology for Robotic Knowledge Acqusition aims at providing a shared understanding and vocabulary for describing robotic perception pipelines including sensors, algorithms and the characteristics of the environment and the objects contained within. The ontology also concerns external sources of knowledge, such as knowledge repositories and The Semantic Web." ;
+    terms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    terms:title "Ontology for Robotic Knowledge Acqusition" ;
     owl:imports <file://owl/sosa-fixed.owl/>,
         <file://owl/ssn-fixed.owl/>,
         <file://owl/ssn-systems-fixed.owl/>,
@@ -746,7 +747,7 @@ ssn:implementedBy a owl:ObjectProperty ;
     rdfs:label "Doppler Radar" ;
     rdfs:comment "A radar sensor that measures the frequency shift of returned signals to determine the speed of an object. Doppler radar is used in weather forecasting and traffic speed monitoring." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Speed> ;
+            owl:allValuesFrom oboe-char:Speed ;
             owl:onProperty sosa:observes ],
         :Active_Sensor,
         :Exteroceptor_Sensor,
@@ -756,7 +757,7 @@ ssn:implementedBy a owl:ObjectProperty ;
     rdfs:label "Doppler Sound Sensor" ;
     rdfs:comment "A sensor that uses the Doppler effect to measure the speed of sound waves reflecting off moving objects." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Speed> ;
+            owl:allValuesFrom oboe-char:Speed ;
             owl:onProperty sosa:observes ],
         :Active_Sensor,
         :Exteroceptor_Sensor,
@@ -1035,14 +1036,14 @@ TODO: Need to add frame of reference as coordinates (measurements)""" ;
             owl:hasValue 12000 ;
             owl:onProperty :hasMaxRange ],
         [ a owl:Restriction ;
-            owl:hasValue 200 ;
-            owl:onProperty :hasMinRange ],
+            owl:hasValue 0.225 ;
+            owl:onProperty :hasAngularResolution ],
         [ a owl:Restriction ;
             owl:hasValue 10 ;
             owl:onProperty :hasScanningFrequency ],
         [ a owl:Restriction ;
-            owl:hasValue 0.225 ;
-            owl:onProperty :hasAngularResolution ],
+            owl:hasValue 200 ;
+            owl:onProperty :hasMinRange ],
         :Lidar .
 
 :Radar a owl:Class ;
@@ -1425,996 +1426,1193 @@ TODO: Need to add frame of reference as coordinates (measurements)""" ;
 
 oboe-core:characteristicFor a owl:ObjectProperty .
 
-<http://w3id.org/def/orka#Ent_10000_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10000_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10000_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10000_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#Ent_10000_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10000_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10000_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10000_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10000_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10015_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10015_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10015_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10015_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10015_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10026_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10026_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10026_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10026_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10026_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10041_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10041_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10041_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10041_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10041_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10055_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10055_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10055_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10055_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10055_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10069_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10069_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10069_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10069_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10069_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10083_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10083_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10083_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10083_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10083_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10108_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10108_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10108_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10108_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10108_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10124_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10124_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10124_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10124_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10124_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10143_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10143_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10143_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10143_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10143_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10155_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10155_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10155_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10155_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10155_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10168_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10168_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10168_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10168_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10168_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_10181_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_10181_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_10181_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_10181_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_10181_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_116_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_116_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_116_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_116_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_116_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_1473_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_1473_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_1473_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_1473_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_1473_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_1_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_1_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_1_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_1_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_2427_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_2427_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_2427_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_2427_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_2427_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_2924_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_2924_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_2924_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_2924_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_2924_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_2_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_2_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_2_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_2_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_3876_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_3876_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_3876_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_3876_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_3876_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_3_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_3_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_3_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_3_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6203_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6203_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6203_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6203_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6203_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6215_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6215_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6215_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6215_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6215_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6229_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6229_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6229_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6229_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6229_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6243_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6243_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6243_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6243_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6243_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6257_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6257_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6257_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6257_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6257_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6271_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6271_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6271_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6271_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6271_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_6338_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_6338_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_6338_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_6338_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_6338_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_694_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_694_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_694_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_694_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_694_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7323_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7323_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7323_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7323_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7323_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7345_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7345_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7345_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7345_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7345_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7375_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7375_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7375_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7375_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7375_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7396_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7396_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7396_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7396_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7396_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7417_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7417_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7417_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7417_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7417_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7438_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7438_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7438_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7438_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7438_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7459_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7459_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7459_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7459_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7459_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7479_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7479_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7479_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7479_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7479_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7500_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7500_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7500_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7500_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7500_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7521_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7521_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7521_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7521_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7521_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7541_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7541_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7541_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7541_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7541_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7663_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7663_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7663_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7663_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7663_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_7987_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_7987_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_7987_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_7987_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_7987_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8004_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8004_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8004_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8004_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8004_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8021_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8021_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8021_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8021_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8021_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8038_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8038_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8038_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8038_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8038_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8055_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8055_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8055_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8055_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8055_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8072_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8072_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8072_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8072_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8072_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8089_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8089_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8089_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8089_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8089_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8106_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8106_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8106_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8106_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8106_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8123_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8123_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8123_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8123_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8123_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8140_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8140_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8140_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8140_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8140_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8158_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8158_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8158_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8158_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8158_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8351_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8351_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8351_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8351_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8351_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8533_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8533_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8533_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8533_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8533_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8617_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8617_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8617_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8617_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8617_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8649_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8649_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8649_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8649_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8649_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8681_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8681_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8681_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8681_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8681_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8713_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8713_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8713_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8713_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8713_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8745_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8745_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8745_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8745_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8745_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8772_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8772_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8772_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8772_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8772_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8804_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8804_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8804_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8804_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8804_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8816_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8816_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8816_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8816_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8816_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8860_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8860_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8860_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8860_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8860_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8865_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8865_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8865_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8865_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8865_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8870_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8870_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8870_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8870_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8870_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_8891_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_8891_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_8891_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_8891_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_8891_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9141_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9141_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9141_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9141_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9141_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9375_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9375_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9375_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9375_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9375_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9390_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9390_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9390_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9390_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9390_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9428_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9428_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9428_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9428_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9428_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9466_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9466_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9466_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9466_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9466_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9504_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9504_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9504_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9504_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9504_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9534_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9534_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9534_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9534_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9534_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9557_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9557_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9557_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9557_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9557_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9579_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9579_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9579_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9579_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9579_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9601_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9601_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9601_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9601_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9601_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9623_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9623_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9623_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9623_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9623_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9645_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9645_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9645_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9645_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9645_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9668_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9668_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9668_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9668_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9668_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9679_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9679_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9679_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9679_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9679_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9690_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9690_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9690_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9690_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9690_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9712_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9712_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9712_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9712_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9712_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9734_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9734_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9734_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9734_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9734_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9752_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9752_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9752_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9752_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9752_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9770_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9770_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9770_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9770_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9770_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9781_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9781_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9781_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9781_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9781_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9791_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9791_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9791_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9791_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9791_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9801_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9801_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9801_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9801_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9801_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9813_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9813_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9813_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9813_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9813_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9825_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9825_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9825_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9825_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9825_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9837_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9837_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9837_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9837_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9837_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9849_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9849_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9849_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9849_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9849_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9861_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9861_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9861_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9861_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9861_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9873_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9873_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9873_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9873_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9873_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9885_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9885_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9885_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9885_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9885_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9897_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9897_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9897_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9897_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9897_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9939_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9939_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9939_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9939_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9939_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9957_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9957_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9957_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9957_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9957_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9972_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9972_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9972_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9972_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9972_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#Ent_9985_2025-05-16T22:11:15.109777> a oboe:Entity ;
+    orka:hasCharacteristic <http://w3id.org/def/orka#Loc_9985_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#char_name_9985_2025-05-16T22:11:15.109777>,
+        <http://w3id.org/def/orka#typename_9985_2025-05-16T22:11:15.109777> ;
+    orka:hasLocation <http://w3id.org/def/orka#Loc_9985_2025-05-16T22:11:15.109777> .
+
+<http://w3id.org/def/orka#char_name_10000_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "spoon" .
+
+<http://w3id.org/def/orka#char_name_10015_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "knife" .
+
+<http://w3id.org/def/orka#char_name_10026_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate" .
+
+<http://w3id.org/def/orka#char_name_10041_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(6)" .
+
+<http://w3id.org/def/orka#char_name_10055_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(7)" .
+
+<http://w3id.org/def/orka#char_name_10069_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "glass" .
+
+<http://w3id.org/def/orka#char_name_10083_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wine glass" .
+
+<http://w3id.org/def/orka#char_name_10108_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "honey jar" .
+
+<http://w3id.org/def/orka#char_name_10124_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "jam jar(1)" .
+
+<http://w3id.org/def/orka#char_name_10143_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cereal box(3)" .
+
+<http://w3id.org/def/orka#char_name_10155_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cereal box(4)" .
+
+<http://w3id.org/def/orka#char_name_10168_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "biscuit box" .
+
+<http://w3id.org/def/orka#char_name_10181_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "salt" .
+
+<http://w3id.org/def/orka#char_name_116_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet(1)" .
+
+<http://w3id.org/def/orka#char_name_1473_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet(3)" .
+
+<http://w3id.org/def/orka#char_name_2427_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet(4)" .
+
+<http://w3id.org/def/orka#char_name_2924_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet(5)" .
+
+<http://w3id.org/def/orka#char_name_3876_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet" .
+
+<http://w3id.org/def/orka#char_name_6203_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "floor(1)" .
+
+<http://w3id.org/def/orka#char_name_6215_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(1)" .
+
+<http://w3id.org/def/orka#char_name_6229_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(2)" .
+
+<http://w3id.org/def/orka#char_name_6243_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(3)" .
+
+<http://w3id.org/def/orka#char_name_6257_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(4)" .
+
+<http://w3id.org/def/orka#char_name_6271_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "plate(5)" .
+
+<http://w3id.org/def/orka#char_name_6338_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "TIAGo LITE" .
+
+<http://w3id.org/def/orka#char_name_694_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cabinet(2)" .
+
+<http://w3id.org/def/orka#char_name_7323_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "floor" .
+
+<http://w3id.org/def/orka#char_name_7345_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "ceiling" .
+
+<http://w3id.org/def/orka#char_name_7375_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(1)" .
+
+<http://w3id.org/def/orka#char_name_7396_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(2)" .
+
+<http://w3id.org/def/orka#char_name_7417_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(3)" .
+
+<http://w3id.org/def/orka#char_name_7438_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(4)" .
+
+<http://w3id.org/def/orka#char_name_7459_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(5)" .
+
+<http://w3id.org/def/orka#char_name_7479_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(6)" .
+
+<http://w3id.org/def/orka#char_name_7500_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(7)" .
+
+<http://w3id.org/def/orka#char_name_7521_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall(8)" .
+
+<http://w3id.org/def/orka#char_name_7541_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wall" .
+
+<http://w3id.org/def/orka#char_name_7663_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "door" .
+
+<http://w3id.org/def/orka#char_name_7987_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(1)" .
+
+<http://w3id.org/def/orka#char_name_8004_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(2)" .
+
+<http://w3id.org/def/orka#char_name_8021_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(3)" .
+
+<http://w3id.org/def/orka#char_name_8038_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(4)" .
+
+<http://w3id.org/def/orka#char_name_8055_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(5)" .
+
+<http://w3id.org/def/orka#char_name_8072_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(6)" .
+
+<http://w3id.org/def/orka#char_name_8089_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(7)" .
+
+<http://w3id.org/def/orka#char_name_8106_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(8)" .
+
+<http://w3id.org/def/orka#char_name_8123_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box(9)" .
+
+<http://w3id.org/def/orka#char_name_8140_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "box" .
+
+<http://w3id.org/def/orka#char_name_8158_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "window(1)" .
+
+<http://w3id.org/def/orka#char_name_8351_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "window" .
+
+<http://w3id.org/def/orka#char_name_8533_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "fridge" .
+
+<http://w3id.org/def/orka#char_name_8617_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "worktop(1)" .
+
+<http://w3id.org/def/orka#char_name_8649_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "worktop(2)" .
+
+<http://w3id.org/def/orka#char_name_8681_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "worktop(3)" .
+
+<http://w3id.org/def/orka#char_name_8713_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "worktop(4)" .
+
+<http://w3id.org/def/orka#char_name_8745_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "worktop" .
+
+<http://w3id.org/def/orka#char_name_8772_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "sink" .
+
+<http://w3id.org/def/orka#char_name_8804_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "hot plate" .
+
+<http://w3id.org/def/orka#char_name_8816_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "oven" .
+
+<http://w3id.org/def/orka#char_name_8860_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "solid(1)" .
+
+<http://w3id.org/def/orka#char_name_8865_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "solid(2)" .
+
+<http://w3id.org/def/orka#char_name_8870_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "solid" .
+
+<http://w3id.org/def/orka#char_name_8891_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "table(1)" .
+
+<http://w3id.org/def/orka#char_name_9141_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "table" .
+
+<http://w3id.org/def/orka#char_name_9375_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "ceiling light" .
+
+<http://w3id.org/def/orka#char_name_9390_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "chair(2)" .
+
+<http://w3id.org/def/orka#char_name_9428_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "chair(4)" .
+
+<http://w3id.org/def/orka#char_name_9466_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "chair(5)" .
+
+<http://w3id.org/def/orka#char_name_9504_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "carafe" .
+
+<http://w3id.org/def/orka#char_name_9534_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "water bottle(1)" .
+
+<http://w3id.org/def/orka#char_name_9557_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "water bottle(2)" .
+
+<http://w3id.org/def/orka#char_name_9579_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "water bottle(3)" .
+
+<http://w3id.org/def/orka#char_name_9601_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "water bottle(4)" .
+
+<http://w3id.org/def/orka#char_name_9623_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "water bottle" .
+
+<http://w3id.org/def/orka#char_name_9645_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "beer bottle(1)" .
+
+<http://w3id.org/def/orka#char_name_9668_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "can(1)" .
+
+<http://w3id.org/def/orka#char_name_9679_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "can" .
+
+<http://w3id.org/def/orka#char_name_9690_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "beer bottle(2)" .
+
+<http://w3id.org/def/orka#char_name_9712_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "beer bottle" .
+
+<http://w3id.org/def/orka#char_name_9734_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "fruit bowl(1)" .
+
+<http://w3id.org/def/orka#char_name_9752_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "fruit bowl" .
+
+<http://w3id.org/def/orka#char_name_9770_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "apple(1)" .
+
+<http://w3id.org/def/orka#char_name_9781_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "apple(2)" .
+
+<http://w3id.org/def/orka#char_name_9791_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "apple" .
+
+<http://w3id.org/def/orka#char_name_9801_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(1)" .
+
+<http://w3id.org/def/orka#char_name_9813_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(2)" .
+
+<http://w3id.org/def/orka#char_name_9825_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(3)" .
+
+<http://w3id.org/def/orka#char_name_9837_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(4)" .
+
+<http://w3id.org/def/orka#char_name_9849_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(5)" .
+
+<http://w3id.org/def/orka#char_name_9861_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(6)" .
+
+<http://w3id.org/def/orka#char_name_9873_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange(7)" .
+
+<http://w3id.org/def/orka#char_name_9885_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "orange" .
+
+<http://w3id.org/def/orka#char_name_9897_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "cookware" .
+
+<http://w3id.org/def/orka#char_name_9939_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "lid" .
+
+<http://w3id.org/def/orka#char_name_9957_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "wooden spoon" .
+
+<http://w3id.org/def/orka#char_name_9972_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "fork" .
+
+<http://w3id.org/def/orka#char_name_9985_2025-05-16T22:11:15.109777> a oboe-char:Name ;
+    orka:hasValue "spoon(1)" .
+
+<http://w3id.org/def/orka#typename_10000_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Spoon" .
+
+<http://w3id.org/def/orka#typename_10015_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Knife" .
+
+<http://w3id.org/def/orka#typename_10026_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+<http://w3id.org/def/orka#typename_10041_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+<http://w3id.org/def/orka#typename_10055_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Plate" .
+
+<http://w3id.org/def/orka#typename_10069_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Glass" .
+
+<http://w3id.org/def/orka#typename_10083_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wineglass" .
+
+<http://w3id.org/def/orka#typename_10108_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "HoneyJar" .
+
+<http://w3id.org/def/orka#typename_10124_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "JamJar" .
+
+<http://w3id.org/def/orka#typename_10143_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_10155_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "CerealBox" .
+
+<http://w3id.org/def/orka#typename_10168_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "BiscuitBox" .
+
+<http://w3id.org/def/orka#typename_10181_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_116_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_1473_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_1_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WorldInfo" .
+
+<http://w3id.org/def/orka#typename_2427_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_2924_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_2_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Viewpoint" .
+
+<http://w3id.org/def/orka#typename_3876_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_3_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "TexturedBackground" .
+
+<http://w3id.org/def/orka#typename_6203_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6215_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6229_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6243_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6257_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6271_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
+
+<http://w3id.org/def/orka#typename_6338_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "TiagoLite" .
+
+<http://w3id.org/def/orka#typename_694_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cabinet" .
+
+<http://w3id.org/def/orka#typename_7323_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Floor" .
+
+<http://w3id.org/def/orka#typename_7345_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Ceiling" .
 
-<http://w3id.org/def/orka#Ent_10015_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10015_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10015_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10015_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7375_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10026_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10026_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10026_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10026_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7396_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10041_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10041_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10041_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10041_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7417_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10055_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10055_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10055_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10055_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7438_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10069_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10069_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10069_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10069_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7459_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10083_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10083_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10083_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10083_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7479_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10108_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10108_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10108_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10108_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7500_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10124_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10124_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10124_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10124_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7521_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10143_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10143_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10143_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10143_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7541_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Wall" .
 
-<http://w3id.org/def/orka#Ent_10155_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10155_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10155_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10155_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7663_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Door" .
 
-<http://w3id.org/def/orka#Ent_10168_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10168_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10168_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10168_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_7987_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_10181_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_10181_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_10181_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_10181_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8004_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_116_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_116_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_116_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_116_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8021_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_1473_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_1473_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_1473_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_1473_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8038_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_1_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#typename_1_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_1_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8055_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_2427_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_2427_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_2427_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_2427_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8072_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_2924_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_2924_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_2924_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_2924_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8089_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_2_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#typename_2_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_2_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8106_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_3876_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_3876_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_3876_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_3876_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8123_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_3_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#typename_3_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_3_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8140_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "SolidBox" .
 
-<http://w3id.org/def/orka#Ent_6203_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6203_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6203_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6203_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8158_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Window" .
 
-<http://w3id.org/def/orka#Ent_6215_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6215_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6215_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6215_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8351_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Window" .
 
-<http://w3id.org/def/orka#Ent_6229_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6229_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6229_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6229_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8533_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Fridge" .
 
-<http://w3id.org/def/orka#Ent_6243_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6243_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6243_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6243_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8617_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Worktop" .
 
-<http://w3id.org/def/orka#Ent_6257_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6257_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6257_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6257_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8649_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Worktop" .
 
-<http://w3id.org/def/orka#Ent_6271_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6271_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6271_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6271_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8681_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Worktop" .
 
-<http://w3id.org/def/orka#Ent_6338_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_6338_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_6338_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_6338_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8713_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Worktop" .
 
-<http://w3id.org/def/orka#Ent_694_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_694_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_694_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_694_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8745_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Worktop" .
 
-<http://w3id.org/def/orka#Ent_7323_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7323_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7323_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7323_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8772_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Sink" .
 
-<http://w3id.org/def/orka#Ent_7345_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7345_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7345_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7345_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8804_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "HotPlate" .
 
-<http://w3id.org/def/orka#Ent_7375_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7375_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7375_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7375_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8816_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Oven" .
 
-<http://w3id.org/def/orka#Ent_7396_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7396_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7396_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7396_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8860_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
 
-<http://w3id.org/def/orka#Ent_7417_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7417_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7417_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7417_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8865_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
 
-<http://w3id.org/def/orka#Ent_7438_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7438_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7438_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7438_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8870_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Solid" .
 
-<http://w3id.org/def/orka#Ent_7459_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7459_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7459_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7459_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_8891_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Table" .
 
-<http://w3id.org/def/orka#Ent_7479_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7479_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7479_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7479_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9141_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Table" .
 
-<http://w3id.org/def/orka#Ent_7500_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7500_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7500_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7500_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9375_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "CeilingLight" .
 
-<http://w3id.org/def/orka#Ent_7521_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7521_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7521_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7521_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9390_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Chair" .
 
-<http://w3id.org/def/orka#Ent_7541_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7541_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7541_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7541_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9428_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Chair" .
 
-<http://w3id.org/def/orka#Ent_7663_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7663_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7663_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7663_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9466_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Chair" .
 
-<http://w3id.org/def/orka#Ent_7987_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_7987_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_7987_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_7987_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9504_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Carafe" .
 
-<http://w3id.org/def/orka#Ent_8004_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8004_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8004_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8004_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9534_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
 
-<http://w3id.org/def/orka#Ent_8021_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8021_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8021_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8021_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9557_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
 
-<http://w3id.org/def/orka#Ent_8038_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8038_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8038_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8038_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9579_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
 
-<http://w3id.org/def/orka#Ent_8055_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8055_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8055_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8055_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9601_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
 
-<http://w3id.org/def/orka#Ent_8072_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8072_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8072_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8072_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9623_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WaterBottle" .
 
-<http://w3id.org/def/orka#Ent_8089_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8089_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8089_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8089_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9645_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
 
-<http://w3id.org/def/orka#Ent_8106_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8106_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8106_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8106_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9668_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Can" .
 
-<http://w3id.org/def/orka#Ent_8123_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8123_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8123_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8123_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9679_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Can" .
 
-<http://w3id.org/def/orka#Ent_8140_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8140_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8140_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8140_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9690_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
 
-<http://w3id.org/def/orka#Ent_8158_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8158_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8158_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8158_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9712_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "BeerBottle" .
 
-<http://w3id.org/def/orka#Ent_8351_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8351_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8351_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8351_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9734_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "FruitBowl" .
 
-<http://w3id.org/def/orka#Ent_8533_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8533_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8533_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8533_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9752_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "FruitBowl" .
 
-<http://w3id.org/def/orka#Ent_8617_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8617_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8617_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8617_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9770_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Apple" .
 
-<http://w3id.org/def/orka#Ent_8649_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8649_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8649_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8649_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9781_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Apple" .
 
-<http://w3id.org/def/orka#Ent_8681_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8681_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8681_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8681_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9791_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Apple" .
 
-<http://w3id.org/def/orka#Ent_8713_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8713_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8713_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8713_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9801_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8745_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8745_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8745_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8745_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9813_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8772_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8772_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8772_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8772_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9825_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8804_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8804_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8804_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8804_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9837_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8816_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8816_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8816_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8816_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9849_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8860_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8860_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8860_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8860_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9861_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8865_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8865_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8865_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8865_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9873_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8870_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8870_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8870_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8870_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9885_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Orange" .
 
-<http://w3id.org/def/orka#Ent_8891_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_8891_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_8891_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_8891_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9897_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Cookware" .
 
-<http://w3id.org/def/orka#Ent_9141_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9141_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9141_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9141_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9939_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Lid" .
 
-<http://w3id.org/def/orka#Ent_9375_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9375_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9375_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9375_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9957_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "WoodenSpoon" .
 
-<http://w3id.org/def/orka#Ent_9390_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9390_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9390_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9390_2025-05-12T17:09:48.507894> .
+<http://w3id.org/def/orka#typename_9972_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Fork" .
 
-<http://w3id.org/def/orka#Ent_9428_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9428_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9428_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9428_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9466_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9466_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9466_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9466_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9504_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9504_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9504_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9504_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9534_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9534_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9534_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9534_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9557_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9557_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9557_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9557_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9579_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9579_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9579_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9579_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9601_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9601_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9601_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9601_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9623_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9623_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9623_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9623_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9645_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9645_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9645_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9645_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9668_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9668_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9668_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9668_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9679_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9679_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9679_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9679_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9690_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9690_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9690_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9690_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9712_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9712_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9712_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9712_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9734_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9734_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9734_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9734_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9752_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9752_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9752_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9752_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9770_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9770_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9770_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9770_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9781_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9781_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9781_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9781_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9791_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9791_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9791_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9791_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9801_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9801_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9801_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9801_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9813_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9813_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9813_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9813_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9825_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9825_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9825_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9825_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9837_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9837_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9837_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9837_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9849_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9849_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9849_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9849_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9861_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9861_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9861_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9861_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9873_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9873_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9873_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9873_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9885_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9885_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9885_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9885_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9897_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9897_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9897_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9897_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9939_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9939_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9939_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9939_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9957_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9957_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9957_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9957_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9972_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9972_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9972_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9972_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Ent_9985_2025-05-12T17:09:48.507894> orka:hasCharacteristic <http://w3id.org/def/orka#char_name_9985_2025-05-12T17:09:48.507894>,
-        <http://w3id.org/def/orka#typename_9985_2025-05-12T17:09:48.507894> ;
-    orka:hasLocation <http://w3id.org/def/orka#Loc_9985_2025-05-12T17:09:48.507894> .
-
-<http://w3id.org/def/orka#Loc_10000_2025-05-12T17:09:48.507894> orka:hasValue "-0.849,-1.021,0.742" .
-
-<http://w3id.org/def/orka#Loc_10015_2025-05-12T17:09:48.507894> orka:hasValue "-0.99,-1.151,0.739" .
-
-<http://w3id.org/def/orka#Loc_10026_2025-05-12T17:09:48.507894> orka:hasValue "-0.97,-1.03,0.74" .
-
-<http://w3id.org/def/orka#Loc_10041_2025-05-12T17:09:48.507894> orka:hasValue "-0.3,-0.71,0.74" .
-
-<http://w3id.org/def/orka#Loc_10055_2025-05-12T17:09:48.507894> orka:hasValue "-0.3,-0.71,0.75" .
-
-<http://w3id.org/def/orka#Loc_10069_2025-05-12T17:09:48.507894> orka:hasValue "-0.8,-1.0,0.739" .
-
-<http://w3id.org/def/orka#Loc_10083_2025-05-12T17:09:48.507894> orka:hasValue "-0.788,-1.098,0.74" .
-
-<http://w3id.org/def/orka#Loc_10108_2025-05-12T17:09:48.507894> orka:hasValue "1.714,0.704,0.889" .
-
-<http://w3id.org/def/orka#Loc_10124_2025-05-12T17:09:48.507894> orka:hasValue "1.712,-0.302,0.889" .
-
-<http://w3id.org/def/orka#Loc_10143_2025-05-12T17:09:48.507894> orka:hasValue "1.845,0.197,0.93" .
-
-<http://w3id.org/def/orka#Loc_10155_2025-05-12T17:09:48.507894> orka:hasValue "1.578,0.196,1.007" .
-
-<http://w3id.org/def/orka#Loc_10168_2025-05-12T17:09:48.507894> orka:hasValue "-0.34,-1.41,0.74" .
-
-<http://w3id.org/def/orka#Loc_10181_2025-05-12T17:09:48.507894> orka:hasValue "1.63,-0.62,0.95" .
-
-<http://w3id.org/def/orka#Loc_116_2025-05-12T17:09:48.507894> orka:hasValue "2.15,-1.0,0.83" .
-
-<http://w3id.org/def/orka#Loc_1473_2025-05-12T17:09:48.507894> orka:hasValue "2.15,-0.1,1.4" .
-
-<http://w3id.org/def/orka#Loc_1_2025-05-12T17:09:48.507894> orka:hasValue "nan,nan,nan" .
-
-<http://w3id.org/def/orka#Loc_2427_2025-05-12T17:09:48.507894> orka:hasValue "0.37,1.647,1.4" .
-
-<http://w3id.org/def/orka#Loc_2924_2025-05-12T17:09:48.507894> orka:hasValue "0.79,1.48,0.15" .
-
-<http://w3id.org/def/orka#Loc_2_2025-05-12T17:09:48.507894> orka:hasValue "nan,nan,nan" .
-
-<http://w3id.org/def/orka#Loc_3876_2025-05-12T17:09:48.507894> orka:hasValue "2.15,-0.12,0.15" .
-
-<http://w3id.org/def/orka#Loc_3_2025-05-12T17:09:48.507894> orka:hasValue "nan,nan,nan" .
-
-<http://w3id.org/def/orka#Loc_6203_2025-05-12T17:09:48.507894> orka:hasValue "0.0,-0.17,0.0" .
-
-<http://w3id.org/def/orka#Loc_6215_2025-05-12T17:09:48.507894> orka:hasValue "1.52,-0.17,0.887" .
-
-<http://w3id.org/def/orka#Loc_6229_2025-05-12T17:09:48.507894> orka:hasValue "1.52,-0.17,0.897" .
-
-<http://w3id.org/def/orka#Loc_6243_2025-05-12T17:09:48.507894> orka:hasValue "1.52,-0.17,0.907" .
-
-<http://w3id.org/def/orka#Loc_6257_2025-05-12T17:09:48.507894> orka:hasValue "1.52,-0.17,0.918" .
-
-<http://w3id.org/def/orka#Loc_6271_2025-05-12T17:09:48.507894> orka:hasValue "1.52,-0.17,0.928" .
-
-<http://w3id.org/def/orka#Loc_6338_2025-05-12T17:09:48.507894> orka:hasValue "-0.0,0.0,0.095" .
-
-<http://w3id.org/def/orka#Loc_694_2025-05-12T17:09:48.507894> orka:hasValue "-0.11,1.65,0.15" .
-
-<http://w3id.org/def/orka#Loc_7323_2025-05-12T17:09:48.507894> orka:hasValue "-0.5,-3.0,0.0" .
-
-<http://w3id.org/def/orka#Loc_7345_2025-05-12T17:09:48.507894> orka:hasValue "0.0,-1.1,2.4" .
-
-<http://w3id.org/def/orka#Loc_7375_2025-05-12T17:09:48.507894> orka:hasValue "1.8,1.75,0.0" .
-
-<http://w3id.org/def/orka#Loc_7396_2025-05-12T17:09:48.507894> orka:hasValue "2.25,-0.15,0.0" .
-
-<http://w3id.org/def/orka#Loc_7417_2025-05-12T17:09:48.507894> orka:hasValue "-0.75,1.75,0.0" .
-
-<http://w3id.org/def/orka#Loc_7438_2025-05-12T17:09:48.507894> orka:hasValue "-2.25,1.35,0.0" .
-
-<http://w3id.org/def/orka#Loc_7459_2025-05-12T17:09:48.507894> orka:hasValue "-2.25,-0.45,0.0" .
-
-<http://w3id.org/def/orka#Loc_7479_2025-05-12T17:09:48.507894> orka:hasValue "-2.25,-2.985,0.0" .
-
-<http://w3id.org/def/orka#Loc_7500_2025-05-12T17:09:48.507894> orka:hasValue "-0.5,-3.92,0.0" .
-
-<http://w3id.org/def/orka#Loc_7521_2025-05-12T17:09:48.507894> orka:hasValue "1.25,-2.986,0.0" .
-
-<http://w3id.org/def/orka#Loc_7541_2025-05-12T17:09:48.507894> orka:hasValue "1.75,-2.05,0.0" .
-
-<http://w3id.org/def/orka#Loc_7663_2025-05-12T17:09:48.507894> orka:hasValue "-2.25,-1.45,0.0" .
-
-<http://w3id.org/def/orka#Loc_7987_2025-05-12T17:09:48.507894> orka:hasValue "1.55,-0.12,0.07" .
-
-<http://w3id.org/def/orka#Loc_8004_2025-05-12T17:09:48.507894> orka:hasValue "0.65,1.08,0.07" .
-
-<http://w3id.org/def/orka#Loc_8021_2025-05-12T17:09:48.507894> orka:hasValue "1.9,-1.12,0.07" .
-
-<http://w3id.org/def/orka#Loc_8038_2025-05-12T17:09:48.507894> orka:hasValue "-0.25,1.415,0.07" .
-
-<http://w3id.org/def/orka#Loc_8055_2025-05-12T17:09:48.507894> orka:hasValue "-1.23,1.645,0.03" .
-
-<http://w3id.org/def/orka#Loc_8072_2025-05-12T17:09:48.507894> orka:hasValue "-2.145,0.345,0.03" .
-
-<http://w3id.org/def/orka#Loc_8089_2025-05-12T17:09:48.507894> orka:hasValue "-2.145,-2.885,0.03" .
-
-<http://w3id.org/def/orka#Loc_8106_2025-05-12T17:09:48.507894> orka:hasValue "1.645,-1.945,0.03" .
-
-<http://w3id.org/def/orka#Loc_8123_2025-05-12T17:09:48.507894> orka:hasValue "1.145,-2.88,0.03" .
-
-<http://w3id.org/def/orka#Loc_8140_2025-05-12T17:09:48.507894> orka:hasValue "-0.495,-3.815,0.03" .
-
-<http://w3id.org/def/orka#Loc_8158_2025-05-12T17:09:48.507894> orka:hasValue "-2.25,0.45,0.0" .
-
-<http://w3id.org/def/orka#Loc_8351_2025-05-12T17:09:48.507894> orka:hasValue "1.05,1.75,0.0" .
-
-<http://w3id.org/def/orka#Loc_8533_2025-05-12T17:09:48.507894> orka:hasValue "1.8,-1.57,0.0" .
-
-<http://w3id.org/def/orka#Loc_8617_2025-05-12T17:09:48.507894> orka:hasValue "0.345,1.31,0.86" .
-
-<http://w3id.org/def/orka#Loc_8649_2025-05-12T17:09:48.507894> orka:hasValue "0.78,1.531,0.86" .
-
-<http://w3id.org/def/orka#Loc_8681_2025-05-12T17:09:48.507894> orka:hasValue "0.78,1.003,0.86" .
-
-<http://w3id.org/def/orka#Loc_8713_2025-05-12T17:09:48.507894> orka:hasValue "1.22,1.306,0.86" .
-
-<http://w3id.org/def/orka#Loc_8745_2025-05-12T17:09:48.507894> orka:hasValue "1.79,0.435,0.86" .
-
-<http://w3id.org/def/orka#Loc_8772_2025-05-12T17:09:48.507894> orka:hasValue "0.78,1.33,0.87" .
-
-<http://w3id.org/def/orka#Loc_8804_2025-05-12T17:09:48.507894> orka:hasValue "1.629,1.15,0.86" .
-
-<http://w3id.org/def/orka#Loc_8816_2025-05-12T17:09:48.507894> orka:hasValue "-0.11,1.24,0.17" .
-
-<http://w3id.org/def/orka#Loc_8860_2025-05-12T17:09:48.507894> orka:hasValue "2.01,1.48,2.09" .
-
-<http://w3id.org/def/orka#Loc_8865_2025-05-12T17:09:48.507894> orka:hasValue "1.8,1.3,1.742" .
-
-<http://w3id.org/def/orka#Loc_8870_2025-05-12T17:09:48.507894> orka:hasValue "1.8,1.3,1.692" .
-
-<http://w3id.org/def/orka#Loc_8891_2025-05-12T17:09:48.507894> orka:hasValue "-1.21,1.31,0.0" .
-
-<http://w3id.org/def/orka#Loc_9141_2025-05-12T17:09:48.507894> orka:hasValue "-0.65,-1.43,0.0" .
-
-<http://w3id.org/def/orka#Loc_9375_2025-05-12T17:09:48.507894> orka:hasValue "-0.7,-1.5,2.4" .
-
-<http://w3id.org/def/orka#Loc_9390_2025-05-12T17:09:48.507894> orka:hasValue "-0.64,-2.33,0.0" .
-
-<http://w3id.org/def/orka#Loc_9428_2025-05-12T17:09:48.507894> orka:hasValue "-1.09,-1.05,0.0" .
-
-<http://w3id.org/def/orka#Loc_9466_2025-05-12T17:09:48.507894> orka:hasValue "-0.18,-1.62,0.0" .
-
-<http://w3id.org/def/orka#Loc_9504_2025-05-12T17:09:48.507894> orka:hasValue "-0.63,-0.735,0.739" .
-
-<http://w3id.org/def/orka#Loc_9534_2025-05-12T17:09:48.507894> orka:hasValue "2.032,-1.387,0.583" .
-
-<http://w3id.org/def/orka#Loc_9557_2025-05-12T17:09:48.507894> orka:hasValue "-0.481,-1.156,0.738" .
-
-<http://w3id.org/def/orka#Loc_9579_2025-05-12T17:09:48.507894> orka:hasValue "2.042,-1.645,0.583" .
-
-<http://w3id.org/def/orka#Loc_9601_2025-05-12T17:09:48.507894> orka:hasValue "2.026,-1.732,0.583" .
-
-<http://w3id.org/def/orka#Loc_9623_2025-05-12T17:09:48.507894> orka:hasValue "2.047,-1.825,0.583" .
-
-<http://w3id.org/def/orka#Loc_9645_2025-05-12T17:09:48.507894> orka:hasValue "2.041,-1.611,0.297" .
-
-<http://w3id.org/def/orka#Loc_9668_2025-05-12T17:09:48.507894> orka:hasValue "1.942,-1.537,0.361" .
-
-<http://w3id.org/def/orka#Loc_9679_2025-05-12T17:09:48.507894> orka:hasValue "1.722,-1.517,0.361" .
-
-<http://w3id.org/def/orka#Loc_9690_2025-05-12T17:09:48.507894> orka:hasValue "1.887,-1.712,0.297" .
-
-<http://w3id.org/def/orka#Loc_9712_2025-05-12T17:09:48.507894> orka:hasValue "1.895,-1.384,0.297" .
-
-<http://w3id.org/def/orka#Loc_9734_2025-05-12T17:09:48.507894> orka:hasValue "1.772,-1.627,0.05" .
-
-<http://w3id.org/def/orka#Loc_9752_2025-05-12T17:09:48.507894> orka:hasValue "-0.686,-1.754,0.74" .
-
-<http://w3id.org/def/orka#Loc_9770_2025-05-12T17:09:48.507894> orka:hasValue "-0.743,-1.698,0.799" .
-
-<http://w3id.org/def/orka#Loc_9781_2025-05-12T17:09:48.507894> orka:hasValue "1.643,-0.498,0.94" .
-
-<http://w3id.org/def/orka#Loc_9791_2025-05-12T17:09:48.507894> orka:hasValue "-0.643,-1.81,0.799" .
-
-<http://w3id.org/def/orka#Loc_9801_2025-05-12T17:09:48.507894> orka:hasValue "-0.691,-1.752,0.865" .
-
-<http://w3id.org/def/orka#Loc_9813_2025-05-12T17:09:48.507894> orka:hasValue "1.714,-1.57,0.109" .
-
-<http://w3id.org/def/orka#Loc_9825_2025-05-12T17:09:48.507894> orka:hasValue "-0.64,-1.697,0.799" .
-
-<http://w3id.org/def/orka#Loc_9837_2025-05-12T17:09:48.507894> orka:hasValue "1.718,-1.685,0.109" .
-
-<http://w3id.org/def/orka#Loc_9849_2025-05-12T17:09:48.507894> orka:hasValue "1.844,-1.7,0.155" .
-
-<http://w3id.org/def/orka#Loc_9861_2025-05-12T17:09:48.507894> orka:hasValue "1.689,-1.628,0.186" .
-
-<http://w3id.org/def/orka#Loc_9873_2025-05-12T17:09:48.507894> orka:hasValue "1.846,-1.553,0.16" .
-
-<http://w3id.org/def/orka#Loc_9885_2025-05-12T17:09:48.507894> orka:hasValue "1.798,-1.625,0.109" .
-
-<http://w3id.org/def/orka#Loc_9897_2025-05-12T17:09:48.507894> orka:hasValue "1.667,1.32,0.89" .
-
-<http://w3id.org/def/orka#Loc_9939_2025-05-12T17:09:48.507894> orka:hasValue "1.667,1.32,0.96" .
-
-<http://w3id.org/def/orka#Loc_9957_2025-05-12T17:09:48.507894> orka:hasValue "1.249,1.376,0.889" .
-
-<http://w3id.org/def/orka#Loc_9972_2025-05-12T17:09:48.507894> orka:hasValue "-0.97,-0.901,0.741" .
-
-<http://w3id.org/def/orka#Loc_9985_2025-05-12T17:09:48.507894> orka:hasValue "-0.97,-1.221,0.74" .
-
-<http://w3id.org/def/orka#char_name_10000_2025-05-12T17:09:48.507894> orka:hasValue "spoon" .
-
-<http://w3id.org/def/orka#char_name_10015_2025-05-12T17:09:48.507894> orka:hasValue "knife" .
-
-<http://w3id.org/def/orka#char_name_10026_2025-05-12T17:09:48.507894> orka:hasValue "plate" .
-
-<http://w3id.org/def/orka#char_name_10041_2025-05-12T17:09:48.507894> orka:hasValue "plate(6)" .
-
-<http://w3id.org/def/orka#char_name_10055_2025-05-12T17:09:48.507894> orka:hasValue "plate(7)" .
-
-<http://w3id.org/def/orka#char_name_10069_2025-05-12T17:09:48.507894> orka:hasValue "glass" .
-
-<http://w3id.org/def/orka#char_name_10083_2025-05-12T17:09:48.507894> orka:hasValue "wine glass" .
-
-<http://w3id.org/def/orka#char_name_10108_2025-05-12T17:09:48.507894> orka:hasValue "honey jar" .
-
-<http://w3id.org/def/orka#char_name_10124_2025-05-12T17:09:48.507894> orka:hasValue "jam jar(1)" .
-
-<http://w3id.org/def/orka#char_name_10143_2025-05-12T17:09:48.507894> orka:hasValue "cereal box(3)" .
-
-<http://w3id.org/def/orka#char_name_10155_2025-05-12T17:09:48.507894> orka:hasValue "cereal box(4)" .
-
-<http://w3id.org/def/orka#char_name_10168_2025-05-12T17:09:48.507894> orka:hasValue "biscuit box" .
-
-<http://w3id.org/def/orka#char_name_10181_2025-05-12T17:09:48.507894> orka:hasValue "salt" .
-
-<http://w3id.org/def/orka#char_name_116_2025-05-12T17:09:48.507894> orka:hasValue "cabinet(1)" .
-
-<http://w3id.org/def/orka#char_name_1473_2025-05-12T17:09:48.507894> orka:hasValue "cabinet(3)" .
-
-<http://w3id.org/def/orka#char_name_2427_2025-05-12T17:09:48.507894> orka:hasValue "cabinet(4)" .
-
-<http://w3id.org/def/orka#char_name_2924_2025-05-12T17:09:48.507894> orka:hasValue "cabinet(5)" .
-
-<http://w3id.org/def/orka#char_name_3876_2025-05-12T17:09:48.507894> orka:hasValue "cabinet" .
-
-<http://w3id.org/def/orka#char_name_6203_2025-05-12T17:09:48.507894> orka:hasValue "floor(1)" .
-
-<http://w3id.org/def/orka#char_name_6215_2025-05-12T17:09:48.507894> orka:hasValue "plate(1)" .
-
-<http://w3id.org/def/orka#char_name_6229_2025-05-12T17:09:48.507894> orka:hasValue "plate(2)" .
-
-<http://w3id.org/def/orka#char_name_6243_2025-05-12T17:09:48.507894> orka:hasValue "plate(3)" .
-
-<http://w3id.org/def/orka#char_name_6257_2025-05-12T17:09:48.507894> orka:hasValue "plate(4)" .
-
-<http://w3id.org/def/orka#char_name_6271_2025-05-12T17:09:48.507894> orka:hasValue "plate(5)" .
-
-<http://w3id.org/def/orka#char_name_6338_2025-05-12T17:09:48.507894> orka:hasValue "TIAGo LITE" .
-
-<http://w3id.org/def/orka#char_name_694_2025-05-12T17:09:48.507894> orka:hasValue "cabinet(2)" .
-
-<http://w3id.org/def/orka#char_name_7323_2025-05-12T17:09:48.507894> orka:hasValue "floor" .
-
-<http://w3id.org/def/orka#char_name_7345_2025-05-12T17:09:48.507894> orka:hasValue "ceiling" .
-
-<http://w3id.org/def/orka#char_name_7375_2025-05-12T17:09:48.507894> orka:hasValue "wall(1)" .
-
-<http://w3id.org/def/orka#char_name_7396_2025-05-12T17:09:48.507894> orka:hasValue "wall(2)" .
-
-<http://w3id.org/def/orka#char_name_7417_2025-05-12T17:09:48.507894> orka:hasValue "wall(3)" .
-
-<http://w3id.org/def/orka#char_name_7438_2025-05-12T17:09:48.507894> orka:hasValue "wall(4)" .
-
-<http://w3id.org/def/orka#char_name_7459_2025-05-12T17:09:48.507894> orka:hasValue "wall(5)" .
-
-<http://w3id.org/def/orka#char_name_7479_2025-05-12T17:09:48.507894> orka:hasValue "wall(6)" .
-
-<http://w3id.org/def/orka#char_name_7500_2025-05-12T17:09:48.507894> orka:hasValue "wall(7)" .
-
-<http://w3id.org/def/orka#char_name_7521_2025-05-12T17:09:48.507894> orka:hasValue "wall(8)" .
-
-<http://w3id.org/def/orka#char_name_7541_2025-05-12T17:09:48.507894> orka:hasValue "wall" .
-
-<http://w3id.org/def/orka#char_name_7663_2025-05-12T17:09:48.507894> orka:hasValue "door" .
-
-<http://w3id.org/def/orka#char_name_7987_2025-05-12T17:09:48.507894> orka:hasValue "box(1)" .
-
-<http://w3id.org/def/orka#char_name_8004_2025-05-12T17:09:48.507894> orka:hasValue "box(2)" .
-
-<http://w3id.org/def/orka#char_name_8021_2025-05-12T17:09:48.507894> orka:hasValue "box(3)" .
-
-<http://w3id.org/def/orka#char_name_8038_2025-05-12T17:09:48.507894> orka:hasValue "box(4)" .
-
-<http://w3id.org/def/orka#char_name_8055_2025-05-12T17:09:48.507894> orka:hasValue "box(5)" .
-
-<http://w3id.org/def/orka#char_name_8072_2025-05-12T17:09:48.507894> orka:hasValue "box(6)" .
-
-<http://w3id.org/def/orka#char_name_8089_2025-05-12T17:09:48.507894> orka:hasValue "box(7)" .
-
-<http://w3id.org/def/orka#char_name_8106_2025-05-12T17:09:48.507894> orka:hasValue "box(8)" .
-
-<http://w3id.org/def/orka#char_name_8123_2025-05-12T17:09:48.507894> orka:hasValue "box(9)" .
-
-<http://w3id.org/def/orka#char_name_8140_2025-05-12T17:09:48.507894> orka:hasValue "box" .
-
-<http://w3id.org/def/orka#char_name_8158_2025-05-12T17:09:48.507894> orka:hasValue "window(1)" .
-
-<http://w3id.org/def/orka#char_name_8351_2025-05-12T17:09:48.507894> orka:hasValue "window" .
-
-<http://w3id.org/def/orka#char_name_8533_2025-05-12T17:09:48.507894> orka:hasValue "fridge" .
-
-<http://w3id.org/def/orka#char_name_8617_2025-05-12T17:09:48.507894> orka:hasValue "worktop(1)" .
-
-<http://w3id.org/def/orka#char_name_8649_2025-05-12T17:09:48.507894> orka:hasValue "worktop(2)" .
-
-<http://w3id.org/def/orka#char_name_8681_2025-05-12T17:09:48.507894> orka:hasValue "worktop(3)" .
-
-<http://w3id.org/def/orka#char_name_8713_2025-05-12T17:09:48.507894> orka:hasValue "worktop(4)" .
-
-<http://w3id.org/def/orka#char_name_8745_2025-05-12T17:09:48.507894> orka:hasValue "worktop" .
-
-<http://w3id.org/def/orka#char_name_8772_2025-05-12T17:09:48.507894> orka:hasValue "sink" .
-
-<http://w3id.org/def/orka#char_name_8804_2025-05-12T17:09:48.507894> orka:hasValue "hot plate" .
-
-<http://w3id.org/def/orka#char_name_8816_2025-05-12T17:09:48.507894> orka:hasValue "oven" .
-
-<http://w3id.org/def/orka#char_name_8860_2025-05-12T17:09:48.507894> orka:hasValue "solid(1)" .
-
-<http://w3id.org/def/orka#char_name_8865_2025-05-12T17:09:48.507894> orka:hasValue "solid(2)" .
-
-<http://w3id.org/def/orka#char_name_8870_2025-05-12T17:09:48.507894> orka:hasValue "solid" .
-
-<http://w3id.org/def/orka#char_name_8891_2025-05-12T17:09:48.507894> orka:hasValue "table(1)" .
-
-<http://w3id.org/def/orka#char_name_9141_2025-05-12T17:09:48.507894> orka:hasValue "table" .
-
-<http://w3id.org/def/orka#char_name_9375_2025-05-12T17:09:48.507894> orka:hasValue "ceiling light" .
-
-<http://w3id.org/def/orka#char_name_9390_2025-05-12T17:09:48.507894> orka:hasValue "chair(2)" .
-
-<http://w3id.org/def/orka#char_name_9428_2025-05-12T17:09:48.507894> orka:hasValue "chair(4)" .
-
-<http://w3id.org/def/orka#char_name_9466_2025-05-12T17:09:48.507894> orka:hasValue "chair(5)" .
-
-<http://w3id.org/def/orka#char_name_9504_2025-05-12T17:09:48.507894> orka:hasValue "carafe" .
-
-<http://w3id.org/def/orka#char_name_9534_2025-05-12T17:09:48.507894> orka:hasValue "water bottle(1)" .
-
-<http://w3id.org/def/orka#char_name_9557_2025-05-12T17:09:48.507894> orka:hasValue "water bottle(2)" .
-
-<http://w3id.org/def/orka#char_name_9579_2025-05-12T17:09:48.507894> orka:hasValue "water bottle(3)" .
-
-<http://w3id.org/def/orka#char_name_9601_2025-05-12T17:09:48.507894> orka:hasValue "water bottle(4)" .
-
-<http://w3id.org/def/orka#char_name_9623_2025-05-12T17:09:48.507894> orka:hasValue "water bottle" .
-
-<http://w3id.org/def/orka#char_name_9645_2025-05-12T17:09:48.507894> orka:hasValue "beer bottle(1)" .
-
-<http://w3id.org/def/orka#char_name_9668_2025-05-12T17:09:48.507894> orka:hasValue "can(1)" .
-
-<http://w3id.org/def/orka#char_name_9679_2025-05-12T17:09:48.507894> orka:hasValue "can" .
-
-<http://w3id.org/def/orka#char_name_9690_2025-05-12T17:09:48.507894> orka:hasValue "beer bottle(2)" .
-
-<http://w3id.org/def/orka#char_name_9712_2025-05-12T17:09:48.507894> orka:hasValue "beer bottle" .
-
-<http://w3id.org/def/orka#char_name_9734_2025-05-12T17:09:48.507894> orka:hasValue "fruit bowl(1)" .
-
-<http://w3id.org/def/orka#char_name_9752_2025-05-12T17:09:48.507894> orka:hasValue "fruit bowl" .
-
-<http://w3id.org/def/orka#char_name_9770_2025-05-12T17:09:48.507894> orka:hasValue "apple(1)" .
-
-<http://w3id.org/def/orka#char_name_9781_2025-05-12T17:09:48.507894> orka:hasValue "apple(2)" .
-
-<http://w3id.org/def/orka#char_name_9791_2025-05-12T17:09:48.507894> orka:hasValue "apple" .
-
-<http://w3id.org/def/orka#char_name_9801_2025-05-12T17:09:48.507894> orka:hasValue "orange(1)" .
-
-<http://w3id.org/def/orka#char_name_9813_2025-05-12T17:09:48.507894> orka:hasValue "orange(2)" .
-
-<http://w3id.org/def/orka#char_name_9825_2025-05-12T17:09:48.507894> orka:hasValue "orange(3)" .
-
-<http://w3id.org/def/orka#char_name_9837_2025-05-12T17:09:48.507894> orka:hasValue "orange(4)" .
-
-<http://w3id.org/def/orka#char_name_9849_2025-05-12T17:09:48.507894> orka:hasValue "orange(5)" .
-
-<http://w3id.org/def/orka#char_name_9861_2025-05-12T17:09:48.507894> orka:hasValue "orange(6)" .
-
-<http://w3id.org/def/orka#char_name_9873_2025-05-12T17:09:48.507894> orka:hasValue "orange(7)" .
-
-<http://w3id.org/def/orka#char_name_9885_2025-05-12T17:09:48.507894> orka:hasValue "orange" .
-
-<http://w3id.org/def/orka#char_name_9897_2025-05-12T17:09:48.507894> orka:hasValue "cookware" .
-
-<http://w3id.org/def/orka#char_name_9939_2025-05-12T17:09:48.507894> orka:hasValue "lid" .
-
-<http://w3id.org/def/orka#char_name_9957_2025-05-12T17:09:48.507894> orka:hasValue "wooden spoon" .
-
-<http://w3id.org/def/orka#char_name_9972_2025-05-12T17:09:48.507894> orka:hasValue "fork" .
-
-<http://w3id.org/def/orka#char_name_9985_2025-05-12T17:09:48.507894> orka:hasValue "spoon(1)" .
-
-<http://w3id.org/def/orka#typename_10000_2025-05-12T17:09:48.507894> orka:hasValue "Spoon" .
-
-<http://w3id.org/def/orka#typename_10015_2025-05-12T17:09:48.507894> orka:hasValue "Knife" .
-
-<http://w3id.org/def/orka#typename_10026_2025-05-12T17:09:48.507894> orka:hasValue "Plate" .
-
-<http://w3id.org/def/orka#typename_10041_2025-05-12T17:09:48.507894> orka:hasValue "Plate" .
-
-<http://w3id.org/def/orka#typename_10055_2025-05-12T17:09:48.507894> orka:hasValue "Plate" .
-
-<http://w3id.org/def/orka#typename_10069_2025-05-12T17:09:48.507894> orka:hasValue "Glass" .
-
-<http://w3id.org/def/orka#typename_10083_2025-05-12T17:09:48.507894> orka:hasValue "Wineglass" .
-
-<http://w3id.org/def/orka#typename_10108_2025-05-12T17:09:48.507894> orka:hasValue "HoneyJar" .
-
-<http://w3id.org/def/orka#typename_10124_2025-05-12T17:09:48.507894> orka:hasValue "JamJar" .
-
-<http://w3id.org/def/orka#typename_10143_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_10155_2025-05-12T17:09:48.507894> orka:hasValue "CerealBox" .
-
-<http://w3id.org/def/orka#typename_10168_2025-05-12T17:09:48.507894> orka:hasValue "BiscuitBox" .
-
-<http://w3id.org/def/orka#typename_10181_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_116_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_1473_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_1_2025-05-12T17:09:48.507894> orka:hasValue "WorldInfo" .
-
-<http://w3id.org/def/orka#typename_2427_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_2924_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_2_2025-05-12T17:09:48.507894> orka:hasValue "Viewpoint" .
-
-<http://w3id.org/def/orka#typename_3876_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_3_2025-05-12T17:09:48.507894> orka:hasValue "TexturedBackground" .
-
-<http://w3id.org/def/orka#typename_6203_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6215_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6229_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6243_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6257_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6271_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_6338_2025-05-12T17:09:48.507894> orka:hasValue "TiagoLite" .
-
-<http://w3id.org/def/orka#typename_694_2025-05-12T17:09:48.507894> orka:hasValue "Cabinet" .
-
-<http://w3id.org/def/orka#typename_7323_2025-05-12T17:09:48.507894> orka:hasValue "Floor" .
-
-<http://w3id.org/def/orka#typename_7345_2025-05-12T17:09:48.507894> orka:hasValue "Ceiling" .
-
-<http://w3id.org/def/orka#typename_7375_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7396_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7417_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7438_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7459_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7479_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7500_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7521_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7541_2025-05-12T17:09:48.507894> orka:hasValue "Wall" .
-
-<http://w3id.org/def/orka#typename_7663_2025-05-12T17:09:48.507894> orka:hasValue "Door" .
-
-<http://w3id.org/def/orka#typename_7987_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8004_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8021_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8038_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8055_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8072_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8089_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8106_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8123_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8140_2025-05-12T17:09:48.507894> orka:hasValue "SolidBox" .
-
-<http://w3id.org/def/orka#typename_8158_2025-05-12T17:09:48.507894> orka:hasValue "Window" .
-
-<http://w3id.org/def/orka#typename_8351_2025-05-12T17:09:48.507894> orka:hasValue "Window" .
-
-<http://w3id.org/def/orka#typename_8533_2025-05-12T17:09:48.507894> orka:hasValue "Fridge" .
-
-<http://w3id.org/def/orka#typename_8617_2025-05-12T17:09:48.507894> orka:hasValue "Worktop" .
-
-<http://w3id.org/def/orka#typename_8649_2025-05-12T17:09:48.507894> orka:hasValue "Worktop" .
-
-<http://w3id.org/def/orka#typename_8681_2025-05-12T17:09:48.507894> orka:hasValue "Worktop" .
-
-<http://w3id.org/def/orka#typename_8713_2025-05-12T17:09:48.507894> orka:hasValue "Worktop" .
-
-<http://w3id.org/def/orka#typename_8745_2025-05-12T17:09:48.507894> orka:hasValue "Worktop" .
-
-<http://w3id.org/def/orka#typename_8772_2025-05-12T17:09:48.507894> orka:hasValue "Sink" .
-
-<http://w3id.org/def/orka#typename_8804_2025-05-12T17:09:48.507894> orka:hasValue "HotPlate" .
-
-<http://w3id.org/def/orka#typename_8816_2025-05-12T17:09:48.507894> orka:hasValue "Oven" .
-
-<http://w3id.org/def/orka#typename_8860_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_8865_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_8870_2025-05-12T17:09:48.507894> orka:hasValue "Solid" .
-
-<http://w3id.org/def/orka#typename_8891_2025-05-12T17:09:48.507894> orka:hasValue "Table" .
-
-<http://w3id.org/def/orka#typename_9141_2025-05-12T17:09:48.507894> orka:hasValue "Table" .
-
-<http://w3id.org/def/orka#typename_9375_2025-05-12T17:09:48.507894> orka:hasValue "CeilingLight" .
-
-<http://w3id.org/def/orka#typename_9390_2025-05-12T17:09:48.507894> orka:hasValue "Chair" .
-
-<http://w3id.org/def/orka#typename_9428_2025-05-12T17:09:48.507894> orka:hasValue "Chair" .
-
-<http://w3id.org/def/orka#typename_9466_2025-05-12T17:09:48.507894> orka:hasValue "Chair" .
-
-<http://w3id.org/def/orka#typename_9504_2025-05-12T17:09:48.507894> orka:hasValue "Carafe" .
-
-<http://w3id.org/def/orka#typename_9534_2025-05-12T17:09:48.507894> orka:hasValue "WaterBottle" .
-
-<http://w3id.org/def/orka#typename_9557_2025-05-12T17:09:48.507894> orka:hasValue "WaterBottle" .
-
-<http://w3id.org/def/orka#typename_9579_2025-05-12T17:09:48.507894> orka:hasValue "WaterBottle" .
-
-<http://w3id.org/def/orka#typename_9601_2025-05-12T17:09:48.507894> orka:hasValue "WaterBottle" .
-
-<http://w3id.org/def/orka#typename_9623_2025-05-12T17:09:48.507894> orka:hasValue "WaterBottle" .
-
-<http://w3id.org/def/orka#typename_9645_2025-05-12T17:09:48.507894> orka:hasValue "BeerBottle" .
-
-<http://w3id.org/def/orka#typename_9668_2025-05-12T17:09:48.507894> orka:hasValue "Can" .
-
-<http://w3id.org/def/orka#typename_9679_2025-05-12T17:09:48.507894> orka:hasValue "Can" .
-
-<http://w3id.org/def/orka#typename_9690_2025-05-12T17:09:48.507894> orka:hasValue "BeerBottle" .
-
-<http://w3id.org/def/orka#typename_9712_2025-05-12T17:09:48.507894> orka:hasValue "BeerBottle" .
-
-<http://w3id.org/def/orka#typename_9734_2025-05-12T17:09:48.507894> orka:hasValue "FruitBowl" .
-
-<http://w3id.org/def/orka#typename_9752_2025-05-12T17:09:48.507894> orka:hasValue "FruitBowl" .
-
-<http://w3id.org/def/orka#typename_9770_2025-05-12T17:09:48.507894> orka:hasValue "Apple" .
-
-<http://w3id.org/def/orka#typename_9781_2025-05-12T17:09:48.507894> orka:hasValue "Apple" .
-
-<http://w3id.org/def/orka#typename_9791_2025-05-12T17:09:48.507894> orka:hasValue "Apple" .
-
-<http://w3id.org/def/orka#typename_9801_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9813_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9825_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9837_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9849_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9861_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9873_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9885_2025-05-12T17:09:48.507894> orka:hasValue "Orange" .
-
-<http://w3id.org/def/orka#typename_9897_2025-05-12T17:09:48.507894> orka:hasValue "Cookware" .
-
-<http://w3id.org/def/orka#typename_9939_2025-05-12T17:09:48.507894> orka:hasValue "Lid" .
-
-<http://w3id.org/def/orka#typename_9957_2025-05-12T17:09:48.507894> orka:hasValue "WoodenSpoon" .
-
-<http://w3id.org/def/orka#typename_9972_2025-05-12T17:09:48.507894> orka:hasValue "Fork" .
-
-<http://w3id.org/def/orka#typename_9985_2025-05-12T17:09:48.507894> orka:hasValue "Spoon" .
+<http://w3id.org/def/orka#typename_9985_2025-05-16T22:11:15.109777> a orka:ObjectType ;
+    orka:hasValue "Spoon" .
 
 sosa:Observation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2537,11 +2735,11 @@ ssn:System a owl:Class ;
             owl:hasValue "MSCOCO" ;
             owl:onProperty :inDataSet ],
         [ a owl:Restriction ;
-            owl:hasValue "https://dbpedia.org/resource/Orange_(fruit)" ;
-            owl:onProperty :hasDBpediaURI ],
-        [ a owl:Restriction ;
             owl:hasValue "https://www.wikidata.org/wiki/Q13191" ;
             owl:onProperty :hasWikiDataURI ],
+        [ a owl:Restriction ;
+            owl:hasValue "https://dbpedia.org/resource/Orange_(fruit)" ;
+            owl:onProperty :hasDBpediaURI ],
         :PhysicalEntity .
 
 :Path a owl:Class ;
@@ -2735,6 +2933,306 @@ oboe-core:Observation a owl:Class .
 oboe-core:ofEntity a owl:ObjectProperty ;
     owl:inverseOf :observedIn .
 
+<http://w3id.org/def/orka#Loc_10000_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.849,-1.021,0.742" .
+
+<http://w3id.org/def/orka#Loc_10015_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.99,-1.151,0.739" .
+
+<http://w3id.org/def/orka#Loc_10026_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.97,-1.03,0.74" .
+
+<http://w3id.org/def/orka#Loc_10041_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.3,-0.71,0.74" .
+
+<http://w3id.org/def/orka#Loc_10055_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.3,-0.71,0.75" .
+
+<http://w3id.org/def/orka#Loc_10069_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.8,-1.0,0.739" .
+
+<http://w3id.org/def/orka#Loc_10083_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.788,-1.098,0.74" .
+
+<http://w3id.org/def/orka#Loc_10108_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.714,0.704,0.889" .
+
+<http://w3id.org/def/orka#Loc_10124_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.712,-0.302,0.889" .
+
+<http://w3id.org/def/orka#Loc_10143_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.845,0.197,0.93" .
+
+<http://w3id.org/def/orka#Loc_10155_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.578,0.196,1.007" .
+
+<http://w3id.org/def/orka#Loc_10168_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.34,-1.41,0.74" .
+
+<http://w3id.org/def/orka#Loc_10181_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.63,-0.62,0.95" .
+
+<http://w3id.org/def/orka#Loc_116_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.15,-1.0,0.83" .
+
+<http://w3id.org/def/orka#Loc_1473_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.15,-0.1,1.4" .
+
+<http://w3id.org/def/orka#Loc_1_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+<http://w3id.org/def/orka#Loc_2427_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.37,1.647,1.4" .
+
+<http://w3id.org/def/orka#Loc_2924_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.79,1.48,0.15" .
+
+<http://w3id.org/def/orka#Loc_2_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+<http://w3id.org/def/orka#Loc_3876_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.15,-0.12,0.15" .
+
+<http://w3id.org/def/orka#Loc_3_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "nan,nan,nan" .
+
+<http://w3id.org/def/orka#Loc_6203_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.0,-0.17,0.0" .
+
+<http://w3id.org/def/orka#Loc_6215_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.887" .
+
+<http://w3id.org/def/orka#Loc_6229_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.897" .
+
+<http://w3id.org/def/orka#Loc_6243_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.907" .
+
+<http://w3id.org/def/orka#Loc_6257_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.918" .
+
+<http://w3id.org/def/orka#Loc_6271_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.52,-0.17,0.928" .
+
+<http://w3id.org/def/orka#Loc_6338_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.0,0.0,0.095" .
+
+<http://w3id.org/def/orka#Loc_694_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.11,1.65,0.15" .
+
+<http://w3id.org/def/orka#Loc_7323_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.5,-3.0,0.0" .
+
+<http://w3id.org/def/orka#Loc_7345_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.0,-1.1,2.4" .
+
+<http://w3id.org/def/orka#Loc_7375_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.8,1.75,0.0" .
+
+<http://w3id.org/def/orka#Loc_7396_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.25,-0.15,0.0" .
+
+<http://w3id.org/def/orka#Loc_7417_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.75,1.75,0.0" .
+
+<http://w3id.org/def/orka#Loc_7438_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.25,1.35,0.0" .
+
+<http://w3id.org/def/orka#Loc_7459_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.25,-0.45,0.0" .
+
+<http://w3id.org/def/orka#Loc_7479_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.25,-2.985,0.0" .
+
+<http://w3id.org/def/orka#Loc_7500_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.5,-3.92,0.0" .
+
+<http://w3id.org/def/orka#Loc_7521_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.25,-2.986,0.0" .
+
+<http://w3id.org/def/orka#Loc_7541_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.75,-2.05,0.0" .
+
+<http://w3id.org/def/orka#Loc_7663_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.25,-1.45,0.0" .
+
+<http://w3id.org/def/orka#Loc_7987_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.55,-0.12,0.07" .
+
+<http://w3id.org/def/orka#Loc_8004_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.65,1.08,0.07" .
+
+<http://w3id.org/def/orka#Loc_8021_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.9,-1.12,0.07" .
+
+<http://w3id.org/def/orka#Loc_8038_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.25,1.415,0.07" .
+
+<http://w3id.org/def/orka#Loc_8055_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-1.23,1.645,0.03" .
+
+<http://w3id.org/def/orka#Loc_8072_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.145,0.345,0.03" .
+
+<http://w3id.org/def/orka#Loc_8089_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.145,-2.885,0.03" .
+
+<http://w3id.org/def/orka#Loc_8106_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.645,-1.945,0.03" .
+
+<http://w3id.org/def/orka#Loc_8123_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.145,-2.88,0.03" .
+
+<http://w3id.org/def/orka#Loc_8140_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.495,-3.815,0.03" .
+
+<http://w3id.org/def/orka#Loc_8158_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-2.25,0.45,0.0" .
+
+<http://w3id.org/def/orka#Loc_8351_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.05,1.75,0.0" .
+
+<http://w3id.org/def/orka#Loc_8533_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.8,-1.57,0.0" .
+
+<http://w3id.org/def/orka#Loc_8617_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.345,1.31,0.86" .
+
+<http://w3id.org/def/orka#Loc_8649_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.78,1.531,0.86" .
+
+<http://w3id.org/def/orka#Loc_8681_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.78,1.003,0.86" .
+
+<http://w3id.org/def/orka#Loc_8713_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.22,1.306,0.86" .
+
+<http://w3id.org/def/orka#Loc_8745_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.79,0.435,0.86" .
+
+<http://w3id.org/def/orka#Loc_8772_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "0.78,1.33,0.87" .
+
+<http://w3id.org/def/orka#Loc_8804_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.629,1.15,0.86" .
+
+<http://w3id.org/def/orka#Loc_8816_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.11,1.24,0.17" .
+
+<http://w3id.org/def/orka#Loc_8860_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.01,1.48,2.09" .
+
+<http://w3id.org/def/orka#Loc_8865_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.8,1.3,1.742" .
+
+<http://w3id.org/def/orka#Loc_8870_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.8,1.3,1.692" .
+
+<http://w3id.org/def/orka#Loc_8891_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-1.21,1.31,0.0" .
+
+<http://w3id.org/def/orka#Loc_9141_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.65,-1.43,0.0" .
+
+<http://w3id.org/def/orka#Loc_9375_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.7,-1.5,2.4" .
+
+<http://w3id.org/def/orka#Loc_9390_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.64,-2.33,0.0" .
+
+<http://w3id.org/def/orka#Loc_9428_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-1.09,-1.05,0.0" .
+
+<http://w3id.org/def/orka#Loc_9466_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.18,-1.62,0.0" .
+
+<http://w3id.org/def/orka#Loc_9504_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.63,-0.735,0.739" .
+
+<http://w3id.org/def/orka#Loc_9534_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.032,-1.387,0.583" .
+
+<http://w3id.org/def/orka#Loc_9557_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.481,-1.156,0.738" .
+
+<http://w3id.org/def/orka#Loc_9579_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.042,-1.645,0.583" .
+
+<http://w3id.org/def/orka#Loc_9601_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.026,-1.732,0.583" .
+
+<http://w3id.org/def/orka#Loc_9623_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.047,-1.825,0.583" .
+
+<http://w3id.org/def/orka#Loc_9645_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "2.041,-1.611,0.297" .
+
+<http://w3id.org/def/orka#Loc_9668_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.942,-1.537,0.361" .
+
+<http://w3id.org/def/orka#Loc_9679_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.722,-1.517,0.361" .
+
+<http://w3id.org/def/orka#Loc_9690_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.887,-1.712,0.297" .
+
+<http://w3id.org/def/orka#Loc_9712_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.895,-1.384,0.297" .
+
+<http://w3id.org/def/orka#Loc_9734_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.772,-1.627,0.05" .
+
+<http://w3id.org/def/orka#Loc_9752_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.686,-1.754,0.74" .
+
+<http://w3id.org/def/orka#Loc_9770_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.743,-1.698,0.799" .
+
+<http://w3id.org/def/orka#Loc_9781_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.643,-0.498,0.94" .
+
+<http://w3id.org/def/orka#Loc_9791_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.643,-1.81,0.799" .
+
+<http://w3id.org/def/orka#Loc_9801_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.691,-1.752,0.865" .
+
+<http://w3id.org/def/orka#Loc_9813_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.714,-1.57,0.109" .
+
+<http://w3id.org/def/orka#Loc_9825_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.64,-1.697,0.799" .
+
+<http://w3id.org/def/orka#Loc_9837_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.718,-1.685,0.109" .
+
+<http://w3id.org/def/orka#Loc_9849_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.844,-1.7,0.155" .
+
+<http://w3id.org/def/orka#Loc_9861_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.689,-1.628,0.186" .
+
+<http://w3id.org/def/orka#Loc_9873_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.846,-1.553,0.16" .
+
+<http://w3id.org/def/orka#Loc_9885_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.798,-1.625,0.109" .
+
+<http://w3id.org/def/orka#Loc_9897_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.667,1.32,0.89" .
+
+<http://w3id.org/def/orka#Loc_9939_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.667,1.32,0.96" .
+
+<http://w3id.org/def/orka#Loc_9957_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "1.249,1.376,0.889" .
+
+<http://w3id.org/def/orka#Loc_9972_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.97,-0.901,0.741" .
+
+<http://w3id.org/def/orka#Loc_9985_2025-05-16T22:11:15.109777> a orka:Location ;
+    orka:hasValue "-0.97,-1.221,0.74" .
+
 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/c> a swrl:Variable .
 
 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> a swrl:Variable .
@@ -2804,7 +3302,7 @@ sosa:madeObservation a owl:ObjectProperty .
     rdfs:range oboe-core:Observation ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-<http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Speed> a owl:Class .
+oboe-char:Speed a owl:Class .
 
 oboe-core:hasMeasurement a owl:ObjectProperty .
 
@@ -2910,7 +3408,7 @@ sosa:ObservableProperty a owl:Class .
     rdfs:comment "Sensors that measures the speed of an object, such as speedometers and tachometers used in vehicles and machinery." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sosa:observes ;
-            owl:someValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Speed> ],
+            owl:someValuesFrom oboe-char:Speed ],
         sosa:Sensor .
 
 :TemporalProperty a owl:Class ;
@@ -3009,11 +3507,11 @@ TODO: Add motor as observed entity, and as part_of Robot""" ;
     rdfs:comment """A sensor that detects and measures physical contact or touch.
 When these sensors activate, the activation implies the location of an entity at the range of the sensor. Examples include capacitive touchscreens, force-sensitive resistors, and tactile sensors used in robotics."""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue "0.0"^^xsd:float ;
-            owl:onProperty :hasMeasurementRange ],
-        [ a owl:Restriction ;
             owl:allValuesFrom :Location ;
             owl:onProperty sosa:observes ],
+        [ a owl:Restriction ;
+            owl:hasValue "0.0"^^xsd:float ;
+            owl:onProperty :hasMeasurementRange ],
         sosa:Sensor,
         :Exteroceptor_Sensor ;
     :hasWeBotsName "touch_sensor" .
@@ -3031,11 +3529,11 @@ When these sensors activate, the activation implies the location of an entity at
 
 oboe-core:Entity a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :describedBy ;
-            owl:someValuesFrom :Knowledge_Repository ],
-        [ a owl:Restriction ;
             owl:onProperty :hasCharacteristic ;
-            owl:someValuesFrom oboe-core:Characteristic ] .
+            owl:someValuesFrom oboe-core:Characteristic ],
+        [ a owl:Restriction ;
+            owl:onProperty :describedBy ;
+            owl:someValuesFrom :Knowledge_Repository ] .
 
 sosa:Sensor a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -3082,7 +3580,55 @@ Despite the name, these entities can be virtual.""" ;
 :inDataSet a owl:DatatypeProperty .
 
 [] a owl:AllDisjointClasses ;
+    owl:members ( :Age :CreationDate :DestructionDate :ExpirationDate ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MaterialProperty :SpatialProperty :TemporalProperty :ThermalProperty :VisualCharactersitic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Pitch :Roll :Yaw ) .
+
+[] a owl:AllDisjointClasses ;
     owl:members ( :Shape :SizeProperty :Structure ) .
+
+[] a swrl:Imp ;
+    rdfs:label "Proprioception" ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment "" ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                    swrl:classPredicate :ProprioceptorSensor ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:ClassAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                            swrl:classPredicate oboe-core:Measurement ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:ClassAtom ;
+                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                    swrl:classPredicate oboe-core:Observation ] ;
+                            rdf:rest [ a swrl:AtomList ;
+                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
+                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                                            swrl:propertyPredicate sosa:hosts ] ;
+                                    rdf:rest [ a swrl:AtomList ;
+                                            rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
+                                                    swrl:propertyPredicate sosa:madeBySensor ] ;
+                                            rdf:rest [ a swrl:AtomList ;
+                                                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
+                                                            swrl:propertyPredicate oboe-core:hasMeasurement ] ;
+                                                    rdf:rest () ] ] ] ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:IndividualPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
+                    swrl:propertyPredicate oboe-core:ofEntity ] ;
+            rdf:rest () ] .
 
 [] a swrl:Imp ;
     rdfs:label "Touch Sensor Detection" ;
@@ -3130,46 +3676,7 @@ Despite the name, these entities can be virtual.""" ;
                     rdf:rest () ] ] .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :MaterialProperty :SpatialProperty :ThermalProperty :VisualCharactersitic ) .
-
-[] a swrl:Imp ;
-    rdfs:label "Proprioception" ;
-    swrla:isRuleEnabled true ;
-    rdfs:comment "" ;
-    swrl:body [ a swrl:AtomList ;
-            rdf:first [ a swrl:ClassAtom ;
-                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
-                    swrl:classPredicate :ProprioceptorSensor ] ;
-            rdf:rest [ a swrl:AtomList ;
-                    rdf:first [ a swrl:ClassAtom ;
-                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
-                            swrl:classPredicate oboe-core:Measurement ] ;
-                    rdf:rest [ a swrl:AtomList ;
-                            rdf:first [ a swrl:ClassAtom ;
-                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
-                                    swrl:classPredicate oboe-core:Observation ] ;
-                            rdf:rest [ a swrl:AtomList ;
-                                    rdf:first [ a swrl:IndividualPropertyAtom ;
-                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
-                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
-                                            swrl:propertyPredicate sosa:hosts ] ;
-                                    rdf:rest [ a swrl:AtomList ;
-                                            rdf:first [ a swrl:IndividualPropertyAtom ;
-                                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
-                                                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/s> ;
-                                                    swrl:propertyPredicate sosa:madeBySensor ] ;
-                                            rdf:rest [ a swrl:AtomList ;
-                                                    rdf:first [ a swrl:IndividualPropertyAtom ;
-                                                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
-                                                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/m> ;
-                                                            swrl:propertyPredicate oboe-core:hasMeasurement ] ;
-                                                    rdf:rest () ] ] ] ] ] ] ;
-    swrl:head [ a swrl:AtomList ;
-            rdf:first [ a swrl:IndividualPropertyAtom ;
-                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/o> ;
-                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/r> ;
-                    swrl:propertyPredicate oboe-core:ofEntity ] ;
-            rdf:rest () ] .
+    owl:members ( :Density :Flexibility :MaterialName :Weight ) .
 
 [] a swrl:Imp ;
     rdfs:label "CanDetect" ;
@@ -3198,23 +3705,14 @@ Despite the name, these entities can be virtual.""" ;
             rdf:rest () ] .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :Pitch :Roll :Yaw ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Age :CreationDate :DestructionDate :ExpirationDate ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :MaterialProperty :SpatialProperty :TemporalProperty :ThermalProperty :VisualCharactersitic ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Density :Flexibility :MaterialName :Weight ) .
+    owl:members ( :YOLOv5l :YOLOv5l6 :YOLOv5m :YOLOv5m6 :YOLOv5n :YOLOv5n6 :YOLOv5s :YOLOv5s6 :YOLOv5x :YOLOv5x6 ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :Depth :Height :Length :SurfaceArea :Volume :Width ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :Color :GeometricProperty :Pattern ) .
+    owl:members ( :MaterialProperty :SpatialProperty :ThermalProperty :VisualCharactersitic ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :YOLOv5l :YOLOv5l6 :YOLOv5m :YOLOv5m6 :YOLOv5n :YOLOv5n6 :YOLOv5s :YOLOv5s6 :YOLOv5x :YOLOv5x6 ) .
+    owl:members ( :Color :GeometricProperty :Pattern ) .
 
