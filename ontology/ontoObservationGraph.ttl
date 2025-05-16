@@ -3,29 +3,29 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix :       <http://find-a-name.org/> .
+@prefix psr:    <https://w3id.org/psrTask-ontology#> .
 
 ###################################
 # CLASSES
 ###################################
 
-:Environment a owl:Class, dul:Entity ;
+psr:Environment a owl:Class, dul:Entity ;
     rdfs:label "Environment"@en ;
     rdfs:comment "An environment is an area or context in which components are found."@en .
 
-:Component a owl:Class, dul:Entity ;
+psr:Component a owl:Class, dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-:Appliance a owl:Class, dul:Entity, :Component ;
+psr:Appliance a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a type of component."@en .
 
-:Furniture a owl:Class, dul:Entity, :Component ;
+psr:Furniture a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "A furniture is a type of component."@en .
 
-:Object a owl:Class, dul:Entity, :Component ;
+psr:Object a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a type of component."@en .
 
@@ -33,43 +33,43 @@ soma:Location a owl:Class, dul:Entity ;
     rdfs:label "Location"@en ;
     rdfs:comment "A location is a specific component within the environment"@en .
 
-:Affordance a owl:Class, dul:Entity ;
+psr:Affordance a owl:Class, dul:Entity ;
     rdfs:label "Affordance"@en ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a owl:Class, dul:Entity, :Affordance ;
+soma:Closing a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Closing"@en ;
     rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a owl:Class, dul:Entity, :Affordance ;
+soma:Opening a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Opening"@en ;
     rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a owl:Class, dul:Entity, :Affordance ;
+soma:Delivering a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Delivering"@en ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a owl:Class, dul:Entity, :Affordance ;
+soma:Holding a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Holding"@en ;
     rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a owl:Class, dul:Entity, :Affordance ;
+soma:PickingUp a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "PickingUp"@en ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a owl:Class, dul:Entity, :Affordance ;
+soma:PuttingDown a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "PuttingDown"@en ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a owl:Class, dul:Entity, :Affordance ;
+soma:Pulling a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Pulling"@en ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a owl:Class, dul:Entity, :Affordance ;
+soma:Pushing a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Pushing"@en ;
     rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a owl:Class, dul:Entity, :Affordance ;
+soma:Grasping a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Grasping"@en ;
     rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 
@@ -78,43 +78,43 @@ soma:Grasping a owl:Class, dul:Entity, :Affordance ;
 ###################################
 
 dul:hasComponent a owl:ObjectProperty ;
-    rdfs:domain :Environment ;
-    rdfs:range :Component ;
+    rdfs:domain psr:Environment ;
+    rdfs:range psr:Component ;
     rdfs:label "has component"@en ;
     rdfs:comment "An environment has one or more components."@en .
 
-:hasAffordance a owl:ObjectProperty ;
-    rdfs:domain :Component ;
-    rdfs:range :Affordance ;
+psr:hasAffordance a owl:ObjectProperty ;
+    rdfs:domain psr:Component ;
+    rdfs:range psr:Affordance ;
     rdfs:label "has affordance"@en ;
     rdfs:comment "A component has one or more affordances that indicate how it can be used."@en .
 
 dul:hasLocation a owl:ObjectProperty ;
-    rdfs:domain :Component ;
-    rdfs:range :Location ;
+    rdfs:domain psr:Component ;
+    rdfs:range psr:Location ;
     rdfs:label "has location"@en ;
     rdfs:comment "A component has a location within the environment, which can refer to another component."@en .
 
-:onTopOf a owl:ObjectProperty ;
-    rdfs:domain :Location ;
-    rdfs:range :Component ;
+psr:onTopOf a owl:ObjectProperty ;
+    rdfs:domain psr:Location ;
+    rdfs:range psr:Component ;
     rdfs:label "on top of"@en ;
     rdfs:comment "The location of component can be on top of another component."@en .
 
 geo:sfContains a owl:Property ;
-    rdfs:domain :Location ;
-    rdfs:range :Component ;
+    rdfs:domain psr:Location ;
+    rdfs:range psr:Component ;
     rdfs:label "contains"@en ;
     rdfs:comment "The location of a component can be contained in another component."@en .
 
 geo:sfWithin a owl:Property ;
-    rdfs:domain :Location ;
-    rdfs:range :Component ;
+    rdfs:domain psr:Location ;
+    rdfs:range psr:Component ;
     rdfs:label "is within"@en ;
     rdfs:comment "The location of a component can be within another component."@en .
 
 geo:sfOverlaps a owl:Property ;
-    rdfs:domain :Location ;
-    rdfs:range :Component ;
+    rdfs:domain psr:Location ;
+    rdfs:range psr:Component ;
     rdfs:label "overlaps"@en ;
     rdfs:comment "The location of a component can overlaps with another component."@en .

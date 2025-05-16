@@ -5,17 +5,17 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix :       <http://find-a-name.org/> .
+@prefix psr:    <https://w3id.org/psrTask-ontology#> .
 
 ###################################
 # CLASSES
 ###################################
 
-:Instruction a owl:Class, dul:Entity ;
+psr:Instruction a owl:Class, dul:Entity ;
     rdfs:label "Instruction"@en ;
     rdfs:comment "An instruction is a command or directive given to a robot."@en .
 
-:Workflow a owl:Class, dul:Entity ;
+psr:Workflow a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Workflow ;
     rdfs:label "Workflow"@en ;
     rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
@@ -24,63 +24,63 @@ dul:Action a owl:Class, dul:Entity ;
     rdfs:label "Action"@en ;
     rdfs:comment "An action is an atomic, single, clear action that is carried out to fulfil the instruction."@en .
 
-dul:agent a owl:Class, dul:Entity ;
+dul:Agent a owl:Class, dul:Entity ;
     rdfs:label "Agent"@en ;
     rdfs:comment "An agent performing an action."@en .
 
-:Component a owl:Class, dul:Entity ;
+psr:Component a owl:Class, dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-:Appliance a owl:Class, dul:Entity, :Component ;
+psr:Appliance a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a type of component."@en .
 
-:Furniture a owl:Class, dul:Entity, :Component ;
+psr:Furniture a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "A furniture is a type of component."@en .
 
-:Object a owl:Class, dul:Entity, :Component ;
+psr:Object a owl:Class, dul:Entity, psr:Component ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a type of component."@en .
 
-:Affordance a owl:Class, dul:Entity ;
+psr:Affordance a owl:Class, dul:Entity ;
     rdfs:label "Affordance"@en ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a owl:Class, dul:Entity, :Affordance ;
+soma:Closing a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Closing"@en ;
     rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a owl:Class, dul:Entity, :Affordance ;
+soma:Opening a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Opening"@en ;
     rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a owl:Class, dul:Entity, :Affordance ;
+soma:Delivering a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Delivering"@en ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a owl:Class, dul:Entity, :Affordance ;
+soma:Holding a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Holding"@en ;
     rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a owl:Class, dul:Entity, :Affordance ;
+soma:PickingUp a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "PickingUp"@en ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a owl:Class, dul:Entity, :Affordance ;
+soma:PuttingDown a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "PuttingDown"@en ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a owl:Class, dul:Entity, :Affordance ;
+soma:Pulling a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Pulling"@en ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a owl:Class, dul:Entity, :Affordance ;
+soma:Pushing a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Pushing"@en ;
     rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a owl:Class, dul:Entity, :Affordance ;
+soma:Grasping a owl:Class, dul:Entity, psr:Affordance ;
     rdfs:label "Grasping"@en ;
     rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 
@@ -88,26 +88,26 @@ soma:Grasping a owl:Class, dul:Entity, :Affordance ;
 # OBJECT PROPERTIES
 ###################################
 
-:hasWorkflow a owl:ObjectProperty ;
-    rdfs:domain :Instruction ;
-    rdfs:range :Workflow ;
+psr:hasWorkflow a owl:ObjectProperty ;
+    rdfs:domain psr:Instruction ;
+    rdfs:range psr:Workflow ;
     rdfs:label "has workflow"@en ;
     rdfs:comment "An instruction has a workflow that needs to be executed."@en .
 
-:hasAction a owl:ObjectProperty ;
-    rdfs:domain :Workflow ;
+psr:hasAction a owl:ObjectProperty ;
+    rdfs:domain psr:Workflow ;
     rdfs:range dul:Action ;
     rdfs:label "has action"@en ;
     rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
 
-:precedes a owl:ObjectProperty ;
+psr:precedes a owl:ObjectProperty ;
     rdfs:subPropertyOf  dul:precedes ;
     rdfs:domain dul:Action ;
     rdfs:range dul:Action ;
     rdfs:label "precedes" ;
     rdfs:comment "An action can precede another action."@en .
 
-:follows a owl:ObjectProperty ;
+psr:follows a owl:ObjectProperty ;
     rdfs:subPropertyOf dul:follows ;
     rdfs:domain dul:Action ;
     rdfs:range dul:Action ;
@@ -120,15 +120,15 @@ soma:isPerformedBy a owl:ObjectProperty ;
     rdfs:label "is performed by"@en ;
     rdfs:comment "An action is performed by an agent."@en .
 
-:actsOn a owl:ObjectProperty ;
+psr:actsOn a owl:ObjectProperty ;
     rdfs:domain dul:Action ;
-    rdfs:range :Component ;
+    rdfs:range psr:Component ;
     rdfs:label "acts on"@en ;
     rdfs:comment "An action acts on a component."@en .
 
-:isAffordedBy a owl:ObjectProperty ;
+psr:isAffordedBy a owl:ObjectProperty ;
     rdfs:domain dul:Action ;
-    rdfs:range :Affordance ;
+    rdfs:range psr:Affordance ;
     rdfs:label "is afforded by"@en ;
     rdfs:comment "An action is afforded by an affordance."@en .
 
@@ -136,8 +136,8 @@ soma:isPerformedBy a owl:ObjectProperty ;
 # DATA PROPERTIES
 ###################################
 
-:hasNaturalLanguage a owl:DatatypeProperty ;
-    rdfs:domain :Instruction ;
+psr:hasNaturalLanguage a owl:DatatypeProperty ;
+    rdfs:domain psr:Instruction ;
     rdfs:range xsd:string ;
     rdfs:label "has natural language"@en ;
     rdfs:comment "The instruction is expressed in a natural language."@en .

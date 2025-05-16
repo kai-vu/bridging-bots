@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Personal Service Robot (PSR) - Task Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/psrTask-ontology#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/psrTask-ontology#","name":"Personal Service Robot (PSR) - Task Ontology", "headline":"Document describing the ontology https://w3id.org/psrTask-ontology#", "dateReleased":"2025-05-16", "version":"1.0.0", "author":[{"@type":"Person","name":"Margherita Martorana"},{"@type":"Person","name":"Francesca Urgese"},{"@type":"Person","name":"Mark Adamik"},{"@type":"Person","name":"Ilaria Tiddi"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Personal Service Robot (PSR) - Task Ontology</h1>
+<h2>Release: 2025-05-16</h2>
+
+
+<dl>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd>Margherita Martorana<a href="mailto:m.martorana@vu.nl">&#9993;</a></dd><dd>Francesca Urgese</dd><dd>Mark Adamik</dd><dd>Ilaria Tiddi</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Margherita Martorana, Francesca Urgese, Mark Adamik, Ilaria Tiddi. Personal Service Robot (PSR) - Task Ontology. Revision: 1.0.0.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Personal Service Robot (PSR) - Task Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow">
+         <span>Workflow</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#actsOn" title="https://w3id.org/psrTask-ontology#actsOn">acts on</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">
+         <span>contains</span>
+      </a>
+   </li>
+   <li>
+      <a href="#follows" title="https://w3id.org/psrTask-ontology#follows">follow</a>
+   </li>
+   <li>
+      <a href="#hasAction" title="https://w3id.org/psrTask-ontology#hasAction">has action</a>
+   </li>
+   <li>
+      <a href="#hasAffordance" title="https://w3id.org/psrTask-ontology#hasAffordance">has affordance</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"
+         title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"
+         title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</a>
+   </li>
+   <li>
+      <a href="#hasWorkflow" title="https://w3id.org/psrTask-ontology#hasWorkflow">has workflow</a>
+   </li>
+   <li>
+      <a href="#isAffordedBy" title="https://w3id.org/psrTask-ontology#isAffordedBy">is afforded by</a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy"
+         title="http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy">is performed by</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">
+         <span>is within</span>
+      </a>
+   </li>
+   <li>
+      <a href="#onTopOf" title="https://w3id.org/psrTask-ontology#onTopOf">on top of</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfOverlaps" title="http://www.opengis.net/ont/geosparql#sfOverlaps">
+         <span>overlaps</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precedes" title="https://w3id.org/psrTask-ontology#precedes">precedes</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#:hasNaturalLanguage"
+         title="https://w3id.org/psrTask-ontology#:hasNaturalLanguage">has natural language</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"
+         title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">
+         <span>Action</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Affordance" title="https://w3id.org/psrTask-ontology#Affordance">
+         <span>Affordance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+         title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">
+         <span>Agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Appliance" title="https://w3id.org/psrTask-ontology#Appliance">
+         <span>Appliance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Closing" title="http://www.ease-crc.org/ont/SOMA.owl#Closing">
+         <span>Closing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Component" title="https://w3id.org/psrTask-ontology#Component">
+         <span>Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains">
+         <span>contains</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Delivering" title="http://www.ease-crc.org/ont/SOMA.owl#Delivering">
+         <span>Delivering</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Environment" title="https://w3id.org/psrTask-ontology#Environment">
+         <span>Environment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Furniture" title="https://w3id.org/psrTask-ontology#Furniture">
+         <span>Furniture</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Grasping" title="http://www.ease-crc.org/ont/SOMA.owl#Grasping">
+         <span>Grasping</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Holding" title="http://www.ease-crc.org/ont/SOMA.owl#Holding">
+         <span>Holding</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Instruction" title="https://w3id.org/psrTask-ontology#Instruction">
+         <span>Instruction</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin">
+         <span>is within</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Location" title="http://www.ease-crc.org/ont/SOMA.owl#Location">
+         <span>Location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Object" title="https://w3id.org/psrTask-ontology#Object">
+         <span>Object</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Opening" title="http://www.ease-crc.org/ont/SOMA.owl#Opening">
+         <span>Opening</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#sfOverlaps" title="http://www.opengis.net/ont/geosparql#sfOverlaps">
+         <span>overlaps</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#PickingUp" title="http://www.ease-crc.org/ont/SOMA.owl#PickingUp">
+         <span>PickingUp</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Pulling" title="http://www.ease-crc.org/ont/SOMA.owl#Pulling">
+         <span>Pulling</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#Pushing" title="http://www.ease-crc.org/ont/SOMA.owl#Pushing">
+         <span>Pushing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ease-crc.org/ont/SOMA.owl#PuttingDown" title="http://www.ease-crc.org/ont/SOMA.owl#PuttingDown">
+         <span>PuttingDown</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow">
+         <span>Workflow</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Personal Service Robot (PSR) - Task Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">An ontology to model environments, components, affordances, instructions, workflows, and actions related to robotic task execution.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Personal Service Robot (PSR) - Task Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Personal Service Robot (PSR) - Task Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow"> <span>Workflow</span> </a></li>
+ </ul>
+ <div class="entity" id="Workflow">
+  <h3>Workflow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Workflow</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAction" title="https://w3id.org/psrTask-ontology#hasAction">has action</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasWorkflow" title="https://w3id.org/psrTask-ontology#hasWorkflow">has workflow</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Workflow">named individual</a>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#actsOn" title="https://w3id.org/psrTask-ontology#actsOn">acts on</a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains"> <span>contains</span> </a></li>
+  <li><a href="#follows" title="https://w3id.org/psrTask-ontology#follows">follow</a></li>
+  <li><a href="#hasAction" title="https://w3id.org/psrTask-ontology#hasAction">has action</a></li>
+  <li><a href="#hasAffordance" title="https://w3id.org/psrTask-ontology#hasAffordance">has affordance</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">has component</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</a></li>
+  <li><a href="#hasWorkflow" title="https://w3id.org/psrTask-ontology#hasWorkflow">has workflow</a></li>
+  <li><a href="#isAffordedBy" title="https://w3id.org/psrTask-ontology#isAffordedBy">is afforded by</a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy" title="http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy">is performed by</a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin"> <span>is within</span> </a></li>
+  <li><a href="#onTopOf" title="https://w3id.org/psrTask-ontology#onTopOf">on top of</a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfOverlaps" title="http://www.opengis.net/ont/geosparql#sfOverlaps"> <span>overlaps</span> </a></li>
+  <li><a href="#precedes" title="https://w3id.org/psrTask-ontology#precedes">precedes</a></li>
+ </ul>
+ <div class="entity" id="actsOn">
+  <h3>acts on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#actsOn</p>
+  <div class="comment">
+   <span class="markdown">An action acts on a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfContains">
+  <h3>contains<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfContains</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Location" target="_blank" title="https://w3id.org/psrTask-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.opengis.net/ont/geosparql#sfContains">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="follows">
+  <h3>follow<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#follows</p>
+  <div class="comment">
+   <span class="markdown">An action can follow another action.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows">follows</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAction">
+  <h3>has action<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#hasAction</p>
+  <div class="comment">
+   <span class="markdown">A workflow has one or multiple clear atomic actions.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAffordance">
+  <h3>has affordance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#hasAffordance</p>
+  <div class="comment">
+   <span class="markdown">A component has one or more affordances that indicate how it can be used.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">
+  <h3>has component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent</p>
+  <div class="comment">
+   <span class="markdown">An environment has one or more components.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Environment" target="_blank" title="https://w3id.org/psrTask-ontology#Environment">Environment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">
+  <h3>has location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation</p>
+  <div class="comment">
+   <span class="markdown">A component has a location within the environment, which can refer to another component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Location" target="_blank" title="https://w3id.org/psrTask-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasWorkflow">
+  <h3>has workflow<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#hasWorkflow</p>
+  <div class="comment">
+   <span class="markdown">An instruction has a workflow that needs to be executed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Instruction" target="_blank" title="https://w3id.org/psrTask-ontology#Instruction">Instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isAffordedBy">
+  <h3>is afforded by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#isAffordedBy</p>
+  <div class="comment">
+   <span class="markdown">An action is afforded by an affordance.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy">
+  <h3>is performed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy</p>
+  <div class="comment">
+   <span class="markdown">An action is performed by an agent.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfWithin">
+  <h3>is within<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfWithin</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Location" target="_blank" title="https://w3id.org/psrTask-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.opengis.net/ont/geosparql#sfWithin">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="onTopOf">
+  <h3>on top of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#onTopOf</p>
+  <div class="comment">
+   <span class="markdown">The location of component can be on top of another component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Location" target="_blank" title="https://w3id.org/psrTask-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfOverlaps">
+  <h3>overlaps<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfOverlaps</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Location" target="_blank" title="https://w3id.org/psrTask-ontology#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.opengis.net/ont/geosparql#sfOverlaps">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="precedes">
+  <h3>precedes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#precedes</p>
+  <div class="comment">
+   <span class="markdown">An action can precede another action.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes">precedes</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#:hasNaturalLanguage" title="https://w3id.org/psrTask-ontology#:hasNaturalLanguage">has natural language</a></li>
+ </ul>
+ <div class="entity" id=":hasNaturalLanguage">
+  <h3>has natural language<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#:hasNaturalLanguage</p>
+  <div class="comment">
+   <span class="markdown">The instruction is expressed in a natural language.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/psrTask-ontology#Instruction" target="_blank" title="https://w3id.org/psrTask-ontology#Instruction">Instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"> <span>Action</span> </a></li>
+  <li><a href="#Affordance" title="https://w3id.org/psrTask-ontology#Affordance"> <span>Affordance</span> </a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"> <span>Agent</span> </a></li>
+  <li><a href="#Appliance" title="https://w3id.org/psrTask-ontology#Appliance"> <span>Appliance</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Closing" title="http://www.ease-crc.org/ont/SOMA.owl#Closing"> <span>Closing</span> </a></li>
+  <li><a href="#Component" title="https://w3id.org/psrTask-ontology#Component"> <span>Component</span> </a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfContains" title="http://www.opengis.net/ont/geosparql#sfContains"> <span>contains</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Delivering" title="http://www.ease-crc.org/ont/SOMA.owl#Delivering"> <span>Delivering</span> </a></li>
+  <li><a href="#Environment" title="https://w3id.org/psrTask-ontology#Environment"> <span>Environment</span> </a></li>
+  <li><a href="#Furniture" title="https://w3id.org/psrTask-ontology#Furniture"> <span>Furniture</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Grasping" title="http://www.ease-crc.org/ont/SOMA.owl#Grasping"> <span>Grasping</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Holding" title="http://www.ease-crc.org/ont/SOMA.owl#Holding"> <span>Holding</span> </a></li>
+  <li><a href="#Instruction" title="https://w3id.org/psrTask-ontology#Instruction"> <span>Instruction</span> </a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfWithin" title="http://www.opengis.net/ont/geosparql#sfWithin"> <span>is within</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Location" title="http://www.ease-crc.org/ont/SOMA.owl#Location"> <span>Location</span> </a></li>
+  <li><a href="#Object" title="https://w3id.org/psrTask-ontology#Object"> <span>Object</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Opening" title="http://www.ease-crc.org/ont/SOMA.owl#Opening"> <span>Opening</span> </a></li>
+  <li><a href="#http://www.opengis.net/ont/geosparql#sfOverlaps" title="http://www.opengis.net/ont/geosparql#sfOverlaps"> <span>overlaps</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#PickingUp" title="http://www.ease-crc.org/ont/SOMA.owl#PickingUp"> <span>PickingUp</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Pulling" title="http://www.ease-crc.org/ont/SOMA.owl#Pulling"> <span>Pulling</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#Pushing" title="http://www.ease-crc.org/ont/SOMA.owl#Pushing"> <span>Pushing</span> </a></li>
+  <li><a href="#http://www.ease-crc.org/ont/SOMA.owl#PuttingDown" title="http://www.ease-crc.org/ont/SOMA.owl#PuttingDown"> <span>PuttingDown</span> </a></li>
+  <li><a href="#Workflow" title="https://w3id.org/psrTask-ontology#Workflow"> <span>Workflow</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">
+  <h3>Action<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Affordance">
+  <h3>Affordance<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Affordance</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">
+  <h3>Agent<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Appliance">
+  <h3>Appliance<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Appliance</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Closing">
+  <h3>Closing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Closing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Component">
+  <h3>Component<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Component</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfContains">
+  <h3>contains<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfContains</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Property" target="_blank" title="http://www.w3.org/2002/07/owl#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.opengis.net/ont/geosparql#sfContains">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Delivering">
+  <h3>Delivering<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Delivering</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Environment">
+  <h3>Environment<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Environment</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Furniture">
+  <h3>Furniture<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Furniture</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Grasping">
+  <h3>Grasping<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Grasping</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Holding">
+  <h3>Holding<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Holding</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Instruction">
+  <h3>Instruction<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Instruction</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfWithin">
+  <h3>is within<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfWithin</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Property" target="_blank" title="http://www.w3.org/2002/07/owl#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.opengis.net/ont/geosparql#sfWithin">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Location">
+  <h3>Location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Location</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Object">
+  <h3>Object<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Object</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Component" target="_blank" title="https://w3id.org/psrTask-ontology#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Opening">
+  <h3>Opening<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Opening</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.opengis.net/ont/geosparql#sfOverlaps">
+  <h3>overlaps<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.opengis.net/ont/geosparql#sfOverlaps</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Property" target="_blank" title="http://www.w3.org/2002/07/owl#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.opengis.net/ont/geosparql#sfOverlaps">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#PickingUp">
+  <h3>PickingUp<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#PickingUp</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Pulling">
+  <h3>Pulling<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Pulling</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#Pushing">
+  <h3>Pushing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#Pushing</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ease-crc.org/ont/SOMA.owl#PuttingDown">
+  <h3>PuttingDown<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ease-crc.org/ont/SOMA.owl#PuttingDown</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/psrTask-ontology#Affordance" target="_blank" title="https://w3id.org/psrTask-ontology#Affordance">Affordance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    class
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflow">
+  <h3>Workflow<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/psrTask-ontology#Workflow</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity" target="_blank" title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Workflow">class</a>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
