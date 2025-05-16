@@ -22,7 +22,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483654",
+        "value" : "_:genid2147483650",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -32,12 +32,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483654",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483650",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "created" : [ {
@@ -52,16 +52,16 @@
         "value" : "psr",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/psrTask-ontology#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/psrTask-ontology#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -77,46 +77,46 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
     "type" : "owl:Class"
   }, {
     "id" : "29",
@@ -125,40 +125,40 @@
     "id" : "69",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "57",
+    "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "59",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "42",
+    "id" : "43",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -181,7 +181,7 @@
     "comment" : {
       "en" : "An object is a type of component."
     },
-    "id" : "2"
+    "id" : "4"
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Pushing",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
@@ -194,7 +194,7 @@
       "en" : "Pushing is an affordance that enables a component to be pushed."
     },
     "attributes" : [ "external" ],
-    "id" : "6"
+    "id" : "7"
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Delivering",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
@@ -207,7 +207,7 @@
       "en" : "Delivering is an affordance that enables a component to be delivered."
     },
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "10"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Instruction",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -232,7 +232,7 @@
       "en" : "Pulling is an affordance that enables a component to be pulled."
     },
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "19"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
@@ -255,7 +255,7 @@
       "en" : "Picking up is an affordance that enables a component to be picked up."
     },
     "attributes" : [ "external" ],
-    "id" : "17"
+    "id" : "15"
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#PuttingDown",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
@@ -268,7 +268,7 @@
       "en" : "Putting down is an affordance that enables a component to be put down."
     },
     "attributes" : [ "external" ],
-    "id" : "35"
+    "id" : "33"
   }, {
     "iri" : "http://schema.org/Organization",
     "baseIri" : "http://schema.org",
@@ -277,7 +277,7 @@
       "IRI-based" : "Organization"
     },
     "attributes" : [ "external" ],
-    "id" : "38"
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Environment",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -302,7 +302,7 @@
       "en" : "Opening is an affordance that enables a component to be opened."
     },
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "17"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
@@ -315,7 +315,7 @@
       "en" : "An agent performing an action."
     },
     "attributes" : [ "external" ],
-    "id" : "39"
+    "id" : "40"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Furniture",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -327,7 +327,7 @@
     "comment" : {
       "en" : "A furniture is a type of component."
     },
-    "id" : "45"
+    "id" : "50"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -336,7 +336,7 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "53"
+    "id" : "55"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
@@ -364,7 +364,7 @@
     "comment" : {
       "en" : "An affordance is a property of an object that indicates how it can be used."
     },
-    "id" : "5"
+    "id" : "6"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Property",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -417,7 +417,7 @@
       "en" : "Holding is an affordance that enables a component to be held."
     },
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "12"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Workflow",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -438,7 +438,7 @@
     "label" : {
       "IRI-based" : "Location"
     },
-    "id" : "8"
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Component",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -463,7 +463,7 @@
       "en" : "An action is an atomic, single, clear action that is carried out to fulfil the instruction."
     },
     "attributes" : [ "external" ],
-    "id" : "30"
+    "id" : "37"
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Location",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
@@ -476,20 +476,7 @@
       "en" : "A location is a specific component within the environment"
     },
     "attributes" : [ "external" ],
-    "id" : "57"
-  }, {
-    "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Closing",
-    "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Closing",
-      "en" : "Closing"
-    },
-    "comment" : {
-      "en" : "Closing is an affordance that enables a component to be closed."
-    },
-    "attributes" : [ "external" ],
-    "id" : "22"
+    "id" : "46"
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Grasping",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
@@ -502,7 +489,7 @@
       "en" : "Grasping is an affordance that enables a component to be grasped."
     },
     "attributes" : [ "external" ],
-    "id" : "20"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#Appliance",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -514,11 +501,24 @@
     "comment" : {
       "en" : "An appliance is a type of component."
     },
-    "id" : "59"
+    "id" : "2"
+  }, {
+    "iri" : "http://www.ease-crc.org/ont/SOMA.owl#Closing",
+    "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Closing",
+      "en" : "Closing"
+    },
+    "comment" : {
+      "en" : "Closing is an affordance that enables a component to be closed."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "42",
+    "id" : "43",
     "label" : {
       "undefined" : "Thing"
     }
@@ -527,16 +527,16 @@
     "id" : "0",
     "type" : "rdf:Property"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "7",
+    "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "11",
     "type" : "rdf:Property"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "rdf:Property"
   }, {
     "id" : "14",
@@ -545,10 +545,10 @@
     "id" : "16",
     "type" : "rdf:Property"
   }, {
-    "id" : "19",
+    "id" : "20",
     "type" : "rdf:Property"
   }, {
-    "id" : "21",
+    "id" : "22",
     "type" : "rdf:Property"
   }, {
     "id" : "25",
@@ -560,13 +560,13 @@
     "id" : "28",
     "type" : "rdf:Property"
   }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "31",
     "type" : "owl:objectProperty"
   }, {
     "id" : "32",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "33",
     "type" : "rdf:Property"
   }, {
     "id" : "34",
@@ -575,28 +575,22 @@
     "id" : "36",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "40",
-    "type" : "rdf:Property"
-  }, {
     "id" : "41",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "44",
     "type" : "rdf:Property"
   }, {
-    "id" : "46",
+    "id" : "42",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "rdf:Property"
   }, {
     "id" : "47",
-    "type" : "rdf:Property"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "48",
     "type" : "rdf:Property"
   }, {
     "id" : "49",
-    "type" : "rdf:Property"
-  }, {
-    "id" : "50",
     "type" : "rdf:Property"
   }, {
     "id" : "51",
@@ -605,22 +599,28 @@
     "id" : "52",
     "type" : "rdf:Property"
   }, {
-    "id" : "43",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "37",
-    "type" : "owl:objectProperty"
+    "id" : "53",
+    "type" : "rdf:Property"
   }, {
     "id" : "54",
     "type" : "rdf:Property"
   }, {
-    "id" : "55",
-    "type" : "rdf:Property"
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "56",
     "type" : "rdf:Property"
   }, {
+    "id" : "57",
+    "type" : "rdf:Property"
+  }, {
     "id" : "58",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "59",
     "type" : "rdf:Property"
   }, {
     "id" : "60",
@@ -685,7 +685,7 @@
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#hasAffordance",
     "baseIri" : "https://w3id.org/psrTask-ontology",
-    "range" : "5",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasAffordance",
       "en" : "has affordance"
@@ -695,7 +695,7 @@
       "en" : "A component has one or more affordances that indicate how it can be used."
     },
     "attributes" : [ "object" ],
-    "id" : "4"
+    "id" : "5"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#onTopOf",
     "baseIri" : "https://w3id.org/psrTask-ontology",
@@ -704,30 +704,30 @@
       "IRI-based" : "onTopOf",
       "en" : "on top of"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "en" : "The location of component can be on top of another component."
     },
     "attributes" : [ "object" ],
-    "id" : "7"
+    "id" : "8"
   }, {
-    "domain" : "5",
-    "range" : "11",
-    "id" : "10",
+    "domain" : "6",
+    "range" : "12",
+    "id" : "11",
     "label" : {
       "IRI-based" : "29",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
-    "range" : "13",
-    "id" : "12",
+    "domain" : "6",
+    "range" : "7",
+    "id" : "13",
     "label" : {
       "IRI-based" : "28",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
+    "domain" : "6",
     "range" : "15",
     "id" : "14",
     "label" : {
@@ -735,7 +735,7 @@
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
+    "domain" : "6",
     "range" : "17",
     "id" : "16",
     "label" : {
@@ -743,17 +743,17 @@
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
-    "range" : "20",
-    "id" : "19",
+    "domain" : "6",
+    "range" : "21",
+    "id" : "20",
     "label" : {
       "IRI-based" : "27",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
-    "range" : "22",
-    "id" : "21",
+    "domain" : "6",
+    "range" : "19",
+    "id" : "22",
     "label" : {
       "IRI-based" : "26",
       "undefined" : "is a"
@@ -770,11 +770,11 @@
     "comment" : {
       "en" : "An environment has one or more components."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "25"
   }, {
-    "domain" : "5",
-    "range" : "6",
+    "domain" : "6",
+    "range" : "10",
     "id" : "27",
     "label" : {
       "IRI-based" : "21",
@@ -782,7 +782,7 @@
     }
   }, {
     "domain" : "29",
-    "range" : "30",
+    "range" : "7",
     "id" : "28",
     "label" : {
       "IRI-based" : "20",
@@ -791,7 +791,7 @@
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
-    "range" : "8",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasLocation",
       "en" : "has location"
@@ -800,8 +800,8 @@
     "comment" : {
       "en" : "A component has a location within the environment, which can refer to another component."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "31"
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#sfContains",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -810,22 +810,22 @@
       "IRI-based" : "sfContains",
       "en" : "contains"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "en" : "The location of a component can be contained in another component."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "32"
+    "attributes" : [ "object", "external" ],
+    "id" : "31"
   }, {
-    "domain" : "5",
-    "range" : "9",
-    "id" : "33",
+    "domain" : "6",
+    "range" : "33",
+    "id" : "32",
     "label" : {
       "IRI-based" : "23",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "5",
+    "domain" : "6",
     "range" : "35",
     "id" : "34",
     "label" : {
@@ -835,13 +835,13 @@
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#precedes",
     "baseIri" : "https://w3id.org/psrTask-ontology",
-    "range" : "30",
+    "range" : "37",
     "label" : {
       "IRI-based" : "precedes",
       "undefined" : "precedes"
     },
-    "superproperty" : [ "37" ],
-    "domain" : "30",
+    "superproperty" : [ "38" ],
+    "domain" : "37",
     "comment" : {
       "en" : "An action can precede another action."
     },
@@ -849,8 +849,8 @@
     "id" : "36"
   }, {
     "domain" : "29",
-    "range" : "9",
-    "id" : "40",
+    "range" : "10",
+    "id" : "41",
     "label" : {
       "IRI-based" : "18",
       "undefined" : "is a"
@@ -858,18 +858,18 @@
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
-    "range" : "42",
+    "range" : "43",
     "label" : {
       "IRI-based" : "follows"
     },
-    "domain" : "42",
-    "subproperty" : [ "43" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "41"
+    "domain" : "43",
+    "subproperty" : [ "44" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "42"
   }, {
     "domain" : "29",
-    "range" : "45",
-    "id" : "44",
+    "range" : "46",
+    "id" : "45",
     "label" : {
       "IRI-based" : "17",
       "undefined" : "is a"
@@ -882,56 +882,56 @@
       "IRI-based" : "sfWithin",
       "en" : "is within"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "en" : "The location of a component can be within another component."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "46"
+    "attributes" : [ "object", "external" ],
+    "id" : "47"
   }, {
     "domain" : "29",
-    "range" : "39",
-    "id" : "47",
+    "range" : "40",
+    "id" : "48",
     "label" : {
       "IRI-based" : "19",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "24",
-    "id" : "48",
+    "range" : "37",
+    "id" : "49",
     "label" : {
       "IRI-based" : "14",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "1",
-    "id" : "49",
+    "range" : "12",
+    "id" : "51",
     "label" : {
       "IRI-based" : "13",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "5",
-    "id" : "50",
+    "range" : "6",
+    "id" : "52",
     "label" : {
       "IRI-based" : "16",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "20",
-    "id" : "51",
+    "range" : "21",
+    "id" : "53",
     "label" : {
       "IRI-based" : "15",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "26",
-    "id" : "52",
+    "range" : "35",
+    "id" : "54",
     "label" : {
       "IRI-based" : "10",
       "undefined" : "is a"
@@ -939,64 +939,64 @@
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#follows",
     "baseIri" : "https://w3id.org/psrTask-ontology",
-    "range" : "30",
+    "range" : "37",
     "label" : {
       "IRI-based" : "follows",
       "undefined" : "follow"
     },
-    "superproperty" : [ "41" ],
-    "domain" : "30",
+    "superproperty" : [ "42" ],
+    "domain" : "37",
     "comment" : {
       "en" : "An action can follow another action."
     },
     "attributes" : [ "object" ],
-    "id" : "43"
+    "id" : "44"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes",
     "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
-    "range" : "42",
+    "range" : "43",
     "label" : {
       "IRI-based" : "precedes"
     },
-    "domain" : "42",
+    "domain" : "43",
     "subproperty" : [ "36" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "37"
+    "attributes" : [ "object", "external" ],
+    "id" : "38"
   }, {
     "domain" : "29",
-    "range" : "13",
-    "id" : "54",
+    "range" : "18",
+    "id" : "56",
     "label" : {
       "IRI-based" : "12",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "22",
-    "id" : "55",
+    "range" : "33",
+    "id" : "57",
     "label" : {
       "IRI-based" : "11",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "57",
-    "id" : "56",
+    "range" : "26",
+    "id" : "58",
     "label" : {
       "IRI-based" : "2",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "59",
-    "id" : "58",
+    "range" : "1",
+    "id" : "59",
     "label" : {
       "IRI-based" : "3",
       "undefined" : "is a"
     }
   }, {
     "domain" : "29",
-    "range" : "11",
+    "range" : "50",
     "id" : "60",
     "label" : {
       "IRI-based" : "4",
@@ -1004,7 +1004,7 @@
     }
   }, {
     "domain" : "29",
-    "range" : "6",
+    "range" : "17",
     "id" : "61",
     "label" : {
       "IRI-based" : "5",
@@ -1020,7 +1020,7 @@
     }
   }, {
     "domain" : "29",
-    "range" : "18",
+    "range" : "19",
     "id" : "63",
     "label" : {
       "IRI-based" : "7",
@@ -1028,7 +1028,7 @@
     }
   }, {
     "domain" : "29",
-    "range" : "17",
+    "range" : "2",
     "id" : "64",
     "label" : {
       "IRI-based" : "8",
@@ -1037,20 +1037,20 @@
   }, {
     "iri" : "http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy",
     "baseIri" : "http://www.ease-crc.org/ont/SOMA.owl",
-    "range" : "39",
+    "range" : "40",
     "label" : {
       "IRI-based" : "isPerformedBy",
       "en" : "is performed by"
     },
-    "domain" : "30",
+    "domain" : "37",
     "comment" : {
       "en" : "An action is performed by an agent."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "65"
   }, {
     "domain" : "29",
-    "range" : "35",
+    "range" : "24",
     "id" : "66",
     "label" : {
       "IRI-based" : "9",
@@ -1064,7 +1064,7 @@
       "IRI-based" : "actsOn",
       "en" : "acts on"
     },
-    "domain" : "30",
+    "domain" : "37",
     "comment" : {
       "en" : "An action acts on a component."
     },
@@ -1073,7 +1073,7 @@
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#hasAction",
     "baseIri" : "https://w3id.org/psrTask-ontology",
-    "range" : "30",
+    "range" : "37",
     "label" : {
       "IRI-based" : "hasAction",
       "en" : "has action"
@@ -1100,7 +1100,7 @@
     "id" : "70"
   }, {
     "domain" : "29",
-    "range" : "2",
+    "range" : "4",
     "id" : "71",
     "label" : {
       "IRI-based" : "1",
@@ -1109,12 +1109,12 @@
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#isAffordedBy",
     "baseIri" : "https://w3id.org/psrTask-ontology",
-    "range" : "5",
+    "range" : "6",
     "label" : {
       "IRI-based" : "isAffordedBy",
       "en" : "is afforded by"
     },
-    "domain" : "30",
+    "domain" : "37",
     "comment" : {
       "en" : "An action is afforded by an affordance."
     },
@@ -1128,11 +1128,11 @@
       "IRI-based" : "sfOverlaps",
       "en" : "overlaps"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "en" : "The location of a component can overlaps with another component."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "74"
   }, {
     "iri" : "https://w3id.org/psrTask-ontology#hasWorkflow",
@@ -1150,7 +1150,7 @@
     "id" : "75"
   }, {
     "domain" : "1",
-    "range" : "59",
+    "range" : "50",
     "id" : "76",
     "label" : {
       "IRI-based" : "32",
@@ -1158,7 +1158,7 @@
     }
   }, {
     "domain" : "1",
-    "range" : "45",
+    "range" : "4",
     "id" : "77",
     "label" : {
       "IRI-based" : "31",
