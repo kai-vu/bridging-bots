@@ -5,12 +5,14 @@ import os
 import math
 from rdflib import Graph, Namespace, Literal, RDF, URIRef
 import datetime
+import json
 
 ORKA = Namespace("http://w3id.org/def/orka#")
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
 SSN = Namespace("http://www.w3.org/ns/ssn/")
 OBOE = Namespace("http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#")
 OBOE_CHAR = Namespace("http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#")
+
 def extract_color_from_node(node):
     shape = None
     children = node.getField("children")
@@ -78,15 +80,15 @@ def scan_world_objects(supervisor):
         position = node.getPosition()
         color = extract_color_from_node(node)
         shape = extract_shape_from_node(node)
-
-        object_data.append({
-            "id": node_id,
-            "name": name,
-            "typename": typename,
-            "position": [round(p, 3) for p in position] if position else None,
-            "color": [round(c, 3) for c in color] if color else None,
-            "shape": shape
-        })
+        if name:
+            object_data.append({
+                "id": node_id,
+                "name": name,
+                "typename": typename,
+                "position": [round(p, 3) for p in position] if position else None,
+                "color": [round(c, 3) for c in color] if color else None,
+                "shape": shape
+            })
 
     return object_data
 
@@ -166,7 +168,8 @@ TIME_STEP = int(supervisor.getBasicTimeStep())
 print("Scanning world...")
 supervisor.step(TIME_STEP)
 data = scan_world_objects(supervisor)
-
+with open('simple_graph.json', 'w') as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
 create_obs_graph('orka.owl', data)
 
 

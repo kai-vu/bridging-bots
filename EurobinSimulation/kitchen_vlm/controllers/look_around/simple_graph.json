@@ -1,0 +1,1166 @@
+[
+    {
+        "id": 121,
+        "name": "cabinet(1)",
+        "typename": "Cabinet",
+        "position": [
+            2.15,
+            -1.0,
+            0.83
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 699,
+        "name": "cabinet(2)",
+        "typename": "Cabinet",
+        "position": [
+            -0.11,
+            1.65,
+            0.15
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 1478,
+        "name": "cabinet(3)",
+        "typename": "Cabinet",
+        "position": [
+            2.15,
+            -0.1,
+            1.4
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 2432,
+        "name": "cabinet(4)",
+        "typename": "Cabinet",
+        "position": [
+            0.37,
+            1.647,
+            1.4
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 2929,
+        "name": "cabinet(5)",
+        "typename": "Cabinet",
+        "position": [
+            0.79,
+            1.48,
+            0.15
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 3881,
+        "name": "cabinet",
+        "typename": "Cabinet",
+        "position": [
+            2.15,
+            -0.12,
+            0.15
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6208,
+        "name": "floor(1)",
+        "typename": "Solid",
+        "position": [
+            0.0,
+            -0.17,
+            0.0
+        ],
+        "color": null,
+        "shape": "IndexedFaceSet"
+    },
+    {
+        "id": 6220,
+        "name": "plate(1)",
+        "typename": "Solid",
+        "position": [
+            1.52,
+            -0.17,
+            0.887
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6234,
+        "name": "plate(2)",
+        "typename": "Solid",
+        "position": [
+            1.52,
+            -0.17,
+            0.897
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6248,
+        "name": "plate(3)",
+        "typename": "Solid",
+        "position": [
+            1.52,
+            -0.17,
+            0.907
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6262,
+        "name": "plate(4)",
+        "typename": "Solid",
+        "position": [
+            1.52,
+            -0.17,
+            0.918
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6276,
+        "name": "plate(5)",
+        "typename": "Solid",
+        "position": [
+            1.52,
+            -0.17,
+            0.928
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 6343,
+        "name": "TIAGo LITE",
+        "typename": "TiagoLite",
+        "position": [
+            -0.0,
+            0.0,
+            0.095
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7328,
+        "name": "floor",
+        "typename": "Floor",
+        "position": [
+            -0.5,
+            -3.0,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7350,
+        "name": "ceiling",
+        "typename": "Ceiling",
+        "position": [
+            0.0,
+            -1.1,
+            2.4
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7380,
+        "name": "wall(1)",
+        "typename": "Wall",
+        "position": [
+            1.8,
+            1.75,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7401,
+        "name": "wall(2)",
+        "typename": "Wall",
+        "position": [
+            2.25,
+            -0.15,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7422,
+        "name": "wall(3)",
+        "typename": "Wall",
+        "position": [
+            -0.75,
+            1.75,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7443,
+        "name": "wall(4)",
+        "typename": "Wall",
+        "position": [
+            -2.25,
+            1.35,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7464,
+        "name": "wall(5)",
+        "typename": "Wall",
+        "position": [
+            -2.25,
+            -0.45,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7484,
+        "name": "wall(6)",
+        "typename": "Wall",
+        "position": [
+            -2.25,
+            -2.985,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7505,
+        "name": "wall(7)",
+        "typename": "Wall",
+        "position": [
+            -0.5,
+            -3.92,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7526,
+        "name": "wall(8)",
+        "typename": "Wall",
+        "position": [
+            1.25,
+            -2.986,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7546,
+        "name": "wall",
+        "typename": "Wall",
+        "position": [
+            1.75,
+            -2.05,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7668,
+        "name": "door",
+        "typename": "Door",
+        "position": [
+            -2.25,
+            -1.45,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 7992,
+        "name": "box(1)",
+        "typename": "SolidBox",
+        "position": [
+            1.55,
+            -0.12,
+            0.07
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8009,
+        "name": "box(2)",
+        "typename": "SolidBox",
+        "position": [
+            0.65,
+            1.08,
+            0.07
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8026,
+        "name": "box(3)",
+        "typename": "SolidBox",
+        "position": [
+            1.9,
+            -1.12,
+            0.07
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8043,
+        "name": "box(4)",
+        "typename": "SolidBox",
+        "position": [
+            -0.25,
+            1.415,
+            0.07
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8060,
+        "name": "box(5)",
+        "typename": "SolidBox",
+        "position": [
+            -1.23,
+            1.645,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8077,
+        "name": "box(6)",
+        "typename": "SolidBox",
+        "position": [
+            -2.145,
+            0.345,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8094,
+        "name": "box(7)",
+        "typename": "SolidBox",
+        "position": [
+            -2.145,
+            -2.885,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8111,
+        "name": "box(8)",
+        "typename": "SolidBox",
+        "position": [
+            1.645,
+            -1.945,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8128,
+        "name": "box(9)",
+        "typename": "SolidBox",
+        "position": [
+            1.145,
+            -2.88,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8145,
+        "name": "box",
+        "typename": "SolidBox",
+        "position": [
+            -0.495,
+            -3.815,
+            0.03
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8163,
+        "name": "window(1)",
+        "typename": "Window",
+        "position": [
+            -2.25,
+            0.45,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8356,
+        "name": "window",
+        "typename": "Window",
+        "position": [
+            1.05,
+            1.75,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8538,
+        "name": "fridge",
+        "typename": "Fridge",
+        "position": [
+            1.8,
+            -1.57,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8622,
+        "name": "worktop(1)",
+        "typename": "Worktop",
+        "position": [
+            0.345,
+            1.31,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8654,
+        "name": "worktop(2)",
+        "typename": "Worktop",
+        "position": [
+            0.78,
+            1.531,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8686,
+        "name": "worktop(3)",
+        "typename": "Worktop",
+        "position": [
+            0.78,
+            1.003,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8718,
+        "name": "worktop(4)",
+        "typename": "Worktop",
+        "position": [
+            1.22,
+            1.306,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8750,
+        "name": "worktop",
+        "typename": "Worktop",
+        "position": [
+            1.79,
+            0.435,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8777,
+        "name": "sink",
+        "typename": "Sink",
+        "position": [
+            0.78,
+            1.33,
+            0.87
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8809,
+        "name": "hot plate",
+        "typename": "HotPlate",
+        "position": [
+            1.629,
+            1.15,
+            0.86
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8821,
+        "name": "oven",
+        "typename": "Oven",
+        "position": [
+            -0.11,
+            1.24,
+            0.17
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 8865,
+        "name": "solid(1)",
+        "typename": "Solid",
+        "position": [
+            2.01,
+            1.48,
+            2.09
+        ],
+        "color": null,
+        "shape": "Box"
+    },
+    {
+        "id": 8870,
+        "name": "solid(2)",
+        "typename": "Solid",
+        "position": [
+            1.8,
+            1.3,
+            1.742
+        ],
+        "color": null,
+        "shape": "Cylinder"
+    },
+    {
+        "id": 8875,
+        "name": "solid",
+        "typename": "Solid",
+        "position": [
+            1.8,
+            1.3,
+            1.692
+        ],
+        "color": null,
+        "shape": "Cylinder"
+    },
+    {
+        "id": 8896,
+        "name": "table(1)",
+        "typename": "Table",
+        "position": [
+            -1.21,
+            1.31,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9146,
+        "name": "table",
+        "typename": "Table",
+        "position": [
+            -0.65,
+            -1.43,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9380,
+        "name": "ceiling light",
+        "typename": "CeilingLight",
+        "position": [
+            -0.7,
+            -1.5,
+            2.4
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9395,
+        "name": "chair(2)",
+        "typename": "Chair",
+        "position": [
+            -0.64,
+            -2.33,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9433,
+        "name": "chair(4)",
+        "typename": "Chair",
+        "position": [
+            -1.09,
+            -1.05,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9471,
+        "name": "chair(5)",
+        "typename": "Chair",
+        "position": [
+            -0.18,
+            -1.62,
+            0.0
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9509,
+        "name": "carafe",
+        "typename": "Carafe",
+        "position": [
+            -0.63,
+            -0.735,
+            0.739
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9539,
+        "name": "water bottle(1)",
+        "typename": "WaterBottle",
+        "position": [
+            2.032,
+            -1.387,
+            0.583
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9562,
+        "name": "water bottle(2)",
+        "typename": "WaterBottle",
+        "position": [
+            -0.481,
+            -1.156,
+            0.738
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9584,
+        "name": "water bottle(3)",
+        "typename": "WaterBottle",
+        "position": [
+            2.042,
+            -1.645,
+            0.583
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9606,
+        "name": "water bottle(4)",
+        "typename": "WaterBottle",
+        "position": [
+            2.026,
+            -1.732,
+            0.583
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9628,
+        "name": "water bottle",
+        "typename": "WaterBottle",
+        "position": [
+            2.047,
+            -1.825,
+            0.583
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9650,
+        "name": "beer bottle(1)",
+        "typename": "BeerBottle",
+        "position": [
+            2.041,
+            -1.611,
+            0.297
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9673,
+        "name": "can(1)",
+        "typename": "Can",
+        "position": [
+            1.942,
+            -1.537,
+            0.361
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9684,
+        "name": "can",
+        "typename": "Can",
+        "position": [
+            1.722,
+            -1.517,
+            0.361
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9695,
+        "name": "beer bottle(2)",
+        "typename": "BeerBottle",
+        "position": [
+            1.887,
+            -1.712,
+            0.297
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9717,
+        "name": "beer bottle",
+        "typename": "BeerBottle",
+        "position": [
+            1.895,
+            -1.384,
+            0.297
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9739,
+        "name": "fruit bowl(1)",
+        "typename": "FruitBowl",
+        "position": [
+            1.772,
+            -1.627,
+            0.05
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9757,
+        "name": "fruit bowl",
+        "typename": "FruitBowl",
+        "position": [
+            -0.686,
+            -1.754,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9775,
+        "name": "apple(1)",
+        "typename": "Apple",
+        "position": [
+            -0.743,
+            -1.698,
+            0.799
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9786,
+        "name": "apple(2)",
+        "typename": "Apple",
+        "position": [
+            1.643,
+            -0.498,
+            0.94
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9796,
+        "name": "apple",
+        "typename": "Apple",
+        "position": [
+            -0.643,
+            -1.81,
+            0.799
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9806,
+        "name": "orange(1)",
+        "typename": "Orange",
+        "position": [
+            -0.691,
+            -1.752,
+            0.865
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9818,
+        "name": "orange(2)",
+        "typename": "Orange",
+        "position": [
+            1.714,
+            -1.57,
+            0.109
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9830,
+        "name": "orange(3)",
+        "typename": "Orange",
+        "position": [
+            -0.64,
+            -1.697,
+            0.799
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9842,
+        "name": "orange(4)",
+        "typename": "Orange",
+        "position": [
+            1.718,
+            -1.685,
+            0.109
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9854,
+        "name": "orange(5)",
+        "typename": "Orange",
+        "position": [
+            1.844,
+            -1.7,
+            0.155
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9866,
+        "name": "orange(6)",
+        "typename": "Orange",
+        "position": [
+            1.689,
+            -1.628,
+            0.186
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9878,
+        "name": "orange(7)",
+        "typename": "Orange",
+        "position": [
+            1.846,
+            -1.553,
+            0.16
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9890,
+        "name": "orange",
+        "typename": "Orange",
+        "position": [
+            1.798,
+            -1.625,
+            0.109
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9902,
+        "name": "cookware",
+        "typename": "Cookware",
+        "position": [
+            1.667,
+            1.32,
+            0.89
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9944,
+        "name": "lid",
+        "typename": "Lid",
+        "position": [
+            1.667,
+            1.32,
+            0.96
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9962,
+        "name": "wooden spoon",
+        "typename": "WoodenSpoon",
+        "position": [
+            1.249,
+            1.376,
+            0.889
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9977,
+        "name": "fork",
+        "typename": "Fork",
+        "position": [
+            -0.97,
+            -0.901,
+            0.741
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 9990,
+        "name": "spoon(1)",
+        "typename": "Spoon",
+        "position": [
+            -0.97,
+            -1.221,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10005,
+        "name": "spoon",
+        "typename": "Spoon",
+        "position": [
+            -0.849,
+            -1.021,
+            0.742
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10020,
+        "name": "knife",
+        "typename": "Knife",
+        "position": [
+            -0.99,
+            -1.151,
+            0.739
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10031,
+        "name": "plate",
+        "typename": "Plate",
+        "position": [
+            -0.97,
+            -1.03,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10046,
+        "name": "plate(6)",
+        "typename": "Plate",
+        "position": [
+            -0.3,
+            -0.71,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10060,
+        "name": "plate(7)",
+        "typename": "Plate",
+        "position": [
+            -0.3,
+            -0.71,
+            0.75
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10074,
+        "name": "glass",
+        "typename": "Glass",
+        "position": [
+            -0.8,
+            -1.0,
+            0.739
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10088,
+        "name": "wine glass",
+        "typename": "Wineglass",
+        "position": [
+            -0.788,
+            -1.098,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10113,
+        "name": "honey jar",
+        "typename": "HoneyJar",
+        "position": [
+            1.714,
+            0.704,
+            0.889
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10129,
+        "name": "jam jar(1)",
+        "typename": "JamJar",
+        "position": [
+            1.712,
+            -0.302,
+            0.889
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10148,
+        "name": "cereal box(3)",
+        "typename": "Solid",
+        "position": [
+            1.845,
+            0.197,
+            0.93
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10160,
+        "name": "cereal box(4)",
+        "typename": "CerealBox",
+        "position": [
+            1.578,
+            0.196,
+            1.007
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10173,
+        "name": "biscuit box",
+        "typename": "BiscuitBox",
+        "position": [
+            -0.34,
+            -1.41,
+            0.74
+        ],
+        "color": null,
+        "shape": null
+    },
+    {
+        "id": 10186,
+        "name": "salt",
+        "typename": "Solid",
+        "position": [
+            1.63,
+            -0.62,
+            0.95
+        ],
+        "color": null,
+        "shape": "Box"
+    }
+]

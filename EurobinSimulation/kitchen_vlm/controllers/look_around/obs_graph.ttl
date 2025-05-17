@@ -35,405 +35,393 @@ terms:title a owl:AnnotationProperty .
 
 swrla:isRuleEnabled a owl:AnnotationProperty .
 
-orka:Obs_10000_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10000_2025_05_16_22_16_46 ;
-    orka:hasID 10000 .
+orka:Obs_10005_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10005_2025_05_17_22_03_57 ;
+    orka:hasID 10005 .
 
-orka:Obs_10015_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10015_2025_05_16_22_16_46 ;
-    orka:hasID 10015 .
+orka:Obs_10020_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10020_2025_05_17_22_03_57 ;
+    orka:hasID 10020 .
 
-orka:Obs_10026_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10026_2025_05_16_22_16_46 ;
-    orka:hasID 10026 .
+orka:Obs_10031_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10031_2025_05_17_22_03_57 ;
+    orka:hasID 10031 .
 
-orka:Obs_10041_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10041_2025_05_16_22_16_46 ;
-    orka:hasID 10041 .
+orka:Obs_10046_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10046_2025_05_17_22_03_57 ;
+    orka:hasID 10046 .
 
-orka:Obs_10055_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10055_2025_05_16_22_16_46 ;
-    orka:hasID 10055 .
+orka:Obs_10060_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10060_2025_05_17_22_03_57 ;
+    orka:hasID 10060 .
 
-orka:Obs_10069_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10069_2025_05_16_22_16_46 ;
-    orka:hasID 10069 .
+orka:Obs_10074_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10074_2025_05_17_22_03_57 ;
+    orka:hasID 10074 .
 
-orka:Obs_10083_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10083_2025_05_16_22_16_46 ;
-    orka:hasID 10083 .
+orka:Obs_10088_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10088_2025_05_17_22_03_57 ;
+    orka:hasID 10088 .
 
-orka:Obs_10108_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10108_2025_05_16_22_16_46 ;
-    orka:hasID 10108 .
+orka:Obs_10113_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10113_2025_05_17_22_03_57 ;
+    orka:hasID 10113 .
 
-orka:Obs_10124_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10124_2025_05_16_22_16_46 ;
-    orka:hasID 10124 .
+orka:Obs_10129_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10129_2025_05_17_22_03_57 ;
+    orka:hasID 10129 .
 
-orka:Obs_10143_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10143_2025_05_16_22_16_46 ;
-    orka:hasID 10143 .
+orka:Obs_10148_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10148_2025_05_17_22_03_57 ;
+    orka:hasID 10148 .
 
-orka:Obs_10155_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10155_2025_05_16_22_16_46 ;
-    orka:hasID 10155 .
+orka:Obs_10160_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10160_2025_05_17_22_03_57 ;
+    orka:hasID 10160 .
 
-orka:Obs_10168_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10168_2025_05_16_22_16_46 ;
-    orka:hasID 10168 .
+orka:Obs_10173_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10173_2025_05_17_22_03_57 ;
+    orka:hasID 10173 .
 
-orka:Obs_10181_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_10181_2025_05_16_22_16_46 ;
-    orka:hasID 10181 .
+orka:Obs_10186_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_10186_2025_05_17_22_03_57 ;
+    orka:hasID 10186 .
 
-orka:Obs_116_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_116_2025_05_16_22_16_46 ;
-    orka:hasID 116 .
+orka:Obs_121_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_121_2025_05_17_22_03_57 ;
+    orka:hasID 121 .
 
-orka:Obs_1473_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_1473_2025_05_16_22_16_46 ;
-    orka:hasID 1473 .
+orka:Obs_1478_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_1478_2025_05_17_22_03_57 ;
+    orka:hasID 1478 .
 
-orka:Obs_1_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_1_2025_05_16_22_16_46 ;
-    orka:hasID 1 .
+orka:Obs_2432_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_2432_2025_05_17_22_03_57 ;
+    orka:hasID 2432 .
 
-orka:Obs_2427_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_2427_2025_05_16_22_16_46 ;
-    orka:hasID 2427 .
+orka:Obs_2929_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_2929_2025_05_17_22_03_57 ;
+    orka:hasID 2929 .
 
-orka:Obs_2924_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_2924_2025_05_16_22_16_46 ;
-    orka:hasID 2924 .
+orka:Obs_3881_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_3881_2025_05_17_22_03_57 ;
+    orka:hasID 3881 .
 
-orka:Obs_2_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_2_2025_05_16_22_16_46 ;
-    orka:hasID 2 .
+orka:Obs_6208_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6208_2025_05_17_22_03_57 ;
+    orka:hasID 6208 .
 
-orka:Obs_3876_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_3876_2025_05_16_22_16_46 ;
-    orka:hasID 3876 .
+orka:Obs_6220_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6220_2025_05_17_22_03_57 ;
+    orka:hasID 6220 .
 
-orka:Obs_3_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_3_2025_05_16_22_16_46 ;
-    orka:hasID 3 .
+orka:Obs_6234_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6234_2025_05_17_22_03_57 ;
+    orka:hasID 6234 .
 
-orka:Obs_6203_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6203_2025_05_16_22_16_46 ;
-    orka:hasID 6203 .
+orka:Obs_6248_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6248_2025_05_17_22_03_57 ;
+    orka:hasID 6248 .
 
-orka:Obs_6215_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6215_2025_05_16_22_16_46 ;
-    orka:hasID 6215 .
+orka:Obs_6262_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6262_2025_05_17_22_03_57 ;
+    orka:hasID 6262 .
 
-orka:Obs_6229_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6229_2025_05_16_22_16_46 ;
-    orka:hasID 6229 .
+orka:Obs_6276_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6276_2025_05_17_22_03_57 ;
+    orka:hasID 6276 .
 
-orka:Obs_6243_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6243_2025_05_16_22_16_46 ;
-    orka:hasID 6243 .
+orka:Obs_6343_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_6343_2025_05_17_22_03_57 ;
+    orka:hasID 6343 .
 
-orka:Obs_6257_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6257_2025_05_16_22_16_46 ;
-    orka:hasID 6257 .
+orka:Obs_699_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_699_2025_05_17_22_03_57 ;
+    orka:hasID 699 .
 
-orka:Obs_6271_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6271_2025_05_16_22_16_46 ;
-    orka:hasID 6271 .
+orka:Obs_7328_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7328_2025_05_17_22_03_57 ;
+    orka:hasID 7328 .
 
-orka:Obs_6338_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_6338_2025_05_16_22_16_46 ;
-    orka:hasID 6338 .
+orka:Obs_7350_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7350_2025_05_17_22_03_57 ;
+    orka:hasID 7350 .
 
-orka:Obs_694_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_694_2025_05_16_22_16_46 ;
-    orka:hasID 694 .
+orka:Obs_7380_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7380_2025_05_17_22_03_57 ;
+    orka:hasID 7380 .
 
-orka:Obs_7323_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7323_2025_05_16_22_16_46 ;
-    orka:hasID 7323 .
+orka:Obs_7401_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7401_2025_05_17_22_03_57 ;
+    orka:hasID 7401 .
 
-orka:Obs_7345_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7345_2025_05_16_22_16_46 ;
-    orka:hasID 7345 .
+orka:Obs_7422_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7422_2025_05_17_22_03_57 ;
+    orka:hasID 7422 .
 
-orka:Obs_7375_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7375_2025_05_16_22_16_46 ;
-    orka:hasID 7375 .
+orka:Obs_7443_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7443_2025_05_17_22_03_57 ;
+    orka:hasID 7443 .
 
-orka:Obs_7396_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7396_2025_05_16_22_16_46 ;
-    orka:hasID 7396 .
+orka:Obs_7464_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7464_2025_05_17_22_03_57 ;
+    orka:hasID 7464 .
 
-orka:Obs_7417_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7417_2025_05_16_22_16_46 ;
-    orka:hasID 7417 .
+orka:Obs_7484_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7484_2025_05_17_22_03_57 ;
+    orka:hasID 7484 .
 
-orka:Obs_7438_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7438_2025_05_16_22_16_46 ;
-    orka:hasID 7438 .
+orka:Obs_7505_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7505_2025_05_17_22_03_57 ;
+    orka:hasID 7505 .
 
-orka:Obs_7459_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7459_2025_05_16_22_16_46 ;
-    orka:hasID 7459 .
+orka:Obs_7526_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7526_2025_05_17_22_03_57 ;
+    orka:hasID 7526 .
 
-orka:Obs_7479_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7479_2025_05_16_22_16_46 ;
-    orka:hasID 7479 .
+orka:Obs_7546_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7546_2025_05_17_22_03_57 ;
+    orka:hasID 7546 .
 
-orka:Obs_7500_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7500_2025_05_16_22_16_46 ;
-    orka:hasID 7500 .
+orka:Obs_7668_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7668_2025_05_17_22_03_57 ;
+    orka:hasID 7668 .
 
-orka:Obs_7521_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7521_2025_05_16_22_16_46 ;
-    orka:hasID 7521 .
+orka:Obs_7992_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_7992_2025_05_17_22_03_57 ;
+    orka:hasID 7992 .
 
-orka:Obs_7541_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7541_2025_05_16_22_16_46 ;
-    orka:hasID 7541 .
+orka:Obs_8009_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8009_2025_05_17_22_03_57 ;
+    orka:hasID 8009 .
 
-orka:Obs_7663_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7663_2025_05_16_22_16_46 ;
-    orka:hasID 7663 .
+orka:Obs_8026_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8026_2025_05_17_22_03_57 ;
+    orka:hasID 8026 .
 
-orka:Obs_7987_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_7987_2025_05_16_22_16_46 ;
-    orka:hasID 7987 .
+orka:Obs_8043_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8043_2025_05_17_22_03_57 ;
+    orka:hasID 8043 .
 
-orka:Obs_8004_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8004_2025_05_16_22_16_46 ;
-    orka:hasID 8004 .
+orka:Obs_8060_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8060_2025_05_17_22_03_57 ;
+    orka:hasID 8060 .
 
-orka:Obs_8021_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8021_2025_05_16_22_16_46 ;
-    orka:hasID 8021 .
+orka:Obs_8077_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8077_2025_05_17_22_03_57 ;
+    orka:hasID 8077 .
 
-orka:Obs_8038_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8038_2025_05_16_22_16_46 ;
-    orka:hasID 8038 .
+orka:Obs_8094_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8094_2025_05_17_22_03_57 ;
+    orka:hasID 8094 .
 
-orka:Obs_8055_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8055_2025_05_16_22_16_46 ;
-    orka:hasID 8055 .
+orka:Obs_8111_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8111_2025_05_17_22_03_57 ;
+    orka:hasID 8111 .
 
-orka:Obs_8072_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8072_2025_05_16_22_16_46 ;
-    orka:hasID 8072 .
+orka:Obs_8128_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8128_2025_05_17_22_03_57 ;
+    orka:hasID 8128 .
 
-orka:Obs_8089_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8089_2025_05_16_22_16_46 ;
-    orka:hasID 8089 .
+orka:Obs_8145_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8145_2025_05_17_22_03_57 ;
+    orka:hasID 8145 .
 
-orka:Obs_8106_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8106_2025_05_16_22_16_46 ;
-    orka:hasID 8106 .
+orka:Obs_8163_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8163_2025_05_17_22_03_57 ;
+    orka:hasID 8163 .
 
-orka:Obs_8123_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8123_2025_05_16_22_16_46 ;
-    orka:hasID 8123 .
+orka:Obs_8356_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8356_2025_05_17_22_03_57 ;
+    orka:hasID 8356 .
 
-orka:Obs_8140_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8140_2025_05_16_22_16_46 ;
-    orka:hasID 8140 .
+orka:Obs_8538_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8538_2025_05_17_22_03_57 ;
+    orka:hasID 8538 .
 
-orka:Obs_8158_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8158_2025_05_16_22_16_46 ;
-    orka:hasID 8158 .
+orka:Obs_8622_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8622_2025_05_17_22_03_57 ;
+    orka:hasID 8622 .
 
-orka:Obs_8351_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8351_2025_05_16_22_16_46 ;
-    orka:hasID 8351 .
+orka:Obs_8654_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8654_2025_05_17_22_03_57 ;
+    orka:hasID 8654 .
 
-orka:Obs_8533_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8533_2025_05_16_22_16_46 ;
-    orka:hasID 8533 .
+orka:Obs_8686_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8686_2025_05_17_22_03_57 ;
+    orka:hasID 8686 .
 
-orka:Obs_8617_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8617_2025_05_16_22_16_46 ;
-    orka:hasID 8617 .
+orka:Obs_8718_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8718_2025_05_17_22_03_57 ;
+    orka:hasID 8718 .
 
-orka:Obs_8649_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8649_2025_05_16_22_16_46 ;
-    orka:hasID 8649 .
+orka:Obs_8750_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8750_2025_05_17_22_03_57 ;
+    orka:hasID 8750 .
 
-orka:Obs_8681_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8681_2025_05_16_22_16_46 ;
-    orka:hasID 8681 .
+orka:Obs_8777_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8777_2025_05_17_22_03_57 ;
+    orka:hasID 8777 .
 
-orka:Obs_8713_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8713_2025_05_16_22_16_46 ;
-    orka:hasID 8713 .
+orka:Obs_8809_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8809_2025_05_17_22_03_57 ;
+    orka:hasID 8809 .
 
-orka:Obs_8745_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8745_2025_05_16_22_16_46 ;
-    orka:hasID 8745 .
+orka:Obs_8821_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8821_2025_05_17_22_03_57 ;
+    orka:hasID 8821 .
 
-orka:Obs_8772_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8772_2025_05_16_22_16_46 ;
-    orka:hasID 8772 .
-
-orka:Obs_8804_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8804_2025_05_16_22_16_46 ;
-    orka:hasID 8804 .
-
-orka:Obs_8816_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8816_2025_05_16_22_16_46 ;
-    orka:hasID 8816 .
-
-orka:Obs_8860_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8860_2025_05_16_22_16_46 ;
-    orka:hasID 8860 .
-
-orka:Obs_8865_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8865_2025_05_16_22_16_46 ;
+orka:Obs_8865_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8865_2025_05_17_22_03_57 ;
     orka:hasID 8865 .
 
-orka:Obs_8870_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8870_2025_05_16_22_16_46 ;
+orka:Obs_8870_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8870_2025_05_17_22_03_57 ;
     orka:hasID 8870 .
 
-orka:Obs_8891_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_8891_2025_05_16_22_16_46 ;
-    orka:hasID 8891 .
+orka:Obs_8875_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8875_2025_05_17_22_03_57 ;
+    orka:hasID 8875 .
 
-orka:Obs_9141_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9141_2025_05_16_22_16_46 ;
-    orka:hasID 9141 .
+orka:Obs_8896_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_8896_2025_05_17_22_03_57 ;
+    orka:hasID 8896 .
 
-orka:Obs_9375_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9375_2025_05_16_22_16_46 ;
-    orka:hasID 9375 .
+orka:Obs_9146_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9146_2025_05_17_22_03_57 ;
+    orka:hasID 9146 .
 
-orka:Obs_9390_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9390_2025_05_16_22_16_46 ;
-    orka:hasID 9390 .
+orka:Obs_9380_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9380_2025_05_17_22_03_57 ;
+    orka:hasID 9380 .
 
-orka:Obs_9428_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9428_2025_05_16_22_16_46 ;
-    orka:hasID 9428 .
+orka:Obs_9395_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9395_2025_05_17_22_03_57 ;
+    orka:hasID 9395 .
 
-orka:Obs_9466_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9466_2025_05_16_22_16_46 ;
-    orka:hasID 9466 .
+orka:Obs_9433_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9433_2025_05_17_22_03_57 ;
+    orka:hasID 9433 .
 
-orka:Obs_9504_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9504_2025_05_16_22_16_46 ;
-    orka:hasID 9504 .
+orka:Obs_9471_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9471_2025_05_17_22_03_57 ;
+    orka:hasID 9471 .
 
-orka:Obs_9534_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9534_2025_05_16_22_16_46 ;
-    orka:hasID 9534 .
+orka:Obs_9509_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9509_2025_05_17_22_03_57 ;
+    orka:hasID 9509 .
 
-orka:Obs_9557_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9557_2025_05_16_22_16_46 ;
-    orka:hasID 9557 .
+orka:Obs_9539_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9539_2025_05_17_22_03_57 ;
+    orka:hasID 9539 .
 
-orka:Obs_9579_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9579_2025_05_16_22_16_46 ;
-    orka:hasID 9579 .
+orka:Obs_9562_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9562_2025_05_17_22_03_57 ;
+    orka:hasID 9562 .
 
-orka:Obs_9601_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9601_2025_05_16_22_16_46 ;
-    orka:hasID 9601 .
+orka:Obs_9584_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9584_2025_05_17_22_03_57 ;
+    orka:hasID 9584 .
 
-orka:Obs_9623_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9623_2025_05_16_22_16_46 ;
-    orka:hasID 9623 .
+orka:Obs_9606_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9606_2025_05_17_22_03_57 ;
+    orka:hasID 9606 .
 
-orka:Obs_9645_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9645_2025_05_16_22_16_46 ;
-    orka:hasID 9645 .
+orka:Obs_9628_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9628_2025_05_17_22_03_57 ;
+    orka:hasID 9628 .
 
-orka:Obs_9668_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9668_2025_05_16_22_16_46 ;
-    orka:hasID 9668 .
+orka:Obs_9650_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9650_2025_05_17_22_03_57 ;
+    orka:hasID 9650 .
 
-orka:Obs_9679_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9679_2025_05_16_22_16_46 ;
-    orka:hasID 9679 .
+orka:Obs_9673_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9673_2025_05_17_22_03_57 ;
+    orka:hasID 9673 .
 
-orka:Obs_9690_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9690_2025_05_16_22_16_46 ;
-    orka:hasID 9690 .
+orka:Obs_9684_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9684_2025_05_17_22_03_57 ;
+    orka:hasID 9684 .
 
-orka:Obs_9712_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9712_2025_05_16_22_16_46 ;
-    orka:hasID 9712 .
+orka:Obs_9695_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9695_2025_05_17_22_03_57 ;
+    orka:hasID 9695 .
 
-orka:Obs_9734_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9734_2025_05_16_22_16_46 ;
-    orka:hasID 9734 .
+orka:Obs_9717_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9717_2025_05_17_22_03_57 ;
+    orka:hasID 9717 .
 
-orka:Obs_9752_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9752_2025_05_16_22_16_46 ;
-    orka:hasID 9752 .
+orka:Obs_9739_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9739_2025_05_17_22_03_57 ;
+    orka:hasID 9739 .
 
-orka:Obs_9770_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9770_2025_05_16_22_16_46 ;
-    orka:hasID 9770 .
+orka:Obs_9757_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9757_2025_05_17_22_03_57 ;
+    orka:hasID 9757 .
 
-orka:Obs_9781_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9781_2025_05_16_22_16_46 ;
-    orka:hasID 9781 .
+orka:Obs_9775_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9775_2025_05_17_22_03_57 ;
+    orka:hasID 9775 .
 
-orka:Obs_9791_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9791_2025_05_16_22_16_46 ;
-    orka:hasID 9791 .
+orka:Obs_9786_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9786_2025_05_17_22_03_57 ;
+    orka:hasID 9786 .
 
-orka:Obs_9801_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9801_2025_05_16_22_16_46 ;
-    orka:hasID 9801 .
+orka:Obs_9796_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9796_2025_05_17_22_03_57 ;
+    orka:hasID 9796 .
 
-orka:Obs_9813_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9813_2025_05_16_22_16_46 ;
-    orka:hasID 9813 .
+orka:Obs_9806_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9806_2025_05_17_22_03_57 ;
+    orka:hasID 9806 .
 
-orka:Obs_9825_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9825_2025_05_16_22_16_46 ;
-    orka:hasID 9825 .
+orka:Obs_9818_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9818_2025_05_17_22_03_57 ;
+    orka:hasID 9818 .
 
-orka:Obs_9837_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9837_2025_05_16_22_16_46 ;
-    orka:hasID 9837 .
+orka:Obs_9830_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9830_2025_05_17_22_03_57 ;
+    orka:hasID 9830 .
 
-orka:Obs_9849_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9849_2025_05_16_22_16_46 ;
-    orka:hasID 9849 .
+orka:Obs_9842_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9842_2025_05_17_22_03_57 ;
+    orka:hasID 9842 .
 
-orka:Obs_9861_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9861_2025_05_16_22_16_46 ;
-    orka:hasID 9861 .
+orka:Obs_9854_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9854_2025_05_17_22_03_57 ;
+    orka:hasID 9854 .
 
-orka:Obs_9873_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9873_2025_05_16_22_16_46 ;
-    orka:hasID 9873 .
+orka:Obs_9866_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9866_2025_05_17_22_03_57 ;
+    orka:hasID 9866 .
 
-orka:Obs_9885_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9885_2025_05_16_22_16_46 ;
-    orka:hasID 9885 .
+orka:Obs_9878_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9878_2025_05_17_22_03_57 ;
+    orka:hasID 9878 .
 
-orka:Obs_9897_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9897_2025_05_16_22_16_46 ;
-    orka:hasID 9897 .
+orka:Obs_9890_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9890_2025_05_17_22_03_57 ;
+    orka:hasID 9890 .
 
-orka:Obs_9939_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9939_2025_05_16_22_16_46 ;
-    orka:hasID 9939 .
+orka:Obs_9902_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9902_2025_05_17_22_03_57 ;
+    orka:hasID 9902 .
 
-orka:Obs_9957_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9957_2025_05_16_22_16_46 ;
-    orka:hasID 9957 .
+orka:Obs_9944_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9944_2025_05_17_22_03_57 ;
+    orka:hasID 9944 .
 
-orka:Obs_9972_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9972_2025_05_16_22_16_46 ;
-    orka:hasID 9972 .
+orka:Obs_9962_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9962_2025_05_17_22_03_57 ;
+    orka:hasID 9962 .
 
-orka:Obs_9985_2025_05_16_22_16_46 a oboe:Observation ;
-    oboe:ofEntity orka:Ent_9985_2025_05_16_22_16_46 ;
-    orka:hasID 9985 .
+orka:Obs_9977_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9977_2025_05_17_22_03_57 ;
+    orka:hasID 9977 .
+
+orka:Obs_9990_2025_05_17_22_03_57 a oboe:Observation ;
+    oboe:ofEntity orka:Ent_9990_2025_05_17_22_03_57 ;
+    orka:hasID 9990 .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -978,10 +966,10 @@ TODO: Need to add frame of reference as coordinates (measurements)""" ;
 
 :Person a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue "MSCOCO" ;
+            owl:hasValue "L2CSNET" ;
             owl:onProperty :inDataSet ],
         [ a owl:Restriction ;
-            owl:hasValue "L2CSNET" ;
+            owl:hasValue "MSCOCO" ;
             owl:onProperty :inDataSet ],
         :PhysicalEntity .
 
@@ -1033,14 +1021,14 @@ TODO: Need to add frame of reference as coordinates (measurements)""" ;
 :RPLIDAR_A2 a owl:Class ;
     rdfs:label "RPLiDAR A2" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue 12000 ;
-            owl:onProperty :hasMaxRange ],
-        [ a owl:Restriction ;
             owl:hasValue 0.225 ;
             owl:onProperty :hasAngularResolution ],
         [ a owl:Restriction ;
             owl:hasValue 200 ;
             owl:onProperty :hasMinRange ],
+        [ a owl:Restriction ;
+            owl:hasValue 12000 ;
+            owl:onProperty :hasMaxRange ],
         [ a owl:Restriction ;
             owl:hasValue 10 ;
             owl:onProperty :hasScanningFrequency ],
@@ -1426,1192 +1414,1168 @@ TODO: Need to add frame of reference as coordinates (measurements)""" ;
 
 oboe-core:characteristicFor a owl:ObjectProperty .
 
-orka:Ent_10000_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10000_2025_05_16_22_16_46,
-        orka:char_name_10000_2025_05_16_22_16_46,
-        orka:typename_10000_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10000_2025_05_16_22_16_46 .
-
-orka:Ent_10015_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10015_2025_05_16_22_16_46,
-        orka:char_name_10015_2025_05_16_22_16_46,
-        orka:typename_10015_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10015_2025_05_16_22_16_46 .
-
-orka:Ent_10026_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10026_2025_05_16_22_16_46,
-        orka:char_name_10026_2025_05_16_22_16_46,
-        orka:typename_10026_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10026_2025_05_16_22_16_46 .
-
-orka:Ent_10041_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10041_2025_05_16_22_16_46,
-        orka:char_name_10041_2025_05_16_22_16_46,
-        orka:typename_10041_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10041_2025_05_16_22_16_46 .
-
-orka:Ent_10055_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10055_2025_05_16_22_16_46,
-        orka:char_name_10055_2025_05_16_22_16_46,
-        orka:typename_10055_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10055_2025_05_16_22_16_46 .
-
-orka:Ent_10069_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10069_2025_05_16_22_16_46,
-        orka:char_name_10069_2025_05_16_22_16_46,
-        orka:typename_10069_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10069_2025_05_16_22_16_46 .
-
-orka:Ent_10083_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10083_2025_05_16_22_16_46,
-        orka:char_name_10083_2025_05_16_22_16_46,
-        orka:typename_10083_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10083_2025_05_16_22_16_46 .
-
-orka:Ent_10108_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10108_2025_05_16_22_16_46,
-        orka:char_name_10108_2025_05_16_22_16_46,
-        orka:typename_10108_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10108_2025_05_16_22_16_46 .
-
-orka:Ent_10124_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10124_2025_05_16_22_16_46,
-        orka:char_name_10124_2025_05_16_22_16_46,
-        orka:typename_10124_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10124_2025_05_16_22_16_46 .
-
-orka:Ent_10143_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10143_2025_05_16_22_16_46,
-        orka:char_name_10143_2025_05_16_22_16_46,
-        orka:typename_10143_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10143_2025_05_16_22_16_46 .
-
-orka:Ent_10155_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10155_2025_05_16_22_16_46,
-        orka:char_name_10155_2025_05_16_22_16_46,
-        orka:typename_10155_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10155_2025_05_16_22_16_46 .
-
-orka:Ent_10168_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10168_2025_05_16_22_16_46,
-        orka:char_name_10168_2025_05_16_22_16_46,
-        orka:typename_10168_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10168_2025_05_16_22_16_46 .
-
-orka:Ent_10181_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_10181_2025_05_16_22_16_46,
-        orka:char_name_10181_2025_05_16_22_16_46,
-        orka:typename_10181_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_10181_2025_05_16_22_16_46 .
-
-orka:Ent_116_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_116_2025_05_16_22_16_46,
-        orka:char_name_116_2025_05_16_22_16_46,
-        orka:typename_116_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_116_2025_05_16_22_16_46 .
-
-orka:Ent_1473_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_1473_2025_05_16_22_16_46,
-        orka:char_name_1473_2025_05_16_22_16_46,
-        orka:typename_1473_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_1473_2025_05_16_22_16_46 .
-
-orka:Ent_1_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_1_2025_05_16_22_16_46,
-        orka:typename_1_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_1_2025_05_16_22_16_46 .
-
-orka:Ent_2427_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_2427_2025_05_16_22_16_46,
-        orka:char_name_2427_2025_05_16_22_16_46,
-        orka:typename_2427_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_2427_2025_05_16_22_16_46 .
-
-orka:Ent_2924_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_2924_2025_05_16_22_16_46,
-        orka:char_name_2924_2025_05_16_22_16_46,
-        orka:typename_2924_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_2924_2025_05_16_22_16_46 .
-
-orka:Ent_2_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_2_2025_05_16_22_16_46,
-        orka:typename_2_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_2_2025_05_16_22_16_46 .
-
-orka:Ent_3876_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_3876_2025_05_16_22_16_46,
-        orka:char_name_3876_2025_05_16_22_16_46,
-        orka:typename_3876_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_3876_2025_05_16_22_16_46 .
-
-orka:Ent_3_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_3_2025_05_16_22_16_46,
-        orka:typename_3_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_3_2025_05_16_22_16_46 .
-
-orka:Ent_6203_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6203_2025_05_16_22_16_46,
-        orka:char_name_6203_2025_05_16_22_16_46,
-        orka:typename_6203_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6203_2025_05_16_22_16_46 .
-
-orka:Ent_6215_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6215_2025_05_16_22_16_46,
-        orka:char_name_6215_2025_05_16_22_16_46,
-        orka:typename_6215_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6215_2025_05_16_22_16_46 .
-
-orka:Ent_6229_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6229_2025_05_16_22_16_46,
-        orka:char_name_6229_2025_05_16_22_16_46,
-        orka:typename_6229_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6229_2025_05_16_22_16_46 .
-
-orka:Ent_6243_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6243_2025_05_16_22_16_46,
-        orka:char_name_6243_2025_05_16_22_16_46,
-        orka:typename_6243_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6243_2025_05_16_22_16_46 .
-
-orka:Ent_6257_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6257_2025_05_16_22_16_46,
-        orka:char_name_6257_2025_05_16_22_16_46,
-        orka:typename_6257_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6257_2025_05_16_22_16_46 .
-
-orka:Ent_6271_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6271_2025_05_16_22_16_46,
-        orka:char_name_6271_2025_05_16_22_16_46,
-        orka:typename_6271_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6271_2025_05_16_22_16_46 .
-
-orka:Ent_6338_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_6338_2025_05_16_22_16_46,
-        orka:char_name_6338_2025_05_16_22_16_46,
-        orka:typename_6338_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_6338_2025_05_16_22_16_46 .
-
-orka:Ent_694_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_694_2025_05_16_22_16_46,
-        orka:char_name_694_2025_05_16_22_16_46,
-        orka:typename_694_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_694_2025_05_16_22_16_46 .
-
-orka:Ent_7323_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7323_2025_05_16_22_16_46,
-        orka:char_name_7323_2025_05_16_22_16_46,
-        orka:typename_7323_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7323_2025_05_16_22_16_46 .
-
-orka:Ent_7345_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7345_2025_05_16_22_16_46,
-        orka:char_name_7345_2025_05_16_22_16_46,
-        orka:typename_7345_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7345_2025_05_16_22_16_46 .
-
-orka:Ent_7375_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7375_2025_05_16_22_16_46,
-        orka:char_name_7375_2025_05_16_22_16_46,
-        orka:typename_7375_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7375_2025_05_16_22_16_46 .
-
-orka:Ent_7396_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7396_2025_05_16_22_16_46,
-        orka:char_name_7396_2025_05_16_22_16_46,
-        orka:typename_7396_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7396_2025_05_16_22_16_46 .
-
-orka:Ent_7417_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7417_2025_05_16_22_16_46,
-        orka:char_name_7417_2025_05_16_22_16_46,
-        orka:typename_7417_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7417_2025_05_16_22_16_46 .
-
-orka:Ent_7438_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7438_2025_05_16_22_16_46,
-        orka:char_name_7438_2025_05_16_22_16_46,
-        orka:typename_7438_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7438_2025_05_16_22_16_46 .
-
-orka:Ent_7459_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7459_2025_05_16_22_16_46,
-        orka:char_name_7459_2025_05_16_22_16_46,
-        orka:typename_7459_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7459_2025_05_16_22_16_46 .
-
-orka:Ent_7479_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7479_2025_05_16_22_16_46,
-        orka:char_name_7479_2025_05_16_22_16_46,
-        orka:typename_7479_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7479_2025_05_16_22_16_46 .
-
-orka:Ent_7500_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7500_2025_05_16_22_16_46,
-        orka:char_name_7500_2025_05_16_22_16_46,
-        orka:typename_7500_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7500_2025_05_16_22_16_46 .
-
-orka:Ent_7521_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7521_2025_05_16_22_16_46,
-        orka:char_name_7521_2025_05_16_22_16_46,
-        orka:typename_7521_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7521_2025_05_16_22_16_46 .
-
-orka:Ent_7541_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7541_2025_05_16_22_16_46,
-        orka:char_name_7541_2025_05_16_22_16_46,
-        orka:typename_7541_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7541_2025_05_16_22_16_46 .
-
-orka:Ent_7663_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7663_2025_05_16_22_16_46,
-        orka:char_name_7663_2025_05_16_22_16_46,
-        orka:typename_7663_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7663_2025_05_16_22_16_46 .
-
-orka:Ent_7987_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_7987_2025_05_16_22_16_46,
-        orka:char_name_7987_2025_05_16_22_16_46,
-        orka:typename_7987_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_7987_2025_05_16_22_16_46 .
-
-orka:Ent_8004_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8004_2025_05_16_22_16_46,
-        orka:char_name_8004_2025_05_16_22_16_46,
-        orka:typename_8004_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8004_2025_05_16_22_16_46 .
-
-orka:Ent_8021_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8021_2025_05_16_22_16_46,
-        orka:char_name_8021_2025_05_16_22_16_46,
-        orka:typename_8021_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8021_2025_05_16_22_16_46 .
-
-orka:Ent_8038_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8038_2025_05_16_22_16_46,
-        orka:char_name_8038_2025_05_16_22_16_46,
-        orka:typename_8038_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8038_2025_05_16_22_16_46 .
-
-orka:Ent_8055_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8055_2025_05_16_22_16_46,
-        orka:char_name_8055_2025_05_16_22_16_46,
-        orka:typename_8055_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8055_2025_05_16_22_16_46 .
-
-orka:Ent_8072_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8072_2025_05_16_22_16_46,
-        orka:char_name_8072_2025_05_16_22_16_46,
-        orka:typename_8072_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8072_2025_05_16_22_16_46 .
-
-orka:Ent_8089_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8089_2025_05_16_22_16_46,
-        orka:char_name_8089_2025_05_16_22_16_46,
-        orka:typename_8089_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8089_2025_05_16_22_16_46 .
-
-orka:Ent_8106_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8106_2025_05_16_22_16_46,
-        orka:char_name_8106_2025_05_16_22_16_46,
-        orka:typename_8106_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8106_2025_05_16_22_16_46 .
-
-orka:Ent_8123_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8123_2025_05_16_22_16_46,
-        orka:char_name_8123_2025_05_16_22_16_46,
-        orka:typename_8123_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8123_2025_05_16_22_16_46 .
-
-orka:Ent_8140_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8140_2025_05_16_22_16_46,
-        orka:char_name_8140_2025_05_16_22_16_46,
-        orka:typename_8140_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8140_2025_05_16_22_16_46 .
-
-orka:Ent_8158_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8158_2025_05_16_22_16_46,
-        orka:char_name_8158_2025_05_16_22_16_46,
-        orka:typename_8158_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8158_2025_05_16_22_16_46 .
-
-orka:Ent_8351_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8351_2025_05_16_22_16_46,
-        orka:char_name_8351_2025_05_16_22_16_46,
-        orka:typename_8351_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8351_2025_05_16_22_16_46 .
-
-orka:Ent_8533_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8533_2025_05_16_22_16_46,
-        orka:char_name_8533_2025_05_16_22_16_46,
-        orka:typename_8533_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8533_2025_05_16_22_16_46 .
-
-orka:Ent_8617_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8617_2025_05_16_22_16_46,
-        orka:char_name_8617_2025_05_16_22_16_46,
-        orka:typename_8617_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8617_2025_05_16_22_16_46 .
-
-orka:Ent_8649_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8649_2025_05_16_22_16_46,
-        orka:char_name_8649_2025_05_16_22_16_46,
-        orka:typename_8649_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8649_2025_05_16_22_16_46 .
-
-orka:Ent_8681_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8681_2025_05_16_22_16_46,
-        orka:char_name_8681_2025_05_16_22_16_46,
-        orka:typename_8681_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8681_2025_05_16_22_16_46 .
-
-orka:Ent_8713_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8713_2025_05_16_22_16_46,
-        orka:char_name_8713_2025_05_16_22_16_46,
-        orka:typename_8713_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8713_2025_05_16_22_16_46 .
-
-orka:Ent_8745_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8745_2025_05_16_22_16_46,
-        orka:char_name_8745_2025_05_16_22_16_46,
-        orka:typename_8745_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8745_2025_05_16_22_16_46 .
-
-orka:Ent_8772_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8772_2025_05_16_22_16_46,
-        orka:char_name_8772_2025_05_16_22_16_46,
-        orka:typename_8772_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8772_2025_05_16_22_16_46 .
-
-orka:Ent_8804_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8804_2025_05_16_22_16_46,
-        orka:char_name_8804_2025_05_16_22_16_46,
-        orka:typename_8804_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8804_2025_05_16_22_16_46 .
-
-orka:Ent_8816_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8816_2025_05_16_22_16_46,
-        orka:char_name_8816_2025_05_16_22_16_46,
-        orka:typename_8816_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8816_2025_05_16_22_16_46 .
-
-orka:Ent_8860_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8860_2025_05_16_22_16_46,
-        orka:char_name_8860_2025_05_16_22_16_46,
-        orka:typename_8860_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8860_2025_05_16_22_16_46 .
-
-orka:Ent_8865_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8865_2025_05_16_22_16_46,
-        orka:char_name_8865_2025_05_16_22_16_46,
-        orka:typename_8865_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8865_2025_05_16_22_16_46 .
-
-orka:Ent_8870_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8870_2025_05_16_22_16_46,
-        orka:char_name_8870_2025_05_16_22_16_46,
-        orka:typename_8870_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8870_2025_05_16_22_16_46 .
-
-orka:Ent_8891_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_8891_2025_05_16_22_16_46,
-        orka:char_name_8891_2025_05_16_22_16_46,
-        orka:typename_8891_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_8891_2025_05_16_22_16_46 .
-
-orka:Ent_9141_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9141_2025_05_16_22_16_46,
-        orka:char_name_9141_2025_05_16_22_16_46,
-        orka:typename_9141_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9141_2025_05_16_22_16_46 .
-
-orka:Ent_9375_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9375_2025_05_16_22_16_46,
-        orka:char_name_9375_2025_05_16_22_16_46,
-        orka:typename_9375_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9375_2025_05_16_22_16_46 .
-
-orka:Ent_9390_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9390_2025_05_16_22_16_46,
-        orka:char_name_9390_2025_05_16_22_16_46,
-        orka:typename_9390_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9390_2025_05_16_22_16_46 .
-
-orka:Ent_9428_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9428_2025_05_16_22_16_46,
-        orka:char_name_9428_2025_05_16_22_16_46,
-        orka:typename_9428_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9428_2025_05_16_22_16_46 .
-
-orka:Ent_9466_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9466_2025_05_16_22_16_46,
-        orka:char_name_9466_2025_05_16_22_16_46,
-        orka:typename_9466_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9466_2025_05_16_22_16_46 .
-
-orka:Ent_9504_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9504_2025_05_16_22_16_46,
-        orka:char_name_9504_2025_05_16_22_16_46,
-        orka:typename_9504_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9504_2025_05_16_22_16_46 .
-
-orka:Ent_9534_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9534_2025_05_16_22_16_46,
-        orka:char_name_9534_2025_05_16_22_16_46,
-        orka:typename_9534_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9534_2025_05_16_22_16_46 .
-
-orka:Ent_9557_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9557_2025_05_16_22_16_46,
-        orka:char_name_9557_2025_05_16_22_16_46,
-        orka:typename_9557_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9557_2025_05_16_22_16_46 .
-
-orka:Ent_9579_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9579_2025_05_16_22_16_46,
-        orka:char_name_9579_2025_05_16_22_16_46,
-        orka:typename_9579_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9579_2025_05_16_22_16_46 .
-
-orka:Ent_9601_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9601_2025_05_16_22_16_46,
-        orka:char_name_9601_2025_05_16_22_16_46,
-        orka:typename_9601_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9601_2025_05_16_22_16_46 .
-
-orka:Ent_9623_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9623_2025_05_16_22_16_46,
-        orka:char_name_9623_2025_05_16_22_16_46,
-        orka:typename_9623_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9623_2025_05_16_22_16_46 .
-
-orka:Ent_9645_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9645_2025_05_16_22_16_46,
-        orka:char_name_9645_2025_05_16_22_16_46,
-        orka:typename_9645_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9645_2025_05_16_22_16_46 .
-
-orka:Ent_9668_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9668_2025_05_16_22_16_46,
-        orka:char_name_9668_2025_05_16_22_16_46,
-        orka:typename_9668_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9668_2025_05_16_22_16_46 .
-
-orka:Ent_9679_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9679_2025_05_16_22_16_46,
-        orka:char_name_9679_2025_05_16_22_16_46,
-        orka:typename_9679_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9679_2025_05_16_22_16_46 .
-
-orka:Ent_9690_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9690_2025_05_16_22_16_46,
-        orka:char_name_9690_2025_05_16_22_16_46,
-        orka:typename_9690_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9690_2025_05_16_22_16_46 .
-
-orka:Ent_9712_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9712_2025_05_16_22_16_46,
-        orka:char_name_9712_2025_05_16_22_16_46,
-        orka:typename_9712_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9712_2025_05_16_22_16_46 .
-
-orka:Ent_9734_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9734_2025_05_16_22_16_46,
-        orka:char_name_9734_2025_05_16_22_16_46,
-        orka:typename_9734_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9734_2025_05_16_22_16_46 .
-
-orka:Ent_9752_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9752_2025_05_16_22_16_46,
-        orka:char_name_9752_2025_05_16_22_16_46,
-        orka:typename_9752_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9752_2025_05_16_22_16_46 .
-
-orka:Ent_9770_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9770_2025_05_16_22_16_46,
-        orka:char_name_9770_2025_05_16_22_16_46,
-        orka:typename_9770_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9770_2025_05_16_22_16_46 .
-
-orka:Ent_9781_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9781_2025_05_16_22_16_46,
-        orka:char_name_9781_2025_05_16_22_16_46,
-        orka:typename_9781_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9781_2025_05_16_22_16_46 .
-
-orka:Ent_9791_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9791_2025_05_16_22_16_46,
-        orka:char_name_9791_2025_05_16_22_16_46,
-        orka:typename_9791_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9791_2025_05_16_22_16_46 .
-
-orka:Ent_9801_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9801_2025_05_16_22_16_46,
-        orka:char_name_9801_2025_05_16_22_16_46,
-        orka:typename_9801_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9801_2025_05_16_22_16_46 .
-
-orka:Ent_9813_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9813_2025_05_16_22_16_46,
-        orka:char_name_9813_2025_05_16_22_16_46,
-        orka:typename_9813_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9813_2025_05_16_22_16_46 .
-
-orka:Ent_9825_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9825_2025_05_16_22_16_46,
-        orka:char_name_9825_2025_05_16_22_16_46,
-        orka:typename_9825_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9825_2025_05_16_22_16_46 .
-
-orka:Ent_9837_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9837_2025_05_16_22_16_46,
-        orka:char_name_9837_2025_05_16_22_16_46,
-        orka:typename_9837_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9837_2025_05_16_22_16_46 .
-
-orka:Ent_9849_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9849_2025_05_16_22_16_46,
-        orka:char_name_9849_2025_05_16_22_16_46,
-        orka:typename_9849_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9849_2025_05_16_22_16_46 .
-
-orka:Ent_9861_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9861_2025_05_16_22_16_46,
-        orka:char_name_9861_2025_05_16_22_16_46,
-        orka:typename_9861_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9861_2025_05_16_22_16_46 .
-
-orka:Ent_9873_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9873_2025_05_16_22_16_46,
-        orka:char_name_9873_2025_05_16_22_16_46,
-        orka:typename_9873_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9873_2025_05_16_22_16_46 .
-
-orka:Ent_9885_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9885_2025_05_16_22_16_46,
-        orka:char_name_9885_2025_05_16_22_16_46,
-        orka:typename_9885_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9885_2025_05_16_22_16_46 .
-
-orka:Ent_9897_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9897_2025_05_16_22_16_46,
-        orka:char_name_9897_2025_05_16_22_16_46,
-        orka:typename_9897_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9897_2025_05_16_22_16_46 .
-
-orka:Ent_9939_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9939_2025_05_16_22_16_46,
-        orka:char_name_9939_2025_05_16_22_16_46,
-        orka:typename_9939_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9939_2025_05_16_22_16_46 .
-
-orka:Ent_9957_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9957_2025_05_16_22_16_46,
-        orka:char_name_9957_2025_05_16_22_16_46,
-        orka:typename_9957_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9957_2025_05_16_22_16_46 .
-
-orka:Ent_9972_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9972_2025_05_16_22_16_46,
-        orka:char_name_9972_2025_05_16_22_16_46,
-        orka:typename_9972_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9972_2025_05_16_22_16_46 .
-
-orka:Ent_9985_2025_05_16_22_16_46 a oboe:Entity ;
-    orka:hasCharacteristic orka:Loc_9985_2025_05_16_22_16_46,
-        orka:char_name_9985_2025_05_16_22_16_46,
-        orka:typename_9985_2025_05_16_22_16_46 ;
-    orka:hasLocation orka:Loc_9985_2025_05_16_22_16_46 .
-
-orka:char_name_10000_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:Ent_10005_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10005_2025_05_17_22_03_57,
+        orka:char_name_10005_2025_05_17_22_03_57,
+        orka:typename_10005_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10005_2025_05_17_22_03_57 .
+
+orka:Ent_10020_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10020_2025_05_17_22_03_57,
+        orka:char_name_10020_2025_05_17_22_03_57,
+        orka:typename_10020_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10020_2025_05_17_22_03_57 .
+
+orka:Ent_10031_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10031_2025_05_17_22_03_57,
+        orka:char_name_10031_2025_05_17_22_03_57,
+        orka:typename_10031_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10031_2025_05_17_22_03_57 .
+
+orka:Ent_10046_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10046_2025_05_17_22_03_57,
+        orka:char_name_10046_2025_05_17_22_03_57,
+        orka:typename_10046_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10046_2025_05_17_22_03_57 .
+
+orka:Ent_10060_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10060_2025_05_17_22_03_57,
+        orka:char_name_10060_2025_05_17_22_03_57,
+        orka:typename_10060_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10060_2025_05_17_22_03_57 .
+
+orka:Ent_10074_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10074_2025_05_17_22_03_57,
+        orka:char_name_10074_2025_05_17_22_03_57,
+        orka:typename_10074_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10074_2025_05_17_22_03_57 .
+
+orka:Ent_10088_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10088_2025_05_17_22_03_57,
+        orka:char_name_10088_2025_05_17_22_03_57,
+        orka:typename_10088_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10088_2025_05_17_22_03_57 .
+
+orka:Ent_10113_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10113_2025_05_17_22_03_57,
+        orka:char_name_10113_2025_05_17_22_03_57,
+        orka:typename_10113_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10113_2025_05_17_22_03_57 .
+
+orka:Ent_10129_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10129_2025_05_17_22_03_57,
+        orka:char_name_10129_2025_05_17_22_03_57,
+        orka:typename_10129_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10129_2025_05_17_22_03_57 .
+
+orka:Ent_10148_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10148_2025_05_17_22_03_57,
+        orka:char_name_10148_2025_05_17_22_03_57,
+        orka:typename_10148_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10148_2025_05_17_22_03_57 .
+
+orka:Ent_10160_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10160_2025_05_17_22_03_57,
+        orka:char_name_10160_2025_05_17_22_03_57,
+        orka:typename_10160_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10160_2025_05_17_22_03_57 .
+
+orka:Ent_10173_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10173_2025_05_17_22_03_57,
+        orka:char_name_10173_2025_05_17_22_03_57,
+        orka:typename_10173_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10173_2025_05_17_22_03_57 .
+
+orka:Ent_10186_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_10186_2025_05_17_22_03_57,
+        orka:char_name_10186_2025_05_17_22_03_57,
+        orka:typename_10186_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_10186_2025_05_17_22_03_57 .
+
+orka:Ent_121_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_121_2025_05_17_22_03_57,
+        orka:char_name_121_2025_05_17_22_03_57,
+        orka:typename_121_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_121_2025_05_17_22_03_57 .
+
+orka:Ent_1478_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_1478_2025_05_17_22_03_57,
+        orka:char_name_1478_2025_05_17_22_03_57,
+        orka:typename_1478_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_1478_2025_05_17_22_03_57 .
+
+orka:Ent_2432_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_2432_2025_05_17_22_03_57,
+        orka:char_name_2432_2025_05_17_22_03_57,
+        orka:typename_2432_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_2432_2025_05_17_22_03_57 .
+
+orka:Ent_2929_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_2929_2025_05_17_22_03_57,
+        orka:char_name_2929_2025_05_17_22_03_57,
+        orka:typename_2929_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_2929_2025_05_17_22_03_57 .
+
+orka:Ent_3881_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_3881_2025_05_17_22_03_57,
+        orka:char_name_3881_2025_05_17_22_03_57,
+        orka:typename_3881_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_3881_2025_05_17_22_03_57 .
+
+orka:Ent_6208_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6208_2025_05_17_22_03_57,
+        orka:char_name_6208_2025_05_17_22_03_57,
+        orka:typename_6208_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6208_2025_05_17_22_03_57 .
+
+orka:Ent_6220_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6220_2025_05_17_22_03_57,
+        orka:char_name_6220_2025_05_17_22_03_57,
+        orka:typename_6220_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6220_2025_05_17_22_03_57 .
+
+orka:Ent_6234_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6234_2025_05_17_22_03_57,
+        orka:char_name_6234_2025_05_17_22_03_57,
+        orka:typename_6234_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6234_2025_05_17_22_03_57 .
+
+orka:Ent_6248_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6248_2025_05_17_22_03_57,
+        orka:char_name_6248_2025_05_17_22_03_57,
+        orka:typename_6248_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6248_2025_05_17_22_03_57 .
+
+orka:Ent_6262_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6262_2025_05_17_22_03_57,
+        orka:char_name_6262_2025_05_17_22_03_57,
+        orka:typename_6262_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6262_2025_05_17_22_03_57 .
+
+orka:Ent_6276_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6276_2025_05_17_22_03_57,
+        orka:char_name_6276_2025_05_17_22_03_57,
+        orka:typename_6276_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6276_2025_05_17_22_03_57 .
+
+orka:Ent_6343_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_6343_2025_05_17_22_03_57,
+        orka:char_name_6343_2025_05_17_22_03_57,
+        orka:typename_6343_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_6343_2025_05_17_22_03_57 .
+
+orka:Ent_699_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_699_2025_05_17_22_03_57,
+        orka:char_name_699_2025_05_17_22_03_57,
+        orka:typename_699_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_699_2025_05_17_22_03_57 .
+
+orka:Ent_7328_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7328_2025_05_17_22_03_57,
+        orka:char_name_7328_2025_05_17_22_03_57,
+        orka:typename_7328_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7328_2025_05_17_22_03_57 .
+
+orka:Ent_7350_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7350_2025_05_17_22_03_57,
+        orka:char_name_7350_2025_05_17_22_03_57,
+        orka:typename_7350_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7350_2025_05_17_22_03_57 .
+
+orka:Ent_7380_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7380_2025_05_17_22_03_57,
+        orka:char_name_7380_2025_05_17_22_03_57,
+        orka:typename_7380_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7380_2025_05_17_22_03_57 .
+
+orka:Ent_7401_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7401_2025_05_17_22_03_57,
+        orka:char_name_7401_2025_05_17_22_03_57,
+        orka:typename_7401_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7401_2025_05_17_22_03_57 .
+
+orka:Ent_7422_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7422_2025_05_17_22_03_57,
+        orka:char_name_7422_2025_05_17_22_03_57,
+        orka:typename_7422_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7422_2025_05_17_22_03_57 .
+
+orka:Ent_7443_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7443_2025_05_17_22_03_57,
+        orka:char_name_7443_2025_05_17_22_03_57,
+        orka:typename_7443_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7443_2025_05_17_22_03_57 .
+
+orka:Ent_7464_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7464_2025_05_17_22_03_57,
+        orka:char_name_7464_2025_05_17_22_03_57,
+        orka:typename_7464_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7464_2025_05_17_22_03_57 .
+
+orka:Ent_7484_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7484_2025_05_17_22_03_57,
+        orka:char_name_7484_2025_05_17_22_03_57,
+        orka:typename_7484_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7484_2025_05_17_22_03_57 .
+
+orka:Ent_7505_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7505_2025_05_17_22_03_57,
+        orka:char_name_7505_2025_05_17_22_03_57,
+        orka:typename_7505_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7505_2025_05_17_22_03_57 .
+
+orka:Ent_7526_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7526_2025_05_17_22_03_57,
+        orka:char_name_7526_2025_05_17_22_03_57,
+        orka:typename_7526_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7526_2025_05_17_22_03_57 .
+
+orka:Ent_7546_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7546_2025_05_17_22_03_57,
+        orka:char_name_7546_2025_05_17_22_03_57,
+        orka:typename_7546_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7546_2025_05_17_22_03_57 .
+
+orka:Ent_7668_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7668_2025_05_17_22_03_57,
+        orka:char_name_7668_2025_05_17_22_03_57,
+        orka:typename_7668_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7668_2025_05_17_22_03_57 .
+
+orka:Ent_7992_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_7992_2025_05_17_22_03_57,
+        orka:char_name_7992_2025_05_17_22_03_57,
+        orka:typename_7992_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_7992_2025_05_17_22_03_57 .
+
+orka:Ent_8009_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8009_2025_05_17_22_03_57,
+        orka:char_name_8009_2025_05_17_22_03_57,
+        orka:typename_8009_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8009_2025_05_17_22_03_57 .
+
+orka:Ent_8026_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8026_2025_05_17_22_03_57,
+        orka:char_name_8026_2025_05_17_22_03_57,
+        orka:typename_8026_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8026_2025_05_17_22_03_57 .
+
+orka:Ent_8043_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8043_2025_05_17_22_03_57,
+        orka:char_name_8043_2025_05_17_22_03_57,
+        orka:typename_8043_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8043_2025_05_17_22_03_57 .
+
+orka:Ent_8060_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8060_2025_05_17_22_03_57,
+        orka:char_name_8060_2025_05_17_22_03_57,
+        orka:typename_8060_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8060_2025_05_17_22_03_57 .
+
+orka:Ent_8077_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8077_2025_05_17_22_03_57,
+        orka:char_name_8077_2025_05_17_22_03_57,
+        orka:typename_8077_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8077_2025_05_17_22_03_57 .
+
+orka:Ent_8094_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8094_2025_05_17_22_03_57,
+        orka:char_name_8094_2025_05_17_22_03_57,
+        orka:typename_8094_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8094_2025_05_17_22_03_57 .
+
+orka:Ent_8111_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8111_2025_05_17_22_03_57,
+        orka:char_name_8111_2025_05_17_22_03_57,
+        orka:typename_8111_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8111_2025_05_17_22_03_57 .
+
+orka:Ent_8128_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8128_2025_05_17_22_03_57,
+        orka:char_name_8128_2025_05_17_22_03_57,
+        orka:typename_8128_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8128_2025_05_17_22_03_57 .
+
+orka:Ent_8145_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8145_2025_05_17_22_03_57,
+        orka:char_name_8145_2025_05_17_22_03_57,
+        orka:typename_8145_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8145_2025_05_17_22_03_57 .
+
+orka:Ent_8163_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8163_2025_05_17_22_03_57,
+        orka:char_name_8163_2025_05_17_22_03_57,
+        orka:typename_8163_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8163_2025_05_17_22_03_57 .
+
+orka:Ent_8356_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8356_2025_05_17_22_03_57,
+        orka:char_name_8356_2025_05_17_22_03_57,
+        orka:typename_8356_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8356_2025_05_17_22_03_57 .
+
+orka:Ent_8538_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8538_2025_05_17_22_03_57,
+        orka:char_name_8538_2025_05_17_22_03_57,
+        orka:typename_8538_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8538_2025_05_17_22_03_57 .
+
+orka:Ent_8622_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8622_2025_05_17_22_03_57,
+        orka:char_name_8622_2025_05_17_22_03_57,
+        orka:typename_8622_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8622_2025_05_17_22_03_57 .
+
+orka:Ent_8654_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8654_2025_05_17_22_03_57,
+        orka:char_name_8654_2025_05_17_22_03_57,
+        orka:typename_8654_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8654_2025_05_17_22_03_57 .
+
+orka:Ent_8686_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8686_2025_05_17_22_03_57,
+        orka:char_name_8686_2025_05_17_22_03_57,
+        orka:typename_8686_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8686_2025_05_17_22_03_57 .
+
+orka:Ent_8718_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8718_2025_05_17_22_03_57,
+        orka:char_name_8718_2025_05_17_22_03_57,
+        orka:typename_8718_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8718_2025_05_17_22_03_57 .
+
+orka:Ent_8750_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8750_2025_05_17_22_03_57,
+        orka:char_name_8750_2025_05_17_22_03_57,
+        orka:typename_8750_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8750_2025_05_17_22_03_57 .
+
+orka:Ent_8777_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8777_2025_05_17_22_03_57,
+        orka:char_name_8777_2025_05_17_22_03_57,
+        orka:typename_8777_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8777_2025_05_17_22_03_57 .
+
+orka:Ent_8809_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8809_2025_05_17_22_03_57,
+        orka:char_name_8809_2025_05_17_22_03_57,
+        orka:typename_8809_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8809_2025_05_17_22_03_57 .
+
+orka:Ent_8821_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8821_2025_05_17_22_03_57,
+        orka:char_name_8821_2025_05_17_22_03_57,
+        orka:typename_8821_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8821_2025_05_17_22_03_57 .
+
+orka:Ent_8865_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8865_2025_05_17_22_03_57,
+        orka:char_name_8865_2025_05_17_22_03_57,
+        orka:typename_8865_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8865_2025_05_17_22_03_57 .
+
+orka:Ent_8870_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8870_2025_05_17_22_03_57,
+        orka:char_name_8870_2025_05_17_22_03_57,
+        orka:typename_8870_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8870_2025_05_17_22_03_57 .
+
+orka:Ent_8875_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8875_2025_05_17_22_03_57,
+        orka:char_name_8875_2025_05_17_22_03_57,
+        orka:typename_8875_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8875_2025_05_17_22_03_57 .
+
+orka:Ent_8896_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_8896_2025_05_17_22_03_57,
+        orka:char_name_8896_2025_05_17_22_03_57,
+        orka:typename_8896_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_8896_2025_05_17_22_03_57 .
+
+orka:Ent_9146_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9146_2025_05_17_22_03_57,
+        orka:char_name_9146_2025_05_17_22_03_57,
+        orka:typename_9146_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9146_2025_05_17_22_03_57 .
+
+orka:Ent_9380_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9380_2025_05_17_22_03_57,
+        orka:char_name_9380_2025_05_17_22_03_57,
+        orka:typename_9380_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9380_2025_05_17_22_03_57 .
+
+orka:Ent_9395_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9395_2025_05_17_22_03_57,
+        orka:char_name_9395_2025_05_17_22_03_57,
+        orka:typename_9395_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9395_2025_05_17_22_03_57 .
+
+orka:Ent_9433_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9433_2025_05_17_22_03_57,
+        orka:char_name_9433_2025_05_17_22_03_57,
+        orka:typename_9433_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9433_2025_05_17_22_03_57 .
+
+orka:Ent_9471_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9471_2025_05_17_22_03_57,
+        orka:char_name_9471_2025_05_17_22_03_57,
+        orka:typename_9471_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9471_2025_05_17_22_03_57 .
+
+orka:Ent_9509_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9509_2025_05_17_22_03_57,
+        orka:char_name_9509_2025_05_17_22_03_57,
+        orka:typename_9509_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9509_2025_05_17_22_03_57 .
+
+orka:Ent_9539_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9539_2025_05_17_22_03_57,
+        orka:char_name_9539_2025_05_17_22_03_57,
+        orka:typename_9539_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9539_2025_05_17_22_03_57 .
+
+orka:Ent_9562_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9562_2025_05_17_22_03_57,
+        orka:char_name_9562_2025_05_17_22_03_57,
+        orka:typename_9562_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9562_2025_05_17_22_03_57 .
+
+orka:Ent_9584_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9584_2025_05_17_22_03_57,
+        orka:char_name_9584_2025_05_17_22_03_57,
+        orka:typename_9584_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9584_2025_05_17_22_03_57 .
+
+orka:Ent_9606_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9606_2025_05_17_22_03_57,
+        orka:char_name_9606_2025_05_17_22_03_57,
+        orka:typename_9606_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9606_2025_05_17_22_03_57 .
+
+orka:Ent_9628_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9628_2025_05_17_22_03_57,
+        orka:char_name_9628_2025_05_17_22_03_57,
+        orka:typename_9628_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9628_2025_05_17_22_03_57 .
+
+orka:Ent_9650_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9650_2025_05_17_22_03_57,
+        orka:char_name_9650_2025_05_17_22_03_57,
+        orka:typename_9650_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9650_2025_05_17_22_03_57 .
+
+orka:Ent_9673_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9673_2025_05_17_22_03_57,
+        orka:char_name_9673_2025_05_17_22_03_57,
+        orka:typename_9673_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9673_2025_05_17_22_03_57 .
+
+orka:Ent_9684_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9684_2025_05_17_22_03_57,
+        orka:char_name_9684_2025_05_17_22_03_57,
+        orka:typename_9684_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9684_2025_05_17_22_03_57 .
+
+orka:Ent_9695_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9695_2025_05_17_22_03_57,
+        orka:char_name_9695_2025_05_17_22_03_57,
+        orka:typename_9695_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9695_2025_05_17_22_03_57 .
+
+orka:Ent_9717_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9717_2025_05_17_22_03_57,
+        orka:char_name_9717_2025_05_17_22_03_57,
+        orka:typename_9717_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9717_2025_05_17_22_03_57 .
+
+orka:Ent_9739_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9739_2025_05_17_22_03_57,
+        orka:char_name_9739_2025_05_17_22_03_57,
+        orka:typename_9739_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9739_2025_05_17_22_03_57 .
+
+orka:Ent_9757_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9757_2025_05_17_22_03_57,
+        orka:char_name_9757_2025_05_17_22_03_57,
+        orka:typename_9757_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9757_2025_05_17_22_03_57 .
+
+orka:Ent_9775_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9775_2025_05_17_22_03_57,
+        orka:char_name_9775_2025_05_17_22_03_57,
+        orka:typename_9775_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9775_2025_05_17_22_03_57 .
+
+orka:Ent_9786_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9786_2025_05_17_22_03_57,
+        orka:char_name_9786_2025_05_17_22_03_57,
+        orka:typename_9786_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9786_2025_05_17_22_03_57 .
+
+orka:Ent_9796_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9796_2025_05_17_22_03_57,
+        orka:char_name_9796_2025_05_17_22_03_57,
+        orka:typename_9796_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9796_2025_05_17_22_03_57 .
+
+orka:Ent_9806_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9806_2025_05_17_22_03_57,
+        orka:char_name_9806_2025_05_17_22_03_57,
+        orka:typename_9806_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9806_2025_05_17_22_03_57 .
+
+orka:Ent_9818_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9818_2025_05_17_22_03_57,
+        orka:char_name_9818_2025_05_17_22_03_57,
+        orka:typename_9818_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9818_2025_05_17_22_03_57 .
+
+orka:Ent_9830_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9830_2025_05_17_22_03_57,
+        orka:char_name_9830_2025_05_17_22_03_57,
+        orka:typename_9830_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9830_2025_05_17_22_03_57 .
+
+orka:Ent_9842_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9842_2025_05_17_22_03_57,
+        orka:char_name_9842_2025_05_17_22_03_57,
+        orka:typename_9842_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9842_2025_05_17_22_03_57 .
+
+orka:Ent_9854_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9854_2025_05_17_22_03_57,
+        orka:char_name_9854_2025_05_17_22_03_57,
+        orka:typename_9854_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9854_2025_05_17_22_03_57 .
+
+orka:Ent_9866_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9866_2025_05_17_22_03_57,
+        orka:char_name_9866_2025_05_17_22_03_57,
+        orka:typename_9866_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9866_2025_05_17_22_03_57 .
+
+orka:Ent_9878_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9878_2025_05_17_22_03_57,
+        orka:char_name_9878_2025_05_17_22_03_57,
+        orka:typename_9878_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9878_2025_05_17_22_03_57 .
+
+orka:Ent_9890_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9890_2025_05_17_22_03_57,
+        orka:char_name_9890_2025_05_17_22_03_57,
+        orka:typename_9890_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9890_2025_05_17_22_03_57 .
+
+orka:Ent_9902_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9902_2025_05_17_22_03_57,
+        orka:char_name_9902_2025_05_17_22_03_57,
+        orka:typename_9902_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9902_2025_05_17_22_03_57 .
+
+orka:Ent_9944_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9944_2025_05_17_22_03_57,
+        orka:char_name_9944_2025_05_17_22_03_57,
+        orka:typename_9944_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9944_2025_05_17_22_03_57 .
+
+orka:Ent_9962_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9962_2025_05_17_22_03_57,
+        orka:char_name_9962_2025_05_17_22_03_57,
+        orka:typename_9962_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9962_2025_05_17_22_03_57 .
+
+orka:Ent_9977_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9977_2025_05_17_22_03_57,
+        orka:char_name_9977_2025_05_17_22_03_57,
+        orka:typename_9977_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9977_2025_05_17_22_03_57 .
+
+orka:Ent_9990_2025_05_17_22_03_57 a oboe:Entity ;
+    orka:hasCharacteristic orka:Loc_9990_2025_05_17_22_03_57,
+        orka:char_name_9990_2025_05_17_22_03_57,
+        orka:typename_9990_2025_05_17_22_03_57 ;
+    orka:hasLocation orka:Loc_9990_2025_05_17_22_03_57 .
+
+orka:char_name_10005_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "spoon" .
 
-orka:char_name_10015_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10020_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "knife" .
 
-orka:char_name_10026_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10031_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate" .
 
-orka:char_name_10041_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10046_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(6)" .
 
-orka:char_name_10055_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10060_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(7)" .
 
-orka:char_name_10069_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10074_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "glass" .
 
-orka:char_name_10083_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10088_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wine glass" .
 
-orka:char_name_10108_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10113_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "honey jar" .
 
-orka:char_name_10124_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10129_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "jam jar(1)" .
 
-orka:char_name_10143_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10148_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cereal box(3)" .
 
-orka:char_name_10155_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10160_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cereal box(4)" .
 
-orka:char_name_10168_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10173_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "biscuit box" .
 
-orka:char_name_10181_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_10186_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "salt" .
 
-orka:char_name_116_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_121_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet(1)" .
 
-orka:char_name_1473_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_1478_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet(3)" .
 
-orka:char_name_2427_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_2432_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet(4)" .
 
-orka:char_name_2924_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_2929_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet(5)" .
 
-orka:char_name_3876_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_3881_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet" .
 
-orka:char_name_6203_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6208_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "floor(1)" .
 
-orka:char_name_6215_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6220_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(1)" .
 
-orka:char_name_6229_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6234_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(2)" .
 
-orka:char_name_6243_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6248_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(3)" .
 
-orka:char_name_6257_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6262_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(4)" .
 
-orka:char_name_6271_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6276_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "plate(5)" .
 
-orka:char_name_6338_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_6343_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "TIAGo LITE" .
 
-orka:char_name_694_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_699_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cabinet(2)" .
 
-orka:char_name_7323_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7328_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "floor" .
 
-orka:char_name_7345_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7350_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "ceiling" .
 
-orka:char_name_7375_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7380_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(1)" .
 
-orka:char_name_7396_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7401_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(2)" .
 
-orka:char_name_7417_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7422_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(3)" .
 
-orka:char_name_7438_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7443_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(4)" .
 
-orka:char_name_7459_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7464_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(5)" .
 
-orka:char_name_7479_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7484_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(6)" .
 
-orka:char_name_7500_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7505_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(7)" .
 
-orka:char_name_7521_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7526_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall(8)" .
 
-orka:char_name_7541_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7546_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wall" .
 
-orka:char_name_7663_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7668_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "door" .
 
-orka:char_name_7987_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_7992_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(1)" .
 
-orka:char_name_8004_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8009_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(2)" .
 
-orka:char_name_8021_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8026_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(3)" .
 
-orka:char_name_8038_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8043_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(4)" .
 
-orka:char_name_8055_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8060_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(5)" .
 
-orka:char_name_8072_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8077_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(6)" .
 
-orka:char_name_8089_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8094_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(7)" .
 
-orka:char_name_8106_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8111_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(8)" .
 
-orka:char_name_8123_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8128_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box(9)" .
 
-orka:char_name_8140_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8145_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "box" .
 
-orka:char_name_8158_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8163_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "window(1)" .
 
-orka:char_name_8351_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8356_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "window" .
 
-orka:char_name_8533_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8538_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "fridge" .
 
-orka:char_name_8617_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8622_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "worktop(1)" .
 
-orka:char_name_8649_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8654_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "worktop(2)" .
 
-orka:char_name_8681_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8686_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "worktop(3)" .
 
-orka:char_name_8713_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8718_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "worktop(4)" .
 
-orka:char_name_8745_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8750_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "worktop" .
 
-orka:char_name_8772_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8777_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "sink" .
 
-orka:char_name_8804_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8809_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "hot plate" .
 
-orka:char_name_8816_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8821_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "oven" .
 
-orka:char_name_8860_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8865_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "solid(1)" .
 
-orka:char_name_8865_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8870_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "solid(2)" .
 
-orka:char_name_8870_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8875_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "solid" .
 
-orka:char_name_8891_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_8896_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "table(1)" .
 
-orka:char_name_9141_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9146_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "table" .
 
-orka:char_name_9375_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9380_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "ceiling light" .
 
-orka:char_name_9390_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9395_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "chair(2)" .
 
-orka:char_name_9428_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9433_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "chair(4)" .
 
-orka:char_name_9466_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9471_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "chair(5)" .
 
-orka:char_name_9504_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9509_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "carafe" .
 
-orka:char_name_9534_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9539_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "water bottle(1)" .
 
-orka:char_name_9557_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9562_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "water bottle(2)" .
 
-orka:char_name_9579_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9584_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "water bottle(3)" .
 
-orka:char_name_9601_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9606_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "water bottle(4)" .
 
-orka:char_name_9623_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9628_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "water bottle" .
 
-orka:char_name_9645_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9650_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "beer bottle(1)" .
 
-orka:char_name_9668_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9673_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "can(1)" .
 
-orka:char_name_9679_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9684_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "can" .
 
-orka:char_name_9690_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9695_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "beer bottle(2)" .
 
-orka:char_name_9712_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9717_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "beer bottle" .
 
-orka:char_name_9734_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9739_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "fruit bowl(1)" .
 
-orka:char_name_9752_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9757_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "fruit bowl" .
 
-orka:char_name_9770_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9775_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "apple(1)" .
 
-orka:char_name_9781_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9786_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "apple(2)" .
 
-orka:char_name_9791_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9796_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "apple" .
 
-orka:char_name_9801_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9806_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(1)" .
 
-orka:char_name_9813_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9818_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(2)" .
 
-orka:char_name_9825_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9830_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(3)" .
 
-orka:char_name_9837_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9842_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(4)" .
 
-orka:char_name_9849_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9854_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(5)" .
 
-orka:char_name_9861_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9866_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(6)" .
 
-orka:char_name_9873_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9878_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange(7)" .
 
-orka:char_name_9885_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9890_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "orange" .
 
-orka:char_name_9897_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9902_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "cookware" .
 
-orka:char_name_9939_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9944_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "lid" .
 
-orka:char_name_9957_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9962_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "wooden spoon" .
 
-orka:char_name_9972_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9977_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "fork" .
 
-orka:char_name_9985_2025_05_16_22_16_46 a oboe-char:Name ;
+orka:char_name_9990_2025_05_17_22_03_57 a oboe-char:Name ;
     orka:hasValue "spoon(1)" .
 
-orka:typename_10000_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10005_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Spoon" .
 
-orka:typename_10015_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10020_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Knife" .
 
-orka:typename_10026_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10031_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Plate" .
 
-orka:typename_10041_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10046_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Plate" .
 
-orka:typename_10055_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10060_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Plate" .
 
-orka:typename_10069_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10074_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Glass" .
 
-orka:typename_10083_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10088_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wineglass" .
 
-orka:typename_10108_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10113_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "HoneyJar" .
 
-orka:typename_10124_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10129_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "JamJar" .
 
-orka:typename_10143_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10148_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_10155_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10160_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "CerealBox" .
 
-orka:typename_10168_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10173_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "BiscuitBox" .
 
-orka:typename_10181_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_10186_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_116_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_121_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_1473_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_1478_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_1_2025_05_16_22_16_46 a orka:ObjectType ;
-    orka:hasValue "WorldInfo" .
-
-orka:typename_2427_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_2432_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_2924_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_2929_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_2_2025_05_16_22_16_46 a orka:ObjectType ;
-    orka:hasValue "Viewpoint" .
-
-orka:typename_3876_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_3881_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_3_2025_05_16_22_16_46 a orka:ObjectType ;
-    orka:hasValue "TexturedBackground" .
-
-orka:typename_6203_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6208_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6215_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6220_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6229_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6234_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6243_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6248_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6257_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6262_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6271_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6276_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_6338_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_6343_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "TiagoLite" .
 
-orka:typename_694_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_699_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cabinet" .
 
-orka:typename_7323_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7328_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Floor" .
 
-orka:typename_7345_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7350_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Ceiling" .
 
-orka:typename_7375_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7380_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7396_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7401_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7417_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7422_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7438_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7443_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7459_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7464_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7479_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7484_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7500_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7505_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7521_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7526_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7541_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7546_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Wall" .
 
-orka:typename_7663_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7668_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Door" .
 
-orka:typename_7987_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_7992_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8004_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8009_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8021_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8026_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8038_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8043_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8055_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8060_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8072_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8077_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8089_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8094_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8106_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8111_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8123_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8128_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8140_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8145_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "SolidBox" .
 
-orka:typename_8158_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8163_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Window" .
 
-orka:typename_8351_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8356_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Window" .
 
-orka:typename_8533_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8538_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Fridge" .
 
-orka:typename_8617_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8622_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Worktop" .
 
-orka:typename_8649_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8654_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Worktop" .
 
-orka:typename_8681_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8686_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Worktop" .
 
-orka:typename_8713_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8718_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Worktop" .
 
-orka:typename_8745_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8750_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Worktop" .
 
-orka:typename_8772_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8777_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Sink" .
 
-orka:typename_8804_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8809_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "HotPlate" .
 
-orka:typename_8816_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8821_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Oven" .
 
-orka:typename_8860_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8865_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_8865_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8870_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_8870_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8875_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Solid" .
 
-orka:typename_8891_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_8896_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Table" .
 
-orka:typename_9141_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9146_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Table" .
 
-orka:typename_9375_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9380_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "CeilingLight" .
 
-orka:typename_9390_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9395_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Chair" .
 
-orka:typename_9428_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9433_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Chair" .
 
-orka:typename_9466_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9471_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Chair" .
 
-orka:typename_9504_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9509_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Carafe" .
 
-orka:typename_9534_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9539_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WaterBottle" .
 
-orka:typename_9557_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9562_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WaterBottle" .
 
-orka:typename_9579_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9584_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WaterBottle" .
 
-orka:typename_9601_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9606_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WaterBottle" .
 
-orka:typename_9623_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9628_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WaterBottle" .
 
-orka:typename_9645_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9650_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "BeerBottle" .
 
-orka:typename_9668_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9673_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Can" .
 
-orka:typename_9679_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9684_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Can" .
 
-orka:typename_9690_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9695_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "BeerBottle" .
 
-orka:typename_9712_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9717_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "BeerBottle" .
 
-orka:typename_9734_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9739_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "FruitBowl" .
 
-orka:typename_9752_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9757_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "FruitBowl" .
 
-orka:typename_9770_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9775_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Apple" .
 
-orka:typename_9781_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9786_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Apple" .
 
-orka:typename_9791_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9796_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Apple" .
 
-orka:typename_9801_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9806_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9813_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9818_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9825_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9830_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9837_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9842_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9849_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9854_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9861_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9866_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9873_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9878_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9885_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9890_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Orange" .
 
-orka:typename_9897_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9902_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Cookware" .
 
-orka:typename_9939_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9944_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Lid" .
 
-orka:typename_9957_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9962_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "WoodenSpoon" .
 
-orka:typename_9972_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9977_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Fork" .
 
-orka:typename_9985_2025_05_16_22_16_46 a orka:ObjectType ;
+orka:typename_9990_2025_05_17_22_03_57 a orka:ObjectType ;
     orka:hasValue "Spoon" .
 
 sosa:Observation a owl:Class ;
@@ -2732,11 +2696,11 @@ ssn:System a owl:Class ;
 
 :Orange a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue "https://dbpedia.org/resource/Orange_(fruit)" ;
-            owl:onProperty :hasDBpediaURI ],
-        [ a owl:Restriction ;
             owl:hasValue "MSCOCO" ;
             owl:onProperty :inDataSet ],
+        [ a owl:Restriction ;
+            owl:hasValue "https://dbpedia.org/resource/Orange_(fruit)" ;
+            owl:onProperty :hasDBpediaURI ],
         [ a owl:Restriction ;
             owl:hasValue "https://www.wikidata.org/wiki/Q13191" ;
             owl:onProperty :hasWikiDataURI ],
@@ -2763,15 +2727,15 @@ ssn:System a owl:Class ;
             owl:onProperty oboe-core:standardFor ],
         [ a owl:Restriction ;
             owl:onProperty oboe-core:hasUnit ;
+            owl:someValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Radian> ],
+        [ a owl:Restriction ;
+            owl:onProperty oboe-core:hasUnit ;
             owl:someValuesFrom [ a owl:Class ;
                     owl:intersectionOf ( oboe-core:DerivedUnit [ a owl:Restriction ;
                                 owl:allValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Second> ;
                                 owl:onProperty oboe-core:hasUnit ] [ a owl:Restriction ;
                                 owl:hasValue -1 ;
                                 owl:onProperty oboe-core:hasPower ] ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty oboe-core:hasUnit ;
-            owl:someValuesFrom <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Radian> ],
         oboe-core:CompositeUnit .
 
 :Roll a owl:Class ;
@@ -2840,11 +2804,11 @@ ssn:System a owl:Class ;
             owl:hasValue 1280 ;
             owl:onProperty :hasInputSize ],
         [ a owl:Restriction ;
-            owl:hasValue 44.8 ;
-            owl:onProperty :hasmAPval50-95 ],
-        [ a owl:Restriction ;
             owl:hasValue 8.2 ;
             owl:onProperty :hasInferenceSpeedCPUb1 ],
+        [ a owl:Restriction ;
+            owl:hasValue 44.8 ;
+            owl:onProperty :hasmAPval50-95 ],
         :YOLO .
 
 :YOLOv5x a owl:Class ;
@@ -2933,304 +2897,295 @@ oboe-core:Observation a owl:Class .
 oboe-core:ofEntity a owl:ObjectProperty ;
     owl:inverseOf :observedIn .
 
-orka:Loc_10000_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10005_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.849,-1.021,0.742" .
 
-orka:Loc_10015_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10020_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.99,-1.151,0.739" .
 
-orka:Loc_10026_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10031_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.97,-1.03,0.74" .
 
-orka:Loc_10041_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10046_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.3,-0.71,0.74" .
 
-orka:Loc_10055_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10060_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.3,-0.71,0.75" .
 
-orka:Loc_10069_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10074_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.8,-1.0,0.739" .
 
-orka:Loc_10083_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10088_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.788,-1.098,0.74" .
 
-orka:Loc_10108_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10113_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.714,0.704,0.889" .
 
-orka:Loc_10124_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10129_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.712,-0.302,0.889" .
 
-orka:Loc_10143_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10148_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.845,0.197,0.93" .
 
-orka:Loc_10155_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10160_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.578,0.196,1.007" .
 
-orka:Loc_10168_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10173_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.34,-1.41,0.74" .
 
-orka:Loc_10181_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_10186_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.63,-0.62,0.95" .
 
-orka:Loc_116_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_121_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.15,-1.0,0.83" .
 
-orka:Loc_1473_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_1478_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.15,-0.1,1.4" .
 
-orka:Loc_1_2025_05_16_22_16_46 a orka:Location ;
-    orka:hasValue "nan,nan,nan" .
-
-orka:Loc_2427_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_2432_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.37,1.647,1.4" .
 
-orka:Loc_2924_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_2929_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.79,1.48,0.15" .
 
-orka:Loc_2_2025_05_16_22_16_46 a orka:Location ;
-    orka:hasValue "nan,nan,nan" .
-
-orka:Loc_3876_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_3881_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.15,-0.12,0.15" .
 
-orka:Loc_3_2025_05_16_22_16_46 a orka:Location ;
-    orka:hasValue "nan,nan,nan" .
-
-orka:Loc_6203_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6208_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.0,-0.17,0.0" .
 
-orka:Loc_6215_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6220_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.52,-0.17,0.887" .
 
-orka:Loc_6229_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6234_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.52,-0.17,0.897" .
 
-orka:Loc_6243_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6248_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.52,-0.17,0.907" .
 
-orka:Loc_6257_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6262_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.52,-0.17,0.918" .
 
-orka:Loc_6271_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6276_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.52,-0.17,0.928" .
 
-orka:Loc_6338_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_6343_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.0,0.0,0.095" .
 
-orka:Loc_694_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_699_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.11,1.65,0.15" .
 
-orka:Loc_7323_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7328_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.5,-3.0,0.0" .
 
-orka:Loc_7345_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7350_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.0,-1.1,2.4" .
 
-orka:Loc_7375_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7380_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.8,1.75,0.0" .
 
-orka:Loc_7396_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7401_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.25,-0.15,0.0" .
 
-orka:Loc_7417_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7422_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.75,1.75,0.0" .
 
-orka:Loc_7438_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7443_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.25,1.35,0.0" .
 
-orka:Loc_7459_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7464_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.25,-0.45,0.0" .
 
-orka:Loc_7479_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7484_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.25,-2.985,0.0" .
 
-orka:Loc_7500_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7505_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.5,-3.92,0.0" .
 
-orka:Loc_7521_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7526_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.25,-2.986,0.0" .
 
-orka:Loc_7541_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7546_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.75,-2.05,0.0" .
 
-orka:Loc_7663_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7668_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.25,-1.45,0.0" .
 
-orka:Loc_7987_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_7992_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.55,-0.12,0.07" .
 
-orka:Loc_8004_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8009_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.65,1.08,0.07" .
 
-orka:Loc_8021_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8026_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.9,-1.12,0.07" .
 
-orka:Loc_8038_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8043_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.25,1.415,0.07" .
 
-orka:Loc_8055_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8060_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-1.23,1.645,0.03" .
 
-orka:Loc_8072_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8077_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.145,0.345,0.03" .
 
-orka:Loc_8089_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8094_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.145,-2.885,0.03" .
 
-orka:Loc_8106_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8111_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.645,-1.945,0.03" .
 
-orka:Loc_8123_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8128_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.145,-2.88,0.03" .
 
-orka:Loc_8140_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8145_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.495,-3.815,0.03" .
 
-orka:Loc_8158_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8163_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-2.25,0.45,0.0" .
 
-orka:Loc_8351_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8356_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.05,1.75,0.0" .
 
-orka:Loc_8533_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8538_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.8,-1.57,0.0" .
 
-orka:Loc_8617_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8622_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.345,1.31,0.86" .
 
-orka:Loc_8649_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8654_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.78,1.531,0.86" .
 
-orka:Loc_8681_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8686_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.78,1.003,0.86" .
 
-orka:Loc_8713_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8718_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.22,1.306,0.86" .
 
-orka:Loc_8745_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8750_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.79,0.435,0.86" .
 
-orka:Loc_8772_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8777_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "0.78,1.33,0.87" .
 
-orka:Loc_8804_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8809_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.629,1.15,0.86" .
 
-orka:Loc_8816_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8821_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.11,1.24,0.17" .
 
-orka:Loc_8860_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8865_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.01,1.48,2.09" .
 
-orka:Loc_8865_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8870_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.8,1.3,1.742" .
 
-orka:Loc_8870_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8875_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.8,1.3,1.692" .
 
-orka:Loc_8891_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_8896_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-1.21,1.31,0.0" .
 
-orka:Loc_9141_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9146_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.65,-1.43,0.0" .
 
-orka:Loc_9375_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9380_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.7,-1.5,2.4" .
 
-orka:Loc_9390_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9395_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.64,-2.33,0.0" .
 
-orka:Loc_9428_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9433_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-1.09,-1.05,0.0" .
 
-orka:Loc_9466_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9471_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.18,-1.62,0.0" .
 
-orka:Loc_9504_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9509_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.63,-0.735,0.739" .
 
-orka:Loc_9534_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9539_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.032,-1.387,0.583" .
 
-orka:Loc_9557_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9562_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.481,-1.156,0.738" .
 
-orka:Loc_9579_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9584_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.042,-1.645,0.583" .
 
-orka:Loc_9601_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9606_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.026,-1.732,0.583" .
 
-orka:Loc_9623_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9628_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.047,-1.825,0.583" .
 
-orka:Loc_9645_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9650_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "2.041,-1.611,0.297" .
 
-orka:Loc_9668_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9673_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.942,-1.537,0.361" .
 
-orka:Loc_9679_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9684_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.722,-1.517,0.361" .
 
-orka:Loc_9690_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9695_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.887,-1.712,0.297" .
 
-orka:Loc_9712_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9717_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.895,-1.384,0.297" .
 
-orka:Loc_9734_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9739_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.772,-1.627,0.05" .
 
-orka:Loc_9752_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9757_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.686,-1.754,0.74" .
 
-orka:Loc_9770_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9775_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.743,-1.698,0.799" .
 
-orka:Loc_9781_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9786_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.643,-0.498,0.94" .
 
-orka:Loc_9791_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9796_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.643,-1.81,0.799" .
 
-orka:Loc_9801_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9806_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.691,-1.752,0.865" .
 
-orka:Loc_9813_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9818_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.714,-1.57,0.109" .
 
-orka:Loc_9825_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9830_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.64,-1.697,0.799" .
 
-orka:Loc_9837_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9842_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.718,-1.685,0.109" .
 
-orka:Loc_9849_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9854_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.844,-1.7,0.155" .
 
-orka:Loc_9861_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9866_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.689,-1.628,0.186" .
 
-orka:Loc_9873_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9878_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.846,-1.553,0.16" .
 
-orka:Loc_9885_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9890_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.798,-1.625,0.109" .
 
-orka:Loc_9897_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9902_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.667,1.32,0.89" .
 
-orka:Loc_9939_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9944_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.667,1.32,0.96" .
 
-orka:Loc_9957_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9962_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "1.249,1.376,0.889" .
 
-orka:Loc_9972_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9977_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.97,-0.901,0.741" .
 
-orka:Loc_9985_2025_05_16_22_16_46 a orka:Location ;
+orka:Loc_9990_2025_05_17_22_03_57 a orka:Location ;
     orka:hasValue "-0.97,-1.221,0.74" .
 
 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/c> a swrl:Variable .
@@ -3507,11 +3462,11 @@ TODO: Add motor as observed entity, and as part_of Robot""" ;
     rdfs:comment """A sensor that detects and measures physical contact or touch.
 When these sensors activate, the activation implies the location of an entity at the range of the sensor. Examples include capacitive touchscreens, force-sensitive resistors, and tactile sensors used in robotics."""@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue "0.0"^^xsd:float ;
-            owl:onProperty :hasMeasurementRange ],
-        [ a owl:Restriction ;
             owl:allValuesFrom :Location ;
             owl:onProperty sosa:observes ],
+        [ a owl:Restriction ;
+            owl:hasValue "0.0"^^xsd:float ;
+            owl:onProperty :hasMeasurementRange ],
         sosa:Sensor,
         :Exteroceptor_Sensor ;
     :hasWeBotsName "touch_sensor" .
@@ -3529,11 +3484,11 @@ When these sensors activate, the activation implies the location of an entity at
 
 oboe-core:Entity a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :describedBy ;
-            owl:someValuesFrom :Knowledge_Repository ],
-        [ a owl:Restriction ;
             owl:onProperty :hasCharacteristic ;
-            owl:someValuesFrom oboe-core:Characteristic ] .
+            owl:someValuesFrom oboe-core:Characteristic ],
+        [ a owl:Restriction ;
+            owl:onProperty :describedBy ;
+            owl:someValuesFrom :Knowledge_Repository ] .
 
 sosa:Sensor a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -3580,36 +3535,7 @@ Despite the name, these entities can be virtual.""" ;
 :inDataSet a owl:DatatypeProperty .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :Shape :SizeProperty :Structure ) .
-
-[] a swrl:Imp ;
-    rdfs:label "CanDetect" ;
-    swrla:isRuleEnabled true ;
-    rdfs:comment "" ;
-    swrl:body [ a swrl:AtomList ;
-            rdf:first [ a swrl:DatavaluedPropertyAtom ;
-                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
-                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
-                    swrl:propertyPredicate :inDataSet ] ;
-            rdf:rest [ a swrl:AtomList ;
-                    rdf:first [ a swrl:DatavaluedPropertyAtom ;
-                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
-                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
-                            swrl:propertyPredicate :trainedOnDataSet ] ;
-                    rdf:rest [ a swrl:AtomList ;
-                            rdf:first [ a swrl:ClassAtom ;
-                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
-                                    swrl:classPredicate sosa:Procedure ] ;
-                            rdf:rest () ] ] ] ;
-    swrl:head [ a swrl:AtomList ;
-            rdf:first [ a swrl:IndividualPropertyAtom ;
-                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
-                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
-                    swrl:propertyPredicate :canDetect ] ;
-            rdf:rest () ] .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Age :CreationDate :DestructionDate :ExpirationDate ) .
+    owl:members ( :Color :GeometricProperty :Pattern ) .
 
 [] a swrl:Imp ;
     rdfs:label "Touch Sensor Detection" ;
@@ -3657,13 +3583,45 @@ Despite the name, these entities can be virtual.""" ;
                     rdf:rest () ] ] .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :YOLOv5l :YOLOv5l6 :YOLOv5m :YOLOv5m6 :YOLOv5n :YOLOv5n6 :YOLOv5s :YOLOv5s6 :YOLOv5x :YOLOv5x6 ) .
+    owl:members ( :Shape :SizeProperty :Structure ) .
+
+[] a swrl:Imp ;
+    rdfs:label "CanDetect" ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment "" ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:DatavaluedPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
+                    swrl:propertyPredicate :inDataSet ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:DatavaluedPropertyAtom ;
+                            swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                            swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/dataset> ;
+                            swrl:propertyPredicate :trainedOnDataSet ] ;
+                    rdf:rest [ a swrl:AtomList ;
+                            rdf:first [ a swrl:ClassAtom ;
+                                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                                    swrl:classPredicate sosa:Procedure ] ;
+                            rdf:rest () ] ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:IndividualPropertyAtom ;
+                    swrl:argument1 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/alg> ;
+                    swrl:argument2 <http://www.semanticweb.org/mark/ontologies/2024/5/untitled-ontology-8/e> ;
+                    swrl:propertyPredicate :canDetect ] ;
+            rdf:rest () ] .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :Color :GeometricProperty :Pattern ) .
+    owl:members ( :Age :CreationDate :DestructionDate :ExpirationDate ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :MaterialProperty :SpatialProperty :TemporalProperty :ThermalProperty :VisualCharactersitic ) .
+    owl:members ( :Pitch :Roll :Yaw ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MaterialProperty :SpatialProperty :ThermalProperty :VisualCharactersitic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Depth :Height :Length :SurfaceArea :Volume :Width ) .
 
 [] a swrl:Imp ;
     rdfs:label "Proprioception" ;
@@ -3705,14 +3663,11 @@ Despite the name, these entities can be virtual.""" ;
             rdf:rest () ] .
 
 [] a owl:AllDisjointClasses ;
+    owl:members ( :YOLOv5l :YOLOv5l6 :YOLOv5m :YOLOv5m6 :YOLOv5n :YOLOv5n6 :YOLOv5s :YOLOv5s6 :YOLOv5x :YOLOv5x6 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MaterialProperty :SpatialProperty :TemporalProperty :ThermalProperty :VisualCharactersitic ) .
+
+[] a owl:AllDisjointClasses ;
     owl:members ( :Density :Flexibility :MaterialName :Weight ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Depth :Height :Length :SurfaceArea :Volume :Width ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :MaterialProperty :SpatialProperty :ThermalProperty :VisualCharactersitic ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Pitch :Roll :Yaw ) .
 
