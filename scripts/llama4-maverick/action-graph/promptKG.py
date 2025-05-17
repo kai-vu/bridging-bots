@@ -52,7 +52,7 @@ if __name__ == "__main__":
     groq_key = os.getenv("GROQ_KEY")
     robot_task = os.getenv("ROBOT_TASK")
 
-    description_path = "../../../output/llava-llama3/observation-graph/image-description.json"
+    description_path = "../../../output/llama4-maverick/observation-graph/image-description.json"
     with open(description_path, "r", encoding="utf-8") as file:
         data = json.load(file)
     description_txt = data["choices"][0]["message"]["content"]
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     with open(ontology_path, "r", encoding="utf-8") as file:
         ontology_txt = file.read()
 
-    output_path = "../../../output/llava-llama3/action-graph/promptKG"
+    output_path = "../../../output/llama4-maverick/action-graph/promptKG"
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 

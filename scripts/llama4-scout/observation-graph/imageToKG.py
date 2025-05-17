@@ -8,6 +8,7 @@ from groq import Groq
 from pathlib import Path
 from dotenv import load_dotenv
 
+
 def convert_image_to_base64(file_path):
     with open(file_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')

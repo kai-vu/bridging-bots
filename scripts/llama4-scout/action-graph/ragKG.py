@@ -106,7 +106,7 @@ if __name__ == "__main__":
     description_txt = data["choices"][0]["message"]["content"]
     
     output_path = "../../../output/llama4-scout/action-graph/ragKG"
-    ontology_path = "../../../ontology/ontoObservationGraph.ttl"
+    ontology_path = "../../../ontology/ontoActionGraph.ttl"
 
     token_counter = TokenCountingHandler(
         tokenizer = tiktoken.get_encoding("cl100k_base").encode

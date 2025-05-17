@@ -1,0 +1,64 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+# Define the instruction
+psr:ReorganiseKitchen a owl:NamedIndividual, psr:Instruction ;
+    rdfs:label "Reorganise the kitchen"@en ;
+    psr:hasNaturalLanguage "Reorganise the kitchen"^^xsd:string ;
+    psr:hasWorkflow psr:KitchenReorganizationWorkflow .
+
+# Define the workflow
+psr:KitchenReorganizationWorkflow a owl:NamedIndividual, psr:Workflow ;
+    rdfs:label "Kitchen Reorganization Workflow"@en .
+
+# Define actions in the workflow
+psr:Action1 a owl:NamedIndividual, dul:Action ;
+    rdfs:label "Retrieve items from countertop"@en ;
+    rdfs:comment "The robot picks up items from the kitchen countertop."@en .
+
+psr:Action2 a owl:NamedIndividual, dul:Action ;
+    rdfs:label "Move items to designated storage"@en ;
+    rdfs:comment "The robot places items into correct cabinets or storage areas."@en .
+
+# Link actions to workflow
+psr:KitchenReorganizationWorkflow psr:hasAction psr:Action1 ;
+    psr:hasAction psr:Action2 .
+
+# Define agents (robot performing actions)
+:Robot1 a dul:Agent ;
+    rdfs:label "Robot"@en .
+
+# Link actions to agent
+psr:Action1 soma:isPerformedBy :Robot1 ;
+psr:Action2 soma:isPerformedBy :Robot1 .
+
+# Define the components involved
+psr:Countertop a psr:Component ;
+    rdfs:label "Kitchen Countertop"@en .
+
+psr:Cabinet a owl:Class, psr:Component ;
+    rdfs:label "Cabinet"@en .
+
+psr:StorageArea a psr:Component ;
+    rdfs:label "Storage Area"@en .
+
+# Define actions actsOn specific components
+psr:Action1 psr:actsOn psr:Countertop .
+psr:Action2 psr:actsOn psr:Cabinet .
+
+# Define affordances relevant to actions
+soma:PickingUp a owl:NamedIndividual, psr:Affordance ;
+    rdfs:label "PickingUp"@en .
+
+soma:PuttingDown a owl:NamedIndividual, psr:Affordance ;
+    rdfs:label "PuttingDown"@en .
+
+# Link actions with affordances
+psr:Action1 psr:isAffordedBy soma:PickingUp .
+psr:Action2 psr:isAffordedBy soma:PuttingDown .

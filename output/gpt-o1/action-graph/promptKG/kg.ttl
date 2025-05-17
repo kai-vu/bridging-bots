@@ -1,0 +1,48 @@
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/kitchen#> .
+
+:InstructionReorganizeKitchen a psr:Instruction ;
+    psr:hasNaturalLanguage "Reorganise the kitchen"^^xsd:string ;
+    psr:hasWorkflow :WorkflowReorganizeKitchen .
+
+:WorkflowReorganizeKitchen a psr:Workflow ;
+    psr:hasAction :PickUpPlates,
+                  :OpenBlackCabinet,
+                  :PutPlatesInCabinet,
+                  :CloseBlackCabinet .
+
+:PickUpPlates a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Plates1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :OpenBlackCabinet .
+
+:OpenBlackCabinet a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Cabinet1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:follows :PickUpPlates ;
+    psr:precedes :PutPlatesInCabinet .
+
+:PutPlatesInCabinet a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Plates1,
+               :Cabinet1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :OpenBlackCabinet ;
+    psr:precedes :CloseBlackCabinet .
+
+:CloseBlackCabinet a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Cabinet1 ;
+    psr:isAffordedBy soma:Closing ;
+    psr:follows :PutPlatesInCabinet .
+
+:Robot1 a dul:Agent .
+
+:Plates1 a psr:Object .
+
+:Cabinet1 a psr:Furniture .

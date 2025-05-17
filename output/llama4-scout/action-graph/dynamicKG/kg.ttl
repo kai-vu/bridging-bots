@@ -1,0 +1,72 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:agent kitchen:movesTo kitchen:cabinet,
+        kitchen:kitchen,
+        kitchen:refrigerator ;
+    kitchen:opens kitchen:cabinet,
+        kitchen:refrigerator ;
+    kitchen:performs kitchen:cleaning,
+        kitchen:organizing,
+        kitchen:wiping ;
+    kitchen:picksUp kitchen:bottle_of_water,
+        kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:jar_of_jam,
+        kitchen:mug,
+        kitchen:plate,
+        kitchen:puzzle_box,
+        kitchen:yellow_cup ;
+    kitchen:puts kitchen:bottle_of_water,
+        kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:jar_of_jam,
+        kitchen:mug,
+        kitchen:plate,
+        kitchen:puzzle_box,
+        kitchen:yellow_cup .
+
+kitchen:dining_area kitchen:hasFurniture kitchen:table ;
+    kitchen:needs kitchen:organizing .
+
+kitchen:range_hood kitchen:needs kitchen:cleaning .
+
+kitchen:sink kitchen:needs kitchen:cleaning .
+
+kitchen:stove kitchen:needs kitchen:cleaning .
+
+kitchen:cabinet kitchen:contains kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:jar_of_jam,
+        kitchen:mug,
+        kitchen:plate,
+        kitchen:puzzle_box,
+        kitchen:yellow_cup ;
+    kitchen:hasLocation kitchen:kitchen .
+
+kitchen:refrigerator kitchen:contains kitchen:bottle_of_water .
+
+kitchen:bottle_of_water kitchen:isOnTopOf kitchen:table .
+
+kitchen:box_of_Rice_Bubbles kitchen:isOnTopOf kitchen:countertop .
+
+kitchen:box_of_shortbread kitchen:isOnTopOf kitchen:countertop,
+        kitchen:table .
+
+kitchen:jar_of_jam kitchen:isOnTopOf kitchen:countertop .
+
+kitchen:kitchen kitchen:hasLocation kitchen:countertop ;
+    kitchen:needs kitchen:organizing .
+
+kitchen:mug kitchen:isOnTopOf kitchen:table .
+
+kitchen:plate kitchen:isOnTopOf kitchen:table .
+
+kitchen:puzzle_box kitchen:isOnTopOf kitchen:countertop .
+
+kitchen:yellow_cup kitchen:isOnTopOf kitchen:countertop .
+
+kitchen:table kitchen:needs kitchen:wiping .
+
+kitchen:countertop kitchen:needs kitchen:cleaning ;
+    kitchen:onTopOf kitchen:kitchen .
+

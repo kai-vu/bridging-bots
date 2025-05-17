@@ -46,11 +46,10 @@ def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
 
 def save_response_to_file(output_path, response):
     json_response_path = os.path.join(output_path, "response.json")
-    response_json = response.to_dict()
     with open(json_response_path, 'w', encoding='utf-8') as f:
-        json.dump(response_json, f, ensure_ascii=False, indent=4)
+        json.dump(response.to_dict(), f, ensure_ascii=False, indent=4)
     ttl_response_path = os.path.join(output_path, "kg.ttl")
-    ttl_response = str(response_json['choices'][0]['message']['content'])
+    ttl_response = response.choices[0].message.content
     ttl_response = re.sub(r"^```[^\n]*\n", "", ttl_response.strip())
     ttl_response = re.sub(r"```$", "", ttl_response.strip())
     ttl_response = ttl_response.strip()

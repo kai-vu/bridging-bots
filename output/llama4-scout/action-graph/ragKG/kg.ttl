@@ -1,0 +1,202 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:Kitchen a psr:Environment ;
+  rdfs:label "Kitchen"@en .
+
+psr:DiningArea a psr:Environment ;
+  rdfs:label "Dining Area"@en .
+
+psr:KitchenComponent a psr:Component ;
+  rdfs:label "Kitchen Component"@en .
+
+psr:Cabinet a psr:Component ;
+  rdfs:label "Cabinet"@en ;
+  psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:Countertop a psr:Component ;
+  rdfs:label "Countertop"@en .
+
+psr:Stove a psr:Component ;
+  rdfs:label "Stove"@en .
+
+psr:Pot a psr:Component ;
+  rdfs:label "Pot"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:Sink a psr:Component ;
+  rdfs:label "Sink"@en ;
+  psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:Pushing .
+
+psr:YellowCup a psr:Component ;
+  rdfs:label "Yellow Cup"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown ;
+  psr:hasAffordance soma:Grasping .
+
+psr:JarOfJam a psr:Component ;
+  rdfs:label "Jar of Jam"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown ;
+  psr:hasAffordance soma:Grasping .
+
+psr:BoxOfRiceBubbles a psr:Component ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:BoxOfShortbread a psr:Component ;
+  rdfs:label "Box of Shortbread"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:PuzzleBox a psr:Component ;
+  rdfs:label "Puzzle Box"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown ;
+  psr:hasAffordance soma:Opening .
+
+psr:Refrigerator a psr:Component ;
+  rdfs:label "Refrigerator"@en ;
+  psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:RangeHood a psr:Component ;
+  rdfs:label "Range Hood"@en .
+
+psr:Table a psr:Component ;
+  rdfs:label "Table"@en .
+
+psr:Chair a psr:Component ;
+  rdfs:label "Chair"@en .
+
+psr:BottleOfWater a psr:Component ;
+  rdfs:label "Bottle of Water"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:Plate a psr:Component ;
+  rdfs:label "Plate"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:Mug a psr:Component ;
+  rdfs:label "Mug"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown ;
+  psr:hasAffordance soma:Grasping .
+
+psr:Book a psr:Component ;
+  rdfs:label "Book"@en ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:Kitchen 
+  psr:hasComponent psr:Cabinet ;
+  psr:hasComponent psr:Countertop ;
+  psr:hasComponent psr:Stove ;
+  psr:hasComponent psr:Sink ;
+  psr:hasComponent psr:Refrigerator ;
+  psr:hasComponent psr:RangeHood .
+
+psr:Countertop 
+  psr:hasComponent psr:Pot ;
+  psr:hasComponent psr:YellowCup ;
+  psr:hasComponent psr:JarOfJam ;
+  psr:hasComponent psr:BoxOfRiceBubbles ;
+  psr:hasComponent psr:BoxOfShortbread ;
+  psr:hasComponent psr:PuzzleBox .
+
+psr:Table 
+  psr:hasComponent psr:BottleOfWater ;
+  psr:hasComponent psr:Plate ;
+  psr:hasComponent psr:Mug ;
+  psr:hasComponent psr:Book .
+
+dul:hasLocation psr:Cabinet, psr:Countertop, psr:Stove, psr:Sink, psr:Refrigerator, psr:RangeHood ;
+  geo:sfWithin psr:Kitchen .
+
+dul:hasLocation psr:Pot, psr:YellowCup, psr:JarOfJam, psr:BoxOfRiceBubbles, psr:BoxOfShortbread, psr:PuzzleBox ;
+  geo:sfWithin psr:Countertop .
+
+dul:hasLocation psr:BottleOfWater, psr:Plate, psr:Mug, psr:Book ;
+  geo:sfWithin psr:Table .
+
+psr:ReorganiseKitchen a psr:Affordance ;
+  rdfs:label "Reorganise Kitchen"@en .
+
+psr:Task a psr:Component ;
+  rdfs:label "Task"@en ;
+  psr:hasAffordance psr:ReorganiseKitchen .
+
+psr:ReorganiseKitchen 
+  psr:onTopOf psr:Kitchen .
+
+psr:Cabinet 
+  psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:Refrigerator 
+  psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:PuzzleBox 
+  psr:hasAffordance soma:Opening .
+
+psr:BoxOfShortbread 
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:BoxOfRiceBubbles 
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:YellowCup 
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:JarOfJam 
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:Pot 
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:ReorganiseKitchen 
+  psr:hasAffordance soma:Pushing ;
+  psr:hasAffordance soma:Pulling ;
+  psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown ;
+  psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:Kitchen 
+  geo:sfContains psr:Cabinet ;
+  geo:sfContains psr:Countertop ;
+  geo:sfContains psr:Stove ;
+  geo:sfContains psr:Sink ;
+  geo:sfContains psr:Refrigerator ;
+  geo:sfContains psr:RangeHood .
+
+psr:Countertop 
+  geo:sfContains psr:Pot ;
+  geo:sfContains psr:YellowCup ;
+  geo:sfContains psr:JarOfJam ;
+  geo:sfContains psr:BoxOfRiceBubbles ;
+  geo:sfContains psr:BoxOfShortbread ;
+  geo:sfContains psr:PuzzleBox .
+
+psr:Table 
+  geo:sfContains psr:BottleOfWater ;
+  geo:sfContains psr:Plate ;
+  geo:sfContains psr:Mug ;
+  geo:sfContains psr:Book .

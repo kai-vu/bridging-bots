@@ -1,16 +1,14 @@
-import warnings
-warnings.filterwarnings('ignore')
-
 import os
 import re
 import json
+import base64
 
+from openai import OpenAI
 from pathlib import Path
 from dotenv import load_dotenv
-from groq import Groq
 
 
-def get_response(llm_model, client, user_query):
+def get_response(user_query, llm_model, client):
     chat_completion = client.chat.completions.create(
         messages=[
             {
@@ -38,32 +36,29 @@ def save_response(response, output_path):
         f.write(ttl_response)
     return 
 
-def main(llm_model, groq_key, user_query, output_path):
-    client = Groq(api_key=groq_key)
-    response = get_response(llm_model, client, user_query)
+def main(gpt_key, user_query, llm_model):
+    client = OpenAI(api_key=gpt_key)
+    response = get_response(user_query, llm_model, client)
     save_response(response, output_path)
 
 
 if __name__ == "__main__":
 
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     load_dotenv(dotenv_path=Path('../.env'))
 
+    gpt_key = os.getenv("GPT_KEY")
     llm_model = os.getenv("LLM_MODEL")
-    groq_key = os.getenv("GROQ_KEY")
     robot_task = os.getenv("ROBOT_TASK")
 
-    description_path = "../../../output/llava-llama3/observation-graph/image-description.json"
+    description_path = "../../../output/gpt-4.1-nano/observation-graph/image-description.json"
     with open(description_path, "r", encoding="utf-8") as file:
         data = json.load(file)
     description_txt = data["choices"][0]["message"]["content"]
-
+    output_path = "../../../output/gpt-4.1-nano/action-graph/promptKG"
     ontology_path = "../../../ontology/ontoActionGraph.ttl"
-    with open(ontology_path, "r", encoding="utf-8") as file:
+    with open(ontology_path, 'r', encoding='utf-8') as file:
         ontology_txt = file.read()
-
-    output_path = "../../../output/llava-llama3/action-graph/promptKG"
-
-    os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
     user_query = f"""
 Ontology as context information is below.
@@ -92,5 +87,5 @@ TASK: {robot_task}
 ENVIRONMENT DESCRIPTION: {description_txt}
 ---------------------
 """
-
-    main(llm_model, groq_key, user_query, output_path)
+        
+    main(gpt_key, user_query, llm_model)

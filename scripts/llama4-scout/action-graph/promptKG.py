@@ -57,7 +57,7 @@ if __name__ == "__main__":
         data = json.load(file)
     description_txt = data["choices"][0]["message"]["content"]
 
-    ontology_path = "../../../ontology/ontoObservationGraph.ttl"
+    ontology_path = "../../../ontology/ontoActionGraph.ttl"
     with open(ontology_path, "r", encoding="utf-8") as file:
         ontology_txt = file.read()
 
