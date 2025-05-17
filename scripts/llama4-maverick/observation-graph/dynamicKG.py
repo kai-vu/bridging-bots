@@ -87,8 +87,8 @@ def save_network_graph(dynamic_index, full_output_path):
     )
     return 
 
-def main(llm_model, api_key, description_path, output_path):
-    llm = get_llm(api_key, llm_model)
+def main(llm_model, groq_key, description_path, output_path):
+    llm = get_llm(groq_key, llm_model)
 
     kg_extractor = make_kg_extractor(llm)
     dynamic_index = make_dynamic_index(description_path, llm, kg_extractor)
@@ -102,9 +102,9 @@ if __name__ == "__main__":
     load_dotenv(dotenv_path=Path('../.env'))
 
     llm_model = os.getenv("LLM_MODEL")
-    api_key = os.getenv("GROQ_KEY")
+    groq_key = os.getenv("GROQ_KEY")
     description_path = "../../../output/llama4-maverick/observation-graph/image-description.json"
     output_path = "../../../output/llama4-maverick/observation-graph/dynamicKG"
 
-    main(llm_model, api_key, description_path, output_path)
+    main(llm_model, groq_key, description_path, output_path)
     

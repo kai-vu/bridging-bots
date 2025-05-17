@@ -108,8 +108,8 @@ def clean_up_chroma(chroma_collection):
     chroma_collection.delete(ids=doc_ids)
     return
 
-def main(llm_model, api_key, embedding_model, description_path, output_path, ontology_path, callback_manager):
-    llm = Groq(model= llm_model, api_key=api_key, callback_manager=callback_manager)
+def main(llm_model, groq_key, embedding_model, description_path, output_path, ontology_path, callback_manager):
+    llm = Groq(model=llm_model, api_key=groq_key, callback_manager=callback_manager)
     response, chroma_collection = get_response(llm, embedding_model, description_path, ontology_path, callback_manager)
     save_response(response, output_path)
     clean_up_chroma(chroma_collection)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     load_dotenv(dotenv_path=Path('../.env'))
 
     llm_model = os.getenv("LLM_MODEL")
-    api_key = os.getenv("GROQ_KEY")
+    groq_key = os.getenv("GROQ_KEY")
     embedding_model = "BAAI/bge-small-en"
 
     description_path = "../../../output/llama4-scout/observation-graph/image-description.json"
@@ -133,4 +133,4 @@ if __name__ == "__main__":
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-    main(llm_model, api_key, embedding_model, description_path, output_path, ontology_path, callback_manager)
+    main(llm_model, groq_key, embedding_model, description_path, output_path, ontology_path, callback_manager)

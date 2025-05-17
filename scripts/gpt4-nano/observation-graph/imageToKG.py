@@ -74,6 +74,7 @@ if __name__ == "__main__":
     images_folder_path = "../../../images"
     output_path = "../../../output/gpt4-nano/observation-graph/imageToKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
+    
     with open(ontology_path, 'r', encoding='utf-8') as file:
         ontology_txt = file.read()
 
