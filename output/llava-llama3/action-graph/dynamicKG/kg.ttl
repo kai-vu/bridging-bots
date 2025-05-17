@@ -1,0 +1,36 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:CLOSES kitchen:cupboard_in_the_corner_of_the_room,
+        kitchen:dark_wooden_cabinet_above_the_counter,
+        kitchen:dark_wooden_cabinet_below_the_counter,
+        kitchen:wall_cabinet_with_utensils ;
+    kitchen:INSPECTS kitchen:kitchen_and_dining_area ;
+    kitchen:MOVES_TO kitchen:countertop,
+        kitchen:cupboard_in_the_corner_of_the_room,
+        kitchen:dining_area,
+        kitchen:kitchen_area,
+        kitchen:refrigerator,
+        kitchen:wall_cabinet_with_utensils ;
+    kitchen:OPENS kitchen:cupboard_in_the_corner_of_the_room,
+        kitchen:dark_wooden_cabinet_above_the_counter,
+        kitchen:dark_wooden_cabinet_below_the_counter ;
+    kitchen:ORGANIZES kitchen:items_in_the_cupboard,
+        kitchen:removed_items,
+        kitchen:utensils ;
+    kitchen:PICKS_UP kitchen:box_of_cereal,
+        kitchen:red_and_white_container ;
+    kitchen:PLACES kitchen:baking_supplies,
+        kitchen:box_of_cereal,
+        kitchen:cooking_supplies,
+        <http://example.org/kitchen#loaf_of_bread,_cereal,_and_cake_or_muffin_box>,
+        kitchen:red_and_white_container ;
+    kitchen:REMOVES_ITEMS_FROM kitchen:cupboard_in_the_corner_of_the_room,
+        kitchen:dark_wooden_cabinet_above_the_counter,
+        kitchen:dark_wooden_cabinet_below_the_counter,
+        kitchen:top_of_the_refrigerator,
+        kitchen:wall_cabinet_with_utensils ;
+    kitchen:WIPES_DOWN kitchen:cabinet_shelves,
+        kitchen:countertop,
+        kitchen:dining_table,
+        kitchen:top_of_the_refrigerator .
+

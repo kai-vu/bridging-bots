@@ -1,0 +1,111 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+:Kitchen a psr:Environment .
+:Countertop a psr:Component, psr:Object ;
+    dul:hasLocation :CountertopLocation .
+:CountertopLocation a soma:Location ;
+    psr:onTopOf :Cabinets ;
+    geo:sfWithin :Kitchen .
+:Cabinets a psr:Component, psr:Furniture ;
+    dul:hasLocation :CabinetsLocation .
+:CabinetsLocation a soma:Location ;
+    geo:sfWithin :Kitchen .
+:Fridge a psr:Component, psr:Appliance ;
+    dul:hasLocation :FridgeLocation .
+:FridgeLocation a soma:Location ;
+    geo:sfWithin :Kitchen .
+:FoodItems a psr:Component, psr:Object ;
+    dul:hasLocation :FoodItemsLocation .
+:FoodItemsLocation a soma:Location ;
+    psr:onTopOf :Fridge ;
+    geo:sfWithin :Kitchen .
+:Container a psr:Component, psr:Object ;
+    dul:hasLocation :ContainerLocation .
+:ContainerLocation a soma:Location ;
+    psr:onTopOf :Countertop ;
+    geo:sfWithin :Kitchen .
+:WallCabinet a psr:Component, psr:Furniture ;
+    dul:hasLocation :WallCabinetLocation .
+:WallCabinetLocation a soma:Location ;
+    geo:sfWithin :Kitchen .
+:Utensils a psr:Component, psr:Object ;
+    dul:hasLocation :UtensilsLocation .
+:UtensilsLocation a soma:Location ;
+    psr:onTopOf :WallCabinet ;
+    geo:sfWithin :Kitchen .
+:Floor a psr:Component, psr:Object ;
+    dul:hasLocation :FloorLocation .
+:FloorLocation a soma:Location ;
+    geo:sfWithin :Kitchen .
+:Table a psr:Component, psr:Furniture ;
+    dul:hasLocation :TableLocation .
+:TableLocation a soma:Location ;
+    geo:sfWithin :DiningArea .
+:Chair a psr:Component, psr:Furniture ;
+    dul:hasLocation :ChairLocation .
+:ChairLocation a soma:Location ;
+    psr:onTopOf :Floor ;
+    geo:sfWithin :DiningArea .
+:Box a psr:Component, psr:Object ;
+    dul:hasLocation :BoxLocation .
+:BoxLocation a soma:Location ;
+    psr:onTopOf :Table ;
+    geo:sfWithin :DiningArea .
+:Cupboard a psr:Component, psr:Furniture ;
+    dul:hasLocation :CupboardLocation .
+:CupboardLocation a soma:Location ;
+    geo:sfWithin :DiningArea .
+:DiningArea a psr:Environment ;
+    dul:hasComponent :Table ;
+    dul:hasComponent :Chair ;
+    dul:hasComponent :Box ;
+    dul:hasComponent :Cupboard .
+:Kitchen dul:hasComponent :Countertop ;
+    dul:hasComponent :Cabinets ;
+    dul:hasComponent :Fridge ;
+    dul:hasComponent :FoodItems ;
+    dul:hasComponent :Container ;
+    dul:hasComponent :WallCabinet ;
+    dul:hasComponent :Utensils ;
+    dul:hasComponent :Floor .
+:Countertop psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Cabinets psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+:Fridge psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+:FoodItems psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Container psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:WallCabinet psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+:Utensils psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Table psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Chair psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Box psr:hasAffordance :Grasping ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :PuttingDown .
+:Cupboard psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
