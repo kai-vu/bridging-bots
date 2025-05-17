@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-4d33d69b-354f-412c-85dd-b96ceb7c4d5d",
-    "created": 1747427191,
+    "id": "llava:7b-9b5e2c3b-8697-42c5-adcd-3a3817b3e663",
+    "created": 1747487067,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```python\n@prefix : <http://example.com/> .\n\n# Class definitions\n:Instruction a owl:Class ;\n   rdfs:label \"Instruction\"@en ;\n   rdfs:comment \"An instruction is a command or directive given to a robot.\"@en .\n\n:Workflow a owl:Class ;\n   rdfs:subClassOf dul:Workflow ;\n   rdfs:label \"Workflow\"@en ;\n   rdfs:comment \"A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction.\"@en .\n\n:Action a owl:Class ;\n   rdfs:subClassOf dul:Action ;\n   rdfs:label \"Action\"@en ;\n   rdfs:comment \"An action is an atomic, single, clear action that is carried out to fulfil the instruction.\"@en .\n\n:Agent a owl:Class ;\n   rdfs:subClassOf dul:Agent ;\n   rdfs:label \"Agent\"@en ;\n   rdfs:comment \"An agent performing an action.\"@en .\n\n:Component a owl:Class ;\n   rdfs:subClassOf dul:Component ;\n   rdfs:label \"Component\"@en ;\n   rdfs:comment \"A component is a part of an environment that can be used to perform tasks or actions.\"@en .\n\n:Affordance a owl:Class ;\n   rdfs:subClassOf dul:Affordance ;\n   rdfs:label \"Affordance\"@en ;\n   rdfs:comment \"An affordance is a property of an object that indicates how it can be used.\"@en .\n\n# Object properties\n:hasWorkflow a owl:ObjectProperty ;\n   rdfs:domain :Instruction ;\n   rdfs:range :Workflow ;\n   rdfs:label \"has workflow\"@en ;\n   rdfs:comment \"An instruction has a workflow that needs to be executed.\"@en .\n\n:hasAction a owl:ObjectProperty ;\n   rdfs:domain :Workflow ;\n   rdfs:range dul:Action ;\n   rdfs:label \"has action\"@en ;\n   rdfs:comment \"A workflow has one or multiple clear atomic actions.\"@en .\n\n:precedes a owl:ObjectProperty ;\n   rdfs:subPropertyOf dul:precedes ;\n   rdfs:domain dul:Action ;\n   rdfs:range dul:Action ;\n   rdfs:label \"precedes\" ;\n   rdfs:comment \"An action can precede another action.\"@en .\n\n:follows a owl:ObjectProperty ;\n   rdfs:subPropertyOf dul:follows ;\n   rdfs:domain dul:Action ;\n   rdfs:range dul:Action ;\n   rdfs:label \"follow\" ;\n   rdfs:comment \"An action can follow another action.\"@en .\n\n# Instances\n:Instruction_1 a owl:NamedIndividual ;\n   :hasNaturalLanguage \"Reorganise the kitchen\" ;\n   :hasWorkflow :Workflow_1 ;\n   rdfs:label \"Reorganise the kitchen instruction\"@en .\n\n:Workflow_1 a dul:Workflow ;\n   rdfs:label \"Kitchen reorganisation workflow\"@en .\n\n:Action_1 a dul:Action ;\n   rdfs:label \"Open drawer\"@en ;\n   :isPerformedBy :Agent_1 ;\n   :actsOn :Component_1 ;\n   :follows :Action_2 ;\n   rdfs:comment \"The robot opens the drawer.\"@en .\n\n:Action_2 a dul:Action ;\n   rdfs:label \"Close drawer\"@en ;\n   :isPerformedBy :Agent_1 ;\n   :actsOn :Component_2 ;\n   rdfs:comment \"The robot closes the drawer.\"@en .\n\n:Agent_1 a dul:Agent ;\n   rdfs:label \"Robot\"@en .\n\n:Component_1 a dul:Component ;\n   rdfs:label \"Drawer\"@en ;\n   :isAffordedBy :Affordance_1 ;\n   rdfs:comment \"The drawer is a component that the robot can interact with.\"@en .\n\n:Component_2 a dul:Component ;\n   rdfs:label \"Drawer\"@en ;\n   :isAffordedBy :Affordance_2 ;\n   rdfs:comment \"The drawer is a component that the robot can interact with.\"@en .\n\n:Affordance_1 a dul:Affordance ;\n   rdfs:label \"Opening\"@en ;\n   rdfs:comment \"The affordance to open the drawer.\"@en .\n\n:Affordance_2 a dul:Affordance ;\n   rdfs:label \"Closing\"@en ;\n   rdfs:comment \"The affordance to close the drawer.\"@en .\n``` ",
+                "content": " ```python\n@prefix psr: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix dul: <https://www.dereczik.net/owl/DulLiteOntology#>\n\n# Instruction class and properties for task\n[psr:Instruction] psr:hasWorkflow [dul:Workflow] .\n[psr:Instruction] psr:precedes [dul:Action] .\n[psr:Instruction] psr:follows [dul:Action] .\n[psr:Instruction] psr:actsOn [dul:Component] .\n[psr:Instruction] psr:isAffordedBy [dul:Affordance] .\n[psr:Instruction] psr:hasNaturalLanguage \"Reorganise the kitchen\"@en .\n\n# Workflow class and properties for task\n[dul:Workflow] dul:hasAction [dul:Action] .\n\n# Agent class and properties for task\n[dul:Agent] dul:isPerformedBy [dul:Component] .\n\n# Action class and properties for task\n[dul:Action] psr:precedes [dul:Action] .\n[dul:Action] psr:follows [dul:Action] .\n[dul:Action] dul:actsOn [dul:Component] .\n[dul:Action] dul:isAffordedBy [dul:Affordance] .\n\n# Component class and properties for task\n[dul:Component] psr:hasNaturalLanguage \"Refrigerator\"@en .\n[dul:Component] dul:precedes [dul:Action] .\n[dul:Component] dul:follows [dul:Action] .\n[dul:Component] dul:actsOn [dul:Component] .\n[dul:Component] dul:isAffordedBy [dul:Affordance] .\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 69.31,
-        "prompt_token/s": 1879.68,
-        "total_duration": 19575449298,
-        "load_duration": 51015106,
+        "response_token/s": 68.49,
+        "prompt_token/s": 1851.41,
+        "total_duration": 11450447680,
+        "load_duration": 2369568964,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2179093789,
-        "eval_count": 1200,
-        "completion_tokens": 1200,
-        "eval_duration": 17314469227,
-        "approximate_total": "0h0m19s",
-        "total_tokens": 5296,
+        "prompt_eval_duration": 2212365166,
+        "eval_count": 467,
+        "completion_tokens": 467,
+        "eval_duration": 6818902544,
+        "approximate_total": "0h0m11s",
+        "total_tokens": 4563,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

@@ -4,9 +4,8 @@ import json
 import base64
 import requests
 
-from groq import Groq
-from pathlib import Path
 from dotenv import load_dotenv
+from pathlib import Path
 
 
 def convert_image_to_base64(file_path):
@@ -21,8 +20,13 @@ def get_all_images_base64(images_folder_path):
             base64_images.append(convert_image_to_base64(file_path))
     return base64_images
 
-def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
-    client = Groq(api_key=groq_key)
+def chat_with_model(nebula_key, nebula_url, vlm_model, user_query, images_folder_path):
+    url = nebula_url
+    headers = {
+        'Authorization': f'Bearer {nebula_key}',
+        'Content-Type': 'application/json'
+    }
+
     base64_images = get_all_images_base64(images_folder_path)
     content = [{"type": "text", "text": user_query}]
     for base64_image in base64_images:
@@ -32,21 +36,24 @@ def chat_with_model(groq_key, images_folder_path, user_query, llm_model):
                 "url": f"data:image/jpeg;base64,{base64_image}"
             }
         })
-    chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": content,
-        }
-    ],
-    model=llm_model,
-    )
-    response = chat_completion
-    return response
 
-def save_response_to_file(output_path, response):
+    data = {
+        "model": vlm_model,
+        "stream": False,
+        "messages": [
+            {
+                "role": "user",
+                "content": content
+            }
+        ]
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+    response_json = response.json()
+    return response_json
+
+def save_response_to_file(output_path, response_json):
     json_response_path = os.path.join(output_path, "response.json")
-    response_json = response.to_dict()
     with open(json_response_path, 'w', encoding='utf-8') as f:
         json.dump(response_json, f, ensure_ascii=False, indent=4)
     ttl_response_path = os.path.join(output_path, "kg.ttl")
@@ -58,9 +65,9 @@ def save_response_to_file(output_path, response):
         f.write(ttl_response)
     return 
 
-def main(images_folder_path, groq_key, llm_model, user_query, output_path):
-    response = chat_with_model(groq_key, images_folder_path, user_query, llm_model)
-    save_response_to_file(output_path, response)
+def main(images_folder_path, nebula_key, nebula_url, vlm_model, user_query, output_path):
+    response_json = chat_with_model(nebula_key, nebula_url, vlm_model, user_query, images_folder_path)
+    save_response_to_file(output_path, response_json)
 
 
 if __name__ == "__main__":
@@ -68,8 +75,9 @@ if __name__ == "__main__":
     current_dir = os.path.dirname(os.path.abspath(__file__))
     load_dotenv(dotenv_path=Path('../.env'))
 
-    groq_key = os.getenv("GROQ_KEY")
-    llm_model = os.getenv("LLM_MODEL")
+    nebula_key = os.getenv("NEBULA_KEY")
+    nebula_url = os.getenv("NEBULA_URL")
+    vlm_model = os.getenv("VLM_MODEL")
     robot_task = os.getenv("ROBOT_TASK")
 
     images_folder_path = "../../../images"
@@ -108,4 +116,4 @@ Output format:
 - Include the prefixes and namespaces at the beginning.
 """
 
-    main(images_folder_path, groq_key, llm_model, user_query, output_path)
+    main(images_folder_path, nebula_key, nebula_url, vlm_model, user_query, output_path)

@@ -32,7 +32,7 @@
     psr:hasAffordance soma:Opening, soma:Closing .
 :Utensils a psr:Component ;
     rdfs:label "Utensils"@en ;
-    psr:hasAffordance soma:Grasping, soma:PuttingDown .
+    psr:hasAffordance soma:Grasping, soma:Pulling .
 :Floor a psr:Component ;
     rdfs:label "Floor"@en .
 :Table a psr:Component ;
