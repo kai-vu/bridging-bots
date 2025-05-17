@@ -63,7 +63,7 @@ if __name__ == "__main__":
     llm_model = os.getenv("LLM_MODEL")
 
     images_folder_path = "../../../images"
-    output_path = "../../../output/gpt4-nano/observation-graph/image-description.json"
+    output_path = "../../../output/gpt-o1/observation-graph/image-description.json"
 
     user_query = """
     ## INSTRUCTIONS ##

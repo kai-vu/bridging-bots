@@ -71,8 +71,8 @@ if __name__ == "__main__":
     gpt_key = os.getenv("GPT_KEY")
     llm_model = os.getenv("LLM_MODEL")
 
-    description_path = "../../../output/gpt4-nano/observation-graph/image-description.json"
-    output_path = "../../../output/gpt4-nano/observation-graph/promptKG"
+    description_path = "../../../output/gpt-4.1-nano/observation-graph/image-description.json"
+    output_path = "../../../output/gpt-4.1-nano/observation-graph/promptKG"
     ontology_path = "../../../ontology/ontoObservationGraph.ttl"
     with open(ontology_path, 'r', encoding='utf-8') as file:
         ontology_txt = file.read()

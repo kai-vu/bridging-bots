@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BYA3MOWODR8M95Y4k36ZlNHuSpp1O",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix : <http://example.org/env#> .\n@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psr-task#> .\n\n:KitchenDiningEnv a psr:Environment ;\n    rdfs:label \"Kitchen and Dining Environment\"@en ;\n    dul:hasComponent :Fridge,\n                     :KitchenCabinet,\n                     :KitchenCounter,\n                     :Stove,\n                     :RangeHood,\n                     :Sink,\n                     :Window,\n                     :Door,\n                     :DiningTable,\n                     :DiningChair1,\n                     :DiningChair2,\n                     :DiningChair3,\n                     :DiningChair4,\n                     :StrawberryJamJar,\n                     :JelloBox,\n                     :AlpenSalt,\n                     :RiceBubblesBox,\n                     :ChuckyCerealBox,\n                     :StackOfPlates,\n                     :OrangeMug,\n                     :Pot,\n                     :ShortbreadBox,\n                     :EvianBottle,\n                     :FruitBowl,\n                     :Decanter,\n                     :WineGlass .\n\n:Fridge a psr:Appliance ;\n    rdfs:label \"Fridge\"@en ;\n    psr:hasAffordance :FridgeOpeningAffordance,\n                       :FridgeClosingAffordance .\n\n:FridgeOpeningAffordance a soma:Opening ;\n    rdfs:label \"Opening the fridge\"@en .\n\n:FridgeClosingAffordance a soma:Closing ;\n    rdfs:label \"Closing the fridge\"@en .\n\n:KitchenCabinet a psr:Furniture ;\n    rdfs:label \"Kitchen Cabinet\"@en ;\n    psr:hasAffordance :CabinetOpeningAffordance,\n                       :CabinetClosingAffordance .\n\n:CabinetOpeningAffordance a soma:Opening ;\n    rdfs:label \"Opening the cabinet\"@en .\n\n:CabinetClosingAffordance a soma:Closing ;\n    rdfs:label \"Closing the cabinet\"@en .\n\n:KitchenCounter a psr:Furniture ;\n    rdfs:label \"Kitchen Counter\"@en .\n\n:Stove a psr:Appliance ;\n    rdfs:label \"Stove\"@en .\n\n:RangeHood a psr:Appliance ;\n    rdfs:label \"Range Hood\"@en .\n\n:Sink a psr:Object ;\n    rdfs:label \"Sink\"@en .\n\n:Window a psr:Object ;\n    rdfs:label \"Window\"@en .\n\n:Door a psr:Object ;\n    rdfs:label \"Door\"@en ;\n    psr:hasAffordance :DoorOpeningAffordance,\n                       :DoorClosingAffordance .\n\n:DoorOpeningAffordance a soma:Opening ;\n    rdfs:label \"Opening the door\"@en .\n\n:DoorClosingAffordance a soma:Closing ;\n    rdfs:label \"Closing the door\"@en .\n\n:DiningTable a psr:Furniture ;\n    rdfs:label \"Dining Table\"@en .\n\n:DiningChair1 a psr:Furniture ;\n    rdfs:label \"Dining Chair 1\"@en .\n\n:DiningChair2 a psr:Furniture ;\n    rdfs:label \"Dining Chair 2\"@en .\n\n:DiningChair3 a psr:Furniture ;\n    rdfs:label \"Dining Chair 3\"@en .\n\n:DiningChair4 a psr:Furniture ;\n    rdfs:label \"Dining Chair 4\"@en .\n\n:StrawberryJamJar a psr:Object ;\n    rdfs:label \"Strawberry Jam Jar\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:JelloBox a psr:Object ;\n    rdfs:label \"Jello Box\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:AlpenSalt a psr:Object ;\n    rdfs:label \"Alpen Salt\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:RiceBubblesBox a psr:Object ;\n    rdfs:label \"Rice Bubbles Box\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:ChuckyCerealBox a psr:Object ;\n    rdfs:label \"Chucky Cereal Box\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:StackOfPlates a psr:Object ;\n    rdfs:label \"Stack of Plates\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:OrangeMug a psr:Object ;\n    rdfs:label \"Orange Mug\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:Pot a psr:Object ;\n    rdfs:label \"Pot\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :CounterTopLocation .\n\n:ShortbreadBox a psr:Object ;\n    rdfs:label \"Shortbread Box\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :TableTopLocation .\n\n:EvianBottle a psr:Object ;\n    rdfs:label \"Evian Bottle\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :TableTopLocation .\n\n:FruitBowl a psr:Object ;\n    rdfs:label \"Fruit Bowl\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :TableTopLocation .\n\n:Decanter a psr:Object ;\n    rdfs:label \"Decanter\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :TableTopLocation .\n\n:WineGlass a psr:Object ;\n    rdfs:label \"Wine Glass\"@en ;\n    psr:hasAffordance :CanBePickedUp ;\n    dul:hasLocation :TableTopLocation .\n\n:CounterTopLocation a soma:Location ;\n    rdfs:label \"Countertop Location\"@en ;\n    psr:onTopOf :KitchenCounter ;\n    geo:sfContains :StrawberryJamJar,\n                   :JelloBox,\n                   :AlpenSalt,\n                   :RiceBubblesBox,\n                   :ChuckyCerealBox,\n                   :StackOfPlates,\n                   :OrangeMug,\n                   :Pot .\n\n:TableTopLocation a soma:Location ;\n    rdfs:label \"Tabletop Location\"@en ;\n    psr:onTopOf :DiningTable ;\n    geo:sfContains :ShortbreadBox,\n                   :EvianBottle,\n                   :FruitBowl,\n                   :Decanter,\n                   :WineGlass .\n\n:CanBePickedUp a soma:PickingUp ;\n    rdfs:label \"Can be picked up\"@en .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747481496,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 6795,
+        "prompt_tokens": 4978,
+        "total_tokens": 11773,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 5184,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

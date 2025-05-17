@@ -1,0 +1,75 @@
+@prefix ex: <http://example.org/> .
+@prefix env: <http://example.org/environment/> .
+@prefix furniture: <http://example.org/furniture/> .
+@prefix material: <http://example.org/material/> .
+@prefix contents: <http://example.org/contents/> .
+@prefix furnitureType: <http://example.org/furnitureType/> .
+@prefix item: <http://example.org/item/> .
+
+env:Environment a env:Environment ;
+    env:hasPart env:kitchen, env:diningArea .
+
+env:kitchen a env:Kitchen ;
+    env:hasFeature env:lowerCabinets, env:upperCabinets, env:countertop, env:window .
+
+env:lowerCabinets a furniture:Cabinet ;
+    furniture:hasColor "dark" ;
+    furniture:hasHandleType "vertical" .
+
+env:upperCabinets a furniture:Cabinet ;
+    furniture:hasLocation "wall-mounted" .
+
+env:countertop a furniture:Countertop ;
+    contents:hasItem item:jarOfStrawberryJam, item:JelloBox, item:AlpenSaltCarton, item:smallItems .
+
+item:jarOfStrawberryJam a contents:SmallItem ;
+    contents:hasName "jar of strawberry jam" .
+
+item:JelloBox a contents:SmallItem ;
+    contents:hasName "box of Jello" .
+
+item:AlpenSaltCarton a contents:SmallItem ;
+    contents:hasName "carton of Alpen Salz" .
+
+env:diningArea a env:DiningArea ;
+    env:hasFurniture env:woodenTable, env:whiteChairs ;
+    env:hasItems env:largeBottleEvian, env:boxShortbread, env:smallGlassWine, env:whitePitcher, env:fruits .
+
+env:woodenTable a furniture:Table ;
+    furniture:hasMaterial "wood" .
+
+env:whiteChairs a furniture:Chair ;
+    furniture:hasColor "white" ;
+    furniture:hasBackHeight "tall" .
+
+env:largeBottleEvian a contents:Item ;
+    contents:hasName "large bottle of Evian water" .
+
+env:boxShortbread a contents:Item ;
+    contents:hasName "box of shortbread" .
+
+env:smallGlassWine a contents:Item ;
+    contents:hasName "small glass of wine" .
+
+env:whitePitcher a contents:Item ;
+    contents:hasName "white pitcher" .
+
+env:fruits a contents:Item ;
+    contents:hasName "fruits" .
+
+env:kitchenWiderView a env:KitchenView ;
+    env:hasCountertop env:countertop ;
+    env:hasCabinets env:lowerCabinets ;
+    env:hasWall env:whiteWall .
+
+env:countertop a furniture:Countertop ;
+    contents:hasItem item:jarOfStrawberryJam, item:JelloBox, item:AlpenSaltCarton, item:smallItems .
+
+env:window a env:Window ;
+    env:hasFrameMaterial "wood" .
+
+env:overallEnvironment a env:Environment ;
+    env:hasPart env:kitchen, env:diningArea ;
+    env:hasColorPalette "neutral" ;
+    env:hasMaterials "wood" , "dark" , "white" ;
+    env:hasContents "food" , "household items" .
