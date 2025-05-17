@@ -1,0 +1,65 @@
+@prefix ex: <http://example.com/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ReorganiseKitchenTask a ex:Task .
+
+ex:Kitchen a ex:Room .
+ex:BlackCabinet a ex:Cabinet .
+ex:Countertop a ex:Surface .
+ex:WhitePlates a ex:Dish .
+ex:JarOfStrawberryJam a ex:FoodItem .
+ex:StrawberryJellOBox a ex:FoodItem .
+ex:AlpenSaltContainer a ex:FoodItem .
+ex:RiceBubblesBox a ex:CerealBox .
+ex:ChuckyCerealBox a ex:CerealBox .
+ex:OrangeMug a ex:Mug .
+ex:Robot1 a ex:Robot .
+
+ex:Action1 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:WhitePlates ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action2 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:JarOfStrawberryJam ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action3 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:StrawberryJellOBox ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action4 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:AlpenSaltContainer ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action5 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:RiceBubblesBox ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action6 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:ChuckyCerealBox ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .
+
+ex:Action7 a ex:MoveAction ;
+    ex:hasActor ex:Robot1 ;
+    ex:hasObject ex:OrangeMug ;
+    ex:fromLocation ex:Countertop ;
+    ex:toLocation ex:BlackCabinet ;
+    ex:partOf ex:ReorganiseKitchenTask .

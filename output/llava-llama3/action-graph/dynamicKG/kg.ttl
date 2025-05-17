@@ -1,0 +1,44 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:CLOSES kitchen:cabinet,
+        kitchen:cupboard,
+        kitchen:wall_cabinet ;
+    kitchen:INSPECTS kitchen:kitchen_and_dining_area ;
+    kitchen:MOVES_TO kitchen:countertop,
+        kitchen:cupboard_in_corner_of_room,
+        kitchen:dining_area,
+        kitchen:kitchen_area,
+        kitchen:refrigerator,
+        kitchen:wall_cabinet_with_utensils ;
+    kitchen:OPENS kitchen:cupboard,
+        kitchen:dark_wooden_cabinet_above_counter ;
+    kitchen:PICKS_UP kitchen:box_of_cereal,
+        kitchen:red_and_white_container ;
+    kitchen:REMOVES kitchen:items,
+        kitchen:items_on_top_of_refrigerator,
+        kitchen:unnecessary_items ;
+    kitchen:WIPES_DOWN kitchen:cabinet_shelves,
+        kitchen:countertop,
+        kitchen:dining_table,
+        kitchen:top_of_refrigerator .
+
+kitchen:baking_supplies kitchen:PLACED_IN kitchen:cabinet_above_counter .
+
+kitchen:cake_or_muffin_box kitchen:PLACED_IN kitchen:refrigerator .
+
+kitchen:cereal kitchen:PLACED_IN kitchen:refrigerator .
+
+kitchen:items_in_cupboard kitchen:ORGANIZED_IN kitchen:cupboard .
+
+kitchen:loaf_of_bread kitchen:PLACED_IN kitchen:refrigerator .
+
+kitchen:utensils kitchen:ORGANIZED_IN kitchen:wall_cabinet .
+
+kitchen:box_of_cereal kitchen:PLACED_IN kitchen:designated_cabinet .
+
+kitchen:dark_wooden_cabinet_above_counter kitchen:CONTAINS kitchen:items .
+
+kitchen:red_and_white_container kitchen:PLACED_IN kitchen:designated_cabinet .
+
+kitchen:items kitchen:ORGANIZED_BY kitchen:category .
+

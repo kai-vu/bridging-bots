@@ -1,0 +1,63 @@
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Kitchen a :Environment ;
+    :hasArea :KitchenArea .
+
+:KitchenArea a :Area ;
+    :contains :LowerCabinet, :UpperCabinet, :Countertop, :Fridge, :DiningArea .
+
+:LowerCabinet a :Furniture ;
+    :hasHandleType "Vertical"^^xsd:string ;
+    :location :KitchenArea .
+
+:UpperCabinet a :Furniture ;
+    :location :KitchenArea .
+
+:Countertop a :Surface ;
+    :locatedIn :KitchenArea .
+
+:Fridge a :Appliance ;
+    :locatedIn :KitchenArea .
+
+:DiningArea a :Area ;
+    :contains :Table, :Chairs .
+
+:Table a :Furniture ;
+    :hasSurface :TableSurface .
+
+:Chairs a :Furniture .
+
+:TableSurface a :Surface ;
+    :hasItem :EvianBottle, :BoxOfShortbread, :GlassOfWine, :WhitePitcher, :Fruits .
+
+:EvianBottle a :Item .
+
+:BoxOfShortbread a :Item .
+
+:GlassOfWine a :Item .
+
+:WhitePitcher a :Item .
+
+:Fruits a :Item .
+
+# Actions to reorganise the kitchen (example actions, assuming typical reorganisation steps)
+:ReorganiseKitchen a :Action ;
+    :aimsTo :ArrangeItemsProperly ;
+    :performedOn :Kitchen .
+
+:ArrangeItemsProperly a :Action ;
+    :targets :CountertopItems, :CabinetsContents, :FurnitureArrangement .
+
+:CountertopItems a :ItemList ;
+    :includes :JamJar, :JelloBox, :AlpenSaltCarton, :OtherSmallItems .
+
+:JamJar a :Item .
+
+:JelloBox a :Item .
+
+:AlpenSaltCarton a :Item .
+
+:OtherSmallItems a :Item .
+
+# Note: The specific steps for reorganization depend on goal, e.g., grouping items, clearing surfaces, etc.

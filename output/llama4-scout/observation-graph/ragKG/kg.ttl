@@ -1,0 +1,153 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psrTask-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:kitchen a psr:Environment ;
+  rdfs:label "kitchen"@en .
+
+psr:diningArea a psr:Environment ;
+  rdfs:label "dining area"@en .
+
+psr:kitchen dul:hasComponent psr:cabinets ;
+  dul:hasComponent psr:countertop ;
+  dul:hasComponent psr:stove ;
+  dul:hasComponent psr:sink ;
+  dul:hasComponent psr:refrigerator ;
+  dul:hasComponent psr:rangeHood .
+
+psr:diningArea dul:hasComponent psr:table ;
+  dul:hasComponent psr:chairs ;
+  dul:hasComponent psr:floor .
+
+psr:cabinets a psr:Component, psr:Furniture ;
+  rdfs:label "cabinets"@en .
+
+psr:countertop a psr:Component, psr:Appliance ;
+  rdfs:label "countertop"@en .
+
+psr:stove a psr:Component, psr:Appliance ;
+  rdfs:label "stove"@en .
+
+psr:sink a psr:Component, psr:Appliance ;
+  rdfs:label "sink"@en .
+
+psr:refrigerator a psr:Component, psr:Appliance ;
+  rdfs:label "refrigerator"@en .
+
+psr:rangeHood a psr:Component, psr:Appliance ;
+  rdfs:label "range hood"@en .
+
+psr:table a psr:Component, psr:Furniture ;
+  rdfs:label "table"@en .
+
+psr:chairs a psr:Component, psr:Furniture ;
+  rdfs:label "chairs"@en .
+
+psr:floor a psr:Component ;
+  rdfs:label "floor"@en .
+
+psr:pot a psr:Component, psr:Object ;
+  rdfs:label "pot"@en ;
+  dul:hasLocation psr:stove .
+
+psr:cup a psr:Component, psr:Object ;
+  rdfs:label "cup"@en ;
+  dul:hasLocation psr:countertop .
+
+psr:jarOfJam a psr:Component, psr:Object ;
+  rdfs:label "jar of jam"@en ;
+  dul:hasLocation psr:countertop .
+
+psr:boxOfRiceBubbles a psr:Component, psr:Object ;
+  rdfs:label "box of Rice Bubbles"@en ;
+  dul:hasLocation psr:countertop .
+
+psr:boxOfShortbread a psr:Component, psr:Object ;
+  rdfs:label "box of shortbread"@en ;
+  dul:hasLocation psr:countertop .
+
+psr:puzzleBox a psr:Component, psr:Object ;
+  rdfs:label "puzzle box"@en ;
+  dul:hasLocation psr:countertop .
+
+psr:bottleOfWater a psr:Component, psr:Object ;
+  rdfs:label "bottle of water"@en ;
+  dul:hasLocation psr:table .
+
+psr:plate a psr:Component, psr:Object ;
+  rdfs:label "plate"@en ;
+  dul:hasLocation psr:table .
+
+psr:mug a psr:Component, psr:Object ;
+  rdfs:label "mug"@en ;
+  dul:hasLocation psr:table .
+
+psr:book a psr:Component, psr:Object ;
+  rdfs:label "book"@en ;
+  dul:hasLocation psr:table .
+
+psr:cabinets psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:refrigerator psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Closing .
+
+psr:stove psr:hasAffordance soma:Pushing .
+
+psr:cup psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:jarOfJam psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:boxOfRiceBubbles psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:boxOfShortbread psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:puzzleBox psr:hasAffordance soma:Opening ;
+  psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:bottleOfWater psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:plate psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:mug psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:book psr:hasAffordance soma:Grasping ;
+  psr:hasAffordance soma:PickingUp ;
+  psr:hasAffordance soma:PuttingDown .
+
+psr:kitchen geo:sfContains psr:diningArea .
+
+psr:cabinets psr:onTopOf psr:floor .
+
+psr:countertop psr:onTopOf psr:cabinets .
+
+psr:stove psr:onTopOf psr:countertop .
+
+psr:sink psr:onTopOf psr:countertop .
+
+psr:rangeHood psr:onTopOf psr:stove .
+
+psr:refrigerator psr:onTopOf psr:floor .
+
+psr:table psr:onTopOf psr:floor .
+
+psr:chairs psr:onTopOf psr:floor .

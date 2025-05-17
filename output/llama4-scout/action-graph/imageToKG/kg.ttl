@@ -1,0 +1,79 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+### Define Entities
+
+psr:reorganizeKitchen a psr:Instruction ;
+  psr:hasNaturalLanguage "Reorganise the kitchen"@en .
+
+psr:workflow a psr:Workflow .
+
+psr:action1 a dul:Action ;
+  rdfs:label "Pick up the Evian bottle from the table"@en .
+
+psr:action2 a dul:Action ;
+  rdfs:label "Put down the Evian bottle into the refrigerator"@en .
+
+psr:action3 a dul:Action ;
+  rdfs:label "Pick up the Chucky puzzle box from the table"@en .
+
+psr:action4 a dul:Action ;
+  rdfs:label "Put down the Chucky puzzle box on the kitchen counter"@en .
+
+psr:action5 a dul:Action ;
+  rdfs:label "Pick up the Jello box from the kitchen counter"@en .
+
+psr:action6 a dul:Action ;
+  rdfs:label "Put down the Jello box into the cabinet"@en .
+
+### Define Workflow and Action Sequence
+
+psr:reorganizeKitchen psr:hasWorkflow psr:workflow .
+
+psr:workflow psr:hasAction psr:action1 ;
+             psr:hasAction psr:action2 ;
+             psr:hasAction psr:action3 ;
+             psr:hasAction psr:action4 ;
+             psr:hasAction psr:action5 ;
+             psr:hasAction psr:action6 .
+
+psr:action1 psr:follows owl:Thing ;
+            psr:precedes psr:action2 .
+
+psr:action2 psr:precedes psr:action3 .
+
+psr:action3 psr:follows psr:action2 ;
+            psr:precedes psr:action4 .
+
+psr:action4 psr:follows psr:action3 ;
+            psr:precedes psr:action5 .
+
+psr:action5 psr:follows psr:action4 ;
+            psr:precedes psr:action6 .
+
+psr:action6 psr:follows psr:action5 .
+
+### Define Affordances and Relations
+
+psr:action1 psr:isAffordedBy soma:PickingUp ;
+            psr:actsOn <https://example.org/EvianBottle> .
+
+psr:action2 psr:isAffordedBy soma:PuttingDown ;
+            psr:actsOn <https://example.org/EvianBottle> .
+
+psr:action3 psr:isAffordedBy soma:PickingUp ;
+            psr:actsOn <https://example.org/ChuckyPuzzleBox> .
+
+psr:action4 psr:isAffordedBy psr:PullAffordance .
+
+psr:action5 psr:isAffordedBy soma:PickingUp ;
+            psr:actsOn <https://example.org/JelloBox> .
+
+psr:action6 psr:isAffordedBy soma:PuttingDown ;
+            psr:actsOn <https://example.org/JelloBox> .

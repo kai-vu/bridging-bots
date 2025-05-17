@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-9b5e2c3b-8697-42c5-adcd-3a3817b3e663",
+    "created": 1747487067,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```python\n@prefix psr: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix dul: <https://www.dereczik.net/owl/DulLiteOntology#>\n\n# Instruction class and properties for task\n[psr:Instruction] psr:hasWorkflow [dul:Workflow] .\n[psr:Instruction] psr:precedes [dul:Action] .\n[psr:Instruction] psr:follows [dul:Action] .\n[psr:Instruction] psr:actsOn [dul:Component] .\n[psr:Instruction] psr:isAffordedBy [dul:Affordance] .\n[psr:Instruction] psr:hasNaturalLanguage \"Reorganise the kitchen\"@en .\n\n# Workflow class and properties for task\n[dul:Workflow] dul:hasAction [dul:Action] .\n\n# Agent class and properties for task\n[dul:Agent] dul:isPerformedBy [dul:Component] .\n\n# Action class and properties for task\n[dul:Action] psr:precedes [dul:Action] .\n[dul:Action] psr:follows [dul:Action] .\n[dul:Action] dul:actsOn [dul:Component] .\n[dul:Action] dul:isAffordedBy [dul:Affordance] .\n\n# Component class and properties for task\n[dul:Component] psr:hasNaturalLanguage \"Refrigerator\"@en .\n[dul:Component] dul:precedes [dul:Action] .\n[dul:Component] dul:follows [dul:Action] .\n[dul:Component] dul:actsOn [dul:Component] .\n[dul:Component] dul:isAffordedBy [dul:Affordance] .\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 68.49,
+        "prompt_token/s": 1851.41,
+        "total_duration": 11450447680,
+        "load_duration": 2369568964,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2212365166,
+        "eval_count": 467,
+        "completion_tokens": 467,
+        "eval_duration": 6818902544,
+        "approximate_total": "0h0m11s",
+        "total_tokens": 4563,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

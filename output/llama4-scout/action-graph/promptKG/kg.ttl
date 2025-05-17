@@ -1,0 +1,181 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+# Define the environment
+psr:Kitchen a psr:Environment ;
+  rdfs:label "Kitchen"@en .
+
+psr:DiningArea a psr:Environment ;
+  rdfs:label "Dining Area"@en .
+
+# Define components
+psr:BlackCabinets a psr:Component, psr:Furniture ;
+  rdfs:label "Black Cabinets"@en ;
+  dul:hasLocation psr:Kitchen .
+
+psr:BeigeMarbleCountertop a psr:Component, psr:Furniture ;
+  rdfs:label "Beige Marble Countertop"@en ;
+  dul:hasLocation psr:Kitchen .
+
+psr:Stove a psr:Component, psr:Appliance ;
+  rdfs:label "Stove"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Pot a psr:Component, psr:Object ;
+  rdfs:label "Pot"@en ;
+  dul:hasLocation psr:Stove .
+
+psr:Sink a psr:Component, psr:Appliance ;
+  rdfs:label "Sink"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:YellowCup a psr:Component, psr:Object ;
+  rdfs:label "Yellow Cup"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:JarOfJam a psr:Component, psr:Object ;
+  rdfs:label "Jar of Jam"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:BoxOfRiceBubbles a psr:Component, psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:BoxOfShortbread a psr:Component, psr:Object ;
+  rdfs:label "Box of Shortbread"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:PuzzleBox a psr:Component, psr:Object ;
+  rdfs:label "Puzzle Box"@en ;
+  dul:hasLocation psr:BeigeMarbleCountertop .
+
+psr:RangeHood a psr:Component, psr:Appliance ;
+  rdfs:label "Range Hood"@en ;
+  dul:hasLocation psr:Kitchen .
+
+psr:Refrigerator a psr:Component, psr:Appliance ;
+  rdfs:label "Refrigerator"@en ;
+  dul:hasLocation psr:Kitchen .
+
+psr:WoodenTable a psr:Component, psr:Furniture ;
+  rdfs:label "Wooden Table"@en ;
+  dul:hasLocation psr:DiningArea .
+
+psr:WhiteChairs a psr:Component, psr:Furniture ;
+  rdfs:label "White Chairs"@en ;
+  dul:hasLocation psr:DiningArea .
+
+psr:BottleOfWater a psr:Component, psr:Object ;
+  rdfs:label "Bottle of Water"@en ;
+  dul:hasLocation psr:WoodenTable .
+
+psr:Plate a psr:Component, psr:Object ;
+  rdfs:label "Plate"@en ;
+  dul:hasLocation psr:WoodenTable .
+
+psr:Mug a psr:Component, psr:Object ;
+  rdfs:label "Mug"@en ;
+  dul:hasLocation psr:WoodenTable .
+
+psr:Book a psr:Component, psr:Object ;
+  rdfs:label "Book"@en ;
+  dul:hasLocation psr:WoodenTable .
+
+# Define locations
+soma:KitchenLocation a soma:Location ;
+  dul:hasLocation psr:Kitchen .
+
+soma:DiningAreaLocation a soma:Location ;
+  dul:hasLocation psr:DiningArea .
+
+# Define relationships between components and locations
+psr:Kitchen dul:hasComponent psr:BlackCabinets .
+psr:Kitchen dul:hasComponent psr:BeigeMarbleCountertop .
+psr:Kitchen dul:hasComponent psr:Stove .
+psr:Kitchen dul:hasComponent psr:Sink .
+psr:Kitchen dul:hasComponent psr:RangeHood .
+psr:Kitchen dul:hasComponent psr:Refrigerator .
+
+psr:DiningArea dul:hasComponent psr:WoodenTable .
+psr:DiningArea dul:hasComponent psr:WhiteChairs .
+
+psr:BeigeMarbleCountertop dul:hasComponent psr:Pot .
+psr:BeigeMarbleCountertop dul:hasComponent psr:YellowCup .
+psr:BeigeMarbleCountertop dul:hasComponent psr:JarOfJam .
+psr:BeigeMarbleCountertop dul:hasComponent psr:BoxOfRiceBubbles .
+psr:BeigeMarbleCountertop dul:hasComponent psr:BoxOfShortbread .
+psr:BeigeMarbleCountertop dul:hasComponent psr:PuzzleBox .
+
+psr:WoodenTable dul:hasComponent psr:BottleOfWater .
+psr:WoodenTable dul:hasComponent psr:Plate .
+psr:WoodenTable dul:hasComponent psr:Mug .
+psr:WoodenTable dul:hasComponent psr:Book .
+
+# Define affordances
+psr:Pot psr:hasAffordance soma:Grasping .
+psr:Pot psr:hasAffordance soma:PickingUp .
+psr:Pot psr:hasAffordance soma:PuttingDown .
+
+psr:YellowCup psr:hasAffordance soma:Grasping .
+psr:YellowCup psr:hasAffordance soma:PickingUp .
+psr:YellowCup psr:hasAffordance soma:PuttingDown .
+
+psr:JarOfJam psr:hasAffordance soma:Grasping .
+psr:JarOfJam psr:hasAffordance soma:PickingUp .
+psr:JarOfJam psr:hasAffordance soma:PuttingDown .
+
+psr:BoxOfRiceBubbles psr:hasAffordance soma:Grasping .
+psr:BoxOfRiceBubbles psr:hasAffordance soma:PickingUp .
+psr:BoxOfRiceBubbles psr:hasAffordance soma:PuttingDown .
+
+psr:BoxOfShortbread psr:hasAffordance soma:Grasping .
+psr:BoxOfShortbread psr:hasAffordance soma:PickingUp .
+psr:BoxOfShortbread psr:hasAffordance soma:PuttingDown .
+
+psr:PuzzleBox psr:hasAffordance soma:Grasping .
+psr:PuzzleBox psr:hasAffordance soma:PickingUp .
+psr:PuzzleBox psr:hasAffordance soma:PuttingDown .
+
+# Task: Reorganise the kitchen
+psr:ReorganiseKitchen a psr:Affordance ;
+  rdfs:label "Reorganise Kitchen"@en .
+
+psr:Kitchen psr:hasAffordance psr:ReorganiseKitchen .
+
+# Actions to complete the task
+psr:MovePotToCabinet a psr:Affordance ;
+  rdfs:label "Move Pot to Cabinet"@en .
+
+psr:MoveYellowCupToCabinet a psr:Affordance ;
+  rdfs:label "Move Yellow Cup to Cabinet"@en .
+
+psr:MoveJarOfJamToCabinet a psr:Affordance ;
+  rdfs:label "Move Jar of Jam to Cabinet"@en .
+
+psr:MoveBoxOfRiceBubblesToCabinet a psr:Affordance ;
+  rdfs:label "Move Box of Rice Bubbles to Cabinet"@en .
+
+psr:MoveBoxOfShortbreadToCabinet a psr:Affordance ;
+  rdfs:label "Move Box of Shortbread to Cabinet"@en .
+
+psr:MovePuzzleBoxToCabinet a psr:Affordance ;
+  rdfs:label "Move Puzzle Box to Cabinet"@en .
+
+psr:Pot psr:hasAffordance psr:MovePotToCabinet .
+psr:YellowCup psr:hasAffordance psr:MoveYellowCupToCabinet .
+psr:JarOfJam psr:hasAffordance psr:MoveJarOfJamToCabinet .
+psr:BoxOfRiceBubbles psr:hasAffordance psr:MoveBoxOfRiceBubblesToCabinet .
+psr:BoxOfShortbread psr:hasAffordance psr:MoveBoxOfShortbreadToCabinet .
+psr:PuzzleBox psr:hasAffordance psr:MovePuzzleBoxToCabinet .
+
+psr:BlackCabinets dul:hasComponent psr:Pot .
+psr:BlackCabinets dul:hasComponent psr:YellowCup .
+psr:BlackCabinets dul:hasComponent psr:JarOfJam .
+psr:BlackCabinets dul:hasComponent psr:BoxOfRiceBubbles .
+psr:BlackCabinets dul:hasComponent psr:BoxOfShortbread .
+psr:BlackCabinets dul:hasComponent psr:PuzzleBox .

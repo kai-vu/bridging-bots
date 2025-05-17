@@ -1,0 +1,20 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:dining_table kitchen:hasAffordance kitchen:wine_glass ;
+    kitchen:onTopOf kitchen:bottle_of_water,
+        kitchen:box_of_crackers,
+        kitchen:mug .
+
+kitchen:kitchen kitchen:hasAffordance kitchen:refrigerator ;
+    kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertop .
+
+kitchen:kitchen_counter kitchen:hasLocation kitchen:sink .
+
+kitchen:stove_top kitchen:hasLocation kitchen:range_hood .
+
+kitchen:countertop kitchen:onTopOf kitchen:box_of_jello,
+        kitchen:box_of_salt,
+        kitchen:jar_of_jam,
+        kitchen:stack_of_plates .
+

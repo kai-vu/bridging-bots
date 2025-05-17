@@ -1,0 +1,89 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psrTask-ontology#> .
+
+psr:Kitchen a psr:Environment ;
+    dul:hasComponent psr:KitchenCounter, psr:Refrigerator, psr:DiningTable, psr:Sink, psr:StoveTop, psr:RangeHood, psr:Cabinets, psr:WhiteChairs .
+
+psr:KitchenCounter a psr:Component ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Holding ;
+    geo:sfContains psr:BoxOfJello, psr:JarOfJam, psr:BoxOfSalt, psr:StackOfPlates, psr:BoxOfChuckyCereal, psr:BoxOfRiceBubbles .
+
+psr:Refrigerator a psr:Appliance ;
+    dul:hasLocation psr:Kitchen .
+
+psr:DiningTable a psr:Furniture ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Holding ;
+    geo:sfContains psr:BottleOfWater, psr:BoxOfCrackers, psr:Mug, psr:WineGlass .
+
+psr:Sink a psr:Component ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:StoveTop a psr:Appliance ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:RangeHood a psr:Appliance ;
+    dul:hasLocation psr:StoveTop ;
+    psr:onTopOf psr:StoveTop .
+
+psr:Cabinets a psr:Furniture ;
+    dul:hasLocation psr:Kitchen .
+
+psr:WhiteChairs a psr:Furniture ;
+    dul:hasLocation psr:DiningTable .
+
+psr:BoxOfJello a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:JarOfJam a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:BoxOfSalt a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:StackOfPlates a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:BottleOfWater a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:BoxOfCrackers a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:Mug a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:WineGlass a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:BoxOfChuckyCereal a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:BoxOfRiceBubbles a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
+
+psr:Pot a psr:Object ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:onTopOf psr:StoveTop .
+
+psr:KitchenCounter dul:hasLocation psr:Kitchen ;
+    psr:onTopOf psr:Cabinets .
+
+psr:Refrigerator geo:sfWithin psr:Kitchen .
+
+psr:DiningTable geo:sfWithin psr:Kitchen .
+
+psr:WhiteChairs dul:hasLocation psr:DiningTable .
+
+psr:Kitchen dul:hasComponent psr:WhiteWalls, psr:DarkWoodFloor .
+
+psr:WhiteWalls a psr:Component ;
+    dul:hasLocation psr:Kitchen .
+
+psr:DarkWoodFloor a psr:Component ;
+    dul:hasLocation psr:Kitchen .

@@ -1,0 +1,99 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix :       <http://example.org/knowledge-graph#> .
+
+:KitchenDiningRoom
+    a psr:Environment ;
+    dul:hasComponent :BlackTallCabinet,
+                     :BlackUpperCabinets,
+                     :BeigeCountertop,
+                     :StackWhitePlates,
+                     :StrawberryJamJar,
+                     :StrawberryJelloBox,
+                     :AlpenSaltContainer,
+                     :RiceBubblesBox,
+                     :ChuckyCerealBox,
+                     :OrangeMug,
+                     :Stovetop,
+                     :SmallPot,
+                     :WoodenCircularRangeHood,
+                     :SmallMetalSink,
+                     :WoodenFramedWindow,
+                     :WhiteRefrigerator,
+                     :RectangularWoodenTable,
+                     :WhiteCushionedChair1,
+                     :WhiteCushionedChair2,
+                     :WhiteCushionedChair3,
+                     :WhiteCushionedChair4,
+                     :WhiteFruitBowl,
+                     :Oranges,
+                     :LargePlasticWaterBottle,
+                     :ClearPitcher,
+                     :SingleWineGlass,
+                     :SmallRectangularBox,
+                     :WhiteDoor,
+                     :OverheadCeilingLight
+.
+
+:BlackTallCabinet a psr:Furniture .
+:BlackUpperCabinets a psr:Furniture .
+:BeigeCountertop a psr:Furniture .
+:StackWhitePlates a psr:Object .
+:StrawberryJamJar a psr:Object .
+:StrawberryJelloBox a psr:Object .
+:AlpenSaltContainer a psr:Object .
+:RiceBubblesBox a psr:Object .
+:ChuckyCerealBox a psr:Object .
+:OrangeMug a psr:Object .
+:Stovetop a psr:Appliance .
+:SmallPot a psr:Object .
+:WoodenCircularRangeHood a psr:Appliance .
+:SmallMetalSink a psr:Object .
+:WoodenFramedWindow a psr:Object .
+:WhiteRefrigerator a psr:Appliance .
+:RectangularWoodenTable a psr:Furniture .
+:WhiteCushionedChair1 a psr:Furniture .
+:WhiteCushionedChair2 a psr:Furniture .
+:WhiteCushionedChair3 a psr:Furniture .
+:WhiteCushionedChair4 a psr:Furniture .
+:WhiteFruitBowl a psr:Object .
+:Oranges a psr:Object .
+:LargePlasticWaterBottle a psr:Object .
+:ClearPitcher a psr:Object .
+:SingleWineGlass a psr:Object .
+:SmallRectangularBox a psr:Object .
+:WhiteDoor a psr:Object .
+:OverheadCeilingLight a psr:Object .
+
+:CountertopSurface
+    a soma:Location ;
+    psr:onTopOf :BeigeCountertop .
+
+:StackWhitePlates dul:hasLocation :CountertopSurface .
+:StrawberryJamJar dul:hasLocation :CountertopSurface .
+:StrawberryJelloBox dul:hasLocation :CountertopSurface .
+:AlpenSaltContainer dul:hasLocation :CountertopSurface .
+:RiceBubblesBox dul:hasLocation :CountertopSurface .
+:ChuckyCerealBox dul:hasLocation :CountertopSurface .
+:OrangeMug dul:hasLocation :CountertopSurface .
+
+:StovetopSurface
+    a soma:Location ;
+    psr:onTopOf :Stovetop .
+
+:SmallPot dul:hasLocation :StovetopSurface .
+
+:TableSurface
+    a soma:Location ;
+    psr:onTopOf :RectangularWoodenTable .
+
+:WhiteFruitBowl dul:hasLocation :TableSurface .
+:Oranges dul:hasLocation :TableSurface .
+:LargePlasticWaterBottle dul:hasLocation :TableSurface .
+:ClearPitcher dul:hasLocation :TableSurface .
+:SingleWineGlass dul:hasLocation :TableSurface .
+:SmallRectangularBox dul:hasLocation :TableSurface .

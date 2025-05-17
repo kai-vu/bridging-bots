@@ -1,0 +1,62 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+<http://example.org/Instruction1> a psr:Instruction ;
+    rdfs:label "Reorganise the kitchen"@en ;
+    psr:hasNaturalLanguage "Reorganise the kitchen"@en ;
+    psr:hasWorkflow <http://example.org/Workflow1> .
+
+<http://example.org/Workflow1> a psr:Workflow ;
+    rdfs:label "Reorganise the kitchen workflow"@en ;
+    psr:hasAction <http://example.org/Action1> , <http://example.org/Action2> , <http://example.org/Action3> , <http://example.org/Action4> .
+
+<http://example.org/Object1> a psr:Object ;
+    rdfs:label "Fridge Door"@en .
+
+<http://example.org/Object2> a psr:Object ;
+    rdfs:label "Kitchen Cabinet"@en .
+
+<http://example.org/Object3> a psr:Object ;
+    rdfs:label "Kitchen Drawer"@en .
+
+<http://example.org/Component1> a psr:Appliance ;
+    rdfs:label "Refrigerator"@en .
+
+<http://example.org/Component2> a psr:Furniture ;
+    rdfs:label "Kitchen Cabinet"@en .
+
+<http://example.org/Component3> a psr:Furniture ;
+    rdfs:label "Kitchen Drawer"@en .
+
+<http://example.org/Agent1> a dul:Agent ;
+    rdfs:label "Robot"@en .
+
+<http://example.org/Action1> a dul:Action ;
+    rdfs:label "Open fridge door"@en ;
+    psr:actsOn <http://example.org/Object1> ;
+    psr:isPerformedBy <http://example.org/Agent1> ;
+    psr:isAffordedBy soma:Opening .
+
+<http://example.org/Action2> a dul:Action ;
+    rdfs:label "Pick up items from the refrigerator"@en ;
+    psr:actsOn <http://example.org/Object1> ;
+    psr:isPerformedBy <http://example.org/Agent1> ;
+    psr:isAffordedBy soma:PickingUp .
+
+<http://example.org/Action3> a dul:Action ;
+    rdfs:label "Place items into the cabinet"@en ;
+    psr:actsOn <http://example.org/Object2> ;
+    psr:isPerformedBy <http://example.org/Agent1> ;
+    psr:isAffordedBy soma:PuttingDown .
+
+<http://example.org/Action4> a dul:Action ;
+    rdfs:label "Close fridge door"@en ;
+    psr:actsOn <http://example.org/Object1> ;
+    psr:isPerformedBy <http://example.org/Agent1> ;
+    psr:isAffordedBy soma:Closing .

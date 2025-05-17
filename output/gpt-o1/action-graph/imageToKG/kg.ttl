@@ -1,0 +1,122 @@
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix :       <http://example.org/kb#> .
+
+:instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Reorganise the kitchen"^^xsd:string ;
+    psr:hasWorkflow :workflow1 .
+
+:workflow1 a psr:Workflow ;
+    psr:hasAction :action1, :action2, :action3, :action4, :action5,
+                  :action6, :action7, :action8, :action9, :action10,
+                  :action11, :action12, :action13, :action14 .
+
+:robot1 a dul:Agent .
+
+:cupboard1 a psr:Furniture .
+:fridge1 a psr:Appliance .
+:jam1 a psr:Object .
+:jello1 a psr:Object .
+:salt1 a psr:Object .
+:cereal1 a psr:Object .
+:waterBottle1 a psr:Object .
+
+:action1 a dul:Action ;
+    rdfs:label "Open cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :cupboard1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes :action2 .
+
+:action2 a dul:Action ;
+    rdfs:label "Pick up jam"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :jam1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :action3 .
+
+:action3 a dul:Action ;
+    rdfs:label "Put jam in cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :jam1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :action4 .
+
+:action4 a dul:Action ;
+    rdfs:label "Pick up jello"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :jello1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :action5 .
+
+:action5 a dul:Action ;
+    rdfs:label "Put jello in cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :jello1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :action6 .
+
+:action6 a dul:Action ;
+    rdfs:label "Pick up salt"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :salt1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :action7 .
+
+:action7 a dul:Action ;
+    rdfs:label "Put salt in cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :salt1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :action8 .
+
+:action8 a dul:Action ;
+    rdfs:label "Pick up cereal"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :cereal1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :action9 .
+
+:action9 a dul:Action ;
+    rdfs:label "Put cereal in cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :cereal1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :action10 .
+
+:action10 a dul:Action ;
+    rdfs:label "Close cupboard"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :cupboard1 ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes :action11 .
+
+:action11 a dul:Action ;
+    rdfs:label "Open fridge"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :fridge1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes :action12 .
+
+:action12 a dul:Action ;
+    rdfs:label "Pick up water bottle"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :waterBottle1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :action13 .
+
+:action13 a dul:Action ;
+    rdfs:label "Put water bottle in fridge"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :waterBottle1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :action14 .
+
+:action14 a dul:Action ;
+    rdfs:label "Close fridge"@en ;
+    soma:isPerformedBy :robot1 ;
+    psr:actsOn :fridge1 ;
+    psr:isAffordedBy soma:Closing .

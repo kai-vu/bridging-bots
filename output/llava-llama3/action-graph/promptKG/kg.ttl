@@ -1,0 +1,123 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+:Environment1 a psr:Environment .
+
+:Countertop a psr:Component, psr:Furniture ;
+    dul:hasLocation :KitchenLocation1 .
+
+:Sink a psr:Component, psr:Appliance ;
+    dul:hasLocation :CountertopLocation1 ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :Grasping .
+
+:Faucet a psr:Component, psr:Appliance ;
+    dul:hasLocation :CountertopLocation1 ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :Grasping .
+
+:Cabinets a psr:Component, psr:Furniture ;
+    dul:hasLocation :KitchenLocation1 ;
+    psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+
+:Fridge a psr:Component, psr:Appliance ;
+    dul:hasLocation :KitchenLocation1 ;
+    psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+
+:FoodItems a psr:Component, psr:Object ;
+    dul:hasLocation :FridgeTopLocation1 ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :Holding .
+
+:Container a psr:Component, psr:Object ;
+    dul:hasLocation :CountertopLocation1 ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :Holding .
+
+:Utensils a psr:Component, psr:Object ;
+    dul:hasLocation :WallCabinetLocation1 ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :Holding .
+
+:Floor a psr:Component, psr:Furniture ;
+    dul:hasLocation :KitchenLocation1 .
+
+:Table a psr:Component, psr:Furniture ;
+    dul:hasLocation :DiningAreaLocation1 .
+
+:Chair a psr:Component, psr:Furniture ;
+    dul:hasLocation :TableLocation1 ;
+    psr:hasAffordance :PickingUp ;
+    psr:hasAffordance :Holding ;
+    psr:hasAffordance :Pushing ;
+    psr:hasAffordance :Pulling .
+
+:Cupboard a psr:Component, psr:Furniture ;
+    dul:hasLocation :DiningAreaLocation1 ;
+    psr:hasAffordance :Opening ;
+    psr:hasAffordance :Closing .
+
+:Environment1 dul:hasComponent :Countertop .
+:Environment1 dul:hasComponent :Sink .
+:Environment1 dul:hasComponent :Faucet .
+:Environment1 dul:hasComponent :Cabinets .
+:Environment1 dul:hasComponent :Fridge .
+:Environment1 dul:hasComponent :FoodItems .
+:Environment1 dul:hasComponent :Container .
+:Environment1 dul:hasComponent :Utensils .
+:Environment1 dul:hasComponent :Floor .
+:Environment1 dul:hasComponent :Table .
+:Environment1 dul:hasComponent :Chair .
+:Environment1 dul:hasComponent :Cupboard .
+
+:Countertop dul:hasLocation :KitchenLocation1 .
+:Sink dul:hasLocation :CountertopLocation1 .
+:Faucet dul:hasLocation :CountertopLocation1 .
+:Cabinets dul:hasLocation :KitchenLocation1 .
+:Fridge dul:hasLocation :KitchenLocation1 .
+:FoodItems dul:hasLocation :FridgeTopLocation1 .
+:Container dul:hasLocation :CountertopLocation1 .
+:Utensils dul:hasLocation :WallCabinetLocation1 .
+:Floor dul:hasLocation :KitchenLocation1 .
+:Table dul:hasLocation :DiningAreaLocation1 .
+:Chair dul:hasLocation :TableLocation1 .
+:Cupboard dul:hasLocation :DiningAreaLocation1 .
+
+:KitchenLocation1 a soma:Location .
+:CountertopLocation1 a soma:Location .
+:FridgeTopLocation1 a soma:Location .
+:WallCabinetLocation1 a soma:Location .
+:DiningAreaLocation1 a soma:Location .
+:TableLocation1 a soma:Location .
+
+:Countertop psr:onTopOf :Floor .
+:Sink psr:onTopOf :Countertop .
+:Faucet psr:onTopOf :Countertop .
+:Cabinets psr:onTopOf :Floor .
+:Fridge psr:onTopOf :Floor .
+:FoodItems psr:onTopOf :Fridge .
+:Container psr:onTopOf :Countertop .
+:Utensils psr:onTopOf :WallCabinet .
+:Chair psr:onTopOf :Floor .
+:Cupboard psr:onTopOf :Floor .
+
+:KitchenLocation1 geo:sfContains :Countertop .
+:KitchenLocation1 geo:sfContains :Sink .
+:KitchenLocation1 geo:sfContains :Faucet .
+:KitchenLocation1 geo:sfContains :Cabinets .
+:KitchenLocation1 geo:sfContains :Fridge .
+:KitchenLocation1 geo:sfContains :Floor .
+:CountertopLocation1 geo:sfContains :Sink .
+:CountertopLocation1 geo:sfContains :Faucet .
+:CountertopLocation1 geo:sfContains :Container .
+:FridgeTopLocation1 geo:sfContains :FoodItems .
+:WallCabinetLocation1 geo:sfContains :Utensils .
+:DiningAreaLocation1 geo:sfContains :Table .
+:DiningAreaLocation1 geo:sfContains :Chair .
+:DiningAreaLocation1 geo:sfContains :Cupboard .

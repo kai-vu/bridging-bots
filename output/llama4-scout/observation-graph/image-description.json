@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-39c08c37-3b30-4b2b-8df9-7b4b29d430ce",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment consists of a kitchen and a dining area. \nIn the kitchen, there are black cabinets with blue handles and a beige marble countertop. On the countertop, there is a pot on a stove, a sink, a yellow cup, a jar of jam, a box of Rice Bubbles, a box of shortbread, and a puzzle box. There is also a range hood above the stove. \nThe refrigerator is white and located next to the kitchen cabinets. \nIn the dining area, there is a wooden table with four white chairs. On the table, there is a bottle of water, a plate, a mug, a box of shortbread, and a book. \nThe floor is made of dark wood parquet, and the walls are white. \nThe kitchen and dining area are connected, with the dining area located adjacent to the kitchen.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747434196,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_42ae451038",
+    "usage": {
+        "completion_tokens": 175,
+        "prompt_tokens": 12500,
+        "total_tokens": 12675,
+        "completion_time": 0.37274119,
+        "prompt_time": 0.415536602,
+        "queue_time": 1.93959269,
+        "total_time": 0.788277792
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdk3h6pe9ba3bbhry19b011"
+    }
+}

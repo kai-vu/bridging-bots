@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BYAOn26y8akwc93vzn925WJITInVL",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix psr:    <https://w3id.org/psr-task#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix :       <http://example.org/kb#> .\n\n:instruction1 a psr:Instruction ;\n    psr:hasNaturalLanguage \"Reorganise the kitchen\"^^xsd:string ;\n    psr:hasWorkflow :workflow1 .\n\n:workflow1 a psr:Workflow ;\n    psr:hasAction :action1, :action2, :action3, :action4, :action5,\n                  :action6, :action7, :action8, :action9, :action10,\n                  :action11, :action12, :action13, :action14 .\n\n:robot1 a dul:Agent .\n\n:cupboard1 a psr:Furniture .\n:fridge1 a psr:Appliance .\n:jam1 a psr:Object .\n:jello1 a psr:Object .\n:salt1 a psr:Object .\n:cereal1 a psr:Object .\n:waterBottle1 a psr:Object .\n\n:action1 a dul:Action ;\n    rdfs:label \"Open cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :cupboard1 ;\n    psr:isAffordedBy soma:Opening ;\n    psr:precedes :action2 .\n\n:action2 a dul:Action ;\n    rdfs:label \"Pick up jam\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :jam1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :action3 .\n\n:action3 a dul:Action ;\n    rdfs:label \"Put jam in cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :jam1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes :action4 .\n\n:action4 a dul:Action ;\n    rdfs:label \"Pick up jello\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :jello1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :action5 .\n\n:action5 a dul:Action ;\n    rdfs:label \"Put jello in cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :jello1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes :action6 .\n\n:action6 a dul:Action ;\n    rdfs:label \"Pick up salt\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :salt1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :action7 .\n\n:action7 a dul:Action ;\n    rdfs:label \"Put salt in cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :salt1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes :action8 .\n\n:action8 a dul:Action ;\n    rdfs:label \"Pick up cereal\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :cereal1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :action9 .\n\n:action9 a dul:Action ;\n    rdfs:label \"Put cereal in cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :cereal1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes :action10 .\n\n:action10 a dul:Action ;\n    rdfs:label \"Close cupboard\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :cupboard1 ;\n    psr:isAffordedBy soma:Closing ;\n    psr:precedes :action11 .\n\n:action11 a dul:Action ;\n    rdfs:label \"Open fridge\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :fridge1 ;\n    psr:isAffordedBy soma:Opening ;\n    psr:precedes :action12 .\n\n:action12 a dul:Action ;\n    rdfs:label \"Pick up water bottle\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :waterBottle1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :action13 .\n\n:action13 a dul:Action ;\n    rdfs:label \"Put water bottle in fridge\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :waterBottle1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes :action14 .\n\n:action14 a dul:Action ;\n    rdfs:label \"Close fridge\"@en ;\n    soma:isPerformedBy :robot1 ;\n    psr:actsOn :fridge1 ;\n    psr:isAffordedBy soma:Closing .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747482825,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4145,
+        "prompt_tokens": 5278,
+        "total_tokens": 9423,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 2944,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

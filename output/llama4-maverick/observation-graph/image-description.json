@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-2775bba5-9404-48cf-b1be-5ce46f4ed856",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with dark gray cabinets and a tan marble countertop; a white refrigerator on the right side of the kitchen; a box of jello, a jar of jam, a box of salt, and a stack of plates on the kitchen counter; a dining table with a light brown top and white chairs, with a bottle of water, a box of crackers, and a mug on the table; a sink on the right side of the kitchen counter, next to a pot and a stove top; a range hood above the stove top; a doorway to the right of the dining table. the kitchen counter has various food items on it, including a box of \"Chucky\" cereal, a jar of jam, a box of jello, a box of rice bubbles, and a stack of plates. the dining table has a bottle of water, a box of crackers, a mug, and a wine glass on it. the room has white walls and a dark wood floor.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747436912,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 197,
+        "prompt_tokens": 12496,
+        "total_tokens": 12693,
+        "completion_time": 0.888093949,
+        "prompt_time": 0.359360654,
+        "queue_time": 5.339963519,
+        "total_time": 1.247454603
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvdnpa6kf1as6pkaany95s9n"
+    }
+}

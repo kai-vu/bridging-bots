@@ -1,0 +1,29 @@
+@prefix psr: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix dul: <https://www.dereczik.net/owl/DulLiteOntology#>
+
+# Instruction class and properties for task
+[psr:Instruction] psr:hasWorkflow [dul:Workflow] .
+[psr:Instruction] psr:precedes [dul:Action] .
+[psr:Instruction] psr:follows [dul:Action] .
+[psr:Instruction] psr:actsOn [dul:Component] .
+[psr:Instruction] psr:isAffordedBy [dul:Affordance] .
+[psr:Instruction] psr:hasNaturalLanguage "Reorganise the kitchen"@en .
+
+# Workflow class and properties for task
+[dul:Workflow] dul:hasAction [dul:Action] .
+
+# Agent class and properties for task
+[dul:Agent] dul:isPerformedBy [dul:Component] .
+
+# Action class and properties for task
+[dul:Action] psr:precedes [dul:Action] .
+[dul:Action] psr:follows [dul:Action] .
+[dul:Action] dul:actsOn [dul:Component] .
+[dul:Action] dul:isAffordedBy [dul:Affordance] .
+
+# Component class and properties for task
+[dul:Component] psr:hasNaturalLanguage "Refrigerator"@en .
+[dul:Component] dul:precedes [dul:Action] .
+[dul:Component] dul:follows [dul:Action] .
+[dul:Component] dul:actsOn [dul:Component] .
+[dul:Component] dul:isAffordedBy [dul:Affordance] .

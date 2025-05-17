@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BXymGjcy19QXVZqf3VGYsu9ww2CbF",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment is a kitchen with dark lower cabinets and wall-mounted upper cabinets. In the first image, a beige countertop shelf is visible with a jar of strawberry jam, a box of Jello, a carton of Alpen Salz, and other small items. To the left, there are dark cabinets with vertical handles, and a white fridge is positioned at the corner, adjacent to a white wall. \n\nIn the second image, a dining area is shown with a wooden table against plain white walls. On the table, there are items including a large bottle of Evian water, a box of shortbread, a small glass of wine, a white pitcher, and some fruits. The chairs are white with tall backs, and the room has minimal decoration.\n\nIn the third image, a close-up view of the kitchen countertop emphasizes the same items seen in the second image, with the dark cabinets below, the white wall behind, and a window with a wooden frame above the countertop.\n\nIn the fourth image, a wider view of the kitchen shows the countertop with the same items, the dark lower cabinets, and the simple white wall. The environment overall combines kitchen and dining areas with a neutral palette, wooden and dark cabinets, and various food and household items on the surfaces.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747438152,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_8fd43718b3",
+    "usage": {
+        "completion_tokens": 252,
+        "prompt_tokens": 18687,
+        "total_tokens": 18939,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}
