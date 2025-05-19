@@ -302,6 +302,9 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # https://w3id.org/psr-task#Component
 <https://w3id.org/psr-task#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://w3id.org/psr-task#CurrentLocation
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://w3id.org/psr-task#Environment
 <https://w3id.org/psr-task#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -315,6 +318,9 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 # https://w3id.org/psr-task#Object
 <https://w3id.org/psr-task#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/psr-task#StandardLocation
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/psr-task#Workflow
 <https://w3id.org/psr-task#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -411,6 +417,11 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <https://w3id.org/psr-task#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/psr-task#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 # 
+# https://w3id.org/psr-task#CurrentLocation
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ease-crc.org/ont/SOMA.owl#Location> .
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+# 
 # https://w3id.org/psr-task#Environment
 <https://w3id.org/psr-task#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/psr-task#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
@@ -428,6 +439,11 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <https://w3id.org/psr-task#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/psr-task#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 <https://w3id.org/psr-task#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/psr-task#Component> .
+# 
+# https://w3id.org/psr-task#StandardLocation
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ease-crc.org/ont/SOMA.owl#Location> .
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 # 
 # https://w3id.org/psr-task#Workflow
 <https://w3id.org/psr-task#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -454,7 +470,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://www.ease-crc.org/ont/SOMA.owl#Holding> <http://www.w3.org/2000/01/rdf-schema#comment> "Holding is an affordance that enables a component to be held."@en .
 <http://www.ease-crc.org/ont/SOMA.owl#Holding> <http://www.w3.org/2000/01/rdf-schema#label> "Holding"@en .
 # 
-<http://www.ease-crc.org/ont/SOMA.owl#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location is a specific component within the environment"@en .
+<http://www.ease-crc.org/ont/SOMA.owl#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location of a specific component within the environment."@en .
 <http://www.ease-crc.org/ont/SOMA.owl#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
 # 
 <http://www.ease-crc.org/ont/SOMA.owl#Opening> <http://www.w3.org/2000/01/rdf-schema#comment> "Opening is an affordance that enables a component to be opened."@en .
@@ -496,6 +512,9 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <https://w3id.org/psr-task#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "A component is a part of an environment that can be used to perform tasks or actions."@en .
 <https://w3id.org/psr-task#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
 # 
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The current location of a component within the environment."@en .
+<https://w3id.org/psr-task#CurrentLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Current Location"@en .
+# 
 <https://w3id.org/psr-task#Environment> <http://www.w3.org/2000/01/rdf-schema#comment> "An environment is an area or context in which components are found."@en .
 <https://w3id.org/psr-task#Environment> <http://www.w3.org/2000/01/rdf-schema#label> "Environment"@en .
 # 
@@ -507,6 +526,9 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 <https://w3id.org/psr-task#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "An object is a type of component."@en .
 <https://w3id.org/psr-task#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
+# 
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The location where a component is intended or supposed to be located, which can be different to its current location."@en .
+<https://w3id.org/psr-task#StandardLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Location"@en .
 # 
 <https://w3id.org/psr-task#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
 <https://w3id.org/psr-task#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en .

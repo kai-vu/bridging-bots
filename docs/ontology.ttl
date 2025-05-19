@@ -347,6 +347,10 @@ owl:Property rdf:type owl:Class .
 :Component rdf:type owl:Class .
 
 
+###  https://w3id.org/psr-task#CurrentLocation
+:CurrentLocation rdf:type owl:Class .
+
+
 ###  https://w3id.org/psr-task#Environment
 :Environment rdf:type owl:Class .
 
@@ -365,6 +369,10 @@ owl:Property rdf:type owl:Class .
 
 ###  https://w3id.org/psr-task#Object
 :Object rdf:type owl:Class .
+
+
+###  https://w3id.org/psr-task#StandardLocation
+:StandardLocation rdf:type owl:Class .
 
 
 ###  https://w3id.org/psr-task#Workflow
@@ -476,6 +484,12 @@ owl:Property rdf:type owl:Class .
                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
+###  https://w3id.org/psr-task#CurrentLocation
+:CurrentLocation rdf:type owl:NamedIndividual ,
+                          <http://www.ease-crc.org/ont/SOMA.owl#Location> ,
+                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+
+
 ###  https://w3id.org/psr-task#Environment
 :Environment rdf:type owl:NamedIndividual ,
                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
@@ -496,6 +510,12 @@ owl:Property rdf:type owl:Class .
 :Object rdf:type owl:NamedIndividual ,
                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
                  :Component .
+
+
+###  https://w3id.org/psr-task#StandardLocation
+:StandardLocation rdf:type owl:NamedIndividual ,
+                           <http://www.ease-crc.org/ont/SOMA.owl#Location> ,
+                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
 ###  https://w3id.org/psr-task#Workflow
@@ -523,7 +543,7 @@ owl:Property rdf:type owl:Class .
                                                rdfs:label "Holding"@en .
 
 
-<http://www.ease-crc.org/ont/SOMA.owl#Location> rdfs:comment "A location is a specific component within the environment"@en ;
+<http://www.ease-crc.org/ont/SOMA.owl#Location> rdfs:comment "A location of a specific component within the environment."@en ;
                                                 rdfs:label "Location"@en .
 
 
@@ -579,6 +599,10 @@ owl:Property rdf:type owl:Class .
            rdfs:label "Component"@en .
 
 
+:CurrentLocation rdfs:comment "The current location of a component within the environment."@en ;
+                 rdfs:label "Current Location"@en .
+
+
 :Environment rdfs:comment "An environment is an area or context in which components are found."@en ;
              rdfs:label "Environment"@en .
 
@@ -593,6 +617,10 @@ owl:Property rdf:type owl:Class .
 
 :Object rdfs:comment "An object is a type of component."@en ;
         rdfs:label "Object"@en .
+
+
+:StandardLocation rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en ;
+                  rdfs:label "Standard Location"@en .
 
 
 :Workflow rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en ;

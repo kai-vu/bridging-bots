@@ -88,7 +88,15 @@ _:org a schema:Organization ;
 
 soma:Location a owl:Class, dul:Entity ;
     rdfs:label "Location"@en ;
-    rdfs:comment "A location is a specific component within the environment"@en .
+    rdfs:comment "A location of a specific component within the environment."@en .
+
+psr:CurrentLocation a owl:Class, dul:Entity, soma:Location ;
+    rdfs:label "Current Location"@en ;
+    rdfs:comment "The current location of a component within the environment."@en .
+
+psr:StandardLocation a owl:Class, dul:Entity, soma:Location ;
+    rdfs:label "Standard Location"@en ;
+    rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en .
 
 <https://w3id.org/psr-task#Affordance> a owl:Class, dul:Entity ;
     rdfs:label "Affordance"@en ;

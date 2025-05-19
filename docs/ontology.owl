@@ -578,6 +578,13 @@
     
 
 
+    <!-- https://w3id.org/psr-task#CurrentLocation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/psr-task#CurrentLocation"/>
+    
+
+
     <!-- https://w3id.org/psr-task#Environment -->
 
 
@@ -610,6 +617,13 @@
 
 
     <owl:Class rdf:about="https://w3id.org/psr-task#Object"/>
+    
+
+
+    <!-- https://w3id.org/psr-task#StandardLocation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/psr-task#StandardLocation"/>
     
 
 
@@ -806,6 +820,16 @@
     
 
 
+    <!-- https://w3id.org/psr-task#CurrentLocation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#CurrentLocation">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Location"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/psr-task#Environment -->
 
 
@@ -840,6 +864,16 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#Object">
         <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
         <rdf:type rdf:resource="https://w3id.org/psr-task#Component"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/psr-task#StandardLocation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/psr-task#StandardLocation">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Location"/>
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
     </owl:NamedIndividual>
     
 
@@ -879,7 +913,7 @@
         <rdfs:label xml:lang="en">Holding</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Location">
-        <rdfs:comment xml:lang="en">A location is a specific component within the environment</rdfs:comment>
+        <rdfs:comment xml:lang="en">A location of a specific component within the environment.</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Opening">
@@ -934,6 +968,10 @@
         <rdfs:comment xml:lang="en">A component is a part of an environment that can be used to perform tasks or actions.</rdfs:comment>
         <rdfs:label xml:lang="en">Component</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/psr-task#CurrentLocation">
+        <rdfs:comment xml:lang="en">The current location of a component within the environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current Location</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/psr-task#Environment">
         <rdfs:comment xml:lang="en">An environment is an area or context in which components are found.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment</rdfs:label>
@@ -949,6 +987,10 @@
     <rdf:Description rdf:about="https://w3id.org/psr-task#Object">
         <rdfs:comment xml:lang="en">An object is a type of component.</rdfs:comment>
         <rdfs:label xml:lang="en">Object</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/psr-task#StandardLocation">
+        <rdfs:comment xml:lang="en">The location where a component is intended or supposed to be located, which can be different to its current location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard Location</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/psr-task#Workflow">
         <rdfs:comment xml:lang="en">A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction.</rdfs:comment>
