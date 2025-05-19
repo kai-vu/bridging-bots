@@ -1,20 +1,48 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:dining_table kitchen:hasAffordance kitchen:wine_glass ;
-    kitchen:onTopOf kitchen:bottle_of_water,
-        kitchen:box_of_crackers,
-        kitchen:mug .
+kitchen:blue_framed_mirror kitchen:between kitchen:dark_wall_cabinets .
 
-kitchen:kitchen kitchen:hasAffordance kitchen:refrigerator ;
-    kitchen:hasComponent kitchen:cabinets,
-        kitchen:countertop .
+kitchen:box kitchen:onTopOf kitchen:brown_wooden_dining_table .
 
-kitchen:kitchen_counter kitchen:hasLocation kitchen:sink .
+kitchen:dining_table kitchen:sfWithin kitchen:center_of_the_room .
 
-kitchen:stove_top kitchen:hasLocation kitchen:range_hood .
+kitchen:fridge kitchen:between kitchen:dark_wall_cabinets ;
+    kitchen:sfWithin kitchen:white_wall .
 
-kitchen:countertop kitchen:onTopOf kitchen:box_of_jello,
-        kitchen:box_of_salt,
-        kitchen:jar_of_jam,
-        kitchen:stack_of_plates .
+kitchen:large_bottle_of_water kitchen:onTopOf kitchen:brown_wooden_dining_table .
+
+kitchen:mug kitchen:onTopOf kitchen:brown_wooden_dining_table .
+
+kitchen:pot kitchen:onTopOf kitchen:electric_stove .
+
+kitchen:range_hood kitchen:above kitchen:electric_stove,
+        kitchen:stove .
+
+kitchen:red_jar kitchen:next_to kitchen:red_and_blue_boxes .
+
+kitchen:silver_sink kitchen:onTopOf kitchen:light_marble_countertop .
+
+kitchen:sink kitchen:onTopOf kitchen:kitchen_counter .
+
+kitchen:stack_of_white_plates kitchen:to_the_left_of kitchen:red_and_blue_boxes .
+
+kitchen:white_chairs kitchen:around kitchen:brown_wooden_dining_table .
+
+kitchen:white_door kitchen:to_the_right_of kitchen:brown_wooden_dining_table .
+
+kitchen:white_fridge kitchen:to_the_right_of kitchen:dark_wall_cabinets .
+
+kitchen:yellow_cup kitchen:next_to kitchen:red_and_blue_boxes .
+
+kitchen:stove kitchen:onTopOf kitchen:kitchen_counter .
+
+kitchen:electric_stove kitchen:onTopOf kitchen:light_marble_countertop .
+
+kitchen:kitchen_counter kitchen:along kitchen:wall .
+
+kitchen:dark_wall_cabinets kitchen:above kitchen:light_marble_countertop .
+
+kitchen:red_and_blue_boxes kitchen:onTopOf kitchen:light_marble_countertop .
+
+kitchen:brown_wooden_dining_table kitchen:hasLocation kitchen:center_of_the_room .
 

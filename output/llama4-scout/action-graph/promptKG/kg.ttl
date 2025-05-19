@@ -1,181 +1,155 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-# Define the environment
-psr:Kitchen a psr:Environment ;
-  rdfs:label "Kitchen"@en .
+### Instruction
+psr:RestoreKitchen a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-psr:DiningArea a psr:Environment ;
-  rdfs:label "Dining Area"@en .
+### Workflows
+psr:RestoreKitchenWorkflow a psr:Workflow ;
+  psr:hasAction psr:IdentifyMisplacedItems ;
+  psr:hasAction psr:ReturnItemsToStorage .
 
-# Define components
-psr:BlackCabinets a psr:Component, psr:Furniture ;
-  rdfs:label "Black Cabinets"@en ;
-  dul:hasLocation psr:Kitchen .
+### Actions
+psr:IdentifyMisplacedItems a dul:Action ;
+  psr:isPerformedBy psr:Robot ;
+  psr:actsOn psr:Kitchen .
 
-psr:BeigeMarbleCountertop a psr:Component, psr:Furniture ;
-  rdfs:label "Beige Marble Countertop"@en ;
-  dul:hasLocation psr:Kitchen .
+psr:ReturnItemsToStorage a dul:Action ;
+  psr:isPerformedBy psr:Robot ;
+  psr:actsOn psr:Kitchen .
 
-psr:Stove a psr:Component, psr:Appliance ;
-  rdfs:label "Stove"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop ;
-  geo:sfWithin psr:Kitchen .
+### Agent
+psr:Robot a dul:Agent .
 
-psr:Pot a psr:Component, psr:Object ;
-  rdfs:label "Pot"@en ;
-  dul:hasLocation psr:Stove .
+### Components
+psr:Kitchen a psr:Component .
 
-psr:Sink a psr:Component, psr:Appliance ;
-  rdfs:label "Sink"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:RiceBubblesCereal a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:YellowCup a psr:Component, psr:Object ;
-  rdfs:label "Yellow Cup"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:StrawberryBananaJello a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:JarOfJam a psr:Component, psr:Object ;
-  rdfs:label "Jar of Jam"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:Jam a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:BoxOfRiceBubbles a psr:Component, psr:Object ;
-  rdfs:label "Box of Rice Bubbles"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:ShortbreadCookies a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:BoxOfShortbread a psr:Component, psr:Object ;
-  rdfs:label "Box of Shortbread"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:YellowMug a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:PuzzleBox a psr:Component, psr:Object ;
-  rdfs:label "Puzzle Box"@en ;
-  dul:hasLocation psr:BeigeMarbleCountertop .
+psr:BottleOfWater a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:RangeHood a psr:Component, psr:Appliance ;
-  rdfs:label "Range Hood"@en ;
-  dul:hasLocation psr:Kitchen .
+psr:PlateWithFruit a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Refrigerator a psr:Component, psr:Appliance ;
-  rdfs:label "Refrigerator"@en ;
-  dul:hasLocation psr:Kitchen .
+psr:Cookbook a psr:Object ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:WoodenTable a psr:Component, psr:Furniture ;
-  rdfs:label "Wooden Table"@en ;
-  dul:hasLocation psr:DiningArea .
+### Affordances
+psr:PickUpRiceBubblesCereal a soma:PickingUp ;
+  psr:actsOn psr:RiceBubblesCereal .
 
-psr:WhiteChairs a psr:Component, psr:Furniture ;
-  rdfs:label "White Chairs"@en ;
-  dul:hasLocation psr:DiningArea .
+psr:PickUpStrawberryBananaJello a soma:PickingUp ;
+  psr:actsOn psr:StrawberryBananaJello .
 
-psr:BottleOfWater a psr:Component, psr:Object ;
-  rdfs:label "Bottle of Water"@en ;
-  dul:hasLocation psr:WoodenTable .
+psr:PickUpJam a soma:PickingUp ;
+  psr:actsOn psr:Jam .
 
-psr:Plate a psr:Component, psr:Object ;
-  rdfs:label "Plate"@en ;
-  dul:hasLocation psr:WoodenTable .
+psr:PickUpShortbreadCookies a soma:PickingUp ;
+  psr:actsOn psr:ShortbreadCookies .
 
-psr:Mug a psr:Component, psr:Object ;
-  rdfs:label "Mug"@en ;
-  dul:hasLocation psr:WoodenTable .
+psr:PickUpYellowMug a soma:PickingUp ;
+  psr:actsOn psr:YellowMug .
 
-psr:Book a psr:Component, psr:Object ;
-  rdfs:label "Book"@en ;
-  dul:hasLocation psr:WoodenTable .
+psr:PickUpBottleOfWater a soma:PickingUp ;
+  psr:actsOn psr:BottleOfWater .
 
-# Define locations
-soma:KitchenLocation a soma:Location ;
-  dul:hasLocation psr:Kitchen .
+psr:PickUpPlateWithFruit a soma:PickingUp ;
+  psr:actsOn psr:PlateWithFruit .
 
-soma:DiningAreaLocation a soma:Location ;
-  dul:hasLocation psr:DiningArea .
+psr:PickUpCookbook a soma:PickingUp ;
+  psr:actsOn psr:Cookbook .
 
-# Define relationships between components and locations
-psr:Kitchen dul:hasComponent psr:BlackCabinets .
-psr:Kitchen dul:hasComponent psr:BeigeMarbleCountertop .
-psr:Kitchen dul:hasComponent psr:Stove .
-psr:Kitchen dul:hasComponent psr:Sink .
-psr:Kitchen dul:hasComponent psr:RangeHood .
-psr:Kitchen dul:hasComponent psr:Refrigerator .
+### Relations
+psr:RestoreKitchen psr:hasWorkflow psr:RestoreKitchenWorkflow .
 
-psr:DiningArea dul:hasComponent psr:WoodenTable .
-psr:DiningArea dul:hasComponent psr:WhiteChairs .
+psr:RestoreKitchenWorkflow psr:hasAction psr:IdentifyMisplacedItems ;
+psr:RestoreKitchenWorkflow psr:hasAction psr:ReturnItemsToStorage .
 
-psr:BeigeMarbleCountertop dul:hasComponent psr:Pot .
-psr:BeigeMarbleCountertop dul:hasComponent psr:YellowCup .
-psr:BeigeMarbleCountertop dul:hasComponent psr:JarOfJam .
-psr:BeigeMarbleCountertop dul:hasComponent psr:BoxOfRiceBubbles .
-psr:BeigeMarbleCountertop dul:hasComponent psr:BoxOfShortbread .
-psr:BeigeMarbleCountertop dul:hasComponent psr:PuzzleBox .
+psr:IdentifyMisplacedItems psr:precedes psr:ReturnItemsToStorage .
 
-psr:WoodenTable dul:hasComponent psr:BottleOfWater .
-psr:WoodenTable dul:hasComponent psr:Plate .
-psr:WoodenTable dul:hasComponent psr:Mug .
-psr:WoodenTable dul:hasComponent psr:Book .
+psr:IdentifyMisplacedItems psr:isPerformedBy psr:Robot .
 
-# Define affordances
-psr:Pot psr:hasAffordance soma:Grasping .
-psr:Pot psr:hasAffordance soma:PickingUp .
-psr:Pot psr:hasAffordance soma:PuttingDown .
+psr:ReturnItemsToStorage psr:isPerformedBy psr:Robot .
 
-psr:YellowCup psr:hasAffordance soma:Grasping .
-psr:YellowCup psr:hasAffordance soma:PickingUp .
-psr:YellowCup psr:hasAffordance soma:PuttingDown .
+psr:ReturnItemsToStorage psr:actsOn psr:RiceBubblesCereal ;
+psr:ReturnItemsToStorage psr:actsOn psr:StrawberryBananaJello ;
+psr:ReturnItemsToStorage psr:actsOn psr:Jam ;
+psr:ReturnItemsToStorage psr:actsOn psr:ShortbreadCookies ;
+psr:ReturnItemsToStorage psr:actsOn psr:YellowMug ;
+psr:ReturnItemsToStorage psr:actsOn psr:BottleOfWater ;
+psr:ReturnItemsToStorage psr:actsOn psr:PlateWithFruit ;
+psr:ReturnItemsToStorage psr:actsOn psr:Cookbook .
 
-psr:JarOfJam psr:hasAffordance soma:Grasping .
-psr:JarOfJam psr:hasAffordance soma:PickingUp .
-psr:JarOfJam psr:hasAffordance soma:PuttingDown .
+### Putting down items
+psr:PuttingDownRiceBubblesCereal a soma:PuttingDown ;
+  psr:actsOn psr:RiceBubblesCereal .
 
-psr:BoxOfRiceBubbles psr:hasAffordance soma:Grasping .
-psr:BoxOfRiceBubbles psr:hasAffordance soma:PickingUp .
-psr:BoxOfRiceBubbles psr:hasAffordance soma:PuttingDown .
+psr:PuttingDownStrawberryBananaJello a soma:PuttingDown ;
+  psr:actsOn psr:StrawberryBananaJello .
 
-psr:BoxOfShortbread psr:hasAffordance soma:Grasping .
-psr:BoxOfShortbread psr:hasAffordance soma:PickingUp .
-psr:BoxOfShortbread psr:hasAffordance soma:PuttingDown .
+psr:PuttingDownJam a soma:PuttingDown ;
+  psr:actsOn psr:Jam .
 
-psr:PuzzleBox psr:hasAffordance soma:Grasping .
-psr:PuzzleBox psr:hasAffordance soma:PickingUp .
-psr:PuzzleBox psr:hasAffordance soma:PuttingDown .
+psr:PuttingDownShortbreadCookies a soma:PuttingDown ;
+  psr:actsOn psr:ShortbreadCookies .
 
-# Task: Reorganise the kitchen
-psr:ReorganiseKitchen a psr:Affordance ;
-  rdfs:label "Reorganise Kitchen"@en .
+psr:PuttingDownYellowMug a soma:PuttingDown ;
+  psr:actsOn psr:YellowMug .
 
-psr:Kitchen psr:hasAffordance psr:ReorganiseKitchen .
+psr:PuttingDownBottleOfWater a soma:PuttingDown ;
+  psr:actsOn psr:BottleOfWater .
 
-# Actions to complete the task
-psr:MovePotToCabinet a psr:Affordance ;
-  rdfs:label "Move Pot to Cabinet"@en .
+psr:PuttingDownPlateWithFruit a soma:PuttingDown ;
+  psr:actsOn psr:PlateWithFruit .
 
-psr:MoveYellowCupToCabinet a psr:Affordance ;
-  rdfs:label "Move Yellow Cup to Cabinet"@en .
+psr:PuttingDownCookbook a soma:PuttingDown ;
+  psr:actsOn psr:Cookbook .
 
-psr:MoveJarOfJamToCabinet a psr:Affordance ;
-  rdfs:label "Move Jar of Jam to Cabinet"@en .
+### Detailed action sequence
+psr:PickUpRiceBubblesCereal psr:precedes psr:PuttingDownRiceBubblesCereal .
+psr:PickUpStrawberryBananaJello psr:precedes psr:PuttingDownStrawberryBananaJello .
+psr:PickUpJam psr:precedes psr:PuttingDownJam .
+psr:PickUpShortbreadCookies psr:precedes psr:PuttingDownShortbreadCookies .
+psr:PickUpYellowMug psr:precedes psr:PuttingDownYellowMug .
+psr:PickUpBottleOfWater psr:precedes psr:PuttingDownBottleOfWater .
+psr:PickUpPlateWithFruit psr:precedes psr:PuttingDownPlateWithFruit .
+psr:PickUpCookbook psr:precedes psr:PuttingDownCookbook .
 
-psr:MoveBoxOfRiceBubblesToCabinet a psr:Affordance ;
-  rdfs:label "Move Box of Rice Bubbles to Cabinet"@en .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpRiceBubblesCereal .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpStrawberryBananaJello .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpJam .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpShortbreadCookies .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpYellowMug .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpBottleOfWater .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpPlateWithFruit .
+psr:IdentifyMisplacedItems psr:hasAction psr:PickUpCookbook .
 
-psr:MoveBoxOfShortbreadToCabinet a psr:Affordance ;
-  rdfs:label "Move Box of Shortbread to Cabinet"@en .
-
-psr:MovePuzzleBoxToCabinet a psr:Affordance ;
-  rdfs:label "Move Puzzle Box to Cabinet"@en .
-
-psr:Pot psr:hasAffordance psr:MovePotToCabinet .
-psr:YellowCup psr:hasAffordance psr:MoveYellowCupToCabinet .
-psr:JarOfJam psr:hasAffordance psr:MoveJarOfJamToCabinet .
-psr:BoxOfRiceBubbles psr:hasAffordance psr:MoveBoxOfRiceBubblesToCabinet .
-psr:BoxOfShortbread psr:hasAffordance psr:MoveBoxOfShortbreadToCabinet .
-psr:PuzzleBox psr:hasAffordance psr:MovePuzzleBoxToCabinet .
-
-psr:BlackCabinets dul:hasComponent psr:Pot .
-psr:BlackCabinets dul:hasComponent psr:YellowCup .
-psr:BlackCabinets dul:hasComponent psr:JarOfJam .
-psr:BlackCabinets dul:hasComponent psr:BoxOfRiceBubbles .
-psr:BlackCabinets dul:hasComponent psr:BoxOfShortbread .
-psr:BlackCabinets dul:hasComponent psr:PuzzleBox .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownRiceBubblesCereal .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownStrawberryBananaJello .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownJam .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownShortbreadCookies .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownYellowMug .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownBottleOfWater .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownPlateWithFruit .
+psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownCookbook .

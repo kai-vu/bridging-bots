@@ -3,60 +3,59 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psrTask-ontology#> .
+@prefix psr: <https://w3id.org/psr-task#> .
 
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Table, psr:Cabinet, psr:Refrigerator, psr:Sink, psr:Stove, psr:Fridge .
+psr:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent psr:KitchenCabinet, psr:DiningTable, psr:Fridge, psr:Sink .
 
-psr:Table a psr:Furniture ;
-    dul:hasLocation psr:DiningArea ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
-
-psr:Cabinet a psr:Furniture ;
+psr:KitchenCabinet a psr:Appliance ;
     dul:hasLocation psr:KitchenCounter ;
     psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:Refrigerator a psr:Appliance ;
-    dul:hasLocation psr:KitchenCorner ;
+psr:DiningTable a psr:Furniture ;
+    dul:hasLocation psr:DiningArea ;
+    psr:hasAffordance soma:Holding .
+
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:KitchenArea ;
     psr:hasAffordance soma:Opening, soma:Closing .
 
 psr:Sink a psr:Appliance ;
     dul:hasLocation psr:KitchenCounter ;
-    psr:hasAffordance soma:Delivering .
+    psr:hasAffordance soma:Holding .
 
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:KitchenCounter ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
-
-psr:Fridge a psr:Appliance ;
-    dul:hasLocation psr:KitchenCorner ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:DiningArea a soma:Location ;
-    geo:sfContains psr:Table .
-
-psr:KitchenCounter a soma:Location ;
-    geo:sfContains psr:Cabinet, psr:Sink, psr:Stove .
-
-psr:KitchenCorner a soma:Location ;
-    geo:sfContains psr:Refrigerator .
+psr:KitchenCounter a psr:Furniture ;
+    dul:hasLocation psr:KitchenArea ;
+    psr:hasComponent psr:Jar, psr:Box, psr:Plate, psr:Mug, psr:Pot .
 
 psr:Jar a psr:Object ;
     dul:hasLocation psr:KitchenCounter ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+    psr:onTopOf psr:KitchenCounter .
 
 psr:Box a psr:Object ;
     dul:hasLocation psr:KitchenCounter ;
-    psr:hasAffordance soma:PickingUp .
+    psr:onTopOf psr:KitchenCounter .
 
-psr:Glass a psr:Object ;
-    dul:hasLocation psr:Table ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+psr:Plate a psr:Object ;
+    dul:hasLocation psr:KitchenCounter, psr:DiningTable ;
+    psr:onTopOf psr:KitchenCounter, psr:DiningTable .
 
-psr:Bottle a psr:Object ;
-    dul:hasLocation psr:Table ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+psr:Mug a psr:Object ;
+    dul:hasLocation psr:DiningTable, psr:KitchenCounter ;
+    psr:onTopOf psr:DiningTable, psr:KitchenCounter .
 
-psr:Book a psr:Object ;
-    dul:hasLocation psr:Table ;
-    psr:hasAffordance soma:PickingUp, soma:Holding .
+psr:Pot a psr:Object ;
+    dul:hasLocation psr:KitchenCounter ;
+    psr:onTopOf psr:KitchenCounter .
+
+psr:DiningArea a soma:Location ;
+    geo:sfContains psr:DiningTable .
+
+psr:KitchenArea a soma:Location ;
+    geo:sfContains psr:Fridge, psr:KitchenCabinet, psr:KitchenCounter .
+
+psr:KitchenCounter a soma:Location ;
+    geo:sfContains psr:Jar, psr:Box, psr:Plate, psr:Mug, psr:Pot .
+
+psr:DiningTable a soma:Location ;
+    geo:sfContains psr:Plate, psr:Mug .

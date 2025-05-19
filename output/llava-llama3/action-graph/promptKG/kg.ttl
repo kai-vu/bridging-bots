@@ -1,123 +1,147 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
 
-:Environment1 a psr:Environment .
+:instruction1 a psr:Instruction ;
+    rdfs:label "Restore the kitchen to an organized state" ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    psr:hasWorkflow :workflow1 .
 
-:Countertop a psr:Component, psr:Furniture ;
-    dul:hasLocation :KitchenLocation1 .
+:workflow1 a psr:Workflow ;
+    psr:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10, :action11, :action12, :action13, :action14, :action15 ;
+    psr:precedes :action2 :action1 ;
+    psr:precedes :action3 :action2 ;
+    psr:precedes :action4 :action3 ;
+    psr:precedes :action5 :action4 ;
+    psr:precedes :action6 :action5 ;
+    psr:precedes :action7 :action6 ;
+    psr:precedes :action8 :action7 ;
+    psr:precedes :action9 :action8 ;
+    psr:precedes :action10 :action9 ;
+    psr:precedes :action11 :action10 ;
+    psr:precedes :action12 :action11 ;
+    psr:precedes :action13 :action12 ;
+    psr:precedes :action14 :action13 ;
+    psr:precedes :action15 :action14 .
 
-:Sink a psr:Component, psr:Appliance ;
-    dul:hasLocation :CountertopLocation1 ;
-    psr:hasAffordance :Holding ;
-    psr:hasAffordance :Grasping .
+:action1 a dul:Action ;
+    rdfs:label "Pick up cupcake holder" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :cupcake_holder ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Faucet a psr:Component, psr:Appliance ;
-    dul:hasLocation :CountertopLocation1 ;
-    psr:hasAffordance :Holding ;
-    psr:hasAffordance :Grasping .
+:action2 a dul:Action ;
+    rdfs:label "Put down cupcake holder in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :cupcake_holder ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Cabinets a psr:Component, psr:Furniture ;
-    dul:hasLocation :KitchenLocation1 ;
-    psr:hasAffordance :Opening ;
-    psr:hasAffordance :Closing .
+:action3 a dul:Action ;
+    rdfs:label "Pick up small model of house" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :house_model ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Fridge a psr:Component, psr:Appliance ;
-    dul:hasLocation :KitchenLocation1 ;
-    psr:hasAffordance :Opening ;
-    psr:hasAffordance :Closing .
+:action4 a dul:Action ;
+    rdfs:label "Put down small model of house in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :house_model ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:FoodItems a psr:Component, psr:Object ;
-    dul:hasLocation :FridgeTopLocation1 ;
-    psr:hasAffordance :PickingUp ;
-    psr:hasAffordance :Holding .
+:action5 a dul:Action ;
+    rdfs:label "Pick up empty glass jar" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :empty_glass_jar ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Container a psr:Component, psr:Object ;
-    dul:hasLocation :CountertopLocation1 ;
-    psr:hasAffordance :PickingUp ;
-    psr:hasAffordance :Holding .
+:action6 a dul:Action ;
+    rdfs:label "Put down empty glass jar in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :empty_glass_jar ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Utensils a psr:Component, psr:Object ;
-    dul:hasLocation :WallCabinetLocation1 ;
-    psr:hasAffordance :PickingUp ;
-    psr:hasAffordance :Holding .
+:action7 a dul:Action ;
+    rdfs:label "Pick up white mug" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :white_mug ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Floor a psr:Component, psr:Furniture ;
-    dul:hasLocation :KitchenLocation1 .
+:action8 a dul:Action ;
+    rdfs:label "Put down white mug in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :white_mug ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Table a psr:Component, psr:Furniture ;
-    dul:hasLocation :DiningAreaLocation1 .
+:action9 a dul:Action ;
+    rdfs:label "Pick up box of cereal" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :box_of_cereal ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Chair a psr:Component, psr:Furniture ;
-    dul:hasLocation :TableLocation1 ;
-    psr:hasAffordance :PickingUp ;
-    psr:hasAffordance :Holding ;
-    psr:hasAffordance :Pushing ;
-    psr:hasAffordance :Pulling .
+:action10 a dul:Action ;
+    rdfs:label "Put down box of cereal in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :box_of_cereal ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Cupboard a psr:Component, psr:Furniture ;
-    dul:hasLocation :DiningAreaLocation1 ;
-    psr:hasAffordance :Opening ;
-    psr:hasAffordance :Closing .
+:action11 a dul:Action ;
+    rdfs:label "Pick up two cups" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :two_cups ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:Environment1 dul:hasComponent :Countertop .
-:Environment1 dul:hasComponent :Sink .
-:Environment1 dul:hasComponent :Faucet .
-:Environment1 dul:hasComponent :Cabinets .
-:Environment1 dul:hasComponent :Fridge .
-:Environment1 dul:hasComponent :FoodItems .
-:Environment1 dul:hasComponent :Container .
-:Environment1 dul:hasComponent :Utensils .
-:Environment1 dul:hasComponent :Floor .
-:Environment1 dul:hasComponent :Table .
-:Environment1 dul:hasComponent :Chair .
-:Environment1 dul:hasComponent :Cupboard .
+:action12 a dul:Action ;
+    rdfs:label "Put down two cups in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :two_cups ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Countertop dul:hasLocation :KitchenLocation1 .
-:Sink dul:hasLocation :CountertopLocation1 .
-:Faucet dul:hasLocation :CountertopLocation1 .
-:Cabinets dul:hasLocation :KitchenLocation1 .
-:Fridge dul:hasLocation :KitchenLocation1 .
-:FoodItems dul:hasLocation :FridgeTopLocation1 .
-:Container dul:hasLocation :CountertopLocation1 .
-:Utensils dul:hasLocation :WallCabinetLocation1 .
-:Floor dul:hasLocation :KitchenLocation1 .
-:Table dul:hasLocation :DiningAreaLocation1 .
-:Chair dul:hasLocation :TableLocation1 .
-:Cupboard dul:hasLocation :DiningAreaLocation1 .
+:action13 a dul:Action ;
+    rdfs:label "Pick up two bottles" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :two_bottles ;
+    psr:isAffordedBy :soma:PickingUp .
 
-:KitchenLocation1 a soma:Location .
-:CountertopLocation1 a soma:Location .
-:FridgeTopLocation1 a soma:Location .
-:WallCabinetLocation1 a soma:Location .
-:DiningAreaLocation1 a soma:Location .
-:TableLocation1 a soma:Location .
+:action14 a dul:Action ;
+    rdfs:label "Put down two bottles in cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :two_bottles ;
+    psr:isAffordedBy :soma:PuttingDown .
 
-:Countertop psr:onTopOf :Floor .
-:Sink psr:onTopOf :Countertop .
-:Faucet psr:onTopOf :Countertop .
-:Cabinets psr:onTopOf :Floor .
-:Fridge psr:onTopOf :Floor .
-:FoodItems psr:onTopOf :Fridge .
-:Container psr:onTopOf :Countertop .
-:Utensils psr:onTopOf :WallCabinet .
-:Chair psr:onTopOf :Floor .
-:Cupboard psr:onTopOf :Floor .
+:action15 a dul:Action ;
+    rdfs:label "Close cabinet" ;
+    soma:isPerformedBy :robot ;
+    psr:actsOn :cabinet ;
+    psr:isAffordedBy :soma:Closing .
 
-:KitchenLocation1 geo:sfContains :Countertop .
-:KitchenLocation1 geo:sfContains :Sink .
-:KitchenLocation1 geo:sfContains :Faucet .
-:KitchenLocation1 geo:sfContains :Cabinets .
-:KitchenLocation1 geo:sfContains :Fridge .
-:KitchenLocation1 geo:sfContains :Floor .
-:CountertopLocation1 geo:sfContains :Sink .
-:CountertopLocation1 geo:sfContains :Faucet .
-:CountertopLocation1 geo:sfContains :Container .
-:FridgeTopLocation1 geo:sfContains :FoodItems .
-:WallCabinetLocation1 geo:sfContains :Utensils .
-:DiningAreaLocation1 geo:sfContains :Table .
-:DiningAreaLocation1 geo:sfContains :Chair .
-:DiningAreaLocation1 geo:sfContains :Cupboard .
+:robot a dul:Agent ;
+    rdfs:label "Robot" .
+
+:cupcake_holder a psr:Object ;
+    rdfs:label "Cupcake holder" .
+
+:house_model a psr:Object ;
+    rdfs:label "Small model of house" .
+
+:empty_glass_jar a psr:Object ;
+    rdfs:label "Empty glass jar" .
+
+:white_mug a psr:Object ;
+    rdfs:label "White mug" .
+
+:box_of_cereal a psr:Object ;
+    rdfs:label "Box of cereal" .
+
+:two_cups a psr:Object ;
+    rdfs:label "Two cups" .
+
+:two_bottles a psr:Object ;
+    rdfs:label "Two bottles" .
+
+:cabinet a psr:Appliance ;
+    rdfs:label "Kitchen cabinet" .

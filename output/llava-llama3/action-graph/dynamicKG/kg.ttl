@@ -1,44 +1,46 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:assistant kitchen:CLOSES kitchen:cabinet,
-        kitchen:cupboard,
-        kitchen:wall_cabinet ;
-    kitchen:INSPECTS kitchen:kitchen_and_dining_area ;
-    kitchen:MOVES_TO kitchen:countertop,
-        kitchen:cupboard_in_corner_of_room,
-        kitchen:dining_area,
-        kitchen:kitchen_area,
-        kitchen:refrigerator,
-        kitchen:wall_cabinet_with_utensils ;
-    kitchen:OPENS kitchen:cupboard,
-        kitchen:dark_wooden_cabinet_above_counter ;
+kitchen:assistant kitchen:CLOSES kitchen:cabinet_door,
+        kitchen:cabinet_or_pantry_door ;
+    kitchen:MOVES_TO kitchen:cabinets_on_the_far_left_wall_of_the_kitchen,
+        kitchen:countertops_near_the_sink,
+        kitchen:pantry_or_storage_area,
+        kitchen:table ;
+    kitchen:OPENS kitchen:cabinet_door,
+        kitchen:cabinet_or_pantry_door ;
     kitchen:PICKS_UP kitchen:box_of_cereal,
-        kitchen:red_and_white_container ;
-    kitchen:REMOVES kitchen:items,
-        kitchen:items_on_top_of_refrigerator,
-        kitchen:unnecessary_items ;
-    kitchen:WIPES_DOWN kitchen:cabinet_shelves,
-        kitchen:countertop,
-        kitchen:dining_table,
-        kitchen:top_of_refrigerator .
+        kitchen:cupcake_holder,
+        kitchen:empty_glass_jar,
+        kitchen:small_model_of_a_house,
+        kitchen:two_bottles,
+        kitchen:two_cups,
+        kitchen:white_mug ;
+    kitchen:PLACES kitchen:box_of_cereal,
+        kitchen:cupcake_holder,
+        kitchen:empty_glass_jar,
+        kitchen:small_model_of_a_house,
+        kitchen:two_bottles,
+        kitchen:two_cups,
+        kitchen:white_mug .
 
-kitchen:baking_supplies kitchen:PLACED_IN kitchen:cabinet_above_counter .
+kitchen:box_of_cereal kitchen:IS_IN kitchen:cabinet_or_pantry ;
+    kitchen:IS_ON kitchen:countertop .
 
-kitchen:cake_or_muffin_box kitchen:PLACED_IN kitchen:refrigerator .
+kitchen:cupcake_holder kitchen:IS_ON kitchen:countertop,
+        kitchen:table .
 
-kitchen:cereal kitchen:PLACED_IN kitchen:refrigerator .
+kitchen:empty_glass_jar kitchen:IS_IN kitchen:cabinet ;
+    kitchen:IS_ON kitchen:table .
 
-kitchen:items_in_cupboard kitchen:ORGANIZED_IN kitchen:cupboard .
+kitchen:small_model_of_a_house kitchen:IS_ON kitchen:open_shelf_unit,
+        kitchen:table .
 
-kitchen:loaf_of_bread kitchen:PLACED_IN kitchen:refrigerator .
+kitchen:two_bottles kitchen:ARE_IN kitchen:cabinet ;
+    kitchen:ARE_ON kitchen:countertops_near_the_stove_and_the_fridge .
 
-kitchen:utensils kitchen:ORGANIZED_IN kitchen:wall_cabinet .
+kitchen:two_cups kitchen:ARE_IN kitchen:cabinet ;
+    kitchen:ARE_ON kitchen:countertops_on_each_side_of_the_sink .
 
-kitchen:box_of_cereal kitchen:PLACED_IN kitchen:designated_cabinet .
-
-kitchen:dark_wooden_cabinet_above_counter kitchen:CONTAINS kitchen:items .
-
-kitchen:red_and_white_container kitchen:PLACED_IN kitchen:designated_cabinet .
-
-kitchen:items kitchen:ORGANIZED_BY kitchen:category .
+kitchen:white_mug kitchen:IS_IN kitchen:cabinet ;
+    kitchen:IS_ON kitchen:table .
 

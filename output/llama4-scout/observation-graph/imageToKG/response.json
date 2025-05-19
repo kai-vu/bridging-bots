@@ -1,33 +1,33 @@
 {
-    "id": "chatcmpl-13beb293-9ee4-4872-9b59-ccf1bfcc1e2d",
+    "id": "chatcmpl-a88b927e-2aec-48fc-a5c5-9e35695c2041",
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psrTask-ontology#> .\n\npsr:kitchen a psr:Environment ;\n  rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance, psr:Component ;\n  rdfs:label \"refrigerator\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:cabinet a psr:Furniture, psr:Component ;\n  rdfs:label \"cabinet\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture, psr:Component ;\n  rdfs:label \"table\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:chair a psr:Furniture, psr:Component ;\n  rdfs:label \"chair\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:dining_room a psr:Environment ;\n  rdfs:label \"dining room\"@en .\n\npsr:milk_bottle a psr:Object, psr:Component ;\n  rdfs:label \"milk bottle\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:plate a psr:Object, psr:Component ;\n  rdfs:label \"plate\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:jar a psr:Object, psr:Component ;\n  rdfs:label \"jar\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:jello_box a psr:Object, psr:Component ;\n  rdfs:label \"jello box\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:alpen_box a psr:Object, psr:Component ;\n  rdfs:label \"alpen box\"@en ;\n  dul:hasLocation psr:kitchen .\n\npsr:rice_bubbles_box a psr:Object, psr:Component ;\n  rdfs:label \"rice bubbles box\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:chucky_puzzle a psr:Object, psr:Component ;\n  rdfs:label \"chucky puzzle\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:shortbread_box a psr:Object, psr:Component ;\n  rdfs:label \"shortbread box\"@en ;\n  dul:hasLocation psr:dining_room .\n\npsr:has_affordance psr:milk_bottle, psr:Opening .\n\npsr:has_affordance psr:plate, psr:PuttingDown .\n\npsr:has_affordance psr:jar, psr:Opening .\n\npsr:has_affordance psr:jello_box, psr:Opening .\n\npsr:has_affordance psr:alpen_box, psr:Opening .\n\npsr:has_affordance psr:rice_bubbles_box, psr:Opening .\n\npsr:has_affordance psr:chucky_puzzle, psr:PickingUp .\n\npsr:has_affordance psr:shortbread_box, psr:Opening .",
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:kitchen a psr:Environment ;\n    rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance ;\n    rdfs:label \"refrigerator\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture ;\n    rdfs:label \"table\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:chair a psr:Furniture ;\n    rdfs:label \"chair\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cup a psr:Object ;\n    rdfs:label \"cup\"@en ;\n    psr:hasLocation psr:table .\n\npsr:book a psr:Object ;\n    rdfs:label \"book\"@en ;\n    psr:hasLocation psr:table .\n\npsr:water_bottle a psr:Object ;\n    rdfs:label \"water bottle\"@en ;\n    psr:hasLocation psr:table .\n\npsr:sink a psr:Component ;\n    rdfs:label \"sink\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:stove a psr:Appliance ;\n    rdfs:label \"stove\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:plate a psr:Object ;\n    rdfs:label \"plate\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cabinet a psr:Furniture ;\n    rdfs:label \"cabinet\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:drawer a psr:Furniture ;\n    rdfs:label \"drawer\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:countertop a psr:Component ;\n    rdfs:label \"countertop\"@en ;\n    psr:hasLocation psr:kitchen .\n\ndul:hasComponent(psr:kitchen, psr:refrigerator) .\ndul:hasComponent(psr:kitchen, psr:table) .\ndul:hasComponent(psr:kitchen, psr:chair) .\ndul:hasComponent(psr:kitchen, psr:cabinet) .\ndul:hasComponent(psr:kitchen, psr:drawer) .\ndul:hasComponent(psr:kitchen, psr:countertop) .\ndul:hasComponent(psr:kitchen, psr:sink) .\ndul:hasComponent(psr:kitchen, psr:stove) .\n\npsr:hasAffordance(psr:cup, soma:PickingUp) .\npsr:hasAffordance(psr:cup, soma:PuttingDown) .\npsr:hasAffordance(psr:book, soma:PickingUp) .\npsr:hasAffordance(psr:book, soma:PuttingDown) .\npsr:hasAffordance(psr:water_bottle, soma:PickingUp) .\npsr:hasAffordance(psr:water_bottle, soma:PuttingDown) .\npsr:hasAffordance(psr:plate, soma:PickingUp) .\npsr:hasAffordance(psr:plate, soma:PuttingDown) .\n\ngeo:sfWithin(psr:refrigerator, psr:kitchen) .\ngeo:sfWithin(psr:table, psr:kitchen) .\ngeo:sfWithin(psr:chair, psr:kitchen) .\ngeo:sfWithin(psr:cabinet, psr:kitchen) .\ngeo:sfWithin(psr:drawer, psr:kitchen) .\ngeo:sfWithin(psr:countertop, psr:kitchen) .\ngeo:sfWithin(psr:sink, psr:kitchen) .\ngeo:sfWithin(psr:stove, psr:kitchen) .",
                 "role": "assistant"
             }
         }
     ],
-    "created": 1747435170,
+    "created": 1747688692,
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "object": "chat.completion",
     "system_fingerprint": "fp_37da608fc1",
     "usage": {
-        "completion_tokens": 765,
-        "prompt_tokens": 13857,
-        "total_tokens": 14622,
-        "completion_time": 1.691790053,
-        "prompt_time": 0.459849426,
-        "queue_time": 2.6974865120000002,
-        "total_time": 2.151639479
+        "completion_tokens": 932,
+        "prompt_tokens": 13959,
+        "total_tokens": 14891,
+        "completion_time": 1.8715123839999999,
+        "prompt_time": 0.366400113,
+        "queue_time": 1.732581825,
+        "total_time": 2.237912497
     },
     "usage_breakdown": {
         "models": null
     },
     "x_groq": {
-        "id": "req_01jvdm17geezsbbz3yp24jsc2s"
+        "id": "req_01jvn5t4ycewy9175jkc7pg97p"
     }
 }

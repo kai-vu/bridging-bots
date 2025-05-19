@@ -7,94 +7,73 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-psr:ReorganiseKitchenTask a psr:Instruction ;
-    psr:hasWorkflow psr:ReorganiseKitchenWorkflow .
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasWorkflow psr:Workflow_1 ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state."@en .
 
-psr:ReorganiseKitchenWorkflow a psr:Workflow ;
-    psr:hasAction psr:PickUpJelloBoxAction ,
-                  psr:PutJelloBoxInFridgeAction ,
-                  psr:PickUpAlpenSaltAction ,
-                  psr:PutAlpenSaltInFridgeAction ,
-                  psr:PickUpEvianBottleAction ,
-                  psr:PutEvianBottleInFridgeAction ,
-                  psr:PickUpChuckyBoxAction ,
-                  psr:PutChuckyBoxInCabinetAction ,
-                  psr:PickUpRiceBubblesBoxAction ,
-                  psr:PutRiceBubblesBoxInCabinetAction ,
-                  psr:OrganizeObjectsInKitchenAction .
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .
 
-psr:PickUpJelloBoxAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JelloBox ;
-    psr:isAffordedBy soma:PickingUp .
+psr:Action_1 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Table_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    rdfs:label "Pick up the bottle on the table"@en ;
+    psr:precedes psr:Action_2 .
 
-psr:PutJelloBoxInFridgeAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JelloBox ;
+psr:Action_2 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Fridge_1 ;
+    psr:isAffordedBy soma:Opening ;
+    rdfs:label "Open the fridge"@en ;
+    psr:precedes psr:Action_3 .
+
+psr:Action_3 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Bottle_1 ;
     psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes psr:PickUpAlpenSaltAction .
+    rdfs:label "Put the bottle in the fridge"@en ;
+    psr:precedes psr:Action_4 .
 
-psr:PickUpAlpenSaltAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:AlpenSalt ;
+psr:Action_4 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Fridge_1 ;
+    psr:isAffordedBy soma:Closing ;
+    rdfs:label "Close the fridge"@en ;
+    psr:precedes psr:Action_5 .
+
+psr:Action_5 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Countertop_1 ;
+    psr:actsOn psr:Jar_1 ;
     psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:PutJelloBoxInFridgeAction ;
-    psr:precedes psr:PutAlpenSaltInFridgeAction .
+    rdfs:label "Pick up the jam jar from the countertop"@en ;
+    psr:precedes psr:Action_6 .
 
-psr:PutAlpenSaltInFridgeAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:AlpenSalt ;
+psr:Action_6 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Cabinet_1 ;
+    psr:isAffordedBy soma:Opening ;
+    rdfs:label "Open the cabinet"@en ;
+    psr:precedes psr:Action_7 .
+
+psr:Action_7 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Jar_1 ;
     psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes psr:PickUpEvianBottleAction .
+    rdfs:label "Put the jam jar in the cabinet"@en ;
+    psr:precedes psr:Action_8 .
 
-psr:PickUpEvianBottleAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:EvianBottle ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:PutAlpenSaltInFridgeAction ;
-    psr:precedes psr:PutEvianBottleInFridgeAction .
+psr:Action_8 a dul:Action ;
+    soma:isPerformedBy psr:Robot_1 ;
+    psr:actsOn psr:Cabinet_1 ;
+    psr:isAffordedBy soma:Closing ;
+    rdfs:label "Close the cabinet"@en .
 
-psr:PutEvianBottleInFridgeAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:EvianBottle ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PickUpChuckyBoxAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:ChuckyBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes psr:PutChuckyBoxInCabinetAction .
-
-psr:PutChuckyBoxInCabinetAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:ChuckyBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes psr:PickUpRiceBubblesBoxAction .
-
-psr:PickUpRiceBubblesBoxAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:RiceBubblesBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:PutChuckyBoxInCabinetAction ;
-    psr:precedes psr:PutRiceBubblesBoxInCabinetAction .
-
-psr:PutRiceBubblesBoxInCabinetAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:RiceBubblesBox ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:OrganizeObjectsInKitchenAction a dul:Action ;
-    soma:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:KitchenCounter ;
-    psr:isAffordedBy soma:Delivering .
-
-psr:RobotAgent a dul:Agent .
-
-psr:JelloBox a psr:Object .
-psr:AlpenSalt a psr:Object .
-psr:EvianBottle a psr:Object .
-psr:ChuckyBox a psr:Object .
-psr:RiceBubblesBox a psr:Object .
-psr:KitchenCounter a psr:Component .
-psr:Fridge a psr:Appliance .
-psr:Cabinet a psr:Furniture .
+psr:Robot_1 a dul:Agent .
+psr:Table_1 a psr:Furniture .
+psr:Fridge_1 a psr:Appliance .
+psr:Bottle_1 a psr:Object .
+psr:Countertop_1 a psr:Furniture .
+psr:Jar_1 a psr:Object .
+psr:Cabinet_1 a psr:Furniture .

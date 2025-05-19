@@ -1,202 +1,211 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-psr:Kitchen a psr:Environment ;
-  rdfs:label "Kitchen"@en .
+psr:RestoreKitchen a psr:Workflow .
 
-psr:DiningArea a psr:Environment ;
-  rdfs:label "Dining Area"@en .
+psr:RestoreKitchen psr:hasAction psr:IdentifyMisplacedItems .
+psr:RestoreKitchen psr:hasAction psr:ReturnItemsToStorage .
 
-psr:KitchenComponent a psr:Component ;
-  rdfs:label "Kitchen Component"@en .
+psr:IdentifyMisplacedItems a dul:Action ;
+    rdfs:label "Identify Misplaced Items"@en ;
+    psr:actsOn psr:MisplacedItem .
 
-psr:Cabinet a psr:Component ;
-  rdfs:label "Cabinet"@en ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+psr:ReturnItemsToStorage a dul:Action ;
+    rdfs:label "Return Items to Storage"@en ;
+    psr:actsOn psr:MisplacedItem .
 
-psr:Countertop a psr:Component ;
-  rdfs:label "Countertop"@en .
+psr:MisplacedItem a psr:Component .
 
-psr:Stove a psr:Component ;
-  rdfs:label "Stove"@en .
+psr:BoxOfRiceBubblesCereal a psr:Object ;
+    rdfs:label "Box of Rice Bubbles Cereal"@en .
 
-psr:Pot a psr:Component ;
-  rdfs:label "Pot"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:BoxOfStrawberryBananaJello a psr:Object ;
+    rdfs:label "Box of Strawberry Banana Jello"@en .
 
-psr:Sink a psr:Component ;
-  rdfs:label "Sink"@en ;
-  psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pushing .
+psr:JarOfJam a psr:Object ;
+    rdfs:label "Jar of Jam"@en .
 
-psr:YellowCup a psr:Component ;
-  rdfs:label "Yellow Cup"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown ;
-  psr:hasAffordance soma:Grasping .
+psr:BoxOfShortbreadCookies a psr:Object ;
+    rdfs:label "Box of Shortbread Cookies"@en .
 
-psr:JarOfJam a psr:Component ;
-  rdfs:label "Jar of Jam"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown ;
-  psr:hasAffordance soma:Grasping .
+psr:YellowMug a psr:Object ;
+    rdfs:label "Yellow Mug"@en .
 
-psr:BoxOfRiceBubbles a psr:Component ;
-  rdfs:label "Box of Rice Bubbles"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:BottleOfWater a psr:Object ;
+    rdfs:label "Bottle of Water"@en .
 
-psr:BoxOfShortbread a psr:Component ;
-  rdfs:label "Box of Shortbread"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PlateWithFruit a psr:Object ;
+    rdfs:label "Plate with Fruit"@en .
 
-psr:PuzzleBox a psr:Component ;
-  rdfs:label "Puzzle Box"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown ;
-  psr:hasAffordance soma:Opening .
+psr:Cookbook a psr:Object ;
+    rdfs:label "Cookbook"@en .
 
-psr:Refrigerator a psr:Component ;
-  rdfs:label "Refrigerator"@en ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+psr:AlpenSalt a psr:Object ;
+    rdfs:label "Alpen Salt"@en .
 
-psr:RangeHood a psr:Component ;
-  rdfs:label "Range Hood"@en .
+psr:ChuckyPuzzle a psr:Object ;
+    rdfs:label "Chucky Puzzle"@en .
 
-psr:Table a psr:Component ;
-  rdfs:label "Table"@en .
+psr:KitchenCounter a psr:Component ;
+    rdfs:label "Kitchen Counter"@en .
 
-psr:Chair a psr:Component ;
-  rdfs:label "Chair"@en .
+psr:KitchenCabinets a psr:Component ;
+    rdfs:label "Kitchen Cabinets"@en .
 
-psr:BottleOfWater a psr:Component ;
-  rdfs:label "Bottle of Water"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:DiningTable a psr:Component ;
+    rdfs:label "Dining Table"@en .
 
-psr:Plate a psr:Component ;
-  rdfs:label "Plate"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:Stovetop a psr:Component ;
+    rdfs:label "Stovetop"@en .
 
-psr:Mug a psr:Component ;
-  rdfs:label "Mug"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown ;
-  psr:hasAffordance soma:Grasping .
+psr:IdentifyMisplacedItems psr:follows soma:PickingUp .
+psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
 
-psr:Book a psr:Component ;
-  rdfs:label "Book"@en ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickingUp a soma:Affordance ;
+    rdfs:label "Picking Up"@en .
 
-psr:Kitchen 
-  psr:hasComponent psr:Cabinet ;
-  psr:hasComponent psr:Countertop ;
-  psr:hasComponent psr:Stove ;
-  psr:hasComponent psr:Sink ;
-  psr:hasComponent psr:Refrigerator ;
-  psr:hasComponent psr:RangeHood .
+psr:PickingUp psr:isAffordedBy soma:PickingUp .
 
-psr:Countertop 
-  psr:hasComponent psr:Pot ;
-  psr:hasComponent psr:YellowCup ;
-  psr:hasComponent psr:JarOfJam ;
-  psr:hasComponent psr:BoxOfRiceBubbles ;
-  psr:hasComponent psr:BoxOfShortbread ;
-  psr:hasComponent psr:PuzzleBox .
+psr:IdentifyMisplacedItems psr:isPerformedBy dul:Agent .
 
-psr:Table 
-  psr:hasComponent psr:BottleOfWater ;
-  psr:hasComponent psr:Plate ;
-  psr:hasComponent psr:Mug ;
-  psr:hasComponent psr:Book .
+psr:ReturnItemsToStorage psr:actsOn psr:BoxOfRiceBubblesCereal .
+psr:ReturnItemsToStorage psr:actsOn psr:BoxOfStrawberryBananaJello .
+psr:ReturnItemsToStorage psr:actsOn psr:JarOfJam .
+psr:ReturnItemsToStorage psr:actsOn psr:BoxOfShortbreadCookies .
+psr:ReturnItemsToStorage psr:actsOn psr:YellowMug .
+psr:ReturnItemsToStorage psr:actsOn psr:BottleOfWater .
+psr:ReturnItemsToStorage psr:actsOn psr:PlateWithFruit .
+psr:ReturnItemsToStorage psr:actsOn psr:Cookbook .
+psr:ReturnItemsToStorage psr:actsOn psr:AlpenSalt .
+psr:ReturnItemsToStorage psr:actsOn psr:ChuckyPuzzle .
 
-dul:hasLocation psr:Cabinet, psr:Countertop, psr:Stove, psr:Sink, psr:Refrigerator, psr:RangeHood ;
-  geo:sfWithin psr:Kitchen .
+psr:BoxOfRiceBubblesCereal psr:actsOn psr:KitchenCabinets .
+psr:BoxOfStrawberryBananaJello psr:actsOn psr:KitchenCabinets .
+psr:JarOfJam psr:actsOn psr:KitchenCabinets .
+psr:BoxOfShortbreadCookies psr:actsOn psr:KitchenCabinets .
+psr:AlpenSalt psr:actsOn psr:KitchenCabinets .
 
-dul:hasLocation psr:Pot, psr:YellowCup, psr:JarOfJam, psr:BoxOfRiceBubbles, psr:BoxOfShortbread, psr:PuzzleBox ;
-  geo:sfWithin psr:Countertop .
+psr:BottleOfWater psr:actsOn psr:DiningTable .
+psr:PlateWithFruit psr:actsOn psr:DiningTable .
+psr:Cookbook psr:actsOn psr:KitchenCabinets .
+psr:ChuckyPuzzle psr:actsOn psr:DiningTable .
 
-dul:hasLocation psr:BottleOfWater, psr:Plate, psr:Mug, psr:Book ;
-  geo:sfWithin psr:Table .
+psr:YellowMug psr:actsOn psr:KitchenCabinets .
 
-psr:ReorganiseKitchen a psr:Affordance ;
-  rdfs:label "Reorganise Kitchen"@en .
+psr:RestoreKitchen psr:hasWorkflow psr:Workflow_1 .
 
-psr:Task a psr:Component ;
-  rdfs:label "Task"@en ;
-  psr:hasAffordance psr:ReorganiseKitchen .
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction psr:PickUpBoxOfRiceBubblesCereal .
+psr:Workflow_1 psr:hasAction psr:PickUpBoxOfStrawberryBananaJello .
+psr:Workflow_1 psr:hasAction psr:PickUpJarOfJam .
+psr:Workflow_1 psr:hasAction psr:PickUpBoxOfShortbreadCookies .
+psr:Workflow_1 psr:hasAction psr:PickUpYellowMug .
+psr:Workflow_1 psr:hasAction psr:PickUpBottleOfWater .
+psr:Workflow_1 psr:hasAction psr:PickUpPlateWithFruit .
+psr:Workflow_1 psr:hasAction psr:PickUpCookbook .
+psr:Workflow_1 psr:hasAction psr:PickUpAlpenSalt .
+psr:Workflow_1 psr:hasAction psr:PickUpChuckyPuzzle .
 
-psr:ReorganiseKitchen 
-  psr:onTopOf psr:Kitchen .
+psr:PickUpBoxOfRiceBubblesCereal a dul:Action ;
+    rdfs:label "Pick Up Box of Rice Bubbles Cereal"@en ;
+    psr:actsOn psr:BoxOfRiceBubblesCereal ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Cabinet 
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+psr:PickUpBoxOfStrawberryBananaJello a dul:Action ;
+    rdfs:label "Pick Up Box of Strawberry Banana Jello"@en ;
+    psr:actsOn psr:BoxOfStrawberryBananaJello ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Refrigerator 
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+psr:PickUpJarOfJam a dul:Action ;
+    rdfs:label "Pick Up Jar of Jam"@en ;
+    psr:actsOn psr:JarOfJam ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:PuzzleBox 
-  psr:hasAffordance soma:Opening .
+psr:PickUpBoxOfShortbreadCookies a dul:Action ;
+    rdfs:label "Pick Up Box of Shortbread Cookies"@en ;
+    psr:actsOn psr:BoxOfShortbreadCookies ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:BoxOfShortbread 
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickUpYellowMug a dul:Action ;
+    rdfs:label "Pick Up Yellow Mug"@en ;
+    psr:actsOn psr:YellowMug ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:BoxOfRiceBubbles 
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickUpBottleOfWater a dul:Action ;
+    rdfs:label "Pick Up Bottle of Water"@en ;
+    psr:actsOn psr:BottleOfWater ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:YellowCup 
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickUpPlateWithFruit a dul:Action ;
+    rdfs:label "Pick Up Plate with Fruit"@en ;
+    psr:actsOn psr:PlateWithFruit ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:JarOfJam 
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickUpCookbook a dul:Action ;
+    rdfs:label "Pick Up Cookbook"@en ;
+    psr:actsOn psr:Cookbook ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Pot 
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+psr:PickUpAlpenSalt a dul:Action ;
+    rdfs:label "Pick Up Alpen Salt"@en ;
+    psr:actsOn psr:AlpenSalt ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:ReorganiseKitchen 
-  psr:hasAffordance soma:Pushing ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+psr:PickUpChuckyPuzzle a dul:Action ;
+    rdfs:label "Pick Up Chucky Puzzle"@en ;
+    psr:actsOn psr:ChuckyPuzzle ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Kitchen 
-  geo:sfContains psr:Cabinet ;
-  geo:sfContains psr:Countertop ;
-  geo:sfContains psr:Stove ;
-  geo:sfContains psr:Sink ;
-  geo:sfContains psr:Refrigerator ;
-  geo:sfContains psr:RangeHood .
+psr:PutDownBoxOfRiceBubblesCereal a dul:Action ;
+    rdfs:label "Put Down Box of Rice Bubbles Cereal"@en ;
+    psr:actsOn psr:BoxOfRiceBubblesCereal ;
+    psr:isAffordedBy soma:PuttingDown .
 
-psr:Countertop 
-  geo:sfContains psr:Pot ;
-  geo:sfContains psr:YellowCup ;
-  geo:sfContains psr:JarOfJam ;
-  geo:sfContains psr:BoxOfRiceBubbles ;
-  geo:sfContains psr:BoxOfShortbread ;
-  geo:sfContains psr:PuzzleBox .
+psr:PutDownBoxOfStrawberryBananaJello a dul:Action ;
+    rdfs:label "Put Down Box of Strawberry Banana Jello"@en ;
+    psr:actsOn psr:BoxOfStrawberryBananaJello ;
+    psr:isAffordedBy soma:PuttingDown .
 
-psr:Table 
-  geo:sfContains psr:BottleOfWater ;
-  geo:sfContains psr:Plate ;
-  geo:sfContains psr:Mug ;
-  geo:sfContains psr:Book .
+psr:PutDownJarOfJam a dul:Action ;
+    rdfs:label "Put Down Jar of Jam"@en ;
+    psr:actsOn psr:JarOfJam ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownBoxOfShortbreadCookies a dul:Action ;
+    rdfs:label "Put Down Box of Shortbread Cookies"@en ;
+    psr:actsOn psr:BoxOfShortbreadCookies ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownYellowMug a dul:Action ;
+    rdfs:label "Put Down Yellow Mug"@en ;
+    psr:actsOn psr:YellowMug ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownBottleOfWater a dul:Action ;
+    rdfs:label "Put Down Bottle of Water"@en ;
+    psr:actsOn psr:BottleOfWater ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownPlateWithFruit a dul:Action ;
+    rdfs:label "Put Down Plate with Fruit"@en ;
+    psr:actsOn psr:PlateWithFruit ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownCookbook a dul:Action ;
+    rdfs:label "Put Down Cookbook"@en ;
+    psr:actsOn psr:Cookbook ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownAlpenSalt a dul:Action ;
+    rdfs:label "Put Down Alpen Salt"@en ;
+    psr:actsOn psr:AlpenSalt ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:PutDownChuckyPuzzle a dul:Action ;
+    rdfs:label "Put Down Chucky Puzzle"@en ;
+    psr:actsOn psr:ChuckyPuzzle ;
+    psr:isAffordedBy soma:PuttingDown .

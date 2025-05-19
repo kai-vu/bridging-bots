@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-202b164f-db6c-484a-bf88-942e296e6fa2",
-    "created": 1747426952,
+    "id": "llava:7b-5b78e8ed-ed9d-4da3-b0b4-803fb1d03f09",
+    "created": 1747688000,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " Certainly! Based on the provided ontology and image description, I will generate a Knowledge Graph in Turtle format for you. Please note that since the images are not provided, I am assuming that the environment includes components such as appliances, furniture, and objects, with their respective affordances and locations within or overlapping with other components. Here's the generated KG:\n\n```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix geo: <http://www.opengis.net/ont/> .\n\n<http://example.com/Environment> a owl:Class ;\n    rdfs:comment \"An environment is an area or context in which components are found.\"@en .\n\n<http://example.com/Component> a owl:Class ;\n    rdfs:comment \"A component is a part of an environment that can be used to perform tasks or actions.\"@en .\n\n<http://example.com/Appliance> a owl:Class ;\n    rdfs:label \"Appliance\"@en ;\n    rdfs:comment \"An appliance is a type of component.\"@en .\n\n<http://example.com/Furniture> a owl:Class ;\n    rdfs:label \"Furniture\"@en ;\n    rdfs:comment \"A furniture is a type of component.\"@en .\n\n<http://example.com/Object> a owl:Class ;\n    rdfs:label \"Object\"@en ;\n    rdfs:comment \"An object is a type of component.\"@en .\n\n[http://example.com/Location, http://example.com/Location_1] a geo:FeatureOfInterest ;\n    rdfs:label \"Location\"@en ;\n    rdfs:comment \"A location is a specific component within the environment\"@en .\n\n<http://example.com/Environment> owl:subClassOf owl:Class ;\n    rdfs:comment \"An environment has one or more components.\"@en .\n\n<http://example.com/Component> owl:subClassOf owl:Class ;\n    rdfs:comment \"A component has one or more affordances that indicate how it can be used.\"@en .\n\n[http://example.com/Location_1, http://example.com/Location_2] a geo:FeatureOfInterest ;\n    rdfs:label \"Location\"@en ;\n    rdfs:comment \"A location has a name.\"@en .\n\n<http://example.com/Appliance> owl:intersectionOf [ <http://example.com/Component>, <http://example.com/Furniture> ] ;\n    rdfs:comment \"An appliance is a component that is also furniture.\"@en .\n\n<http://example.com/Furniture> owl:unionOf [ <http://example.com/Appliance>, <http://example.com/Object> ] ;\n    rdfs:comment \"A piece of furniture is either an appliance or an object.\"@en .\n\n<http://example.com/Object> owl:unionOf [ <http://example.com/Furniture>, <http://example.com/Appliance> ] ;\n    rdfs:comment \"An object is a component that is also furniture and appliance.\"@en .\n\n[http://example.com/Location_1, http://example.com/Location_2] geo:hasGeometry [ <http://example.com/Point> ] ;\n    rdfs:label \"Location\"@en ;\n    rdfs:comment \"The location has a point.\"@en .\n\n[http://example.com/Location, http://example.com/Location_1] geo:hasGeometry [ <http://example.com/Point> ] ;\n    rdfs:label \"Location\"@en ;\n    rdfs:comment \"The location has a point.\"@en .\n\n[http://example.com/Location_2, http://example.com/Location] geo:hasGeometry [ <http://example.com/Point> ] ;\n    rdfs:label \"Location\"@en ;\n    rdfs:comment \"The location has a point.\"@en .\n```\n\nThis Knowledge Graph describes an environment with components (appliances, furniture, objects) and their locations. The affordances are not explicitly shown in the image descriptions provided, so I am unable to include them in this output. Please provide more details or specific affordances if you need them included in the KG. ",
+                "content": " Certainly! Based on the provided ontology and the images, I can generate a Knowledge Graph in Turtle format for you. Here is the output:\n\n```turtle\n@prefix geo: <http://www.opengis.net/ont/geosparql#>\n@prefix psr: <http://www.ease-crc.org/ont/psr/0.1#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf#>\n@prefix dul: <http://www.ease-crc.org/ont/DUL#>\n@prefix soma: <http://www.ease-crc.org/ont/SOMA#>\n@prefix owl: <http://www.w3.org/2002/12/owl#>\n\n<http://example.com/environment_01> a psr:Environment, rdfs:Resource.\n  <http://example.com/component_01> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_open>.\n    psr:hasLocation <http://example.com/location_01>.\n  <http://example.com/component_02> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_close>.\n    psr:hasLocation <http://example.com/location_01>.\n  <http://example.com/component_03> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_push>.\n    psr:hasLocation <http://example.com/location_02>.\n  <http://example.com/location_01> a geo:SpatialThing, dul:Entity.\n  <http://example.com/location_02> a geo:SpatialThing, dul:Entity.\n  \n<http://example.com/affordance_open> a psr:Affordance ;\n  rdfs:label \"Open\"@en.\n  \n<http://example.com/affordance_close> a psr:Affordance ;\n  rdfs:label \"Close\"@en.\n  \n<http://example.com/affordance_push> a psr:Affordance ;\n  rdfs:label \"Push\"@en.\n```\n\nThis Knowledge Graph represents the environment and its components, their locations, and the affordances associated with them based on the images provided. ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 68.99,
-        "prompt_token/s": 1860.58,
-        "total_duration": 20100165337,
-        "load_duration": 1579098280,
+        "response_token/s": 69.4,
+        "prompt_token/s": 1861.81,
+        "total_duration": 12169741293,
+        "load_duration": 50705593,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2201460784,
-        "eval_count": 1123,
-        "completion_tokens": 1123,
-        "eval_duration": 16278232556,
-        "approximate_total": "0h0m20s",
-        "total_tokens": 5219,
+        "prompt_eval_duration": 2200013532,
+        "eval_count": 686,
+        "completion_tokens": 686,
+        "eval_duration": 9884579071,
+        "approximate_total": "0h0m12s",
+        "total_tokens": 4782,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

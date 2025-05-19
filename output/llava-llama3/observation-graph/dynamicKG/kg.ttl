@@ -1,23 +1,36 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:dining_area kitchen:hasComponent kitchen:cupboard,
-        kitchen:white_chair,
-        kitchen:wooden_dining_table .
+kitchen:Kitchen kitchen:HAS_COMPONENT kitchen:Countertops,
+        kitchen:Floor,
+        kitchen:Kitchen_Cabinets,
+        kitchen:Lighting,
+        kitchen:Personal_Touches,
+        kitchen:Refrigerator,
+        kitchen:Shelves_and_Storage,
+        kitchen:Sink,
+        kitchen:Stove_Top_Oven,
+        kitchen:Table,
+        kitchen:Wall_Decor ;
+    kitchen:HAS_LOCATION kitchen:Room .
 
-kitchen:kitchen kitchen:hasComponent kitchen:dark_wooden_cabinets,
-        kitchen:red_and_white_container,
-        kitchen:stainless_steel_fridge,
-        kitchen:wall_cabinet,
-        kitchen:white_countertop,
-        kitchen:wooden_floor .
+kitchen:Countertops kitchen:HAS_AFFORDANCE kitchen:No_Clutter .
 
-kitchen:room kitchen:hasAffordance kitchen:well-organized ;
-    kitchen:isInstanceOf kitchen:kitchen_and_dining_area .
+kitchen:Kitchen_Cabinets kitchen:HAS_AFFORDANCE kitchen:Storage_Space .
 
-kitchen:stainless_steel_fridge kitchen:hasComponent kitchen:food_items .
+kitchen:Personal_Touches kitchen:HAS_AFFORDANCE kitchen:Bottles,
+        kitchen:Box_of_Cereal,
+        kitchen:Cups .
 
-kitchen:white_countertop kitchen:hasComponent kitchen:faucet,
-        kitchen:sink .
+kitchen:Refrigerator kitchen:HAS_AFFORDANCE kitchen:Closed_Door .
 
-kitchen:wooden_dining_table kitchen:hasComponent kitchen:box_of_cereal .
+kitchen:Shelves_and_Storage kitchen:HAS_AFFORDANCE kitchen:No_Items .
+
+kitchen:Sink kitchen:HAS_AFFORDANCE kitchen:Chrome_Fixtures .
+
+kitchen:Table kitchen:HAS_AFFORDANCE kitchen:Cupcake_Holder,
+        kitchen:Empty_Glass_Jar,
+        kitchen:House_Model,
+        kitchen:White_Mug .
+
+kitchen:Wall_Decor kitchen:HAS_AFFORDANCE kitchen:Framed_Picture .
 

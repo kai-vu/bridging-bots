@@ -1,29 +1,25 @@
-@prefix psr: <http://www.w3.org/2000/01/rdf-schema#>
-@prefix dul: <https://www.dereczik.net/owl/DulLiteOntology#>
+@prefix psr: <https://example.com/psr#>
+@prefix dul: <https://example.com/dul#>
+@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#>
+@prefix owl: <https://www.w3.org/2002/05/owl#>
 
-# Instruction class and properties for task
-[psr:Instruction] psr:hasWorkflow [dul:Workflow] .
-[psr:Instruction] psr:precedes [dul:Action] .
-[psr:Instruction] psr:follows [dul:Action] .
-[psr:Instruction] psr:actsOn [dul:Component] .
-[psr:Instruction] psr:isAffordedBy [dul:Affordance] .
-[psr:Instruction] psr:hasNaturalLanguage "Reorganise the kitchen"@en .
+<https://example.com/psr#task_instruction> a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-# Workflow class and properties for task
-[dul:Workflow] dul:hasAction [dul:Action] .
+<https://example.com/psr#workflow_1> a psr:Workflow ;
+  psr:precedes <https://example.com/psr#action_1> .
 
-# Agent class and properties for task
-[dul:Agent] dul:isPerformedBy [dul:Component] .
+<https://example.com/dul#agent_1> a dul:Agent ;
+  psr:isPerformedBy <https://example.com/psr#workflow_1> .
 
-# Action class and properties for task
-[dul:Action] psr:precedes [dul:Action] .
-[dul:Action] psr:follows [dul:Action] .
-[dul:Action] dul:actsOn [dul:Component] .
-[dul:Action] dul:isAffordedBy [dul:Affordance] .
+<https://example.com/dul#object_1> a dul:Object ;
+  dul:actsOn <https://example.com/dul#component_1> ;
+  psr:isAffordedBy <https://example.com/psr#affordance_1> .
 
-# Component class and properties for task
-[dul:Component] psr:hasNaturalLanguage "Refrigerator"@en .
-[dul:Component] dul:precedes [dul:Action] .
-[dul:Component] dul:follows [dul:Action] .
-[dul:Component] dul:actsOn [dul:Component] .
-[dul:Component] dul:isAffordedBy [dul:Affordance] .
+<https://example.com/dul#object_2> a dul:Object ;
+  dul:actsOn <https://example.com/dul#component_2> ;
+  psr:isAffordedBy <https://example.com/psr#affordance_2> .
+
+<https://example.com/dul#object_3> a dul:Object ;
+  dul:actsOn <https://example.com/dul#component_3> ;
+  psr:isAffordedBy <https://example.com/psr#affordance_3> .

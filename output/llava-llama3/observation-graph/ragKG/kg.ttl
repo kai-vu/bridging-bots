@@ -1,77 +1,225 @@
-@prefix : <http://find-a-name.org/> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 
-:Kitchen a :Environment .
-:DiningArea a :Environment .
+:Kitchen a psr:Environment ;
+    dul:hasComponent :KitchenCabinets ,
+        :Countertops ,
+        :Refrigerator ,
+        :Sink ,
+        :Table ,
+        :Chair1 ,
+        :Chair2 ,
+        :Chair3 ,
+        :Chair4 ,
+        :TableDecoration ,
+        :CupcakeHolder ,
+        :Picture ,
+        :Stove ,
+        :OpenShelf ,
+        :SmallCabinets ,
+        :Floor ,
+        :CeilingLight ,
+        :CerealBox ,
+        :Cup1 ,
+        :Cup2 ,
+        :Bottle1 ,
+        :Bottle2 ,
+        :GlassJar ,
+        :Mug .
 
-:Countertop a :Component .
-:Sink a :Component .
-:Faucet a :Component .
-:Cabinets a :Component .
-:Fridge a :Component .
-:FoodItems a :Component .
-:Container a :Component .
-:WallCabinet a :Component .
-:Utensils a :Component .
-:Floor a :Component .
-:Table a :Component .
-:Chair a :Component .
-:Cupboard a :Component .
+:KitchenCabinets a psr:Component ;
+    rdfs:label "Kitchen Cabinets"@en .
 
-:Kitchen dul:hasComponent :Countertop .
+:Countertops a psr:Component ;
+    rdfs:label "Countertops"@en .
+
+:Refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en .
+
+:Sink a psr:Component ;
+    rdfs:label "Sink"@en .
+
+:Table a psr:Furniture ;
+    rdfs:label "Table"@en .
+
+:Chair1 a psr:Component ;
+    rdfs:label "Chair1"@en .
+
+:Chair2 a psr:Component ;
+    rdfs:label "Chair2"@en .
+
+:Chair3 a psr:Component ;
+    rdfs:label "Chair3"@en .
+
+:Chair4 a psr:Component ;
+    rdfs:label "Chair4"@en .
+
+:TableDecoration a psr:Component ;
+    rdfs:label "TableDecoration"@en .
+
+:CupcakeHolder a psr:Component ;
+    rdfs:label "CupcakeHolder"@en .
+
+:Picture a psr:Component ;
+    rdfs:label "Picture"@en .
+
+:Stove a psr:Appliance ;
+    rdfs:label "Stove"@en .
+
+:OpenShelf a psr:Component ;
+    rdfs:label "OpenShelf"@en .
+
+:SmallCabinets a psr:Component ;
+    rdfs:label "SmallCabinets"@en .
+
+:Floor a psr:Component ;
+    rdfs:label "Floor"@en .
+
+:CeilingLight a psr:Component ;
+    rdfs:label "CeilingLight"@en .
+
+:CerealBox a psr:Component ;
+    rdfs:label "CerealBox"@en .
+
+:Cup1 a psr:Component ;
+    rdfs:label "Cup1"@en .
+
+:Cup2 a psr:Component ;
+    rdfs:label "Cup2"@en .
+
+:Bottle1 a psr:Component ;
+    rdfs:label "Bottle1"@en .
+
+:Bottle2 a psr:Component ;
+    rdfs:label "Bottle2"@en .
+
+:GlassJar a psr:Component ;
+    rdfs:label "GlassJar"@en .
+
+:Mug a psr:Component ;
+    rdfs:label "Mug"@en .
+
+:Kitchen dul:hasComponent :KitchenCabinets .
+:Kitchen dul:hasComponent :Countertops .
+:Kitchen dul:hasComponent :Refrigerator .
 :Kitchen dul:hasComponent :Sink .
-:Kitchen dul:hasComponent :Faucet .
-:Kitchen dul:hasComponent :Cabinets .
-:Kitchen dul:hasComponent :Fridge .
-:Kitchen dul:hasComponent :FoodItems .
-:Kitchen dul:hasComponent :Container .
-:Kitchen dul:hasComponent :WallCabinet .
-:Kitchen dul:hasComponent :Utensils .
+:Kitchen dul:hasComponent :Table .
+:Kitchen dul:hasComponent :Chair1 .
+:Kitchen dul:hasComponent :Chair2 .
+:Kitchen dul:hasComponent :Chair3 .
+:Kitchen dul:hasComponent :Chair4 .
+:Kitchen dul:hasComponent :TableDecoration .
+:Kitchen dul:hasComponent :CupcakeHolder .
+:Kitchen dul:hasComponent :Picture .
+:Kitchen dul:hasComponent :Stove .
+:Kitchen dul:hasComponent :OpenShelf .
+:Kitchen dul:hasComponent :SmallCabinets .
 :Kitchen dul:hasComponent :Floor .
+:Kitchen dul:hasComponent :CeilingLight .
+:Kitchen dul:hasComponent :CerealBox .
+:Kitchen dul:hasComponent :Cup1 .
+:Kitchen dul:hasComponent :Cup2 .
+:Kitchen dul:hasComponent :Bottle1 .
+:Kitchen dul:hasComponent :Bottle2 .
+:Kitchen dul:hasComponent :GlassJar .
+:Kitchen dul:hasComponent :Mug .
 
-:DiningArea dul:hasComponent :Table .
-:DiningArea dul:hasComponent :Chair .
-:DiningArea dul:hasComponent :Cupboard .
+:Table dul:hasLocation :TableLocation .
+:TableLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
 
-:Countertop dul:hasLocation :Kitchen .
-:Sink dul:hasLocation :Countertop .
-:Faucet dul:hasLocation :Sink .
-:Cabinets dul:hasLocation :Kitchen .
-:Fridge dul:hasLocation :Kitchen .
-:FoodItems dul:hasLocation :Fridge .
-:Container dul:hasLocation :Countertop .
-:WallCabinet dul:hasLocation :Kitchen .
-:Utensils dul:hasLocation :WallCabinet .
-:Floor dul:hasLocation :Kitchen .
-:Table dul:hasLocation :DiningArea .
-:Chair dul:hasLocation :Table .
-:Cupboard dul:hasLocation :DiningArea .
+:Chair1 dul:hasLocation :Chair1Location .
+:Chair1Location a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
 
-:Countertop :onTopOf :Floor .
-:Table :onTopOf :Floor .
-:Chair :onTopOf :Floor .
-:Cupboard :onTopOf :Floor .
+:Chair2 dul:hasLocation :Chair2Location .
+:Chair2Location a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
 
-:Container :hasAffordance soma:Grasping .
-:Container :hasAffordance soma:Holding .
-:Container :hasAffordance soma:Opening .
-:Container :hasAffordance soma:Closing .
+:Chair3 dul:hasLocation :Chair3Location .
+:Chair3Location a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
 
-:Chair :hasAffordance soma:Grasping .
-:Chair :hasAffordance soma:Holding .
-:Chair :hasAffordance soma:Pushing .
-:Chair :hasAffordance soma:Pulling .
+:Chair4 dul:hasLocation :Chair4Location .
+:Chair4Location a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
 
-:Table :hasAffordance soma:Grasping .
-:Table :hasAffordance soma:Holding .
-:Table :hasAffordance soma:Pushing .
-:Table :hasAffordance soma:Pulling .
+:TableDecoration dul:hasLocation :TableDecorationLocation .
+:TableDecorationLocation a psr:CurrentLocation ;
+    geo:sfWithin :Table .
 
-:Cupboard :hasAffordance soma:Grasping .
-:Cupboard :hasAffordance soma:Holding .
-:Cupboard :hasAffordance soma:Opening .
-:Cupboard :hasAffordance soma:Closing .
+:CupcakeHolder dul:hasLocation :CupcakeHolderLocation .
+:CupcakeHolderLocation a psr:CurrentLocation ;
+    geo:sfWithin :Table .
+
+:CerealBox dul:hasLocation :CerealBoxLocation .
+:CerealBoxLocation a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:Cup1 dul:hasLocation :Cup1Location .
+:Cup1Location a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:Cup2 dul:hasLocation :Cup2Location .
+:Cup2Location a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:Bottle1 dul:hasLocation :Bottle1Location .
+:Bottle1Location a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:Bottle2 dul:hasLocation :Bottle2Location .
+:Bottle2Location a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:GlassJar dul:hasLocation :GlassJarLocation .
+:GlassJarLocation a psr:CurrentLocation ;
+    geo:sfWithin :Table .
+
+:Mug dul:hasLocation :MugLocation .
+:MugLocation a psr:CurrentLocation ;
+    geo:sfWithin :Table .
+
+:Refrigerator dul:hasLocation :RefrigeratorLocation .
+:RefrigeratorLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:Sink dul:hasLocation :SinkLocation .
+:SinkLocation a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:Stove dul:hasLocation :StoveLocation .
+:StoveLocation a psr:CurrentLocation ;
+    geo:sfWithin :Countertops .
+
+:OpenShelf dul:hasLocation :OpenShelfLocation .
+:OpenShelfLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:SmallCabinets dul:hasLocation :SmallCabinetsLocation .
+:SmallCabinetsLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:Floor dul:hasLocation :FloorLocation .
+:FloorLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:CeilingLight dul:hasLocation :CeilingLightLocation .
+:CeilingLightLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:Picture dul:hasLocation :PictureLocation .
+:PictureLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:KitchenCabinets dul:hasLocation :KitchenCabinetsLocation .
+:KitchenCabinetsLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .
+
+:Countertops dul:hasLocation :CountertopsLocation .
+:CountertopsLocation a psr:CurrentLocation ;
+    geo:sfWithin :Kitchen .

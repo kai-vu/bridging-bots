@@ -1,57 +1,29 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix psr: <http://www.ease-crc.org/ont/psr/0.1#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix geo: <http://www.opengis.net/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf#> .
+@prefix dul: <http://www.ease-crc.org/ont/DUL#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA#> .
+@prefix owl: <http://www.w3.org/2002/12/owl#> .
 
-<http://example.com/Environment> a owl:Class ;
-    rdfs:comment "An environment is an area or context in which components are found."@en .
-
-<http://example.com/Component> a owl:Class ;
-    rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
-
-<http://example.com/Appliance> a owl:Class ;
-    rdfs:label "Appliance"@en ;
-    rdfs:comment "An appliance is a type of component."@en .
-
-<http://example.com/Furniture> a owl:Class ;
-    rdfs:label "Furniture"@en ;
-    rdfs:comment "A furniture is a type of component."@en .
-
-<http://example.com/Object> a owl:Class ;
-    rdfs:label "Object"@en ;
-    rdfs:comment "An object is a type of component."@en .
-
-[http://example.com/Location, http://example.com/Location_1] a geo:FeatureOfInterest ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "A location is a specific component within the environment"@en .
-
-<http://example.com/Environment> owl:subClassOf owl:Class ;
-    rdfs:comment "An environment has one or more components."@en .
-
-<http://example.com/Component> owl:subClassOf owl:Class ;
-    rdfs:comment "A component has one or more affordances that indicate how it can be used."@en .
-
-[http://example.com/Location_1, http://example.com/Location_2] a geo:FeatureOfInterest ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "A location has a name."@en .
-
-<http://example.com/Appliance> owl:intersectionOf [ <http://example.com/Component>, <http://example.com/Furniture> ] ;
-    rdfs:comment "An appliance is a component that is also furniture."@en .
-
-<http://example.com/Furniture> owl:unionOf [ <http://example.com/Appliance>, <http://example.com/Object> ] ;
-    rdfs:comment "A piece of furniture is either an appliance or an object."@en .
-
-<http://example.com/Object> owl:unionOf [ <http://example.com/Furniture>, <http://example.com/Appliance> ] ;
-    rdfs:comment "An object is a component that is also furniture and appliance."@en .
-
-[http://example.com/Location_1, http://example.com/Location_2] geo:hasGeometry [ <http://example.com/Point> ] ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "The location has a point."@en .
-
-[http://example.com/Location, http://example.com/Location_1] geo:hasGeometry [ <http://example.com/Point> ] ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "The location has a point."@en .
-
-[http://example.com/Location_2, http://example.com/Location] geo:hasGeometry [ <http://example.com/Point> ] ;
-    rdfs:label "Location"@en ;
-    rdfs:comment "The location has a point."@en .
+<http://example.com/environment_01> a psr:Environment, rdfs:Resource.
+<http://example.com/component_01> a psr:Component, dul:Entity, geo:SpatialThing ;
+    psr:hasAffordance <http://example.com/affordance_open>;
+    psr:hasLocation <http://example.com/location_01>.
+<http://example.com/component_02> a psr:Component, dul:Entity, geo:SpatialThing ;
+    psr:hasAffordance <http://example.com/affordance_close>;
+    psr:hasLocation <http://example.com/location_01>.
+<http://example.com/component_03> a psr:Component, dul:Entity, geo:SpatialThing ;
+    psr:hasAffordance <http://example.com/affordance_push>;
+    psr:hasLocation <http://example.com/location_02>.
+<http://example.com/location_01> a geo:SpatialThing, dul:Entity.
+<http://example.com/location_02> a geo:SpatialThing, dul:Entity.
+  
+<http://example.com/affordance_open> a psr:Affordance ;
+  rdfs:label "Open"@en.
+  
+<http://example.com/affordance_close> a psr:Affordance ;
+  rdfs:label "Close"@en.
+  
+<http://example.com/affordance_push> a psr:Affordance ;
+  rdfs:label "Push"@en.

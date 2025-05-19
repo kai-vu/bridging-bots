@@ -1,72 +1,70 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:agent kitchen:movesTo kitchen:cabinet,
+kitchen:agent kitchen:Moving kitchen:dining_room,
         kitchen:kitchen,
-        kitchen:refrigerator ;
-    kitchen:opens kitchen:cabinet,
-        kitchen:refrigerator ;
-    kitchen:performs kitchen:cleaning,
-        kitchen:organizing,
-        kitchen:wiping ;
-    kitchen:picksUp kitchen:bottle_of_water,
-        kitchen:box_of_Rice_Bubbles,
-        kitchen:box_of_shortbread,
+        kitchen:kitchen_counter,
+        kitchen:near_the_stove,
+        kitchen:suitable_storage_location ;
+    kitchen:PickingUp kitchen:Chucky_puzzle,
+        kitchen:bottle_of_water,
+        kitchen:box_of_Rice_Bubbles_cereal,
+        kitchen:box_of_shortbread_cookies,
+        kitchen:box_of_strawberry_banana_Jello,
+        kitchen:cookbook,
         kitchen:jar_of_jam,
-        kitchen:mug,
-        kitchen:plate,
-        kitchen:puzzle_box,
-        kitchen:yellow_cup ;
-    kitchen:puts kitchen:bottle_of_water,
-        kitchen:box_of_Rice_Bubbles,
-        kitchen:box_of_shortbread,
+        kitchen:plate_with_fruit,
+        kitchen:yellow_mug ;
+    kitchen:PuttingDown kitchen:Chucky_puzzle,
+        kitchen:bottle_of_water,
+        kitchen:box_of_Rice_Bubbles_cereal,
+        kitchen:box_of_shortbread_cookies,
+        kitchen:box_of_strawberry_banana_Jello,
+        kitchen:cookbook,
         kitchen:jar_of_jam,
-        kitchen:mug,
-        kitchen:plate,
-        kitchen:puzzle_box,
-        kitchen:yellow_cup .
+        kitchen:plate_with_fruit,
+        kitchen:yellow_mug .
 
-kitchen:dining_area kitchen:hasFurniture kitchen:table ;
-    kitchen:needs kitchen:organizing .
+kitchen:stove kitchen:isA kitchen:Appliance .
 
-kitchen:range_hood kitchen:needs kitchen:cleaning .
+kitchen:kitchen kitchen:isA kitchen:Location .
 
-kitchen:sink kitchen:needs kitchen:cleaning .
+kitchen:refrigerator kitchen:isA kitchen:Appliance .
 
-kitchen:stove kitchen:needs kitchen:cleaning .
+kitchen:Chucky_puzzle kitchen:hasLocation kitchen:dining_table ;
+    kitchen:sfWithin kitchen:suitable_storage_location .
 
-kitchen:cabinet kitchen:contains kitchen:box_of_Rice_Bubbles,
-        kitchen:box_of_shortbread,
+kitchen:bottle_of_water kitchen:hasLocation kitchen:dining_room ;
+    kitchen:sfWithin kitchen:refrigerator .
+
+kitchen:cookbook kitchen:hasLocation kitchen:dining_room ;
+    kitchen:onTopOf kitchen:kitchen_counter_shelf .
+
+kitchen:plate_with_fruit kitchen:hasLocation kitchen:dining_room ;
+    kitchen:onTopOf kitchen:kitchen_counter .
+
+kitchen:box_of_Rice_Bubbles_cereal kitchen:hasLocation kitchen:near_the_stove ;
+    kitchen:sfWithin kitchen:kitchen_cabinet .
+
+kitchen:box_of_shortbread_cookies kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfWithin kitchen:kitchen_cabinet .
+
+kitchen:box_of_strawberry_banana_Jello kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfWithin kitchen:kitchen_cabinet .
+
+kitchen:jar_of_jam kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfWithin kitchen:kitchen_cabinet .
+
+kitchen:yellow_mug kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfWithin kitchen:kitchen_cabinet .
+
+kitchen:dining_room kitchen:isA kitchen:Location .
+
+kitchen:kitchen_cabinet kitchen:isA kitchen:Furniture ;
+    kitchen:sfContains kitchen:box_of_Rice_Bubbles_cereal,
+        kitchen:box_of_shortbread_cookies,
+        kitchen:box_of_strawberry_banana_Jello,
         kitchen:jar_of_jam,
-        kitchen:mug,
-        kitchen:plate,
-        kitchen:puzzle_box,
-        kitchen:yellow_cup ;
-    kitchen:hasLocation kitchen:kitchen .
+        kitchen:yellow_mug .
 
-kitchen:refrigerator kitchen:contains kitchen:bottle_of_water .
-
-kitchen:bottle_of_water kitchen:isOnTopOf kitchen:table .
-
-kitchen:box_of_Rice_Bubbles kitchen:isOnTopOf kitchen:countertop .
-
-kitchen:box_of_shortbread kitchen:isOnTopOf kitchen:countertop,
-        kitchen:table .
-
-kitchen:jar_of_jam kitchen:isOnTopOf kitchen:countertop .
-
-kitchen:kitchen kitchen:hasLocation kitchen:countertop ;
-    kitchen:needs kitchen:organizing .
-
-kitchen:mug kitchen:isOnTopOf kitchen:table .
-
-kitchen:plate kitchen:isOnTopOf kitchen:table .
-
-kitchen:puzzle_box kitchen:isOnTopOf kitchen:countertop .
-
-kitchen:yellow_cup kitchen:isOnTopOf kitchen:countertop .
-
-kitchen:table kitchen:needs kitchen:wiping .
-
-kitchen:countertop kitchen:needs kitchen:cleaning ;
-    kitchen:onTopOf kitchen:kitchen .
+kitchen:kitchen_counter kitchen:isA kitchen:Location .
 

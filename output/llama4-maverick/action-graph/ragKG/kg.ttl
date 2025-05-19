@@ -1,0 +1,110 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasWorkflow psr:Workflow_1 .
+
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction soma:PickingUp_1, soma:PuttingDown_1, soma:PickingUp_2, soma:PuttingDown_2, soma:PickingUp_3, soma:PuttingDown_3, soma:PickingUp_4, soma:PuttingDown_4, soma:PickingUp_5, soma:PuttingDown_5 .
+
+soma:PickingUp_1 a soma:PickingUp ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:Grasping_1 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows dul:Action_0 .
+
+psr:Object_1 a psr:Object ;
+    rdfs:label "red box on countertop"@en .
+
+soma:Grasping_1 a soma:Grasping .
+
+dul:Agent_1 a dul:Agent .
+
+soma:PuttingDown_1 a soma:PuttingDown ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:Releasing_1 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PickingUp_1 .
+
+soma:Releasing_1 a soma:PuttingDown .
+
+soma:PickingUp_2 a soma:PickingUp ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:Grasping_2 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PuttingDown_1 .
+
+psr:Object_2 a psr:Object ;
+    rdfs:label "blue box on countertop"@en .
+
+soma:Grasping_2 a soma:Grasping .
+
+soma:PuttingDown_2 a soma:PuttingDown ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:Releasing_2 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PickingUp_2 .
+
+soma:Releasing_2 a soma:PuttingDown .
+
+soma:PickingUp_3 a soma:PickingUp ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:Grasping_3 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PuttingDown_2 .
+
+psr:Object_3 a psr:Object ;
+    rdfs:label "yellow cup on countertop"@en .
+
+soma:Grasping_3 a soma:Grasping .
+
+soma:PuttingDown_3 a soma:PuttingDown ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:Releasing_3 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PickingUp_3 .
+
+soma:Releasing_3 a soma:PuttingDown .
+
+soma:PickingUp_4 a soma:PickingUp ;
+    psr:actsOn psr:Object_4 ;
+    psr:isAffordedBy soma:Grasping_4 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PuttingDown_3 .
+
+psr:Object_4 a psr:Object ;
+    rdfs:label "red jar on countertop"@en .
+
+soma:Grasping_4 a soma:Grasping .
+
+soma:PuttingDown_4 a soma:PuttingDown ;
+    psr:actsOn psr:Object_4 ;
+    psr:isAffordedBy soma:Releasing_4 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PickingUp_4 .
+
+soma:Releasing_4 a soma:PuttingDown .
+
+soma:PickingUp_5 a soma:PickingUp ;
+    psr:actsOn psr:Object_5 ;
+    psr:isAffordedBy soma:Grasping_5 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PuttingDown_4 .
+
+psr:Object_5 a psr:Object ;
+    rdfs:label "large bottle of water on dining table"@en .
+
+soma:Grasping_5 a soma:Grasping .
+
+soma:PuttingDown_5 a soma:PuttingDown ;
+    psr:actsOn psr:Object_5 ;
+    psr:isAffordedBy soma:Releasing_5 ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:follows soma:PickingUp_5 .
+
+soma:Releasing_5 a soma:PuttingDown .

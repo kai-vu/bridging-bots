@@ -1,101 +1,83 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psrTask-ontology#> .
+@prefix psr: <https://w3id.org/psr-task#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 
-# Defining the kitchen environment
-psr:KitchenEnvironment a psr:Environment ;
-    rdfs:label "Kitchen Environment"@en .
+psr:DarkWallCabinets a psr:Component ;
+    dul:hasLocation psr:Location_1 .
 
-# Defining components in the kitchen
-psr:KitchenCounter a psr:Component ;
-    rdfs:label "Kitchen Counter"@en ;
-    psr:hasAffordance soma:Holding .
+psr:LightMarbleCountertop a psr:Component ;
+    dul:hasLocation psr:Location_2 .
 
-psr:WhiteRefrigerator a psr:Appliance ;
-    rdfs:label "White Refrigerator"@en ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+psr:BlueFramedMirror a psr:Component ;
+    dul:hasLocation psr:Location_3 .
 
-psr:BoxOfJello a psr:Object ;
-    rdfs:label "Box of Jello"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:WhiteFridge a psr:Appliance ;
+    dul:hasLocation psr:Location_4 .
 
-psr:JarOfJam a psr:Object ;
-    rdfs:label "Jar of Jam"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:SilverSink a psr:Component ;
+    dul:hasLocation psr:Location_5 .
 
-psr:BoxOfSalt a psr:Object ;
-    rdfs:label "Box of Salt"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:ElectricStove a psr:Appliance ;
+    dul:hasLocation psr:Location_6 .
 
-psr:StackOfPlates a psr:Object ;
-    rdfs:label "Stack of Plates"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:RedBox a psr:Object ;
+    dul:hasLocation psr:Location_7 .
 
-psr:DiningTable a psr:Furniture ;
-    rdfs:label "Dining Table"@en ;
-    psr:hasAffordance soma:Holding .
+psr:BlueBox a psr:Object ;
+    dul:hasLocation psr:Location_8 .
 
-psr:BottleOfWater a psr:Object ;
-    rdfs:label "Bottle of Water"@en ;
-    dul:hasLocation psr:DiningTable .
+psr:YellowCup a psr:Object ;
+    dul:hasLocation psr:Location_9 .
 
-psr:BoxOfCrackers a psr:Object ;
-    rdfs:label "Box of Crackers"@en ;
-    dul:hasLocation psr:DiningTable .
+psr:RedJar a psr:Object ;
+    dul:hasLocation psr:Location_10 .
 
-psr:Mug a psr:Object ;
-    rdfs:label "Mug"@en ;
-    dul:hasLocation psr:DiningTable .
-
-psr:Sink a psr:Component ;
-    rdfs:label "Sink"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:StackOfWhitePlates a psr:Object ;
+    dul:hasLocation psr:Location_11 .
 
 psr:Pot a psr:Object ;
-    rdfs:label "Pot"@en ;
-    dul:hasLocation psr:KitchenCounter .
+    dul:hasLocation psr:Location_12 .
 
-psr:StoveTop a psr:Appliance ;
-    rdfs:label "Stove Top"@en ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff .
+psr:RangeHood a psr:Component ;
+    dul:hasLocation psr:Location_13 .
 
-psr:RangeHood a psr:Appliance ;
-    rdfs:label "Range Hood"@en ;
-    dul:hasLocation psr:StoveTop .
+psr:BrownWoodenDiningTable a psr:Furniture ;
+    dul:hasLocation psr:Location_14 .
 
-psr:BoxOfChuckyCereal a psr:Object ;
-    rdfs:label "Box of Chucky Cereal"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:WhiteChairs a psr:Furniture ;
+    dul:hasLocation psr:Location_15 .
 
-psr:BoxOfRiceBubbles a psr:Object ;
-    rdfs:label "Box of Rice Bubbles"@en ;
-    dul:hasLocation psr:KitchenCounter .
+psr:LargeBottleOfWater a psr:Object ;
+    dul:hasLocation psr:Location_16 .
 
-psr:WineGlass a psr:Object ;
-    rdfs:label "Wine Glass"@en ;
-    dul:hasLocation psr:DiningTable .
+psr:BoxOnTable a psr:Object ;
+    dul:hasLocation psr:Location_17 .
 
-# Defining locations and relations
-psr:KitchenCounterLocation a soma:Location ;
-    geo:sfWithin psr:KitchenEnvironment .
+psr:Mug a psr:Object ;
+    dul:hasLocation psr:Location_18 .
 
-psr:DiningTableLocation a soma:Location ;
-    geo:sfWithin psr:KitchenEnvironment .
+psr:WhiteDoor a psr:Component ;
+    dul:hasLocation psr:Location_19 .
 
-psr:WhiteRefrigerator dul:hasLocation psr:KitchenCounterLocation .
-psr:DiningTable dul:hasLocation psr:DiningTableLocation .
-
-# Relations between components and their locations
-psr:KitchenCounter dul:hasComponent psr:BoxOfJello, psr:JarOfJam, psr:BoxOfSalt, psr:StackOfPlates .
-psr:DiningTable dul:hasComponent psr:BottleOfWater, psr:BoxOfCrackers, psr:Mug, psr:WineGlass .
-
-# Spatial relations
-psr:WhiteRefrigerator geo:sfWithin psr:KitchenEnvironment .
-psr:DiningTable geo:sfWithin psr:KitchenEnvironment .
-psr:Sink geo:sfWithin psr:KitchenCounter .
-psr:Pot geo:sfWithin psr:KitchenCounter .
-psr:StoveTop geo:sfWithin psr:KitchenCounter .
-psr:RangeHood geo:sfWithin psr:StoveTop .
+psr:Location_1 geo:sfOverlaps psr:LightMarbleCountertop .
+psr:Location_3 geo:sfBetween psr:DarkWallCabinets, psr:DarkWallCabinets .
+psr:WhiteFridge geo:sfWithin psr:Location_4 .
+psr:SilverSink dul:hasLocation psr:LightMarbleCountertop .
+psr:ElectricStove dul:hasLocation psr:LightMarbleCountertop .
+psr:RedBox dul:hasLocation psr:LightMarbleCountertop .
+psr:BlueBox dul:hasLocation psr:LightMarbleCountertop .
+psr:YellowCup dul:hasLocation psr:LightMarbleCountertop .
+psr:RedJar dul:hasLocation psr:LightMarbleCountertop .
+psr:StackOfWhitePlates dul:hasLocation psr:LightMarbleCountertop .
+psr:Pot dul:hasLocation psr:ElectricStove .
+psr:RangeHood dul:hasLocation psr:Location_13 .
+psr:Location_13 psr:onTopOf psr:ElectricStove .
+psr:BrownWoodenDiningTable dul:hasLocation psr:Location_14 .
+psr:WhiteChairs dul:hasLocation psr:Location_15 .
+psr:LargeBottleOfWater dul:hasLocation psr:BrownWoodenDiningTable .
+psr:BoxOnTable dul:hasLocation psr:BrownWoodenDiningTable .
+psr:Mug dul:hasLocation psr:BrownWoodenDiningTable .
+psr:WhiteDoor geo:sfWithin psr:Location_19 .

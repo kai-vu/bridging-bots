@@ -3,161 +3,143 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psrTask-ontology#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
 
-# Define the environment as a composite environment including kitchen and dining areas
-psr:KitchenEnvironment a owl:Class, psr:Environment ;
+# Define environment
+psr:KitchenEnvironment a psr:Environment ;
     rdfs:label "Kitchen Environment"@en .
-
-psr:DiningArea a owl:Class, psr:Environment ;
-    rdfs:label "Dining Area"@en .
-
-psr:MainEnvironment a owl:Class, psr:Environment ;
-    rdfs:label "Main Environment"@en .
-
-# Instances of environments
-:KitchenInstance a psr:Environment ;
-    rdfs:label "Kitchen"@en ;
-    rdfs:comment "The kitchen area with cabinets and appliances."@en .
-
-:DiningInstance a psr:Environment ;
-    rdfs:label "Dining Area"@en ;
-    rdfs:comment "The dining area with table and chairs."@en .
-
-# Main environment contains kitchen and dining areas
-:MainEnv a psr:Environment ;
-    rdfs:label "Main Environment"@en ;
-    dul:hasComponent :KitchenInstance ;
-    dul:hasComponent :DiningInstance .
+psr:DiningAreaEnvironment a psr:Environment ;
+    rdfs:label "Dining Area Environment"@en .
 
 # Components in the environment
+psr:KitchenCabinet a psr:Appliance ;
+    rdfs:label "Kitchen Cabinet"@en .
 
-# Kitchen components
-:LowerCabinets a psr:Component ;
-    rdfs:label "Lower Cabinets"@en .
+psr:MarbleCountertop a psr:Furniture ;
+    rdfs:label "Marble Countertop"@en .
 
-:UpperCabinets a psr:Component ;
-    rdfs:label "Wall-mounted Upper Cabinets"@en .
+psr:FoodItems a psr:Object ;
+    rdfs:label "Food Items"@en .
 
-:CountertopShelf a psr:Component ;
-    rdfs:label "Countertop Shelf"@en .
+psr:PlateStack a psr:Object ;
+    rdfs:label "Stack of Plates"@en .
 
-:JarStrawberryJam a psr:Object ;
-    rdfs:label "Jar of Strawberry Jam"@en .
+psr:JELLOBox a psr:Object ;
+    rdfs:label "Box of JELLO"@en .
 
-:JelloBox a psr:Object ;
-    rdfs:label "Box of Jello"@en .
+psr:RiceBubblesCarton a psr:Object ;
+    rdfs:label "Carton of Rice Bubbles"@en .
 
-:AlpenSalzCarton a psr:Object ;
-    rdfs:label "Carton of Alpen Salz"@en .
+psr:StrawberryJamContainer a psr:Object ;
+    rdfs:label "Container of Strawberry Jam"@en .
 
-:WhiteFridge a psr:Appliance ;
-    rdfs:label "White Fridge"@en .
+psr:StrawberryJamRedWhite a psr:Object ;
+    rdfs:label "Red and White Strawberry Jam Container"@en .
 
-:WhiteWall a psr:Object ;
-    rdfs:label "White Wall"@en .
+psr:AlpenSaltBox a psr:Object ;
+    rdfs:label "Box of Alpen Salz"@en .
 
-:KitchenCountertop a psr:Object ;
-    rdfs:label "Kitchen Countertop"@en .
+psr:BonneMamanJar a psr:Object ;
+    rdfs:label "Jar of Bonne Maman Strawberry Preserves"@en .
 
-# Assign components to environment
-:KitchenInstance dul:hasComponent :LowerCabinets .
-:KitchenInstance dul:hasComponent :UpperCabinets .
-:KitchenInstance dul:hasComponent :CountertopShelf .
-:KitchenInstance dul:hasComponent :WhiteFridge .
+psr:Refrigerator a psr:Appliance ;
+    rdfs:label "White Refrigerator"@en .
 
-# Components within the kitchen environment
-:LowerCabinets dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
-:UpperCabinets dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
+psr:WallMountedVent a psr:Object ;
+    rdfs:label "Overhead Wooden Vent"@en .
 
-:CountertopShelf dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
-
-# Items on the countertop shelf
-:StrawberryJamShelf a psr:Object ;
-    rdfs:label "Shelf with Strawberry Jam"@en .
-
-:StrawberryJam a psr:Object ;
-    rdfs:label "Jar of Strawberry Jam"@en .
-
-:JelloShelf a psr:Object ;
-    rdfs:label "Shelf with Jello"@en .
-
-:JelloBoxInstance a psr:Object ;
-    rdfs:label "Box of Jello"@en .
-
-:AlpenSaltShelf a psr:Object ;
-    rdfs:label "Shelf with Alpen Salz"@en .
-
-:AlpenSalzCartonInstance a psr:Object ;
-    rdfs:label "Carton of Alpen Salz"@en .
-
-# Position of items on shelves
-:StrawberryJam dul:hasLocation [ geo:sfContains :StrawberryJamShelf ] .
-:JelloBox a psr:Object ;
-    rdfs:label "Box of Jello"@en .
-:JelloBox dul:hasLocation [ geo:sfContains :JelloShelf ] .
-
-:AlpenSalzCarton a psr:Object ;
-    rdfs:label "Carton of Alpen Salz"@en .
-:AlpenSalzCarton dul:hasLocation [ geo:sfContains :AlpenSaltShelf ] .
-
-# Fridge and wall
-:WhiteFridge dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
-:WhiteWall dul:hasLocation [ geo:sfContains :WhiteWall ] .
-
-# Dining components
-:WoodenTable a psr:Component ;
+psr:DiningTable a psr:Furniture ;
     rdfs:label "Wooden Dining Table"@en .
 
-:FurnitureChair a psr:Furniture ;
-    rdfs:label "White Chair"@en .
-
-:TableInstance a psr:Object ;
-    rdfs:label "Dining Table"@en .
-
-:ChairInstance a psr:Furniture ;
-    rdfs:label "White Tall-Back Chairs"@en .
-
-:Fruits a psr:Object ;
-    rdfs:label "Fruits"@en .
-
-:WhitePitcher a psr:Object ;
-    rdfs:label "White Pitcher"@en .
-
-:WineGlass a psr:Object ;
-    rdfs:label "Small Glass of Wine"@en .
-
-:BottleEvian a psr:Object ;
+psr:EvianBottle a psr:Object ;
     rdfs:label "Bottle of Evian Water"@en .
 
-:ShortbreadBox a psr:Object ;
-    rdfs:label "Box of Shortbread"@en .
+psr:DiningBoxRiceBubbles a psr:Object ;
+    rdfs:label "Box of Rice Bubbles"@en .
 
-# Assign dining components to environment
-:DiningInstance dul:hasComponent :TableInstance .
-:TableInstance dul:hasComponent :Fruits, :WhitePitcher, :WineGlass .
-:TableInstance dul:hasLocation [ geo:sfContains :Fruits ] .
-:TableInstance dul:hasLocation [ geo:sfContains :WhitePitcher ] .
-:TableInstance dul:hasLocation [ geo:sfContains :WineGlass ] .
+psr:JamJar a psr:Object ;
+    rdfs:label "Jar of Jam"@en .
 
-:ChairInstance a psr:Furniture ;
-    rdfs:label "White Chairs with Tall Backs"@en .
+psr:OrangeMug a psr:Object ;
+    rdfs:label "Orange Ceramic Mug"@en .
 
-# Kitchen countertop items
-:EvianBottle a psr:Object ;
+psr:WineGlass a psr:Object ;
+    rdfs:label "Wine Glass"@en .
+
+psr:WhitePitcher a psr:Object ;
+    rdfs:label "Large White Pitcher"@en .
+
+# Locations
+psr:LeftSide of the environment a psr:Location ;
+    rdfs:label "Left Side"@en .
+
+psr:CornerPosition a psr:Location ;
+    rdfs:label "Corner Position"@en .
+
+psr:AgainstWhiteWall a psr:Location ;
+    rdfs:label "Against White Wall"@en .
+
+psr:WallMeetingCorner a psr:Location ;
+    rdfs:label "Wall Meeting Corner"@en .
+
+psr:PositionNearWall a psr:Location ;
+    rdfs:label "Position Near Wall"@en .
+
+psr:PositionAgainstWall a psr:Location ;
+    rdfs:label "Position Against Wall"@en .
+
+# Relations establishing environment components
+psr:hasComponent psr:KitchenEnvironment psr:KitchenCabinet, psr:MarbleCountertop, psr:Refrigerator, psr:WallMountedVent, psr:DiningTable, psr:WhitePitcher, psr:EvianBottle, psr:DiningBoxRiceBubbles, psr:JamJar, psr:OrangeMug, psr:WineGlass .
+
+# Food items on the marble countertop
+geo:sfContains psr:MarbleCountertop psr:PlateStack, psr:JELLOBox, psr:RiceBubblesCarton, psr:StrawberryJamContainer .
+
+# Specific food containers
+geo:sfContains psr:StrawberryJamContainer psr:StrawberryJamRedWhite .
+geo:sfContains psr:StrawberryJamContainer psr:AlpenSaltBox .
+geo:sfContains psr:StrawberryJamContainer psr:BonneMamanJar .
+
+# Refrigerator location
+dul:hasLocation psr:Refrigerator psr:CornerPosition .
+
+# Vent mounted above the countertop
+dul:hasLocation psr:WallMountedVent psr:PositionNearWall .
+
+# Dining area Components
+psr:DiningTable a psr:Furniture ;
+    rdfs:label "Wooden Dining Table"@en .
+
+psr:BottleEvian a psr:Object ;
     rdfs:label "Bottle of Evian Water"@en .
 
-:Shortbread a psr:Object ;
-    rdfs:label "Small Box of Shortbread"@en .
+psr:BoxRiceBubbles a psr:Object ;
+    rdfs:label "Box of Rice Bubbles"@en .
 
-# Items on the kitchen countertop in the third and fourth images
-:KitchenCounterItems a psr:Object ;
-    rdfs:label "Items on Kitchen Counter"@en .
+psr:JamJarObject a psr:Object ;
+    rdfs:label "Jar of Jam"@en .
 
-:EvianBottle dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
-:Shortbread dul:hasLocation [ geo:sfContains :KitchenCountertop ] .
+psr:OrangeCeramicMug a psr:Object ;
+    rdfs:label "Orange Ceramic Mug"@en .
 
-# Summary relations
-:MainEnv dul:hasComponent :KitchenInstance, :DiningInstance .
+psr:WineGlassObject a psr:Object ;
+    rdfs:label "Wine Glass"@en .
 
-# Note: All other relations such as 'on top of', 'contains', 'is within' are assigned via the 'geo:sfContains' relations to represent spatial containment within the environment.
+psr:LargeWhitePitcher a psr:Object ;
+    rdfs:label "Large White Pitcher"@en .
+
+# Positions of objects relative to the environment
+geo:sfWithin psr:EvianBottle psr:PositionNearWall .
+geo:sfWithin psr:BoxRiceBubbles psr:PositionNearWall .
+geo:sfWithin psr:JamJar psr:PositionNearWall .
+geo:sfWithin psr:OrangeMug psr:PositionNearWall .
+geo:sfWithin psr:WineGlass psr:PositionNearWall .
+geo:sfWithin psr:WhitePitcher psr:PositionNearWall .
+
+# Objects on the dining table
+geo:sfContains psr:DiningTable psr:EvianBottle, psr:BoxRiceBubbles, psr:JamJarObject, psr:OrangeCeramicMug, psr:WineGlassObject, psr:LargeWhitePitcher .
+
+# Additional possible spatial relations (example)
+# Assuming positions, these can be further detailed if needed, e.g.,
+# geo:sfOverlaps or geo:sfContains between objects and relative positions.
+
+# Note: The specific spatial relations between all objects are context-dependent and can be elaborated further if more detailed positional data is provided.

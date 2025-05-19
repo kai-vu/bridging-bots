@@ -1,75 +1,85 @@
-@prefix ex: <http://example.org/> .
-@prefix env: <http://example.org/environment/> .
-@prefix furniture: <http://example.org/furniture/> .
-@prefix material: <http://example.org/material/> .
-@prefix contents: <http://example.org/contents/> .
-@prefix furnitureType: <http://example.org/furnitureType/> .
-@prefix item: <http://example.org/item/> .
+@prefix env: <http://www.semanticdesktop.org/ontologies/environment#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-env:Environment a env:Environment ;
-    env:hasPart env:kitchen, env:diningArea .
+env:Environment a env:PhysicalEnvironment ;
+    env:hasPart env:Kitchen, env:DiningArea, env:Floor, env:Walls, env:Ceiling .
 
-env:kitchen a env:Kitchen ;
-    env:hasFeature env:lowerCabinets, env:upperCabinets, env:countertop, env:window .
+env:Kitchen a env:Room ;
+    env:hasFeature env:AdjacentToDiningArea ;
+    env:contains env:KitchenCabinet, env:Countertop, env:Refrigerator, env:OverheadVent .
 
-env:lowerCabinets a furniture:Cabinet ;
-    furniture:hasColor "dark" ;
-    furniture:hasHandleType "vertical" .
+env:DiningArea a env:Room ;
+    env:hasFeature env:AdjacentToKitchen ;
+    env:contains env:Table .
 
-env:upperCabinets a furniture:Cabinet ;
-    furniture:hasLocation "wall-mounted" .
+env:Floor a env:FloorMaterial ;
+    env:hasColor "dark brown" .
 
-env:countertop a furniture:Countertop ;
-    contents:hasItem item:jarOfStrawberryJam, item:JelloBox, item:AlpenSaltCarton, item:smallItems .
+env:Walls a env:Wall ;
+    env:hasColor "white" .
 
-item:jarOfStrawberryJam a contents:SmallItem ;
-    contents:hasName "jar of strawberry jam" .
+env:Ceiling a env:Ceiling ;
+    env:hasLighting env:CeilingLights .
 
-item:JelloBox a contents:SmallItem ;
-    contents:hasName "box of Jello" .
+env:KitchenCabinet a env:Furnishing ;
+    env:hasColor "black" .
 
-item:AlpenSaltCarton a contents:SmallItem ;
-    contents:hasName "carton of Alpen Salz" .
+env:Countertop a env:Counter ;
+    env:hasMaterial env:Marble ;
+    env:hasColor "beige" ;
+    env:contains env:FoodItems .
 
-env:diningArea a env:DiningArea ;
-    env:hasFurniture env:woodenTable, env:whiteChairs ;
-    env:hasItems env:largeBottleEvian, env:boxShortbread, env:smallGlassWine, env:whitePitcher, env:fruits .
+env:FoodItems a env:Food ;
+    env:includes env:WhitePlates, env:JELLO, env:RiceBubbles, env:StrawberryJam .
 
-env:woodenTable a furniture:Table ;
-    furniture:hasMaterial "wood" .
+env:WhitePlates a env:FoodItem ;
+    env:hasColor "white" .
 
-env:whiteChairs a furniture:Chair ;
-    furniture:hasColor "white" ;
-    furniture:hasBackHeight "tall" .
+env:JELLO a env:FoodItem .
 
-env:largeBottleEvian a contents:Item ;
-    contents:hasName "large bottle of Evian water" .
+env:RiceBubbles a env:FoodItem .
 
-env:boxShortbread a contents:Item ;
-    contents:hasName "box of shortbread" .
+env:StrawberryJam a env:FoodItem ;
+    env:hasBrand env:BonneMaman .
 
-env:smallGlassWine a contents:Item ;
-    contents:hasName "small glass of wine" .
+env:BonneMaman a env:Brand .
 
-env:whitePitcher a contents:Item ;
-    contents:hasName "white pitcher" .
+env:Refrigerator a env:Appliance ;
+    env:locatedAt env:Corner .
 
-env:fruits a contents:Item ;
-    contents:hasName "fruits" .
+env:OverheadVent a env:Vent ;
+    env:mountedOn env:Wall .
 
-env:kitchenWiderView a env:KitchenView ;
-    env:hasCountertop env:countertop ;
-    env:hasCabinets env:lowerCabinets ;
-    env:hasWall env:whiteWall .
+env:Table a env:Furnishing ;
+    env:hasShape env:Rectangle ;
+    env:hasMaterial env:Wood ;
+    env:hasColor "light wood" ;
+    env:contains env:TableContents .
 
-env:countertop a furniture:Countertop ;
-    contents:hasItem item:jarOfStrawberryJam, item:JelloBox, item:AlpenSaltCarton, item:smallItems .
+env:TableContents a env:Contents ;
+    env:includes env:BottleEvian, env:BoxRiceBubbles, env:JarJam, env:OrangeMug, env:WineGlass, env:WhitePitcher .
 
-env:window a env:Window ;
-    env:hasFrameMaterial "wood" .
+env:BottleEvian a env:Container ;
+    env:hasBrand "Evian" .
 
-env:overallEnvironment a env:Environment ;
-    env:hasPart env:kitchen, env:diningArea ;
-    env:hasColorPalette "neutral" ;
-    env:hasMaterials "wood" , "dark" , "white" ;
-    env:hasContents "food" , "household items" .
+env:BoxRiceBubbles a env:Container ;
+    env:hasBrand "Rice Bubbles" .
+
+env:JarJam a env:Container ;
+    env:hasBrand env:BonneMaman .
+
+env:OrangeMug a env:Container ;
+    env:hasColor "orange" .
+
+env:WineGlass a env:Container ;
+    env:hasShape env:Cylinder .
+
+env:WhitePitcher a env:Container ;
+    env:hasShape env:Cylinder .
+
+@prefix env: <http://www.semanticdesktop.org/ontologies/environment#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# The above triples describe the environment, including the kitchen, dining area, objects, and their attributes within the environment as per the given description.
