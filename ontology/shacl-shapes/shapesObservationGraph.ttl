@@ -1,0 +1,50 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+# ENVIRONMENT SHAPE
+psr:EnvironmentShape a sh:NodeShape ;
+    sh:targetClass psr:Environment ;
+    sh:property [
+        sh:path dul:hasComponent ;
+        sh:class psr:Component ;
+        sh:minCount 1 ;
+    ] .
+
+# COMPONENT SHAPE
+psr:ComponentShape a sh:NodeShape ;
+    sh:targetClass psr:Component ;
+    sh:property [
+        sh:path psr:hasAffordance ;
+        sh:class psr:Affordance ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path psr:hasLocation ;
+        sh:class psr:Location ;
+        sh:minCount 1 ;
+    ] .
+
+# LOCATION SHAPE
+psr:LocationShape a sh:NodeShape ;
+    sh:targetClass psr:Location ;
+    sh:property [
+        sh:path psr:onTopOf ;
+        sh:class psr:Component ;
+    ] ;
+    sh:property [
+        sh:path geo:sfContains ;
+        sh:class psr:Component ;
+    ] ;
+    sh:property [
+        sh:path geo:sfWithin ;
+        sh:class psr:Component ;
+    ] ;
+    sh:property [
+        sh:path geo:sfOverlaps ;
+        sh:class psr:Component ;
+    ] .
+

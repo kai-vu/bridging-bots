@@ -7,80 +7,80 @@
 
 psr:Environment1 a psr:Environment ;
     rdfs:label "Kitchen Environment"@en ;
-    dul:hasComponent psr:Fridge, psr:Table, psr:Wall ;
+    dul:hasComponent psr:Fridge, psr:Table, psr:Wall .
 
 psr:Fridge a psr:Object, psr:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation psr:Location1 ;
-    psr:hasAffordance psr:Closing, psr:Delivering ;
+    psr:hasAffordance psr:Closing, psr:Delivering .
 
 psr:Location1 a soma:Location ;
     geo:sfContains psr:Fridge ;
-    rdfs:label "Location of Fridge"@en ;
+    rdfs:label "Location of Fridge"@en .
 
 psr:Table a psr:Furniture ;
     rdfs:label "Kitchen Table"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasComponent psr:Object1, psr:Object2, psr:Object3, psr:Object4, psr:Object5, psr:Object6, psr:Object7, psr:Object8, psr:Object9, psr:Object10, psr:Object11, psr:Object12 ;
+    psr:hasComponent psr:Object1, psr:Object2, psr:Object3, psr:Object4, psr:Object5, psr:Object6, psr:Object7, psr:Object8, psr:Object9, psr:Object10, psr:Object11, psr:Object12 .
 
 psr:Location2 a soma:Location ;
     geo:sfContains psr:Table ;
-    rdfs:label "Location of Table"@en ;
+    rdfs:label "Location of Table"@en .
 
 psr:Object1 a psr:Object ;
     rdfs:label "Box of Rice Bubbles"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:PickingUp, psr:PuttingDown .
 
 psr:Object2 a psr:Object ;
     rdfs:label "Box of Shortbread"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:PickingUp, psr:PuttingDown .
 
 psr:Object3 a psr:Object ;
     rdfs:label "Jug"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;
+    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown .
 
 psr:Object4 a psr:Object ;
     rdfs:label "Water Bottle"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;
+    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown .
 
 psr:Object5 a psr:Object ;
     rdfs:label "Plate"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown .
 
 psr:Object6 a psr:Object ;
     rdfs:label "Bowl"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:Pushing, psr:PickingUp, psr:PuttingDown .
 
 psr:Object7 a psr:Object ;
     rdfs:label "Glass"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;
+    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown .
 
 psr:Object8 a psr:Object ;
     rdfs:label "Fruits Basket"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Holding, psr:PuttingDown ;
+    psr:hasAffordance psr:Holding, psr:PuttingDown .
 
 psr:Object9 a psr:Object ;
     rdfs:label "Cup"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown ;
+    psr:hasAffordance psr:Grasping, psr:Holding, psr:PuttingDown .
 
 psr:Object10 a psr:Object ;
     rdfs:label "Food Pack"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:PickingUp, psr:PuttingDown .
 
 psr:Object11 a psr:Object ;
     rdfs:label "Cereal Box"@en ;
     dul:hasLocation psr:Location2 ;
-    psr:hasAffordance psr:PickingUp, psr:PuttingDown ;
+    psr:hasAffordance psr:PickingUp, psr:PuttingDown .
 
 psr:Object12 a psr:Object ;
     rdfs:label "Candy"@en ;

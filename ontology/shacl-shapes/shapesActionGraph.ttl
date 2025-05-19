@@ -1,0 +1,56 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+# INSTRUCTION SHAPE
+psr:InstructionShape a sh:NodeShape ;
+    sh:targetClass psr:Instruction ;
+    sh:property [
+        sh:path psr:hasWorkflow ;
+        sh:class psr:Workflow ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path psr:hasNaturalLanguage ;
+        sh:minCount 1 ;
+    ] .
+
+# WORKFLOW SHAPE
+psr:WorkflowShape a sh:NodeShape ;
+    sh:targetClass psr:Workflow ;
+    sh:property [
+        sh:path psr:hasAction ;
+        sh:class dul:Action ;
+        sh:minCount 1 ;
+    ] .
+
+# ACTION SHAPE
+psr:ActionShape a sh:NodeShape ;
+    sh:targetClass dul:Action ;
+    sh:or (
+        [ sh:property [
+            sh:path dul:precedes ;
+            sh:minCount 1 ;
+        ] ]
+        [ sh:property [
+            sh:path dul:follows ;
+            sh:minCount 1 ;
+        ] ]
+    ) ;
+    sh:property [
+        sh:path soma:isPerformedBy ;
+        sh:class dul:Agent ;
+    ] ;
+    sh:property [
+        sh:path psr:isAffordedBy ;
+        sh:class psr:Affordance ;
+    ] ;
+    sh:property [
+        sh:path psr:actsOn ;
+        sh:class psr:Component ;
+        sh:minCount 1 ;
+    ] .
+
