@@ -1,0 +1,87 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:RestoreKitchenToOrganizedState a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically." ;
+    psr:hasWorkflow psr:Workflow_RestoreKitchen .
+
+psr:Workflow_RestoreKitchen a psr:Workflow ;
+    psr:hasAction dul:Action_IdentifyMisplacedItems ;
+    psr:hasAction dul:Action_ReturnItemsToStorage ;
+    dul:hasAction dul:Action_PrioritizeActions .
+
+dul:Action_IdentifyMisplacedItems a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot ;
+    psr:actsOn psr:Component_CountertopItems ;
+    psr:actsOn psr:Component_DiningTableItems ;
+    psr:follows dul:Action_PrioritizeActions .
+
+dul:Action_ReturnItemsToStorage a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot ;
+    psr:actsOn psr:Component_CountertopItems ;
+    psr:actsOn psr:Component_DiningTableItems ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes dul:Action_PrioritizeActions .
+
+dul:Action_PrioritizeActions a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot .
+
+psr:Component_CountertopItems a psr:Component ;
+    rdfs:label "Countertop Items" .
+
+psr:Component_DiningTableItems a psr:Component ;
+    rdfs:label "Dining Table Items" .
+
+dul:Agent_Robot a dul:Agent ;
+    rdfs:label "Robot" .
+
+soma:PuttingDown a soma:PuttingDown ;
+    rdfs:label "Putting Down" .
+
+psr:Component_CountertopItems psr:hasAffordance soma:PickingUp .
+
+psr:Component_DiningTableItems psr:hasAffordance soma:PickingUp .
+
+# defining the items
+psr:Object_BoxOfJello a psr:Object ;
+    rdfs:label "Box of Jello" .
+
+psr:Object_BoxOfCrackers a psr:Object ;
+    rdfs:label "Box of Crackers" .
+
+psr:Object_JarOfJam a psr:Object ;
+    rdfs:label "Jar of Jam" .
+
+psr:Object_BottleOfWater a psr:Object ;
+    rdfs:label "Bottle of Water" .
+
+psr:Object_Jug a psr:Object ;
+    rdfs:label "Jug" .
+
+psr:Object_StackOfPlates a psr:Object ;
+    rdfs:label "Stack of Plates" .
+
+# defining the affordance relationships for the objects
+psr:Object_BoxOfJello psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .
+
+psr:Object_BoxOfCrackers psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .
+
+psr:Object_JarOfJam psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .
+
+psr:Object_BottleOfWater psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .
+
+psr:Object_Jug psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .
+
+psr:Object_StackOfPlates psr:hasAffordance soma:PickingUp ;
+    psr:hasAffordance soma:PuttingDown .

@@ -1,0 +1,29 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:kitchen kitchen:hasComponent kitchen:carton_of_eggs,
+        kitchen:countertop,
+        kitchen:door,
+        kitchen:fridge,
+        kitchen:microwave,
+        kitchen:oven,
+        kitchen:pack_of_groceries,
+        kitchen:sink ;
+    kitchen:hasLocation kitchen:another_room,
+        kitchen:dining_table .
+
+kitchen:cabinets kitchen:sfAbove kitchen:countertop .
+
+kitchen:dining_table kitchen:hasComponent kitchen:bottle,
+        kitchen:chair ;
+    kitchen:sfUnder kitchen:light_fixture .
+
+kitchen:faucet kitchen:sfAbove kitchen:sink .
+
+kitchen:fridge kitchen:hasComponent kitchen:glass_shelf .
+
+kitchen:countertop kitchen:hasComponent kitchen:cabinets,
+        kitchen:cups_of_coffee,
+        kitchen:snacks .
+
+kitchen:sink kitchen:hasComponent kitchen:faucet .
+

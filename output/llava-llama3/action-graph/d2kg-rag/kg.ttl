@@ -1,0 +1,99 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:task1 a dul:Action ;
+    rdfs:label "Identify misplaced items" ;
+    psr:actsOn :kitchen .
+
+:kitchen a psr:Component ;
+    rdfs:label "Kitchen" .
+
+:task2 a dul:Action ;
+    rdfs:label "Pick up cups of coffee" ;
+    psr:actsOn :cups_of_coffee ;
+    psr:isAffordedBy soma:PickingUp .
+
+:cups_of_coffee a psr:Component ;
+    rdfs:label "Cups of coffee" .
+
+:task3 a dul:Action ;
+    rdfs:label "Put down cups of coffee" ;
+    psr:actsOn :cups_of_coffee ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task2 .
+
+:task4 a dul:Action ;
+    rdfs:label "Pick up snacks" ;
+    psr:actsOn :snacks ;
+    psr:isAffordedBy soma:PickingUp .
+
+:snacks a psr:Component ;
+    rdfs:label "Snacks" .
+
+:task5 a dul:Action ;
+    rdfs:label "Put down snacks" ;
+    psr:actsOn :snacks ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task4 .
+
+:task6 a dul:Action ;
+    rdfs:label "Pick up carton of eggs" ;
+    psr:actsOn :carton_of_eggs ;
+    psr:isAffordedBy soma:PickingUp .
+
+:carton_of_eggs a psr:Component ;
+    rdfs:label "Carton of eggs" .
+
+:task7 a dul:Action ;
+    rdfs:label "Put down carton of eggs" ;
+    psr:actsOn :carton_of_eggs ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task6 .
+
+:task8 a dul:Action ;
+    rdfs:label "Pick up pack of groceries" ;
+    psr:actsOn :pack_of_groceries ;
+    psr:isAffordedBy soma:PickingUp .
+
+:pack_of_groceries a psr:Component ;
+    rdfs:label "Pack of groceries" .
+
+:task9 a dul:Action ;
+    rdfs:label "Put down pack of groceries" ;
+    psr:actsOn :pack_of_groceries ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task8 .
+
+:task10 a dul:Action ;
+    rdfs:label "Pick up bottle" ;
+    psr:actsOn :bottle ;
+    psr:isAffordedBy soma:PickingUp .
+
+:bottle a psr:Component ;
+    rdfs:label "Bottle" .
+
+:task11 a dul:Action ;
+    rdfs:label "Put down bottle" ;
+    psr:actsOn :bottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task10 .
+
+:workflow1 a psr:Workflow ;
+    psr:hasAction :task1 ;
+    psr:hasAction :task2 ;
+    psr:hasAction :task3 ;
+    psr:hasAction :task4 ;
+    psr:hasAction :task5 ;
+    psr:hasAction :task6 ;
+    psr:hasAction :task7 ;
+    psr:hasAction :task8 ;
+    psr:hasAction :task9 ;
+    psr:hasAction :task10 ;
+    psr:hasAction :task11 .
+
+:instruction1 a psr:Instruction ;
+    psr:hasWorkflow :workflow1 .

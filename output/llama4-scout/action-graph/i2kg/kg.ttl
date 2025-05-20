@@ -1,0 +1,75 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+### Instances
+psr:Restore_Kitchen a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+
+psr:Restore_Kitchen_Workflow a psr:Workflow .
+
+### Actions
+psr:Pick_Up_Appliance_1 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Evian_Bottle .
+
+psr:Pick_Up_Appliance_2 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Alpen_Salt .
+
+psr:Pick_Up_Appliance_3 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Jello .
+
+psr:Pick_Up_Appliance_4 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Shortbread .
+
+psr:Pick_Up_Appliance_5 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Chucky_Puzzle .
+
+psr:Place_Appliance_1 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Evian_Bottle .
+
+psr:Place_Appliance_2 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Alpen_Salt .
+
+psr:Place_Appliance_3 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Jello .
+
+psr:Place_Appliance_4 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Chocolate_Cake_Shortbread .
+
+psr:Place_Appliance_5 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn <https://w3id.org/psr-task#>psr:Man_Marmalade .
+
+### Workflow
+psr:Restore_Kitchen_Workflow
+  psr:hasAction psr:Pick_Up_Appliance_1 ;
+  psr:hasAction psr:Pick_Up_Appliance_2 ;
+  psr:hasAction psr:Pick_Up_Appliance_3 ;
+  psr:hasAction psr:Pick_Up_Appliance_4 ;
+  psr:hasAction psr:Pick_Up_Appliance_5 ;
+  psr:hasAction psr:Place_Appliance_1 ;
+  psr:hasAction psr:Place_Appliance_2 ;
+  psr:hasAction psr:Place_Appliance_3 ;
+  psr:hasAction psr:Place_Appliance_4 ;
+  psr:hasAction psr:Place_Appliance_5 .
+
+### Relations
+psr:Pick_Up_Appliance_1 psr:precedes psr:Place_Appliance_1 .
+psr:Pick_Up_Appliance_2 psr:precedes psr:Place_Appliance_2 .
+psr:Pick_Up_Appliance_3 psr:precedes psr:Place_Appliance_3 .
+psr:Pick_Up_Appliance_4 psr:precedes psr:Place_Appliance_4 .
+psr:Pick_Up_Appliance_5 psr:precedes psr:Place_Appliance_5 .

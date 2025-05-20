@@ -1,0 +1,45 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix psr: <https://www.w3.org/2002/07/owl#> .
+@prefix dul: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Environment Classes and Instances
+:Environment a geo:Environment ;
+  geo:name "Kitchen"@en .
+
+# Component Classes and Instances
+:Component a psr:Component ;
+  psr:hasAffordance :Opening ;
+  psr:isIn geo:contains ;
+  psr:name "Cabinet"@en ;
+    psr:hasLocation :Kitchen ;
+  psr:isIn geo:overlaps .
+
+# Location Classes and Instances
+:Location a dul:Location ;
+  dul:name "Corner"@en ;
+    dul:onTopOf :Cabinet ;
+  dul:name "Under Shelf"@en ;
+    dul:isWithin geo:contains .
+
+# Affordance Classes and Instances
+:Affordance a psr:Affordance ;
+  psr:name "Opening"@en ;
+  psr:isIn geo:overlaps .
+
+# Standard Location Classes and Instances
+:StandardLocation a dul:Location ;
+  dul:name "Countertop"@en ;
+    dul:isWithin geo:contains .
+
+# Object Classes and Instances
+:Object a geo:Object ;
+  geo:name "Cupboard"@en ;
+    geo:hasLocation :Corner ;
+  geo:name "Sink"@en ;
+    geo:hasLocation :Under Shelf ;
+  geo:isOnTopOf :Cabinet .
+
+# Relationships and Affordances
+dul:overlaps :Object :Cabinet .

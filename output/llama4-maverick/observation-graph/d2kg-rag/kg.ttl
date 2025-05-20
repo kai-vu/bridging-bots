@@ -1,0 +1,70 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:BlackKitchenCabinets a psr:Component ;
+    psr:hasAffordance soma:Opening .
+
+psr:SilverHandles a psr:Component .
+
+psr:WhiteRefrigerator a psr:Appliance ;
+    dul:hasLocation psr:LeftOfDiningTable .
+
+psr:MarbleCountertop a psr:Component .
+
+psr:KitchenSink a psr:Component .
+
+psr:ElectricStove a psr:Appliance ;
+    dul:hasLocation psr:NextToSink .
+
+psr:WoodenRangeHood a psr:Component ;
+    dul:hasLocation psr:AboveElectricStove .
+
+psr:WhiteWalls a psr:Component .
+
+psr:BrownParquetFlooring a psr:Component .
+
+psr:RoundCeilingLight a psr:Component .
+
+psr:WoodenDiningTable a psr:Component .
+
+psr:WhiteChairs a psr:Component .
+
+psr:BoxOfJello a psr:Object ;
+    dul:hasLocation psr:MarbleCountertop .
+
+psr:BoxOfCrackers a psr:Object ;
+    dul:hasLocation psr:MarbleCountertop, psr:WoodenDiningTable .
+
+psr:BottleOfWater a psr:Object ;
+    dul:hasLocation psr:MarbleCountertop, psr:WoodenDiningTable .
+
+psr:StackOfPlates a psr:Object ;
+    dul:hasLocation psr:MarbleCountertop .
+
+psr:JarOfJam a psr:Object ;
+    dul:hasLocation psr:MarbleCountertop .
+
+psr:Jug a psr:Object ;
+    dul:hasLocation psr:WoodenDiningTable .
+
+psr:LeftOfDiningTable a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:NextToSink a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:AboveElectricStove a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:MarbleCountertopLocation a psr:Location ;
+    geo:sfContains psr:BoxOfJello, psr:BoxOfCrackers, psr:BottleOfWater, psr:StackOfPlates, psr:JarOfJam .
+
+psr:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent psr:BlackKitchenCabinets, psr:WhiteRefrigerator, psr:MarbleCountertop, psr:KitchenSink, psr:ElectricStove, psr:WoodenRangeHood, psr:WhiteWalls, psr:BrownParquetFlooring, psr:RoundCeilingLight, psr:WoodenDiningTable, psr:WhiteChairs .
+
+psr:WoodenDiningTableLocation a psr:Location ;
+    geo:sfContains psr:BoxOfCrackers, psr:BottleOfWater, psr:Jug .

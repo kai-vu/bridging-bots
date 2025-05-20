@@ -1,6 +1,6 @@
 import subprocess
 
 subprocess.run(["python", "imageDescriptor.py"])
-subprocess.run(["python", "imageToKG.py"])
-subprocess.run(["python", "ragKG.py"])
-subprocess.run(["python", "promptKG.py"])
+subprocess.run(["python", "i2kg.py"])
+subprocess.run(["python", "d2kg-rag.py"])
+subprocess.run(["python", "d2kg.py"])

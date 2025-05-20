@@ -1,19 +1,19 @@
-,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Unexpected classes count,Unexpected classes (examples),Distinct properties used,Unexpected properties count,Unexpected properties (examples),Typed instances with known classes,Classes coverage (KG-to-Ontology),Ontology-to-KG Classes Coverage,Properties coverage (KG-to-Ontology),Ontology-to-KG Properties Coverage
-../../output/llava-llama3/action-graph/dynamicKG/kg.ttl,True,32,32,0,0,0,None,9,9,"http://example.org/kitchen#IS_PLACED_IN, http://example.org/kitchen#PICKS_UP, http://example.org/kitchen#OPENS, http://example.org/kitchen#SCANS, http://example.org/kitchen#HAS_ON",0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/action-graph/imageToKG/kg.ttl,False,9,0,9,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/action-graph/promptKG/kg.ttl,False,17,0,17,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/action-graph/ragKG/kg.ttl,True,30,30,0,5,0,None,7,2,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",9,100.0%,27.8%,71.4%,62.5%
-../../output/llama4-scout/action-graph/dynamicKG/kg.ttl,True,34,34,0,0,0,None,6,6,"http://example.org/kitchen#hasComponent, http://example.org/kitchen#onTopOf, http://example.org/kitchen#sfContains, http://example.org/kitchen#sfWithin, http://example.org/kitchen#hasLocation",0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-scout/action-graph/imageToKG/kg.ttl,True,46,46,0,7,0,None,10,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, https://w3id.org/psr-task#isPerformedBy",11,100.0%,38.9%,70.0%,87.5%
-../../output/llama4-scout/action-graph/promptKG/kg.ttl,True,113,113,0,9,3,"https://w3id.org/psr-task#PickUpItem, http://www.ease-crc.org/ont/SOMA.owl#Affordance, https://w3id.org/psr-task#PutDownItem",11,4,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, https://w3id.org/psr-task#isPerformedBy, https://w3id.org/psr-task#hasAffordance",20,66.7%,33.3%,63.6%,87.5%
-../../output/llama4-scout/action-graph/ragKG/kg.ttl,True,125,125,0,7,0,None,9,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, https://w3id.org/psr-task#isPerformedBy",31,100.0%,38.9%,66.7%,75.0%
-../../output/llama4-maverick/action-graph/dynamicKG/kg.ttl,True,14,14,0,0,0,None,7,7,"http://example.org/kitchen#onTopOf, http://example.org/kitchen#sfContains, http://example.org/kitchen#hasObject, http://example.org/kitchen#near, http://example.org/kitchen#isA",0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-maverick/action-graph/imageToKG/kg.ttl,True,64,64,0,6,0,None,9,2,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",15,100.0%,33.3%,77.8%,87.5%
-../../output/llama4-maverick/action-graph/promptKG/kg.ttl,True,51,51,0,7,0,None,11,4,"http://www.w3.org/2000/01/rdf-schema#label, http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows, http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",21,100.0%,38.9%,63.6%,87.5%
-../../output/llama4-maverick/action-graph/ragKG/kg.ttl,True,57,57,0,7,0,None,9,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, https://w3id.org/psr-task#isPerformedBy",18,100.0%,38.9%,66.7%,75.0%
-../../output/gpt-o1/action-graph/imageToKG/kg.ttl,True,109,109,0,7,0,None,9,2,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",24,100.0%,38.9%,77.8%,87.5%
-../../output/gpt-o1/action-graph/promptKG/kg.ttl,True,34,34,0,6,0,None,9,1,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,9,100.0%,33.3%,88.9%,100.0%
-../../output/gpt-o1/action-graph/ragKG/kg.ttl,True,54,54,0,10,10,"http://example.com/ontology#Cabinet, http://example.com/ontology#Surface, http://example.com/ontology#Task, http://example.com/ontology#MoveAction, http://example.com/ontology#Robot",6,6,"http://example.com/ontology#fromLocation, http://example.com/ontology#hasActor, http://example.com/ontology#toLocation, http://example.com/ontology#hasObject, http://example.com/ontology#partOf",0,0.0%,0.0%,0.0%,0.0%
-../../output/gpt-4.1-nano/action-graph/imageToKG/kg.ttl,True,44,44,0,7,0,None,8,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, https://w3id.org/psr-task#isPerformedBy",13,100.0%,38.9%,62.5%,62.5%
-../../output/gpt-4.1-nano/action-graph/promptKG/kg.ttl,True,39,39,0,8,2,"http://www.w3.org/2002/07/owl#NamedIndividual, http://www.w3.org/2002/07/owl#Class",9,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/2000/01/rdf-schema#comment, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",10,75.0%,33.3%,66.7%,75.0%
-../../output/gpt-4.1-nano/action-graph/ragKG/kg.ttl,True,50,50,0,8,8,"http://example.org/ontology#Area, http://example.org/ontology#Furniture, http://example.org/ontology#Appliance, http://example.org/ontology#Surface, http://example.org/ontology#Item",12,12,"http://example.org/ontology#hasSurface, http://example.org/ontology#location, http://example.org/ontology#contains, http://example.org/ontology#aimsTo, http://example.org/ontology#hasItem",0,0.0%,0.0%,0.0%,0.0%
+,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance (valid/used),Class Coverage (groups matched/defined),Distinct properties used,Property Compliance (valid/used),Property Coverage (groups matched/defined)
+../../output/llava-llama3/action-graph/dynamicKG/kg.ttl,True,49,49,0,0,0.0% (0/0),0.0% (0/6),4,0.0% (0/4),0.0% (0/8)
+../../output/llava-llama3/action-graph/imageToKG/kg.ttl,True,21,21,0,1,0.0% (0/1),0.0% (0/6),5,0.0% (0/5),0.0% (0/8)
+../../output/llava-llama3/action-graph/promptKG/kg.ttl,True,93,93,0,11,54.5% (6/11),83.3% (5/6),8,75.0% (6/8),75.0% (6/8)
+../../output/llava-llama3/action-graph/ragKG/kg.ttl,True,74,74,0,4,100.0% (4/4),66.7% (4/6),7,71.4% (5/7),62.5% (5/8)
+../../output/llama4-scout/action-graph/dynamicKG/kg.ttl,True,40,40,0,0,0.0% (0/0),0.0% (0/6),9,0.0% (0/9),0.0% (0/8)
+../../output/llama4-scout/action-graph/imageToKG/kg.ttl,False,14,0,14,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
+../../output/llama4-scout/action-graph/promptKG/kg.ttl,True,33,33,0,6,100.0% (6/6),83.3% (5/6),9,88.9% (8/9),100.0% (8/8)
+../../output/llama4-scout/action-graph/ragKG/kg.ttl,False,42,0,42,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
+../../output/llama4-maverick/action-graph/dynamicKG/kg.ttl,True,9,9,0,0,0.0% (0/0),0.0% (0/6),3,0.0% (0/3),0.0% (0/8)
+../../output/llama4-maverick/action-graph/imageToKG/kg.ttl,True,66,66,0,6,100.0% (6/6),83.3% (5/6),9,66.7% (6/9),75.0% (6/8)
+../../output/llama4-maverick/action-graph/promptKG/kg.ttl,True,54,54,0,7,100.0% (7/7),100.0% (6/6),12,66.7% (8/12),100.0% (8/8)
+../../output/llama4-maverick/action-graph/ragKG/kg.ttl,True,86,86,0,8,100.0% (8/8),100.0% (6/6),9,66.7% (6/9),75.0% (6/8)
+../../output/gpt-o1/action-graph/imageToKG/kg.ttl,True,109,109,0,7,100.0% (7/7),83.3% (5/6),9,77.8% (7/9),87.5% (7/8)
+../../output/gpt-o1/action-graph/promptKG/kg.ttl,True,34,34,0,6,100.0% (6/6),83.3% (5/6),9,88.9% (8/9),100.0% (8/8)
+../../output/gpt-o1/action-graph/ragKG/kg.ttl,True,54,54,0,10,0.0% (0/10),0.0% (0/6),6,0.0% (0/6),0.0% (0/8)
+../../output/gpt-4.1-nano/action-graph/imageToKG/kg.ttl,True,44,44,0,7,100.0% (7/7),83.3% (5/6),8,62.5% (5/8),62.5% (5/8)
+../../output/gpt-4.1-nano/action-graph/promptKG/kg.ttl,True,39,39,0,8,62.5% (5/8),83.3% (5/6),9,66.7% (6/9),75.0% (6/8)
+../../output/gpt-4.1-nano/action-graph/ragKG/kg.ttl,True,50,50,0,8,0.0% (0/8),0.0% (0/6),12,0.0% (0/12),0.0% (0/8)

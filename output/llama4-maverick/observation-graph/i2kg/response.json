@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-ead4d1f4-4fdc-4f43-89ef-b12adcf6580c",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:Kitchen a psr:Environment ;\n    dul:hasComponent psr:Refrigerator, psr:UpperCabinet, psr:LowerCabinet, psr:DiningTable, psr:Chair1, psr:Chair2, psr:Chair3, psr:Sink, psr:Stove, psr:ExhaustHood .\n\npsr:Refrigerator a psr:Appliance ;\n    dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:UpperCabinet a psr:Furniture ;\n    dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:LowerCabinet a psr:Furniture ;\n    dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:DiningTable a psr:Furniture ;\n    dul:hasLocation psr:Kitchen ;\n    dul:hasComponent psr:WaterBottle, psr:Mug, psr:Book, psr:Fruit .\n\npsr:Chair1 a psr:Furniture ;\n    dul:hasLocation psr:Kitchen .\n\npsr:Chair2 a psr:Furniture ;\n    dul:hasLocation psr:Kitchen .\n\npsr:Chair3 a psr:Furniture ;\n    dul:hasLocation psr:Kitchen .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:Kitchen .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:Kitchen ;\n    dul:hasComponent psr:Pot .\n\npsr:ExhaustHood a psr:Appliance ;\n    dul:hasLocation psr:Kitchen .\n\npsr:WaterBottle a psr:Object ;\n    dul:hasLocation psr:DiningTable .\n\npsr:Mug a psr:Object ;\n    dul:hasLocation psr:DiningTable .\n\npsr:Book a psr:Object ;\n    dul:hasLocation psr:DiningTable .\n\npsr:Fruit a psr:Object ;\n    dul:hasLocation psr:DiningTable .\n\npsr:Pot a psr:Object ;\n    dul:hasLocation psr:Stove .\n\npsr:Jar1 a psr:Object ;\n    dul:hasLocation psr:LowerCabinet ;\n    psr:onTopOf psr:LowerCabinet .\n\npsr:Jar2 a psr:Object ;\n    dul:hasLocation psr:LowerCabinet ;\n    psr:onTopOf psr:LowerCabinet .\n\npsr:Box1 a psr:Object ;\n    dul:hasLocation psr:LowerCabinet ;\n    psr:onTopOf psr:LowerCabinet .\n\npsr:Box2 a psr:Object ;\n    dul:hasLocation psr:LowerCabinet ;\n    psr:onTopOf psr:LowerCabinet .\n\npsr:StackOfPlates a psr:Object ;\n    dul:hasLocation psr:LowerCabinet ;\n    psr:onTopOf psr:LowerCabinet .\n\npsr:Door a psr:Component ;\n    dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:LowerCabinet dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Refrigerator dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:UpperCabinet dul:hasLocation psr:Kitchen ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:DiningTable dul:hasLocation psr:Kitchen .\n\ngeo:sfContains psr:Kitchen, psr:LowerCabinet .\ngeo:sfContains psr:LowerCabinet, psr:Jar1 .\ngeo:sfContains psr:LowerCabinet, psr:Jar2 .\ngeo:sfContains psr:LowerCabinet, psr:Box1 .\ngeo:sfContains psr:LowerCabinet, psr:Box2 .\ngeo:sfContains psr:LowerCabinet, psr:StackOfPlates .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747747085,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_fcf8b6b0bf",
+    "usage": {
+        "completion_tokens": 996,
+        "prompt_tokens": 13955,
+        "total_tokens": 14951,
+        "completion_time": 4.743340182,
+        "prompt_time": 0.371785089,
+        "queue_time": 7.776130309,
+        "total_time": 5.115125271
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvpxfysfe4tagz3d3qccfsqq"
+    }
+}

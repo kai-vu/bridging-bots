@@ -1,0 +1,113 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+:Kitchen a psr:Environment .
+
+:Countertop a psr:Component ;
+    dul:hasLocation :CountertopLocation .
+
+:CountertopLocation a psr:Location .
+
+:Cabinets a psr:Component ;
+    dul:hasLocation :CabinetsLocation .
+
+:CabinetsLocation a psr:Location ;
+    psr:onTopOf :Countertop .
+
+:Sinks a psr:Component ;
+    dul:hasLocation :SinksLocation .
+
+:SinksLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Fridge a psr:Appliance ;
+    dul:hasLocation :FridgeLocation .
+
+:FridgeLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Cups a psr:Object ;
+    dul:hasLocation :CupsLocation .
+
+:CupsLocation a psr:Location ;
+    geo:sfWithin :CountertopLocation .
+
+:Snacks a psr:Object ;
+    dul:hasLocation :SnacksLocation .
+
+:SnacksLocation a psr:Location ;
+    geo:sfWithin :CountertopLocation .
+
+:DiningTable a psr:Furniture ;
+    dul:hasLocation :DiningTableLocation .
+
+:DiningTableLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Chair a psr:Furniture ;
+    dul:hasLocation :ChairLocation .
+
+:ChairLocation a psr:Location ;
+    geo:sfWithin :DiningTableLocation .
+
+:LightFixture a psr:Object ;
+    dul:hasLocation :LightFixtureLocation .
+
+:LightFixtureLocation a psr:Location ;
+    geo:sfWithin :DiningTableLocation .
+
+:CartonOfEggs a psr:Object ;
+    dul:hasLocation :CartonOfEggsLocation .
+
+:CartonOfEggsLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Groceries a psr:Object ;
+    dul:hasLocation :GroceriesLocation .
+
+:GroceriesLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Oven a psr:Appliance ;
+    dul:hasLocation :OvenLocation .
+
+:OvenLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Microwave a psr:Appliance ;
+    dul:hasLocation :MicrowaveLocation .
+
+:MicrowaveLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Shelf a psr:Component ;
+    dul:hasLocation :ShelfLocation .
+
+:ShelfLocation a psr:Location ;
+    geo:sfWithin :FridgeLocation .
+
+:Bottle a psr:Object ;
+    dul:hasLocation :BottleLocation .
+
+:BottleLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Door a psr:Component ;
+    dul:hasLocation :DoorLocation .
+
+:DoorLocation a psr:Location ;
+    geo:sfWithin :Kitchen .
+
+:Kitchen dul:hasComponent :Countertop .
+:Kitchen dul:hasComponent :Cabinets .
+:Kitchen dul:hasComponent :Sinks .
+:Kitchen dul:hasComponent :Fridge .
+:Kitchen dul:hasComponent :DiningTable .
+:Kitchen dul:hasComponent :Chair .
+:Kitchen dul:hasComponent :Oven .
+:Kitchen dul:hasComponent :Microwave .
+:Kitchen dul:hasComponent :Door .

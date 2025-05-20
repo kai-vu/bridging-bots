@@ -1,0 +1,18 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Instruction_1 kitchen:actsOn kitchen:countertop ;
+    kitchen:hasAction kitchen:Identify_misplaced_items .
+
+kitchen:Instruction_10 kitchen:actsOn kitchen:dining_table .
+
+kitchen:Instruction_12 kitchen:isAffordedBy kitchen:black_cabinets .
+
+kitchen:Instruction_2 kitchen:hasAction kitchen:Move .
+
+kitchen:Instruction_20 kitchen:actsOn kitchen:countertop .
+
+kitchen:Instruction_3 kitchen:actsOn kitchen:box_of_jello ;
+    kitchen:hasAction kitchen:PickingUp .
+
+kitchen:Instruction_4 kitchen:isAffordedBy kitchen:black_cabinets .
+

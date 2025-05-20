@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-aed7fc84-f089-4e9f-9cfa-13bcbde2703d",
+    "created": 1747746861,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```turtle\n@prefix psr: <http://example.com/psr#> .\n@prefix dul: <http://example.com/dul#> .\n@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\npsr:RestoringKitchen a dul:Workflow ;\n  psr:precededBy ( psr:Holding dul:Furniture ) ;\n  psr:followedBy ( psr:PuttingDown dul:Furniture ) ;\n  psr:precededBy ( psr:PickingUp dul:Object ) ;\n  psr:followedBy ( psr:Delivering dul:Object ) .\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 49.66,
+        "prompt_token/s": 1031.09,
+        "total_duration": 8227101994,
+        "load_duration": 51234022,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 3972497380,
+        "eval_count": 207,
+        "completion_tokens": 207,
+        "eval_duration": 4167973043,
+        "approximate_total": "0h0m8s",
+        "total_tokens": 4303,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

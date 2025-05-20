@@ -1,0 +1,147 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+psr:RestoreKitchen a psr:Workflow ;
+  psr:hasAction psr:IdentifyMisplacedItems,
+  psr:ReturnItemsToStorage.
+
+psr:IdentifyMisplacedItems a dul:Action ;
+  psr:actsOn psr:MisplacedItem.
+
+psr:MisplacedItem a psr:Component .
+
+psr:ReturnItemsToStorage a dul:Action ;
+  psr:actsOn psr:MisplacedItem ;
+  psr:follows psr:IdentifyMisplacedItems.
+
+psr:MisplacedItem1 a psr:Component ;
+  psr:actsOn psr:StackOfWhitePlates.
+
+psr:StackOfWhitePlates a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:StackOfWhitePlates1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems1 a dul:Action ;
+  psr:actsOn psr:StackOfWhitePlates.
+
+psr:ReturnItemsToStorage1 a dul:Action ;
+  psr:actsOn psr:StackOfWhitePlates ;
+  psr:follows psr:IdentifyMisplacedItems1.
+
+psr:MisplacedItem2 a psr:Component ;
+  psr:actsOn psr:JarOfJam.
+
+psr:JarOfJam a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:JarOfJam1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems2 a dul:Action ;
+  psr:actsOn psr:JarOfJam.
+
+psr:ReturnItemsToStorage2 a dul:Action ;
+  psr:actsOn psr:JarOfJam ;
+  psr:follows psr:IdentifyMisplacedItems2.
+
+psr:MisplacedItem3 a psr:Component ;
+  psr:actsOn psr:BoxOfStrawberryBananaJello.
+
+psr:BoxOfStrawberryBananaJello a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:BoxOfStrawberryBananaJello1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems3 a dul:Action ;
+  psr:actsOn psr:BoxOfStrawberryBananaJello.
+
+psr:ReturnItemsToStorage3 a dul:Action ;
+  psr:actsOn psr:BoxOfStrawberryBananaJello ;
+  psr:follows psr:IdentifyMisplacedItems3.
+
+psr:MisplacedItem4 a psr:Component ;
+  psr:actsOn psr:PackageOfAlpenSalt.
+
+psr:PackageOfAlpenSalt a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:PackageOfAlpenSalt1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems4 a dul:Action ;
+  psr:actsOn psr:PackageOfAlpenSalt.
+
+psr:ReturnItemsToStorage4 a dul:Action ;
+  psr:actsOn psr:PackageOfAlpenSalt ;
+  psr:follows psr:IdentifyMisplacedItems4.
+
+psr:MisplacedItem5 a psr:Component ;
+  psr:actsOn psr:BottleOfEvianWater.
+
+psr:BottleOfEvianWater a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:BottleOfEvianWater1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems5 a dul:Action ;
+  psr:actsOn psr:BottleOfEvianWater.
+
+psr:ReturnItemsToStorage5 a dul:Action ;
+  psr:actsOn psr:BottleOfEvianWater ;
+  psr:follows psr:IdentifyMisplacedItems5.
+
+psr:MisplacedItem6 a psr:Component ;
+  psr:actsOn psr:Book.
+
+psr:Book a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:Book1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems6 a dul:Action ;
+  psr:actsOn psr:Book.
+
+psr:ReturnItemsToStorage6 a dul:Action ;
+  psr:actsOn psr:Book ;
+  psr:follows psr:IdentifyMisplacedItems6.
+
+psr:MisplacedItem7 a psr:Component ;
+  psr:actsOn psr:Plate.
+
+psr:Plate a psr:Object ;
+  soma:PuttingDown a soma:Affordance ;
+  soma:PickingUp a soma:Affordance.
+
+psr:Plate1 a dul:Entity ;
+  psr:isAffordedBy soma:PuttingDown.
+
+psr:IdentifyMisplacedItems7 a dul:Action ;
+  psr:actsOn psr:Plate.
+
+psr:ReturnItemsToStorage7 a dul:Action ;
+  psr:actsOn psr:Plate ;
+  psr:follows psr:IdentifyMisplacedItems7.
+
+psr:Kitchen a psr:Environment .
+
+psr:Agent a dul:Agent ;
+  soma:Grasping a soma:Affordance ;
+  soma:PickingUp a soma:Affordance ;
+  soma:PuttingDown a soma:Affordance.
+
+psr:RestoreKitchen psr:isPerformedBy psr:Agent.

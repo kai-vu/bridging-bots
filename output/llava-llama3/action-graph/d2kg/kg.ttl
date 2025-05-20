@@ -1,0 +1,116 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+
+:Instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    psr:hasWorkflow :Workflow1 .
+
+:Workflow1 a psr:Workflow ;
+    psr:hasAction :Action1, :Action2, :Action3, :Action4, :Action5, :Action6, :Action7, :Action8, :Action9, :Action10, :Action11, :Action12 .
+
+:Action1 a dul:Action ;
+    psr:precedes :Action2 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object1 ;
+    psr:isAffordedBy :soma:PickingUp .
+
+:Action2 a dul:Action ;
+    psr:precedes :Action3 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object1 ;
+    psr:isAffordedBy :soma:Grasping .
+
+:Action3 a dul:Action ;
+    psr:precedes :Action4 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object2 ;
+    psr:isAffordedBy :soma:Opening .
+
+:Action4 a dul:Action ;
+    psr:precedes :Action5 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object1 ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:Action5 a dul:Action ;
+    psr:precedes :Action6 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object3 ;
+    psr:isAffordedBy :soma:PickingUp .
+
+:Action6 a dul:Action ;
+    psr:precedes :Action7 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object3 ;
+    psr:isAffordedBy :soma:Grasping .
+
+:Action7 a dul:Action ;
+    psr:precedes :Action8 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object4 ;
+    psr:isAffordedBy :soma:Opening .
+
+:Action8 a dul:Action ;
+    psr:precedes :Action9 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object3 ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:Action9 a dul:Action ;
+    psr:precedes :Action10 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object5 ;
+    psr:isAffordedBy :soma:PickingUp .
+
+:Action10 a dul:Action ;
+    psr:precedes :Action11 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object5 ;
+    psr:isAffordedBy :soma:Grasping .
+
+:Action11 a dul:Action ;
+    psr:precedes :Action12 ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object6 ;
+    psr:isAffordedBy :soma:Opening .
+
+:Action12 a dul:Action ;
+    psr:isPerformedBy :Agent1 ;
+    psr:actsOn :Object5 ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:Agent1 a dul:Agent .
+
+:Object1 a psr:Object ;
+    a :Cup .
+
+:Object2 a psr:Appliance ;
+    a :Cabinet .
+
+:Object3 a psr:Object ;
+    a :Bottle .
+
+:Object4 a psr:Appliance ;
+    a :Cabinet .
+
+:Object5 a psr:Object ;
+    a :Eggs .
+
+:Object6 a psr:Appliance ;
+    a :Fridge .
+
+:Cup a psr:Object .
+
+:Bottle a psr:Object .
+
+:Cabinet a psr:Appliance .
+
+:Fridge a psr:Appliance .
+
+:Eggs a psr:Object .

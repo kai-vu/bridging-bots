@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-4c088477-563c-4885-acf9-1378894858d6",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:kitchen a psr:Environment ;\n  rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance, psr:Component ;\n  rdfs:label \"refrigerator\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture, psr:Component ;\n  rdfs:label \"table\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:diningRoom a psr:Environment ;\n  rdfs:label \"dining room\"@en .\n\npsr:chair1 a psr:Furniture, psr:Component ;\n  rdfs:label \"chair\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:chair2 a psr:Furniture, psr:Component ;\n  rdfs:label \"chair\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:chair3 a psr:Furniture, psr:Component ;\n  rdfs:label \"chair\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:cabinet a psr:Component, psr:Furniture ;\n  rdfs:label \"cabinet\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:cupboard a psr:Component, psr:Furniture ;\n  rdfs:label \"cupboard\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:box_of_rice_bubbles a psr:Object ;\n  rdfs:label \"box of Rice Bubbles\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:box_of_jello a psr:Object ;\n  rdfs:label \"box of Jello\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:jar_of_jam a psr:Object ;\n  rdfs:label \"jar of jam\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:evian_bottle a psr:Object ;\n  rdfs:label \"Evian bottle\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:book1 a psr:Object ;\n  rdfs:label \"book1\"@en ;\n  psr:hasLocation psr:diningRoom .\n\npsr:book2 a psr:Object ;\n  rdfs:label \"book2\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:plate a psr:Object ;\n  rdfs:label \"plate\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:cup a psr:Object ;\n  rdfs:label \"cup\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:jar_of_marmite a psr:Object ;\n  rdfs:label \"jar of marmite\"@en ;\n  psr:hasLocation psr:kitchen .\n\npsr:alpen_salt a psr:Object ;\n  rdfs:label \"Alpen Salt\"@en ;\n  psr:hasLocation psr:kitchen .\n\ndul:hasComponent(psr:kitchen, psr:refrigerator) .\ndul:hasComponent(psr:kitchen, psr:cabinet) .\ndul:hasComponent(psr:kitchen, psr:cupboard) .\ndul:hasComponent(psr:diningRoom, psr:table) .\ndul:hasComponent(psr:diningRoom, psr:chair1) .\ndul:hasComponent(psr:diningRoom, psr:chair2) .\ndul:hasComponent(psr:diningRoom, psr:chair3) .\ngeo:sfContains(psr:kitchen, psr:cabinet) .\ngeo:sfContains(psr:kitchen, psr:cupboard) .\ngeo:sfContains(psr:kitchen, psr:refrigerator) .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747746928,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_42ae451038",
+    "usage": {
+        "completion_tokens": 943,
+        "prompt_tokens": 13959,
+        "total_tokens": 14902,
+        "completion_time": 2.279176396,
+        "prompt_time": 0.488268961,
+        "queue_time": 2.676746131,
+        "total_time": 2.767445357
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvpxbafxfx5rpe6a5rmgk1bn"
+    }
+}

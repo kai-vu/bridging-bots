@@ -1,19 +1,19 @@
-,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Unexpected classes count,Unexpected classes (examples),Distinct properties used,Unexpected properties count,Unexpected properties (examples),Typed instances with known classes,Classes coverage (KG-to-Ontology),Ontology-to-KG Classes Coverage,Properties coverage (KG-to-Ontology),Ontology-to-KG Properties Coverage
-../../output/llava-llama3/observation-graph/dynamicKG/kg.ttl,True,4,4,0,0,0,None,3,3,"http://example.org/kitchen#HAS_ON_TOP, http://example.org/kitchen#IS_MADE_OF, http://example.org/kitchen#HAS_COMPONENT",0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/observation-graph/imageToKG/kg.ttl,False,21,0,21,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/observation-graph/promptKG/kg.ttl,True,0,0,0,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llava-llama3/observation-graph/ragKG/kg.ttl,True,0,0,0,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-scout/observation-graph/dynamicKG/kg.ttl,True,21,21,0,0,0,None,7,7,"http://example.org/kitchen#hasComponent, http://example.org/kitchen#onTopOf, http://example.org/kitchen#sfContains, http://example.org/kitchen#sfWithin, http://example.org/kitchen#isA",0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-scout/observation-graph/imageToKG/kg.ttl,False,15,0,15,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-scout/observation-graph/promptKG/kg.ttl,True,77,77,0,6,1,https://w3id.org/psr-task#Location,6,2,"http://www.opengis.net/ont/geosparql#sfContains, http://www.w3.org/1999/02/22-rdf-syntax-ns#type",18,83.3%,27.8%,66.7%,100.0%
-../../output/llama4-scout/observation-graph/ragKG/kg.ttl,True,81,81,0,6,1,https://w3id.org/psr-task#Location,4,3,"http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#label, http://www.opengis.net/ont/geosparql#sfWithin",21,83.3%,27.8%,25.0%,25.0%
-../../output/llama4-maverick/observation-graph/dynamicKG/kg.ttl,True,17,17,0,0,0,None,4,4,"http://example.org/kitchen#isA, http://example.org/kitchen#onTopOf, http://example.org/kitchen#hasComponent, http://example.org/kitchen#hasLocation",0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-maverick/observation-graph/imageToKG/kg.ttl,False,35,0,35,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/llama4-maverick/observation-graph/promptKG/kg.ttl,True,80,80,0,7,1,https://w3id.org/psr-task#Location,7,3,"http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.opengis.net/ont/geosparql#sfBehind, http://www.opengis.net/ont/geosparql#sfWithin",26,85.7%,33.3%,57.1%,100.0%
-../../output/llama4-maverick/observation-graph/ragKG/kg.ttl,True,131,131,0,6,0,None,6,3,"http://www.w3.org/2000/01/rdf-schema#label, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.opengis.net/ont/geosparql#sfWithin",40,100.0%,33.3%,50.0%,75.0%
-../../output/gpt-o1/observation-graph/imageToKG/kg.ttl,True,88,88,0,5,0,None,5,1,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,28,100.0%,27.8%,80.0%,100.0%
-../../output/gpt-o1/observation-graph/promptKG/kg.ttl,True,95,95,0,6,0,None,5,2,"http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.opengis.net/ont/geosparql#sfWithin",41,100.0%,33.3%,60.0%,75.0%
-../../output/gpt-o1/observation-graph/ragKG/kg.ttl,True,0,0,0,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/gpt-4.1-nano/observation-graph/imageToKG/kg.ttl,False,24,0,24,0,0,None,0,0,None,0,0.0%,0.0%,0.0%,0.0%
-../../output/gpt-4.1-nano/observation-graph/promptKG/kg.ttl,True,90,90,0,6,0,None,6,3,"http://www.opengis.net/ont/geosparql#sfContains, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#label",24,100.0%,33.3%,50.0%,75.0%
-../../output/gpt-4.1-nano/observation-graph/ragKG/kg.ttl,True,51,51,0,17,17,"http://example.org/ontology#Food, http://example.org/ontology#Opening, http://example.org/ontology#WallMountedFurniture, http://example.org/ontology#Handle, http://example.org/ontology#Container",17,17,"http://example.org/ontology#hasHandle, http://example.org/ontology#hasDoor, http://example.org/ontology#hasFloor, http://example.org/ontology#contains, http://example.org/ontology#hasLightFixture",0,0.0%,0.0%,0.0%,0.0%
+,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance (valid/used),Class Coverage (groups matched/defined),Distinct properties used,Property Compliance (valid/used),Property Coverage (groups matched/defined)
+../../output/llava-llama3/observation-graph/dynamicKG/kg.ttl,True,20,20,0,0,0.0% (0/0),0.0% (0/4),4,0.0% (0/4),0.0% (0/3)
+../../output/llava-llama3/observation-graph/imageToKG/kg.ttl,False,0,0,0,0,0.0% (0/0),0.0% (0/4),0,0.0% (0/0),0.0% (0/3)
+../../output/llava-llama3/observation-graph/promptKG/kg.ttl,True,73,73,0,6,83.3% (5/6),50.0% (2/4),5,80.0% (4/5),66.7% (2/3)
+../../output/llava-llama3/observation-graph/ragKG/kg.ttl,True,58,58,0,6,83.3% (5/6),50.0% (2/4),5,80.0% (4/5),66.7% (2/3)
+../../output/llama4-scout/observation-graph/dynamicKG/kg.ttl,True,24,24,0,0,0.0% (0/0),0.0% (0/4),5,0.0% (0/5),0.0% (0/3)
+../../output/llama4-scout/observation-graph/imageToKG/kg.ttl,False,29,0,29,0,0.0% (0/0),0.0% (0/4),0,0.0% (0/0),0.0% (0/3)
+../../output/llama4-scout/observation-graph/promptKG/kg.ttl,True,191,191,0,6,83.3% (5/6),50.0% (2/4),8,75.0% (6/8),100.0% (3/3)
+../../output/llama4-scout/observation-graph/ragKG/kg.ttl,True,77,77,0,2,100.0% (2/2),50.0% (2/4),7,57.1% (4/7),100.0% (3/3)
+../../output/llama4-maverick/observation-graph/dynamicKG/kg.ttl,True,21,21,0,0,0.0% (0/0),0.0% (0/4),6,0.0% (0/6),0.0% (0/3)
+../../output/llama4-maverick/observation-graph/imageToKG/kg.ttl,False,32,0,32,0,0.0% (0/0),0.0% (0/4),0,0.0% (0/0),0.0% (0/3)
+../../output/llama4-maverick/observation-graph/promptKG/kg.ttl,True,76,76,0,4,100.0% (4/4),50.0% (2/4),8,87.5% (7/8),100.0% (3/3)
+../../output/llama4-maverick/observation-graph/ragKG/kg.ttl,True,58,58,0,5,80.0% (4/5),50.0% (2/4),6,83.3% (5/6),100.0% (3/3)
+../../output/gpt-o1/observation-graph/imageToKG/kg.ttl,True,88,88,0,5,100.0% (5/5),75.0% (3/4),5,80.0% (4/5),100.0% (3/3)
+../../output/gpt-o1/observation-graph/promptKG/kg.ttl,True,95,95,0,6,100.0% (6/6),75.0% (3/4),5,80.0% (4/5),66.7% (2/3)
+../../output/gpt-o1/observation-graph/ragKG/kg.ttl,True,0,0,0,0,0.0% (0/0),0.0% (0/4),0,0.0% (0/0),0.0% (0/3)
+../../output/gpt-4.1-nano/observation-graph/imageToKG/kg.ttl,False,24,0,24,0,0.0% (0/0),0.0% (0/4),0,0.0% (0/0),0.0% (0/3)
+../../output/gpt-4.1-nano/observation-graph/promptKG/kg.ttl,True,90,90,0,6,100.0% (6/6),75.0% (3/4),6,66.7% (4/6),100.0% (3/3)
+../../output/gpt-4.1-nano/observation-graph/ragKG/kg.ttl,True,51,51,0,17,0.0% (0/17),0.0% (0/4),17,0.0% (0/17),0.0% (0/3)

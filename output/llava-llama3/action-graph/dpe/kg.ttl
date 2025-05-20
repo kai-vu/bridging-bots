@@ -1,0 +1,77 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow .
+
+kitchen:close_fridge kitchen:actsOn kitchen:fridge .
+
+kitchen:inspect_glass_shelf_on_top_of_fridge kitchen:actsOn kitchen:glass_shelf_on_top_of_fridge ;
+    kitchen:precedes kitchen:pick_up_misplaced_items_from_glass_shelf .
+
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:inspect_glass_shelf_on_top_of_fridge,
+        kitchen:move_to_carton_of_eggs_and_pack_of_groceries,
+        kitchen:move_to_countertop,
+        kitchen:move_to_dining_table,
+        kitchen:move_to_microwave_and_inspect_area,
+        kitchen:move_to_oven_and_inspect_area,
+        kitchen:pick_up_bottle,
+        kitchen:pick_up_pack_of_groceries,
+        kitchen:verify_kitchen_is_organized .
+
+kitchen:move_chair_to_standard_position kitchen:actsOn kitchen:chair .
+
+kitchen:move_to_carton_of_eggs_and_pack_of_groceries kitchen:precedes kitchen:pick_up_carton_of_eggs .
+
+kitchen:move_to_countertop kitchen:precedes kitchen:pick_up_cups_of_coffee .
+
+kitchen:move_to_dining_table kitchen:precedes kitchen:pick_up_chair .
+
+kitchen:move_to_microwave_and_inspect_area kitchen:actsOn kitchen:microwave ;
+    kitchen:precedes kitchen:pick_up_misplaced_items_near_microwave .
+
+kitchen:move_to_oven_and_inspect_area kitchen:actsOn kitchen:oven ;
+    kitchen:precedes kitchen:pick_up_misplaced_items_near_oven .
+
+kitchen:open_fridge kitchen:actsOn kitchen:fridge ;
+    kitchen:precedes kitchen:place_groceries_in_fridge .
+
+kitchen:pick_up_bottle kitchen:actsOn kitchen:bottle ;
+    kitchen:precedes kitchen:place_bottle_in_cabinet_or_fridge .
+
+kitchen:pick_up_carton_of_eggs kitchen:actsOn kitchen:carton_of_eggs ;
+    kitchen:precedes kitchen:place_carton_of_eggs_in_fridge .
+
+kitchen:pick_up_chair kitchen:actsOn kitchen:chair ;
+    kitchen:precedes kitchen:move_chair_to_standard_position .
+
+kitchen:pick_up_cups_of_coffee kitchen:actsOn kitchen:cups_of_coffee ;
+    kitchen:precedes kitchen:place_cups_in_cabinet .
+
+kitchen:pick_up_misplaced_items_from_glass_shelf kitchen:actsOn kitchen:misplaced_items ;
+    kitchen:precedes kitchen:place_misplaced_items_in_standard_storage_locations .
+
+kitchen:pick_up_misplaced_items_near_microwave kitchen:actsOn kitchen:misplaced_items ;
+    kitchen:precedes kitchen:place_misplaced_items_in_standard_storage_locations .
+
+kitchen:pick_up_misplaced_items_near_oven kitchen:actsOn kitchen:misplaced_items ;
+    kitchen:precedes kitchen:place_misplaced_items_in_standard_storage_locations .
+
+kitchen:pick_up_pack_of_groceries kitchen:actsOn kitchen:pack_of_groceries ;
+    kitchen:precedes kitchen:open_fridge .
+
+kitchen:pick_up_snacks kitchen:actsOn kitchen:snacks ;
+    kitchen:precedes kitchen:place_snacks_in_cabinet_or_fridge .
+
+kitchen:place_bottle_in_cabinet_or_fridge kitchen:actsOn kitchen:bottle .
+
+kitchen:place_carton_of_eggs_in_fridge kitchen:actsOn kitchen:carton_of_eggs .
+
+kitchen:place_cups_in_cabinet kitchen:actsOn kitchen:cups_of_coffee ;
+    kitchen:precedes kitchen:pick_up_snacks .
+
+kitchen:place_groceries_in_fridge kitchen:actsOn kitchen:pack_of_groceries ;
+    kitchen:precedes kitchen:close_fridge .
+
+kitchen:place_snacks_in_cabinet_or_fridge kitchen:actsOn kitchen:snacks .
+
+kitchen:place_misplaced_items_in_standard_storage_locations kitchen:actsOn kitchen:misplaced_items .
+

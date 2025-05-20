@@ -1,0 +1,111 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:kitchen a psr:Environment ;
+  rdfs:label "kitchen"@en .
+
+psr:diningRoom a psr:Environment ;
+  rdfs:label "dining room"@en .
+
+psr:cabinet a psr:Component ;
+  rdfs:label "dark gray cabinet"@en ;
+  soma:Location psr:kitchen .
+
+psr:countertop a psr:Component ;
+  rdfs:label "beige countertop"@en ;
+  soma:Location psr:kitchen ;
+  geo:sfWithin psr:cabinet .
+
+psr:plates a psr:Component ;
+  rdfs:label "stack of white plates"@en ;
+  soma:Location psr:countertop .
+
+psr:jarOfJam a psr:Component ;
+  rdfs:label "jar of jam"@en ;
+  soma:Location psr:countertop .
+
+psr:jello a psr:Component ;
+  rdfs:label "box of strawberry banana Jello"@en ;
+  soma:Location psr:countertop .
+
+psr:salt a psr:Component ;
+  rdfs:label "package of Alpen Salt"@en ;
+  soma:Location psr:countertop .
+
+psr:sink a psr:Component ;
+  rdfs:label "sink"@en ;
+  soma:Location psr:kitchen .
+
+psr:pot a psr:Component ;
+  rdfs:label "pot"@en ;
+  soma:Location psr:kitchen .
+
+psr:stove a psr:Component ;
+  rdfs:label "stove"@en ;
+  soma:Location psr:kitchen .
+
+psr:refrigerator a psr:Component ;
+  rdfs:label "white refrigerator"@en ;
+  soma:Location psr:kitchen .
+
+psr:table a psr:Component ;
+  rdfs:label "wooden table"@en ;
+  soma:Location psr:diningRoom .
+
+psr:chairs a psr:Component ;
+  rdfs:label "four white chairs"@en ;
+  soma:Location psr:diningRoom .
+
+psr:evianWater a psr:Component ;
+  rdfs:label "bottle of Evian water"@en ;
+  soma:Location psr:table .
+
+psr:book a psr:Component ;
+  rdfs:label "book titled 'Chocolate Cake Killers'"@en ;
+  soma:Location psr:table .
+
+psr:plate a psr:Component ;
+  rdfs:label "plate with a bowl and other items"@en ;
+  soma:Location psr:table .
+
+psr:floor a psr:Component ;
+  rdfs:label "wooden floor in a herringbone pattern"@en ;
+  soma:Location psr:kitchen, psr:diningRoom .
+
+psr:wall a psr:Component ;
+  rdfs:label "white walls"@en ;
+  soma:Location psr:kitchen, psr:diningRoom .
+
+psr:door a psr:Component ;
+  rdfs:label "door"@en ;
+  soma:Location psr:diningRoom .
+
+psr:lightFixture a psr:Component ;
+  rdfs:label "round light fixture"@en ;
+  soma:Location psr:diningRoom .
+
+psr:cabinet dul:hasComponent psr:countertop .
+
+psr:countertop psr:hasAffordance soma:Opening .
+
+psr:jarOfJam psr:hasAffordance soma:Opening .
+
+psr:jello psr:hasAffordance soma:Opening .
+
+psr:salt psr:hasAffordance soma:Opening .
+
+psr:refrigerator psr:hasAffordance soma:Opening .
+
+psr:plate psr:hasAffordance soma:PuttingDown .
+
+psr:book psr:hasAffordance soma:PickingUp .
+
+psr:evianWater psr:hasAffordance soma:Opening .
+
+psr:floor geo:sfContains psr:kitchen, psr:diningRoom .
+
+psr:wall geo:sfContains psr:kitchen, psr:diningRoom .
