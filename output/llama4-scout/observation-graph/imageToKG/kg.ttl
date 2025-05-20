@@ -20,65 +20,60 @@ psr:chair a psr:Furniture ;
     rdfs:label "chair"@en ;
     psr:hasLocation psr:kitchen .
 
-psr:cup a psr:Object ;
-    rdfs:label "cup"@en ;
+psr:cupboard a psr:Furniture ;
+    rdfs:label "cupboard"@en ;
+    psr:hasLocation psr:kitchen .
+
+psr:water_bottle a psr:Object ;
+    rdfs:label "water bottle"@en ;
     psr:hasLocation psr:table .
 
 psr:book a psr:Object ;
     rdfs:label "book"@en ;
     psr:hasLocation psr:table .
 
-psr:water_bottle a psr:Object ;
-    rdfs:label "water bottle"@en ;
-    psr:hasLocation psr:table .
+psr:jello_box a psr:Object ;
+    rdfs:label "Jello box"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:sink a psr:Component ;
-    rdfs:label "sink"@en ;
-    psr:hasLocation psr:kitchen .
+psr:plates a psr:Object ;
+    rdfs:label "plates"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:stove a psr:Appliance ;
-    rdfs:label "stove"@en ;
-    psr:hasLocation psr:kitchen .
+psr:cups a psr:Object ;
+    rdfs:label "cups"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:plate a psr:Object ;
-    rdfs:label "plate"@en ;
-    psr:hasLocation psr:kitchen .
+psr:jar a psr:Object ;
+    rdfs:label "jar"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:cabinet a psr:Furniture ;
-    rdfs:label "cabinet"@en ;
-    psr:hasLocation psr:kitchen .
+psr:alpen_salt a psr:Object ;
+    rdfs:label "Alpen Salt"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:drawer a psr:Furniture ;
-    rdfs:label "drawer"@en ;
-    psr:hasLocation psr:kitchen .
+psr:evian_water a psr:Object ;
+    rdfs:label "Evian water"@en ;
+    psr:hasLocation psr:cupboard .
 
-psr:countertop a psr:Component ;
-    rdfs:label "countertop"@en ;
-    psr:hasLocation psr:kitchen .
+dul:hasComponent(psr:kitchen, psr:refrigerator) ;
+    dul:hasComponent(psr:kitchen, psr:table) ;
+    dul:hasComponent(psr:kitchen, psr:chair) ;
+    dul:hasComponent(psr:kitchen, psr:cupboard) .
 
-dul:hasComponent(psr:kitchen, psr:refrigerator) .
-dul:hasComponent(psr:kitchen, psr:table) .
-dul:hasComponent(psr:kitchen, psr:chair) .
-dul:hasComponent(psr:kitchen, psr:cabinet) .
-dul:hasComponent(psr:kitchen, psr:drawer) .
-dul:hasComponent(psr:kitchen, psr:countertop) .
-dul:hasComponent(psr:kitchen, psr:sink) .
-dul:hasComponent(psr:kitchen, psr:stove) .
+dul:hasComponent(psr:cupboard, psr:jello_box) ;
+    dul:hasComponent(psr:cupboard, psr:plates) ;
+    dul:hasComponent(psr:cupboard, psr:cups) ;
+    dul:hasComponent(psr:cupboard, psr:jar) ;
+    dul:hasComponent(psr:cupboard, psr:alpen_salt) ;
+    dul:hasComponent(psr:cupboard, psr:evian_water) .
 
-psr:hasAffordance(psr:cup, soma:PickingUp) .
-psr:hasAffordance(psr:cup, soma:PuttingDown) .
-psr:hasAffordance(psr:book, soma:PickingUp) .
-psr:hasAffordance(psr:book, soma:PuttingDown) .
-psr:hasAffordance(psr:water_bottle, soma:PickingUp) .
-psr:hasAffordance(psr:water_bottle, soma:PuttingDown) .
-psr:hasAffordance(psr:plate, soma:PickingUp) .
-psr:hasAffordance(psr:plate, soma:PuttingDown) .
+psr:onTopOf(psr:refrigerator, psr:kitchen) ;
+    psr:onTopOf(psr:table, psr:kitchen) ;
+    psr:onTopOf(psr:chair, psr:kitchen) ;
+    psr:onTopOf(psr:cupboard, psr:kitchen) ;
 
-geo:sfWithin(psr:refrigerator, psr:kitchen) .
-geo:sfWithin(psr:table, psr:kitchen) .
-geo:sfWithin(psr:chair, psr:kitchen) .
-geo:sfWithin(psr:cabinet, psr:kitchen) .
-geo:sfWithin(psr:drawer, psr:kitchen) .
-geo:sfWithin(psr:countertop, psr:kitchen) .
-geo:sfWithin(psr:sink, psr:kitchen) .
-geo:sfWithin(psr:stove, psr:kitchen) .
+geo:sfContains(psr:kitchen, psr:refrigerator) ;
+    geo:sfContains(psr:kitchen, psr:table) ;
+    geo:sfContains(psr:kitchen, psr:chair) ;
+    geo:sfContains(psr:kitchen, psr:cupboard) ;

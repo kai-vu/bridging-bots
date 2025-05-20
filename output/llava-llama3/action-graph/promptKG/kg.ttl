@@ -9,11 +9,11 @@
 
 :instruction1 a psr:Instruction ;
     rdfs:label "Restore the kitchen to an organized state" ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function" ;
     psr:hasWorkflow :workflow1 .
 
 :workflow1 a psr:Workflow ;
-    psr:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10, :action11, :action12, :action13, :action14, :action15 ;
+    psr:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10, :action11, :action12 ;
     psr:precedes :action2 :action1 ;
     psr:precedes :action3 :action2 ;
     psr:precedes :action4 :action3 ;
@@ -24,124 +24,151 @@
     psr:precedes :action9 :action8 ;
     psr:precedes :action10 :action9 ;
     psr:precedes :action11 :action10 ;
-    psr:precedes :action12 :action11 ;
-    psr:precedes :action13 :action12 ;
-    psr:precedes :action14 :action13 ;
-    psr:precedes :action15 :action14 .
+    psr:precedes :action12 :action11 .
 
 :action1 a dul:Action ;
-    rdfs:label "Pick up cupcake holder" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :cupcake_holder ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Identify misplaced items in the kitchen" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component1 ;
+    psr:isAffordedBy :affordance1 .
 
 :action2 a dul:Action ;
-    rdfs:label "Put down cupcake holder in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :cupcake_holder ;
-    psr:isAffordedBy :soma:PuttingDown .
+    rdfs:label "Pick up orange container" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component2 ;
+    psr:isAffordedBy :affordance2 .
 
 :action3 a dul:Action ;
-    rdfs:label "Pick up small model of house" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :house_model ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Put down orange container in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component3 ;
+    psr:isAffordedBy :affordance3 .
 
 :action4 a dul:Action ;
-    rdfs:label "Put down small model of house in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :house_model ;
-    psr:isAffordedBy :soma:PuttingDown .
+    rdfs:label "Pick up bottles and cups" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component4 ;
+    psr:isAffordedBy :affordance4 .
 
 :action5 a dul:Action ;
-    rdfs:label "Pick up empty glass jar" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :empty_glass_jar ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Put down bottles and cups in dish drainer" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component5 ;
+    psr:isAffordedBy :affordance5 .
 
 :action6 a dul:Action ;
-    rdfs:label "Put down empty glass jar in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :empty_glass_jar ;
-    psr:isAffordedBy :soma:PuttingDown .
+    rdfs:label "Pick up wooden cutting board" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component6 ;
+    psr:isAffordedBy :affordance6 .
 
 :action7 a dul:Action ;
-    rdfs:label "Pick up white mug" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :white_mug ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Put down wooden cutting board in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component7 ;
+    psr:isAffordedBy :affordance7 .
 
 :action8 a dul:Action ;
-    rdfs:label "Put down white mug in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :white_mug ;
-    psr:isAffordedBy :soma:PuttingDown .
+    rdfs:label "Pick up boxes of food" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component8 ;
+    psr:isAffordedBy :affordance8 .
 
 :action9 a dul:Action ;
-    rdfs:label "Pick up box of cereal" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :box_of_cereal ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Put down boxes of food in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component9 ;
+    psr:isAffordedBy :affordance9 .
 
 :action10 a dul:Action ;
-    rdfs:label "Put down box of cereal in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :box_of_cereal ;
-    psr:isAffordedBy :soma:PuttingDown .
+    rdfs:label "Pick up items from shelf on fridge" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component10 ;
+    psr:isAffordedBy :affordance10 .
 
 :action11 a dul:Action ;
-    rdfs:label "Pick up two cups" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :two_cups ;
-    psr:isAffordedBy :soma:PickingUp .
+    rdfs:label "Put down items from shelf on fridge in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component11 ;
+    psr:isAffordedBy :affordance11 .
 
 :action12 a dul:Action ;
-    rdfs:label "Put down two cups in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :two_cups ;
-    psr:isAffordedBy :soma:PuttingDown .
-
-:action13 a dul:Action ;
-    rdfs:label "Pick up two bottles" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :two_bottles ;
-    psr:isAffordedBy :soma:PickingUp .
-
-:action14 a dul:Action ;
-    rdfs:label "Put down two bottles in cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :two_bottles ;
-    psr:isAffordedBy :soma:PuttingDown .
-
-:action15 a dul:Action ;
     rdfs:label "Close cabinet" ;
-    soma:isPerformedBy :robot ;
-    psr:actsOn :cabinet ;
-    psr:isAffordedBy :soma:Closing .
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :component12 ;
+    psr:isAffordedBy :affordance12 .
 
-:robot a dul:Agent ;
+:agent1 a dul:Agent ;
     rdfs:label "Robot" .
 
-:cupcake_holder a psr:Object ;
-    rdfs:label "Cupcake holder" .
+:component1 a psr:Component ;
+    rdfs:label "Kitchen" .
 
-:house_model a psr:Object ;
-    rdfs:label "Small model of house" .
+:component2 a psr:Object ;
+    rdfs:label "Orange container" .
 
-:empty_glass_jar a psr:Object ;
-    rdfs:label "Empty glass jar" .
+:component3 a psr:Component ;
+    rdfs:label "Cabinet" .
 
-:white_mug a psr:Object ;
-    rdfs:label "White mug" .
+:component4 a psr:Object ;
+    rdfs:label "Bottles and cups" .
 
-:box_of_cereal a psr:Object ;
-    rdfs:label "Box of cereal" .
+:component5 a psr:Component ;
+    rdfs:label "Dish drainer" .
 
-:two_cups a psr:Object ;
-    rdfs:label "Two cups" .
+:component6 a psr:Object ;
+    rdfs:label "Wooden cutting board" .
 
-:two_bottles a psr:Object ;
-    rdfs:label "Two bottles" .
+:component7 a psr:Component ;
+    rdfs:label "Cabinet" .
 
-:cabinet a psr:Appliance ;
-    rdfs:label "Kitchen cabinet" .
+:component8 a psr:Object ;
+    rdfs:label "Boxes of food" .
+
+:component9 a psr:Component ;
+    rdfs:label "Cabinet" .
+
+:component10 a psr:Component ;
+    rdfs:label "Shelf on fridge" .
+
+:component11 a psr:Component ;
+    rdfs:label "Cabinet" .
+
+:component12 a psr:Component ;
+    rdfs:label "Cabinet" .
+
+:affordance1 a psr:Affordance ;
+    rdfs:label "Identify" .
+
+:affordance2 a soma:PickingUp ;
+    rdfs:label "Pick up" .
+
+:affordance3 a soma:PuttingDown ;
+    rdfs:label "Put down" .
+
+:affordance4 a soma:PickingUp ;
+    rdfs:label "Pick up" .
+
+:affordance5 a soma:PuttingDown ;
+    rdfs:label "Put down" .
+
+:affordance6 a soma:PickingUp ;
+    rdfs:label "Pick up" .
+
+:affordance7 a soma:PuttingDown ;
+    rdfs:label "Put down" .
+
+:affordance8 a soma:PickingUp ;
+    rdfs:label "Pick up" .
+
+:affordance9 a soma:PuttingDown ;
+    rdfs:label "Put down" .
+
+:affordance10 a soma:PickingUp ;
+    rdfs:label "Pick up" .
+
+:affordance11 a soma:PuttingDown ;
+    rdfs:label "Put down" .
+
+:affordance12 a soma:Closing ;
+    rdfs:label "Close" .

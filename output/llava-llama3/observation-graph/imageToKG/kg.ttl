@@ -1,29 +1,39 @@
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix psr: <http://www.ease-crc.org/ont/psr/0.1#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf#> .
-@prefix dul: <http://www.ease-crc.org/ont/DUL#> .
-@prefix soma: <http://www.ease-crc.org/ont/SOMA#> .
-@prefix owl: <http://www.w3.org/2002/12/owl#> .
+@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .
+@prefix dul: <http://example.com/ontology#> .
+@prefix geo: <http://www.opengis.net/def/201703/wfs.md#> .
 
-<http://example.com/environment_01> a psr:Environment, rdfs:Resource.
-<http://example.com/component_01> a psr:Component, dul:Entity, geo:SpatialThing ;
-    psr:hasAffordance <http://example.com/affordance_open>;
-    psr:hasLocation <http://example.com/location_01>.
-<http://example.com/component_02> a psr:Component, dul:Entity, geo:SpatialThing ;
-    psr:hasAffordance <http://example.com/affordance_close>;
-    psr:hasLocation <http://example.com/location_01>.
-<http://example.com/component_03> a psr:Component, dul:Entity, geo:SpatialThing ;
-    psr:hasAffordance <http://example.com/affordance_push>;
-    psr:hasLocation <http://example.com/location_02>.
-<http://example.com/location_01> a geo:SpatialThing, dul:Entity.
-<http://example.com/location_02> a geo:SpatialThing, dul:Entity.
-  
-<http://example.com/affordance_open> a psr:Affordance ;
-  rdfs:label "Open"@en.
-  
-<http://example.com/affordance_close> a psr:Affordance ;
-  rdfs:label "Close"@en.
-  
-<http://example.com/affordance_push> a psr:Affordance ;
-  rdfs:label "Push"@en.
+# Environment
+:Environment a dul:Entity ;
+    dul:hasComponent :Appliance ;
+    dul:hasComponent :Furniture ;
+    dul:hasComponent :Object ;
+    geo:sfOverlaps :Appliance ;
+    geo:sfOverlaps :Furniture ;
+    geo:sfContains :Furniture ;
+    geo:sfWithin :Object .
+
+# Appliance
+:Appliance a dul:Entity ;
+    dul:hasAffordance :Closing ;
+    dul:hasAffordance :Opening ;
+    dul:hasAffordance :Delivering ;
+    dul:hasLocation :StandardLocation.
+
+# Furniture
+:Furniture a dul:Entity ;
+    dul:hasLocation :CurrentLocation ;
+    dul:hasAffordance :Closing ;
+    dul:hasAffordance :Opening ;
+    dul:hasAffordance :Delivering ;
+    dul:hasAffordance :PickingUp ;
+    dul:hasAffordance :PuttingDown ;
+    dul:hasAffordance :Pulling ;
+    dul:hasAffordance :Grabbing .
+
+# Object
+:Object a dul:Entity ;
+    dul:hasLocation :CurrentLocation.
+
+# Standard Location
+:StandardLocation a dul:Entity ;
+    geo:sfContains :Furniture.

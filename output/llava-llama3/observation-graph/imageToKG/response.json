@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-5b78e8ed-ed9d-4da3-b0b4-803fb1d03f09",
-    "created": 1747688000,
+    "id": "llava:7b-b32e49b4-b2b0-4b93-8936-a279a4112c47",
+    "created": 1747733587,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " Certainly! Based on the provided ontology and the images, I can generate a Knowledge Graph in Turtle format for you. Here is the output:\n\n```turtle\n@prefix geo: <http://www.opengis.net/ont/geosparql#>\n@prefix psr: <http://www.ease-crc.org/ont/psr/0.1#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf#>\n@prefix dul: <http://www.ease-crc.org/ont/DUL#>\n@prefix soma: <http://www.ease-crc.org/ont/SOMA#>\n@prefix owl: <http://www.w3.org/2002/12/owl#>\n\n<http://example.com/environment_01> a psr:Environment, rdfs:Resource.\n  <http://example.com/component_01> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_open>.\n    psr:hasLocation <http://example.com/location_01>.\n  <http://example.com/component_02> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_close>.\n    psr:hasLocation <http://example.com/location_01>.\n  <http://example.com/component_03> a psr:Component, dul:Entity, geo:SpatialThing ;\n    psr:hasAffordance <http://example.com/affordance_push>.\n    psr:hasLocation <http://example.com/location_02>.\n  <http://example.com/location_01> a geo:SpatialThing, dul:Entity.\n  <http://example.com/location_02> a geo:SpatialThing, dul:Entity.\n  \n<http://example.com/affordance_open> a psr:Affordance ;\n  rdfs:label \"Open\"@en.\n  \n<http://example.com/affordance_close> a psr:Affordance ;\n  rdfs:label \"Close\"@en.\n  \n<http://example.com/affordance_push> a psr:Affordance ;\n  rdfs:label \"Push\"@en.\n```\n\nThis Knowledge Graph represents the environment and its components, their locations, and the affordances associated with them based on the images provided. ",
+                "content": " ```python\n@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .\n@prefix dul: <http://example.com/ontology#> .\n@prefix geo: <http://www.opengis.net/def/201703/wfs.md#> .\n\n# Environment\n:Environment a dul:Entity ;\n    dul:hasComponent :Appliance ;\n    dul:hasComponent :Furniture ;\n    dul:hasComponent :Object ;\n    geo:sfOverlaps :Appliance ;\n    geo:sfOverlaps :Furniture ;\n    geo:sfContains :Furniture ;\n    geo:sfWithin :Object .\n\n# Appliance\n:Appliance a dul:Entity ;\n    dul:hasAffordance :Closing ;\n    dul:hasAffordance :Opening ;\n    dul:hasAffordance :Delivering ;\n    dul:hasLocation :StandardLocation.\n\n# Furniture\n:Furniture a dul:Entity ;\n    dul:hasLocation :CurrentLocation ;\n    dul:hasAffordance :Closing ;\n    dul:hasAffordance :Opening ;\n    dul:hasAffordance :Delivering ;\n    dul:hasAffordance :PickingUp ;\n    dul:hasAffordance :PuttingDown ;\n    dul:hasAffordance :Pulling ;\n    dul:hasAffordance :Grabbing .\n\n# Object\n:Object a dul:Entity ;\n    dul:hasLocation :CurrentLocation.\n\n# Standard Location\n:StandardLocation a dul:Entity ;\n    geo:sfContains :Furniture.\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 69.4,
-        "prompt_token/s": 1861.81,
-        "total_duration": 12169741293,
-        "load_duration": 50705593,
+        "response_token/s": 69.44,
+        "prompt_token/s": 1861.4,
+        "total_duration": 8478315520,
+        "load_duration": 50297907,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2200013532,
-        "eval_count": 686,
-        "completion_tokens": 686,
-        "eval_duration": 9884579071,
-        "approximate_total": "0h0m12s",
-        "total_tokens": 4782,
+        "prompt_eval_duration": 2200489727,
+        "eval_count": 430,
+        "completion_tokens": 430,
+        "eval_duration": 6192673672,
+        "approximate_total": "0h0m8s",
+        "total_tokens": 4526,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

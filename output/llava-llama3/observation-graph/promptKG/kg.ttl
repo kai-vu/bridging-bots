@@ -6,148 +6,85 @@
 @prefix psr:    <https://w3id.org/psr-task#> .
 
 :Kitchen a psr:Environment .
+:DiningArea a psr:Environment .
 
-:BlackCabinet1 a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation1 .
+:Refrigerator a psr:Appliance .
+:LightFixture1 a psr:Object .
+:Shelf1 a psr:Furniture .
+:OrangeContainer a psr:Object .
+:FoodBoxes a psr:Object .
+:Sink a psr:Appliance .
+:CuttingBoard a psr:Object .
+:DishDrainer a psr:Object .
+:WhiteChair a psr:Furniture .
+:Countertop a psr:Object .
+:Cabinet1 a psr:Furniture .
+:DiningTable a psr:Furniture .
+:Sofa a psr:Furniture .
+:LightFixture2 a psr:Object .
+:PictureFrame a psr:Object .
+:Shelf2 a psr:Furniture .
+:DiningChair a psr:Furniture .
+:Cabinet2 a psr:Furniture .
 
-:KitchenLocation1 a psr:Location .
+:Kitchen dul:hasComponent :Refrigerator .
+:Kitchen dul:hasComponent :LightFixture1 .
+:Kitchen dul:hasComponent :Shelf1 .
+:Kitchen dul:hasComponent :Sink .
+:Kitchen dul:hasComponent :CuttingBoard .
+:Kitchen dul:hasComponent :DishDrainer .
+:Kitchen dul:hasComponent :WhiteChair .
+:Kitchen dul:hasComponent :Countertop .
+:Kitchen dul:hasComponent :Cabinet1 .
+:Kitchen dul:hasComponent :DiningTable .
 
-:Countertop a psr:Component, psr:Furniture ;
-    dul:hasLocation :KitchenLocation2 .
+:DiningArea dul:hasComponent :Sofa .
+:DiningArea dul:hasComponent :LightFixture2 .
+:DiningArea dul:hasComponent :PictureFrame .
+:DiningArea dul:hasComponent :Shelf2 .
+:DiningArea dul:hasComponent :DiningChair .
+:DiningArea dul:hasComponent :Cabinet2 .
 
-:KitchenLocation2 a psr:Location .
+:Shelf1 dul:hasComponent :OrangeContainer .
+:Shelf1 dul:hasComponent :FoodBoxes .
 
-:Refrigerator a psr:Appliance, psr:Component ;
-    dul:hasLocation :KitchenLocation3 ;
-    psr:hasAffordance :Closing ;
-    psr:hasAffordance :Opening .
+:Refrigerator psr:hasAffordance soma:Opening .
+:Refrigerator psr:hasAffordance soma:Closing .
 
-:KitchenLocation3 a psr:Location .
+:Sofa psr:hasAffordance soma:PickingUp .
+:Sofa psr:hasAffordance soma:PuttingDown .
 
-:Sinks a psr:Appliance, psr:Component ;
-    dul:hasLocation :KitchenLocation4 .
+:Shelf1 psr:hasAffordance soma:Holding .
+:Shelf2 psr:hasAffordance soma:Holding .
 
-:KitchenLocation4 a psr:Location .
+:Sink psr:hasAffordance soma:Delivering .
 
-:Table a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation5 .
+:CuttingBoard psr:hasAffordance soma:Grasping .
+:CuttingBoard psr:hasAffordance soma:Pushing .
+:CuttingBoard psr:hasAffordance soma:Pulling .
 
-:KitchenLocation5 a psr:Location .
+:DishDrainer psr:hasAffordance soma:Grasping .
+:DishDrainer psr:hasAffordance soma:Pushing .
+:DishDrainer psr:hasAffordance soma:Pulling .
 
-:Chair1 a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation6 .
+:Refrigerator dul:hasLocation :Kitchen .
+:LightFixture1 dul:hasLocation :Kitchen .
+:Shelf1 dul:hasLocation :Kitchen .
+:Sink dul:hasLocation :Kitchen .
+:CuttingBoard dul:hasLocation :Kitchen .
+:CuttingBoard psr:onTopOf :Sink .
+:DishDrainer dul:hasLocation :Kitchen .
+:DishDrainer psr:onTopOf :Sink .
+:WhiteChair dul:hasLocation :Kitchen .
+:Countertop dul:hasLocation :Kitchen .
+:Cabinet1 dul:hasLocation :Kitchen .
+:DiningTable dul:hasLocation :Kitchen .
+:DiningTable geo:sfOverlaps :Kitchen .
+:DiningTable geo:sfOverlaps :DiningArea .
 
-:KitchenLocation6 a psr:Location .
-
-:Chair2 a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation7 .
-
-:KitchenLocation7 a psr:Location .
-
-:Chair3 a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation8 .
-
-:KitchenLocation8 a psr:Location .
-
-:Chair4 a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation9 .
-
-:KitchenLocation9 a psr:Location .
-
-:HouseModel a psr:Object, psr:Component ;
-    dul:hasLocation :TableLocation .
-
-:TableLocation a psr:Location ;
-    geo:sfOnTopOf :Table .
-
-:CupcakeHolder a psr:Object, psr:Component ;
-    dul:hasLocation :TableLocation2 .
-
-:TableLocation2 a psr:Location ;
-    geo:sfOnTopOf :Table .
-
-:Picture a psr:Object, psr:Component ;
-    dul:hasLocation :WallLocation1 .
-
-:WallLocation1 a psr:Location .
-
-:Stove a psr:Appliance, psr:Component ;
-    dul:hasLocation :KitchenLocation10 .
-
-:KitchenLocation10 a psr:Location .
-
-:Shelf a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation11 .
-
-:KitchenLocation11 a psr:Location .
-
-:CabinetSet a psr:Furniture, psr:Component ;
-    dul:hasLocation :KitchenLocation12 .
-
-:KitchenLocation12 a psr:Location .
-
-:CerealBox a psr:Object, psr:Component ;
-    dul:hasLocation :CountertopLocation .
-
-:CountertopLocation a psr:Location ;
-    geo:sfOnTopOf :Countertop .
-
-:Cup1 a psr:Object, psr:Component ;
-    dul:hasLocation :CountertopLocation2 .
-
-:CountertopLocation2 a psr:Location ;
-    geo:sfOnTopOf :Countertop .
-
-:Cup2 a psr:Object, psr:Component ;
-    dul:hasLocation :CountertopLocation3 .
-
-:CountertopLocation3 a psr:Location ;
-    geo:sfOnTopOf :Countertop .
-
-:Bottle1 a psr:Object, psr:Component ;
-    dul:hasLocation :CountertopLocation4 .
-
-:CountertopLocation4 a psr:Location ;
-    geo:sfOnTopOf :Countertop .
-
-:Bottle2 a psr:Object, psr:Component ;
-    dul:hasLocation :CountertopLocation5 .
-
-:CountertopLocation5 a psr:Location ;
-    geo:sfOnTopOf :Countertop .
-
-:GlassJar a psr:Object, psr:Component ;
-    dul:hasLocation :TableLocation3 .
-
-:TableLocation3 a psr:Location ;
-    geo:sfOnTopOf :Table .
-
-:Mug a psr:Object, psr:Component ;
-    dul:hasLocation :TableLocation4 .
-
-:TableLocation4 a psr:Location ;
-    geo:sfOnTopOf :Table .
-
-:Kitchen a psr:Environment ;
-    dul:hasComponent :BlackCabinet1 ;
-    dul:hasComponent :Countertop ;
-    dul:hasComponent :Refrigerator ;
-    dul:hasComponent :Sinks ;
-    dul:hasComponent :Table ;
-    dul:hasComponent :Chair1 ;
-    dul:hasComponent :Chair2 ;
-    dul:hasComponent :Chair3 ;
-    dul:hasComponent :Chair4 ;
-    dul:hasComponent :HouseModel ;
-    dul:hasComponent :CupcakeHolder ;
-    dul:hasComponent :Picture ;
-    dul:hasComponent :Stove ;
-    dul:hasComponent :Shelf ;
-    dul:hasComponent :CabinetSet ;
-    dul:hasComponent :CerealBox ;
-    dul:hasComponent :Cup1 ;
-    dul:hasComponent :Cup2 ;
-    dul:hasComponent :Bottle1 ;
-    dul:hasComponent :Bottle2 ;
-    dul:hasComponent :GlassJar ;
-    dul:hasComponent :Mug .
+:Sofa dul:hasLocation :DiningArea .
+:LightFixture2 dul:hasLocation :DiningArea .
+:PictureFrame dul:hasLocation :DiningArea .
+:Shelf2 dul:hasLocation :DiningArea .
+:DiningChair dul:hasLocation :DiningArea .
+:Cabinet2 dul:hasLocation :DiningArea .

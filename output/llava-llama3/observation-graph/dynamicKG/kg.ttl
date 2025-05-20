@@ -1,36 +1,34 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:Kitchen kitchen:HAS_COMPONENT kitchen:Countertops,
-        kitchen:Floor,
-        kitchen:Kitchen_Cabinets,
-        kitchen:Lighting,
-        kitchen:Personal_Touches,
-        kitchen:Refrigerator,
-        kitchen:Shelves_and_Storage,
-        kitchen:Sink,
-        kitchen:Stove_Top_Oven,
-        kitchen:Table,
-        kitchen:Wall_Decor ;
-    kitchen:HAS_LOCATION kitchen:Room .
+kitchen:kitchen kitchen:HAS_COMPONENT kitchen:dish_drainer,
+        kitchen:light_fixture,
+        kitchen:light_wood_flooring,
+        kitchen:refrigerator,
+        kitchen:sink,
+        kitchen:small_shelf,
+        kitchen:white_chair,
+        kitchen:white_countertop ;
+    kitchen:SF_OVERLAPS kitchen:dining_area .
 
-kitchen:Countertops kitchen:HAS_AFFORDANCE kitchen:No_Clutter .
+kitchen:dining_area kitchen:HAS_COMPONENT kitchen:brown_sofa,
+        kitchen:cabinet_with_glass_doors,
+        kitchen:light_fixture,
+        kitchen:light_wood_flooring,
+        kitchen:small_shelf,
+        kitchen:wall,
+        kitchen:white_dining_chair .
 
-kitchen:Kitchen_Cabinets kitchen:HAS_AFFORDANCE kitchen:Storage_Space .
+kitchen:refrigerator kitchen:HAS_AFFORDANCE kitchen:white_surface ;
+    kitchen:ON_TOP_OF kitchen:light_fixture .
 
-kitchen:Personal_Touches kitchen:HAS_AFFORDANCE kitchen:Bottles,
-        kitchen:Box_of_Cereal,
-        kitchen:Cups .
+kitchen:sink kitchen:HAS_COMPONENT kitchen:bottles,
+        kitchen:cups ;
+    kitchen:ON_TOP_OF kitchen:wooden_cutting_board .
 
-kitchen:Refrigerator kitchen:HAS_AFFORDANCE kitchen:Closed_Door .
+kitchen:wall kitchen:HAS_COMPONENT kitchen:picture_frame .
 
-kitchen:Shelves_and_Storage kitchen:HAS_AFFORDANCE kitchen:No_Items .
+kitchen:white_countertop kitchen:HAS_COMPONENT kitchen:cabinet .
 
-kitchen:Sink kitchen:HAS_AFFORDANCE kitchen:Chrome_Fixtures .
-
-kitchen:Table kitchen:HAS_AFFORDANCE kitchen:Cupcake_Holder,
-        kitchen:Empty_Glass_Jar,
-        kitchen:House_Model,
-        kitchen:White_Mug .
-
-kitchen:Wall_Decor kitchen:HAS_AFFORDANCE kitchen:Framed_Picture .
+kitchen:small_shelf kitchen:HAS_COMPONENT kitchen:boxes_of_food,
+        kitchen:orange_container .
 

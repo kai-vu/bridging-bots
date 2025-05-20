@@ -5,66 +5,136 @@
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
 
-# Define Environment
-psr:Environment1 a psr:Environment .
+###################################
+# Environment
+###################################
+psr:Kitchen a psr:Environment ;
+    rdfs:label "Kitchen Environment"@en ;
+    dul:hasComponent psr:Cabinet, psr:Refrigerator, psr:Table .
 
-# Components in the environment
-psr:Fridge a psr:Appliance ;
-    dul:hasComponent psr:FridgeComponent .
+###################################
+# Components
+###################################
+psr:Cabinet a psr:Furniture ;
+    rdfs:label "Kitchen Cabinet"@en ;
+    dul:hasLocation psr:CabinetLocation .
 
-psr:FridgeComponent a psr:Component ;
-    dul:hasLocation psr:FridgeLocation .
+psr:Refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation psr:RefrigeratorLocation ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
 psr:Table a psr:Furniture ;
-    dul:hasComponent psr:TableComponent .
-
-psr:TableComponent a psr:Component ;
+    rdfs:label "Dining Table"@en ;
     dul:hasLocation psr:TableLocation .
 
-psr:KitchenCounter a psr:Object ;
-    dul:hasComponent psr:CounterComponent .
-
-psr:CounterComponent a psr:Component ;
+psr:KitchenCounter a psr:Furniture ;
+    rdfs:label "Kitchen Counter"@en ;
     dul:hasLocation psr:CounterLocation .
 
-# Locations
-psr:FridgeLocation a soma:Location .
+psr:DishShelf a psr:Furniture ;
+    rdfs:label "Dish Shelf"@en ;
+    dul:hasLocation psr:DishShelfLocation .
 
-psr:TableLocation a soma:Location .
-
-psr:CounterLocation a soma:Location .
-
-# Link locations to environment
-dul:hasComponent psr:Environment1 psr:FridgeComponent, psr:TableComponent, psr:CounterComponent .
-
-# Affordances for components
-psr:RefrigeratorDoor a psr:Object, psr:Component ;
+psr:Door a psr:Object ;
     rdfs:label "Refrigerator Door"@en ;
-    psr:hasAffordance soma:Opening .
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:CabinetDoor a psr:Object, psr:Component ;
-    rdfs:label "Cabinet Door"@en ;
-    psr:hasAffordance soma:Opening .
+psr:CounterDrawers a psr:Furniture ;
+    rdfs:label "Counter Drawers"@en ;
+    dul:hasLocation psr:CounterDrawersLocation .
 
-psr:Drawer a psr:Object, psr:Component ;
-    rdfs:label "Drawer"@en ;
-    psr:hasAffordance soma:Pulling, soma:PuttingDown .
+###################################
+# Locations
+###################################
+psr:CabinetLocation a soma:Location ;
+    rdfs:label "Cabinet Location"@en .
 
-psr:RefrigeratorDoor psr:hasAffordance soma:Opening .
-psr:CabinetDoor psr:hasAffordance soma:Opening .
-psr:Drawer psr:hasAffordance soma:Pulling, soma:PuttingDown .
+psr:RefrigeratorLocation a soma:Location ;
+    rdfs:label "Refrigerator Location"@en .
 
-# Objects on the kitchen counter
+psr:TableLocation a soma:Location ;
+    rdfs:label "Table Location"@en .
+
+psr:CounterLocation a soma:Location ;
+    rdfs:label "Counter Location"@en .
+
+psr:DishShelfLocation a soma:Location ;
+    rdfs:label "Dish Shelf Location"@en .
+
+psr:CounterDrawersLocation a soma:Location ;
+    rdfs:label "Counter Drawers Location"@en .
+
+###################################
+# Objects
+###################################
+psr:Bottle a psr:Object ;
+    rdfs:label "Water Bottle"@en ;
+    dul:hasLocation psr:BottleLocation ;
+    psr:hasAffordance soma:Holding, soma:Pushing .
+
+psr:Box of Jello a psr:Object ;
+    rdfs:label "Box of Jello"@en ;
+    dul:hasLocation psr:JelloBoxLocation ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+
+psr:Box of Shortbread a psr:Object ;
+    rdfs:label "Box of Shortbread"@en ;
+    dul:hasLocation psr:ShortbreadBoxLocation ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+
+psr:Spoon a psr:Object ;
+    rdfs:label "Spoon"@en ;
+    dul:hasLocation psr:SpoonLocation ;
+    psr:hasAffordance soma:Grasping .
+
+psr:Cup a psr:Object ;
+    rdfs:label "Wine Glass"@en ;
+    dul:hasLocation psr:CupLocation ;
+    psr:hasAffordance soma:Holding, soma:PuttingDown .
+
 psr:Jug a psr:Object ;
-    dul:hasLocation psr:CounterLocation .
+    rdfs:label "Jug"@en ;
+    dul:hasLocation psr:JugLocation ;
+    psr:hasAffordance soma:Holding, soma:PuttingDown .
 
-psr:Box a psr:Object ;
-    dul:hasLocation psr:CounterLocation .
+psr:FoodItem a psr:Object ;
+    rdfs:label "Food Item"@en ;
+    dul:hasLocation psr:FoodLocation .
 
-psr:Glass a psr:Object ;
-    dul:hasLocation psr:CounterLocation .
+###################################
+# Locations for objects
+###################################
+psr:BottleLocation a soma:Location ;
+    rdfs:label "Bottle Location"@en .
 
-psr:PackagedFood a psr:Object ;
-    dul:hasLocation psr:CounterLocation .
+psr:JelloBoxLocation a soma:Location ;
+    rdfs:label "Jello Box Location"@en .
 
-# Note: All objects and locations are associated with the environment and specific locations as per ontology.
+psr:ShortbreadBoxLocation a soma:Location ;
+    rdfs:label "Shortbread Box Location"@en .
+
+psr:SpoonLocation a soma:Location ;
+    rdfs:label "Spoon Location"@en .
+
+psr:CupLocation a soma:Location ;
+    rdfs:label "Cup Location"@en .
+
+psr:JugLocation a soma:Location ;
+    rdfs:label "Jug Location"@en .
+
+psr:FoodLocation a soma:Location ;
+    rdfs:label "Food Item Location"@en .
+
+###################################
+# Affordances for Components
+###################################
+psr:RefrigeratorHasDoor a owl:NamedIndividual ;
+    a soma:Opening ;
+    rdfs:label "Refrigerator Door Opening"@en .
+
+psr:RefrigeratorCanClose a owl:NamedIndividual ;
+    a soma:Closing ;
+    rdfs:label "Refrigerator Can Close"@en .
+
+# End of Knowledge Graph

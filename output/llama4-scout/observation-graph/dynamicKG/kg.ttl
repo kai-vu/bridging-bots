@@ -1,38 +1,34 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:dining_table kitchen:hasObject kitchen:Chucky_puzzle .
+kitchen:atmosphere kitchen:isA kitchen:clean_and_organized .
 
-kitchen:environment kitchen:isA kitchen:dining_room,
-        kitchen:kitchen .
+kitchen:ceiling kitchen:hasComponent kitchen:light_fixture .
 
-kitchen:kitchen_counter kitchen:hasObject kitchen:Alpen_Salt,
-        kitchen:Chucky_puzzle,
-        kitchen:Jello,
-        kitchen:jam,
-        kitchen:shortbread_cookies .
-
-kitchen:table kitchen:hasObject kitchen:bottle_of_water,
-        kitchen:cookbook,
-        kitchen:mug,
-        kitchen:plate_with_fruit .
-
-kitchen:countertop kitchen:hasObject kitchen:Rice_Bubbles_cereal,
-        kitchen:box_of_shortbread_cookies,
+kitchen:counter kitchen:sfContains kitchen:box_of_Rice_Bubbles,
         kitchen:jar_of_jam,
-        kitchen:strawberry_banana_Jello,
-        kitchen:yellow_mug .
+        kitchen:pot .
 
-kitchen:kitchen kitchen:Opening kitchen:dining_area ;
-    kitchen:hasAffordance kitchen:cooking ;
-    kitchen:hasComponent kitchen:cabinets,
-        kitchen:countertop,
-        kitchen:refrigerator,
-        kitchen:stovetop ;
-    kitchen:sfOverlaps kitchen:dining_room .
+kitchen:floor kitchen:isA kitchen:dark_wood_parquet_tiles .
 
-kitchen:stovetop kitchen:hasObject kitchen:pot .
+kitchen:refrigerator kitchen:onTopOf kitchen:wall ;
+    kitchen:sfWithin kitchen:kitchen .
 
-kitchen:dining_room kitchen:hasAffordance kitchen:eating ;
-    kitchen:hasComponent kitchen:white_chairs,
-        kitchen:wooden_table .
+kitchen:table kitchen:sfContains kitchen:book,
+        kitchen:bottle_of_water,
+        kitchen:bowl_of_fruit ;
+    kitchen:sfWithin kitchen:dining_area .
+
+kitchen:walls kitchen:hasProperty kitchen:white .
+
+kitchen:cabinets kitchen:hasAffordance kitchen:storage .
+
+kitchen:dining_area kitchen:hasComponent kitchen:wooden_table ;
+    kitchen:sfWithin kitchen:environment .
+
+kitchen:environment kitchen:isA kitchen:kitchen .
+
+kitchen:kitchen kitchen:hasComponent kitchen:cabinets,
+        kitchen:marble_countertops,
+        kitchen:stainless_steel_sink ;
+    kitchen:sfWithin kitchen:environment .
 

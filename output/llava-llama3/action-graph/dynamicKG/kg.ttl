@@ -1,46 +1,46 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:assistant kitchen:CLOSES kitchen:cabinet_door,
-        kitchen:cabinet_or_pantry_door ;
-    kitchen:MOVES_TO kitchen:cabinets_on_the_far_left_wall_of_the_kitchen,
-        kitchen:countertops_near_the_sink,
-        kitchen:pantry_or_storage_area,
-        kitchen:table ;
-    kitchen:OPENS kitchen:cabinet_door,
-        kitchen:cabinet_or_pantry_door ;
-    kitchen:PICKS_UP kitchen:box_of_cereal,
-        kitchen:cupcake_holder,
-        kitchen:empty_glass_jar,
-        kitchen:small_model_of_a_house,
-        kitchen:two_bottles,
-        kitchen:two_cups,
-        kitchen:white_mug ;
-    kitchen:PLACES kitchen:box_of_cereal,
-        kitchen:cupcake_holder,
-        kitchen:empty_glass_jar,
-        kitchen:small_model_of_a_house,
-        kitchen:two_bottles,
-        kitchen:two_cups,
-        kitchen:white_mug .
+kitchen:assistant kitchen:APPROACHES kitchen:cabinet_with_glass_doors,
+        kitchen:dining_table,
+        kitchen:sink,
+        kitchen:small_shelf_on_top_of_fridge,
+        kitchen:small_shelf_to_left_of_fridge,
+        kitchen:white_surface_on_top_of_fridge_to_its_right ;
+    kitchen:CONFIRMS kitchen:kitchen_is_restored_to_organized_state ;
+    kitchen:EXAMINES kitchen:dish_drainer,
+        kitchen:items_in_cabinet,
+        kitchen:items_on_dining_table,
+        kitchen:items_on_sink_counter,
+        kitchen:items_on_small_shelf,
+        kitchen:items_on_white_surface ;
+    kitchen:MOVES_TO kitchen:kitchen_area ;
+    kitchen:PICKS_UP kitchen:bottles,
+        kitchen:boxes_of_food,
+        kitchen:cups,
+        kitchen:dishes_or_utensils,
+        kitchen:kitchen-related_items,
+        kitchen:misplaced_items,
+        kitchen:misplaced_kitchen_items,
+        kitchen:orange_container ;
+    kitchen:REMOVES kitchen:misplaced_kitchen_items,
+        kitchen:wooden_cutting_board ;
+    kitchen:VERIFIES kitchen:all_items_in_kitchen_and_dining_area .
 
-kitchen:box_of_cereal kitchen:IS_IN kitchen:cabinet_or_pantry ;
-    kitchen:IS_ON kitchen:countertop .
+kitchen:bottles kitchen:PLACED_IN kitchen:cabinet_below_white_countertop .
 
-kitchen:cupcake_holder kitchen:IS_ON kitchen:countertop,
-        kitchen:table .
+kitchen:boxes_of_food kitchen:PLACED_IN kitchen:cabinet_below_white_countertop_or_designated_food_storage_area .
 
-kitchen:empty_glass_jar kitchen:IS_IN kitchen:cabinet ;
-    kitchen:IS_ON kitchen:table .
+kitchen:cups kitchen:PLACED_IN kitchen:cabinet_below_white_countertop .
 
-kitchen:small_model_of_a_house kitchen:IS_ON kitchen:open_shelf_unit,
-        kitchen:table .
+kitchen:dishes_or_utensils kitchen:PLACED_IN kitchen:cabinet_below_white_countertop_or_designated_dish_storage_area .
 
-kitchen:two_bottles kitchen:ARE_IN kitchen:cabinet ;
-    kitchen:ARE_ON kitchen:countertops_near_the_stove_and_the_fridge .
+kitchen:kitchen-related_items kitchen:PLACED_IN kitchen:standard_storage_locations .
 
-kitchen:two_cups kitchen:ARE_IN kitchen:cabinet ;
-    kitchen:ARE_ON kitchen:countertops_on_each_side_of_the_sink .
+kitchen:misplaced_items kitchen:PLACED_IN kitchen:standard_storage_locations .
 
-kitchen:white_mug kitchen:IS_IN kitchen:cabinet ;
-    kitchen:IS_ON kitchen:table .
+kitchen:orange_container kitchen:PLACED_IN kitchen:cabinet_below_white_countertop_or_designated_container_storage_area .
+
+kitchen:wooden_cutting_board kitchen:PLACED_IN kitchen:cabinet_below_white_countertop_or_designated_cutting_board_storage_area .
+
+kitchen:misplaced_kitchen_items kitchen:PLACED_IN kitchen:standard_storage_locations .
 

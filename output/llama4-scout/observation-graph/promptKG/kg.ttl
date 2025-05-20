@@ -5,170 +5,114 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-psr:KitchenAndDiningRoom a psr:Environment ;
-  rdfs:label "Kitchen and Dining Room"@en .
+psr:KitchenAndDiningArea a psr:Environment ;
+  dul:hasComponent psr:Kitchen ;
+  dul:hasComponent psr:DiningArea .
 
-psr:Kitchen a psr:Component, psr:Environment ;
-  rdfs:label "Kitchen"@en ;
-  dul:hasLocation psr:KitchenLocation .
+psr:Kitchen a psr:Component ;
+  psr:hasAffordance soma:Opening ;
+  dul:hasLocation psr:KitchenLocation ;
+  geo:sfContains psr:Cabinets ;
+  geo:sfContains psr:Countertops ;
+  geo:sfContains psr:Sink ;
+  geo:sfContains psr:Refrigerator .
 
-psr:KitchenLocation a psr:Location ;
-  rdfs:label "Kitchen Location"@en .
+psr:KitchenLocation a psr:Location .
 
-psr:DiningRoom a psr:Component, psr:Environment ;
-  rdfs:label "Dining Room"@en ;
-  dul:hasLocation psr:DiningRoomLocation .
+psr:Cabinets a psr:Component ;
+  dul:hasLocation psr:CabinetsLocation .
 
-psr:DiningRoomLocation a psr:Location ;
-  rdfs:label "Dining Room Location"@en .
+psr:CabinetsLocation a psr:Location ;
+  psr:onTopOf psr:KitchenLocation .
 
-psr:DarkCabinets a psr:Component ;
-  rdfs:label "Dark Cabinets"@en ;
-  dul:hasLocation psr:KitchenCabinetsLocation .
+psr:Countertops a psr:Component ;
+  dul:hasLocation psr:CountertopsLocation .
 
-psr:KitchenCabinetsLocation a psr:Location ;
-  rdfs:label "Kitchen Cabinets Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
+psr:CountertopsLocation a psr:Location ;
+  psr:onTopOf psr:KitchenLocation .
 
-psr:TanMarbleCountertop a psr:Component ;
-  rdfs:label "Tan Marble Countertop"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
+psr:Sink a psr:Appliance ;
+  dul:hasLocation psr:SinkLocation .
 
-psr:KitchenCountertopLocation a psr:Location ;
-  rdfs:label "Kitchen Countertop Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
+psr:SinkLocation a psr:Location ;
+  psr:onTopOf psr:KitchenLocation .
 
-psr:WhiteRefrigerator a psr:Appliance ;
-  rdfs:label "White Refrigerator"@en ;
-  dul:hasLocation psr:KitchenRefrigeratorLocation .
+psr:Refrigerator a psr:Appliance ;
+  dul:hasLocation psr:RefrigeratorLocation .
 
-psr:KitchenRefrigeratorLocation a psr:Location ;
-  rdfs:label "Kitchen Refrigerator Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
-
-psr:RiceBubblesCereal a psr:Object ;
-  rdfs:label "Rice Bubbles Cereal"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
-
-psr:StrawberryBananaJello a psr:Object ;
-  rdfs:label "Strawberry Banana Jello"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
-
-psr:JarOfJam a psr:Object ;
-  rdfs:label "Jar of Jam"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
-
-psr:ShortbreadCookies a psr:Object ;
-  rdfs:label "Shortbread Cookies"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
-
-psr:YellowMug a psr:Object ;
-  rdfs:label "Yellow Mug"@en ;
-  dul:hasLocation psr:NearStovetopLocation .
-
-psr:NearStovetopLocation a psr:Location ;
-  rdfs:label "Near Stovetop Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
+psr:RefrigeratorLocation a psr:Location ;
+  psr:onTopOf psr:KitchenLocation .
 
 psr:Pot a psr:Object ;
-  rdfs:label "Pot"@en ;
-  dul:hasLocation psr:OnStovetopLocation .
+  dul:hasLocation psr:PotLocation .
 
-psr:OnStovetopLocation a psr:Location ;
-  rdfs:label "On Stovetop Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
+psr:PotLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
 
-psr:VentHood a psr:Appliance ;
-  rdfs:label "Vent Hood"@en ;
-  dul:hasLocation psr:AboveCountertopLocation .
+psr:JarOfJam a psr:Object ;
+  dul:hasLocation psr:jarOfJamLocation .
 
-psr:AboveCountertopLocation a psr:Location ;
-  rdfs:label "Above Countertop Location"@en ;
-  geo:sfWithin psr:KitchenLocation .
+psr:jarOfJamLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
 
-psr:WoodenTable a psr:Furniture ;
-  rdfs:label "Wooden Table"@en ;
-  dul:hasLocation psr:DiningTableLocation .
+psr:BoxOfRiceBubbles a psr:Object ;
+  dul:hasLocation psr:boxOfRiceBubblesLocation .
 
-psr:DiningTableLocation a psr:Location ;
-  rdfs:label "Dining Table Location"@en ;
-  geo:sfWithin psr:DiningRoomLocation .
+psr:boxOfRiceBubblesLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
 
-psr:WhiteChairs a psr:Furniture ;
-  rdfs:label "White Chairs"@en ;
-  dul:hasLocation psr:NearDiningTableLocation .
+psr:BoxOfJello a psr:Object ;
+  dul:hasLocation psr:boxOfJelloLocation .
 
-psr:NearDiningTableLocation a psr:Location ;
-  rdfs:label "Near Dining Table Location"@en ;
-  geo:sfWithin psr:DiningRoomLocation .
+psr:boxOfJelloLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
+
+psr:BoxOfShortbread a psr:Object ;
+  dul:hasLocation psr:boxOfShortbreadLocation .
+
+psr:boxOfShortbreadLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
+
+psr:Plate a psr:Object ;
+  dul:hasLocation psr:plateLocation .
+
+psr:plateLocation a psr:Location ;
+  psr:onTopOf psr:CountertopsLocation .
+
+psr:DiningArea a psr:Component ;
+  psr:hasAffordance soma:Opening ;
+  dul:hasLocation psr:DiningAreaLocation ;
+  geo:sfContains psr:Table ;
+  geo:sfContains psr:Chairs .
+
+psr:DiningAreaLocation a psr:Location .
+
+psr:Table a psr:Furniture ;
+  dul:hasLocation psr:TableLocation .
+
+psr:TableLocation a psr:Location ;
+  psr:onTopOf psr:DiningAreaLocation .
+
+psr:Chairs a psr:Furniture ;
+  dul:hasLocation psr:ChairsLocation .
+
+psr:ChairsLocation a psr:Location ;
+  psr:onTopOf psr:DiningAreaLocation .
 
 psr:BottleOfWater a psr:Object ;
-  rdfs:label "Bottle of Water"@en ;
-  dul:hasLocation psr:DiningTableLocation .
+  dul:hasLocation psr:bottleOfWaterLocation .
 
-psr:PlateWithFruit a psr:Object ;
-  rdfs:label "Plate with Fruit"@en ;
-  dul:hasLocation psr:DiningTableLocation .
+psr:bottleOfWaterLocation a psr:Location ;
+  psr:onTopOf psr:TableLocation .
 
-psr:Cookbook a psr:Object ;
-  rdfs:label "Cookbook"@en ;
-  dul:hasLocation psr:KitchenCountertopLocation .
+psr:BowlOfFruit a psr:Object ;
+  dul:hasLocation psr:bowlOfFruitLocation .
 
-psr:ChuckyPuzzle a psr:Object ;
-  rdfs:label "Chucky Puzzle"@en ;
-  dul:hasLocation psr:DiningTableLocation .
+psr:bowlOfFruitLocation a psr:Location ;
+  psr:onTopOf psr:TableLocation .
 
-psr:KitchenAndDiningRoom dul:hasComponent psr:Kitchen .
-psr:KitchenAndDiningRoom dul:hasComponent psr:DiningRoom .
+psr:Book a psr:Object ;
+  dul:hasLocation psr:bookLocation .
 
-psr:Kitchen dul:hasComponent psr:DarkCabinets .
-psr:Kitchen dul:hasComponent psr:TanMarbleCountertop .
-psr:Kitchen dul:hasComponent psr:WhiteRefrigerator .
-
-psr:TanMarbleCountertop psr:hasAffordance soma:PuttingDown .
-psr:TanMarbleCountertop psr:hasAffordance soma:PickingUp .
-psr:TanMarbleCountertop psr:hasAffordance soma:Grasping .
-
-psr:RiceBubblesCereal psr:hasAffordance soma:PickingUp .
-psr:RiceBubblesCereal psr:hasAffordance soma:PuttingDown .
-psr:RiceBubblesCereal psr:hasAffordance soma:Grasping .
-
-psr:StrawberryBananaJello psr:hasAffordance soma:PickingUp .
-psr:StrawberryBananaJello psr:hasAffordance soma:PuttingDown .
-psr:StrawberryBananaJello psr:hasAffordance soma:Grasping .
-
-psr:JarOfJam psr:hasAffordance soma:PickingUp .
-psr:JarOfJam psr:hasAffordance soma:PuttingDown .
-psr:JarOfJam psr:hasAffordance soma:Grasping .
-
-psr:ShortbreadCookies psr:hasAffordance soma:PickingUp .
-psr:ShortbreadCookies psr:hasAffordance soma:PuttingDown .
-psr:ShortbreadCookies psr:hasAffordance soma:Grasping .
-
-psr:YellowMug psr:hasAffordance soma:PickingUp .
-psr:YellowMug psr:hasAffordance soma:PuttingDown .
-psr:YellowMug psr:hasAffordance soma:Grasping .
-
-psr:Pot psr:hasAffordance soma:PickingUp .
-psr:Pot psr:hasAffordance soma:PuttingDown .
-psr:Pot psr:hasAffordance soma:Grasping .
-
-psr:WoodenTable psr:hasAffordance soma:PuttingDown .
-psr:WoodenTable psr:hasAffordance soma:PickingUp .
-psr:WoodenTable psr:hasAffordance soma:Grasping .
-
-psr:BottleOfWater psr:hasAffordance soma:PickingUp .
-psr:BottleOfWater psr:hasAffordance soma:PuttingDown .
-psr:BottleOfWater psr:hasAffordance soma:Grasping .
-
-psr:PlateWithFruit psr:hasAffordance soma:PickingUp .
-psr:PlateWithFruit psr:hasAffordance soma:PuttingDown .
-psr:PlateWithFruit psr:hasAffordance soma:Grasping .
-
-psr:Cookbook psr:hasAffordance soma:PickingUp .
-psr:Cookbook psr:hasAffordance soma:PuttingDown .
-psr:Cookbook psr:hasAffordance soma:Grasping .
-
-psr:ChuckyPuzzle psr:hasAffordance soma:PickingUp .
-psr:ChuckyPuzzle psr:hasAffordance soma:PuttingDown .
-psr:ChuckyPuzzle psr:hasAffordance soma:Grasping .
+psr:bookLocation a psr:Location ;
+  psr:onTopOf psr:TableLocation .

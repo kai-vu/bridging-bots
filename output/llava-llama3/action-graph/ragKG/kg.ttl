@@ -7,46 +7,43 @@
 
 :task1 a dul:Action ;
     rdfs:label "Identify misplaced items"@en ;
-    psr:isAffordedBy :affordance1 .
+    psr:actsOn :kitchen ;
+    psr:isAffordedBy soma:Grasping .
 
-:affordance1 a psr:Affordance ;
-    rdfs:label "Visual inspection"@en .
+:kitchen a psr:Component ;
+    rdfs:label "Kitchen"@en .
 
 :task2 a dul:Action ;
     rdfs:label "Pick up misplaced items"@en ;
-    psr:isAffordedBy :affordance2 ;
+    psr:actsOn :misplaced_items ;
+    psr:isAffordedBy soma:PickingUp ;
     psr:follows :task1 .
 
-:affordance2 a psr:Affordance ;
-    rdfs:label "Grasping"@en .
+:misplaced_items a psr:Component ;
+    rdfs:label "Misplaced items"@en .
 
 :task3 a dul:Action ;
-    rdfs:label "Put items in standard storage locations"@en ;
-    psr:isAffordedBy :affordance3 ;
+    rdfs:label "Put down items in standard storage locations"@en ;
+    psr:actsOn :storage_locations ;
+    psr:isAffordedBy soma:PuttingDown ;
     psr:follows :task2 .
 
-:affordance3 a psr:Affordance ;
-    rdfs:label "Placing"@en .
-
-:component1 a psr:Component ;
-    rdfs:label "Kitchen cabinets"@en .
-
-:component2 a psr:Component ;
-    rdfs:label "Countertops"@en .
-
-:component3 a psr:Component ;
-    rdfs:label "Table"@en .
-
-:task1 psr:actsOn :component1, :component2, :component3 .
-
-:task2 psr:actsOn :component1, :component2, :component3 .
-
-:task3 psr:actsOn :component1, :component2, :component3 .
+:storage_locations a psr:Component ;
+    rdfs:label "Storage locations"@en .
 
 :instruction1 a psr:Instruction ;
     rdfs:label "Restore kitchen to organized state"@en ;
-    psr:hasWorkflow :workflow1 .
+    psr:hasWorkflow :workflow1 ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
 :workflow1 a psr:Workflow ;
     rdfs:label "Kitchen organization workflow"@en ;
-    psr:hasAction :task1, :task2, :task3 .
+    psr:hasAction :task1 ;
+    psr:hasAction :task2 ;
+    psr:hasAction :task3 .
+
+:agent1 a dul:Agent ;
+    rdfs:label "Robot"@en ;
+    soma:isPerformedBy :task1 ;
+    soma:isPerformedBy :task2 ;
+    soma:isPerformedBy :task3 .

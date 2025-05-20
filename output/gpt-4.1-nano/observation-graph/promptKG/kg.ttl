@@ -5,141 +5,141 @@
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
 
-# Define environment
-psr:KitchenEnvironment a psr:Environment ;
+# Environment
+<http://example.org/environment> a psr:Environment ;
     rdfs:label "Kitchen Environment"@en .
-psr:DiningAreaEnvironment a psr:Environment ;
-    rdfs:label "Dining Area Environment"@en .
 
-# Components in the environment
-psr:KitchenCabinet a psr:Appliance ;
-    rdfs:label "Kitchen Cabinet"@en .
+# Kitchen Area
+<http://example.org/kitchenArea> a psr:Environment ;
+    rdfs:label "Kitchen Area"@en .
 
-psr:MarbleCountertop a psr:Furniture ;
-    rdfs:label "Marble Countertop"@en .
+# Cabinets
+<http://example.org/cabinets> a psr:Component ;
+    rdfs:label "Kitchen Cabinets"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:FoodItems a psr:Object ;
-    rdfs:label "Food Items"@en .
+# Countertop
+<http://example.org/countertop> a psr:Component ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:PlateStack a psr:Object ;
-    rdfs:label "Stack of Plates"@en .
+# Food Items and Containers on Countertop
+<http://example.org/boxJello> a psr:Object ;
+    rdfs:label "Box of Jello"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:JELLOBox a psr:Object ;
-    rdfs:label "Box of JELLO"@en .
+<http://example.org/boxRiceBubbles> a psr:Object ;
+    rdfs:label "Box of Rice Bubbles"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:RiceBubblesCarton a psr:Object ;
-    rdfs:label "Carton of Rice Bubbles"@en .
+<http://example.org/redLiddedContainer> a psr:Object ;
+    rdfs:label "Red-lidded Container"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:StrawberryJamContainer a psr:Object ;
-    rdfs:label "Container of Strawberry Jam"@en .
+<http://example.org/orangeContainer> a psr:Object ;
+    rdfs:label "Orange Container"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:StrawberryJamRedWhite a psr:Object ;
-    rdfs:label "Red and White Strawberry Jam Container"@en .
+<http://example.org/waterBottle> a psr:Object ;
+    rdfs:label "Water Bottle"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:AlpenSaltBox a psr:Object ;
-    rdfs:label "Box of Alpen Salz"@en .
+<http://example.org/smallRedBox> a psr:Object ;
+    rdfs:label "Small Red Box"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:BonneMamanJar a psr:Object ;
-    rdfs:label "Jar of Bonne Maman Strawberry Preserves"@en .
+<http://example.org/wineGlass> a psr:Object ;
+    rdfs:label "Wine Glass"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:Refrigerator a psr:Appliance ;
-    rdfs:label "White Refrigerator"@en .
+<http://example.org/whitePitcher> a psr:Object ;
+    rdfs:label "White Pitcher"@en ;
+    dul:hasLocation <http://example.org/countertop> .
 
-psr:WallMountedVent a psr:Object ;
-    rdfs:label "Overhead Wooden Vent"@en .
+# Fridge
+<http://example.org/fridge> a psr:Object ;
+    rdfs:label "White Fridge"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:DiningTable a psr:Furniture ;
-    rdfs:label "Wooden Dining Table"@en .
+# Fridge Handle
+<http://example.org/fridgeHandle> a psr:Object ;
+    rdfs:label "Fridge Handle"@en ;
+    dul:hasLocation <http://example.org/fridge> .
 
-psr:EvianBottle a psr:Object ;
-    rdfs:label "Bottle of Evian Water"@en .
+# Door leading to another room
+<http://example.org/doorway> a psr:Object ;
+    rdfs:label "Doorway"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:DiningBoxRiceBubbles a psr:Object ;
-    rdfs:label "Box of Rice Bubbles"@en .
+# Wooden Door
+<http://example.org/woodenDoor> a psr:Object ;
+    rdfs:label "Wooden Door"@en ;
+    dul:hasLocation <http://example.org/doorway> .
 
-psr:JamJar a psr:Object ;
-    rdfs:label "Jar of Jam"@en .
+# Door Handle
+<http://example.org/doorHandle> a psr:Object ;
+    rdfs:label "Door Handle"@en ;
+    dul:hasLocation <http://example.org/woodenDoor> .
 
-psr:OrangeMug a psr:Object ;
-    rdfs:label "Orange Ceramic Mug"@en .
+# Walls
+<http://example.org/walls> a psr:Object ;
+    rdfs:label "White Textured Walls"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:WineGlass a psr:Object ;
-    rdfs:label "Wine Glass"@en .
+# Flooring
+<http://example.org/floor> a psr:Object ;
+    rdfs:label "Wooden Parquet Floor"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:WhitePitcher a psr:Object ;
-    rdfs:label "Large White Pitcher"@en .
+# Ceiling Light
+<http://example.org/ceilingLight> a psr:Object ;
+    rdfs:label "Ceiling Light Fixture"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-# Locations
-psr:LeftSide of the environment a psr:Location ;
-    rdfs:label "Left Side"@en .
+# Wall-mounted Shelf
+<http://example.org/wallShelf> a psr:Object ;
+    rdfs:label "Wall-mounted Wooden Shelf"@en ;
+    dul:hasLocation <http://example.org/kitchenArea> .
 
-psr:CornerPosition a psr:Location ;
-    rdfs:label "Corner Position"@en .
+# Speaker or Vent underneath Shelf
+<http://example.org/speakerVent> a psr:Object ;
+    rdfs:label "Speaker/Vent Under Shelf"@en ;
+    dul:hasLocation <http://example.org/wallShelf> .
 
-psr:AgainstWhiteWall a psr:Location ;
-    rdfs:label "Against White Wall"@en .
+# Room setup for the same environment - multiple angles
+# (Note: position relations are optional, but can be added if detailed)
+# For example, relate kitchen area to environment
+<http://example.org/environment> dul:hasComponent <http://example.org/kitchenArea> .
 
-psr:WallMeetingCorner a psr:Location ;
-    rdfs:label "Wall Meeting Corner"@en .
+# Positions (optional, showing relative setup)
+<http://example.org/countertopPosition> geo:sfContains <http://example.org/countertop> .
+<http://example.org/fridgePosition> geo:sfContains <http://example.org/fridge> .
+<http://example.org/doorwayPosition> geo:sfContains <http://example.org/doorway> .
+<http://example.org/wallsPosition> geo:sfContains <http://example.org/walls> .
+<http://example.org/floorPosition> geo:sfContains <http://example.org/floor> .
+<http://example.org/ceilingLightPosition> geo:sfContains <http://example.org/ceilingLight> .
+<http://example.org/wallShelfPosition> geo:sfContains <http://example.org/wallShelf> .
+<http://example.org/speakerVentPosition> geo:sfContains <http://example.org/speakerVent> .
 
-psr:PositionNearWall a psr:Location ;
-    rdfs:label "Position Near Wall"@en .
+# Affordances
+<http://example.org/door> a psr:Object, soma:Opening ;
+    rdfs:label "Door"@en ;
+    psr:hasAffordance soma:Opening ;
+    dul:hasLocation <http://example.org/woodenDoor> .
 
-psr:PositionAgainstWall a psr:Location ;
-    rdfs:label "Position Against Wall"@en .
+<http://example.org/fridge> a psr:Object, soma:Closing ;
+    rdfs:label "Refrigerator"@en ;
+    psr:hasAffordance soma:Closing ;
+    dul:hasLocation <http://example.org/fridge> .
 
-# Relations establishing environment components
-psr:hasComponent psr:KitchenEnvironment psr:KitchenCabinet, psr:MarbleCountertop, psr:Refrigerator, psr:WallMountedVent, psr:DiningTable, psr:WhitePitcher, psr:EvianBottle, psr:DiningBoxRiceBubbles, psr:JamJar, psr:OrangeMug, psr:WineGlass .
+<http://example.org/handleFridge> a psr:Object, soma:Pushing ;
+    rdfs:label "Fridge Handle"@en ;
+    psr:hasAffordance soma:Pushing ;
+    dul:hasLocation <http://example.org/fridgeHandle> .
 
-# Food items on the marble countertop
-geo:sfContains psr:MarbleCountertop psr:PlateStack, psr:JELLOBox, psr:RiceBubblesCarton, psr:StrawberryJamContainer .
+<http://example.org/doorHandle> a psr:Object, soma:Pushing ;
+    rdfs:label "Door Handle"@en ;
+    psr:hasAffordance soma:Pushing ;
+    dul:hasLocation <http://example.org/doorHandle> .
 
-# Specific food containers
-geo:sfContains psr:StrawberryJamContainer psr:StrawberryJamRedWhite .
-geo:sfContains psr:StrawberryJamContainer psr:AlpenSaltBox .
-geo:sfContains psr:StrawberryJamContainer psr:BonneMamanJar .
-
-# Refrigerator location
-dul:hasLocation psr:Refrigerator psr:CornerPosition .
-
-# Vent mounted above the countertop
-dul:hasLocation psr:WallMountedVent psr:PositionNearWall .
-
-# Dining area Components
-psr:DiningTable a psr:Furniture ;
-    rdfs:label "Wooden Dining Table"@en .
-
-psr:BottleEvian a psr:Object ;
-    rdfs:label "Bottle of Evian Water"@en .
-
-psr:BoxRiceBubbles a psr:Object ;
-    rdfs:label "Box of Rice Bubbles"@en .
-
-psr:JamJarObject a psr:Object ;
-    rdfs:label "Jar of Jam"@en .
-
-psr:OrangeCeramicMug a psr:Object ;
-    rdfs:label "Orange Ceramic Mug"@en .
-
-psr:WineGlassObject a psr:Object ;
-    rdfs:label "Wine Glass"@en .
-
-psr:LargeWhitePitcher a psr:Object ;
-    rdfs:label "Large White Pitcher"@en .
-
-# Positions of objects relative to the environment
-geo:sfWithin psr:EvianBottle psr:PositionNearWall .
-geo:sfWithin psr:BoxRiceBubbles psr:PositionNearWall .
-geo:sfWithin psr:JamJar psr:PositionNearWall .
-geo:sfWithin psr:OrangeMug psr:PositionNearWall .
-geo:sfWithin psr:WineGlass psr:PositionNearWall .
-geo:sfWithin psr:WhitePitcher psr:PositionNearWall .
-
-# Objects on the dining table
-geo:sfContains psr:DiningTable psr:EvianBottle, psr:BoxRiceBubbles, psr:JamJarObject, psr:OrangeCeramicMug, psr:WineGlassObject, psr:LargeWhitePitcher .
-
-# Additional possible spatial relations (example)
-# Assuming positions, these can be further detailed if needed, e.g.,
-# geo:sfOverlaps or geo:sfContains between objects and relative positions.
-
-# Note: The specific spatial relations between all objects are context-dependent and can be elaborated further if more detailed positional data is provided.
+# Notes: The entities and relations are coded following the ontology schema, including locations, components, and affordances, to form a structured Knowledge Graph.

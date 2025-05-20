@@ -7,73 +7,75 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-psr:Instruction_1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow_1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state."@en .
+psr:Instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    psr:hasWorkflow psr:Workflow1 .
 
-psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .
+psr:Workflow1 a psr:Workflow ;
+    psr:hasAction psr:Action1, psr:Action2, psr:Action3, psr:Action4, psr:Action5, psr:Action6, psr:Action7, psr:Action8 .
 
-psr:Action_1 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Table_1 ;
-    psr:isAffordedBy soma:PickingUp ;
-    rdfs:label "Pick up the bottle on the table"@en ;
-    psr:precedes psr:Action_2 .
+psr:Action1 a dul:Action ;
+    rdfs:label "Pick up the box of Chicky"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:BoxOfChicky ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Action_2 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Fridge_1 ;
-    psr:isAffordedBy soma:Opening ;
-    rdfs:label "Open the fridge"@en ;
-    psr:precedes psr:Action_3 .
+psr:Action2 a dul:Action ;
+    rdfs:label "Pick up the jar of Orange Juice"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:JarOfOrangeJuice ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Action_3 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Bottle_1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    rdfs:label "Put the bottle in the fridge"@en ;
-    psr:precedes psr:Action_4 .
+psr:Action3 a dul:Action ;
+    rdfs:label "Pick up the jar of Strawberry Jam"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:JarOfStrawberryJam ;
+    psr:isAffordedBy soma:PickingUp .
 
-psr:Action_4 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Fridge_1 ;
-    psr:isAffordedBy soma:Closing ;
-    rdfs:label "Close the fridge"@en ;
-    psr:precedes psr:Action_5 .
-
-psr:Action_5 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Countertop_1 ;
-    psr:actsOn psr:Jar_1 ;
-    psr:isAffordedBy soma:PickingUp ;
-    rdfs:label "Pick up the jam jar from the countertop"@en ;
-    psr:precedes psr:Action_6 .
-
-psr:Action_6 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Cabinet_1 ;
-    psr:isAffordedBy soma:Opening ;
+psr:Action4 a dul:Action ;
     rdfs:label "Open the cabinet"@en ;
-    psr:precedes psr:Action_7 .
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:Cabinet ;
+    psr:isAffordedBy soma:Opening .
 
-psr:Action_7 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Jar_1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    rdfs:label "Put the jam jar in the cabinet"@en ;
-    psr:precedes psr:Action_8 .
+psr:Action5 a dul:Action ;
+    rdfs:label "Place the box of Chicky inside the cabinet"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:BoxOfChicky ;
+    psr:isAffordedBy soma:PuttingDown .
 
-psr:Action_8 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Cabinet_1 ;
-    psr:isAffordedBy soma:Closing ;
-    rdfs:label "Close the cabinet"@en .
+psr:Action6 a dul:Action ;
+    rdfs:label "Place the jar of Orange Juice inside the cabinet"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:JarOfOrangeJuice ;
+    psr:isAffordedBy soma:PuttingDown .
 
-psr:Robot_1 a dul:Agent .
-psr:Table_1 a psr:Furniture .
-psr:Fridge_1 a psr:Appliance .
-psr:Bottle_1 a psr:Object .
-psr:Countertop_1 a psr:Furniture .
-psr:Jar_1 a psr:Object .
-psr:Cabinet_1 a psr:Furniture .
+psr:Action7 a dul:Action ;
+    rdfs:label "Place the jar of Strawberry Jam inside the cabinet"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:JarOfStrawberryJam ;
+    psr:isAffordedBy soma:PuttingDown .
+
+psr:Action8 a dul:Action ;
+    rdfs:label "Close the cabinet"@en ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:Cabinet ;
+    psr:isAffordedBy soma:Closing .
+
+psr:BoxOfChicky a psr:Object .
+
+psr:JarOfOrangeJuice a psr:Object .
+
+psr:JarOfStrawberryJam a psr:Object .
+
+psr:Cabinet a psr:Furniture .
+
+psr:Robot a dul:Agent .
+
+psr:Action1 psr:precedes psr:Action2 .
+psr:Action2 psr:precedes psr:Action3 .
+psr:Action3 psr:precedes psr:Action4 .
+psr:Action4 psr:precedes psr:Action5 .
+psr:Action5 psr:precedes psr:Action6 .
+psr:Action6 psr:precedes psr:Action7 .
+psr:Action7 psr:precedes psr:Action8 .

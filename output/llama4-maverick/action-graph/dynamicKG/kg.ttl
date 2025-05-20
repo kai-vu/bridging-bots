@@ -1,29 +1,27 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:dining_table kitchen:hasLocation kitchen:kitchen .
+kitchen:boxes_of_jello kitchen:isA kitchen:Food .
 
-kitchen:items kitchen:onTopOf kitchen:countertop .
+kitchen:boxes_of_rice_bubbles kitchen:isA kitchen:Food .
 
-kitchen:large_bottle_of_water kitchen:hasLocation kitchen:storage_area .
+kitchen:dining_area kitchen:hasObject kitchen:box_of_crackers ;
+    kitchen:near kitchen:kitchen_counter .
 
-kitchen:lights kitchen:hasLocation kitchen:kitchen .
+kitchen:disposable_plastic_cups kitchen:isA kitchen:Tableware .
 
-kitchen:pot kitchen:onTopOf kitchen:electric_stove .
+kitchen:jars_with_labels kitchen:isA kitchen:Food_Container .
 
-kitchen:range_hood kitchen:hasLocation kitchen:kitchen .
+kitchen:plastic_bottle_of_water kitchen:isA kitchen:Drink .
 
-kitchen:red_and_blue_boxes kitchen:hasLocation kitchen:storage_locations ;
-    kitchen:onTopOf kitchen:countertop .
+kitchen:sink_area kitchen:hasAffordance kitchen:cleaning .
 
-kitchen:red_jar kitchen:hasLocation kitchen:storage_location .
+kitchen:table kitchen:onTopOf kitchen:box_of_crackers .
 
-kitchen:white_fridge kitchen:hasLocation kitchen:kitchen .
+kitchen:cup kitchen:hasAction kitchen:cleaning ;
+    kitchen:isA kitchen:Tableware .
 
-kitchen:white_plates kitchen:hasLocation kitchen:dark_wall_cabinets .
+kitchen:kitchen_counter kitchen:hasAffordance kitchen:storage ;
+    kitchen:sfContains kitchen:cup .
 
-kitchen:yellow_cup kitchen:hasLocation kitchen:cup_storage_area .
-
-kitchen:electric_stove kitchen:hasLocation kitchen:kitchen .
-
-kitchen:countertop kitchen:hasLocation kitchen:kitchen .
+kitchen:box_of_crackers kitchen:isA kitchen:Food .
 

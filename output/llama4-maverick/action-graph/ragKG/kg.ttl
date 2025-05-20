@@ -10,101 +10,68 @@ psr:Instruction_1 a psr:Instruction ;
     psr:hasWorkflow psr:Workflow_1 .
 
 psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction soma:PickingUp_1, soma:PuttingDown_1, soma:PickingUp_2, soma:PuttingDown_2, soma:PickingUp_3, soma:PuttingDown_3, soma:PickingUp_4, soma:PuttingDown_4, soma:PickingUp_5, soma:PuttingDown_5 .
+    psr:hasAction soma:PickingUp_1, soma:PuttingDown_1, soma:PickingUp_2, soma:PuttingDown_2, soma:PickingUp_3, soma:PuttingDown_3 .
 
 soma:PickingUp_1 a soma:PickingUp ;
     psr:actsOn psr:Object_1 ;
-    psr:isAffordedBy soma:Grasping_1 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows dul:Action_0 .
+    psr:isAffordedBy psr:Affordance_1 .
 
 psr:Object_1 a psr:Object ;
-    rdfs:label "red box on countertop"@en .
+    rdfs:label "box of crackers"@en .
 
-soma:Grasping_1 a soma:Grasping .
-
-dul:Agent_1 a dul:Agent .
+psr:Affordance_1 a psr:Affordance ;
+    rdfs:label "Grasping"@en .
 
 soma:PuttingDown_1 a soma:PuttingDown ;
     psr:actsOn psr:Object_1 ;
-    psr:isAffordedBy soma:Releasing_1 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows soma:PickingUp_1 .
+    psr:isAffordedBy psr:Affordance_2 .
 
-soma:Releasing_1 a soma:PuttingDown .
+psr:Affordance_2 a psr:Affordance ;
+    rdfs:label "Releasing"@en .
 
 soma:PickingUp_2 a soma:PickingUp ;
     psr:actsOn psr:Object_2 ;
-    psr:isAffordedBy soma:Grasping_2 ;
-    soma:isPerformedBy dul:Agent_1 ;
+    psr:isAffordedBy psr:Affordance_3 ;
     psr:follows soma:PuttingDown_1 .
 
 psr:Object_2 a psr:Object ;
-    rdfs:label "blue box on countertop"@en .
+    rdfs:label "plastic bottle of water"@en .
 
-soma:Grasping_2 a soma:Grasping .
+psr:Affordance_3 a psr:Affordance ;
+    rdfs:label "Grasping"@en .
 
 soma:PuttingDown_2 a soma:PuttingDown ;
     psr:actsOn psr:Object_2 ;
-    psr:isAffordedBy soma:Releasing_2 ;
-    soma:isPerformedBy dul:Agent_1 ;
+    psr:isAffordedBy psr:Affordance_4 ;
     psr:follows soma:PickingUp_2 .
 
-soma:Releasing_2 a soma:PuttingDown .
+psr:Affordance_4 a psr:Affordance ;
+    rdfs:label "Releasing"@en .
 
 soma:PickingUp_3 a soma:PickingUp ;
     psr:actsOn psr:Object_3 ;
-    psr:isAffordedBy soma:Grasping_3 ;
-    soma:isPerformedBy dul:Agent_1 ;
+    psr:isAffordedBy psr:Affordance_5 ;
     psr:follows soma:PuttingDown_2 .
 
 psr:Object_3 a psr:Object ;
-    rdfs:label "yellow cup on countertop"@en .
+    rdfs:label "disposable plastic cups"@en .
 
-soma:Grasping_3 a soma:Grasping .
+psr:Affordance_5 a psr:Affordance ;
+    rdfs:label "Grasping"@en .
 
 soma:PuttingDown_3 a soma:PuttingDown ;
     psr:actsOn psr:Object_3 ;
-    psr:isAffordedBy soma:Releasing_3 ;
-    soma:isPerformedBy dul:Agent_1 ;
+    psr:isAffordedBy psr:Affordance_6 ;
     psr:follows soma:PickingUp_3 .
 
-soma:Releasing_3 a soma:PuttingDown .
+psr:Affordance_6 a psr:Affordance ;
+    rdfs:label "Releasing"@en .
 
-soma:PickingUp_4 a soma:PickingUp ;
-    psr:actsOn psr:Object_4 ;
-    psr:isAffordedBy soma:Grasping_4 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows soma:PuttingDown_3 .
+soma:PickingUp_1 psr:isPerformedBy dul:Agent_1 .
+dul:Agent_1 a dul:Agent .
 
-psr:Object_4 a psr:Object ;
-    rdfs:label "red jar on countertop"@en .
-
-soma:Grasping_4 a soma:Grasping .
-
-soma:PuttingDown_4 a soma:PuttingDown ;
-    psr:actsOn psr:Object_4 ;
-    psr:isAffordedBy soma:Releasing_4 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows soma:PickingUp_4 .
-
-soma:Releasing_4 a soma:PuttingDown .
-
-soma:PickingUp_5 a soma:PickingUp ;
-    psr:actsOn psr:Object_5 ;
-    psr:isAffordedBy soma:Grasping_5 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows soma:PuttingDown_4 .
-
-psr:Object_5 a psr:Object ;
-    rdfs:label "large bottle of water on dining table"@en .
-
-soma:Grasping_5 a soma:Grasping .
-
-soma:PuttingDown_5 a soma:PuttingDown ;
-    psr:actsOn psr:Object_5 ;
-    psr:isAffordedBy soma:Releasing_5 ;
-    soma:isPerformedBy dul:Agent_1 ;
-    psr:follows soma:PickingUp_5 .
-
-soma:Releasing_5 a soma:PuttingDown .
+soma:PuttingDown_1 psr:isPerformedBy dul:Agent_1 .
+soma:PickingUp_2 psr:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_2 psr:isPerformedBy dul:Agent_1 .
+soma:PickingUp_3 psr:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_3 psr:isPerformedBy dul:Agent_1 .

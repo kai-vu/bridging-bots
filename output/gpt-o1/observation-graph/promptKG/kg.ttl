@@ -6,119 +6,127 @@
 @prefix psr: <https://w3id.org/psr-task#> .
 @prefix ex: <http://example.org/> .
 
-ex:KitchenAndDiningRoom a psr:Environment ;
-  dul:hasComponent ex:black_lower_cabinets,
-                   ex:black_upper_cabinets,
-                   ex:metallic_sink,
-                   ex:cooktop,
-                   ex:small_pot,
-                   ex:wooden_range_hood,
-                   ex:countertop,
-                   ex:bright_orange_mug,
-                   ex:chucky_cereal_box,
-                   ex:jar_of_jam,
-                   ex:rice_bubbles_box,
-                   ex:white_plates_stack,
-                   ex:strawberry_jello_box,
-                   ex:alpen_salt_container,
-                   ex:white_fridge,
-                   ex:rectangular_wooden_table,
-                   ex:white_upholstered_chair_1,
-                   ex:white_upholstered_chair_2,
-                   ex:white_upholstered_chair_3,
-                   ex:white_upholstered_chair_4,
-                   ex:large_plastic_water_bottle,
-                   ex:white_fruit_bowl,
-                   ex:citrus_fruits,
-                   ex:black_box_shortbread,
-                   ex:clear_pitcher,
-                   ex:single_wine_glass,
-                   ex:wooden_door,
-                   ex:overhead_pendant_light,
-                   ex:brown_parquet_floor .
+ex:KitchenDiningArea a psr:Environment ;
+    dul:hasComponent ex:DarkCabinets,
+                     ex:WhiteRefrigerator,
+                     ex:BeigeCountertop,
+                     ex:UpperBlackCabinets,
+                     ex:JarOfStrawberryJam,
+                     ex:BoxJello,
+                     ex:ContainerAlpenSalz,
+                     ex:ShortStackWhitePlates,
+                     ex:BoxRiceBubbles,
+                     ex:BoxChuckyMania,
+                     ex:CornerCooktop,
+                     ex:SmallMetalPot,
+                     ex:SingleMug,
+                     ex:WoodenRangeHood,
+                     ex:StainlessSteelSink,
+                     ex:WoodenFramedWindow,
+                     ex:RectangularWoodenTable,
+                     ex:WhiteHighBackedChairs,
+                     ex:LargeEvianWaterBottle,
+                     ex:WhiteFruitBowl,
+                     ex:RoundFruits,
+                     ex:BlackRectangularBoxShortbread,
+                     ex:ClearGlassPitcher,
+                     ex:SingleWineGlass,
+                     ex:WhiteDoor,
+                     ex:ParquetWoodFloor .
 
-ex:black_lower_cabinets a psr:Furniture .
-ex:black_upper_cabinets a psr:Furniture .
-ex:metallic_sink a psr:Furniture .
-ex:cooktop a psr:Appliance .
-ex:small_pot a psr:Object .
-ex:wooden_range_hood a psr:Appliance .
-ex:countertop a psr:Furniture .
-ex:bright_orange_mug a psr:Object .
-ex:chucky_cereal_box a psr:Object .
-ex:jar_of_jam a psr:Object .
-ex:rice_bubbles_box a psr:Object .
-ex:white_plates_stack a psr:Object .
-ex:strawberry_jello_box a psr:Object .
-ex:alpen_salt_container a psr:Object .
-ex:white_fridge a psr:Appliance .
-ex:rectangular_wooden_table a psr:Furniture .
-ex:white_upholstered_chair_1 a psr:Furniture .
-ex:white_upholstered_chair_2 a psr:Furniture .
-ex:white_upholstered_chair_3 a psr:Furniture .
-ex:white_upholstered_chair_4 a psr:Furniture .
-ex:large_plastic_water_bottle a psr:Object .
-ex:white_fruit_bowl a psr:Object .
-ex:citrus_fruits a psr:Object .
-ex:black_box_shortbread a psr:Object .
-ex:clear_pitcher a psr:Object .
-ex:single_wine_glass a psr:Object .
-ex:wooden_door a psr:Furniture .
-ex:overhead_pendant_light a psr:Appliance .
-ex:brown_parquet_floor a psr:Furniture .
+ex:DarkCabinets a psr:Furniture .
+ex:WhiteRefrigerator a psr:Appliance .
+ex:BeigeCountertop a psr:Furniture .
+ex:UpperBlackCabinets a psr:Furniture .
+ex:CornerCooktop a psr:Appliance .
+ex:WoodenRangeHood a psr:Appliance .
+ex:StainlessSteelSink a psr:Appliance .
+ex:WoodenFramedWindow a psr:Component .
+ex:RectangularWoodenTable a psr:Furniture .
+ex:WhiteHighBackedChairs a psr:Furniture .
+ex:WhiteDoor a psr:Component .
+ex:ParquetWoodFloor a psr:Component .
 
-ex:small_pot dul:hasLocation ex:small_pot_loc .
-ex:small_pot_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:cooktop .
+ex:JarOfStrawberryJam a psr:Object ;
+    dul:hasLocation ex:JarOfStrawberryJam_LOC .
 
-ex:bright_orange_mug dul:hasLocation ex:bright_orange_mug_loc .
-ex:bright_orange_mug_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:JarOfStrawberryJam_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:chucky_cereal_box dul:hasLocation ex:chucky_cereal_box_loc .
-ex:chucky_cereal_box_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:BoxJello a psr:Object ;
+    dul:hasLocation ex:BoxJello_LOC .
 
-ex:jar_of_jam dul:hasLocation ex:jar_of_jam_loc .
-ex:jar_of_jam_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:BoxJello_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:rice_bubbles_box dul:hasLocation ex:rice_bubbles_box_loc .
-ex:rice_bubbles_box_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:ContainerAlpenSalz a psr:Object ;
+    dul:hasLocation ex:ContainerAlpenSalz_LOC .
 
-ex:white_plates_stack dul:hasLocation ex:white_plates_stack_loc .
-ex:white_plates_stack_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:ContainerAlpenSalz_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:strawberry_jello_box dul:hasLocation ex:strawberry_jello_box_loc .
-ex:strawberry_jello_box_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:ShortStackWhitePlates a psr:Object ;
+    dul:hasLocation ex:ShortStackWhitePlates_LOC .
 
-ex:alpen_salt_container dul:hasLocation ex:alpen_salt_container_loc .
-ex:alpen_salt_container_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:countertop .
+ex:ShortStackWhitePlates_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:white_fruit_bowl dul:hasLocation ex:white_fruit_bowl_loc .
-ex:white_fruit_bowl_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:rectangular_wooden_table .
+ex:BoxRiceBubbles a psr:Object ;
+    dul:hasLocation ex:BoxRiceBubbles_LOC .
 
-ex:large_plastic_water_bottle dul:hasLocation ex:large_plastic_water_bottle_loc .
-ex:large_plastic_water_bottle_loc a psr:CurrentLocation ;
-  geo:sfWithin ex:white_fruit_bowl .
+ex:BoxRiceBubbles_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:citrus_fruits dul:hasLocation ex:citrus_fruits_loc .
-ex:citrus_fruits_loc a psr:CurrentLocation ;
-  geo:sfWithin ex:white_fruit_bowl .
+ex:BoxChuckyMania a psr:Object ;
+    dul:hasLocation ex:BoxChuckyMania_LOC .
 
-ex:black_box_shortbread dul:hasLocation ex:black_box_shortbread_loc .
-ex:black_box_shortbread_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:rectangular_wooden_table .
+ex:BoxChuckyMania_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
 
-ex:clear_pitcher dul:hasLocation ex:clear_pitcher_loc .
-ex:clear_pitcher_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:rectangular_wooden_table .
+ex:SmallMetalPot a psr:Object ;
+    dul:hasLocation ex:SmallMetalPot_LOC .
 
-ex:single_wine_glass dul:hasLocation ex:single_wine_glass_loc .
-ex:single_wine_glass_loc a psr:CurrentLocation ;
-  psr:onTopOf ex:rectangular_wooden_table .
+ex:SmallMetalPot_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
+
+ex:SingleMug a psr:Object ;
+    dul:hasLocation ex:SingleMug_LOC .
+
+ex:SingleMug_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:BeigeCountertop .
+
+ex:LargeEvianWaterBottle a psr:Object ;
+    dul:hasLocation ex:LargeEvianWaterBottle_LOC .
+
+ex:LargeEvianWaterBottle_LOC a psr:CurrentLocation ;
+    geo:sfWithin ex:WhiteFruitBowl .
+
+ex:WhiteFruitBowl a psr:Object ;
+    dul:hasLocation ex:WhiteFruitBowl_LOC .
+
+ex:WhiteFruitBowl_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:RectangularWoodenTable .
+
+ex:RoundFruits a psr:Object ;
+    dul:hasLocation ex:RoundFruits_LOC .
+
+ex:RoundFruits_LOC a psr:CurrentLocation ;
+    geo:sfWithin ex:WhiteFruitBowl .
+
+ex:BlackRectangularBoxShortbread a psr:Object ;
+    dul:hasLocation ex:BlackRectangularBoxShortbread_LOC .
+
+ex:BlackRectangularBoxShortbread_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:RectangularWoodenTable .
+
+ex:ClearGlassPitcher a psr:Object ;
+    dul:hasLocation ex:ClearGlassPitcher_LOC .
+
+ex:ClearGlassPitcher_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:RectangularWoodenTable .
+
+ex:SingleWineGlass a psr:Object ;
+    dul:hasLocation ex:SingleWineGlass_LOC .
+
+ex:SingleWineGlass_LOC a psr:CurrentLocation ;
+    psr:onTopOf ex:RectangularWoodenTable .

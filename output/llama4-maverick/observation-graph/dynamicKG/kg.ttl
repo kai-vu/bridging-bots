@@ -1,48 +1,34 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:blue_framed_mirror kitchen:between kitchen:dark_wall_cabinets .
+kitchen:box_of_crackers kitchen:onTopOf kitchen:table .
 
-kitchen:box kitchen:onTopOf kitchen:brown_wooden_dining_table .
+kitchen:boxes_of_jello kitchen:onTopOf kitchen:countertop .
 
-kitchen:dining_table kitchen:sfWithin kitchen:center_of_the_room .
+kitchen:dining_area kitchen:hasLocation kitchen:other_side_of_the_room .
 
-kitchen:fridge kitchen:between kitchen:dark_wall_cabinets ;
-    kitchen:sfWithin kitchen:white_wall .
+kitchen:disposable_plastic_cups kitchen:onTopOf kitchen:table .
 
-kitchen:large_bottle_of_water kitchen:onTopOf kitchen:brown_wooden_dining_table .
+kitchen:environment kitchen:hasComponent kitchen:dark_wood_flooring,
+        kitchen:round_light_fixture,
+        kitchen:white_walls .
 
-kitchen:mug kitchen:onTopOf kitchen:brown_wooden_dining_table .
+kitchen:jars_with_a_label kitchen:onTopOf kitchen:countertop .
 
-kitchen:pot kitchen:onTopOf kitchen:electric_stove .
+kitchen:kitchen_area kitchen:hasLocation kitchen:one_side_of_the_room .
 
-kitchen:range_hood kitchen:above kitchen:electric_stove,
-        kitchen:stove .
+kitchen:kitchen_cabinets kitchen:isA kitchen:Furniture .
 
-kitchen:red_jar kitchen:next_to kitchen:red_and_blue_boxes .
+kitchen:plastic_bottle_of_water kitchen:onTopOf kitchen:table .
 
-kitchen:silver_sink kitchen:onTopOf kitchen:light_marble_countertop .
+kitchen:range_hood kitchen:hasLocation kitchen:above_stove .
 
-kitchen:sink kitchen:onTopOf kitchen:kitchen_counter .
+kitchen:refrigerator kitchen:hasLocation kitchen:behind_the_cabinets .
 
-kitchen:stack_of_white_plates kitchen:to_the_left_of kitchen:red_and_blue_boxes .
+kitchen:sink kitchen:hasLocation kitchen:kitchen_counter .
 
-kitchen:white_chairs kitchen:around kitchen:brown_wooden_dining_table .
+kitchen:white_chairs kitchen:hasLocation kitchen:around_wooden_table .
 
-kitchen:white_door kitchen:to_the_right_of kitchen:brown_wooden_dining_table .
+kitchen:wooden_framed_mirror kitchen:hasLocation kitchen:above_sink .
 
-kitchen:white_fridge kitchen:to_the_right_of kitchen:dark_wall_cabinets .
-
-kitchen:yellow_cup kitchen:next_to kitchen:red_and_blue_boxes .
-
-kitchen:stove kitchen:onTopOf kitchen:kitchen_counter .
-
-kitchen:electric_stove kitchen:onTopOf kitchen:light_marble_countertop .
-
-kitchen:kitchen_counter kitchen:along kitchen:wall .
-
-kitchen:dark_wall_cabinets kitchen:above kitchen:light_marble_countertop .
-
-kitchen:red_and_blue_boxes kitchen:onTopOf kitchen:light_marble_countertop .
-
-kitchen:brown_wooden_dining_table kitchen:hasLocation kitchen:center_of_the_room .
+kitchen:countertop kitchen:isA kitchen:Furniture .
 

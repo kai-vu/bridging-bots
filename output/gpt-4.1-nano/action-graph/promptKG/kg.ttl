@@ -6,6 +6,7 @@
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
+@prefix :       <https://example.org> .
 
 # Define the instruction
 psr:ReorganiseKitchen a owl:NamedIndividual, psr:Instruction ;
@@ -35,7 +36,7 @@ psr:KitchenReorganizationWorkflow psr:hasAction psr:Action1 ;
     rdfs:label "Robot"@en .
 
 # Link actions to agent
-psr:Action1 soma:isPerformedBy :Robot1 ;
+psr:Action1 soma:isPerformedBy :Robot1 .
 psr:Action2 soma:isPerformedBy :Robot1 .
 
 # Define the components involved

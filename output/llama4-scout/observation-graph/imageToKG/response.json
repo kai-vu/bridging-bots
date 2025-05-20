@@ -1,33 +1,33 @@
 {
-    "id": "chatcmpl-a88b927e-2aec-48fc-a5c5-9e35695c2041",
+    "id": "chatcmpl-4caad160-f03e-4b04-9759-dba2219e3b06",
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:kitchen a psr:Environment ;\n    rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance ;\n    rdfs:label \"refrigerator\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture ;\n    rdfs:label \"table\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:chair a psr:Furniture ;\n    rdfs:label \"chair\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cup a psr:Object ;\n    rdfs:label \"cup\"@en ;\n    psr:hasLocation psr:table .\n\npsr:book a psr:Object ;\n    rdfs:label \"book\"@en ;\n    psr:hasLocation psr:table .\n\npsr:water_bottle a psr:Object ;\n    rdfs:label \"water bottle\"@en ;\n    psr:hasLocation psr:table .\n\npsr:sink a psr:Component ;\n    rdfs:label \"sink\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:stove a psr:Appliance ;\n    rdfs:label \"stove\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:plate a psr:Object ;\n    rdfs:label \"plate\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cabinet a psr:Furniture ;\n    rdfs:label \"cabinet\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:drawer a psr:Furniture ;\n    rdfs:label \"drawer\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:countertop a psr:Component ;\n    rdfs:label \"countertop\"@en ;\n    psr:hasLocation psr:kitchen .\n\ndul:hasComponent(psr:kitchen, psr:refrigerator) .\ndul:hasComponent(psr:kitchen, psr:table) .\ndul:hasComponent(psr:kitchen, psr:chair) .\ndul:hasComponent(psr:kitchen, psr:cabinet) .\ndul:hasComponent(psr:kitchen, psr:drawer) .\ndul:hasComponent(psr:kitchen, psr:countertop) .\ndul:hasComponent(psr:kitchen, psr:sink) .\ndul:hasComponent(psr:kitchen, psr:stove) .\n\npsr:hasAffordance(psr:cup, soma:PickingUp) .\npsr:hasAffordance(psr:cup, soma:PuttingDown) .\npsr:hasAffordance(psr:book, soma:PickingUp) .\npsr:hasAffordance(psr:book, soma:PuttingDown) .\npsr:hasAffordance(psr:water_bottle, soma:PickingUp) .\npsr:hasAffordance(psr:water_bottle, soma:PuttingDown) .\npsr:hasAffordance(psr:plate, soma:PickingUp) .\npsr:hasAffordance(psr:plate, soma:PuttingDown) .\n\ngeo:sfWithin(psr:refrigerator, psr:kitchen) .\ngeo:sfWithin(psr:table, psr:kitchen) .\ngeo:sfWithin(psr:chair, psr:kitchen) .\ngeo:sfWithin(psr:cabinet, psr:kitchen) .\ngeo:sfWithin(psr:drawer, psr:kitchen) .\ngeo:sfWithin(psr:countertop, psr:kitchen) .\ngeo:sfWithin(psr:sink, psr:kitchen) .\ngeo:sfWithin(psr:stove, psr:kitchen) .",
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:kitchen a psr:Environment ;\n    rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance ;\n    rdfs:label \"refrigerator\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture ;\n    rdfs:label \"table\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:chair a psr:Furniture ;\n    rdfs:label \"chair\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cupboard a psr:Furniture ;\n    rdfs:label \"cupboard\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:water_bottle a psr:Object ;\n    rdfs:label \"water bottle\"@en ;\n    psr:hasLocation psr:table .\n\npsr:book a psr:Object ;\n    rdfs:label \"book\"@en ;\n    psr:hasLocation psr:table .\n\npsr:jello_box a psr:Object ;\n    rdfs:label \"Jello box\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:plates a psr:Object ;\n    rdfs:label \"plates\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:cups a psr:Object ;\n    rdfs:label \"cups\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:jar a psr:Object ;\n    rdfs:label \"jar\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:alpen_salt a psr:Object ;\n    rdfs:label \"Alpen Salt\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:evian_water a psr:Object ;\n    rdfs:label \"Evian water\"@en ;\n    psr:hasLocation psr:cupboard .\n\ndul:hasComponent(psr:kitchen, psr:refrigerator) ;\n    dul:hasComponent(psr:kitchen, psr:table) ;\n    dul:hasComponent(psr:kitchen, psr:chair) ;\n    dul:hasComponent(psr:kitchen, psr:cupboard) .\n\ndul:hasComponent(psr:cupboard, psr:jello_box) ;\n    dul:hasComponent(psr:cupboard, psr:plates) ;\n    dul:hasComponent(psr:cupboard, psr:cups) ;\n    dul:hasComponent(psr:cupboard, psr:jar) ;\n    dul:hasComponent(psr:cupboard, psr:alpen_salt) ;\n    dul:hasComponent(psr:cupboard, psr:evian_water) .\n\npsr:onTopOf(psr:refrigerator, psr:kitchen) ;\n    psr:onTopOf(psr:table, psr:kitchen) ;\n    psr:onTopOf(psr:chair, psr:kitchen) ;\n    psr:onTopOf(psr:cupboard, psr:kitchen) ;\n\ngeo:sfContains(psr:kitchen, psr:refrigerator) ;\n    geo:sfContains(psr:kitchen, psr:table) ;\n    geo:sfContains(psr:kitchen, psr:chair) ;\n    geo:sfContains(psr:kitchen, psr:cupboard) ;",
                 "role": "assistant"
             }
         }
     ],
-    "created": 1747688692,
+    "created": 1747693551,
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "object": "chat.completion",
-    "system_fingerprint": "fp_37da608fc1",
+    "system_fingerprint": "fp_42ae451038",
     "usage": {
-        "completion_tokens": 932,
+        "completion_tokens": 847,
         "prompt_tokens": 13959,
-        "total_tokens": 14891,
-        "completion_time": 1.8715123839999999,
-        "prompt_time": 0.366400113,
-        "queue_time": 1.732581825,
-        "total_time": 2.237912497
+        "total_tokens": 14806,
+        "completion_time": 1.7468934969999999,
+        "prompt_time": 0.378491259,
+        "queue_time": 1.7079328939999998,
+        "total_time": 2.125384756
     },
     "usage_breakdown": {
         "models": null
     },
     "x_groq": {
-        "id": "req_01jvn5t4ycewy9175jkc7pg97p"
+        "id": "req_01jvnaedmjf9h9wnd1cf59wcyd"
     }
 }

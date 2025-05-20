@@ -1,25 +1,49 @@
-@prefix psr: <https://example.com/psr#>
-@prefix dul: <https://example.com/dul#>
-@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#>
-@prefix owl: <https://www.w3.org/2002/05/owl#>
+@prefix psr: <http://example.org/psr#>
+@prefix dul: <http://example.org/dul#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://example.com/psr#task_instruction> a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+# Instruction class for task
+@namespace psr .
 
-<https://example.com/psr#workflow_1> a psr:Workflow ;
-  psr:precedes <https://example.com/psr#action_1> .
+@namespace dul .
 
-<https://example.com/dul#agent_1> a dul:Agent ;
-  psr:isPerformedBy <https://example.com/psr#workflow_1> .
+# Object class for kitchen items
+@namespace dul .
 
-<https://example.com/dul#object_1> a dul:Object ;
-  dul:actsOn <https://example.com/dul#component_1> ;
-  psr:isAffordedBy <https://example.com/psr#affordance_1> .
+# Action classes with object properties
+@namespace psr .
 
-<https://example.com/dul#object_2> a dul:Object ;
-  dul:actsOn <https://example.com/dul#component_2> ;
-  psr:isAffordedBy <https://example.com/psr#affordance_2> .
+# Affordance class for components
+@namespace dul .
 
-<https://example.com/dul#object_3> a dul:Object ;
-  dul:actsOn <https://example.com/dul#component_3> ;
-  psr:isAffordedBy <https://example.com/psr#affordance_3> .
+# Define affordances
+@prefix dul: <http://example.org/dul#>
+<http://example.org/dul/Closing> a dul:Affordance ;
+   dul:affordanceType "Closing" ;
+   dul:component psr:KitchenComponent .
+
+@prefix psr: <http://example.org/psr#>
+<http://example.org/psr/RestoringKitchen> a psr:Instruction ;
+   psr:naturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+
+# Generate sequence of actions for restoration task
+<http://example.org/psr/RestoringKitchen> a psr:Instruction ;
+   psr:workflow dul:Workflow .
+
+dul:Workflow a dul:Workflow ;
+   dul:hasAction (dul:Appliance a dul:KitchenAppliance) (dul:Furniture a dul:KitchenFurniture) (dul:Object a dul:KitchenItem) .
+
+(dul:Appliance a dul:KitchenAppliance) a dul:Action ;
+   psr:precedes (dul:Furniture a dul:KitchenFurniture) .
+   psr:isPerformedBy (dul:Agent a dul:Robot) .
+   psr:actsOn (dul:Component a dul:Closing) .
+
+(dul:Furniture a dul:KitchenFurniture) a dul:Action ;
+   psr:precedes (dul:Object a dul:KitchenItem) .
+   psr:isPerformedBy (dul:Agent a dul:Robot) .
+   psr:actsOn (dul:Component a dul:Opening) .
+
+(dul:Object a dul:KitchenItem) a dul:Action ;
+   psr:precedes (dul:Furniture a dul:KitchenFurniture) .
+   psr:isPerformedBy (dul:Agent a dul:Robot) .
+   psr:actsOn (dul:Component a dul:Delivering) .

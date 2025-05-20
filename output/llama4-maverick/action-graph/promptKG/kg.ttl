@@ -8,70 +8,72 @@
 @prefix psr: <https://w3id.org/psr-task#> .
 
 psr:RestoreKitchenToOrganizedState a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically." ;
     psr:hasWorkflow psr:Workflow_RestoreKitchen .
 
 psr:Workflow_RestoreKitchen a psr:Workflow ;
-    psr:hasAction dul:Action1, dul:Action2, dul:Action3, dul:Action4, dul:Action5, dul:Action6, dul:Action7, dul:Action8 .
+    psr:hasAction dul:Action_IdentifyMisplacedItems ;
+    psr:hasAction dul:Action_PickUpMisplacedItems ;
+    psr:hasAction dul:Action_ReturnItemsToStorage .
 
-dul:Action1 a dul:Action ;
-    rdfs:label "Identify misplaced items on the countertop"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:Countertop ;
-    psr:isAffordedBy soma:Perceiving .
+dul:Action_IdentifyMisplacedItems a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot ;
+    psr:actsOn psr:Component_MisplacedItems ;
+    psr:precedes dul:Action_PickUpMisplacedItems .
 
-dul:Action2 a dul:Action ;
-    rdfs:label "Identify misplaced items on the dining table"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:DiningTable ;
-    psr:isAffordedBy soma:Perceiving .
+dul:Action_PickUpMisplacedItems a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot ;
+    psr:actsOn psr:Component_MisplacedItems ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes dul:Action_ReturnItemsToStorage ;
+    dul:follows dul:Action_IdentifyMisplacedItems .
 
-dul:Action3 a dul:Action ;
-    rdfs:label "Pick up the yellow cup from the countertop"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:YellowCup ;
-    psr:isAffordedBy soma:PickingUp .
+dul:Action_ReturnItemsToStorage a dul:Action ;
+    soma:isPerformedBy dul:Agent_Robot ;
+    psr:actsOn psr:Component_MisplacedItems ;
+    psr:isAffordedBy soma:PuttingDown ;
+    dul:follows dul:Action_PickUpMisplacedItems .
 
-dul:Action4 a dul:Action ;
-    rdfs:label "Put the yellow cup in its storage location"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:YellowCup ;
-    psr:isAffordedBy soma:PuttingDown .
+dul:Agent_Robot a dul:Agent .
 
-dul:Action5 a dul:Action ;
-    rdfs:label "Pick up the red jar from the countertop"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:RedJar ;
-    psr:isAffordedBy soma:PickingUp .
+psr:Component_MisplacedItems a psr:Component ;
+    rdfs:comment "Misplaced items in the kitchen" .
 
-dul:Action6 a dul:Action ;
-    rdfs:label "Put the red jar in its storage location"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:RedJar ;
-    psr:isAffordedBy soma:PuttingDown .
+soma:PickingUp a psr:Affordance .
+soma:PuttingDown a psr:Affordance .
 
-dul:Action7 a dul:Action ;
-    rdfs:label "Pick up the large bottle of water from the dining table"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:LargeBottleOfWater ;
-    psr:isAffordedBy soma:PickingUp .
+psr:Component_Table a psr:Component ;
+    rdfs:label "Table" .
 
-dul:Action8 a dul:Action ;
-    rdfs:label "Put the large bottle of water in its storage location"@en ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:LargeBottleOfWater ;
-    psr:isAffordedBy soma:PuttingDown .
+psr:Component_Cabinets a psr:Component ;
+    rdfs:label "Cabinets" .
 
-dul:Action1 psr:precedes dul:Action3 .
-dul:Action3 psr:precedes dul:Action4 .
-dul:Action4 psr:precedes dul:Action5 .
-dul:Action5 psr:precedes dul:Action6 .
-dul:Action2 psr:precedes dul:Action7 .
-dul:Action7 psr:precedes dul:Action8 .
+psr:Component_Countertop a psr:Component ;
+    rdfs:label "Countertop" .
 
-psr:Countertop a psr:Component .
-psr:DiningTable a psr:Component .
-psr:YellowCup a psr:Object .
-psr:RedJar a psr:Object .
-psr:LargeBottleOfWater a psr:Object .
-psr:Robot a dul:Agent .
+psr:Component_Floor a psr:Component ;
+    rdfs:label "Floor" .
+
+psr:Object_BoxOfCrackers a psr:Object ;
+    rdfs:label "Box of crackers" .
+
+psr:Object_PlasticBottleOfWater a psr:Object ;
+    rdfs:label "Plastic bottle of water" .
+
+psr:Object_DisposablePlasticCups a psr:Object ;
+    rdfs:label "Disposable plastic cups" .
+
+psr:Object_JarsWithLabel a psr:Object ;
+    rdfs:label "Jars with label" .
+
+psr:Object_BoxesOfJello a psr:Object ;
+    rdfs:label "Boxes of jello" .
+
+psr:Object_RiceBubbles a psr:Object ;
+    rdfs:label "Rice bubbles" .
+
+psr:Object_Crackers a psr:Object ;
+    rdfs:label "Crackers" .
+
+psr:Object_Cup a psr:Object ;
+    rdfs:label "Cup" .

@@ -1,70 +1,55 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:agent kitchen:Moving kitchen:dining_room,
-        kitchen:kitchen,
-        kitchen:kitchen_counter,
-        kitchen:near_the_stove,
-        kitchen:suitable_storage_location ;
-    kitchen:PickingUp kitchen:Chucky_puzzle,
-        kitchen:bottle_of_water,
-        kitchen:box_of_Rice_Bubbles_cereal,
-        kitchen:box_of_shortbread_cookies,
-        kitchen:box_of_strawberry_banana_Jello,
-        kitchen:cookbook,
+<http://example.org/kitchen#Chocolate_Cake_&_Other_Luscious_Desserts> kitchen:isA kitchen:Book .
+
+kitchen:Move kitchen:hasComponent kitchen:kitchen_counter ;
+    kitchen:isA kitchen:Affordance .
+
+kitchen:Pick_up kitchen:hasComponent kitchen:box_of_Rice_Bubbles,
         kitchen:jar_of_jam,
-        kitchen:plate_with_fruit,
-        kitchen:yellow_mug ;
-    kitchen:PuttingDown kitchen:Chucky_puzzle,
-        kitchen:bottle_of_water,
-        kitchen:box_of_Rice_Bubbles_cereal,
-        kitchen:box_of_shortbread_cookies,
-        kitchen:box_of_strawberry_banana_Jello,
-        kitchen:cookbook,
-        kitchen:jar_of_jam,
-        kitchen:plate_with_fruit,
-        kitchen:yellow_mug .
+        kitchen:pot ;
+    kitchen:isA kitchen:Affordance .
 
-kitchen:stove kitchen:isA kitchen:Appliance .
+kitchen:Put kitchen:hasComponent kitchen:cabinet ;
+    kitchen:isA kitchen:Affordance .
 
-kitchen:kitchen kitchen:isA kitchen:Location .
+kitchen:action kitchen:isA kitchen:Affordance .
 
-kitchen:refrigerator kitchen:isA kitchen:Appliance .
+kitchen:book kitchen:hasLocation kitchen:bookshelf .
 
-kitchen:Chucky_puzzle kitchen:hasLocation kitchen:dining_table ;
-    kitchen:sfWithin kitchen:suitable_storage_location .
+kitchen:bottle_of_water kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfContains kitchen:water .
 
-kitchen:bottle_of_water kitchen:hasLocation kitchen:dining_room ;
-    kitchen:sfWithin kitchen:refrigerator .
+kitchen:bowl_of_fruit kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfContains kitchen:fruit .
 
-kitchen:cookbook kitchen:hasLocation kitchen:dining_room ;
-    kitchen:onTopOf kitchen:kitchen_counter_shelf .
+kitchen:box_of_Jello kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfContains kitchen:Jello .
 
-kitchen:plate_with_fruit kitchen:hasLocation kitchen:dining_room ;
-    kitchen:onTopOf kitchen:kitchen_counter .
+kitchen:box_of_shortbread kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfContains kitchen:shortbread .
 
-kitchen:box_of_Rice_Bubbles_cereal kitchen:hasLocation kitchen:near_the_stove ;
-    kitchen:sfWithin kitchen:kitchen_cabinet .
+kitchen:dining_table kitchen:isA kitchen:Furniture ;
+    kitchen:sfWithin kitchen:kitchen .
 
-kitchen:box_of_shortbread_cookies kitchen:hasLocation kitchen:kitchen_counter ;
-    kitchen:sfWithin kitchen:kitchen_cabinet .
+kitchen:plate kitchen:hasLocation kitchen:kitchen_counter .
 
-kitchen:box_of_strawberry_banana_Jello kitchen:hasLocation kitchen:kitchen_counter ;
-    kitchen:sfWithin kitchen:kitchen_cabinet .
+kitchen:bookshelf kitchen:isA kitchen:Furniture ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:box_of_Rice_Bubbles kitchen:hasLocation kitchen:kitchen_counter ;
+    kitchen:sfContains kitchen:Rice_Bubbles .
+
+kitchen:cabinet kitchen:hasLocation kitchen:kitchen ;
+    kitchen:sfWithin kitchen:kitchen .
 
 kitchen:jar_of_jam kitchen:hasLocation kitchen:kitchen_counter ;
-    kitchen:sfWithin kitchen:kitchen_cabinet .
+    kitchen:sfContains kitchen:jam .
 
-kitchen:yellow_mug kitchen:hasLocation kitchen:kitchen_counter ;
-    kitchen:sfWithin kitchen:kitchen_cabinet .
+kitchen:pot kitchen:hasLocation kitchen:kitchen_counter .
 
-kitchen:dining_room kitchen:isA kitchen:Location .
+kitchen:kitchen kitchen:sfContains kitchen:kitchen_counter .
 
-kitchen:kitchen_cabinet kitchen:isA kitchen:Furniture ;
-    kitchen:sfContains kitchen:box_of_Rice_Bubbles_cereal,
-        kitchen:box_of_shortbread_cookies,
-        kitchen:box_of_strawberry_banana_Jello,
-        kitchen:jar_of_jam,
-        kitchen:yellow_mug .
-
-kitchen:kitchen_counter kitchen:isA kitchen:Location .
+kitchen:kitchen_counter kitchen:isA kitchen:Location ;
+    kitchen:onTopOf kitchen:kitchen .
 

@@ -7,183 +7,56 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-### Knowledge Graph of Actions
+### Instances
+psr:inst1 a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-#### Classes and Object Properties
+psr:agent1 a dul:Agent .
 
-psr:Instruction a owl:Class, dul:Entity ;
- rdfs:label "Instruction"@en ;
- rdfs:comment "An instruction is a command or directive given to a robot."@en .
+### Actions and Workflow
+psr:workflow1 a psr:Workflow ;
+  psr:hasAction psr:action1, psr:action2, psr:action3, psr:action4, psr:action5 .
 
-psr:Workflow a owl:Class, dul:Entity ;
- rdfs:subClassOf dul:Workflow ;
- rdfs:label "Workflow"@en ;
- rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
+psr:action1 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn psr:book1 .
 
-dul:Action a owl:Class, dul:Entity ;
- rdfs:label "Action"@en ;
- rdfs:comment "An action is an atomic, single, clear action that is carried out to fulfil the instruction."@en .
+psr:action2 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn psr:book1 .
 
-dul:Agent a owl:Class, dul:Entity ;
- rdfs:label "Agent"@en ;
- rdfs:comment "An agent performing an action."@en .
+psr:action3 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn psr:bottle1 .
 
-psr:Component a owl:Class, dul:Entity ;
- rdfs:label "Component"@en ;
- rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
+psr:action4 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn psr:bottle1 .
 
-psr:Appliance a owl:Class, dul:Entity, psr:Component ;
- rdfs:label "Appliance"@en ;
- rdfs:comment "An appliance is a type of component."@en .
+psr:action5 a dul:Action ;
+  psr:isAffordedBy soma:Opening ;
+  psr:actsOn psr:refrigerator1 .
 
-psr:Furniture a owl:Class, dul:Entity, psr:Component ;
- rdfs:label "Furniture"@en ;
- rdfs:comment "A furniture is a type of component."@en .
+### Objects
+psr:book1 a psr:Object, psr:Component ;
+  rdfs:label "Chucky Puzzle"@en .
 
-psr:Object a owl:Class, dul:Entity, psr:Component ;
- rdfs:label "Object"@en ;
- rdfs:comment "An object is a type of component."@en .
+psr:bottle1 a psr:Object, psr:Component ;
+  rdfs:label "Water Bottle"@en .
 
-psr:Affordance a owl:Class, dul:Entity ;
- rdfs:label "Affordance"@en ;
- rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
+psr:refrigerator1 a psr:Appliance, psr:Component ;
+  rdfs:label "Refrigerator"@en .
 
-soma:Closing a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Closing"@en ;
- rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
+### Relations
+psr:action1 psr:precedes psr:action2 .
+psr:action2 psr:follows psr:action1 .
+psr:action2 psr:precedes psr:action3 .
+psr:action3 psr:follows psr:action2 .
+psr:action3 psr:precedes psr:action4 .
+psr:action4 psr:follows psr:action3 .
+psr:action4 psr:precedes psr:action5 .
+psr:action5 psr:follows psr:action4 .
 
-soma:Opening a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Opening"@en ;
- rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
-
-soma:Delivering a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Delivering"@en ;
- rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
-
-soma:Holding a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Holding"@en ;
- rdfs:comment "Holding is an affordance that enables a component to be held."@en .
-
-soma:PickingUp a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "PickingUp"@en ;
- rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
-
-soma:PuttingDown a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "PuttingDown"@en ;
- rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
-
-soma:Pulling a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Pulling"@en ;
- rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
-
-soma:Pushing a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Pushing"@en ;
- rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
-
-soma:Grasping a owl:Class, dul:Entity, psr:Affordance ;
- rdfs:label "Grasping"@en ;
- rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
-
-psr:hasWorkflow a owl:ObjectProperty ;
- rdfs:domain psr:Instruction ;
- rdfs:range psr:Workflow ;
- rdfs:label "has workflow"@en ;
- rdfs:comment "An instruction has a workflow that needs to be executed."@en .
-
-psr:hasAction a owl:ObjectProperty ;
- rdfs:domain psr:Workflow ;
- rdfs:range dul:Action ;
- rdfs:label "has action"@en ;
- rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
-
-psr:precedes a owl:ObjectProperty ;
- rdfs:subPropertyOf dul:precedes ;
- rdfs:domain dul:Action ;
- rdfs:range dul:Action ;
- rdfs:label "precedes" ;
- rdfs:comment "An action can precede another action."@en .
-
-psr:follows a owl:ObjectProperty ;
- rdfs:subPropertyOf dul:follows ;
- rdfs:domain dul:Action ;
- rdfs:range dul:Action ;
- rdfs:label "follow" ;
- rdfs:comment "An action can follow another action."@en .
-
-soma:isPerformedBy a owl:ObjectProperty ;
- rdfs:domain dul:Action ;
- rdfs:range dul:Agent ;
- rdfs:label "is performed by"@en ;
- rdfs:comment "An action is performed by an agent."@en .
-
-psr:actsOn a owl:ObjectProperty ;
- rdfs:domain dul:Action ;
- rdfs:range psr:Component ;
- rdfs:label "acts on"@en ;
- rdfs:comment "An action acts on a component."@en .
-
-psr:isAffordedBy a owl:ObjectProperty ;
- rdfs:domain dul:Action ;
- rdfs:range psr:Affordance ;
- rdfs:label "is afforded by"@en ;
- rdfs:comment "An action is afforded by an affordance."@en .
-
-psr:hasNaturalLanguage a owl:DatatypeProperty ;
- rdfs:domain psr:Instruction ;
- rdfs:range xsd:string ;
- rdfs:label "has natural language"@en ;
- rdfs:comment "The instruction is expressed in a natural language."@en .
-
-### Sequence of Actions
-
-```turtle
-### Define the Instruction
-psr:restore_kitchen a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations."@en .
-
-### Define the Workflow
-psr:workflow_1 a psr:Workflow ;
-    psr:hasAction psr:action_1, psr:action_2, psr:action_3, psr:action_4 .
-
-### Define Actions
-psr:action_1 a dul:Action ;
-    rdfs:label "Pick up water bottle from table"@en ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:water_bottle ;
-    psr:isAffordedBy soma:PickingUp .
-
-psr:action_2 a dul:Action ;
-    rdfs:label "Move water bottle to refrigerator"@en ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:water_bottle ;
-    psr:isAffordedBy soma:Pushing .
-
-psr:action_3 a dul:Action ;
-    rdfs:label "Open refrigerator door"@en ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:refrigerator ;
-    psr:isAffordedBy soma:Opening .
-
-psr:action_4 a dul:Action ;
-    rdfs:label "Put water bottle inside refrigerator"@en ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:water_bottle ;
-    psr:isAffordedBy soma:PuttingDown .
-
-### Relationships Between Actions
-psr:action_1 psr:precedes psr:action_2 .
-psr:action_2 psr:precedes psr:action_3 .
-psr:action_3 psr:precedes psr:action_4 .
-
-### Define Objects and Affordances
-psr:water_bottle a psr:Object, psr:Component ;
-    rdfs:label "Water Bottle"@en .
-
-psr:refrigerator a psr:Appliance, psr:Component ;
-    rdfs:label "Refrigerator"@en .
-
-psr:table a psr:Furniture, psr:Component ;
-    rdfs:label "Table"@en .
-
-psr:robot a dul:Agent ;
-    rdfs:label "Robot"@en .
+psr:inst1 psr:hasWorkflow psr:workflow1 .
+psr:agent1 a dul:Agent ;
+  psr:isPerformedBy psr:action1, psr:action2, psr:action3, psr:action4 .

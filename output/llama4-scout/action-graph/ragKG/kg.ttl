@@ -5,207 +5,166 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-psr:RestoreKitchen a psr:Workflow .
+psr:Instruction1 a psr:Instruction ;
+  rdfs:label "Restore kitchen to organized state"@en .
 
-psr:RestoreKitchen psr:hasAction psr:IdentifyMisplacedItems .
-psr:RestoreKitchen psr:hasAction psr:ReturnItemsToStorage .
+psr:Workflow1 a psr:Workflow ;
+  rdfs:label "Workflow to restore kitchen"@en .
 
-psr:IdentifyMisplacedItems a dul:Action ;
-    rdfs:label "Identify Misplaced Items"@en ;
-    psr:actsOn psr:MisplacedItem .
+dul:Agent1 a dul:Agent ;
+  rdfs:label "Robot"@en .
 
-psr:ReturnItemsToStorage a dul:Action ;
-    rdfs:label "Return Items to Storage"@en ;
-    psr:actsOn psr:MisplacedItem .
+psr:Appliance1 a psr:Appliance ;
+  rdfs:label "Refrigerator"@en .
 
-psr:MisplacedItem a psr:Component .
+psr:Object1 a psr:Object ;
+  rdfs:label "Pot"@en .
 
-psr:BoxOfRiceBubblesCereal a psr:Object ;
-    rdfs:label "Box of Rice Bubbles Cereal"@en .
+psr:Object2 a psr:Object ;
+  rdfs:label "Jar of jam"@en .
 
-psr:BoxOfStrawberryBananaJello a psr:Object ;
-    rdfs:label "Box of Strawberry Banana Jello"@en .
+psr:Object3 a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en .
 
-psr:JarOfJam a psr:Object ;
-    rdfs:label "Jar of Jam"@en .
+psr:Object4 a psr:Object ;
+  rdfs:label "Box of Jello"@en .
 
-psr:BoxOfShortbreadCookies a psr:Object ;
-    rdfs:label "Box of Shortbread Cookies"@en .
+psr:Object5 a psr:Object ;
+  rdfs:label "Box of shortbread"@en .
 
-psr:YellowMug a psr:Object ;
-    rdfs:label "Yellow Mug"@en .
+psr:Object6 a psr:Object ;
+  rdfs:label "Plate"@en .
 
-psr:BottleOfWater a psr:Object ;
-    rdfs:label "Bottle of Water"@en .
+psr:Object7 a psr:Object ;
+  rdfs:label "Bottle of water"@en .
 
-psr:PlateWithFruit a psr:Object ;
-    rdfs:label "Plate with Fruit"@en .
+psr:Object8 a psr:Object ;
+  rdfs:label "Bowl of fruit"@en .
 
-psr:Cookbook a psr:Object ;
-    rdfs:label "Cookbook"@en .
+psr:Object9 a psr:Object ;
+  rdfs:label "Book"@en .
 
-psr:AlpenSalt a psr:Object ;
-    rdfs:label "Alpen Salt"@en .
+soma:PickingUp1 a soma:PickingUp ;
+  rdfs:label "Picking up pot"@en .
 
-psr:ChuckyPuzzle a psr:Object ;
-    rdfs:label "Chucky Puzzle"@en .
+soma:PickingUp2 a soma:PickingUp ;
+  rdfs:label "Picking up jar of jam"@en .
 
-psr:KitchenCounter a psr:Component ;
-    rdfs:label "Kitchen Counter"@en .
+soma:PickingUp3 a soma:PickingUp ;
+  rdfs:label "Picking up box of Rice Bubbles"@en .
 
-psr:KitchenCabinets a psr:Component ;
-    rdfs:label "Kitchen Cabinets"@en .
+soma:PickingUp4 a soma:PickingUp ;
+  rdfs:label "Picking up box of Jello"@en .
 
-psr:DiningTable a psr:Component ;
-    rdfs:label "Dining Table"@en .
+soma:PickingUp5 a soma:PickingUp ;
+  rdfs:label "Picking up box of shortbread"@en .
 
-psr:Stovetop a psr:Component ;
-    rdfs:label "Stovetop"@en .
+soma:PickingUp6 a soma:PickingUp ;
+  rdfs:label "Picking up plate"@en .
 
-psr:IdentifyMisplacedItems psr:follows soma:PickingUp .
-psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
+soma:PickingUp7 a soma:PickingUp ;
+  rdfs:label "Picking up bottle of water"@en .
 
-psr:PickingUp a soma:Affordance ;
-    rdfs:label "Picking Up"@en .
+soma:PickingUp8 a soma:PickingUp ;
+  rdfs:label "Picking up bowl of fruit"@en .
 
-psr:PickingUp psr:isAffordedBy soma:PickingUp .
+soma:PickingUp9 a soma:PickingUp ;
+  rdfs:label "Picking up book"@en .
 
-psr:IdentifyMisplacedItems psr:isPerformedBy dul:Agent .
+soma:PuttingDown1 a soma:PuttingDown ;
+  rdfs:label "Putting down pot"@en .
 
-psr:ReturnItemsToStorage psr:actsOn psr:BoxOfRiceBubblesCereal .
-psr:ReturnItemsToStorage psr:actsOn psr:BoxOfStrawberryBananaJello .
-psr:ReturnItemsToStorage psr:actsOn psr:JarOfJam .
-psr:ReturnItemsToStorage psr:actsOn psr:BoxOfShortbreadCookies .
-psr:ReturnItemsToStorage psr:actsOn psr:YellowMug .
-psr:ReturnItemsToStorage psr:actsOn psr:BottleOfWater .
-psr:ReturnItemsToStorage psr:actsOn psr:PlateWithFruit .
-psr:ReturnItemsToStorage psr:actsOn psr:Cookbook .
-psr:ReturnItemsToStorage psr:actsOn psr:AlpenSalt .
-psr:ReturnItemsToStorage psr:actsOn psr:ChuckyPuzzle .
+soma:PuttingDown2 a soma:PuttingDown ;
+  rdfs:label "Putting down jar of jam"@en .
 
-psr:BoxOfRiceBubblesCereal psr:actsOn psr:KitchenCabinets .
-psr:BoxOfStrawberryBananaJello psr:actsOn psr:KitchenCabinets .
-psr:JarOfJam psr:actsOn psr:KitchenCabinets .
-psr:BoxOfShortbreadCookies psr:actsOn psr:KitchenCabinets .
-psr:AlpenSalt psr:actsOn psr:KitchenCabinets .
+soma:PuttingDown3 a soma:PuttingDown ;
+  rdfs:label "Putting down box of Rice Bubbles"@en .
 
-psr:BottleOfWater psr:actsOn psr:DiningTable .
-psr:PlateWithFruit psr:actsOn psr:DiningTable .
-psr:Cookbook psr:actsOn psr:KitchenCabinets .
-psr:ChuckyPuzzle psr:actsOn psr:DiningTable .
+soma:PuttingDown4 a soma:PuttingDown ;
+  rdfs:label "Putting down box of Jello"@en .
 
-psr:YellowMug psr:actsOn psr:KitchenCabinets .
+soma:PuttingDown5 a soma:PuttingDown ;
+  rdfs:label "Putting down box of shortbread"@en .
 
-psr:RestoreKitchen psr:hasWorkflow psr:Workflow_1 .
+soma:PuttingDown6 a soma:PuttingDown ;
+  rdfs:label "Putting down plate"@en .
 
-psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction psr:PickUpBoxOfRiceBubblesCereal .
-psr:Workflow_1 psr:hasAction psr:PickUpBoxOfStrawberryBananaJello .
-psr:Workflow_1 psr:hasAction psr:PickUpJarOfJam .
-psr:Workflow_1 psr:hasAction psr:PickUpBoxOfShortbreadCookies .
-psr:Workflow_1 psr:hasAction psr:PickUpYellowMug .
-psr:Workflow_1 psr:hasAction psr:PickUpBottleOfWater .
-psr:Workflow_1 psr:hasAction psr:PickUpPlateWithFruit .
-psr:Workflow_1 psr:hasAction psr:PickUpCookbook .
-psr:Workflow_1 psr:hasAction psr:PickUpAlpenSalt .
-psr:Workflow_1 psr:hasAction psr:PickUpChuckyPuzzle .
+soma:PuttingDown7 a soma:PuttingDown ;
+  rdfs:label "Putting down bottle of water"@en .
 
-psr:PickUpBoxOfRiceBubblesCereal a dul:Action ;
-    rdfs:label "Pick Up Box of Rice Bubbles Cereal"@en ;
-    psr:actsOn psr:BoxOfRiceBubblesCereal ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PuttingDown8 a soma:PuttingDown ;
+  rdfs:label "Putting down bowl of fruit"@en .
 
-psr:PickUpBoxOfStrawberryBananaJello a dul:Action ;
-    rdfs:label "Pick Up Box of Strawberry Banana Jello"@en ;
-    psr:actsOn psr:BoxOfStrawberryBananaJello ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PuttingDown9 a soma:PuttingDown ;
+  rdfs:label "Putting down book"@en .
 
-psr:PickUpJarOfJam a dul:Action ;
-    rdfs:label "Pick Up Jar of Jam"@en ;
-    psr:actsOn psr:JarOfJam ;
-    psr:isAffordedBy soma:PickingUp .
+psr:Instruction1 psr:hasWorkflow psr:Workflow1 .
 
-psr:PickUpBoxOfShortbreadCookies a dul:Action ;
-    rdfs:label "Pick Up Box of Shortbread Cookies"@en ;
-    psr:actsOn psr:BoxOfShortbreadCookies ;
-    psr:isAffordedBy soma:PickingUp .
+psr:Workflow1 psr:hasAction soma:PickingUp1 .
+psr:Workflow1 psr:hasAction soma:PickingUp2 .
+psr:Workflow1 psr:hasAction soma:PickingUp3 .
+psr:Workflow1 psr:hasAction soma:PickingUp4 .
+psr:Workflow1 psr:hasAction soma:PickingUp5 .
+psr:Workflow1 psr:hasAction soma:PickingUp6 .
+psr:Workflow1 psr:hasAction soma:PickingUp7 .
+psr:Workflow1 psr:hasAction soma:PickingUp8 .
+psr:Workflow1 psr:hasAction soma:PickingUp9 .
 
-psr:PickUpYellowMug a dul:Action ;
-    rdfs:label "Pick Up Yellow Mug"@en ;
-    psr:actsOn psr:YellowMug ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PickingUp1 psr:actsOn psr:Object1 .
+soma:PickingUp2 psr:actsOn psr:Object2 .
+soma:PickingUp3 psr:actsOn psr:Object3 .
+soma:PickingUp4 psr:actsOn psr:Object4 .
+soma:PickingUp5 psr:actsOn psr:Object5 .
+soma:PickingUp6 psr:actsOn psr:Object6 .
+soma:PickingUp7 psr:actsOn psr:Object7 .
+soma:PickingUp8 psr:actsOn psr:Object8 .
+soma:PickingUp9 psr:actsOn psr:Object9 .
 
-psr:PickUpBottleOfWater a dul:Action ;
-    rdfs:label "Pick Up Bottle of Water"@en ;
-    psr:actsOn psr:BottleOfWater ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PickingUp1 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp2 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp3 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp4 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp5 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp6 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp7 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp8 psr:isAffordedBy soma:PickingUp .
+soma:PickingUp9 psr:isAffordedBy soma:PickingUp .
 
-psr:PickUpPlateWithFruit a dul:Action ;
-    rdfs:label "Pick Up Plate with Fruit"@en ;
-    psr:actsOn psr:PlateWithFruit ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PuttingDown1 psr:actsOn psr:Object1 .
+soma:PuttingDown2 psr:actsOn psr:Object2 .
+soma:PuttingDown3 psr:actsOn psr:Object3 .
+soma:PuttingDown4 psr:actsOn psr:Object4 .
+soma:PuttingDown5 psr:actsOn psr:Object5 .
+soma:PuttingDown6 psr:actsOn psr:Object6 .
+soma:PuttingDown7 psr:actsOn psr:Object7 .
+soma:PuttingDown8 psr:actsOn psr:Object8 .
+soma:PuttingDown9 psr:actsOn psr:Object9 .
 
-psr:PickUpCookbook a dul:Action ;
-    rdfs:label "Pick Up Cookbook"@en ;
-    psr:actsOn psr:Cookbook ;
-    psr:isAffordedBy soma:PickingUp .
+soma:PuttingDown1 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown2 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown3 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown4 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown5 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown6 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown7 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown8 psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown9 psr:isAffordedBy soma:PuttingDown .
 
-psr:PickUpAlpenSalt a dul:Action ;
-    rdfs:label "Pick Up Alpen Salt"@en ;
-    psr:actsOn psr:AlpenSalt ;
-    psr:isAffordedBy soma:PickingUp .
+dul:Agent1 psr:isPerformedBy dul:Agent1 .
+soma:PickingUp1 psr:follows soma:PickingUp2 .
+soma:PickingUp2 psr:follows soma:PickingUp3 .
+soma:PickingUp3 psr:follows soma:PickingUp4 .
+soma:PickingUp4 psr:follows soma:PickingUp5 .
+soma:PickingUp5 psr:follows soma:PickingUp6 .
+soma:PickingUp6 psr:follows soma:PickingUp7 .
+soma:PickingUp7 psr:follows soma:PickingUp8 .
+soma:PickingUp8 psr:follows soma:PickingUp9 .
 
-psr:PickUpChuckyPuzzle a dul:Action ;
-    rdfs:label "Pick Up Chucky Puzzle"@en ;
-    psr:actsOn psr:ChuckyPuzzle ;
-    psr:isAffordedBy soma:PickingUp .
-
-psr:PutDownBoxOfRiceBubblesCereal a dul:Action ;
-    rdfs:label "Put Down Box of Rice Bubbles Cereal"@en ;
-    psr:actsOn psr:BoxOfRiceBubblesCereal ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownBoxOfStrawberryBananaJello a dul:Action ;
-    rdfs:label "Put Down Box of Strawberry Banana Jello"@en ;
-    psr:actsOn psr:BoxOfStrawberryBananaJello ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownJarOfJam a dul:Action ;
-    rdfs:label "Put Down Jar of Jam"@en ;
-    psr:actsOn psr:JarOfJam ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownBoxOfShortbreadCookies a dul:Action ;
-    rdfs:label "Put Down Box of Shortbread Cookies"@en ;
-    psr:actsOn psr:BoxOfShortbreadCookies ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownYellowMug a dul:Action ;
-    rdfs:label "Put Down Yellow Mug"@en ;
-    psr:actsOn psr:YellowMug ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownBottleOfWater a dul:Action ;
-    rdfs:label "Put Down Bottle of Water"@en ;
-    psr:actsOn psr:BottleOfWater ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownPlateWithFruit a dul:Action ;
-    rdfs:label "Put Down Plate with Fruit"@en ;
-    psr:actsOn psr:PlateWithFruit ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownCookbook a dul:Action ;
-    rdfs:label "Put Down Cookbook"@en ;
-    psr:actsOn psr:Cookbook ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownAlpenSalt a dul:Action ;
-    rdfs:label "Put Down Alpen Salt"@en ;
-    psr:actsOn psr:AlpenSalt ;
-    psr:isAffordedBy soma:PuttingDown .
-
-psr:PutDownChuckyPuzzle a dul:Action ;
-    rdfs:label "Put Down Chucky Puzzle"@en ;
-    psr:actsOn psr:ChuckyPuzzle ;
-    psr:isAffordedBy soma:PuttingDown .
+soma:PuttingDown1 psr:precedes soma:PuttingDown2 .
+soma:PuttingDown2 psr:precedes soma:PuttingDown3 .
+soma:PuttingDown3 psr:precedes soma:PuttingDown4 .
+soma:PuttingDown4 psr:precedes soma:PuttingDown5 .
+soma:PuttingDown5 psr:precedes soma:PuttingDown6 .
+soma:PuttingDown6 psr:precedes soma:PuttingDown7 .
+soma:PuttingDown7 psr:precedes soma:PuttingDown8 .
+soma:PuttingDown8 psr:precedes soma:PuttingDown9 .

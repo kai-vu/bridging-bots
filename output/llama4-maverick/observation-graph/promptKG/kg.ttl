@@ -5,119 +5,94 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:DarkWallCabinets, psr:LightMarbleCountertop, psr:BlueFramedMirror, psr:WhiteRefrigerator, psr:SilverSink, psr:ElectricStove, psr:RedBox1, psr:BlueBox1, psr:YellowCup, psr:RedJar, psr:StackOfWhitePlates, psr:Pot, psr:RangeHood, psr:BrownWoodenDiningTable, psr:WhiteChairs, psr:LargeBottleOfWater, psr:BoxOnTable, psr:Mug, psr:WhiteDoor .
+psr:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent psr:KitchenCabinets, psr:Refrigerator, psr:Countertop, psr:DiningTable, psr:WhiteChairs, psr:Sink, psr:WoodenFramedMirror, psr:RangeHood, psr:Stove, psr:BoxOfCrackers, psr:PlasticBottleOfWater, psr:DisposablePlasticCups, psr:JarsWithLabel, psr:BoxesOfJello, psr:RiceBubbles, psr:Crackers, psr:Cup .
 
-psr:DarkWallCabinets a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_DarkWallCabinets .
+psr:KitchenCabinets a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:CurrentLocation_DarkWallCabinets a psr:CurrentLocation ;
-    psr:onTopOf psr:LightMarbleCountertop .
+psr:Refrigerator a psr:Appliance ;
+    dul:hasLocation psr:RefrigeratorLocation .
 
-psr:LightMarbleCountertop a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_LightMarbleCountertop ;
-    psr:hasAffordance soma:Holding .
+psr:RefrigeratorLocation a psr:CurrentLocation ;
+    geo:sfBehind psr:KitchenCabinets .
 
-psr:CurrentLocation_LightMarbleCountertop a psr:CurrentLocation .
+psr:Countertop a psr:Furniture ;
+    psr:hasAffordance soma:Holding, soma:PuttingDown .
 
-psr:BlueFramedMirror a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_BlueFramedMirror .
-
-psr:CurrentLocation_BlueFramedMirror a psr:CurrentLocation ;
-    geo:sfWithin psr:DarkWallCabinets .
-
-psr:WhiteRefrigerator a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_WhiteRefrigerator .
-
-psr:CurrentLocation_WhiteRefrigerator a psr:CurrentLocation ;
-    geo:sfWithin psr:DarkWallCabinets .
-
-psr:SilverSink a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_SilverSink ;
-    psr:hasAffordance soma:Holding .
-
-psr:CurrentLocation_SilverSink a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:ElectricStove a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_ElectricStove ;
-    psr:hasAffordance soma:Holding .
-
-psr:CurrentLocation_ElectricStove a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:RedBox1 a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_RedBox1 .
-
-psr:CurrentLocation_RedBox1 a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:BlueBox1 a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_BlueBox1 .
-
-psr:CurrentLocation_BlueBox1 a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:YellowCup a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_YellowCup .
-
-psr:CurrentLocation_YellowCup a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:RedJar a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_RedJar .
-
-psr:CurrentLocation_RedJar a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:StackOfWhitePlates a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_StackOfWhitePlates .
-
-psr:CurrentLocation_StackOfWhitePlates a psr:CurrentLocation ;
-    geo:sfWithin psr:LightMarbleCountertop .
-
-psr:Pot a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Pot .
-
-psr:CurrentLocation_Pot a psr:CurrentLocation ;
-    geo:sfWithin psr:ElectricStove .
-
-psr:RangeHood a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_RangeHood .
-
-psr:CurrentLocation_RangeHood a psr:CurrentLocation ;
-    psr:onTopOf psr:ElectricStove .
-
-psr:BrownWoodenDiningTable a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_BrownWoodenDiningTable .
-
-psr:CurrentLocation_BrownWoodenDiningTable a psr:CurrentLocation .
+psr:DiningTable a psr:Furniture ;
+    psr:hasAffordance soma:Holding, soma:PuttingDown .
 
 psr:WhiteChairs a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_WhiteChairs .
+    dul:hasLocation psr:DiningArea .
 
-psr:CurrentLocation_WhiteChairs a psr:CurrentLocation ;
-    geo:sfWithin psr:BrownWoodenDiningTable .
+psr:Sink a psr:Object ;
+    dul:hasLocation psr:KitchenCounter .
 
-psr:LargeBottleOfWater a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_LargeBottleOfWater .
+psr:WoodenFramedMirror a psr:Object ;
+    dul:hasLocation psr:WallAboveSink .
 
-psr:CurrentLocation_LargeBottleOfWater a psr:CurrentLocation ;
-    geo:sfWithin psr:BrownWoodenDiningTable .
+psr:RangeHood a psr:Object ;
+    dul:hasLocation psr:AboveStove .
 
-psr:BoxOnTable a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_BoxOnTable .
+psr:Stove a psr:Appliance .
 
-psr:CurrentLocation_BoxOnTable a psr:CurrentLocation ;
-    geo:sfWithin psr:BrownWoodenDiningTable .
+psr:BoxOfCrackers a psr:Object ;
+    dul:hasLocation psr:OnTable .
 
-psr:Mug a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Mug .
+psr:PlasticBottleOfWater a psr:Object ;
+    dul:hasLocation psr:OnTable .
 
-psr:CurrentLocation_Mug a psr:CurrentLocation ;
-    geo:sfWithin psr:BrownWoodenDiningTable .
+psr:DisposablePlasticCups a psr:Object ;
+    dul:hasLocation psr:OnTable .
 
-psr:WhiteDoor a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_WhiteDoor .
+psr:JarsWithLabel a psr:Object ;
+    dul:hasLocation psr:OnCountertop .
 
-psr:CurrentLocation_WhiteDoor a psr:CurrentLocation .
+psr:BoxesOfJello a psr:Object ;
+    dul:hasLocation psr:OnCountertop .
+
+psr:RiceBubbles a psr:Object ;
+    dul:hasLocation psr:OnCountertop .
+
+psr:Crackers a psr:Object ;
+    dul:hasLocation psr:OnCountertop .
+
+psr:Cup a psr:Object ;
+    dul:hasLocation psr:OnCountertop .
+
+psr:OnTable a psr:CurrentLocation ;
+    psr:onTopOf psr:DiningTable .
+
+psr:OnCountertop a psr:CurrentLocation ;
+    psr:onTopOf psr:Countertop .
+
+psr:WallAboveSink a psr:CurrentLocation ;
+    geo:sfWithin psr:KitchenArea .
+
+psr:AboveStove a psr:CurrentLocation ;
+    geo:sfWithin psr:KitchenArea .
+
+psr:DiningArea a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:KitchenArea a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:KitchenCounter a psr:Location ;
+    geo:sfWithin psr:KitchenArea .
+
+psr:Floor a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .
+
+psr:WhiteWalls a psr:Component ;
+    dul:hasLocation psr:KitchenEnvironment .
+
+psr:DarkWoodFlooring a psr:Component ;
+    dul:hasLocation psr:Floor .
+
+psr:RoundLightFixture a psr:Component ;
+    dul:hasLocation psr:Ceiling .
+
+psr:Ceiling a psr:Location ;
+    geo:sfWithin psr:KitchenEnvironment .

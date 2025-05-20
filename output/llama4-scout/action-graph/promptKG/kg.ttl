@@ -7,149 +7,172 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-### Instruction
+# Create instruction
 psr:RestoreKitchen a psr:Instruction ;
   psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-### Workflows
+# Create workflow
 psr:RestoreKitchenWorkflow a psr:Workflow ;
   psr:hasAction psr:IdentifyMisplacedItems ;
   psr:hasAction psr:ReturnItemsToStorage .
 
-### Actions
+# Define actions
 psr:IdentifyMisplacedItems a dul:Action ;
   psr:isPerformedBy psr:Robot ;
-  psr:actsOn psr:Kitchen .
+  psr:actsOn psr:KitchenCounter ;
+  psr:isAffordedBy soma:Identifying .
 
 psr:ReturnItemsToStorage a dul:Action ;
   psr:isPerformedBy psr:Robot ;
-  psr:actsOn psr:Kitchen .
+  psr:actsOn psr:MisplacedItems ;
+  psr:isAffordedBy soma:Returning .
 
-### Agent
-psr:Robot a dul:Agent .
-
-### Components
-psr:Kitchen a psr:Component .
-
-psr:RiceBubblesCereal a psr:Object ;
+psr:PickUpItem a dul:Action ;
+  psr:isPerformedBy psr:Robot ;
+  psr:actsOn psr:MisplacedItems ;
   psr:isAffordedBy soma:PickingUp .
 
-psr:StrawberryBananaJello a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+psr:PutDownItem a dul:Action ;
+  psr:isPerformedBy psr:Robot ;
+  psr:actsOn psr:StorageLocations ;
+  psr:isAffordedBy soma:PuttingDown .
 
-psr:Jam a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+# Define components
+psr:KitchenCounter a psr:Component ;
+  rdfs:label "Kitchen Counter"@en .
 
-psr:ShortbreadCookies a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+psr:MisplacedItems a psr:Object ;
+  rdfs:label "Misplaced Items"@en .
 
-psr:YellowMug a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+psr:StorageLocations a psr:Component ;
+  rdfs:label "Storage Locations"@en .
+
+psr:Robot a dul:Agent ;
+  rdfs:label "Robot"@en .
+
+# Define affordances
+soma:Identifying a soma:Affordance ;
+  rdfs:label "Identifying"@en .
+
+soma:Returning a soma:Affordance ;
+  rdfs:label "Returning"@en .
+
+# Relationships between actions
+psr:IdentifyMisplacedItems psr:precedes psr:ReturnItemsToStorage .
+psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
+
+# Workflow and instruction relationship
+psr:RestoreKitchen psr:hasWorkflow psr:RestoreKitchenWorkflow . 
+
+# Specify items on the counter
+psr:Pot a psr:Object ;
+  rdfs:label "Pot"@en .
+
+psr:JarOfJam a psr:Object ;
+  rdfs:label "Jar of Jam"@en .
+
+psr:BoxOfRiceBubbles a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en .
+
+psr:BoxOfJello a psr:Object ;
+  rdfs:label "Box of Jello"@en .
+
+psr:BoxOfShortbread a psr:Object ;
+  rdfs:label "Box of Shortbread"@en .
+
+psr:Plate a psr:Object ;
+  rdfs:label "Plate"@en .
 
 psr:BottleOfWater a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+  rdfs:label "Bottle of Water"@en .
 
-psr:PlateWithFruit a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+psr:BowlOfFruit a psr:Object ;
+  rdfs:label "Bowl of Fruit"@en .
 
-psr:Cookbook a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+psr:Book a psr:Object ;
+  rdfs:label "Book"@en .
 
-### Affordances
-psr:PickUpRiceBubblesCereal a soma:PickingUp ;
-  psr:actsOn psr:RiceBubblesCereal .
+psr:KitchenCabinets a psr:Component ;
+  rdfs:label "Kitchen Cabinets"@en .
 
-psr:PickUpStrawberryBananaJello a soma:PickingUp ;
-  psr:actsOn psr:StrawberryBananaJello .
+# Specify storage locations
+psr:KitchenCabinets psr:hasAffordance soma:Closing .
 
-psr:PickUpJam a soma:PickingUp ;
-  psr:actsOn psr:Jam .
+# Misplaced items and their storage locations
+psr:Pot psr:actsOn psr:KitchenCabinets .
+psr:JarOfJam psr:actsOn psr:KitchenCabinets .
+psr:BoxOfRiceBubbles psr:actsOn psr:KitchenCabinets .
+psr:BoxOfJello psr:actsOn psr:KitchenCabinets .
+psr:BoxOfShortbread psr:actsOn psr:KitchenCabinets .
+psr:Plate psr:actsOn psr:KitchenCabinets .
 
-psr:PickUpShortbreadCookies a soma:PickingUp ;
-  psr:actsOn psr:ShortbreadCookies .
+# Specify actions for each item
+psr:PickUpItem1 a psr:PickUpItem ;
+  psr:actsOn psr:Pot .
 
-psr:PickUpYellowMug a soma:PickingUp ;
-  psr:actsOn psr:YellowMug .
+psr:PutDownItem1 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:PickUpBottleOfWater a soma:PickingUp ;
-  psr:actsOn psr:BottleOfWater .
+psr:PickUpItem2 a psr:PickUpItem ;
+  psr:actsOn psr:JarOfJam .
 
-psr:PickUpPlateWithFruit a soma:PickingUp ;
-  psr:actsOn psr:PlateWithFruit .
+psr:PutDownItem2 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:PickUpCookbook a soma:PickingUp ;
-  psr:actsOn psr:Cookbook .
+psr:PickUpItem3 a psr:PickUpItem ;
+  psr:actsOn psr:BoxOfRiceBubbles .
 
-### Relations
-psr:RestoreKitchen psr:hasWorkflow psr:RestoreKitchenWorkflow .
+psr:PutDownItem3 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:RestoreKitchenWorkflow psr:hasAction psr:IdentifyMisplacedItems ;
-psr:RestoreKitchenWorkflow psr:hasAction psr:ReturnItemsToStorage .
+psr:PickUpItem4 a psr:PickUpItem ;
+  psr:actsOn psr:BoxOfJello .
 
-psr:IdentifyMisplacedItems psr:precedes psr:ReturnItemsToStorage .
+psr:PutDownItem4 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:IdentifyMisplacedItems psr:isPerformedBy psr:Robot .
+psr:PickUpItem5 a psr:PickUpItem ;
+  psr:actsOn psr:BoxOfShortbread .
 
-psr:ReturnItemsToStorage psr:isPerformedBy psr:Robot .
+psr:PutDownItem5 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:ReturnItemsToStorage psr:actsOn psr:RiceBubblesCereal ;
-psr:ReturnItemsToStorage psr:actsOn psr:StrawberryBananaJello ;
-psr:ReturnItemsToStorage psr:actsOn psr:Jam ;
-psr:ReturnItemsToStorage psr:actsOn psr:ShortbreadCookies ;
-psr:ReturnItemsToStorage psr:actsOn psr:YellowMug ;
-psr:ReturnItemsToStorage psr:actsOn psr:BottleOfWater ;
-psr:ReturnItemsToStorage psr:actsOn psr:PlateWithFruit ;
-psr:ReturnItemsToStorage psr:actsOn psr:Cookbook .
+psr:PickUpItem6 a psr:PickUpItem ;
+  psr:actsOn psr:Plate .
 
-### Putting down items
-psr:PuttingDownRiceBubblesCereal a soma:PuttingDown ;
-  psr:actsOn psr:RiceBubblesCereal .
+psr:PutDownItem6 a psr:PutDownItem ;
+  psr:actsOn psr:KitchenCabinets .
 
-psr:PuttingDownStrawberryBananaJello a soma:PuttingDown ;
-  psr:actsOn psr:StrawberryBananaJello .
+# Sequence actions
+psr:IdentifyMisplacedItems psr:precedes psr:PickUpItem1 .
+psr:PickUpItem1 psr:follows psr:IdentifyMisplacedItems .
+psr:PickUpItem1 psr:precedes psr:PutDownItem1 .
+psr:PutDownItem1 psr:follows psr:PickUpItem1 .
 
-psr:PuttingDownJam a soma:PuttingDown ;
-  psr:actsOn psr:Jam .
+psr:PutDownItem1 psr:precedes psr:PickUpItem2 .
+psr:PickUpItem2 psr:follows psr:PutDownItem1 .
+psr:PickUpItem2 psr:precedes psr:PutDownItem2 .
+psr:PutDownItem2 psr:follows psr:PickUpItem2 .
 
-psr:PuttingDownShortbreadCookies a soma:PuttingDown ;
-  psr:actsOn psr:ShortbreadCookies .
+psr:PutDownItem2 psr:precedes psr:PickUpItem3 .
+psr:PickUpItem3 psr:follows psr:PutDownItem2 .
+psr:PickUpItem3 psr:precedes psr:PutDownItem3 .
+psr:PutDownItem3 psr:follows psr:PickUpItem3 .
 
-psr:PuttingDownYellowMug a soma:PuttingDown ;
-  psr:actsOn psr:YellowMug .
+psr:PutDownItem3 psr:precedes psr:PickUpItem4 .
+psr:PickUpItem4 psr:follows psr:PutDownItem3 .
+psr:PickUpItem4 psr:precedes psr:PutDownItem4 .
+psr:PutDownItem4 psr:follows psr:PickUpItem4 .
 
-psr:PuttingDownBottleOfWater a soma:PuttingDown ;
-  psr:actsOn psr:BottleOfWater .
+psr:PutDownItem4 psr:precedes psr:PickUpItem5 .
+psr:PickUpItem5 psr:follows psr:PutDownItem4 .
+psr:PickUpItem5 psr:precedes psr:PutDownItem5 .
+psr:PutDownItem5 psr:follows psr:PickUpItem5 .
 
-psr:PuttingDownPlateWithFruit a soma:PuttingDown ;
-  psr:actsOn psr:PlateWithFruit .
+psr:PutDownItem5 psr:precedes psr:PickUpItem6 .
+psr:PickUpItem6 psr:follows psr:PutDownItem5 .
+psr:PickUpItem6 psr:precedes psr:PutDownItem6 .
+psr:PutDownItem6 psr:follows psr:PickUpItem6 .
 
-psr:PuttingDownCookbook a soma:PuttingDown ;
-  psr:actsOn psr:Cookbook .
-
-### Detailed action sequence
-psr:PickUpRiceBubblesCereal psr:precedes psr:PuttingDownRiceBubblesCereal .
-psr:PickUpStrawberryBananaJello psr:precedes psr:PuttingDownStrawberryBananaJello .
-psr:PickUpJam psr:precedes psr:PuttingDownJam .
-psr:PickUpShortbreadCookies psr:precedes psr:PuttingDownShortbreadCookies .
-psr:PickUpYellowMug psr:precedes psr:PuttingDownYellowMug .
-psr:PickUpBottleOfWater psr:precedes psr:PuttingDownBottleOfWater .
-psr:PickUpPlateWithFruit psr:precedes psr:PuttingDownPlateWithFruit .
-psr:PickUpCookbook psr:precedes psr:PuttingDownCookbook .
-
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpRiceBubblesCereal .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpStrawberryBananaJello .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpJam .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpShortbreadCookies .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpYellowMug .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpBottleOfWater .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpPlateWithFruit .
-psr:IdentifyMisplacedItems psr:hasAction psr:PickUpCookbook .
-
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownRiceBubblesCereal .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownStrawberryBananaJello .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownJam .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownShortbreadCookies .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownYellowMug .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownBottleOfWater .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownPlateWithFruit .
-psr:ReturnItemsToStorage psr:hasAction psr:PuttingDownCookbook .
+psr:PutDownItem6 psr:precedes psr:ReturnItemsToStorage .
+psr:ReturnItemsToStorage psr:follows psr:PutDownItem6 .

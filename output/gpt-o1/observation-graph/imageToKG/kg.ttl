@@ -4,183 +4,136 @@
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
+@prefix :       <http://example.org/kitchen#> .
 
-:KitchenEnv a psr:Environment ;
-   dul:hasComponent :Fridge,
-                    :KitchenCountertop,
-                    :UpperCabinet,
-                    :DiningTable,
-                    :Chair1, :Chair2, :Chair3, :Chair4,
-                    :Pot,
-                    :Jam, :Jello, :Salt,
-                    :CerealBoxRiceBubbles,
-                    :CerealBoxChucky,
-                    :PlateStack,
-                    :Mug,
-                    :BoxOfTea,
-                    :FruitBowl,
-                    :WaterBottle,
-                    :Door,
-                    :Window,
-                    :RangeHood,
-                    :Sink,
-                    :Stove .
+:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent :Fridge,
+                     :UpperCabinet,
+                     :LowerCabinet,
+                     :DiningTable,
+                     :DiningChair1,
+                     :DiningChair2,
+                     :DiningChair3,
+                     :DiningChair4,
+                     :Stove,
+                     :Sink,
+                     :Window,
+                     :Hood,
+                     :CountertopLocation,
+                     :StovetopLocation,
+                     :TabletopLocation,
+                     :Jam,
+                     :JelloBox,
+                     :SaltBox,
+                     :CerealBox1,
+                     :CerealBox2,
+                     :Plates,
+                     :Pot,
+                     :Mug,
+                     :WaterBottle,
+                     :FruitBowl,
+                     :Glass,
+                     :Pitcher
+.
 
 :Fridge a psr:Appliance ;
-   psr:hasAffordance :FridgeOpening,
-                     :FridgeClosing .
+    psr:hasAffordance soma:Opening,
+                       soma:Closing
+.
 
-:KitchenCountertop a psr:Furniture .
+:UpperCabinet a psr:Furniture ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing
+.
 
-:UpperCabinet a psr:Furniture .
+:LowerCabinet a psr:Furniture .
 
 :DiningTable a psr:Furniture .
 
-:Chair1 a psr:Furniture .
-:Chair2 a psr:Furniture .
-:Chair3 a psr:Furniture .
-:Chair4 a psr:Furniture .
-
-:Pot a psr:Object ;
-   psr:hasAffordance :PotPickingUp,
-                      :PotHolding ;
-   dul:hasLocation :PotLocation .
-
-:Jam a psr:Object ;
-   psr:hasAffordance :JamPickingUp,
-                      :JamHolding ;
-   dul:hasLocation :JamLocation .
-
-:Jello a psr:Object ;
-   psr:hasAffordance :JelloPickingUp,
-                      :JelloHolding ;
-   dul:hasLocation :JelloLocation .
-
-:Salt a psr:Object ;
-   psr:hasAffordance :SaltPickingUp,
-                      :SaltHolding ;
-   dul:hasLocation :SaltLocation .
-
-:CerealBoxRiceBubbles a psr:Object ;
-   psr:hasAffordance :RiceBubblesPickingUp,
-                      :RiceBubblesHolding ;
-   dul:hasLocation :RiceBubblesLocation .
-
-:CerealBoxChucky a psr:Object ;
-   psr:hasAffordance :ChuckyCerealPickingUp,
-                      :ChuckyCerealHolding ;
-   dul:hasLocation :ChuckyCerealLocation .
-
-:PlateStack a psr:Object ;
-   psr:hasAffordance :PlatePickingUp,
-                      :PlateHolding ;
-   dul:hasLocation :PlateStackLocation .
-
-:Mug a psr:Object ;
-   psr:hasAffordance :MugPickingUp,
-                      :MugHolding ;
-   dul:hasLocation :MugLocation .
-
-:BoxOfTea a psr:Object ;
-   psr:hasAffordance :TeaBoxPickingUp,
-                      :TeaBoxHolding ;
-   dul:hasLocation :TeaBoxLocation .
-
-:FruitBowl a psr:Object ;
-   psr:hasAffordance :FruitBowlPickingUp,
-                      :FruitBowlHolding ;
-   dul:hasLocation :FruitBowlLocation .
-
-:WaterBottle a psr:Object ;
-   psr:hasAffordance :BottlePickingUp,
-                      :BottleHolding ;
-   dul:hasLocation :WaterBottleLocation .
-
-:Door a psr:Object ;
-   psr:hasAffordance :DoorOpening,
-                      :DoorClosing .
-
-:Window a psr:Object ;
-   psr:hasAffordance :WindowOpening,
-                      :WindowClosing .
-
-:RangeHood a psr:Appliance .
-
-:Sink a psr:Component .
+:DiningChair1 a psr:Furniture .
+:DiningChair2 a psr:Furniture .
+:DiningChair3 a psr:Furniture .
+:DiningChair4 a psr:Furniture .
 
 :Stove a psr:Appliance .
 
-:FridgeOpening a soma:Opening .
-:FridgeClosing a soma:Closing .
+:Sink a psr:Appliance .
 
-:PotPickingUp a soma:PickingUp .
-:PotHolding a soma:Holding .
+:Window a psr:Object ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing
+.
 
-:JamPickingUp a soma:PickingUp .
-:JamHolding a soma:Holding .
+:Hood a psr:Appliance .
 
-:JelloPickingUp a soma:PickingUp .
-:JelloHolding a soma:Holding .
+:CountertopLocation a psr:CurrentLocation ;
+    psr:onTopOf :LowerCabinet
+.
 
-:SaltPickingUp a soma:PickingUp .
-:SaltHolding a soma:Holding .
+:StovetopLocation a psr:CurrentLocation ;
+    psr:onTopOf :Stove
+.
 
-:RiceBubblesPickingUp a soma:PickingUp .
-:RiceBubblesHolding a soma:Holding .
+:TabletopLocation a psr:CurrentLocation ;
+    psr:onTopOf :DiningTable
+.
 
-:ChuckyCerealPickingUp a soma:PickingUp .
-:ChuckyCerealHolding a soma:Holding .
+:Jam a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Opening
+.
 
-:PlatePickingUp a soma:PickingUp .
-:PlateHolding a soma:Holding .
+:JelloBox a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Opening
+.
 
-:MugPickingUp a soma:PickingUp .
-:MugHolding a soma:Holding .
+:SaltBox a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Opening
+.
 
-:TeaBoxPickingUp a soma:PickingUp .
-:TeaBoxHolding a soma:Holding .
+:CerealBox1 a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Opening
+.
 
-:FruitBowlPickingUp a soma:PickingUp .
-:FruitBowlHolding a soma:Holding .
+:CerealBox2 a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Opening
+.
 
-:BottlePickingUp a soma:PickingUp .
-:BottleHolding a soma:Holding .
+:Plates a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:DoorOpening a soma:Opening .
-:DoorClosing a soma:Closing .
+:Pot a psr:Object ;
+    dul:hasLocation :StovetopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:WindowOpening a soma:Opening .
-:WindowClosing a soma:Closing .
+:Mug a psr:Object ;
+    dul:hasLocation :CountertopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:PotLocation a psr:CurrentLocation ;
-   psr:onTopOf :Stove .
+:WaterBottle a psr:Object ;
+    dul:hasLocation :TabletopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:JamLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
+:FruitBowl a psr:Object ;
+    dul:hasLocation :TabletopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:JelloLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
+:Glass a psr:Object ;
+    dul:hasLocation :TabletopLocation ;
+    psr:hasAffordance soma:Holding
+.
 
-:SaltLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
-
-:RiceBubblesLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
-
-:ChuckyCerealLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
-
-:PlateStackLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
-
-:MugLocation a psr:CurrentLocation ;
-   psr:onTopOf :KitchenCountertop .
-
-:TeaBoxLocation a psr:CurrentLocation ;
-   psr:onTopOf :DiningTable .
-
-:FruitBowlLocation a psr:CurrentLocation ;
-   psr:onTopOf :DiningTable .
-
-:WaterBottleLocation a psr:CurrentLocation ;
-   psr:onTopOf :DiningTable .
+:Pitcher a psr:Object ;
+    dul:hasLocation :TabletopLocation ;
+    psr:hasAffordance soma:Holding
+.

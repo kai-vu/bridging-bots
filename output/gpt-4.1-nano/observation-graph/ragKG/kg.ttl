@@ -1,85 +1,58 @@
-@prefix env: <http://www.semanticdesktop.org/ontologies/environment#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-env:Environment a env:PhysicalEnvironment ;
-    env:hasPart env:Kitchen, env:DiningArea, env:Floor, env:Walls, env:Ceiling .
+:Environment a :PhysicalEnvironment ;
+    :hasArea :KitchenArea ;
+    :hasWall :WhiteTexturedWalls ;
+    :hasFloor :WoodenParquetFloor ;
+    :hasCeiling :CeilingWithLightFixture ;
+    :hasRoom :AdjacentRoom .
 
-env:Kitchen a env:Room ;
-    env:hasFeature env:AdjacentToDiningArea ;
-    env:contains env:KitchenCabinet, env:Countertop, env:Refrigerator, env:OverheadVent .
+:KitchenArea a :Room ;
+    :contains :Cabinets, :Countertop, :FoodItems, :Containers, :Fridge, :Doorway, :Shelf .
 
-env:DiningArea a env:Room ;
-    env:hasFeature env:AdjacentToKitchen ;
-    env:contains env:Table .
+:Cabinets a :Furniture ; 
+    :hasColor "dark-colored"^^xsd:string .
 
-env:Floor a env:FloorMaterial ;
-    env:hasColor "dark brown" .
+:Countertop a :Surface ;
+    :hasColor "beige"^^xsd:string .
 
-env:Walls a env:Wall ;
-    env:hasColor "white" .
+:FoodItems a :Food ;
+    :includes :Jello, :RiceBubbles .
 
-env:Ceiling a env:Ceiling ;
-    env:hasLighting env:CeilingLights .
+:Containers a :Container ;
+    :includes :RedLiddedContainer, :OrangeContainer, :WaterBottle, :SmallRedBox, :WineGlass, :WhitePitcher , :Label .
 
-env:KitchenCabinet a env:Furnishing ;
-    env:hasColor "black" .
+:RedLiddedContainer a :Container ;
+    :hasLabel :Label .
 
-env:Countertop a env:Counter ;
-    env:hasMaterial env:Marble ;
-    env:hasColor "beige" ;
-    env:contains env:FoodItems .
+:Label a :Text .
 
-env:FoodItems a env:Food ;
-    env:includes env:WhitePlates, env:JELLO, env:RiceBubbles, env:StrawberryJam .
+:Fridge a :ElectricalAppliance ;
+    :locatedAt :LeftSideOfCounter ;
+    :hasColor "white"^^xsd:string ;
+    :hasHandle :RightSideHandle .
 
-env:WhitePlates a env:FoodItem ;
-    env:hasColor "white" .
+:LeftSideOfCounter a :Location .
 
-env:JELLO a env:FoodItem .
+:Doorway a :Opening ;
+    :leadsTo :OtherRoom ;
+    :hasDoor :WoodenDoor .
 
-env:RiceBubbles a env:FoodItem .
+:WoodenDoor a :Door ;
+    :hasHandle :DoorHandle .
 
-env:StrawberryJam a env:FoodItem ;
-    env:hasBrand env:BonneMaman .
+:DoorHandle a :Handle .
 
-env:BonneMaman a env:Brand .
+:Wall a :Structure ;
+    :hasTexture "white"^^xsd:string .
 
-env:Refrigerator a env:Appliance ;
-    env:locatedAt env:Corner .
+:Shelf a :WallMountedFurniture ;
+    :hasUnderneath :SpeakerOrVent .
 
-env:OverheadVent a env:Vent ;
-    env:mountedOn env:Wall .
+:SpeakerOrVent a :VentOrSpeaker .
 
-env:Table a env:Furnishing ;
-    env:hasShape env:Rectangle ;
-    env:hasMaterial env:Wood ;
-    env:hasColor "light wood" ;
-    env:contains env:TableContents .
+:CeilingWithLightFixture a :Ceiling ;
+    :hasLightFixture :SimpleRoundLightFixture .
 
-env:TableContents a env:Contents ;
-    env:includes env:BottleEvian, env:BoxRiceBubbles, env:JarJam, env:OrangeMug, env:WineGlass, env:WhitePitcher .
-
-env:BottleEvian a env:Container ;
-    env:hasBrand "Evian" .
-
-env:BoxRiceBubbles a env:Container ;
-    env:hasBrand "Rice Bubbles" .
-
-env:JarJam a env:Container ;
-    env:hasBrand env:BonneMaman .
-
-env:OrangeMug a env:Container ;
-    env:hasColor "orange" .
-
-env:WineGlass a env:Container ;
-    env:hasShape env:Cylinder .
-
-env:WhitePitcher a env:Container ;
-    env:hasShape env:Cylinder .
-
-@prefix env: <http://www.semanticdesktop.org/ontologies/environment#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-# The above triples describe the environment, including the kitchen, dining area, objects, and their attributes within the environment as per the given description.
+:SimpleRoundLightFixture a :LightFixture .
