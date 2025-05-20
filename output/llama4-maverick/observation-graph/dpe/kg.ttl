@@ -1,31 +1,21 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:dining_area kitchen:hasComponent kitchen:white_chairs,
-        kitchen:wooden_dining_table .
+kitchen:counter kitchen:hasComponent kitchen:sink ;
+    kitchen:hasObject kitchen:_CHICKY__chip_packet,
+        kitchen:plates,
+        kitchen:red_jam_jars .
 
-kitchen:black_kitchen_cabinets kitchen:hasComponent kitchen:silver_handles .
+kitchen:dining_table kitchen:hasObject kitchen:bottle_of_water ;
+    kitchen:isLocatedIn kitchen:adjacent_room .
 
-kitchen:kitchen kitchen:hasComponent kitchen:black_kitchen_cabinets,
-        kitchen:electric_stove,
-        kitchen:kitchen_sink,
-        kitchen:marble_countertop,
-        kitchen:white_refrigerator,
-        kitchen:wooden_range_hood .
+kitchen:fridge kitchen:isLocated kitchen:right_of_counter .
 
-kitchen:marble_countertop kitchen:onTopOf kitchen:bottle_of_water,
-        kitchen:box_of_crackers,
-        kitchen:box_of_jello,
-        kitchen:jar_of_jam,
-        kitchen:stack_of_plates .
+kitchen:kitchen kitchen:hasComponent kitchen:beige_marble_countertop,
+        kitchen:dark_gray_cabinets .
 
-kitchen:white_refrigerator kitchen:toTheLeftOf kitchen:wooden_dining_table .
+kitchen:rangehood kitchen:isAbove kitchen:stove .
 
-kitchen:wooden_range_hood kitchen:above kitchen:electric_stove .
+kitchen:white_door kitchen:hasComponent kitchen:silver_handle .
 
-kitchen:electric_stove kitchen:nextTo kitchen:kitchen_sink ;
-    kitchen:sfWithin kitchen:kitchen .
-
-kitchen:wooden_dining_table kitchen:onTopOf kitchen:bottle_of_water,
-        kitchen:box_of_crackers,
-        kitchen:jug .
+kitchen:stove kitchen:hasObject kitchen:pot .
 

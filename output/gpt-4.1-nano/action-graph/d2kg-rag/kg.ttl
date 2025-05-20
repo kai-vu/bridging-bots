@@ -1,63 +1,40 @@
-@prefix : <http://example.org/ontology#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.semanticweb.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:Kitchen a :Environment ;
-    :hasArea :KitchenArea .
+:Robot a :Agent .
 
-:KitchenArea a :Area ;
-    :contains :LowerCabinet, :UpperCabinet, :Countertop, :Fridge, :DiningArea .
+:Object a rdfs:Class .
 
-:LowerCabinet a :Furniture ;
-    :hasHandleType "Vertical"^^xsd:string ;
-    :location :KitchenArea .
+:Countertop a :Location .
 
-:UpperCabinet a :Furniture ;
-    :location :KitchenArea .
+:Cabinet a :Location .
 
-:Countertop a :Surface ;
-    :locatedIn :KitchenArea .
+:Dish a :Object ; :locatedAt :Countertop .
 
-:Fridge a :Appliance ;
-    :locatedIn :KitchenArea .
+:JELLO a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:DiningArea a :Area ;
-    :contains :Table, :Chairs .
+:RiceBubbles a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:Table a :Furniture ;
-    :hasSurface :TableSurface .
+:StrawberryJam a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:Chairs a :Furniture .
+:BloodOrangePreserves a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:TableSurface a :Surface ;
-    :hasItem :EvianBottle, :BoxOfShortbread, :GlassOfWine, :WhitePitcher, :Fruits .
+:BreadSlice a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:EvianBottle a :Item .
+:WaterBottle a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:BoxOfShortbread a :Item .
+:YellowCup a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:GlassOfWine a :Item .
+:WineGlass a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:WhitePitcher a :Item .
+:JugCreamer a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
 
-:Fruits a :Item .
+:Robot_Action1 a :Action ; :performs :Retrieval ; :targets :JELLO, :RiceBubbles ; :aimsToReturn :StandardStorage .
 
-# Actions to reorganise the kitchen (example actions, assuming typical reorganisation steps)
-:ReorganiseKitchen a :Action ;
-    :aimsTo :ArrangeItemsProperly ;
-    :performedOn :Kitchen .
+:Robot_Action2 a :Action ; :performs :Retrieval ; :targets :StrawberryJam, :BloodOrangePreserves, :BreadSlice ; :aimsToReturn :StandardStorage .
 
-:ArrangeItemsProperly a :Action ;
-    :targets :CountertopItems, :CabinetsContents, :FurnitureArrangement .
+:Robot_Action3 a :Action ; :performs :Retrieval ; :targets :WaterBottle, :YellowCup, :WineGlass, :JugCreamer ; :aimsToReturn :StandardStorage .
 
-:CountertopItems a :ItemList ;
-    :includes :JamJar, :JelloBox, :AlpenSaltCarton, :OtherSmallItems .
+:StandardStorage a :Location ; :type :Cabinet .
 
-:JamJar a :Item .
-
-:JelloBox a :Item .
-
-:AlpenSaltCarton a :Item .
-
-:OtherSmallItems a :Item .
-
-# Note: The specific steps for reorganization depend on goal, e.g., grouping items, clearing surfaces, etc.
+# Additional steps: The robot should navigate to each misplaced item, retrieve it, and place it in its standard storage location, following the sequence from the most urgent to the less urgent based on the context.

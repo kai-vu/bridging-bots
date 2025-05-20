@@ -10,53 +10,140 @@
 psr:RestoreKitchen a psr:Instruction ;
   psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-psr:RestoreKitchenWorkflow a psr:Workflow ;
-  psr:hasAction psr:IdentifyMisplacedItems ;
-  psr:hasAction psr:ReturnItemsToStorage .
+psr:organizeKitchenWorkflow a psr:Workflow ;
+  psr:hasAction psr:identifyMisplacedItemsAction ;
+  psr:hasAction psr:returnItemsToStorageAction .
 
-psr:IdentifyMisplacedItems a dul:Action ;
-  soma:isPerformedBy psr:Robot ;
-  psr:actsOn psr:Kitchen ;
+psr:identifyMisplacedItemsAction a dul:Action ;
+  psr:actsOn psr:kitchenCounter ;
+  psr:isAffordedBy soma:Identifying .
+
+psr:returnItemsToStorageAction a dul:Action ;
+  psr:actsOn psr:misplacedItems ;
+  psr:isAffordedBy soma:Returning .
+
+psr:kitchenCounter a psr:Component ;
+  rdfs:label "kitchen counter"@en .
+
+psr:misplacedItems a psr:Component ;
+  rdfs:label "misplaced items"@en .
+
+psr:standardStorageLocations a psr:Component ;
+  rdfs:label "standard storage locations"@en .
+
+psr:identifyMisplacedItemsAction2 a dul:Action ;
+  psr:actsOn psr:jarOfJam ;
   psr:isAffordedBy soma:PickingUp .
 
-psr:ReturnItemsToStorage a dul:Action ;
-  soma:isPerformedBy psr:Robot ;
-  psr:actsOn psr:MisplacedItem ;
-  psr:isAffordedBy soma:PuttingDown .
+psr:jarOfJam a psr:Object ;
+  rdfs:label "jar of jam"@en .
 
-psr:Robot a dul:Agent .
+psr:identifyMisplacedItemsAction3 a dul:Action ;
+  psr:actsOn psr:boxOfJellO ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Kitchen a psr:Component .
+psr:boxOfJellO a psr:Object ;
+  rdfs:label "box of Jell-O"@en .
 
-psr:MisplacedItem a psr:Object .
+psr:identifyMisplacedItemsAction4 a dul:Action ;
+  psr:actsOn psr:boxOfAlpenSalt ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:EvianWater a psr:Object ;
-  psr:actsOn psr:EvianWater .
+psr:boxOfAlpenSalt a psr:Object ;
+  rdfs:label "box of Alpen Salt"@en .
 
-psr:Book a psr:Object ;
-  psr:actsOn psr:Book .
+psr:identifyMisplacedItemsAction5 a dul:Action ;
+  psr:actsOn psr:stacksOfPaperPlates ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Plate a psr:Object ;
-  psr:actsOn psr:Plate .
+psr:stacksOfPaperPlates a psr:Object ;
+  rdfs:label "stacks of paper plates"@en .
 
-psr:Cabinet a psr:Component .
+psr:identifyMisplacedItemsAction6 a dul:Action ;
+  psr:actsOn psr:largeBottleOfEvianWater ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:CounterTop a psr:Component .
+psr:largeBottleOfEvianWater a psr:Object ;
+  rdfs:label "large bottle of Evian water"@en .
 
-psr:RestoreKitchen psr:hasWorkflow psr:RestoreKitchenWorkflow .
+psr:identifyMisplacedItemsAction7 a dul:Action ;
+  psr:actsOn psr:toaster ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:IdentifyMisplacedItems psr:precedes psr:ReturnItemsToStorage .
+psr:toaster a psr:Appliance ;
+  rdfs:label "toaster"@en .
 
-psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
+psr:identifyMisplacedItemsAction8 a dul:Action ;
+  psr:actsOn psr:fruit ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:EvianWater psr:isAffordedBy soma:PickingUp .
+psr:fruit a psr:Object ;
+  rdfs:label "fruit"@en .
 
-psr:EvianWater psr:isAffordedBy soma:PuttingDown .
+psr:identifyMisplacedItemsAction9 a dul:Action ;
+  psr:actsOn psr:puzzleBook ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Book psr:isAffordedBy soma:PickingUp .
+psr:puzzleBook a psr:Object ;
+  rdfs:label "puzzle book"@en .
 
-psr:Book psr:isAffordedBy soma:PuttingDown .
+psr:boardGame a psr:Object ;
+  rdfs:label "board game"@en .
 
-psr:Plate psr:isAffordedBy soma:PickingUp .
+psr:jugsOrBottles a psr:Object ;
+  rdfs:label "jugs or bottles"@en .
 
-psr:Plate psr:isAffordedBy soma:PuttingDown .
+psr:pan a psr:Object ;
+  rdfs:label "pan"@en .
+
+psr:clock a psr:Object ;
+  rdfs:label "clock"@en .
+
+psr:light a psr:Object ;
+  rdfs:label "light"@en .
+
+psr:twoPuzzleBooks a psr:Object ;
+  rdfs:label "two puzzle books"@en .
+
+psr:yellowMug a psr:Object ;
+  rdfs:label "yellow mug"@en .
+
+psr:refrigerator a psr:Appliance ;
+  rdfs:label "refrigerator"@en .
+
+psr:electricBurner a psr:Appliance ;
+  rdfs:label "electric burner"@en .
+
+psr:diningTable a psr:Furniture ;
+  rdfs:label "dining table"@en .
+
+psr:fourWhiteChairs a psr:Furniture ;
+  rdfs:label "four white chairs"@en .
+
+psr:kitchenCabinets a psr:Component ;
+  rdfs:label "kitchen cabinets"@en .
+
+psr:RestoreKitchen psr:hasWorkflow psr:organizeKitchenWorkflow .
+
+psr:identifyMisplacedItemsAction psr:follows psr:returnItemsToStorageAction .
+psr:returnItemsToStorageAction psr:precedes psr:identifyMisplacedItemsAction .
+
+psr:agent a dul:Agent ;
+  soma:isPerformedBy psr:identifyMisplacedItemsAction ;
+  soma:isPerformedBy psr:returnItemsToStorageAction .
+
+psr:jarOfJam psr:isAffordedBy soma:PickingUp .
+psr:boxOfJellO psr:isAffordedBy soma:PickingUp .
+psr:boxOfAlpenSalt psr:isAffordedBy soma:PickingUp .
+psr:stacksOfPaperPlates psr:isAffordedBy soma:PickingUp .
+psr:largeBottleOfEvianWater psr:isAffordedBy soma:PickingUp .
+psr:toaster psr:isAffordedBy soma:PickingUp .
+psr:fruit psr:isAffordedBy soma:PickingUp .
+psr:puzzleBook psr:isAffordedBy soma:PickingUp .
+psr:boardGame psr:isAffordedBy soma:PuttingDown .
+psr:jugsOrBottles psr:isAffordedBy soma:PuttingDown .
+psr:pan psr:isAffordedBy soma:PuttingDown .
+psr:clock psr:isAffordedBy soma:PuttingDown .
+psr:light psr:isAffordedBy soma:PuttingDown .
+psr:twoPuzzleBooks psr:isAffordedBy soma:PuttingDown .
+psr:yellowMug psr:isAffordedBy soma:PuttingDown .

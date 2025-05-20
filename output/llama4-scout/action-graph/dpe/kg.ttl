@@ -1,56 +1,44 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:countertop kitchen:hasObject kitchen:stack_of_white_plates .
+kitchen:Evian_water kitchen:isA kitchen:water .
 
-kitchen:dining_room kitchen:hasObject kitchen:table .
+kitchen:Move_to_the_kitchen_counter kitchen:follows kitchen:Pick_up_the_large_bottle_of_Evian_water,
+        kitchen:Pick_up_the_toaster .
 
-kitchen:kitchen kitchen:hasObject kitchen:cabinet,
-        kitchen:countertop,
-        kitchen:refrigerator .
+kitchen:Put_down_the_large_bottle_of_Evian_water kitchen:actsOn kitchen:large_bottle_of_Evian_water .
 
-kitchen:move_to_dining_room kitchen:isPerformedBy kitchen:assistant .
+kitchen:Put_down_the_toaster kitchen:actsOn kitchen:toaster .
 
-kitchen:table kitchen:hasObject kitchen:plate .
+kitchen:assistant kitchen:hasAction kitchen:Move_to_the_dining_table,
+        kitchen:Pick_up_the_toaster .
 
-kitchen:workflow kitchen:hasAction kitchen:move_to_dining_room .
+kitchen:board_game kitchen:isA kitchen:game .
 
-kitchen:Evian_water kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:box_of_Alpen_Salt kitchen:isA kitchen:box .
 
-kitchen:book kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:box_of_Jell-O kitchen:isA kitchen:box .
 
-kitchen:bowl kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:dining_table kitchen:isLocatedIn kitchen:kitchen .
 
-kitchen:box_of_strawberry_banana_Jello kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:jar_of_jam_or_preserves kitchen:isA kitchen:jar .
 
-kitchen:jar_of_jam kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:kitchen_counter kitchen:isLocatedIn kitchen:kitchen .
 
-kitchen:package_of_Alpen_Salt kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:pan kitchen:isA kitchen:cooking_vessel .
 
-kitchen:plate kitchen:isPickedUpBy kitchen:assistant ;
-    kitchen:isPutDownBy kitchen:assistant .
+kitchen:pot kitchen:isA kitchen:cooking_vessel .
 
-kitchen:assistant kitchen:hasWorkflow kitchen:workflow ;
-    kitchen:movesTo kitchen:cabinet,
-        kitchen:dining_room,
-        kitchen:kitchen ;
-    kitchen:picksUp kitchen:Evian_water,
-        kitchen:book,
-        kitchen:bowl,
-        kitchen:box_of_strawberry_banana_Jello,
-        kitchen:jar_of_jam,
-        kitchen:package_of_Alpen_Salt,
-        kitchen:plate ;
-    kitchen:putsDown kitchen:Evian_water,
-        kitchen:book,
-        kitchen:bowl,
-        kitchen:box_of_strawberry_banana_Jello,
-        kitchen:jar_of_jam,
-        kitchen:package_of_Alpen_Salt,
-        kitchen:plate .
+kitchen:puzzle_book kitchen:isA kitchen:book .
+
+kitchen:stacks_of_paper_plates kitchen:isA kitchen:plates .
+
+kitchen:yellow_mug kitchen:isA kitchen:mug .
+
+kitchen:Move_to_the_dining_table kitchen:precedes kitchen:Pick_up_the_large_bottle_of_Evian_water .
+
+kitchen:Pick_up_the_large_bottle_of_Evian_water kitchen:actsOn kitchen:large_bottle_of_Evian_water .
+
+kitchen:Pick_up_the_toaster kitchen:actsOn kitchen:toaster .
+
+kitchen:large_bottle_of_Evian_water kitchen:isA kitchen:bottle .
 

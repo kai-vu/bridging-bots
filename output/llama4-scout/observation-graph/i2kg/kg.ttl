@@ -6,86 +6,70 @@
 @prefix psr: <https://w3id.org/psr-task#> .
 
 psr:kitchen a psr:Environment ;
-  rdfs:label "kitchen"@en .
+    rdfs:label "kitchen"@en .
 
-psr:refrigerator a psr:Appliance, psr:Component ;
-  rdfs:label "refrigerator"@en ;
-  psr:hasLocation psr:kitchen .
+psr:refrigerator a psr:Appliance ;
+    rdfs:label "refrigerator"@en ;
+    psr:hasLocation psr:kitchen .
 
-psr:table a psr:Furniture, psr:Component ;
-  rdfs:label "table"@en ;
-  psr:hasLocation psr:diningRoom .
+psr:table a psr:Furniture ;
+    rdfs:label "table"@en ;
+    psr:hasLocation psr:kitchen .
 
-psr:diningRoom a psr:Environment ;
-  rdfs:label "dining room"@en .
+psr:chair a psr:Furniture ;
+    rdfs:label "chair"@en ;
+    psr:hasLocation psr:kitchen .
 
-psr:chair1 a psr:Furniture, psr:Component ;
-  rdfs:label "chair"@en ;
-  psr:hasLocation psr:diningRoom .
-
-psr:chair2 a psr:Furniture, psr:Component ;
-  rdfs:label "chair"@en ;
-  psr:hasLocation psr:diningRoom .
-
-psr:chair3 a psr:Furniture, psr:Component ;
-  rdfs:label "chair"@en ;
-  psr:hasLocation psr:diningRoom .
-
-psr:cabinet a psr:Component, psr:Furniture ;
-  rdfs:label "cabinet"@en ;
-  psr:hasLocation psr:kitchen .
-
-psr:cupboard a psr:Component, psr:Furniture ;
-  rdfs:label "cupboard"@en ;
-  psr:hasLocation psr:kitchen .
-
-psr:box_of_rice_bubbles a psr:Object ;
-  rdfs:label "box of Rice Bubbles"@en ;
-  psr:hasLocation psr:kitchen .
-
-psr:box_of_jello a psr:Object ;
-  rdfs:label "box of Jello"@en ;
-  psr:hasLocation psr:kitchen .
-
-psr:jar_of_jam a psr:Object ;
-  rdfs:label "jar of jam"@en ;
-  psr:hasLocation psr:kitchen .
-
-psr:evian_bottle a psr:Object ;
-  rdfs:label "Evian bottle"@en ;
-  psr:hasLocation psr:diningRoom .
-
-psr:book1 a psr:Object ;
-  rdfs:label "book1"@en ;
-  psr:hasLocation psr:diningRoom .
-
-psr:book2 a psr:Object ;
-  rdfs:label "book2"@en ;
-  psr:hasLocation psr:kitchen .
+psr:cupboard a psr:Appliance ;
+    rdfs:label "cupboard"@en ;
+    psr:hasLocation psr:kitchen .
 
 psr:plate a psr:Object ;
-  rdfs:label "plate"@en ;
-  psr:hasLocation psr:kitchen .
+    rdfs:label "plate"@en ;
+    psr:hasLocation psr:table .
 
-psr:cup a psr:Object ;
-  rdfs:label "cup"@en ;
-  psr:hasLocation psr:kitchen .
+psr:glass a psr:Object ;
+    rdfs:label "glass"@en ;
+    psr:hasLocation psr:table .
 
-psr:jar_of_marmite a psr:Object ;
-  rdfs:label "jar of marmite"@en ;
-  psr:hasLocation psr:kitchen .
+psr:book a psr:Object ;
+    rdfs:label "book"@en ;
+    psr:hasLocation psr:table .
 
-psr:alpen_salt a psr:Object ;
-  rdfs:label "Alpen Salt"@en ;
-  psr:hasLocation psr:kitchen .
+psr:milk a psr:Object ;
+    rdfs:label "milk"@en ;
+    psr:hasLocation psr:table .
+
+psr:jello a psr:Object ;
+    rdfs:label "jello"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:jar a psr:Object ;
+    rdfs:label "jar"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:alpen a psr:Object ;
+    rdfs:label "alpen"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:rice a psr:Object ;
+    rdfs:label "rice"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:sugar a psr:Object ;
+    rdfs:label "sugar"@en ;
+    psr:hasLocation psr:cupboard .
 
 dul:hasComponent(psr:kitchen, psr:refrigerator) .
-dul:hasComponent(psr:kitchen, psr:cabinet) .
+dul:hasComponent(psr:kitchen, psr:table) .
+dul:hasComponent(psr:kitchen, psr:chair) .
 dul:hasComponent(psr:kitchen, psr:cupboard) .
-dul:hasComponent(psr:diningRoom, psr:table) .
-dul:hasComponent(psr:diningRoom, psr:chair1) .
-dul:hasComponent(psr:diningRoom, psr:chair2) .
-dul:hasComponent(psr:diningRoom, psr:chair3) .
-geo:sfContains(psr:kitchen, psr:cabinet) .
-geo:sfContains(psr:kitchen, psr:cupboard) .
-geo:sfContains(psr:kitchen, psr:refrigerator) .
+dul:hasComponent(psr:kitchen, psr:plate) .
+dul:hasComponent(psr:kitchen, psr:glass) .
+dul:hasComponent(psr:kitchen, psr:book) .
+dul:hasComponent(psr:kitchen, psr:milk) .
+dul:hasComponent(psr:kitchen, psr:jello) .
+dul:hasComponent(psr:kitchen, psr:jar) .
+dul:hasComponent(psr:kitchen, psr:alpen) .
+dul:hasComponent(psr:kitchen, psr:rice) .
+dul:hasComponent(psr:kitchen, psr:sugar) .

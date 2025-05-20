@@ -1,58 +1,82 @@
-@prefix : <http://example.org/ontology#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+@prefix gro: <http://purl.org/gro/community#> .
+@prefix env: <http://example.org/environment#> .
+@prefix schema: <http://schema.org/> .
 
-:Environment a :PhysicalEnvironment ;
-    :hasArea :KitchenArea ;
-    :hasWall :WhiteTexturedWalls ;
-    :hasFloor :WoodenParquetFloor ;
-    :hasCeiling :CeilingWithLightFixture ;
-    :hasRoom :AdjacentRoom .
+ex:KitchenScene a env:Scene ;
+    env:hasObject ex:UpperCabinets, ex:LowerCabinets, ex:Countertop, ex:WallSpaceAboveCounter, ex:Door, ex:Floor, ex:Ceiling, ex:WallJunction, ex:Decor ;
+    env:hasObject ex:CountertopItems, ex:WallWin, ex:ExtractorFan, ex:CeilingLights .
 
-:KitchenArea a :Room ;
-    :contains :Cabinets, :Countertop, :FoodItems, :Containers, :Fridge, :Doorway, :Shelf .
+ex:UpperCabinets a env:Furniture ;
+    env:hasMaterial "dark gray" ;
+    env:hasHandle "silver" .
 
-:Cabinets a :Furniture ; 
-    :hasColor "dark-colored"^^xsd:string .
+ex:LowerCabinets a env:Furniture ;
+    env:hasMaterial "dark gray" ;
+    env:hasHandle "silver" .
 
-:Countertop a :Surface ;
-    :hasColor "beige"^^xsd:string .
+ex:Countertop a env:Surface ;
+    env:hasObject ex:JELLO, ex:RiceBubbles, ex:StrawberryJam, ex:BloodOrangePreserves, ex:SlicedBread, ex:WaterBottle, ex:YellowCup, ex:WineGlass, ex:JugCreamer .
 
-:FoodItems a :Food ;
-    :includes :Jello, :RiceBubbles .
+ex:JELLO a env:Object ;
+    env:placedOn ex:Countertop ;
+    env:stackedWith ex:RiceBubbles .
 
-:Containers a :Container ;
-    :includes :RedLiddedContainer, :OrangeContainer, :WaterBottle, :SmallRedBox, :WineGlass, :WhitePitcher , :Label .
+ex:RiceBubbles a env:Object ;
+    env:placedOn ex:Countertop ;
+    env:stackedWith ex:JELLO .
 
-:RedLiddedContainer a :Container ;
-    :hasLabel :Label .
+ex:StrawberryJam a env:Object ;
+    env:placedOn ex:Countertop .
 
-:Label a :Text .
+ex:BloodOrangePreserves a env:Object ;
+    env:placedOn ex:Countertop .
 
-:Fridge a :ElectricalAppliance ;
-    :locatedAt :LeftSideOfCounter ;
-    :hasColor "white"^^xsd:string ;
-    :hasHandle :RightSideHandle .
+ex:SlicedBread a env:Object ;
+    env:placedOn ex:Countertop .
 
-:LeftSideOfCounter a :Location .
+ex:WaterBottle a env:Object ;
+    env:placedOn ex:Countertop .
 
-:Doorway a :Opening ;
-    :leadsTo :OtherRoom ;
-    :hasDoor :WoodenDoor .
+ex:YellowCup a env:Object ;
+    env:placedOn ex:Countertop .
 
-:WoodenDoor a :Door ;
-    :hasHandle :DoorHandle .
+ex:WineGlass a env:Object ;
+    env:placedOn ex:Countertop .
 
-:DoorHandle a :Handle .
+ex:JugCreamer a env:Object ;
+    env:placedOn ex:Countertop .
 
-:Wall a :Structure ;
-    :hasTexture "white"^^xsd:string .
+ex:WallWin a env:Window ;
+    env:hasMaterial "wood" ;
+    env:hasFrameType "wooden" .
 
-:Shelf a :WallMountedFurniture ;
-    :hasUnderneath :SpeakerOrVent .
+ex:ExtractorFan a env:Object ;
+    env:madeOf "wood" ;
+    env:hasPart ex:BlackGrille .
 
-:SpeakerOrVent a :VentOrSpeaker .
+ex:BlackGrille a env:Object .
 
-:CeilingWithLightFixture a :Ceiling ;
-    :hasLightFixture :SimpleRoundLightFixture .
+ex:WallSpaceAboveCounter a env:WallSpace .
 
-:SimpleRoundLightFixture a :LightFixture .
+ex:Door a env:Door ;
+    env:hasDesign "six-panel" ;
+    env:hasColor "white" .
+
+ex:Floor a env:Floor ;
+    env:hasMaterial "wooden parquet" .
+
+ex:Ceiling a env:Ceiling ;
+    env:hasLightFixture ex:RoundLightFixture1, ex:RoundLightFixture2 .
+
+ex:RoundLightFixture1 a env:LightFixture ;
+    env:shape "round" .
+
+ex:RoundLightFixture2 a env:LightFixture ;
+    env:shape "round" .
+
+ex:WallJunction a env:WallJunction .
+
+ex:Decor a env:Decoration .
+
+# Note: No additional significant objects beyond what is specified are included.

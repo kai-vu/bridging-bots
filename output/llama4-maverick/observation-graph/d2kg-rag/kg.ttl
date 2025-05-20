@@ -5,66 +5,73 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 
-psr:BlackKitchenCabinets a psr:Component ;
-    psr:hasAffordance soma:Opening .
+psr:Kitchen a psr:Environment ;
+    dul:hasComponent psr:Cabinets, psr:Countertop, psr:Fridge, psr:DiningTable, psr:Rangehood, psr:Stove, psr:Sink, psr:Door .
 
-psr:SilverHandles a psr:Component .
+psr:Cabinets a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:WhiteRefrigerator a psr:Appliance ;
-    dul:hasLocation psr:LeftOfDiningTable .
+psr:Countertop a psr:Furniture ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Grasping, soma:Holding ;
+    geo:sfContains psr:Plates, psr:RedJamJars, psr:ChickyChipPacket, psr:JelloBox, psr:AlpenSaltBox, psr:Sink .
 
-psr:MarbleCountertop a psr:Component .
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:KitchenSink a psr:Component .
+psr:DiningTable a psr:Furniture ;
+    dul:hasLocation psr:AdjacentRoom ;
+    geo:sfContains psr:BottleOfWater, psr:PacketOfBiscuits, psr:Mugs, psr:WineGlass .
 
-psr:ElectricStove a psr:Appliance ;
-    dul:hasLocation psr:NextToSink .
+psr:Rangehood a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    psr:onTopOf psr:Stove .
 
-psr:WoodenRangeHood a psr:Component ;
-    dul:hasLocation psr:AboveElectricStove .
+psr:Stove a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    geo:sfContains psr:Pot .
 
-psr:WhiteWalls a psr:Component .
+psr:Sink a psr:Furniture ;
+    dul:hasLocation psr:Countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
 
-psr:BrownParquetFlooring a psr:Component .
+psr:Door a psr:Furniture ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Opening, soma:Closing, soma:Pulling, soma:Pushing .
 
-psr:RoundCeilingLight a psr:Component .
+psr:Plates a psr:Object ;
+    dul:hasLocation psr:Countertop .
 
-psr:WoodenDiningTable a psr:Component .
+psr:RedJamJars a psr:Object ;
+    dul:hasLocation psr:Countertop .
 
-psr:WhiteChairs a psr:Component .
+psr:ChickyChipPacket a psr:Object ;
+    dul:hasLocation psr:Countertop .
 
-psr:BoxOfJello a psr:Object ;
-    dul:hasLocation psr:MarbleCountertop .
+psr:JelloBox a psr:Object ;
+    dul:hasLocation psr:Countertop .
 
-psr:BoxOfCrackers a psr:Object ;
-    dul:hasLocation psr:MarbleCountertop, psr:WoodenDiningTable .
+psr:AlpenSaltBox a psr:Object ;
+    dul:hasLocation psr:Countertop .
 
 psr:BottleOfWater a psr:Object ;
-    dul:hasLocation psr:MarbleCountertop, psr:WoodenDiningTable .
+    dul:hasLocation psr:DiningTable .
 
-psr:StackOfPlates a psr:Object ;
-    dul:hasLocation psr:MarbleCountertop .
+psr:PacketOfBiscuits a psr:Object ;
+    dul:hasLocation psr:DiningTable .
 
-psr:JarOfJam a psr:Object ;
-    dul:hasLocation psr:MarbleCountertop .
+psr:Mugs a psr:Object ;
+    dul:hasLocation psr:DiningTable .
 
-psr:Jug a psr:Object ;
-    dul:hasLocation psr:WoodenDiningTable .
+psr:WineGlass a psr:Object ;
+    dul:hasLocation psr:DiningTable .
 
-psr:LeftOfDiningTable a psr:Location ;
-    geo:sfWithin psr:KitchenEnvironment .
+psr:Pot a psr:Object ;
+    dul:hasLocation psr:Stove .
 
-psr:NextToSink a psr:Location ;
-    geo:sfWithin psr:KitchenEnvironment .
+psr:AdjacentRoom a psr:Environment ;
+    dul:hasComponent psr:DiningTable .
 
-psr:AboveElectricStove a psr:Location ;
-    geo:sfWithin psr:KitchenEnvironment .
-
-psr:MarbleCountertopLocation a psr:Location ;
-    geo:sfContains psr:BoxOfJello, psr:BoxOfCrackers, psr:BottleOfWater, psr:StackOfPlates, psr:JarOfJam .
-
-psr:KitchenEnvironment a psr:Environment ;
-    dul:hasComponent psr:BlackKitchenCabinets, psr:WhiteRefrigerator, psr:MarbleCountertop, psr:KitchenSink, psr:ElectricStove, psr:WoodenRangeHood, psr:WhiteWalls, psr:BrownParquetFlooring, psr:RoundCeilingLight, psr:WoodenDiningTable, psr:WhiteChairs .
-
-psr:WoodenDiningTableLocation a psr:Location ;
-    geo:sfContains psr:BoxOfCrackers, psr:BottleOfWater, psr:Jug .
+psr:SilverHandle a psr:Object ;
+    dul:hasLocation psr:Door .

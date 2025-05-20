@@ -6,60 +6,168 @@
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
-@prefix :       <https://example.org> .
+
+# Define the workflow for restoring the kitchen
+psr:kitchenRestorationWorkflow a owl:Class, dul:Workflow ;
+    rdfs:label "Kitchen Restoration Workflow"@en .
+
+# Actions involved in the process
+psr:RetrieveMisplacedItems a owl:Class, dul:Action ;
+    rdfs:label "Retrieve Misplaced Items"@en .
+
+psr:ReturnItemsToStorage a owl:Class, dul:Action ;
+    rdfs:label "Return Items to Storage"@en .
+
+# Agents
+psr:RobotAgent a owl:Class, dul:Agent ;
+    rdfs:label "Robot Agent"@en .
 
 # Define the instruction
-psr:ReorganiseKitchen a owl:NamedIndividual, psr:Instruction ;
-    rdfs:label "Reorganise the kitchen"@en ;
-    psr:hasNaturalLanguage "Reorganise the kitchen"^^xsd:string ;
-    psr:hasWorkflow psr:KitchenReorganizationWorkflow .
+psr:RestoreKitchenInstruction a owl:Class, psr:Instruction ;
+    rdfs:label "Restore the kitchen to an organized state by retrieving misplaced items and returning them to storage"@en ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasWorkflow psr:kitchenRestorationWorkflow .
 
-# Define the workflow
-psr:KitchenReorganizationWorkflow a owl:NamedIndividual, psr:Workflow ;
-    rdfs:label "Kitchen Reorganization Workflow"@en .
+# Define the workflow sequence
+psr:kitchenRestorationWorkflow
+    rdfs:subClassOf dul:Workflow ;
+    rdfs:comment "Sequential workflow to restore kitchen organization."@en .
 
-# Define actions in the workflow
-psr:Action1 a owl:NamedIndividual, dul:Action ;
-    rdfs:label "Retrieve items from countertop"@en ;
-    rdfs:comment "The robot picks up items from the kitchen countertop."@en .
-
-psr:Action2 a owl:NamedIndividual, dul:Action ;
-    rdfs:label "Move items to designated storage"@en ;
-    rdfs:comment "The robot places items into correct cabinets or storage areas."@en .
+# Define sequence of actions
+psr:RetrieveAndReturnSequence a owl:NamedIndividual ;
+    a owl:Sequence ;
+    rdfs:comment "Sequence of actions to retrieve and return misplaced items."@en .
 
 # Link actions to workflow
-psr:KitchenReorganizationWorkflow psr:hasAction psr:Action1 ;
-    psr:hasAction psr:Action2 .
+psr:kitchenRestorationWorkflow
+    psr:hasAction psr:RetrieveMisplacedItems, psr:ReturnItemsToStorage .
 
-# Define agents (robot performing actions)
-:Robot1 a dul:Agent ;
-    rdfs:label "Robot"@en .
+# Actions details
+psr:RetrieveMisplacedItems
+    psr:actsOn psr:BoxOfJELLO, psr:BoxOfRiceBubbles, psr:SmallRedContainerStrawberryJam, psr:RedWhiteContainerBloodOrangePreserves, psr:SmallDishOfBread, psr:WaterBottle, psr:YellowCup, psr:GlassOfWine, psr:JugCremater ;
+    rdfs:comment "Identify and retrieve all misplaced objects on the countertop and nearby."@en .
 
-# Link actions to agent
-psr:Action1 soma:isPerformedBy :Robot1 .
-psr:Action2 soma:isPerformedBy :Robot1 .
+psr:ReturnItemsToStorage
+    psr:actsOn psr:Object ;
+    rdfs:comment "Return all retrieved items to their respective standard storage locations."@en .
 
-# Define the components involved
-psr:Countertop a psr:Component ;
-    rdfs:label "Kitchen Countertop"@en .
+# Example object instances (assuming their types based on description)
+psr:JELLO a psr:Object, dul:Entity ;
+    rdfs:label "JELLO box"@en .
 
-psr:Cabinet a owl:Class, psr:Component ;
-    rdfs:label "Cabinet"@en .
+psr:RiceBubbles a psr:Object, dul:Entity ;
+    rdfs:label "Rice bubbles box"@en .
 
-psr:StorageArea a psr:Component ;
-    rdfs:label "Storage Area"@en .
+psr:StrawberryJam a psr:Object, dul:Entity ;
+    rdfs:label "Strawberry jam container"@en .
 
-# Define actions actsOn specific components
-psr:Action1 psr:actsOn psr:Countertop .
-psr:Action2 psr:actsOn psr:Cabinet .
+psr:BloodOrangePreserves a psr:Object, dul:Entity ;
+    rdfs:label "Blood orange preserves container"@en .
 
-# Define affordances relevant to actions
-soma:PickingUp a owl:NamedIndividual, psr:Affordance ;
-    rdfs:label "PickingUp"@en .
+psr:SlicedBreadDish a psr:Object, dul:Entity ;
+    rdfs:label "Dish of sliced bread"@en .
 
-soma:PuttingDown a owl:NamedIndividual, psr:Affordance ;
-    rdfs:label "PuttingDown"@en .
+psr:WaterBottle a psr:Object, dul:Entity ;
+    rdfs:label "Water bottle"@en .
 
-# Link actions with affordances
-psr:Action1 psr:isAffordedBy soma:PickingUp .
-psr:Action2 psr:isAffordedBy soma:PuttingDown .
+psr:YellowCup a psr:Object, dul:Entity ;
+    rdfs:label "Yellow cup"@en .
+
+psr:WineGlass a psr:Object, dul:Entity ;
+    rdfs:label "Glass of wine"@en .
+
+psr:JugCreamer a psr:Object, dul:Entity ;
+    rdfs:label "Jug/Creamer"@en .
+
+# Define actions as instances
+psr:ActionRetrieveJELLO a dul:Action ;
+    rdfs:label "Retrieve JELLO box"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:JELLO .
+
+psr:ActionRetrieveRiceBubbles a dul:Action ;
+    rdfs:label "Retrieve Rice Bubbles"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:RiceBubbles .
+
+psr:ActionRetrieveStrawberryJam a dul:Action ;
+    rdfs:label "Retrieve Strawberry Jam"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:StrawberryJam .
+
+psr:ActionRetrieveBloodOrangePreserves a dul:Action ;
+    rdfs:label "Retrieve Blood Orange Preserves"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:BloodOrangePreserves .
+
+psr:ActionRetrieveDishOfBread a dul:Action ;
+    rdfs:label "Retrieve Dish of Sliced Bread"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:SlicedBreadDish .
+
+psr:ActionRetrieveWaterBottle a dul:Action ;
+    rdfs:label "Retrieve Water Bottle"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:WaterBottle .
+
+psr:ActionRetrieveYellowCup a dul:Action ;
+    rdfs:label "Retrieve Yellow Cup"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:YellowCup .
+
+psr:ActionRetrieveWineGlass a dul:Action ;
+    rdfs:label "Retrieve Wine Glass"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:WineGlass .
+
+psr:ActionRetrieveJugCreamer a dul:Action ;
+    rdfs:label "Retrieve Jug/Creamer"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:JugCreamer .
+
+# Returning actions (assuming return to original storage locations)
+psr:ActionReturnJELLO a dul:Action ;
+    rdfs:label "Return JELLO box to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:JELLO .
+
+# Similarly, define for other objects
+psr:ActionReturnRiceBubbles a dul:Action ;
+    rdfs:label "Return Rice Bubbles to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:RiceBubbles .
+
+psr:ActionReturnStrawberryJam a dul:Action ;
+    rdfs:label "Return Strawberry Jam to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:StrawberryJam .
+
+psr:ActionReturnBloodOrangePreserves a dul:Action ;
+    rdfs:label "Return Blood Orange Preserves to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:BloodOrangePreserves .
+
+psr:ActionReturnDishOfBread a dul:Action ;
+    rdfs:label "Return Dish of Sliced Bread to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:SlicedBreadDish .
+
+psr:ActionReturnWaterBottle a dul:Action ;
+    rdfs:label "Return Water Bottle to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:WaterBottle .
+
+psr:ActionReturnYellowCup a dul:Action ;
+    rdfs:label "Return Yellow Cup to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:YellowCup .
+
+psr:ActionReturnWineGlass a dul:Action ;
+    rdfs:label "Return Wine Glass to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:WineGlass .
+
+psr:ActionReturnJugCreamer a dul:Action ;
+    rdfs:label "Return Jug/Creamer to storage"@en ;
+    psr:isPerformedBy psr:RobotAgent ;
+    psr:actsOn psr:JugCreamer .

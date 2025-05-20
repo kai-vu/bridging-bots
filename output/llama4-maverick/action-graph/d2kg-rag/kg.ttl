@@ -5,107 +5,80 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-psr:Task1 a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
-    psr:hasWorkflow psr:Workflow1 .
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically." ;
+    psr:hasWorkflow psr:Workflow_1 .
 
-psr:Workflow1 a psr:Workflow ;
-    psr:hasAction soma:PickingUp1, soma:PuttingDown1, soma:PickingUp2, soma:PuttingDown2, soma:PickingUp3, soma:PuttingDown3, soma:PickingUp4, soma:PuttingDown4 .
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction soma:PickingUp_1, soma:PuttingDown_1, soma:PickingUp_2, soma:PuttingDown_2, soma:PickingUp_3, soma:PuttingDown_3, soma:PickingUp_4, soma:PuttingDown_4 .
 
-soma:PickingUp1 a soma:PickingUp ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BoxOfJello ;
-    psr:follows dul:Action0 .
+soma:PickingUp_1 a soma:PickingUp ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:Grasping_1 .
 
-soma:PuttingDown1 a soma:PuttingDown ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BoxOfJello ;
-    psr:follows soma:PickingUp1 .
+soma:PuttingDown_1 a soma:PuttingDown ;
+    psr:actsOn psr:Object_1 ;
+    psr:follows soma:PickingUp_1 .
 
-soma:PickingUp2 a soma:PickingUp ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BoxOfCrackers1 ;
-    psr:follows soma:PuttingDown1 .
+psr:Object_1 a psr:Object ;
+    rdfs:label "CHICKY chip packet" .
 
-soma:PuttingDown2 a soma:PuttingDown ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BoxOfCrackers1 ;
-    psr:follows soma:PickingUp2 .
+soma:Grasping_1 a soma:Grasping ;
+    psr:isAffordedBy psr:Object_1 .
 
-soma:PickingUp3 a soma:PickingUp ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:JarOfJam ;
-    psr:follows soma:PuttingDown2 .
+soma:PickingUp_2 a soma:PickingUp ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:Grasping_2 ;
+    psr:follows soma:PuttingDown_1 .
 
-soma:PuttingDown3 a soma:PuttingDown ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:JarOfJam ;
-    psr:follows soma:PickingUp3 .
+soma:PuttingDown_2 a soma:PuttingDown ;
+    psr:actsOn psr:Object_2 ;
+    psr:follows soma:PickingUp_2 .
 
-soma:PickingUp4 a soma:PickingUp ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BottleOfWater1 ;
-    psr:follows soma:PuttingDown3 .
+psr:Object_2 a psr:Object ;
+    rdfs:label "JELLO box" .
 
-soma:PuttingDown4 a soma:PuttingDown ;
-    soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:BottleOfWater1 ;
-    psr:follows soma:PickingUp4 .
+soma:Grasping_2 a soma:Grasping ;
+    psr:isAffordedBy psr:Object_2 .
 
-dul:Agent1 a dul:Agent .
+soma:PickingUp_3 a soma:PickingUp ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:Grasping_3 ;
+    psr:follows soma:PuttingDown_2 .
 
-psr:BoxOfJello a psr:Object ;
-    psr:hasAffordance soma:PickingUp1, soma:PuttingDown1 .
+soma:PuttingDown_3 a soma:PuttingDown ;
+    psr:actsOn psr:Object_3 ;
+    psr:follows soma:PickingUp_3 .
 
-psr:BoxOfCrackers1 a psr:Object ;
-    psr:hasAffordance soma:PickingUp2, soma:PuttingDown2 .
+psr:Object_3 a psr:Object ;
+    rdfs:label "Alpen Salt box" .
 
-psr:JarOfJam a psr:Object ;
-    psr:hasAffordance soma:PickingUp3, soma:PuttingDown3 .
+soma:Grasping_3 a soma:Grasping ;
+    psr:isAffordedBy psr:Object_3 .
 
-psr:BottleOfWater1 a psr:Object ;
-    psr:hasAffordance soma:PickingUp4, soma:PuttingDown4 .
+soma:PickingUp_4 a soma:PickingUp ;
+    psr:actsOn psr:Object_4 ;
+    psr:isAffordedBy soma:Grasping_4 ;
+    psr:follows soma:PuttingDown_3 .
 
-dul:Action0 a dul:Action .
+soma:PuttingDown_4 a soma:PuttingDown ;
+    psr:actsOn psr:Object_4 ;
+    psr:follows soma:PickingUp_4 .
 
-psr:Component1 a psr:Component ;
-    rdfs:label "black kitchen cabinets"@en .
+psr:Object_4 a psr:Object ;
+    rdfs:label "packet of biscuits" .
 
-psr:Component2 a psr:Component ;
-    rdfs:label "white refrigerator"@en .
+soma:Grasping_4 a soma:Grasping ;
+    psr:isAffordedBy psr:Object_4 .
 
-psr:Component3 a psr:Component ;
-    rdfs:label "marble countertop"@en .
+dul:Agent_1 a dul:Agent ;
+    soma:isPerformedBy soma:PickingUp_1 .
 
-psr:Component4 a psr:Component ;
-    rdfs:label "kitchen sink"@en .
-
-psr:Component5 a psr:Component ;
-    rdfs:label "electric stove"@en .
-
-psr:Component6 a psr:Component ;
-    rdfs:label "wooden range hood"@en .
-
-psr:Component7 a psr:Component ;
-    rdfs:label "wooden dining table"@en .
-
-psr:Component8 a psr:Component ;
-    rdfs:label "white chairs"@en .
-
-psr:Object1 a psr:Object ;
-    rdfs:label "box of jello"@en .
-
-psr:Object2 a psr:Object ;
-    rdfs:label "box of crackers"@en .
-
-psr:Object3 a psr:Object ;
-    rdfs:label "bottle of water"@en .
-
-psr:Object4 a psr:Object ;
-    rdfs:label "stack of plates"@en .
-
-psr:Object5 a psr:Object ;
-    rdfs:label "jar of jam"@en .
-
-psr:Object6 a psr:Object ;
-    rdfs:label "jug"@en .
+soma:PickingUp_1 soma:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_1 soma:isPerformedBy dul:Agent_1 .
+soma:PickingUp_2 soma:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_2 soma:isPerformedBy dul:Agent_1 .
+soma:PickingUp_3 soma:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_3 soma:isPerformedBy dul:Agent_1 .
+soma:PickingUp_4 soma:isPerformedBy dul:Agent_1 .
+soma:PuttingDown_4 soma:isPerformedBy dul:Agent_1 .

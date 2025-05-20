@@ -7,69 +7,78 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr: <https://w3id.org/psr-task#> .
 
-### Instances
+## Knowledge Graph of Actions
 psr:Restore_Kitchen a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  psr:hasWorkflow psr:Organize_Kitchen .
 
-psr:Restore_Kitchen_Workflow a psr:Workflow .
+psr:Organize_Kitchen a psr:Workflow ;
+  psr:hasAction psr:Pick_Up_Items ;
+  psr:precedes psr:Organize_Kitchen .
 
-### Actions
-psr:Pick_Up_Appliance_1 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Evian_Bottle .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:Evian_Bottle ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Pick_Up_Appliance_2 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Alpen_Salt .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:M&M's_Box ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Pick_Up_Appliance_3 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Jello .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:Shortbread_Box ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Pick_Up_Appliance_4 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Shortbread .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:Jello_Box ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Pick_Up_Appliance_5 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Chucky_Puzzle .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:Alpen_Salt_Box ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Place_Appliance_1 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Evian_Bottle .
+psr:Pick_Up_Items a dul:Action ;
+  psr:actsOn psr:Peanut_Butter_Jar ;
+  psr:isAffordedBy soma:PickingUp .
 
-psr:Place_Appliance_2 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Alpen_Salt .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:M&M's_Box ;
+  psr:isAffordedBy soma:PuttingDown .
 
-psr:Place_Appliance_3 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Jello .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:Shortbread_Box ;
+  psr:isAffordedBy soma:PuttingDown .
 
-psr:Place_Appliance_4 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Chocolate_Cake_Shortbread .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:Jello_Box ;
+  psr:isAffordedBy soma:PuttingDown .
 
-psr:Place_Appliance_5 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn <https://w3id.org/psr-task#>psr:Man_Marmalade .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:Alpen_Salt_Box ;
+  psr:isAffordedBy soma:PuttingDown .
 
-### Workflow
-psr:Restore_Kitchen_Workflow
-  psr:hasAction psr:Pick_Up_Appliance_1 ;
-  psr:hasAction psr:Pick_Up_Appliance_2 ;
-  psr:hasAction psr:Pick_Up_Appliance_3 ;
-  psr:hasAction psr:Pick_Up_Appliance_4 ;
-  psr:hasAction psr:Pick_Up_Appliance_5 ;
-  psr:hasAction psr:Place_Appliance_1 ;
-  psr:hasAction psr:Place_Appliance_2 ;
-  psr:hasAction psr:Place_Appliance_3 ;
-  psr:hasAction psr:Place_Appliance_4 ;
-  psr:hasAction psr:Place_Appliance_5 .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:Peanut_Butter_Jar ;
+  psr:isAffordedBy soma:PuttingDown .
 
-### Relations
-psr:Pick_Up_Appliance_1 psr:precedes psr:Place_Appliance_1 .
-psr:Pick_Up_Appliance_2 psr:precedes psr:Place_Appliance_2 .
-psr:Pick_Up_Appliance_3 psr:precedes psr:Place_Appliance_3 .
-psr:Pick_Up_Appliance_4 psr:precedes psr:Place_Appliance_4 .
-psr:Pick_Up_Appliance_5 psr:precedes psr:Place_Appliance_5 .
+psr:Put_Items_Into_Cabinet a dul:Action ;
+  psr:actsOn psr:Evian_Bottle ;
+  psr:isAffordedBy soma:PuttingDown .
+
+## Objects
+psr:Evian_Bottle a psr:Object, psr:Component ;
+  rdfs:label "Evian Bottle"@en .
+
+psr:M&M's_Box a psr:Object, psr:Component ;
+  rdfs:label "M&M's Box"@en .
+
+psr:Shortbread_Box a psr:Object, psr:Component ;
+  rdfs:label "Shortbread Box"@en .
+
+psr:Jello_Box a psr:Object, psr:Component ;
+  rdfs:label "Jello Box"@en .
+
+psr:Alpen_Salt_Box a psr:Object, psr:Component ;
+  rdfs:label "Alpen Salt Box"@en .
+
+psr:Peanut_Butter_Jar a psr:Object, psr:Component ;
+  rdfs:label "Peanut Butter Jar"@en .

@@ -6,96 +6,97 @@
 @prefix psr: <https://w3id.org/psr-task#> .
 
 psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Refrigerator, psr:UpperCabinet, psr:LowerCabinet, psr:DiningTable, psr:Chair1, psr:Chair2, psr:Chair3, psr:Sink, psr:Stove, psr:ExhaustHood .
+    dul:hasComponent psr:Table, psr:Chairs, psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan, psr:Door .
 
-psr:Refrigerator a psr:Appliance ;
-    dul:hasLocation psr:Kitchen ;
+psr:Table a psr:Furniture ;
+    dul:hasLocation psr:DiningArea ;
+    psr:hasAffordance soma:Holding .
+
+psr:Chairs a psr:Furniture ;
+    dul:hasLocation psr:DiningArea ;
+    psr:hasAffordance soma:Sitting .
+
+psr:Cabinet a psr:Furniture ;
+    dul:hasLocation psr:KitchenArea ;
     psr:hasAffordance soma:Opening, soma:Closing .
 
-psr:UpperCabinet a psr:Furniture ;
-    dul:hasLocation psr:Kitchen ;
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:KitchenArea ;
     psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:LowerCabinet a psr:Furniture ;
-    dul:hasLocation psr:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:DiningTable a psr:Furniture ;
-    dul:hasLocation psr:Kitchen ;
-    dul:hasComponent psr:WaterBottle, psr:Mug, psr:Book, psr:Fruit .
-
-psr:Chair1 a psr:Furniture ;
-    dul:hasLocation psr:Kitchen .
-
-psr:Chair2 a psr:Furniture ;
-    dul:hasLocation psr:Kitchen .
-
-psr:Chair3 a psr:Furniture ;
-    dul:hasLocation psr:Kitchen .
 
 psr:Sink a psr:Appliance ;
-    dul:hasLocation psr:Kitchen .
+    dul:hasLocation psr:KitchenArea ;
+    psr:hasAffordance soma:Containing .
 
 psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:Kitchen ;
-    dul:hasComponent psr:Pot .
+    dul:hasLocation psr:KitchenArea ;
+    psr:hasAffordance soma:Heating .
 
-psr:ExhaustHood a psr:Appliance ;
-    dul:hasLocation psr:Kitchen .
+psr:ExhaustFan a psr:Appliance ;
+    dul:hasLocation psr:KitchenArea ;
+    psr:hasAffordance soma:Ventilating .
+
+psr:Door a psr:Furniture ;
+    dul:hasLocation psr:DiningArea ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:DiningArea a soma:Location ;
+    geo:sfContains psr:Table, psr:Chairs .
+
+psr:KitchenArea a soma:Location ;
+    geo:sfContains psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan .
+
+psr:JelloBox a psr:Object ;
+    dul:hasLocation psr:CounterTop ;
+    psr:onTopOf psr:Cabinet .
+
+psr:AlpenSalt a psr:Object ;
+    dul:hasLocation psr:CounterTop ;
+    psr:onTopOf psr:Cabinet .
+
+psr:ChunkyBox a psr:Object ;
+    dul:hasLocation psr:CounterTop ;
+    psr:onTopOf psr:Cabinet .
+
+psr:RiceBubblesBox a psr:Object ;
+    dul:hasLocation psr:CounterTop ;
+    psr:onTopOf psr:Cabinet .
+
+psr:Plates a psr:Object ;
+    dul:hasLocation psr:CounterTop ;
+    psr:onTopOf psr:Cabinet .
 
 psr:WaterBottle a psr:Object ;
-    dul:hasLocation psr:DiningTable .
+    dul:hasLocation psr:Table ;
+    psr:onTopOf psr:Table .
 
-psr:Mug a psr:Object ;
-    dul:hasLocation psr:DiningTable .
+psr:FruitBox a psr:Object ;
+    dul:hasLocation psr:Table ;
+    psr:onTopOf psr:Table .
 
-psr:Book a psr:Object ;
-    dul:hasLocation psr:DiningTable .
+psr:CounterTop a soma:Location ;
+    geo:sfContains psr:JelloBox, psr:AlpenSalt, psr:ChunkyBox, psr:RiceBubblesBox, psr:Plates .
 
-psr:Fruit a psr:Object ;
-    dul:hasLocation psr:DiningTable .
+psr:Cabinet a psr:Furniture ;
+    dul:hasLocation psr:KitchenArea .
 
-psr:Pot a psr:Object ;
-    dul:hasLocation psr:Stove .
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:KitchenArea .
 
-psr:Jar1 a psr:Object ;
-    dul:hasLocation psr:LowerCabinet ;
-    psr:onTopOf psr:LowerCabinet .
+psr:Sink a psr:Appliance ;
+    dul:hasLocation psr:CounterTop .
 
-psr:Jar2 a psr:Object ;
-    dul:hasLocation psr:LowerCabinet ;
-    psr:onTopOf psr:LowerCabinet .
+psr:Stove a psr:Appliance ;
+    dul:hasLocation psr:CounterTop .
 
-psr:Box1 a psr:Object ;
-    dul:hasLocation psr:LowerCabinet ;
-    psr:onTopOf psr:LowerCabinet .
+psr:ExhaustFan a psr:Appliance ;
+    dul:hasLocation psr:KitchenArea .
 
-psr:Box2 a psr:Object ;
-    dul:hasLocation psr:LowerCabinet ;
-    psr:onTopOf psr:LowerCabinet .
+psr:Door a psr:Furniture ;
+    dul:hasLocation psr:DiningArea .
 
-psr:StackOfPlates a psr:Object ;
-    dul:hasLocation psr:LowerCabinet ;
-    psr:onTopOf psr:LowerCabinet .
+psr:WaterBottle a psr:Object ;
+    dul:hasLocation psr:Table .
 
-psr:Door a psr:Component ;
-    dul:hasLocation psr:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:LowerCabinet dul:hasLocation psr:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:Refrigerator dul:hasLocation psr:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:UpperCabinet dul:hasLocation psr:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
-
-psr:DiningTable dul:hasLocation psr:Kitchen .
-
-geo:sfContains psr:Kitchen, psr:LowerCabinet .
-geo:sfContains psr:LowerCabinet, psr:Jar1 .
-geo:sfContains psr:LowerCabinet, psr:Jar2 .
-geo:sfContains psr:LowerCabinet, psr:Box1 .
-geo:sfContains psr:LowerCabinet, psr:Box2 .
-geo:sfContains psr:LowerCabinet, psr:StackOfPlates .
+psr:FruitBox a psr:Object ;
+    dul:hasLocation psr:Table .

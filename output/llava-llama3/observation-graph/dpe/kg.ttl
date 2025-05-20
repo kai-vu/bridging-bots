@@ -1,29 +1,39 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:kitchen kitchen:hasComponent kitchen:carton_of_eggs,
-        kitchen:countertop,
-        kitchen:door,
-        kitchen:fridge,
-        kitchen:microwave,
-        kitchen:oven,
-        kitchen:pack_of_groceries,
-        kitchen:sink ;
-    kitchen:hasLocation kitchen:another_room,
-        kitchen:dining_table .
+kitchen:bowl kitchen:hasLocation kitchen:on_dining_table .
 
-kitchen:cabinets kitchen:sfAbove kitchen:countertop .
+kitchen:cabinets kitchen:hasProperty kitchen:dark .
 
-kitchen:dining_table kitchen:hasComponent kitchen:bottle,
-        kitchen:chair ;
-    kitchen:sfUnder kitchen:light_fixture .
+kitchen:countertop kitchen:hasComponent kitchen:bottles,
+        kitchen:bowls,
+        kitchen:cereal_boxes,
+        kitchen:cups,
+        kitchen:loaf_of_bread .
 
-kitchen:faucet kitchen:sfAbove kitchen:sink .
+kitchen:countertops kitchen:hasProperty kitchen:dark .
 
-kitchen:fridge kitchen:hasComponent kitchen:glass_shelf .
+kitchen:dining_table kitchen:hasComponent kitchen:carton_of_milk,
+        kitchen:cereal_boxes,
+        kitchen:roll_of_paper_towels ;
+    kitchen:hasLocation kitchen:center_of_kitchen .
 
-kitchen:countertop kitchen:hasComponent kitchen:cabinets,
-        kitchen:cups_of_coffee,
-        kitchen:snacks .
+kitchen:glass_door kitchen:hasLocation kitchen:right_side .
 
-kitchen:sink kitchen:hasComponent kitchen:faucet .
+kitchen:kitchen kitchen:hasComponent kitchen:black_countertops,
+        kitchen:dark_wood_cabinets,
+        kitchen:white_tile_backsplash .
+
+kitchen:light_fixture kitchen:hasLocation kitchen:above_countertop .
+
+kitchen:oven kitchen:hasLocation kitchen:left_side .
+
+kitchen:refrigerator kitchen:hasLocation kitchen:next_to_dining_table .
+
+kitchen:sink kitchen:hasLocation kitchen:under_window .
+
+kitchen:small_white_refrigerator kitchen:hasLocation kitchen:one_side_of_dining_table .
+
+kitchen:trash_can kitchen:hasLocation kitchen:under_window_above_sink .
+
+kitchen:walls kitchen:hasProperty kitchen:white .
 

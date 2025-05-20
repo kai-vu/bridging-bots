@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-5156f8fe-2a62-4a53-a913-f1680da8f03a",
-    "created": 1747746784,
+    "id": "llava:7b-613a2cbf-79c2-4a14-bf35-977a66d6a0bf",
+    "created": 1747771136,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```python\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix psr: <https://www.w3.org/2002/07/owl#> .\n@prefix dul: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n# Environment Classes and Instances\n:Environment a geo:Environment ;\n  geo:name \"Kitchen\"@en .\n\n# Component Classes and Instances\n:Component a psr:Component ;\n  psr:hasAffordance :Opening ;\n  psr:isIn geo:contains ;\n  psr:name \"Cabinet\"@en ;\n    psr:hasLocation :Kitchen ;\n  psr:isIn geo:overlaps .\n\n# Location Classes and Instances\n:Location a dul:Location ;\n  dul:name \"Corner\"@en ;\n    dul:onTopOf :Cabinet ;\n  dul:name \"Under Shelf\"@en ;\n    dul:isWithin geo:contains .\n\n# Affordance Classes and Instances\n:Affordance a psr:Affordance ;\n  psr:name \"Opening\"@en ;\n  psr:isIn geo:overlaps .\n\n# Standard Location Classes and Instances\n:StandardLocation a dul:Location ;\n  dul:name \"Countertop\"@en ;\n    dul:isWithin geo:contains .\n\n# Object Classes and Instances\n:Object a geo:Object ;\n  geo:name \"Cupboard\"@en ;\n    geo:hasLocation :Corner ;\n  geo:name \"Sink\"@en ;\n    geo:hasLocation :Under Shelf ;\n  geo:isOnTopOf :Cabinet .\n\n# Relationships and Affordances\ndul:overlaps :Object :Cabinet .\n``` ",
+                "content": " ```python\n@prefix : <http://www.w3.org/1999/02/rdf-schema#> .\n@prefix :env .\n@prefix :obj .\n@prefix :affordance .\n\n:env a :Environment ;\n    hasComponent :cabinet ;\n    hasComponent :sink ;\n    hasComponent :counter.\n\n:cabinet a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n\n:sink a :Appliance ;\n    hasAffordance :hasLocation ;\n    hasLocation :bathroom.\n\n:counter a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 49.79,
-        "prompt_token/s": 983.27,
-        "total_duration": 14997157073,
-        "load_duration": 51655556,
+        "response_token/s": 69.36,
+        "prompt_token/s": 1867.77,
+        "total_duration": 4810478431,
+        "load_duration": 49686793,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 4165687467,
-        "eval_count": 535,
-        "completion_tokens": 535,
-        "eval_duration": 10744903100,
-        "approximate_total": "0h0m14s",
-        "total_tokens": 4631,
+        "prompt_eval_duration": 2192992710,
+        "eval_count": 176,
+        "completion_tokens": 176,
+        "eval_duration": 2537310424,
+        "approximate_total": "0h0m4s",
+        "total_tokens": 4272,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

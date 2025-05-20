@@ -8,80 +8,81 @@
 @prefix psr: <https://w3id.org/psr-task#> .
 
 psr:RestoreKitchenToOrganizedState a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically." ;
-    psr:hasWorkflow psr:Workflow_RestoreKitchen .
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    psr:hasWorkflow psr:RestoreKitchenWorkflow .
 
-psr:Workflow_RestoreKitchen a psr:Workflow ;
-    psr:hasAction dul:Action_IdentifyMisplacedItems ;
-    psr:hasAction dul:Action_ReturnItemsToStorage ;
-    dul:hasAction dul:Action_PrioritizeActions .
+psr:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction dul:IdentifyMisplacedItems ;
+    psr:hasAction dul:ReturnItemsToStorageLocations ;
+    dul:precedes dul:ReturnItemsToStorageLocations, dul:IdentifyMisplacedItems .
 
-dul:Action_IdentifyMisplacedItems a dul:Action ;
-    soma:isPerformedBy dul:Agent_Robot ;
-    psr:actsOn psr:Component_CountertopItems ;
-    psr:actsOn psr:Component_DiningTableItems ;
-    psr:follows dul:Action_PrioritizeActions .
+dul:IdentifyMisplacedItems a dul:Action ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:Kitchen .
 
-dul:Action_ReturnItemsToStorage a dul:Action ;
-    soma:isPerformedBy dul:Agent_Robot ;
-    psr:actsOn psr:Component_CountertopItems ;
-    psr:actsOn psr:Component_DiningTableItems ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes dul:Action_PrioritizeActions .
+dul:ReturnItemsToStorageLocations a dul:Action ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:MisplacedItems .
 
-dul:Action_PrioritizeActions a dul:Action ;
-    soma:isPerformedBy dul:Agent_Robot .
+psr:Kitchen a psr:Component .
+psr:MisplacedItems a psr:Component .
 
-psr:Component_CountertopItems a psr:Component ;
-    rdfs:label "Countertop Items" .
+dul:IdentifyMisplacedItems psr:isAffordedBy soma:PickingUp .
+dul:ReturnItemsToStorageLocations psr:isAffordedBy soma:PuttingDown .
 
-psr:Component_DiningTableItems a psr:Component ;
-    rdfs:label "Dining Table Items" .
+soma:PickingUp a psr:Affordance .
+soma:PuttingDown a psr:Affordance .
 
-dul:Agent_Robot a dul:Agent ;
-    rdfs:label "Robot" .
+psr:Robot a dul:Agent .
 
-soma:PuttingDown a soma:PuttingDown ;
-    rdfs:label "Putting Down" .
+psr:Plates a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Component_CountertopItems psr:hasAffordance soma:PickingUp .
+psr:RedJamJars a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Component_DiningTableItems psr:hasAffordance soma:PickingUp .
+psr:CHICKYChipPacket a psr:Object ;
+    rdf:type psr:Component .
 
-# defining the items
-psr:Object_BoxOfJello a psr:Object ;
-    rdfs:label "Box of Jello" .
+psr:JELLOBox a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Object_BoxOfCrackers a psr:Object ;
-    rdfs:label "Box of Crackers" .
+psr:AlpenSaltBox a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Object_JarOfJam a psr:Object ;
-    rdfs:label "Jar of Jam" .
+psr:BottleOfWater a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Object_BottleOfWater a psr:Object ;
-    rdfs:label "Bottle of Water" .
+psr:PacketOfBiscuits a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Object_Jug a psr:Object ;
-    rdfs:label "Jug" .
+psr:Mugs a psr:Object ;
+    rdf:type psr:Component .
 
-psr:Object_StackOfPlates a psr:Object ;
-    rdfs:label "Stack of Plates" .
+psr:WineGlass a psr:Object ;
+    rdf:type psr:Component .
 
-# defining the affordance relationships for the objects
-psr:Object_BoxOfJello psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:Fridge a psr:Appliance ;
+    rdf:type psr:Component .
 
-psr:Object_BoxOfCrackers psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:Counter a psr:Furniture ;
+    rdf:type psr:Component .
 
-psr:Object_JarOfJam psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:DiningTable a psr:Furniture ;
+    rdf:type psr:Component .
 
-psr:Object_BottleOfWater psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:Rangehood a psr:Appliance ;
+    rdf:type psr:Component .
 
-psr:Object_Jug psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:Sink a psr:Component .
 
-psr:Object_StackOfPlates psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+psr:Pot a psr:Object ;
+    rdf:type psr:Component .
+
+psr:Stove a psr:Appliance ;
+    rdf:type psr:Component .
+
+psr:WhiteDoor a psr:Furniture ;
+    rdf:type psr:Component .
+
+psr:SilverHandle a psr:Component .

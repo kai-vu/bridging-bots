@@ -1,10 +1,79 @@
-@prefix psr: <http://example.com/psr#> .
-@prefix dul: <http://example.com/dul#> .
-@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/ontology#>
+@prefix dul: <http://www.w3.org/ns/dul#>
+@prefix psr: <http://www.w3.org/2007/01/rdf-syntax-query#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
-psr:RestoringKitchen a dul:Workflow ;
-  psr:precededBy ( psr:Holding dul:Furniture ) ;
-  psr:followedBy ( psr:PuttingDown dul:Furniture ) ;
-  psr:precededBy ( psr:PickingUp dul:Object ) ;
-  psr:followedBy ( psr:Delivering dul:Object ) .
+# Instruction
+:Instruction rdf:type :Workflow .
+:Instruction hasAction :Opening .
+:Instruction hasAction :PickingUp .
+:Instruction hasAction :Closing .
+:Instruction hasAction :Delivering .
+:Instruction hasAction :PuttingDown .
+:Instruction hasAction :Pulling .
+:Instruction hasAction :Holding .
+:Instruction hasAgent :Robot .
+
+# Kitchen Objects
+:Kitchen a dul:Component .
+:Fridge a dul:Component .
+:Cupboard a dul:Component.
+:Drawer a dul:Component.
+
+:Fridge a :Appliance ;
+    :isPerformedBy :Robot .
+
+:Refrigerator a :Appliance ;
+    :isPerformedBy :Robot .
+
+:Cupboard a :Furniture ;
+    :isPerformedBy :Robot .
+
+:Drawer a :Furniture ;
+    :isPerformedBy :Robot.
+
+# Kitchen Utensils and Items
+:KitchenUtensil a dul:Component .
+:Plate a dul:Component .
+:Bowl a dul:Component.
+:Spoon a dul:Component.
+
+:RefrigeratorItem a :Object ;
+    :isPerformedBy :Robot.
+
+# Affordances
+:Opening a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :Fridge .
+
+:PickingUp a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :KitchenUtensil.
+
+:Closing a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :Drawer.
+
+:Delivering a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :Cupboard.
+
+:PuttingDown a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :KitchenUtensil.
+
+:Pulling a dul:Affordance ;
+    :isPerformedBy :Robot ;
+    :actsOn :Refrigerator.
+
+# Robot's Actions
+:Robot a dul:Agent .
+
+# Relationships
+:Fridge a :ComponentOf :Kitchen.
+:Cupboard a :ComponentOf :Kitchen.
+:Drawer a :ComponentOf :Kitchen.
+
+:RefrigeratorItem a :Object ;
+    :isPerformedBy :Robot ;
+    :actsOn :Refrigerator.

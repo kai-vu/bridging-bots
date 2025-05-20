@@ -5,143 +5,109 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-psr:RestoreKitchen a psr:Workflow ;
-  psr:hasAction psr:IdentifyMisplacedItems,
-  psr:ReturnItemsToStorage.
+psr:RestoreKitchen a dul:Action ;
+  rdfs:label "Restore Kitchen"@en .
+
+psr:RestoreKitchen psr:hasWorkflow psr:Workflow_RestoreKitchen .
+
+psr:Workflow_RestoreKitchen a psr:Workflow .
+
+psr:Workflow_RestoreKitchen psr:hasAction psr:IdentifyMisplacedItems .
 
 psr:IdentifyMisplacedItems a dul:Action ;
-  psr:actsOn psr:MisplacedItem.
+  rdfs:label "Identify Misplaced Items"@en .
 
-psr:MisplacedItem a psr:Component .
+psr:IdentifyMisplacedItems psr:actsOn psr:MisplacedItems .
+
+psr:MisplacedItems a psr:Component .
+
+psr:Workflow_RestoreKitchen psr:hasAction psr:ReturnItemsToStorage .
 
 psr:ReturnItemsToStorage a dul:Action ;
-  psr:actsOn psr:MisplacedItem ;
-  psr:follows psr:IdentifyMisplacedItems.
+  rdfs:label "Return Items to Storage"@en .
 
-psr:MisplacedItem1 a psr:Component ;
-  psr:actsOn psr:StackOfWhitePlates.
+psr:ReturnItemsToStorage psr:actsOn psr:MisplacedItems .
 
-psr:StackOfWhitePlates a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
 
-psr:StackOfWhitePlates1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayJars .
 
-psr:IdentifyMisplacedItems1 a dul:Action ;
-  psr:actsOn psr:StackOfWhitePlates.
+psr:PutAwayJars a dul:Action ;
+  rdfs:label "Put Away Jars"@en .
 
-psr:ReturnItemsToStorage1 a dul:Action ;
-  psr:actsOn psr:StackOfWhitePlates ;
-  psr:follows psr:IdentifyMisplacedItems1.
+psr:PutAwayJars psr:actsOn psr:Jars .
 
-psr:MisplacedItem2 a psr:Component ;
-  psr:actsOn psr:JarOfJam.
+psr:Jars a psr:Component .
 
-psr:JarOfJam a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:PutAwayJars psr:isAffordedBy soma:PuttingDown .
 
-psr:JarOfJam1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:PutAwayJars psr:follows psr:ReturnItemsToStorage .
 
-psr:IdentifyMisplacedItems2 a dul:Action ;
-  psr:actsOn psr:JarOfJam.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayJellO .
 
-psr:ReturnItemsToStorage2 a dul:Action ;
-  psr:actsOn psr:JarOfJam ;
-  psr:follows psr:IdentifyMisplacedItems2.
+psr:PutAwayJellO a dul:Action ;
+  rdfs:label "Put Away Jell-O"@en .
 
-psr:MisplacedItem3 a psr:Component ;
-  psr:actsOn psr:BoxOfStrawberryBananaJello.
+psr:PutAwayJellO psr:actsOn psr:JellO .
 
-psr:BoxOfStrawberryBananaJello a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:JellO a psr:Component .
 
-psr:BoxOfStrawberryBananaJello1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:PutAwayJellO psr:isAffordedBy soma:PuttingDown .
 
-psr:IdentifyMisplacedItems3 a dul:Action ;
-  psr:actsOn psr:BoxOfStrawberryBananaJello.
+psr:PutAwayJellO psr:follows psr:PutAwayJars .
 
-psr:ReturnItemsToStorage3 a dul:Action ;
-  psr:actsOn psr:BoxOfStrawberryBananaJello ;
-  psr:follows psr:IdentifyMisplacedItems3.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayAlpenSalt .
 
-psr:MisplacedItem4 a psr:Component ;
-  psr:actsOn psr:PackageOfAlpenSalt.
+psr:PutAwayAlpenSalt a dul:Action ;
+  rdfs:label "Put Away Alpen Salt"@en .
 
-psr:PackageOfAlpenSalt a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:PutAwayAlpenSalt psr:actsOn psr:AlpenSalt .
 
-psr:PackageOfAlpenSalt1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:AlpenSalt a psr:Component .
 
-psr:IdentifyMisplacedItems4 a dul:Action ;
-  psr:actsOn psr:PackageOfAlpenSalt.
+psr:PutAwayAlpenSalt psr:isAffordedBy soma:PuttingDown .
 
-psr:ReturnItemsToStorage4 a dul:Action ;
-  psr:actsOn psr:PackageOfAlpenSalt ;
-  psr:follows psr:IdentifyMisplacedItems4.
+psr:PutAwayAlpenSalt psr:follows psr:PutAwayJellO .
 
-psr:MisplacedItem5 a psr:Component ;
-  psr:actsOn psr:BottleOfEvianWater.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayPaperPlates .
 
-psr:BottleOfEvianWater a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:PutAwayPaperPlates a dul:Action ;
+  rdfs:label "Put Away Paper Plates"@en .
 
-psr:BottleOfEvianWater1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:PutAwayPaperPlates psr:actsOn psr:PaperPlates .
 
-psr:IdentifyMisplacedItems5 a dul:Action ;
-  psr:actsOn psr:BottleOfEvianWater.
+psr:PaperPlates a psr:Component .
 
-psr:ReturnItemsToStorage5 a dul:Action ;
-  psr:actsOn psr:BottleOfEvianWater ;
-  psr:follows psr:IdentifyMisplacedItems5.
+psr:PutAwayPaperPlates psr:isAffordedBy soma:PuttingDown .
 
-psr:MisplacedItem6 a psr:Component ;
-  psr:actsOn psr:Book.
+psr:PutAwayPaperPlates psr:follows psr:PutAwayAlpenSalt .
 
-psr:Book a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayPot .
 
-psr:Book1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:PutAwayPot a dul:Action ;
+  rdfs:label "Put Away Pot"@en .
 
-psr:IdentifyMisplacedItems6 a dul:Action ;
-  psr:actsOn psr:Book.
+psr:PutAwayPot psr:actsOn psr:Pot .
 
-psr:ReturnItemsToStorage6 a dul:Action ;
-  psr:actsOn psr:Book ;
-  psr:follows psr:IdentifyMisplacedItems6.
+psr:Pot a psr:Component .
 
-psr:MisplacedItem7 a psr:Component ;
-  psr:actsOn psr:Plate.
+psr:PutAwayPot psr:isAffordedBy soma:PuttingDown .
 
-psr:Plate a psr:Object ;
-  soma:PuttingDown a soma:Affordance ;
-  soma:PickingUp a soma:Affordance.
+psr:PutAwayPot psr:follows psr:PutAwayPaperPlates .
 
-psr:Plate1 a dul:Entity ;
-  psr:isAffordedBy soma:PuttingDown.
+psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayBottle .
 
-psr:IdentifyMisplacedItems7 a dul:Action ;
-  psr:actsOn psr:Plate.
+psr:PutAwayBottle a dul:Action ;
+  rdfs:label "Put Away Bottle"@en .
 
-psr:ReturnItemsToStorage7 a dul:Action ;
-  psr:actsOn psr:Plate ;
-  psr:follows psr:IdentifyMisplacedItems7.
+psr:PutAwayBottle psr:actsOn psr:Bottle .
 
-psr:Kitchen a psr:Environment .
+psr:Bottle a psr:Component .
 
-psr:Agent a dul:Agent ;
-  soma:Grasping a soma:Affordance ;
-  soma:PickingUp a soma:Affordance ;
-  soma:PuttingDown a soma:Affordance.
+psr:PutAwayBottle psr:isAffordedBy soma:PuttingDown .
 
-psr:RestoreKitchen psr:isPerformedBy psr:Agent.
+psr:PutAwayBottle psr:follows psr:PutAwayPot .
+
+psr:RestoreKitchen psr:isPerformedBy psr:Robot .
+
+psr:Robot a dul:Agent .

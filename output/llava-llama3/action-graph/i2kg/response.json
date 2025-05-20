@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-aed7fc84-f089-4e9f-9cfa-13bcbde2703d",
-    "created": 1747746861,
+    "id": "llava:7b-1ebcb990-f9a0-4695-88b3-30a4e5f10c07",
+    "created": 1747771192,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```turtle\n@prefix psr: <http://example.com/psr#> .\n@prefix dul: <http://example.com/dul#> .\n@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\npsr:RestoringKitchen a dul:Workflow ;\n  psr:precededBy ( psr:Holding dul:Furniture ) ;\n  psr:followedBy ( psr:PuttingDown dul:Furniture ) ;\n  psr:precededBy ( psr:PickingUp dul:Object ) ;\n  psr:followedBy ( psr:Delivering dul:Object ) .\n``` ",
+                "content": " ```turtle\n@prefix : <http://example.com/ontology#>\n@prefix dul: <http://www.w3.org/ns/dul#>\n@prefix psr: <http://www.w3.org/2007/01/rdf-syntax-query#>\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n\n# Instruction\n:Instruction rdf:type :Workflow .\n:Instruction hasAction :Opening .\n:Instruction hasAction :PickingUp .\n:Instruction hasAction :Closing .\n:Instruction hasAction :Delivering .\n:Instruction hasAction :PuttingDown .\n:Instruction hasAction :Pulling .\n:Instruction hasAction :Holding .\n:Instruction hasAgent :Robot .\n\n# Kitchen Objects\n:Kitchen a dul:Component .\n:Fridge a dul:Component .\n:Cupboard a dul:Component.\n:Drawer a dul:Component.\n\n:Fridge a :Appliance ;\n    :isPerformedBy :Robot .\n\n:Refrigerator a :Appliance ;\n    :isPerformedBy :Robot .\n\n:Cupboard a :Furniture ;\n    :isPerformedBy :Robot .\n\n:Drawer a :Furniture ;\n    :isPerformedBy :Robot.\n\n# Kitchen Utensils and Items\n:KitchenUtensil a dul:Component .\n:Plate a dul:Component .\n:Bowl a dul:Component.\n:Spoon a dul:Component.\n\n:RefrigeratorItem a :Object ;\n    :isPerformedBy :Robot.\n\n# Affordances\n:Opening a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Fridge .\n\n:PickingUp a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :KitchenUtensil.\n\n:Closing a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Drawer.\n\n:Delivering a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Cupboard.\n\n:PuttingDown a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :KitchenUtensil.\n\n:Pulling a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Refrigerator.\n\n# Robot's Actions\n:Robot a dul:Agent .\n\n# Relationships\n:Fridge a :ComponentOf :Kitchen.\n:Cupboard a :ComponentOf :Kitchen.\n:Drawer a :ComponentOf :Kitchen.\n\n:RefrigeratorItem a :Object ;\n    :isPerformedBy :Robot ;\n    :actsOn :Refrigerator.\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 49.66,
-        "prompt_token/s": 1031.09,
-        "total_duration": 8227101994,
-        "load_duration": 51234022,
+        "response_token/s": 68.81,
+        "prompt_token/s": 1949.39,
+        "total_duration": 12689964509,
+        "load_duration": 51742287,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 3972497380,
-        "eval_count": 207,
-        "completion_tokens": 207,
-        "eval_duration": 4167973043,
-        "approximate_total": "0h0m8s",
-        "total_tokens": 4303,
+        "prompt_eval_duration": 2101169656,
+        "eval_count": 723,
+        "completion_tokens": 723,
+        "eval_duration": 10507954861,
+        "approximate_total": "0h0m12s",
+        "total_tokens": 4819,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,
