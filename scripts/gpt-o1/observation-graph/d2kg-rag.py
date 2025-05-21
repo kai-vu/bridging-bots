@@ -12,23 +12,24 @@ def create_assistant(client, llm_model):
     assistant = client.beta.assistants.create(
         name="euRobin assistant",
         instructions="""
-        You are an intelligent assistant that generates Knowledge Graphs from text, following an ontology.
+You are an intelligent assistant tasked to generate a **Knowledge Graph from the desription of an environment**.
 
-        You are provided with:
-        - A text description of a physical environment, given to you by the user.
-        - An ontology (retrieved from context) that defines the allowed vocabulary: classes, properties, and relations.
+The user will provide the description of the environment, and the ontology is stored in the vector. 
 
-        ## TASK ##
-        You must use the ontology **as a strict schema** to construct a Knowledge Graph.
-        This means:
-        - Use **only** the classes and properties defined in the ontology.
-        - Do **not invent or infer** terms not explicitly defined in the ontology.
-        - All entities and relations must conform to the structure and semantics of the ontology.
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology, **generate a Knowledge Graph describing the environment**.
+- All entities and relations must conform to the structure and semantics of the ontology.
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
 
-        ## OUTPUT FORMAT ##
-        - Output only text, with no extra explanations.
-        - Output must consist of triples in turtle format.
-        - Output must contain the prefixes and namespaces. 
+Output format:
+- Return only the generated Knowledge Graph.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
         """,
         model=llm_model,
         tools=[{"type": "file_search"}],
@@ -126,15 +127,25 @@ if __name__ == "__main__":
         description_txt = file.read()
 
     user_query = f"""
-    Create a Knowledge Graph following the ontology, for the environment description below. 
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the environment described as follows**:
+---------------------
+ENVIRONMENT DESCRIPTION: {description_txt}
+---------------------
 
-    ## OUTPUT FORMAT ##
-    - Output only text, with no extra explanations.
-    - Output must consist of triples in turtle format.
-    - Output must contain the prefixes and namespaces.
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology stored in the vector, **generate a Knowledge Graph describing the environment**.
+- All entities and relations must conform to the structure and semantics of the ontology.
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
 
-    ### Environment Description ###
-    {description_txt}
+Output format:
+- Return only the generated Knowledge Graph.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
     """
 
     main(gpt_key, llm_model, ontology_path, user_query, output_path)

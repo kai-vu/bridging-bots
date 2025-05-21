@@ -84,21 +84,24 @@ Ontology as context information is below.
 {ontology_txt}
 ---------------------
 
-Given the ontology information, your task is to generates a Knowledge Graph from a set of images.
-The images are taken from the same environment at different angles. 
-These images together represent the complete layout and state of the environment.
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the environment a robot must operate in**.
+You are given a set of images taken from the same environment at different angles. 
+These images together represent the complete layout and state of the environment in which a robot must operate.
 
 Instructions:
-- Analyze the images carefully to understand the complete layout of the environment, objects, and relevant affordances.
+- Analyze the images carefully to understand the complete layout of the environment
 - Based on the ontology, **generate a Knowledge Graph describing the environment**.
-- Use **only** the classes and properties defined in the ontology.
-- Do **not invent or infer** terms not explicitly defined in the ontology.
 - All entities and relations must conform to the structure and semantics of the ontology.
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
 
 Output format:
+- Return only the generated Knowledge Graph.
 - Output only text, no extra explanations.
-- Use Turtle format for the output.
-- Include the prefixes and namespaces at the beginning.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
 """
         
     main(images_folder_path, gpt_key, llm_model, user_query, output_path)

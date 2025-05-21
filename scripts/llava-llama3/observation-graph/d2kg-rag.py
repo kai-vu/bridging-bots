@@ -66,7 +66,7 @@ ENVIRONMENT DESCRIPTION: {content}
 
 Instructions:
 - Analyze the description carefully to understand the complete layout of the environment.
-- Based on the ontology, **generate a Knowledge Graph describing the environment**.
+- Based on the ontology stored in the vector, **generate a Knowledge Graph describing the environment**.
 - All entities and relations must conform to the structure and semantics of the ontology.
 - **Use only classes and properties from the ontology.**
 - Do **NOT invent or infer any terms or actions outside of the ontology schema.**

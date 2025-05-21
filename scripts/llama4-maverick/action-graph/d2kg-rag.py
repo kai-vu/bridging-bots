@@ -116,25 +116,32 @@ if __name__ == "__main__":
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
     user_query = f"""
-    Given the ontology information, your task is to generates a Knowledge Graph of the actions a robot must complete to fulfil a task in an environment.
-    You are provided with text description of the environment and the task, found below. 
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the sequence of actions a robot must perform to accomplish the following task**:
+---------------------
+ROBOT TASK: {robot_task}
+---------------------
 
-    You must use the ontology **as a strict schema** to construct the Knowledge Graph.
-    This means:
-    - Use **only** the classes and properties defined in the ontology.
-    - Do **not invent or infer** terms not explicitly defined in the ontology.
-    - All entities and relations must conform to the structure and semantics of the ontology.
+You are provided with text description of an environment, below:
+---------------------
+ENVIRONMENT DESCRIPTION: {description_txt}
+---------------------
 
-    Output format:
-    - Output only text, with no extra explanations.
-    - Output must consist of triples in turtle format.
-    - Output must contain the prefixes and namespaces.
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology stored in the vector, **generate the sequence of actions required for the robot to complete the task**.
+- Each action is a **single, atomic, clear action**.
+- **All actions, entities, and relationships must strictly follow the provided ontology.**
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
+- The graph should represent actions, objects involved, and their relations according to the ontology's structure and semantics.
 
-    ---------------------
-    TASK: {robot_task}
-
-    ENVIRONMENT DESCRIPTION: {description_txt}
-    ---------------------
-    """
+Output format:
+- Return only the generated Knowledge Graph of actions.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
+"""
 
     main(llm_model, groq_key, embedding_model, description_path, output_path, ontology_path, callback_manager, user_query)
