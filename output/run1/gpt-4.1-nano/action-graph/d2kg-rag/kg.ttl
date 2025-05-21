@@ -1,0 +1,40 @@
+@prefix : <http://www.semanticweb.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Robot a :Agent .
+
+:Object a rdfs:Class .
+
+:Countertop a :Location .
+
+:Cabinet a :Location .
+
+:Dish a :Object ; :locatedAt :Countertop .
+
+:JELLO a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:RiceBubbles a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:StrawberryJam a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:BloodOrangePreserves a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:BreadSlice a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:WaterBottle a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:YellowCup a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:WineGlass a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:JugCreamer a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+
+:Robot_Action1 a :Action ; :performs :Retrieval ; :targets :JELLO, :RiceBubbles ; :aimsToReturn :StandardStorage .
+
+:Robot_Action2 a :Action ; :performs :Retrieval ; :targets :StrawberryJam, :BloodOrangePreserves, :BreadSlice ; :aimsToReturn :StandardStorage .
+
+:Robot_Action3 a :Action ; :performs :Retrieval ; :targets :WaterBottle, :YellowCup, :WineGlass, :JugCreamer ; :aimsToReturn :StandardStorage .
+
+:StandardStorage a :Location ; :type :Cabinet .
+
+# Additional steps: The robot should navigate to each misplaced item, retrieve it, and place it in its standard storage location, following the sequence from the most urgent to the less urgent based on the context.

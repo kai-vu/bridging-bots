@@ -1,0 +1,84 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w33.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasWorkflow psr:Workflow_1 ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .
+
+psr:Action_1 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    rdfs:label "Pick up the bottle"@en ;
+    psr:precedes psr:Action_2 .
+
+psr:Action_2 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    rdfs:label "Put down the bottle in the kitchen"@en ;
+    psr:precedes psr:Action_3 .
+
+psr:Action_3 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    rdfs:label "Pick up the box"@en ;
+    psr:precedes psr:Action_4 .
+
+psr:Action_4 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    rdfs:label "Put down the box in the kitchen"@en ;
+    psr:precedes psr:Action_5 .
+
+psr:Action_5 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:PickingUp ;
+    rdfs:label "Pick up the jar"@en ;
+    psr:precedes psr:Action_6 .
+
+psr:Action_6 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    rdfs:label "Put down the jar in the kitchen"@en ;
+    psr:precedes psr:Action_7 .
+
+psr:Action_7 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_1 ;
+    psr:isAffordedBy soma:Opening ;
+    rdfs:label "Open the cabinet"@en ;
+    psr:precedes psr:Action_8 .
+
+psr:Action_8 a dul:Action ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_1 ;
+    psr:isAffordedBy soma:Closing ;
+    rdfs:label "Close the cabinet"@en .
+
+dul:Agent_1 a dul:Agent .
+
+psr:Object_1 a psr:Object ;
+    rdfs:label "Bottle"@en .
+
+psr:Object_2 a psr:Object ;
+    rdfs:label "Box"@en .
+
+psr:Object_3 a psr:Object ;
+    rdfs:label "Jar"@en .
+
+psr:Component_1 a psr:Component ;
+    rdfs:label "Cabinet"@en .

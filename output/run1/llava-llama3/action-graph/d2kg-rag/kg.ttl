@@ -1,0 +1,58 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix :       <http://example.org/data/> .
+
+:task1 a dul:Action ;
+    rdfs:label "Identify misplaced items" ;
+    psr:actsOn :kitchen_items .
+
+:kitchen_items a psr:Component ;
+    rdfs:label "Kitchen items" .
+
+:task2 a dul:Action ;
+    rdfs:label "Pick up misplaced items" ;
+    psr:actsOn :kitchen_items ;
+    psr:isAffordedBy soma:PickingUp .
+
+:task3 a dul:Action ;
+    rdfs:label "Put down items in standard storage locations" ;
+    psr:actsOn :kitchen_items ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows :task2 .
+
+:task4 a dul:Action ;
+    rdfs:label "Open cabinets" ;
+    psr:actsOn :cabinets ;
+    psr:isAffordedBy soma:Opening .
+
+:cabinets a psr:Component ;
+    rdfs:label "Cabinets" .
+
+:task5 a dul:Action ;
+    rdfs:label "Place items in cabinets" ;
+    psr:actsOn :kitchen_items ;
+    psr:isAffordedBy soma:Pushing ;
+    psr:follows :task4 .
+
+:task6 a dul:Action ;
+    rdfs:label "Close cabinets" ;
+    psr:actsOn :cabinets ;
+    psr:isAffordedBy soma:Closing ;
+    psr:follows :task5 .
+
+:instruction1 a psr:Instruction ;
+    rdfs:label "Restore kitchen to organized state" ;
+    psr:hasWorkflow :workflow1 .
+
+:workflow1 a psr:Workflow ;
+    rdfs:label "Kitchen organization workflow" ;
+    psr:hasAction :task1 ;
+    psr:hasAction :task2 ;
+    psr:hasAction :task3 ;
+    psr:hasAction :task4 ;
+    psr:hasAction :task5 ;
+    psr:hasAction :task6 .

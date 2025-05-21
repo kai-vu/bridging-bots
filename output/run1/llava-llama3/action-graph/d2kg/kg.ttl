@@ -1,0 +1,113 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix :       <http://example.org/data/> .
+
+:instruction1 a psr:Instruction ;
+    rdfs:label "Restore kitchen to organized state" ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
+    psr:hasWorkflow :workflow1 .
+
+:workflow1 a psr:Workflow ;
+    psr:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10 ;
+    psr:precedes :action2 :action1 ;
+    psr:precedes :action3 :action2 ;
+    psr:precedes :action4 :action3 ;
+    psr:precedes :action5 :action4 ;
+    psr:precedes :action6 :action5 ;
+    psr:precedes :action7 :action6 ;
+    psr:precedes :action8 :action7 ;
+    psr:precedes :action9 :action8 ;
+    psr:precedes :action10 :action9 .
+
+:action1 a dul:Action ;
+    rdfs:label "Identify misplaced items" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :table, :countertop ;
+    psr:isAffordedBy :soma:Observing .
+
+:action2 a dul:Action ;
+    rdfs:label "Pick up bowl" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :bowl ;
+    psr:isAffordedBy :soma:Grasping, :soma:PickingUp .
+
+:action3 a dul:Action ;
+    rdfs:label "Put down bowl in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cabinet ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:action4 a dul:Action ;
+    rdfs:label "Pick up cups" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cups ;
+    psr:isAffordedBy :soma:Grasping, :soma:PickingUp .
+
+:action5 a dul:Action ;
+    rdfs:label "Put down cups in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cabinet ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:action6 a dul:Action ;
+    rdfs:label "Pick up bottles" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :bottles ;
+    psr:isAffordedBy :soma:Grasping, :soma:PickingUp .
+
+:action7 a dul:Action ;
+    rdfs:label "Put down bottles in cabinet" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cabinet ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:action8 a dul:Action ;
+    rdfs:label "Pick up cereal boxes" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cereal_boxes ;
+    psr:isAffordedBy :soma:Grasping, :soma:PickingUp .
+
+:action9 a dul:Action ;
+    rdfs:label "Put down cereal boxes in pantry" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :pantry ;
+    psr:isAffordedBy :soma:PuttingDown .
+
+:action10 a dul:Action ;
+    rdfs:label "Close cabinet and pantry" ;
+    soma:isPerformedBy :agent1 ;
+    psr:actsOn :cabinet, :pantry ;
+    psr:isAffordedBy :soma:Closing .
+
+:agent1 a dul:Agent ;
+    rdfs:label "Robot" .
+
+:table a psr:Component, psr:Furniture ;
+    rdfs:label "Dining table" .
+
+:countertop a psr:Component, psr:Countertop ;
+    rdfs:label "Countertop" .
+
+:bowl a psr:Component, psr:Object ;
+    rdfs:label "Bowl" .
+
+:cabinet a psr:Component, psr:Furniture ;
+    rdfs:label "Cabinet" .
+
+:cups a psr:Component, psr:Object ;
+    rdfs:label "Cups" .
+
+:bottles a psr:Component, psr:Object ;
+    rdfs:label "Bottles" .
+
+:cereal_boxes a psr:Component, psr:Object ;
+    rdfs:label "Cereal boxes" .
+
+:pantry a psr:Component, psr:Furniture ;
+    rdfs:label "Pantry" .

@@ -6,6 +6,7 @@
 @prefix psr:    <https://w3id.org/psr-task#> .
 @prefix :       <http://example.org/data/> .
 
+
 :Kitchen a psr:Environment .
 :Refrigerator a psr:Appliance, psr:Component .
 :DiningTable a psr:Furniture, psr:Component .

@@ -4,13 +4,15 @@
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo:    <http://www.opengis.net/ont/geosparql#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
 
 # ENVIRONMENT SHAPE
 psr:EnvironmentShape a sh:NodeShape ;
     sh:targetClass psr:Environment ;
     sh:property [
         sh:path dul:hasComponent ;
-        sh:class psr:Component ;
+        sh:in (psr:Component psr:Appliance
+                psr:Furniture psr:Object) ;
         sh:minCount 1 ;
     ] .
 
@@ -19,12 +21,14 @@ psr:ComponentShape a sh:NodeShape ;
     sh:targetClass psr:Component ;
     sh:property [
         sh:path psr:hasAffordance ;
-        sh:class psr:Affordance ;
+        sh:in (psr:Affordamce soma:Closing soma:Opening 
+                soma:Delivering soma:Holding soma:PickingUp
+                soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping) ;
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path psr:hasLocation ;
-        sh:class psr:Location ;
+        sh:path dul:hasLocation ;
+        sh:nodeKind sh:BlankNodeOrIRI;
         sh:minCount 1 ;
     ] .
 

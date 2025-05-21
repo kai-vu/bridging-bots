@@ -1,10 +1,12 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix psr:    <https://w3id.org/psr-task#> .
-@prefix :       <http://example.org/data/> .
+@prefix :       <https://example.org/data/> .
 
 # Environment
 psr:KitchenEnvironment a owl:Class, dul:Entity ;

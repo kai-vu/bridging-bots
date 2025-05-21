@@ -1,0 +1,192 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:kitchen a psr:Environment ;
+  rdfs:label "kitchen"@en .
+
+psr:refrigerator a psr:Appliance, psr:Component ;
+  rdfs:label "refrigerator"@en .
+
+psr:sink a psr:Component ;
+  rdfs:label "sink"@en .
+
+geo:sfOverlaps/psr:refrigeratorLoc a psr:Location ;
+  geo:sfOverlaps psr:wallLoc .
+
+psr:wallLoc a psr:Location ;
+  rdfs:label "wall"@en .
+
+psr:counterLoc a psr:Location ;
+  rdfs:label "counter"@en .
+
+psr:jar1 a psr:Object, psr:Component ;
+  rdfs:label "jar of jam or preserves 1"@en .
+
+psr:jar2 a psr:Object, psr:Component ;
+  rdfs:label "jar of jam or preserves 2"@en .
+
+psr:jelLo a psr:Object, psr:Component ;
+  rdfs:label "box of Jell-O"@en .
+
+psr:alpenSalt a psr:Object, psr:Component ;
+  rdfs:label "box of Alpen Salt"@en .
+
+psr:paperPlates a psr:Object, psr:Component ;
+  rdfs:label "stacks of paper plates"@en .
+
+psr:electricBurnerLoc a psr:Location ;
+  rdfs:label "electric burner"@en .
+
+psr:pot a psr:Object, psr:Component ;
+  rdfs:label "pot"@en .
+
+psr:diningTable a psr:Furniture, psr:Component ;
+  rdfs:label "dining table"@en .
+
+psr:chair1 a psr:Furniture, psr:Component ;
+  rdfs:label "white chair 1"@en .
+
+psr:chair2 a psr:Furniture, psr:Component ;
+  rdfs:label "white chair 2"@en .
+
+psr:chair3 a psr:Furniture, psr:Component ;
+  rdfs:label "white chair 3"@en .
+
+psr:chair4 a psr:Furniture, psr:Component ;
+  rdfs:label "white chair 4"@en .
+
+psr:evianWater a psr:Object, psr:Component ;
+  rdfs:label "large bottle of Evian water"@en .
+
+psr:toaster a psr:Appliance, psr:Component ;
+  rdfs:label "toaster"@en .
+
+psr:fruit a psr:Object, psr:Component ;
+  rdfs:label "fruit"@en .
+
+psr:puzzleBook1 a psr:Object, psr:Component ;
+  rdfs:label "puzzle book"@en .
+
+psr:boardGame a psr:Object, psr:Component ;
+  rdfs:label "board game"@en .
+
+psr:jugs a psr:Object, psr:Component ;
+  rdfs:label "jugs or bottles"@en .
+
+psr:doorLoc a psr:Location ;
+  rdfs:label "door to another room or closet"@en .
+
+psr:kitchenCounters a psr:Component ;
+  rdfs:label "kitchen counters"@en .
+
+psr:cabinets a psr:Component ;
+  rdfs:label "kitchen cabinets"@en .
+
+psr:rangeHood a psr:Component ;
+  rdfs:label "built in range hood"@en .
+
+psr:cupboards a psr:Component ;
+  rdfs:label "cupboards"@en .
+
+psr:wallFrame a psr:Object, psr:Component ;
+  rdfs:label "wall frame"@en .
+
+psr:light a psr:Object, psr:Component ;
+  rdfs:label "light"@en .
+
+psr:pan a psr:Object, psr:Component ;
+  rdfs:label "pan"@en .
+
+psr:clock a psr:Object, psr:Component ;
+  rdfs:label "clock"@en .
+
+psr:yellowMug a psr:Object, psr:Component ;
+  rdfs:label "yellow mug"@en .
+
+psr:puzzleBook2 a psr:Object, psr:Component ;
+  rdfs:label "puzzle book 2"@en .
+
+psr:puzzleBook3 a psr:Object, psr:Component ;
+  rdfs:label "puzzle book 3"@en .
+
+dul:hasComponent/psr:kitchen psr:refrigerator .
+
+dul:hasLocation/psr:refrigerator psr:refrigeratorLoc .
+
+geo:sfOverlaps/psr:refrigeratorLoc psr:wallLoc .
+
+dul:hasComponent/psr:kitchen psr:sink .
+
+dul:hasLocation/psr:sink psr:sinkLoc .
+
+psr:counterLoc geo:sfOverlaps psr:jar1 .
+
+dul:hasComponent/psr:kitchen psr:jar1 .
+
+psr:counterLoc geo:sfOverlaps psr:jelLo .
+
+dul:hasComponent/psr:kitchen psr:jelLo .
+
+psr:counterLoc geo:sfOverlaps psr:alpenSalt .
+
+dul:hasComponent/psr:kitchen psr:alpenSalt .
+
+psr:counterLoc geo:sfOverlaps psr:paperPlates .
+
+dul:hasComponent/psr:kitchen psr:paperPlates .
+
+dul:hasComponent/psr:kitchen psr:electricBurner .
+
+dul:hasLocation/psr:electricBurner psr:electricBurnerLoc .
+
+dul:hasComponent/psr:kitchen psr:pot .
+
+dul:hasLocation/psr:pot psr:electricBurnerLoc .
+
+dul:hasComponent/psr:kitchen psr:diningTable .
+
+dul:hasComponent/psr:kitchen psr:chair1 .
+
+dul:hasComponent/psr:kitchen psr:chair2 .
+
+dul:hasComponent/psr:kitchen psr:chair3 .
+
+dul:hasComponent/psr:kitchen psr:chair4 .
+
+dul:hasComponent/psr:diningTable psr:evianWater .
+
+dul:hasComponent/psr:diningTable psr:toaster .
+
+dul:hasComponent/psr:diningTable psr:fruit .
+
+dul:hasComponent/psr:diningTable psr:puzzleBook1 .
+
+dul:hasComponent/psr:diningTable psr:boardGame .
+
+dul:hasComponent/psr:diningTable psr:jugs .
+
+psr:doorLoc geo:sfOverlaps psr:kitchen .
+
+dul:hasComponent/psr:kitchen psr:wallFrame .
+
+dul:hasComponent/psr:kitchen psr:light .
+
+dul:hasComponent/psr:kitchen psr:pan .
+
+dul:hasComponent/psr:kitchen psr:clock .
+
+dul:hasComponent/psr:kitchen psr:yellowMug .
+
+dul:hasComponent/psr:kitchen psr:puzzleBook2 .
+
+dul:hasComponent/psr:kitchen psr:puzzleBook3 .
+
+dul:hasComponent/psr:kitchen psr:cabinets .
+
+dul:hasComponent/psr:cabinets psr:rangeHood .
+
+dul:hasComponent/psr:cabinets psr:cupboards .

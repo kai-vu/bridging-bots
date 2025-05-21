@@ -1,0 +1,82 @@
+@prefix ex: <http://example.org/> .
+@prefix gro: <http://purl.org/gro/community#> .
+@prefix env: <http://example.org/environment#> .
+@prefix schema: <http://schema.org/> .
+
+ex:KitchenScene a env:Scene ;
+    env:hasObject ex:UpperCabinets, ex:LowerCabinets, ex:Countertop, ex:WallSpaceAboveCounter, ex:Door, ex:Floor, ex:Ceiling, ex:WallJunction, ex:Decor ;
+    env:hasObject ex:CountertopItems, ex:WallWin, ex:ExtractorFan, ex:CeilingLights .
+
+ex:UpperCabinets a env:Furniture ;
+    env:hasMaterial "dark gray" ;
+    env:hasHandle "silver" .
+
+ex:LowerCabinets a env:Furniture ;
+    env:hasMaterial "dark gray" ;
+    env:hasHandle "silver" .
+
+ex:Countertop a env:Surface ;
+    env:hasObject ex:JELLO, ex:RiceBubbles, ex:StrawberryJam, ex:BloodOrangePreserves, ex:SlicedBread, ex:WaterBottle, ex:YellowCup, ex:WineGlass, ex:JugCreamer .
+
+ex:JELLO a env:Object ;
+    env:placedOn ex:Countertop ;
+    env:stackedWith ex:RiceBubbles .
+
+ex:RiceBubbles a env:Object ;
+    env:placedOn ex:Countertop ;
+    env:stackedWith ex:JELLO .
+
+ex:StrawberryJam a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:BloodOrangePreserves a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:SlicedBread a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:WaterBottle a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:YellowCup a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:WineGlass a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:JugCreamer a env:Object ;
+    env:placedOn ex:Countertop .
+
+ex:WallWin a env:Window ;
+    env:hasMaterial "wood" ;
+    env:hasFrameType "wooden" .
+
+ex:ExtractorFan a env:Object ;
+    env:madeOf "wood" ;
+    env:hasPart ex:BlackGrille .
+
+ex:BlackGrille a env:Object .
+
+ex:WallSpaceAboveCounter a env:WallSpace .
+
+ex:Door a env:Door ;
+    env:hasDesign "six-panel" ;
+    env:hasColor "white" .
+
+ex:Floor a env:Floor ;
+    env:hasMaterial "wooden parquet" .
+
+ex:Ceiling a env:Ceiling ;
+    env:hasLightFixture ex:RoundLightFixture1, ex:RoundLightFixture2 .
+
+ex:RoundLightFixture1 a env:LightFixture ;
+    env:shape "round" .
+
+ex:RoundLightFixture2 a env:LightFixture ;
+    env:shape "round" .
+
+ex:WallJunction a env:WallJunction .
+
+ex:Decor a env:Decoration .
+
+# Note: No additional significant objects beyond what is specified are included.

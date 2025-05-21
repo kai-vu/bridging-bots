@@ -79,7 +79,7 @@ def validate_graph(g_file, sg_file, og_file, log_file_path):
             g,
             shacl_graph=sg,
             ont_graph=og,
-            inference='both',
+            inference='none',
             abort_on_first=False,
             allow_infos=False,
             allow_warnings=False,

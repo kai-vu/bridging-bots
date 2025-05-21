@@ -1,0 +1,60 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Alpen_Salt kitchen:hasLocation kitchen:counter .
+
+kitchen:Evian_water kitchen:hasLocation kitchen:dining_table .
+
+kitchen:Jell-O kitchen:hasLocation kitchen:counter .
+
+kitchen:board_game kitchen:hasLocation kitchen:dining_table .
+
+kitchen:clock kitchen:hasLocation kitchen:table .
+
+kitchen:cupboards kitchen:hasLocation kitchen:above_counters .
+
+kitchen:door kitchen:hasLocation kitchen:wall .
+
+kitchen:fruit kitchen:hasLocation kitchen:dining_table .
+
+kitchen:jars_of_jam kitchen:hasLocation kitchen:counter ;
+    kitchen:toTheLeftOf kitchen:refrigerator .
+
+kitchen:jugs kitchen:hasLocation kitchen:dining_table .
+
+kitchen:kitchen_cabinets kitchen:hasColor kitchen:dark_gray ;
+    kitchen:hasComponent kitchen:range_hood .
+
+kitchen:kitchen_counters kitchen:hasSurface kitchen:beige_surface .
+
+kitchen:light kitchen:above kitchen:dining_table ;
+    kitchen:hasLocation kitchen:ceiling .
+
+kitchen:pan kitchen:onTopOf kitchen:stove .
+
+kitchen:paper_plates kitchen:hasLocation kitchen:counter .
+
+kitchen:pot kitchen:onTopOf kitchen:electric_burner .
+
+kitchen:puzzle_book kitchen:hasLocation kitchen:dining_table .
+
+kitchen:puzzle_books kitchen:hasLocation kitchen:kitchen_counter .
+
+kitchen:room kitchen:hasFloor kitchen:dark_wood_parquet_floors .
+
+kitchen:toaster kitchen:hasLocation kitchen:dining_table .
+
+kitchen:wall_frame kitchen:hasLocation kitchen:wall .
+
+kitchen:yellow_mug kitchen:hasLocation kitchen:kitchen_counter .
+
+kitchen:electric_burner kitchen:hasLocation kitchen:stove .
+
+kitchen:sink kitchen:hasLocation kitchen:wall .
+
+kitchen:refrigerator kitchen:hasLocation kitchen:wall ;
+    kitchen:onTopOf kitchen:floor ;
+    kitchen:toTheRightOf kitchen:sink .
+
+kitchen:dining_table kitchen:hasLocation kitchen:adjacent_room ;
+    kitchen:perpendicularTo kitchen:refrigerator .
+

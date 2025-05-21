@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-613a2cbf-79c2-4a14-bf35-977a66d6a0bf",
+    "created": 1747771136,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```python\n@prefix : <http://www.w3.org/1999/02/rdf-schema#> .\n@prefix :env .\n@prefix :obj .\n@prefix :affordance .\n\n:env a :Environment ;\n    hasComponent :cabinet ;\n    hasComponent :sink ;\n    hasComponent :counter.\n\n:cabinet a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n\n:sink a :Appliance ;\n    hasAffordance :hasLocation ;\n    hasLocation :bathroom.\n\n:counter a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.36,
+        "prompt_token/s": 1867.77,
+        "total_duration": 4810478431,
+        "load_duration": 49686793,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2192992710,
+        "eval_count": 176,
+        "completion_tokens": 176,
+        "eval_duration": 2537310424,
+        "approximate_total": "0h0m4s",
+        "total_tokens": 4272,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

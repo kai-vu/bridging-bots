@@ -59,29 +59,26 @@ def get_response(llm, embedding_model, description_path, ontology_path, callback
     index, chroma_collection = make_vector_store_index(ontology_path, embed_model, llm, callback_manager)
     query_engine = index.as_query_engine(llm=llm)
     response = query_engine.query(f"""
-    ## INSTRUCTIONS ##
-    You are an intelligent assistant that generates Knowledge Graphs from text.
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the environment described as follows**:
+---------------------
+ENVIRONMENT DESCRIPTION: {content}
+---------------------
 
-    You are provided with:
-    - A text description of a physical environment.
-    - An ontology (retrieved from context) that defines the allowed vocabulary: classes, properties, and relations.
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology, **generate a Knowledge Graph describing the environment**.
+- All entities and relations must conform to the structure and semantics of the ontology.
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
 
-    ## TASK ##
-    You must use the ontology **as a strict schema** to construct a Knowledge Graph.
-    This means:
-    - Use **only** the classes and properties defined in the ontology.
-    - Do **not invent or infer** terms not explicitly defined in the ontology.
-    - All entities and relations must conform to the structure and semantics of the ontology.
-
-    ## OUTPUT FORMAT ##
-    - Output only text, with no extra explanations.
-    - Output must consist of triples in turtle format.
-    - Output must contain the prefixes and namespaces.
-
-    ## INPUT ##
-    ### Environment Description ###
-    {content}
-    """)
+Output format:
+- Return only the generated Knowledge Graph.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
+""")
     return response, chroma_collection
 
 def save_response(response, output_path):

@@ -84,21 +84,25 @@ Ontology as context information is below.
 {ontology_txt}
 ---------------------
 
-Given the ontology information, your task is to generates a Knowledge Graph from a text description of an environment, found below. 
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the environment described as follows**:
+---------------------
+ENVIRONMENT DESCRIPTION: {description_txt}
+---------------------
 
-You must use the ontology **as a strict schema** to construct the Knowledge Graph.
-This means:
-- Use **only** the classes and properties defined in the ontology.
-- Do **not invent or infer** terms not explicitly defined in the ontology.
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology, **generate a Knowledge Graph describing the environment**.
 - All entities and relations must conform to the structure and semantics of the ontology.
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
 
 Output format:
-- Output only text, with no extra explanations.
-- Output must consist of triples in turtle format.
-- Output must contain the prefixes and namespaces.
-
-Input Environment Description:
-{description_txt}
+- Return only the generated Knowledge Graph.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
 """
 
     main(llm_model, groq_key, ontology_path, description_path, prompt_tmpl, output_path)

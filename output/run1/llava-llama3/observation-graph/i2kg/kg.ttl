@@ -1,0 +1,21 @@
+@prefix : <http://www.w3.org/1999/02/rdf-schema#> .
+@prefix :env .
+@prefix :obj .
+@prefix :affordance .
+
+:env a :Environment ;
+    hasComponent :cabinet ;
+    hasComponent :sink ;
+    hasComponent :counter.
+
+:cabinet a :Furniture ;
+    hasAffordance :hasLocation ;
+    hasLocation :kitchen.
+
+:sink a :Appliance ;
+    hasAffordance :hasLocation ;
+    hasLocation :bathroom.
+
+:counter a :Furniture ;
+    hasAffordance :hasLocation ;
+    hasLocation :kitchen.

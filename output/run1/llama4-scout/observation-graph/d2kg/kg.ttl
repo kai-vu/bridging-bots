@@ -1,0 +1,202 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:Kitchen a psr:Environment .
+
+psr:Refrigerator a psr:Appliance ;
+  psr:hasLocation psr:RefrigeratorLocation .
+
+psr:RefrigeratorLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Wall a psr:Component ;
+  psr:hasLocation psr:WallLocation .
+
+psr:WallLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen ;
+  psr:onTopOf psr:Refrigerator .
+
+psr:Sink a psr:Appliance ;
+  psr:hasLocation psr:SinkLocation .
+
+psr:SinkLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Counter a psr:Component ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:CounterLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Jar1 a psr:Object ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:Counter psr:hasComponent psr:Jar1 .
+
+psr:Jar2 a psr:Object ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:Counter psr:hasComponent psr:Jar2 .
+
+psr:JellO a psr:Object ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:Counter psr:hasComponent psr:JellO .
+
+psr:AlpenSalt a psr:Object ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:Counter psr:hasComponent psr:AlpenSalt .
+
+psr:PaperPlates a psr:Object ;
+  psr:hasLocation psr:CounterLocation .
+
+psr:Counter psr:hasComponent psr:PaperPlates .
+
+psr:ElectricBurner a psr:Appliance ;
+  psr:hasLocation psr:ElectricBurnerLocation .
+
+psr:ElectricBurnerLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Pot a psr:Object ;
+  psr:hasLocation psr:ElectricBurnerLocation .
+
+psr:ElectricBurner psr:hasComponent psr:Pot .
+
+psr:DiningTable a psr:Furniture ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTableLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Chair1 a psr:Furniture ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Chair1 .
+
+psr:Chair2 a psr:Furniture ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Chair2 .
+
+psr:Chair3 a psr:Furniture ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Chair3 .
+
+psr:Chair4 a psr:Furniture ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Chair4 .
+
+psr:EvianWater a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:EvianWater .
+
+psr:Toaster a psr:Appliance ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Toaster .
+
+psr:Fruit a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Fruit .
+
+psr:PuzzleBook a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:PuzzleBook .
+
+psr:BoardGame a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:BoardGame .
+
+psr:Jug1 a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Jug1 .
+
+psr:Jug2 a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:DiningTable psr:hasComponent psr:Jug2 .
+
+psr:Door a psr:Component ;
+  psr:hasLocation psr:DoorLocation .
+
+psr:DoorLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Kitchen psr:hasComponent psr:Refrigerator .
+psr:Kitchen psr:hasComponent psr:Sink .
+psr:Kitchen psr:hasComponent psr:Counter .
+psr:Kitchen psr:hasComponent psr:ElectricBurner .
+psr:Kitchen psr:hasComponent psr:DiningTable .
+
+psr:KitchenCounter a psr:Component ;
+  psr:hasLocation psr:KitchenCounterLocation .
+
+psr:KitchenCounterLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:KitchenCabinets a psr:Component ;
+  psr:hasLocation psr:KitchenCabinetsLocation .
+
+psr:KitchenCabinetsLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:RangeHood a psr:Component ;
+  psr:hasLocation psr:KitchenCabinetsLocation .
+
+psr:KitchenCabinets psr:hasComponent psr:RangeHood .
+
+psr:WallFrame a psr:Object ;
+  psr:hasLocation psr:WallLocation .
+
+psr:Light a psr:Object ;
+  psr:hasLocation psr:CeilingLocation .
+
+psr:CeilingLocation a psr:StandardLocation ;
+  geo:sfWithin psr:Kitchen .
+
+psr:Stove a psr:Appliance ;
+  psr:hasLocation psr:KitchenCabinetsLocation .
+
+psr:Pan a psr:Object ;
+  psr:hasLocation psr:StoveLocation .
+
+psr:StoveLocation a psr:StandardLocation ;
+  geo:sfWithin psr:KitchenCabinetsLocation .
+
+psr:Stove psr:hasComponent psr:Pan .
+
+psr:Clock a psr:Object ;
+  psr:hasLocation psr:DiningTableLocation .
+
+psr:Kitchen psr:hasComponent psr:KitchenCounter .
+psr:Kitchen psr:hasComponent psr:KitchenCabinets .
+psr:Kitchen psr:hasComponent psr:WallFrame .
+psr:Kitchen psr:hasComponent psr:Light .
+
+psr:AdditionalPuzzleBook1 a psr:Object ;
+  psr:hasLocation psr:KitchenCounterLocation .
+
+psr:KitchenCounter psr:hasComponent psr:AdditionalPuzzleBook1 .
+
+psr:AdditionalPuzzleBook2 a psr:Object ;
+  psr:hasLocation psr:KitchenCounterLocation .
+
+psr:KitchenCounter psr:hasComponent psr:AdditionalPuzzleBook2 .
+
+psr:YellowMug a psr:Object ;
+  psr:hasLocation psr:KitchenCounterLocation .
+
+psr:KitchenCounter psr:hasComponent psr:YellowMug .

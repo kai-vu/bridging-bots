@@ -1,0 +1,132 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix :       <http://example.org/data/> .
+
+# Environment
+psr:KitchenEnvironment a owl:Class, dul:Entity ;
+    rdfs:label "Kitchen Environment"@en .
+
+# Environment instance
+:environment1 a psr:Environment ;
+    rdfs:label "Kitchen Scene"@en .
+
+# Components in the environment
+:upperCabinets a psr:Component ;
+    rdfs:label "Upper Cabinets"@en .
+
+:lowerCabinets a psr:Component ;
+    rdfs:label "Lower Cabinets"@en .
+
+:countertop a psr:Component ;
+    rdfs:label "Countertop"@en .
+
+:wallSpaceAboveCounter a psr:Component ;
+    rdfs:label "Wall Space Above Counter"@en .
+
+# Objects on the countertop
+:JELLOBox a psr:Object ;
+    rdfs:label "JELLO Box"@en .
+
+:riceBubblesBox a psr:Object ;
+    rdfs:label "Rice Bubbles Box"@en .
+
+:redStrawberryJam a psr:Object ;
+    rdfs:label "Red Strawberry Jam"@en .
+
+:redWhitePreserves a psr:Object ;
+    rdfs:label "Blood Orange Preserves"@en .
+
+:slicedBreadDish a psr:Object ;
+    rdfs:label "Sliced Bread Dish"@en .
+
+:waterBottle a psr:Object ;
+    rdfs:label "Water Bottle"@en .
+
+:yellowCup a psr:Object ;
+    rdfs:label "Yellow Cup"@en .
+
+:wineGlass a psr:Object ;
+    rdfs:label "Glass of Wine"@en .
+
+:jugCreamer a psr:Object ;
+    rdfs:label "Jug/Creamer"@en .
+
+# Positioning objects on the countertop (mostly towards left side)
+:JELLOBox psr:hasLocation :countertop .
+:riceBubblesBox psr:hasLocation :countertop .
+:redStrawberryJam psr:hasLocation :countertop .
+:redWhitePreserves psr:hasLocation :countertop .
+:slicedBreadDish psr:hasLocation :countertop .
+:waterBottle psr:hasLocation :countertop .
+:yellowCup psr:hasLocation :countertop .
+:wineGlass psr:hasLocation :countertop .
+:jugCreamer psr:hasLocation :countertop .
+
+# Items stacked and side by side
+:JELLOBox psr:onTopOf :riceBubblesBox .
+
+# Other objects positioned toward right side
+:waterBottle psr:onTopOf :countertop .
+:yellowCup psr:onTopOf :countertop .
+:wineGlass psr:onTopOf :countertop .
+:jugCreamer psr:onTopOf :countertop .
+
+# Wall with window
+:rearWall a psr:Object ;
+    rdfs:label "Rear Wall"@en .
+
+:window a psr:Object ;
+    rdfs:label "Small Window"@en .
+
+:window psr:hasLocation :wallSpaceAboveCounter .
+:window psr:onTopOf :wallSpaceAboveCounter .
+
+# Cabinets above counter
+:upperGrayCabinets a psr:Component ;
+    rdfs:label "Dark Gray Upper Cabinets"@en .
+
+:lowerGrayCabinets a psr:Component ;
+    rdfs:label "Dark Gray Lower Cabinets"@en .
+
+:upperGrayCabinets psr:hasLocation :upperCabinets .
+:lowerGrayCabinets psr:hasLocation :lowerCabinets .
+
+# Extractor fan / range hood
+:rangeHood a psr:Object ;
+    rdfs:label "Range Hood"@en .
+
+:rangeHood psr:hasLocation :wallSpaceAboveCounter .
+
+# Floor
+:floor a psr:Object ;
+    rdfs:label "Wooded Parquet Floor"@en .
+
+# Door
+:door a psr:Object ;
+    rdfs:label "White Six-Panel Door"@en .
+
+:door psr:hasLocation :wallSpaceAboveCounter .
+
+# Ceiling lights
+:ceilingLight1 a psr:Object ;
+    rdfs:label "Ceiling Light Fixture 1"@en .
+
+:ceilingLight2 a psr:Object ;
+    rdfs:label "Ceiling Light Fixture 2"@en .
+
+# Wall junction, textured walls, decor
+:wallJunction a psr:Object ;
+    rdfs:label "Wall Junction"@en .
+
+:texturedWall a psr:Object ;
+    rdfs:label "White Textured Wall"@en .
+
+:decor a psr:Object ;
+    rdfs:label "Sparse Decor"@en .
+
+# Linking environment to components
+:environment1 dul:hasComponent :upperCabinets, :lowerCabinets, :countertop, :wallSpaceAboveCounter, :rearWall, :rangeHood, :door, :floor, :ceilingLight1, :ceilingLight2, :wallJunction, :decor .

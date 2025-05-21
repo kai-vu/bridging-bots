@@ -94,14 +94,14 @@ Ontology as context information is below.
 
 You are an intelligent assistant tasked to generate a **Knowledge Graph of the sequence of actions a robot must perform to accomplish the following task**:
 ---------------------
-TASK: {robot_task}
+ROBOT TASK: {robot_task}
 ---------------------
 
 You are given a set of images taken from the same environment at different angles. 
 These images together represent the complete layout and state of the environment in which a robot must perform a task.
 
 Instructions:
-- Analyze the images carefully to understand the complete layout of the environment, objects, and relevant affordances.
+- Analyze the images carefully to understand the complete layout of the environment.
 - Based on the ontology, **generate the sequence of actions required for the robot to complete the task**.
 - Each action is a **single, atomic, clear action**.
 - **All actions, entities, and relationships must strictly follow the provided ontology.**
@@ -112,8 +112,10 @@ Instructions:
 Output format:
 - Return only the generated Knowledge Graph of actions.
 - Output only text, no extra explanations.
-- Use Turtle format for the output.
-- Include the prefixes and namespaces at the beginning.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
 """
 
     main(images_folder_path, nebula_key, nebula_url, vlm_model, user_query, output_path)

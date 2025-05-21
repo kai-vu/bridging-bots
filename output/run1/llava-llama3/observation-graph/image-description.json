@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-2dcf1239-3078-4344-b37f-a6a2cdce3dc0",
+    "created": 1747771129,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " A black and white kitchen with a white tile backsplash. It features dark wood cabinets and black countertops. The refrigerator is positioned next to the dining table against one wall. On the countertop, there are some kitchen items including cups, bowls, and bottles, as well as food items such as cereal boxes and a loaf of bread. Above the countertop, there's a light fixture. To the left side, an oven is visible. The sink is located under a window at one end of the kitchen. On the right side, there's a glass door leading to what appears to be another room or hallway with a light switch and a white door. A trash can sits beneath the window above the sink. A wooden dining table with chairs is in the center of the kitchen, surrounded by countertops. There are several items on the table, including food products like cereal boxes, a roll of paper towels, and a carton of milk. On one side, there's a small white refrigerator. The walls are painted white, contrasting with the darker color of the cabinets and countertops. A bowl is visible on the dining table. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.98,
+        "prompt_token/s": 1795.08,
+        "total_duration": 6891877803,
+        "load_duration": 1597461554,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 1707448126,
+        "eval_count": 248,
+        "completion_tokens": 248,
+        "eval_duration": 3543871548,
+        "approximate_total": "0h0m6s",
+        "total_tokens": 3313,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

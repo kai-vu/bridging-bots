@@ -1,0 +1,75 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:kitchen a psr:Environment ;
+    rdfs:label "kitchen"@en .
+
+psr:refrigerator a psr:Appliance ;
+    rdfs:label "refrigerator"@en ;
+    psr:hasLocation psr:kitchen .
+
+psr:table a psr:Furniture ;
+    rdfs:label "table"@en ;
+    psr:hasLocation psr:kitchen .
+
+psr:chair a psr:Furniture ;
+    rdfs:label "chair"@en ;
+    psr:hasLocation psr:kitchen .
+
+psr:cupboard a psr:Appliance ;
+    rdfs:label "cupboard"@en ;
+    psr:hasLocation psr:kitchen .
+
+psr:plate a psr:Object ;
+    rdfs:label "plate"@en ;
+    psr:hasLocation psr:table .
+
+psr:glass a psr:Object ;
+    rdfs:label "glass"@en ;
+    psr:hasLocation psr:table .
+
+psr:book a psr:Object ;
+    rdfs:label "book"@en ;
+    psr:hasLocation psr:table .
+
+psr:milk a psr:Object ;
+    rdfs:label "milk"@en ;
+    psr:hasLocation psr:table .
+
+psr:jello a psr:Object ;
+    rdfs:label "jello"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:jar a psr:Object ;
+    rdfs:label "jar"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:alpen a psr:Object ;
+    rdfs:label "alpen"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:rice a psr:Object ;
+    rdfs:label "rice"@en ;
+    psr:hasLocation psr:cupboard .
+
+psr:sugar a psr:Object ;
+    rdfs:label "sugar"@en ;
+    psr:hasLocation psr:cupboard .
+
+dul:hasComponent(psr:kitchen, psr:refrigerator) .
+dul:hasComponent(psr:kitchen, psr:table) .
+dul:hasComponent(psr:kitchen, psr:chair) .
+dul:hasComponent(psr:kitchen, psr:cupboard) .
+dul:hasComponent(psr:kitchen, psr:plate) .
+dul:hasComponent(psr:kitchen, psr:glass) .
+dul:hasComponent(psr:kitchen, psr:book) .
+dul:hasComponent(psr:kitchen, psr:milk) .
+dul:hasComponent(psr:kitchen, psr:jello) .
+dul:hasComponent(psr:kitchen, psr:jar) .
+dul:hasComponent(psr:kitchen, psr:alpen) .
+dul:hasComponent(psr:kitchen, psr:rice) .
+dul:hasComponent(psr:kitchen, psr:sugar) .

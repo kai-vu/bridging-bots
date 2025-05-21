@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-9080ec84-27c5-43f7-8081-46db4e0765c1",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:Kitchen a psr:Environment ;\n    dul:hasComponent psr:Table, psr:Chairs, psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan, psr:Door .\n\npsr:Table a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Holding .\n\npsr:Chairs a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Sitting .\n\npsr:Cabinet a psr:Furniture ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Fridge a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Containing .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Heating .\n\npsr:ExhaustFan a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Ventilating .\n\npsr:Door a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:DiningArea a soma:Location ;\n    geo:sfContains psr:Table, psr:Chairs .\n\npsr:KitchenArea a soma:Location ;\n    geo:sfContains psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan .\n\npsr:JelloBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:AlpenSalt a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:ChunkyBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:RiceBubblesBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:Plates a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:WaterBottle a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:onTopOf psr:Table .\n\npsr:FruitBox a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:onTopOf psr:Table .\n\npsr:CounterTop a soma:Location ;\n    geo:sfContains psr:JelloBox, psr:AlpenSalt, psr:ChunkyBox, psr:RiceBubblesBox, psr:Plates .\n\npsr:Cabinet a psr:Furniture ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Fridge a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:CounterTop .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:CounterTop .\n\npsr:ExhaustFan a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Door a psr:Furniture ;\n    dul:hasLocation psr:DiningArea .\n\npsr:WaterBottle a psr:Object ;\n    dul:hasLocation psr:Table .\n\npsr:FruitBox a psr:Object ;\n    dul:hasLocation psr:Table .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747771308,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_fcf8b6b0bf",
+    "usage": {
+        "completion_tokens": 968,
+        "prompt_tokens": 13955,
+        "total_tokens": 14923,
+        "completion_time": 4.876720277,
+        "prompt_time": 0.447993785,
+        "queue_time": 13.396011718,
+        "total_time": 5.324714062
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvqmjyz0e0stnd663wyx580h"
+    }
+}

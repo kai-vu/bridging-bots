@@ -74,15 +74,15 @@ _:org a schema:Organization ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-<https://w3id.org/psr-task#Appliance> a owl:Class, dul:Entity, <https://w3id.org/psr-task#Component> ;
+<https://w3id.org/psr-task#Appliance> a <https://w3id.org/psr-task#Component> ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a type of component."@en .
 
-<https://w3id.org/psr-task#Furniture> a owl:Class, dul:Entity, <https://w3id.org/psr-task#Component> ;
+<https://w3id.org/psr-task#Furniture> a <https://w3id.org/psr-task#Component> ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "A furniture is a type of component."@en .
 
-<https://w3id.org/psr-task#Object> a owl:Class, dul:Entity, <https://w3id.org/psr-task#Component> ;
+<https://w3id.org/psr-task#Object> a <https://w3id.org/psr-task#Component> ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a type of component."@en .
 
@@ -90,11 +90,11 @@ soma:Location a owl:Class, dul:Entity ;
     rdfs:label "Location"@en ;
     rdfs:comment "A location of a specific component within the environment."@en .
 
-psr:CurrentLocation a owl:Class, dul:Entity, soma:Location ;
+psr:CurrentLocation a soma:Location ;
     rdfs:label "Current Location"@en ;
     rdfs:comment "The current location of a component within the environment."@en .
 
-psr:StandardLocation a owl:Class, dul:Entity, soma:Location ;
+psr:StandardLocation a soma:Location ;
     rdfs:label "Standard Location"@en ;
     rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en .
 
@@ -102,39 +102,39 @@ psr:StandardLocation a owl:Class, dul:Entity, soma:Location ;
     rdfs:label "Affordance"@en ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Closing a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Closing"@en ;
     rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Opening a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Opening"@en ;
     rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Delivering a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Delivering"@en ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Holding a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Holding"@en ;
     rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:PickingUp a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "PickingUp"@en ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:PuttingDown a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "PuttingDown"@en ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Pulling a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Pulling"@en ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Pushing a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Pushing"@en ;
     rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a owl:Class, dul:Entity, <https://w3id.org/psr-task#Affordance> ;
+soma:Grasping a <https://w3id.org/psr-task#Affordance> ;
     rdfs:label "Grasping"@en ;
     rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 

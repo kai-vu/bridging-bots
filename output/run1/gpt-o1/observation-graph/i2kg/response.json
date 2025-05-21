@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BZNZ5OLJXzFOXeI316wz7DhblMJx6",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix : <http://example.com/env#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n\n:KitchenDiningRoom a psr:Environment ;\n    dul:hasComponent :Fridge,\n                     :RangeHood,\n                     :KitchenCabinet,\n                     :Countertop,\n                     :DiningTable,\n                     :DiningChair1,\n                     :DiningChair2,\n                     :DiningChair3,\n                     :DiningChair4,\n                     :Hob,\n                     :JamJar,\n                     :JelloBox,\n                     :Salt,\n                     :RiceBubbles,\n                     :ChuckyCereal,\n                     :Plates,\n                     :Pot,\n                     :Mug,\n                     :SnacksBox,\n                     :FruitBowl,\n                     :EvianBottle,\n                     :Pitcher,\n                     :WineGlass\n.\n\n:Fridge a psr:Appliance ;\n    psr:hasAffordance :FridgeOpening,\n                       :FridgeClosing\n.\n\n:FridgeOpening a soma:Opening .\n:FridgeClosing a soma:Closing .\n\n:RangeHood a psr:Appliance .\n\n:KitchenCabinet a psr:Furniture .\n\n:Countertop a psr:Furniture .\n\n:DiningTable a psr:Furniture .\n\n:DiningChair1 a psr:Furniture .\n:DiningChair2 a psr:Furniture .\n:DiningChair3 a psr:Furniture .\n:DiningChair4 a psr:Furniture .\n\n:Hob a psr:Appliance .\n\n:JamJar a psr:Object ;\n    dul:hasLocation :Loc_JamJar\n.\n\n:Loc_JamJar a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:JelloBox a psr:Object ;\n    dul:hasLocation :Loc_JelloBox\n.\n\n:Loc_JelloBox a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:Salt a psr:Object ;\n    dul:hasLocation :Loc_Salt\n.\n\n:Loc_Salt a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:RiceBubbles a psr:Object ;\n    dul:hasLocation :Loc_RiceBubbles\n.\n\n:Loc_RiceBubbles a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:ChuckyCereal a psr:Object ;\n    dul:hasLocation :Loc_ChuckyCereal\n.\n\n:Loc_ChuckyCereal a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:Plates a psr:Object ;\n    dul:hasLocation :Loc_Plates\n.\n\n:Loc_Plates a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:Pot a psr:Object ;\n    dul:hasLocation :Loc_Pot ;\n    psr:hasAffordance :PotPickingUp\n.\n\n:Loc_Pot a psr:CurrentLocation ;\n    psr:onTopOf :Hob\n.\n\n:PotPickingUp a soma:PickingUp .\n\n:Mug a psr:Object ;\n    dul:hasLocation :Loc_Mug ;\n    psr:hasAffordance :MugPickingUp\n.\n\n:Loc_Mug a psr:CurrentLocation ;\n    psr:onTopOf :Countertop\n.\n\n:MugPickingUp a soma:PickingUp .\n\n:SnacksBox a psr:Object ;\n    dul:hasLocation :Loc_SnacksBox\n.\n\n:Loc_SnacksBox a psr:CurrentLocation ;\n    psr:onTopOf :DiningTable\n.\n\n:FruitBowl a psr:Object ;\n    dul:hasLocation :Loc_FruitBowl\n.\n\n:Loc_FruitBowl a psr:CurrentLocation ;\n    psr:onTopOf :DiningTable\n.\n\n:EvianBottle a psr:Object ;\n    dul:hasLocation :Loc_EvianBottle\n.\n\n:Loc_EvianBottle a psr:CurrentLocation ;\n    psr:onTopOf :DiningTable\n.\n\n:Pitcher a psr:Object ;\n    dul:hasLocation :Loc_Pitcher\n.\n\n:Loc_Pitcher a psr:CurrentLocation ;\n    psr:onTopOf :DiningTable\n.\n\n:WineGlass a psr:Object ;\n    dul:hasLocation :Loc_WineGlass\n.\n\n:Loc_WineGlass a psr:CurrentLocation ;\n    psr:onTopOf :DiningTable\n.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747771763,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4934,
+        "prompt_tokens": 5088,
+        "total_tokens": 10022,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 3840,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

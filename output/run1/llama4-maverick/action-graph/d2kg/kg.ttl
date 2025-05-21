@@ -1,0 +1,88 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:RestoreKitchenToOrganizedState a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    psr:hasWorkflow psr:RestoreKitchenWorkflow .
+
+psr:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction dul:IdentifyMisplacedItems ;
+    psr:hasAction dul:ReturnItemsToStorageLocations ;
+    dul:precedes dul:ReturnItemsToStorageLocations, dul:IdentifyMisplacedItems .
+
+dul:IdentifyMisplacedItems a dul:Action ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:Kitchen .
+
+dul:ReturnItemsToStorageLocations a dul:Action ;
+    soma:isPerformedBy psr:Robot ;
+    psr:actsOn psr:MisplacedItems .
+
+psr:Kitchen a psr:Component .
+psr:MisplacedItems a psr:Component .
+
+dul:IdentifyMisplacedItems psr:isAffordedBy soma:PickingUp .
+dul:ReturnItemsToStorageLocations psr:isAffordedBy soma:PuttingDown .
+
+soma:PickingUp a psr:Affordance .
+soma:PuttingDown a psr:Affordance .
+
+psr:Robot a dul:Agent .
+
+psr:Plates a psr:Object ;
+    rdf:type psr:Component .
+
+psr:RedJamJars a psr:Object ;
+    rdf:type psr:Component .
+
+psr:CHICKYChipPacket a psr:Object ;
+    rdf:type psr:Component .
+
+psr:JELLOBox a psr:Object ;
+    rdf:type psr:Component .
+
+psr:AlpenSaltBox a psr:Object ;
+    rdf:type psr:Component .
+
+psr:BottleOfWater a psr:Object ;
+    rdf:type psr:Component .
+
+psr:PacketOfBiscuits a psr:Object ;
+    rdf:type psr:Component .
+
+psr:Mugs a psr:Object ;
+    rdf:type psr:Component .
+
+psr:WineGlass a psr:Object ;
+    rdf:type psr:Component .
+
+psr:Fridge a psr:Appliance ;
+    rdf:type psr:Component .
+
+psr:Counter a psr:Furniture ;
+    rdf:type psr:Component .
+
+psr:DiningTable a psr:Furniture ;
+    rdf:type psr:Component .
+
+psr:Rangehood a psr:Appliance ;
+    rdf:type psr:Component .
+
+psr:Sink a psr:Component .
+
+psr:Pot a psr:Object ;
+    rdf:type psr:Component .
+
+psr:Stove a psr:Appliance ;
+    rdf:type psr:Component .
+
+psr:WhiteDoor a psr:Furniture ;
+    rdf:type psr:Component .
+
+psr:SilverHandle a psr:Component .

@@ -1,0 +1,149 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+
+psr:RestoreKitchen a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+
+psr:organizeKitchenWorkflow a psr:Workflow ;
+  psr:hasAction psr:identifyMisplacedItemsAction ;
+  psr:hasAction psr:returnItemsToStorageAction .
+
+psr:identifyMisplacedItemsAction a dul:Action ;
+  psr:actsOn psr:kitchenCounter ;
+  psr:isAffordedBy soma:Identifying .
+
+psr:returnItemsToStorageAction a dul:Action ;
+  psr:actsOn psr:misplacedItems ;
+  psr:isAffordedBy soma:Returning .
+
+psr:kitchenCounter a psr:Component ;
+  rdfs:label "kitchen counter"@en .
+
+psr:misplacedItems a psr:Component ;
+  rdfs:label "misplaced items"@en .
+
+psr:standardStorageLocations a psr:Component ;
+  rdfs:label "standard storage locations"@en .
+
+psr:identifyMisplacedItemsAction2 a dul:Action ;
+  psr:actsOn psr:jarOfJam ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:jarOfJam a psr:Object ;
+  rdfs:label "jar of jam"@en .
+
+psr:identifyMisplacedItemsAction3 a dul:Action ;
+  psr:actsOn psr:boxOfJellO ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:boxOfJellO a psr:Object ;
+  rdfs:label "box of Jell-O"@en .
+
+psr:identifyMisplacedItemsAction4 a dul:Action ;
+  psr:actsOn psr:boxOfAlpenSalt ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:boxOfAlpenSalt a psr:Object ;
+  rdfs:label "box of Alpen Salt"@en .
+
+psr:identifyMisplacedItemsAction5 a dul:Action ;
+  psr:actsOn psr:stacksOfPaperPlates ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:stacksOfPaperPlates a psr:Object ;
+  rdfs:label "stacks of paper plates"@en .
+
+psr:identifyMisplacedItemsAction6 a dul:Action ;
+  psr:actsOn psr:largeBottleOfEvianWater ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:largeBottleOfEvianWater a psr:Object ;
+  rdfs:label "large bottle of Evian water"@en .
+
+psr:identifyMisplacedItemsAction7 a dul:Action ;
+  psr:actsOn psr:toaster ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:toaster a psr:Appliance ;
+  rdfs:label "toaster"@en .
+
+psr:identifyMisplacedItemsAction8 a dul:Action ;
+  psr:actsOn psr:fruit ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:fruit a psr:Object ;
+  rdfs:label "fruit"@en .
+
+psr:identifyMisplacedItemsAction9 a dul:Action ;
+  psr:actsOn psr:puzzleBook ;
+  psr:isAffordedBy soma:PickingUp .
+
+psr:puzzleBook a psr:Object ;
+  rdfs:label "puzzle book"@en .
+
+psr:boardGame a psr:Object ;
+  rdfs:label "board game"@en .
+
+psr:jugsOrBottles a psr:Object ;
+  rdfs:label "jugs or bottles"@en .
+
+psr:pan a psr:Object ;
+  rdfs:label "pan"@en .
+
+psr:clock a psr:Object ;
+  rdfs:label "clock"@en .
+
+psr:light a psr:Object ;
+  rdfs:label "light"@en .
+
+psr:twoPuzzleBooks a psr:Object ;
+  rdfs:label "two puzzle books"@en .
+
+psr:yellowMug a psr:Object ;
+  rdfs:label "yellow mug"@en .
+
+psr:refrigerator a psr:Appliance ;
+  rdfs:label "refrigerator"@en .
+
+psr:electricBurner a psr:Appliance ;
+  rdfs:label "electric burner"@en .
+
+psr:diningTable a psr:Furniture ;
+  rdfs:label "dining table"@en .
+
+psr:fourWhiteChairs a psr:Furniture ;
+  rdfs:label "four white chairs"@en .
+
+psr:kitchenCabinets a psr:Component ;
+  rdfs:label "kitchen cabinets"@en .
+
+psr:RestoreKitchen psr:hasWorkflow psr:organizeKitchenWorkflow .
+
+psr:identifyMisplacedItemsAction psr:follows psr:returnItemsToStorageAction .
+psr:returnItemsToStorageAction psr:precedes psr:identifyMisplacedItemsAction .
+
+psr:agent a dul:Agent ;
+  soma:isPerformedBy psr:identifyMisplacedItemsAction ;
+  soma:isPerformedBy psr:returnItemsToStorageAction .
+
+psr:jarOfJam psr:isAffordedBy soma:PickingUp .
+psr:boxOfJellO psr:isAffordedBy soma:PickingUp .
+psr:boxOfAlpenSalt psr:isAffordedBy soma:PickingUp .
+psr:stacksOfPaperPlates psr:isAffordedBy soma:PickingUp .
+psr:largeBottleOfEvianWater psr:isAffordedBy soma:PickingUp .
+psr:toaster psr:isAffordedBy soma:PickingUp .
+psr:fruit psr:isAffordedBy soma:PickingUp .
+psr:puzzleBook psr:isAffordedBy soma:PickingUp .
+psr:boardGame psr:isAffordedBy soma:PuttingDown .
+psr:jugsOrBottles psr:isAffordedBy soma:PuttingDown .
+psr:pan psr:isAffordedBy soma:PuttingDown .
+psr:clock psr:isAffordedBy soma:PuttingDown .
+psr:light psr:isAffordedBy soma:PuttingDown .
+psr:twoPuzzleBooks psr:isAffordedBy soma:PuttingDown .
+psr:yellowMug psr:isAffordedBy soma:PuttingDown .

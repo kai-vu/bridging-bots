@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-4d0cf684-a91b-4c26-b824-003f5247373b",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with dark gray cabinets and beige marble countertop, fridge to the right of the counter, \ncounter has plates, red jam jars, a \"CHICKY\" chip packet, \"JELLO\" and \"Alpen Salt\" boxes, \na dining table in the adjacent room with a bottle of water, a packet of biscuits, mugs and a wine glass, \na rangehood above the stove, a sink on the counter, a pot on the stove and a white door with a silver handle.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747771275,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 106,
+        "prompt_tokens": 12496,
+        "total_tokens": 12602,
+        "completion_time": 0.701685753,
+        "prompt_time": 0.391106365,
+        "queue_time": 7.122908387,
+        "total_time": 1.092792118
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvqmj6xqfnab2hr7yqvpgg11"
+    }
+}

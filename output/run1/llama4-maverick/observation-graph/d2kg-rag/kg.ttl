@@ -1,0 +1,77 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-task#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+psr:Kitchen a psr:Environment ;
+    dul:hasComponent psr:Cabinets, psr:Countertop, psr:Fridge, psr:DiningTable, psr:Rangehood, psr:Stove, psr:Sink, psr:Door .
+
+psr:Cabinets a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:Countertop a psr:Furniture ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Grasping, soma:Holding ;
+    geo:sfContains psr:Plates, psr:RedJamJars, psr:ChickyChipPacket, psr:JelloBox, psr:AlpenSaltBox, psr:Sink .
+
+psr:Fridge a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+psr:DiningTable a psr:Furniture ;
+    dul:hasLocation psr:AdjacentRoom ;
+    geo:sfContains psr:BottleOfWater, psr:PacketOfBiscuits, psr:Mugs, psr:WineGlass .
+
+psr:Rangehood a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    psr:onTopOf psr:Stove .
+
+psr:Stove a psr:Appliance ;
+    dul:hasLocation psr:Kitchen ;
+    geo:sfContains psr:Pot .
+
+psr:Sink a psr:Furniture ;
+    dul:hasLocation psr:Countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+psr:Door a psr:Furniture ;
+    dul:hasLocation psr:Kitchen ;
+    psr:hasAffordance soma:Opening, soma:Closing, soma:Pulling, soma:Pushing .
+
+psr:Plates a psr:Object ;
+    dul:hasLocation psr:Countertop .
+
+psr:RedJamJars a psr:Object ;
+    dul:hasLocation psr:Countertop .
+
+psr:ChickyChipPacket a psr:Object ;
+    dul:hasLocation psr:Countertop .
+
+psr:JelloBox a psr:Object ;
+    dul:hasLocation psr:Countertop .
+
+psr:AlpenSaltBox a psr:Object ;
+    dul:hasLocation psr:Countertop .
+
+psr:BottleOfWater a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:PacketOfBiscuits a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:Mugs a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:WineGlass a psr:Object ;
+    dul:hasLocation psr:DiningTable .
+
+psr:Pot a psr:Object ;
+    dul:hasLocation psr:Stove .
+
+psr:AdjacentRoom a psr:Environment ;
+    dul:hasComponent psr:DiningTable .
+
+psr:SilverHandle a psr:Object ;
+    dul:hasLocation psr:Door .

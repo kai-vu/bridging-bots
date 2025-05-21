@@ -1,0 +1,261 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix ex:     <http://example.org#> .
+
+ex:instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    psr:hasWorkflow ex:workflow1 .
+
+ex:workflow1 a psr:Workflow ;
+    psr:hasAction ex:a1,
+                  ex:a2,
+                  ex:a3,
+                  ex:a4,
+                  ex:a5,
+                  ex:a6,
+                  ex:a7,
+                  ex:a8,
+                  ex:a9,
+                  ex:a10,
+                  ex:a11,
+                  ex:a12,
+                  ex:a13,
+                  ex:a14,
+                  ex:a15,
+                  ex:a16,
+                  ex:a17,
+                  ex:a18,
+                  ex:a19,
+                  ex:a20,
+                  ex:a21,
+                  ex:a22,
+                  ex:a23,
+                  ex:a24,
+                  ex:a25,
+                  ex:a26,
+                  ex:a27,
+                  ex:a28,
+                  ex:a29,
+                  ex:a30 .
+
+ex:robot1 a dul:Agent .
+
+ex:overhead_cabinet a psr:Furniture .
+ex:pantry a psr:Furniture .
+ex:fridge a psr:Appliance .
+
+ex:orange_mug a psr:Object .
+ex:chucky_box1 a psr:Object .
+ex:jam_jar1 a psr:Object .
+ex:chucky_box2 a psr:Object .
+ex:rice_bubbles_box a psr:Object .
+ex:plates_stack a psr:Object .
+ex:jello_box1 a psr:Object .
+ex:salt_container1 a psr:Object .
+ex:jam_jar2 a psr:Object .
+ex:jello_box2 a psr:Object .
+ex:salt_container2 a psr:Object .
+ex:cookie_box a psr:Object .
+ex:water_bottle a psr:Object .
+ex:pitcher a psr:Object .
+ex:wine_glass a psr:Object .
+
+# 1) Orange mug -> overhead cabinet
+ex:a1 a dul:Action ;
+    psr:actsOn ex:orange_mug ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a2 .
+
+ex:a2 a dul:Action ;
+    psr:actsOn ex:orange_mug, ex:overhead_cabinet ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a3 .
+
+# 2) Chucky box1 -> pantry
+ex:a3 a dul:Action ;
+    psr:actsOn ex:chucky_box1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a4 .
+
+ex:a4 a dul:Action ;
+    psr:actsOn ex:chucky_box1, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a5 .
+
+# 3) Jam jar1 -> pantry
+ex:a5 a dul:Action ;
+    psr:actsOn ex:jam_jar1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a6 .
+
+ex:a6 a dul:Action ;
+    psr:actsOn ex:jam_jar1, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a7 .
+
+# 4) Chucky box2 -> pantry
+ex:a7 a dul:Action ;
+    psr:actsOn ex:chucky_box2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a8 .
+
+ex:a8 a dul:Action ;
+    psr:actsOn ex:chucky_box2, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a9 .
+
+# 5) Rice Bubbles box -> pantry
+ex:a9 a dul:Action ;
+    psr:actsOn ex:rice_bubbles_box ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a10 .
+
+ex:a10 a dul:Action ;
+    psr:actsOn ex:rice_bubbles_box, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a11 .
+
+# 6) Plates stack -> overhead cabinet
+ex:a11 a dul:Action ;
+    psr:actsOn ex:plates_stack ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a12 .
+
+ex:a12 a dul:Action ;
+    psr:actsOn ex:plates_stack, ex:overhead_cabinet ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a13 .
+
+# 7) Jell-O box1 -> pantry
+ex:a13 a dul:Action ;
+    psr:actsOn ex:jello_box1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a14 .
+
+ex:a14 a dul:Action ;
+    psr:actsOn ex:jello_box1, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a15 .
+
+# 8) Salt container1 -> pantry
+ex:a15 a dul:Action ;
+    psr:actsOn ex:salt_container1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a16 .
+
+ex:a16 a dul:Action ;
+    psr:actsOn ex:salt_container1, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a17 .
+
+# 9) Jam jar2 -> pantry
+ex:a17 a dul:Action ;
+    psr:actsOn ex:jam_jar2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a18 .
+
+ex:a18 a dul:Action ;
+    psr:actsOn ex:jam_jar2, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a19 .
+
+# 10) Jell-O box2 -> pantry
+ex:a19 a dul:Action ;
+    psr:actsOn ex:jello_box2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a20 .
+
+ex:a20 a dul:Action ;
+    psr:actsOn ex:jello_box2, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a21 .
+
+# 11) Salt container2 -> pantry
+ex:a21 a dul:Action ;
+    psr:actsOn ex:salt_container2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a22 .
+
+ex:a22 a dul:Action ;
+    psr:actsOn ex:salt_container2, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a23 .
+
+# 12) Cookie box -> pantry
+ex:a23 a dul:Action ;
+    psr:actsOn ex:cookie_box ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a24 .
+
+ex:a24 a dul:Action ;
+    psr:actsOn ex:cookie_box, ex:pantry ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a25 .
+
+# 13) Water bottle -> fridge
+ex:a25 a dul:Action ;
+    psr:actsOn ex:water_bottle ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a26 .
+
+ex:a26 a dul:Action ;
+    psr:actsOn ex:water_bottle, ex:fridge ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a27 .
+
+# 14) Pitcher -> overhead cabinet
+ex:a27 a dul:Action ;
+    psr:actsOn ex:pitcher ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a28 .
+
+ex:a28 a dul:Action ;
+    psr:actsOn ex:pitcher, ex:overhead_cabinet ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a29 .
+
+# 15) Wine glass -> overhead cabinet
+ex:a29 a dul:Action ;
+    psr:actsOn ex:wine_glass ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy ex:robot1 ;
+    psr:precedes ex:a30 .
+
+ex:a30 a dul:Action ;
+    psr:actsOn ex:wine_glass, ex:overhead_cabinet ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy ex:robot1 .
