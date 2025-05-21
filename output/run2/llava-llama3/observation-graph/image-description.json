@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-9ae55744-a364-44b2-aa03-8f449139eb76",
+    "created": 1747866807,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The image provided is an overhead 3D rendering of a kitchen and dining area. In the kitchen, there's a black countertop with an open cabinet above it revealing shelves holding various items including canned goods and what appears to be a box of cereal. A sink is installed under this countertop, and next to it are two ovens and a fridge with a white label on its door. There's also a box labeled \"ECO\" near the fridge. On the far end of the kitchen, a dining table with a single chair can be seen, with a bottle and another box on top of it. A book is lying flat in front of this table. In the corner of the kitchen, there's an open cabinet with more items, including cups and bowls.\n\nThe adjacent dining area features a white countertop along one wall and cabinets above it. The flooring is a light beige color, and a light fixture hangs from the ceiling above the table. There are no people or robots visible in this space. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 7.5,
+        "prompt_token/s": 46.15,
+        "total_duration": 96653182601,
+        "load_duration": 859859652,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 66407689963,
+        "eval_count": 220,
+        "completion_tokens": 220,
+        "eval_duration": 29334625341,
+        "approximate_total": "0h1m36s",
+        "total_tokens": 3285,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

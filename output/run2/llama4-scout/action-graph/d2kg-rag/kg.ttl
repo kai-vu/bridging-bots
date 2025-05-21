@@ -1,0 +1,98 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItemsAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+  rdfs:label "Identify Misplaced Items"@en ;
+  psr:actsOn ex:KitchenArea ;
+  psr:isAffordedBy soma:Grasping ;
+  psr:follows ex:EnterKitchenAction .
+
+ex:EnterKitchenAction a dul:Action ;
+  rdfs:label "Enter Kitchen"@en ;
+  psr:actsOn ex:KitchenArea ;
+  psr:isAffordedBy soma:Opening .
+
+ex:KitchenArea a psr:Component ;
+  rdfs:label "Kitchen Area"@en .
+
+ex:IdentifyMisplacedItemsAction ex:identifies 
+  ex:MisplacedItem1, 
+  ex:MisplacedItem2, 
+  ex:MisplacedItem3 .
+
+ex:MisplacedItem1 a psr:Object ;
+  rdfs:label "Yellow Mug"@en .
+
+ex:MisplacedItem2 a psr:Object ;
+  rdfs:label "Book titled 'Chucky'"@en .
+
+ex:MisplacedItem3 a psr:Object ;
+  rdfs:label "Jar with red lid"@en .
+
+ex:PickUpYellowMugAction a dul:Action ;
+  rdfs:label "Pick Up Yellow Mug"@en ;
+  psr:actsOn ex:YellowMug ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:IdentifyMisplacedItemsAction .
+
+ex:PickUpBookChuckyAction a dul:Action ;
+  rdfs:label "Pick Up Book Chucky"@en ;
+  psr:actsOn ex:BookChucky ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PickUpYellowMugAction .
+
+ex:PickUpJarRedLidAction a dul:Action ;
+  rdfs:label "Pick Up Jar with red lid"@en ;
+  psr:actsOn ex:JarRedLid ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PickUpBookChuckyAction .
+
+ex:PutDownYellowMugAction a dul:Action ;
+  rdfs:label "Put Down Yellow Mug"@en ;
+  psr:actsOn ex:YellowMug ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpJarRedLidAction .
+
+ex:PutDownBookChuckyAction a dul:Action ;
+  rdfs:label "Put Down Book Chucky"@en ;
+  psr:actsOn ex:BookChucky ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PutDownYellowMugAction .
+
+ex:PutDownJarRedLidAction a dul:Action ;
+  rdfs:label "Put Down Jar with red lid"@en ;
+  psr:actsOn ex:JarRedLid ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PutDownBookChuckyAction .
+
+ex:StandardStorageLocation1 a psr:Component ;
+  rdfs:label "Cabinet"@en .
+
+ex:StandardStorageLocation2 a psr:Component ;
+  rdfs:label "Bookshelf"@en .
+
+ex:StandardStorageLocation3 a psr:Component ;
+  rdfs:label "Cabinet"@en .
+
+ex:PutDownYellowMugAction psr:precedes ex:PutDownBookChuckyAction .
+ex:PutDownBookChuckyAction psr:precedes ex:PutDownJarRedLidAction .
+
+ex:PutDownYellowMugAction psr:actsOn ex:StandardStorageLocation1 .
+ex:PutDownBookChuckyAction psr:actsOn ex:StandardStorageLocation2 .
+ex:PutDownJarRedLidAction psr:actsOn ex:StandardStorageLocation3 .
+
+ex:Robot a dul:Agent ;
+  dul:isPerformedBy ex:PickUpYellowMugAction ;
+  dul:isPerformedBy ex:PickUpBookChuckyAction ;
+  dul:isPerformedBy ex:PickUpJarRedLidAction ;
+  dul:isPerformedBy ex:PutDownYellowMugAction ;
+  dul:isPerformedBy ex:PutDownBookChuckyAction ;
+  dul:isPerformedBy ex:PutDownJarRedLidAction .

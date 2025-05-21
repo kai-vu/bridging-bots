@@ -1,0 +1,136 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en ;
+    dul:hasComponent ex:Counter, ex:Refrigerator, ex:PaperTowelDispenser, ex:Clock, ex:LightFixture, ex:Stove, ex:Cabinet .
+
+ex:DiningArea a psr:Environment ;
+    rdfs:label "Dining Area"@en ;
+    dul:hasComponent ex:DiningTable, ex:Chair .
+
+ex:Counter a psr:Component ;
+    rdfs:label "Counter"@en ;
+    dul:hasLocation ex:KitchenLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation ex:KitchenLocation ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:PaperTowelDispenser a psr:Component ;
+    rdfs:label "Paper Towel Dispenser"@en ;
+    dul:hasLocation ex:KitchenLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pulling .
+
+ex:Clock a psr:Component ;
+    rdfs:label "Clock"@en ;
+    dul:hasLocation ex:KitchenLocation .
+
+ex:LightFixture a psr:Component ;
+    rdfs:label "Light Fixture"@en ;
+    dul:hasLocation ex:KitchenLocation .
+
+ex:Stove a psr:Component ;
+    rdfs:label "Stove"@en ;
+    dul:hasLocation ex:KitchenLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en ;
+    dul:hasLocation ex:KitchenLocation ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:DiningTable a psr:Component ;
+    rdfs:label "Dining Table"@en ;
+    dul:hasLocation ex:DiningAreaLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Chair a psr:Component ;
+    rdfs:label "Chair"@en ;
+    dul:hasLocation ex:DiningAreaLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:BoxOfCereal a psr:Component ;
+    rdfs:label "Box of Cereal"@en ;
+    dul:hasLocation ex:CounterLocation, ex:DiningTableLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Cup a psr:Component ;
+    rdfs:label "Cup"@en ;
+    dul:hasLocation ex:CounterLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:FoodPackaging a psr:Component ;
+    rdfs:label "Food Packaging"@en ;
+    dul:hasLocation ex:CounterLocation, ex:DiningTableLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Bowl a psr:Component ;
+    rdfs:label "Bowl"@en ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:Spoon a psr:Component ;
+    rdfs:label "Spoon"@en ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Grasping, soma:Pushing .
+
+ex:KitchenLocation a soma:Location ;
+    rdfs:label "Kitchen Location"@en ;
+    geo:sfContains ex:CounterLocation, ex:RefrigeratorLocation, ex:PaperTowelDispenserLocation, ex:ClockLocation, ex:LightFixtureLocation, ex:StoveLocation, ex:CabinetLocation .
+
+ex:DiningAreaLocation a soma:Location ;
+    rdfs:label "Dining Area Location"@en ;
+    geo:sfContains ex:DiningTableLocation, ex:ChairLocation .
+
+ex:CounterLocation a soma:Location ;
+    rdfs:label "Counter Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:Counter .
+
+ex:RefrigeratorLocation a soma:Location ;
+    rdfs:label "Refrigerator Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:Refrigerator .
+
+ex:PaperTowelDispenserLocation a soma:Location ;
+    rdfs:label "Paper Towel Dispenser Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:PaperTowelDispenser .
+
+ex:ClockLocation a soma:Location ;
+    rdfs:label "Clock Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:Clock .
+
+ex:LightFixtureLocation a soma:Location ;
+    rdfs:label "Light Fixture Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:LightFixture .
+
+ex:StoveLocation a soma:Location ;
+    rdfs:label "Stove Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:Stove .
+
+ex:CabinetLocation a soma:Location ;
+    rdfs:label "Cabinet Location"@en ;
+    geo:sfWithin ex:KitchenLocation ;
+    psr:onTopOf ex:Cabinet .
+
+ex:DiningTableLocation a soma:Location ;
+    rdfs:label "Dining Table Location"@en ;
+    geo:sfWithin ex:DiningAreaLocation ;
+    psr:onTopOf ex:DiningTable .
+
+ex:ChairLocation a soma:Location ;
+    rdfs:label "Chair Location"@en ;
+    geo:sfWithin ex:DiningAreaLocation ;
+    psr:onTopOf ex:Chair .

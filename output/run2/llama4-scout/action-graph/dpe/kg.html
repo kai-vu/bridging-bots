@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "assistant", "label": "assistant", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up yellow mug", "label": "pick up yellow mug", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "organize stack of white plates", "label": "organize stack of white plates", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "yellow mug", "label": "yellow mug", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up book titled Chucky", "label": "pick up book titled Chucky", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put book titled Chucky in dark gray cabinet", "label": "put book titled Chucky in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up book on table", "label": "pick up book on table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put box of Jello in dark gray cabinet", "label": "put box of Jello in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dark gray cabinet", "label": "dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "workflow", "label": "workflow", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put yellow mug in dark gray cabinet", "label": "put yellow mug in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put box of Rice Bubbles cereal in dark gray cabinet", "label": "put box of Rice Bubbles cereal in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen counter", "label": "kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put other book titled Chucky in dark gray cabinet", "label": "put other book titled Chucky in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put other jar with red lid in dark gray cabinet", "label": "put other jar with red lid in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put box of chocolate cake mix in dark gray cabinet", "label": "put box of chocolate cake mix in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put pot on stove", "label": "put pot on stove", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put plate with bowl on top in stack of white plates", "label": "put plate with bowl on top in stack of white plates", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up bottle of Evian water", "label": "pick up bottle of Evian water", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put jar with red lid in dark gray cabinet", "label": "put jar with red lid in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put bottle of Evian water in refrigerator", "label": "put bottle of Evian water in refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "put book on table in dark gray cabinet", "label": "put book on table in dark gray cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to kitchen counter", "label": "move to kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen", "label": "kitchen", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "affordance", "label": "affordance", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "book titled Chucky", "label": "book titled Chucky", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up jar with red lid", "label": "pick up jar with red lid", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "jar with red lid", "label": "jar with red lid", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up box of Rice Bubbles cereal", "label": "pick up box of Rice Bubbles cereal", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "box of Rice Bubbles cereal", "label": "box of Rice Bubbles cereal", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up box of Jello", "label": "pick up box of Jello", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "box of Jello", "label": "box of Jello", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up other jar with red lid", "label": "pick up other jar with red lid", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "other jar with red lid", "label": "other jar with red lid", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up other book titled Chucky", "label": "pick up other book titled Chucky", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "other book titled Chucky", "label": "other book titled Chucky", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to dining area", "label": "move to dining area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "book on table", "label": "book on table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up box of chocolate cake mix", "label": "pick up box of chocolate cake mix", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "box of chocolate cake mix", "label": "box of chocolate cake mix", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up plate with bowl on top", "label": "pick up plate with bowl on top", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "plate with bowl on top", "label": "plate with bowl on top", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "stack of white plates", "label": "stack of white plates", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bottle of Evian water", "label": "bottle of Evian water", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "refrigerator", "label": "refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pot", "label": "pot", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "stove", "label": "stove", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "edf7a144-b503-4909-b6fc-45e90c9f143e", "label": "edf7a144-b503-4909-b6fc-45e90c9f143e", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up yellow mug", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "organize stack of white plates", "width": 1}, {"arrows": "to", "from": "assistant", "label": "actsOn", "to": "yellow mug", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up book titled Chucky", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put book titled Chucky in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up book on table", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put box of Jello in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "actsOn", "to": "dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasWorkflow", "to": "workflow", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put yellow mug in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put box of Rice Bubbles cereal in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "actsOn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put other book titled Chucky in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put other jar with red lid in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put box of chocolate cake mix in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put pot on stove", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put plate with bowl on top in stack of white plates", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up bottle of Evian water", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put jar with red lid in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put bottle of Evian water in refrigerator", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "put book on table in dark gray cabinet", "width": 1}, {"arrows": "to", "from": "workflow", "label": "hasAction", "to": "move to kitchen counter", "width": 1}, {"arrows": "to", "from": "move to kitchen counter", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "kitchen counter", "label": "isLocatedIn", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "pick up yellow mug", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "yellow mug", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put yellow mug in dark gray cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "dark gray cabinet", "label": "hasAffordance", "to": "affordance", "width": 1}, {"arrows": "to", "from": "dark gray cabinet", "label": "isLocatedIn", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "affordance", "label": "isAffordedBy", "to": "dark gray cabinet", "width": 1}, {"arrows": "to", "from": "book titled Chucky", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put book titled Chucky in dark gray cabinet", "label": "precedes", "to": "pick up jar with red lid", "width": 1}, {"arrows": "to", "from": "jar with red lid", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put jar with red lid in dark gray cabinet", "label": "follows", "to": "pick up box of Rice Bubbles cereal", "width": 1}, {"arrows": "to", "from": "box of Rice Bubbles cereal", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put box of Rice Bubbles cereal in dark gray cabinet", "label": "precedes", "to": "pick up box of Jello", "width": 1}, {"arrows": "to", "from": "box of Jello", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put box of Jello in dark gray cabinet", "label": "follows", "to": "pick up other jar with red lid", "width": 1}, {"arrows": "to", "from": "other jar with red lid", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put other jar with red lid in dark gray cabinet", "label": "precedes", "to": "pick up other book titled Chucky", "width": 1}, {"arrows": "to", "from": "other book titled Chucky", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put other book titled Chucky in dark gray cabinet", "label": "follows", "to": "move to dining area", "width": 1}, {"arrows": "to", "from": "book on table", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put book on table in dark gray cabinet", "label": "precedes", "to": "pick up box of chocolate cake mix", "width": 1}, {"arrows": "to", "from": "box of chocolate cake mix", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "put box of chocolate cake mix in dark gray cabinet", "label": "follows", "to": "pick up plate with bowl on top", "width": 1}, {"arrows": "to", "from": "plate with bowl on top", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "stack of white plates", "label": "isOrganizedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "stack of white plates", "label": "isLocatedOn", "to": "kitchen counter", "width": 1}, {"arrows": "to", "from": "bottle of Evian water", "label": "isPickedUpBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "isLocatedIn", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "pot", "label": "isPlacedOn", "to": "stove", "width": 1}, {"arrows": "to", "from": "stove", "label": "isLocatedIn", "to": "kitchen", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

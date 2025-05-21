@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BZmeTrUoW94Xdp3UrXZl9mXXEPDvs",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Objects on the left side of the environment include a beige countertop with several food items: a box of Jello, a box of rice bubbles cereal, a jar of strawberry jam, a carton of Alpen salt, and a package of shortbread cookies. Behind these objects, there are dark-colored cabinets with vertical handles, and a white refrigerator positioned to the right of the cabinets. The wall behind the countertop is plain white.\n\nIn the middle view, the countertop continues with more items: a bottle of Evian water, a small box of cereal, a pitcher, a drinking glass, and a bowl of cereal. The wall behind the table is plain white with no decorations, and there are white chairs around the table, with one at the right edge of the view. \n\nIn the upper right view, the environment shows a side perspective of the kitchen with the countertop and food items, emphasizing the upper cabinets with handles and a small wooden framed window with a black mesh screen above the counter. The right wall has a plain white surface, and the ceiling has a large round white light fixture. \n\nOverall, the environment consists of a kitchen with dark cabinets, a beige countertop, white walls, and wooden flooring, with food items and kitchenware distributed across the countertop and adjacent areas.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747868197,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 255,
+        "prompt_tokens": 18687,
+        "total_tokens": 18942,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

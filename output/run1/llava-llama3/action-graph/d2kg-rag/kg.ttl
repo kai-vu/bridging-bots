@@ -1,58 +1,114 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix :       <http://example.org/data/> .
+@prefix ex: <http://example.org/data/> .
 
-:task1 a dul:Action ;
-    rdfs:label "Identify misplaced items" ;
-    psr:actsOn :kitchen_items .
+ex:action1 a dul:Action ;
+    rdfs:label "PickUpCoffeeCup"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:coffeeCup .
 
-:kitchen_items a psr:Component ;
-    rdfs:label "Kitchen items" .
+ex:coffeeCup a psr:Component ;
+    rdfs:label "CoffeeCup"@en .
 
-:task2 a dul:Action ;
-    rdfs:label "Pick up misplaced items" ;
-    psr:actsOn :kitchen_items ;
-    psr:isAffordedBy soma:PickingUp .
-
-:task3 a dul:Action ;
-    rdfs:label "Put down items in standard storage locations" ;
-    psr:actsOn :kitchen_items ;
+ex:action2 a dul:Action ;
+    rdfs:label "PutDownCoffeeCup"@en ;
     psr:isAffordedBy soma:PuttingDown ;
-    psr:follows :task2 .
+    psr:actsOn ex:coffeeCup ;
+    psr:follows ex:action1 .
 
-:task4 a dul:Action ;
-    rdfs:label "Open cabinets" ;
-    psr:actsOn :cabinets ;
-    psr:isAffordedBy soma:Opening .
+ex:action3 a dul:Action ;
+    rdfs:label "PickUpSUNMAIDBox"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:sunMaidBox .
 
-:cabinets a psr:Component ;
-    rdfs:label "Cabinets" .
+ex:sunMaidBox a psr:Component ;
+    rdfs:label "SUNMAIDBox"@en .
 
-:task5 a dul:Action ;
-    rdfs:label "Place items in cabinets" ;
-    psr:actsOn :kitchen_items ;
+ex:action4 a dul:Action ;
+    rdfs:label "PutDownSUNMAIDBox"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:sunMaidBox ;
+    psr:follows ex:action3 .
+
+ex:action5 a dul:Action ;
+    rdfs:label "PickUpKnife"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:knife .
+
+ex:knife a psr:Component ;
+    rdfs:label "Knife"@en .
+
+ex:action6 a dul:Action ;
+    rdfs:label "PutDownKnife"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:knife ;
+    psr:follows ex:action5 .
+
+ex:action7 a dul:Action ;
+    rdfs:label "PickUpBottleOfWater"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:bottleOfWater .
+
+ex:bottleOfWater a psr:Component ;
+    rdfs:label "BottleOfWater"@en .
+
+ex:action8 a dul:Action ;
+    rdfs:label "PutDownBottleOfWater"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:bottleOfWater ;
+    psr:follows ex:action7 .
+
+ex:action9 a dul:Action ;
+    rdfs:label "PickUpCerealBox"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:cerealBox .
+
+ex:cerealBox a psr:Component ;
+    rdfs:label "CerealBox"@en .
+
+ex:action10 a dul:Action ;
+    rdfs:label "PutDownCerealBox"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:cerealBox ;
+    psr:follows ex:action9 .
+
+ex:action11 a dul:Action ;
+    rdfs:label "PickUpTrash"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:trash .
+
+ex:trash a psr:Component ;
+    rdfs:label "Trash"@en .
+
+ex:action12 a dul:Action ;
+    rdfs:label "ThrowAwayTrash"@en ;
     psr:isAffordedBy soma:Pushing ;
-    psr:follows :task4 .
+    psr:actsOn ex:trash ;
+    psr:follows ex:action11 .
 
-:task6 a dul:Action ;
-    rdfs:label "Close cabinets" ;
-    psr:actsOn :cabinets ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows :task5 .
+ex:action1 a dul:Action ;
+    psr:isPerformedBy ex:robot .
 
-:instruction1 a psr:Instruction ;
-    rdfs:label "Restore kitchen to organized state" ;
-    psr:hasWorkflow :workflow1 .
+ex:robot a dul:Agent ;
+    rdfs:label "Robot"@en .
 
-:workflow1 a psr:Workflow ;
-    rdfs:label "Kitchen organization workflow" ;
-    psr:hasAction :task1 ;
-    psr:hasAction :task2 ;
-    psr:hasAction :task3 ;
-    psr:hasAction :task4 ;
-    psr:hasAction :task5 ;
-    psr:hasAction :task6 .
+ex:workflow a psr:Workflow ;
+    psr:hasAction ex:action1 ;
+    psr:hasAction ex:action2 ;
+    psr:hasAction ex:action3 ;
+    psr:hasAction ex:action4 ;
+    psr:hasAction ex:action5 ;
+    psr:hasAction ex:action6 ;
+    psr:hasAction ex:action7 ;
+    psr:hasAction ex:action8 ;
+    psr:hasAction ex:action9 ;
+    psr:hasAction ex:action10 ;
+    psr:hasAction ex:action11 ;
+    psr:hasAction ex:action12 .
+
+ex:instruction a psr:Instruction ;
+    psr:hasWorkflow ex:workflow .

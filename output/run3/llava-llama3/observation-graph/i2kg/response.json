@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-0399809f-fe0e-4983-aacf-741af0b721bc",
+    "created": 1747868803,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The output format is Turtle. Here's the generated Knowledge Graph:\n\n```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://example.org/data/> .\n\npsr:Environment a owl:Class ;\n    psr:hasComponent psr:DiningTable ;\n    psr:hasComponent psr:Refrigerator .\n\npsr:Component a owl:Class ;\n    rdfs:subClassOf psr:Environment.\n\npsr:DiningTable a owl:Class ;\n    psr:onTopOf psr:DiningTable ;\n    psr:hasLocation psr:TableLocation .\n\npsr:Refrigerator a owl:Class ;\n    psr:onTopOf psr:Refrigerator.\n\npsr:Furniture a owl:Class ;\n    rdfs:subClassOf psr:Component.\n\npsr:TableLocation a owl:Class ;\n    rdfs:subClassOf psr:Location.\n\npsr:Location a owl:Class ;\n    rdfs:subClassOf psr:Environment.\n\npsr:Object a owl:Class ;\n    rdfs:subClassOf psr:Component.\n\npsr:DiningTable a psr:Entity ;\n    psr:onTopOf psr:Refrigerator ;\n    psr:hasLocation psr:TableLocation.\n\npsr:Refrigerator a psr:Entity ;\n    psr:hasLocation psr:RefrigeratorLocation.\n\npsr:Object a psr:Entity ;\n    psr:onTopOf psr:DiningTable ;\n    psr:hasLocation psr:ObjectLocation.\n\npsr:TableLocation a psr:Entity ;\n    psr:label \"TableLocation\"@en.\n\npsr:RefrigeratorLocation a psr:Entity ;\n    psr:label \"RefrigeratorLocation\"@en.\n\npsr:ObjectLocation a psr:Entity ;\n    psr:label \"ObjectLocation\"@en.\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 7.22,
+        "prompt_token/s": 44.15,
+        "total_duration": 169194378525,
+        "load_duration": 50181991,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 92775749298,
+        "eval_count": 551,
+        "completion_tokens": 551,
+        "eval_duration": 76334499994,
+        "approximate_total": "0h2m49s",
+        "total_tokens": 4647,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

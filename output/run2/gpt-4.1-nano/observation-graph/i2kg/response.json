@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BZmes26c7N1GenV0X6hK55r1siR73",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psr-action#> .\n\n@prefix : <http://example.org/data/> .\n\n# Define environment\n:environment a psr:Environment .\n\n# Define components in the environment\n:refrigerator a psr:Appliance ;\n    dul:hasLocation :currentLocationRefrigerator ;\n    rdfs:label \"Refrigerator\" .\n\n:table a psr:Furniture ;\n    dul:hasLocation :currentLocationTable ;\n    rdfs:label \"Kitchen Table\" .\n\n:cupboard a psr:Furniture ;\n    dul:hasLocation :currentLocationCupboard ;\n    rdfs:label \"Cupboard\" .\n\n# Define locations\n:currentLocationRefrigerator a psr:CurrentLocation ;\n    geo:sfContains :refrigerator .\n\n:currentLocationTable a psr:CurrentLocation ;\n    geo:sfContains :table .\n\n:currentLocationCupboard a psr:CurrentLocation ;\n    geo:sfContains :cupboard .\n\n# Standard locations\n:standardLocationRefrigerator a psr:StandardLocation .\n\n:standardLocationTable a psr:StandardLocation .\n\n:standardLocationCupboard a psr:StandardLocation .\n\n# Objects on the kitchen table\n:plate a psr:Object ;\n    rdfs:label \"Plate\" .\n\n:spoon a psr:Object ;\n    rdfs:label \"Spoon\" .\n\n# Locations of objects\n:plateLocation a psr:CurrentLocation ;\n    geo:sfContains :plate ;\n    geo:sfOnTopOf :table .\n\n:spoonLocation a psr:CurrentLocation ;\n    geo:sfContains :spoon ;\n    geo:sfOnTopOf :table .\n\n# Objects in the cupboard\n:jar a psr:Object ;\n    rdfs:label \"Jar\" .\n\n:cup a psr:Object ;\n    rdfs:label \"Cup\" .\n\n:jarLocation a psr:CurrentLocation ;\n    geo:sfContains :jar ;\n    geo:sfOnTopOf :cupboard .\n\n:cupLocation a psr:CurrentLocation ;\n    geo:sfContains :cup ;\n    geo:sfOnTopOf :cupboard .\n\n# Define affordances for objects\n:door a psr:Component ;\n    rdfs:label \"Refrigerator Door\" ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\n:plate psr:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .\n\n:jar psr:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .\n\n# Relations of object location\n:refrigeratorLocatedIn a geo:sfContains ;\n    rdfs:domain psr:Location ;\n    rdfs:range psr:Component ;\n    rdfs:label \"Refrigerator contains\" ;\n    geo:sfContains :refrigerator .\n\n:tableContainsObjects a geo:sfContains ;\n    rdfs:domain psr:Location ;\n    rdfs:range psr:Object ;\n    rdfs:label \"Table contains objects\" .\n\n:cupboardContainsObjects a geo:sfContains ;\n    rdfs:domain psr:Location ;\n    rdfs:range psr:Object ;\n    rdfs:label \"Cupboard contains objects\" .\n\n# Environment components\n:environment psr:hasComponent :refrigerator, :table, :cupboard .\n\n# Relations between locations and components\n:refrigerator hasLocation :currentLocationRefrigerator .\n:table hasLocation :currentLocationTable .\n:cupboard hasLocation :currentLocationCupboard .\n\n# Additional component relations\n:table :hasComponent :plate, :spoon .\n:cupboard :hasComponent :jar, :cup .\n",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747868222,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 883,
+        "prompt_tokens": 20214,
+        "total_tokens": 21097,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

@@ -1,153 +1,101 @@
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
-@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
-@prefix ex:     <http://example.com/kitchen#> .
+@prefix ex: <http://example.org/data/> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-ex:Kitchen a psr:Environment ;
-    rdfs:label "Kitchen" ;
-    dul:hasComponent ex:Countertop,
-                     ex:OverheadCabinets,
-                     ex:Refrigerator,
+ex:KitchenDiningEnvironment a psr:Environment ;
+    dul:hasComponent ex:KitchenCabinetSet,
                      ex:Sink,
-                     ex:Window,
                      ex:Stovetop,
-                     ex:MetalPot,
                      ex:RangeHood,
-                     ex:OrangeMug,
+                     ex:Pot,
+                     ex:YellowMug,
                      ex:ChuckyBox1,
-                     ex:ChuckyBox2,
-                     ex:RiceBubblesBox,
                      ex:JamJar1,
+                     ex:RiceBubblesBox,
+                     ex:JelloBox,
+                     ex:ChuckyBox2,
+                     ex:PlatesStack,
                      ex:JamJar2,
-                     ex:PlateStack,
-                     ex:JellOBox1,
-                     ex:JellOBox2,
-                     ex:SaltContainer,
-                     ex:PantryCabinet .
-
-ex:DiningArea a psr:Environment ;
-    rdfs:label "Dining Area" ;
-    dul:hasComponent ex:DiningTable,
+                     ex:AlpenSaltContainer,
+                     ex:Pantry,
+                     ex:Refrigerator,
+                     ex:DiningTable,
                      ex:Chair1,
                      ex:Chair2,
                      ex:Chair3,
                      ex:Chair4,
-                     ex:FruitBowl,
+                     ex:Bowl,
+                     ex:FruitGroup,
                      ex:WaterBottle,
-                     ex:CookieBox,
+                     ex:ShortbreadBox,
                      ex:Pitcher,
-                     ex:WineGlass .
+                     ex:WineGlass,
+                     ex:CeilingLight,
+                     ex:WhiteDoor,
+                     ex:KitchenCountertopLocation,
+                     ex:TabletopLocation,
+                     ex:InsideBowlLocation .
 
-ex:Countertop a psr:Furniture .
-ex:OverheadCabinets a psr:Furniture .
-ex:Refrigerator a psr:Appliance .
+ex:KitchenCabinetSet a psr:Furniture .
 ex:Sink a psr:Appliance .
-ex:Window a psr:Object .
 ex:Stovetop a psr:Appliance .
-ex:MetalPot a psr:Object .
 ex:RangeHood a psr:Appliance .
-ex:OrangeMug a psr:Object .
+ex:Pot a psr:Object .
+ex:YellowMug a psr:Object .
 ex:ChuckyBox1 a psr:Object .
-ex:ChuckyBox2 a psr:Object .
-ex:RiceBubblesBox a psr:Object .
 ex:JamJar1 a psr:Object .
+ex:RiceBubblesBox a psr:Object .
+ex:JelloBox a psr:Object .
+ex:ChuckyBox2 a psr:Object .
+ex:PlatesStack a psr:Object .
 ex:JamJar2 a psr:Object .
-ex:PlateStack a psr:Object .
-ex:JellOBox1 a psr:Object .
-ex:JellOBox2 a psr:Object .
-ex:SaltContainer a psr:Object .
-ex:PantryCabinet a psr:Furniture .
-
+ex:AlpenSaltContainer a psr:Object .
+ex:Pantry a psr:Furniture .
+ex:Refrigerator a psr:Appliance .
 ex:DiningTable a psr:Furniture .
 ex:Chair1 a psr:Furniture .
 ex:Chair2 a psr:Furniture .
 ex:Chair3 a psr:Furniture .
 ex:Chair4 a psr:Furniture .
-ex:FruitBowl a psr:Object .
+ex:Bowl a psr:Object .
+ex:FruitGroup a psr:Object .
 ex:WaterBottle a psr:Object .
-ex:CookieBox a psr:Object .
+ex:ShortbreadBox a psr:Object .
 ex:Pitcher a psr:Object .
 ex:WineGlass a psr:Object .
+ex:CeilingLight a psr:Object .
+ex:WhiteDoor a psr:Object .
 
-ex:MetalPotLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Stovetop .
-ex:MetalPot dul:hasLocation ex:MetalPotLocation .
+ex:KitchenCountertopLocation a psr:Location ;
+    psr:onTopOf ex:KitchenCabinetSet .
 
-ex:OrangeMugLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:OrangeMug dul:hasLocation ex:OrangeMugLocation .
-
-ex:ChuckyBox1Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:ChuckyBox1 dul:hasLocation ex:ChuckyBox1Location .
-
-ex:ChuckyBox2Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:ChuckyBox2 dul:hasLocation ex:ChuckyBox2Location .
-
-ex:RiceBubblesBoxLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:RiceBubblesBox dul:hasLocation ex:RiceBubblesBoxLocation .
-
-ex:JamJar1Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:JamJar1 dul:hasLocation ex:JamJar1Location .
-
-ex:JamJar2Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:JamJar2 dul:hasLocation ex:JamJar2Location .
-
-ex:PlateStackLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:PlateStack dul:hasLocation ex:PlateStackLocation .
-
-ex:JellOBox1Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:JellOBox1 dul:hasLocation ex:JellOBox1Location .
-
-ex:JellOBox2Location a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:JellOBox2 dul:hasLocation ex:JellOBox2Location .
-
-ex:SaltContainerLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
-ex:SaltContainer dul:hasLocation ex:SaltContainerLocation .
-
-ex:FruitBowlLocation a psr:Location, psr:CurrentLocation ;
+ex:TabletopLocation a psr:Location ;
     psr:onTopOf ex:DiningTable .
-ex:FruitBowl dul:hasLocation ex:FruitBowlLocation .
 
-ex:Orange1 a psr:Object .
-ex:Orange2 a psr:Object .
-ex:Orange3 a psr:Object .
+ex:InsideBowlLocation a psr:Location ;
+    geo:sfWithin ex:Bowl .
 
-ex:Orange1Location a psr:Location, psr:CurrentLocation ;
-    geo:sfWithin ex:FruitBowl .
-ex:Orange1 dul:hasLocation ex:Orange1Location .
+ex:Sink dul:hasLocation ex:KitchenCountertopLocation .
+ex:Stovetop dul:hasLocation ex:KitchenCountertopLocation .
+ex:Pot dul:hasLocation ex:KitchenCountertopLocation .
+ex:YellowMug dul:hasLocation ex:KitchenCountertopLocation .
+ex:ChuckyBox1 dul:hasLocation ex:KitchenCountertopLocation .
+ex:JamJar1 dul:hasLocation ex:KitchenCountertopLocation .
+ex:RiceBubblesBox dul:hasLocation ex:KitchenCountertopLocation .
+ex:JelloBox dul:hasLocation ex:KitchenCountertopLocation .
+ex:ChuckyBox2 dul:hasLocation ex:KitchenCountertopLocation .
+ex:PlatesStack dul:hasLocation ex:KitchenCountertopLocation .
+ex:JamJar2 dul:hasLocation ex:KitchenCountertopLocation .
+ex:AlpenSaltContainer dul:hasLocation ex:KitchenCountertopLocation .
 
-ex:Orange2Location a psr:Location, psr:CurrentLocation ;
-    geo:sfWithin ex:FruitBowl .
-ex:Orange2 dul:hasLocation ex:Orange2Location .
+ex:Bowl dul:hasLocation ex:TabletopLocation .
+ex:ShortbreadBox dul:hasLocation ex:TabletopLocation .
+ex:Pitcher dul:hasLocation ex:TabletopLocation .
+ex:WineGlass dul:hasLocation ex:TabletopLocation .
 
-ex:Orange3Location a psr:Location, psr:CurrentLocation ;
-    geo:sfWithin ex:FruitBowl .
-ex:Orange3 dul:hasLocation ex:Orange3Location .
-
-ex:WaterBottleLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
-ex:WaterBottle dul:hasLocation ex:WaterBottleLocation .
-
-ex:CookieBoxLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
-ex:CookieBox dul:hasLocation ex:CookieBoxLocation .
-
-ex:PitcherLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
-ex:Pitcher dul:hasLocation ex:PitcherLocation .
-
-ex:WineGlassLocation a psr:Location, psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
-ex:WineGlass dul:hasLocation ex:WineGlassLocation .
+ex:FruitGroup dul:hasLocation ex:InsideBowlLocation .
+ex:WaterBottle dul:hasLocation ex:InsideBowlLocation .

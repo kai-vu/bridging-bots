@@ -1,39 +1,19 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:bowl kitchen:hasLocation kitchen:on_dining_table .
+kitchen:kitchen kitchen:hasComponent kitchen:cabinetry,
+        kitchen:counter,
+        kitchen:countertop,
+        kitchen:refrigerator,
+        kitchen:robot,
+        kitchen:sink ;
+    kitchen:sfAdjacent kitchen:dining_area .
 
-kitchen:cabinets kitchen:hasProperty kitchen:dark .
+kitchen:counter kitchen:hasComponent kitchen:coffee_machine,
+        kitchen:cups .
 
-kitchen:countertop kitchen:hasComponent kitchen:bottles,
-        kitchen:bowls,
-        kitchen:cereal_boxes,
-        kitchen:cups,
-        kitchen:loaf_of_bread .
+kitchen:dining_area kitchen:hasComponent kitchen:dining_table,
+        kitchen:doorway,
+        kitchen:glass_door .
 
-kitchen:countertops kitchen:hasProperty kitchen:dark .
-
-kitchen:dining_table kitchen:hasComponent kitchen:carton_of_milk,
-        kitchen:cereal_boxes,
-        kitchen:roll_of_paper_towels ;
-    kitchen:hasLocation kitchen:center_of_kitchen .
-
-kitchen:glass_door kitchen:hasLocation kitchen:right_side .
-
-kitchen:kitchen kitchen:hasComponent kitchen:black_countertops,
-        kitchen:dark_wood_cabinets,
-        kitchen:white_tile_backsplash .
-
-kitchen:light_fixture kitchen:hasLocation kitchen:above_countertop .
-
-kitchen:oven kitchen:hasLocation kitchen:left_side .
-
-kitchen:refrigerator kitchen:hasLocation kitchen:next_to_dining_table .
-
-kitchen:sink kitchen:hasLocation kitchen:under_window .
-
-kitchen:small_white_refrigerator kitchen:hasLocation kitchen:one_side_of_dining_table .
-
-kitchen:trash_can kitchen:hasLocation kitchen:under_window_above_sink .
-
-kitchen:walls kitchen:hasProperty kitchen:white .
+kitchen:dining_table kitchen:hasComponent kitchen:box .
 

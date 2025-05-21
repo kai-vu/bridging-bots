@@ -1,0 +1,35 @@
+@prefix psr: <http://psrc-action.org/> .
+@prefix dul: <http://dul.co/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs-label: <http://www.w3.org/2018/03/rdf-labels/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+psr:Instruction a owl:Entity ;
+    rdfs:label "Restore the kitchen to an organized state"@en ;
+    psr:hasWorkflow dul:Workflow .
+
+dul:Workflow a owl:Entity ;
+    rdfs:label "Organizing the kitchen"@en .
+
+dul:Action a dul:Workflow ;
+    rdfs:comment "Actions taken to organize the kitchen."@en ;
+    psr:precedes psr:Action ;
+    psr:follows psr:Action ;
+    psr:isPerformedBy psr:Agent ;
+    psr:actsOn dul:Furniture .
+
+dul:Agent a owl:Entity ;
+    rdfs:label "Robot"@en ;
+    rdfs:comment "The robot performing actions to organize the kitchen."@en .
+
+dul:Furniture a owl:Entity ;
+    rdfs:label "Table"@en ;
+    rdfs:comment "A piece of furniture in the kitchen."@en ;
+    psr:isAffordedBy dul:Affordance ;
+    psr:hasNaturalLanguage "Organize the kitchen"@en .
+
+dul:Affordance a owl:Entity ;
+    rdfs:comment "The affordances for the actions to organize the kitchen."@en ;
+    rdfs-label:value dul:Closing ;
+    psr:isPerformedBy psr:Agent .

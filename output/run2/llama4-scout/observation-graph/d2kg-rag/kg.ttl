@@ -1,0 +1,134 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Environment a psr:Environment ;
+  rdfs:label "Kitchen and Dining Area"@en .
+
+ex:Kitchen a psr:Location ;
+  rdfs:label "Kitchen"@en ;
+  dul:hasLocation ex:Environment ;
+  rdfs:comment "The kitchen area"@en .
+
+ex:DiningArea a psr:Location ;
+  rdfs:label "Dining Area"@en ;
+  dul:hasLocation ex:Environment ;
+  rdfs:comment "The dining area"@en .
+
+ex:KitchenFloor a psr:Location ;
+  rdfs:label "Kitchen Floor"@en ;
+  geo:sfWithin ex:Kitchen ;
+  rdfs:comment "The kitchen floor"@en .
+
+ex:KitchenWalls a psr:Location ;
+  rdfs:label "Kitchen Walls"@en ;
+  geo:sfWithin ex:Kitchen ;
+  rdfs:comment "The kitchen walls"@en .
+
+ex:Refrigerator a psr:Appliance ;
+  rdfs:label "Refrigerator"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:KitchenCounters a psr:Component ;
+  rdfs:label "Kitchen Counters"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:Stove a psr:Component ;
+  rdfs:label "Stove"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:Pot a psr:Object ;
+  rdfs:label "Pot"@en ;
+  dul:hasLocation ex:Stove ;
+  psr:onTopOf ex:Stove .
+
+ex:Mug a psr:Object ;
+  rdfs:label "Yellow Mug"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:Book1 a psr:Object ;
+  rdfs:label "Chucky"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:Jar1 a psr:Object ;
+  rdfs:label "Jar with Red Lid"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:RiceBubbles a psr:Object ;
+  rdfs:label "Rice Bubbles Cereal"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:Jello a psr:Object ;
+  rdfs:label "Jello"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:Book2 a psr:Object ;
+  rdfs:label "Chucky"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:Plates a psr:Object ;
+  rdfs:label "Stack of White Plates"@en ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:DiningTable a psr:Furniture ;
+  rdfs:label "Dining Table"@en ;
+  dul:hasLocation ex:DiningArea ;
+  psr:onTopOf ex:DiningArea .
+
+ex:Chairs a psr:Furniture ;
+  rdfs:label "Four White Chairs"@en ;
+  dul:hasLocation ex:DiningArea ;
+  psr:onTopOf ex:DiningArea .
+
+ex:EvianWater a psr:Object ;
+  rdfs:label "Evian Water"@en ;
+  dul:hasLocation ex:DiningTable ;
+  psr:onTopOf ex:DiningTable .
+
+ex:Plate a psr:Object ;
+  rdfs:label "Plate"@en ;
+  dul:hasLocation ex:DiningTable ;
+  psr:onTopOf ex:DiningTable .
+
+ex:Bowl a psr:Object ;
+  rdfs:label "Bowl"@en ;
+  dul:hasLocation ex:Plate ;
+  psr:onTopOf ex:Plate .
+
+ex:CakeMix a psr:Object ;
+  rdfs:label "Chocolate Cake Mix"@en ;
+  dul:hasLocation ex:DiningTable ;
+  psr:onTopOf ex:DiningTable .
+
+ex:Book3 a psr:Object ;
+  rdfs:label "Book"@en ;
+  dul:hasLocation ex:DiningTable ;
+  psr:onTopOf ex:DiningTable .
+
+ex:Door a psr:Component ;
+  rdfs:label "Door"@en ;
+  dul:hasLocation ex:DiningArea .
+
+ex:RangeHood a psr:Component ;
+  rdfs:label "Range Hood"@en ;
+  dul:hasLocation ex:Kitchen ;
+  geo:sfOverlaps ex:Stove .

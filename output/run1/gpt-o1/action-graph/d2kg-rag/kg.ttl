@@ -1,185 +1,164 @@
-@prefix ex: <http://example.com/ontology#> .
-@prefix : <http://example.com/instances#> .
-@base <http://example.com/> .
+@prefix onto: <http://example.org/ontology#> .
+@prefix ex: <http://example.org/data/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:robot1 a ex:Robot .
+ex:Action1 a onto:IdentifyAction ;
+  onto:hasAgent ex:Robot ;
+  onto:targetsLocation ex:KitchenCountertop, ex:DiningTable ;
+  onto:precedes ex:Action2 .
 
-:jamJar1 a ex:Item .
-:jamJar2 a ex:Item .
-:riceBubblesBox a ex:Item .
-:chuckyBox1 a ex:Item .
-:chuckyBox2 a ex:Item .
-:saltContainer a ex:Item .
-:jelloBox a ex:Item .
-:mug a ex:Item .
-:platesStack a ex:Item .
-:shortbreadBox a ex:Item .
-:waterBottle a ex:Item .
-:wineGlass a ex:Item .
-:pot a ex:Item .
+ex:Action2 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:Pot ;
+  onto:hasLocation ex:Stovetop ;
+  onto:precedes ex:Action3 .
 
-:pantry a ex:Location .
-:fridge a ex:Location .
-:overheadCabinet a ex:Location .
-:sink a ex:Location .
-:kitchenCounter a ex:Location .
-:stove a ex:Location .
-:diningTable a ex:Location .
+ex:Action3 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:Pot ;
+  onto:hasDestination ex:LowerCabinet ;
+  onto:precedes ex:Action4 .
 
-:RestoreKitchenTask a ex:Task ;
-   ex:hasAction :Action1 .
+ex:Action4 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ChuckyBox1 ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action5 .
 
-:Action1 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :jamJar1 ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action2 .
+ex:Action5 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ChuckyBox1 ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action6 .
 
-:Action2 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :jamJar1 ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action3 .
+ex:Action6 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JamJar1 ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action7 .
 
-:Action3 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :jamJar2 ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action4 .
+ex:Action7 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JamJar1 ;
+  onto:hasDestination ex:Refrigerator ;
+  onto:precedes ex:Action8 .
 
-:Action4 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :jamJar2 ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action5 .
+ex:Action8 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JamJar2 ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action9 .
 
-:Action5 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :riceBubblesBox ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action6 .
+ex:Action9 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JamJar2 ;
+  onto:hasDestination ex:Refrigerator ;
+  onto:precedes ex:Action10 .
 
-:Action6 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :riceBubblesBox ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action7 .
+ex:Action10 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:RiceBubblesBox ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action11 .
 
-:Action7 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :chuckyBox1 ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action8 .
+ex:Action11 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:RiceBubblesBox ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action12 .
 
-:Action8 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :chuckyBox1 ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action9 .
+ex:Action12 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JelloBox ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action13 .
 
-:Action9 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :chuckyBox2 ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action10 .
+ex:Action13 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:JelloBox ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action14 .
 
-:Action10 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :chuckyBox2 ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action11 .
+ex:Action14 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ChuckyBox2 ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action15 .
 
-:Action11 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :saltContainer ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action12 .
+ex:Action15 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ChuckyBox2 ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action16 .
 
-:Action12 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :saltContainer ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action13 .
+ex:Action16 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:StackedPlates ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action17 .
 
-:Action13 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :jelloBox ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action14 .
+ex:Action17 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:StackedPlates ;
+  onto:hasDestination ex:DishCabinet ;
+  onto:precedes ex:Action18 .
 
-:Action14 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :jelloBox ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action15 .
+ex:Action18 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:AlpenSalt ;
+  onto:hasLocation ex:KitchenCountertop ;
+  onto:precedes ex:Action19 .
 
-:Action15 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :pot ;
-   ex:fromLocation :stove ;
-   ex:hasNext :Action16 .
+ex:Action19 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:AlpenSalt ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action20 .
 
-:Action16 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :pot ;
-   ex:toLocation :sink ;
-   ex:hasNext :Action17 .
+ex:Action20 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:LargeWaterBottle ;
+  onto:hasLocation ex:FruitBowl ;
+  onto:precedes ex:Action21 .
 
-:Action17 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :mug ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action18 .
+ex:Action21 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:LargeWaterBottle ;
+  onto:hasDestination ex:Refrigerator ;
+  onto:precedes ex:Action22 .
 
-:Action18 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :mug ;
-   ex:toLocation :overheadCabinet ;
-   ex:hasNext :Action19 .
+ex:Action22 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ShortbreadBox ;
+  onto:hasLocation ex:DiningTable ;
+  onto:precedes ex:Action23 .
 
-:Action19 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :platesStack ;
-   ex:fromLocation :kitchenCounter ;
-   ex:hasNext :Action20 .
+ex:Action23 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:ShortbreadBox ;
+  onto:hasDestination ex:Pantry ;
+  onto:precedes ex:Action24 .
 
-:Action20 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :platesStack ;
-   ex:toLocation :overheadCabinet ;
-   ex:hasNext :Action21 .
+ex:Action24 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:GlassPitcher ;
+  onto:hasLocation ex:DiningTable ;
+  onto:precedes ex:Action25 .
 
-:Action21 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :shortbreadBox ;
-   ex:fromLocation :diningTable ;
-   ex:hasNext :Action22 .
+ex:Action25 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:GlassPitcher ;
+  onto:hasDestination ex:DishCabinet ;
+  onto:precedes ex:Action26 .
 
-:Action22 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :shortbreadBox ;
-   ex:toLocation :pantry ;
-   ex:hasNext :Action23 .
+ex:Action26 a onto:PickUpAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:WineGlass ;
+  onto:hasLocation ex:DiningTable ;
+  onto:precedes ex:Action27 .
 
-:Action23 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :waterBottle ;
-   ex:fromLocation :diningTable ;
-   ex:hasNext :Action24 .
-
-:Action24 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :waterBottle ;
-   ex:toLocation :fridge ;
-   ex:hasNext :Action25 .
-
-:Action25 a ex:PickAction ;
-   ex:agent :robot1 ;
-   ex:object :wineGlass ;
-   ex:fromLocation :diningTable ;
-   ex:hasNext :Action26 .
-
-:Action26 a ex:PlaceAction ;
-   ex:agent :robot1 ;
-   ex:object :wineGlass ;
-   ex:toLocation :overheadCabinet .
+ex:Action27 a onto:PlaceAction ;
+  onto:hasAgent ex:Robot ;
+  onto:hasTheme ex:WineGlass ;
+  onto:hasDestination ex:DishCabinet .

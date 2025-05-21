@@ -1,79 +1,98 @@
-@prefix : <http://example.com/ontology#>
-@prefix dul: <http://www.w3.org/ns/dul#>
-@prefix psr: <http://www.w3.org/2007/01/rdf-syntax-query#>
+@prefix owl: <http://www.w3.org/2002/owl/>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix psr: <http://example.com/psr/>
 
-# Instruction
-:Instruction rdf:type :Workflow .
-:Instruction hasAction :Opening .
-:Instruction hasAction :PickingUp .
-:Instruction hasAction :Closing .
-:Instruction hasAction :Delivering .
-:Instruction hasAction :PuttingDown .
-:Instruction hasAction :Pulling .
-:Instruction hasAction :Holding .
-:Instruction hasAgent :Robot .
+[a, b, c] a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Action"@en .
 
-# Kitchen Objects
-:Kitchen a dul:Component .
-:Fridge a dul:Component .
-:Cupboard a dul:Component.
-:Drawer a dul:Component.
+[a1, a2] a owl:Class ;
+    rdfs:subClassOf psr:Component ;
+    rdfs:label "Appliance"@en .
 
-:Fridge a :Appliance ;
-    :isPerformedBy :Robot .
+[f1, f2] a owl:Class ;
+    rdfs:subClassOf psr:Component ;
+    rdfs:label "Furniture"@en .
 
-:Refrigerator a :Appliance ;
-    :isPerformedBy :Robot .
+[o1, o2] a owl:Class ;
+    rdfs:subClassOf psr:Component ;
+    rdfs:label "Object"@en .
 
-:Cupboard a :Furniture ;
-    :isPerformedBy :Robot .
+[w1, w2] a owl:Class ;
+    rdfs:subClassOf psr:Workflow ;
+    rdfs:label "Workflow"@en .
 
-:Drawer a :Furniture ;
-    :isPerformedBy :Robot.
+[a3, a4] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Action"@en .
 
-# Kitchen Utensils and Items
-:KitchenUtensil a dul:Component .
-:Plate a dul:Component .
-:Bowl a dul:Component.
-:Spoon a dul:Component.
+[w1, w2] psr:hasWorkflow [a1, a2, a3] ;
+    rdfs:label "Instruction"@en .
 
-:RefrigeratorItem a :Object ;
-    :isPerformedBy :Robot.
+[a4, a5] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Delivering"@en .
 
-# Affordances
-:Opening a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Fridge .
+[a6, a7] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Closing"@en .
 
-:PickingUp a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :KitchenUtensil.
+[a8, a9] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Putting Down"@en .
 
-:Closing a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Drawer.
+[a10, a11] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Holding"@en .
 
-:Delivering a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Cupboard.
+[a12, a13] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Picking Up"@en .
 
-:PuttingDown a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :KitchenUtensil.
+[a14, a15] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Opening"@en .
 
-:Pulling a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Refrigerator.
+[a16, a17] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Pushing"@en .
 
-# Robot's Actions
-:Robot a dul:Agent .
+[a18, a19] a owl:Class ;
+    rdfs:subClassOf psr:Action ;
+    rdfs:label "Grasping"@en .
 
-# Relationships
-:Fridge a :ComponentOf :Kitchen.
-:Cupboard a :ComponentOf :Kitchen.
-:Drawer a :ComponentOf :Kitchen.
+[a1, a2] psr:isPerformedBy [agent] ;
+    rdfs:label "Instruction"@en .
 
-:RefrigeratorItem a :Object ;
-    :isPerformedBy :Robot ;
-    :actsOn :Refrigerator.
+[o1, o2] a owl:Class ;
+    rdfs:subClassOf psr:Component ;
+    rdfs:label "Object"@en .
+
+[f1, f2] a owl:Class ;
+    rdfs:subClassOf psr:Component ;
+    rdfs:label "Furniture"@en .
+
+[a3, a4] psr:actsOn [o1] ;
+    rdfs:label "Delivering"@en .
+
+[a6, a7] psr:actsOn [f1] ;
+    rdfs:label "Closing"@en .
+
+[a8, a9] psr:actsOn [o2] ;
+    rdfs:label "Putting Down"@en .
+
+[a10, a11] psr:actsOn [o3] ;
+    rdfs:label "Holding"@en .
+
+[a12, a13] psr:actsOn [o4] ;
+    rdfs:label "Picking Up"@en .
+
+[a14, a15] psr:actsOn [f2] ;
+    rdfs:label "Opening"@en .
+
+[a16, a17] psr:actsOn [o5] ;
+    rdfs:label "Pushing"@en .
+
+[a18, a19] psr:actsOn [f3] ;
+    rdfs:label "Grasping"@en .

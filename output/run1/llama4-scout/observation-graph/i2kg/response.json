@@ -1,33 +1,33 @@
 {
-    "id": "chatcmpl-e6cb12fc-accc-4dc8-8f3d-728e6c68393d",
+    "id": "chatcmpl-505b11a7-db63-4e5e-9aa8-65ac6206265e",
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:kitchen a psr:Environment ;\n    rdfs:label \"kitchen\"@en .\n\npsr:refrigerator a psr:Appliance ;\n    rdfs:label \"refrigerator\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:table a psr:Furniture ;\n    rdfs:label \"table\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:chair a psr:Furniture ;\n    rdfs:label \"chair\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:cupboard a psr:Appliance ;\n    rdfs:label \"cupboard\"@en ;\n    psr:hasLocation psr:kitchen .\n\npsr:plate a psr:Object ;\n    rdfs:label \"plate\"@en ;\n    psr:hasLocation psr:table .\n\npsr:glass a psr:Object ;\n    rdfs:label \"glass\"@en ;\n    psr:hasLocation psr:table .\n\npsr:book a psr:Object ;\n    rdfs:label \"book\"@en ;\n    psr:hasLocation psr:table .\n\npsr:milk a psr:Object ;\n    rdfs:label \"milk\"@en ;\n    psr:hasLocation psr:table .\n\npsr:jello a psr:Object ;\n    rdfs:label \"jello\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:jar a psr:Object ;\n    rdfs:label \"jar\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:alpen a psr:Object ;\n    rdfs:label \"alpen\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:rice a psr:Object ;\n    rdfs:label \"rice\"@en ;\n    psr:hasLocation psr:cupboard .\n\npsr:sugar a psr:Object ;\n    rdfs:label \"sugar\"@en ;\n    psr:hasLocation psr:cupboard .\n\ndul:hasComponent(psr:kitchen, psr:refrigerator) .\ndul:hasComponent(psr:kitchen, psr:table) .\ndul:hasComponent(psr:kitchen, psr:chair) .\ndul:hasComponent(psr:kitchen, psr:cupboard) .\ndul:hasComponent(psr:kitchen, psr:plate) .\ndul:hasComponent(psr:kitchen, psr:glass) .\ndul:hasComponent(psr:kitchen, psr:book) .\ndul:hasComponent(psr:kitchen, psr:milk) .\ndul:hasComponent(psr:kitchen, psr:jello) .\ndul:hasComponent(psr:kitchen, psr:jar) .\ndul:hasComponent(psr:kitchen, psr:alpen) .\ndul:hasComponent(psr:kitchen, psr:rice) .\ndul:hasComponent(psr:kitchen, psr:sugar) .",
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:Environment a psr:Environment ;\n    dul:hasComponent ex:Kitchen ;\n    dul:hasComponent ex:DiningRoom .\n\nex:Kitchen a psr:Environment ;\n    dul:hasComponent ex:Refrigerator ;\n    dul:hasComponent ex:Counter ;\n    dul:hasComponent ex:Cabinet ;\n    dul:hasComponent ex:Stove .\n\nex:DiningRoom a psr:Environment ;\n    dul:hasComponent ex:Table ;\n    dul:hasComponent ex:Chair .\n\nex:Refrigerator a psr:Appliance ;\n    psr:hasAffordance soma:Opening ;\n    dul:hasLocation ex:Kitchen .\n\nex:Counter a psr:Furniture ;\n    dul:hasLocation ex:Kitchen .\n\nex:Cabinet a psr:Furniture ;\n    dul:hasLocation ex:Kitchen .\n\nex:Stove a psr:Appliance ;\n    psr:hasAffordance soma:Opening ;\n    dul:hasLocation ex:Kitchen .\n\nex:Table a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom .\n\nex:Chair a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom .\n\nex:Alpen a psr:Object ;\n    dul:hasLocation ex:Counter .\n\nex:Jello a psr:Object ;\n    dul:hasLocation ex:Counter .\n\nex:Evian a psr:Object ;\n    dul:hasLocation ex:Counter .\n\nex:Orange a psr:Object ;\n    dul:hasLocation ex:Table .\n\nex:Book a psr:Object ;\n    dul:hasLocation ex:Table .\n\nex:Mug a psr:Object ;\n    dul:hasLocation ex:Table .\n\nex:Plate a psr:Object ;\n    dul:hasLocation ex:Counter .\n\nex:Pot a psr:Object ;\n    dul:hasLocation ex:Stove .",
                 "role": "assistant"
             }
         }
     ],
-    "created": 1747771574,
+    "created": 1747864217,
     "model": "meta-llama/llama-4-scout-17b-16e-instruct",
     "object": "chat.completion",
     "system_fingerprint": "fp_37da608fc1",
     "usage": {
-        "completion_tokens": 753,
-        "prompt_tokens": 13959,
-        "total_tokens": 14712,
-        "completion_time": 1.79961093,
-        "prompt_time": 0.495735662,
-        "queue_time": 4.477266941,
-        "total_time": 2.295346592
+        "completion_tokens": 496,
+        "prompt_tokens": 13936,
+        "total_tokens": 14432,
+        "completion_time": 0.98594322,
+        "prompt_time": 0.35993598,
+        "queue_time": 1.7734277010000001,
+        "total_time": 1.3458792
     },
     "usage_breakdown": {
         "models": null
     },
     "x_groq": {
-        "id": "req_01jvqmvdebfy7v09wvd6g24121"
+        "id": "req_01jvtd6r6aek7aetpedjgdrs07"
     }
 }

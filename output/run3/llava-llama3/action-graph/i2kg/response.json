@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-8cee11e6-5bc2-4c38-a0a4-7b3e73045977",
+    "created": 1747869007,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```turtle\n@prefix psr: <http://psrc-action.org/> .\n@prefix dul: <http://dul.co/ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdfs-label: <http://www.w3.org/2018/03/rdf-labels/>.\n@prefix owl: <http://www.w3.org/2002/07/owl#>.\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\npsr:Instruction a owl:Entity ;\n    rdfs:label \"Restore the kitchen to an organized state\"@en ;\n    psr:hasWorkflow dul:Workflow .\n\ndul:Workflow a owl:Entity ;\n    rdfs:label \"Organizing the kitchen\"@en .\n\ndul:Action a dul:Workflow ;\n    rdfs:comment \"Actions taken to organize the kitchen.\"@en ;\n    psr:precedes psr:Action ;\n    psr:follows psr:Action ;\n    psr:isPerformedBy psr:Agent ;\n    psr:actsOn dul:Furniture .\n\ndul:Agent a owl:Entity ;\n    rdfs:label \"Robot\"@en ;\n    rdfs:comment \"The robot performing actions to organize the kitchen.\"@en .\n\ndul:Furniture a owl:Entity ;\n    rdfs:label \"Table\"@en ;\n    rdfs:comment \"A piece of furniture in the kitchen.\"@en ;\n    psr:isAffordedBy dul:Affordance ;\n    psr:hasNaturalLanguage \"Organize the kitchen\"@en .\n\ndul:Affordance a owl:Entity ;\n    rdfs:comment \"The affordances for the actions to organize the kitchen.\"@en ;\n    rdfs-label:value dul:Closing ;\n    psr:isPerformedBy psr:Agent .\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 7.22,
+        "prompt_token/s": 44.23,
+        "total_duration": 163868366486,
+        "load_duration": 50367934,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 92612020294,
+        "eval_count": 514,
+        "completion_tokens": 514,
+        "eval_duration": 71171311818,
+        "approximate_total": "0h2m43s",
+        "total_tokens": 4610,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

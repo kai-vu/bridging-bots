@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-376bf893-ce9b-4997-8079-947c6b5d4186",
+    "created": 1747868631,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The image shows an interior space featuring a kitchen and dining area. In the kitchen, there is a counter with various items on it including what appears to be a box of cereal, a cup, and some food packaging. To the right of the counter, there's a full-height refrigerator. Next to the refrigerator, there is a wall-mounted paper towel dispenser.\n\nThe kitchen cabinets are dark with metal handles. Above the cabinets, mounted on the wall, there's a clock. A light fixture hangs above the counter area. The flooring of both the kitchen and dining areas appears to be a light-colored wood or laminate finish. \n\nIn the adjacent dining area, there's a dining table with a chair visible at one end. On top of the table, there are several items including a box of cereal, a bowl, a spoon, and some food packaging. \n\nThe room has a textured white wall separating the kitchen from the dining area. To the left side of the image, there's a white stove with an oven door, sitting next to a cabinet. The image is taken from a perspective that shows both areas in their entirety, allowing for a comprehensive view of the layout and contents of the space. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 7.48,
+        "prompt_token/s": 46.27,
+        "total_duration": 103347315455,
+        "load_duration": 857984373,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 66236501127,
+        "eval_count": 271,
+        "completion_tokens": 271,
+        "eval_duration": 36211577211,
+        "approximate_total": "0h1m43s",
+        "total_tokens": 3336,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

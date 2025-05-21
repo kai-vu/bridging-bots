@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-ae36aaca-0f54-4a60-b684-1449dd0a32db",
+    "created": 1747867195,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```turtle\n@prefix psr: <https://w3id.org/psr> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rdfs:Action <https://w3id.org/psr/action/index.html> .\n@prefix rdfs:Component <https://w3id.org/psr/component/index.html> .\n@prefix rdfs:Affordance <https://w3id.org/psr/affordance/index.html> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix psr:Instruction <https://w3id.org/psr/instruction/index.html> .\n@prefix psr:Workflow <https://w3id.org/psr/workflow/index.html> .\n@prefix psr:ActionType <https://w3id.org/psr/actiontype/index.html> .\n@prefix rdfs:label <http://www.w3.org/2000/01/rdf-schema#label> .\n@prefix rdfs:comment <http://www.w3.org/2000/01/rdf-schema#comment> .\n\npsr:Instruction a owl:Class ;\n    rdfs:subClassOf psr:Workflow ;\n    rdfs:label \"Restore kitchen to organized state\"@en ;\n    rdfs:comment \"A workflow that restores the kitchen to an organized state.\"@en .\n\npsr:Workflow a owl:Class ;\n    rdfs:subClassOf psr:Instruction ;\n    rdfs:label \"Restore kitchen\"@en ;\n    rdfs:comment \"A workflow that restores the kitchen to an organized state.\"@en .\n\npsr:Action a owl:Class ;\n    rdfs:subClassOf psr:Workflow ;\n    rdfs:label \"Restore kitchen\"@en ;\n    rdfs:comment \"An action that restores the kitchen to an organized state.\"@en .\n\npsr:Agent a owl:Class ;\n    rdfs:subClassOf psr:Workflow ;\n    rdfs:label \"Robot\"@en ;\n    rdfs:comment \"The robot performing the task.\"@en .\n\n# Repeat for each action and component as needed\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 7.22,
+        "prompt_token/s": 44.03,
+        "total_duration": 175096965251,
+        "load_duration": 50245668,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 93024940048,
+        "eval_count": 592,
+        "completion_tokens": 592,
+        "eval_duration": 81988592785,
+        "approximate_total": "0h2m55s",
+        "total_tokens": 4688,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

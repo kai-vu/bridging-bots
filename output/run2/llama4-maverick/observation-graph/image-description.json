@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-96582b70-05ac-4fc1-880a-e6f2ebbdd3bb",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with dark gray cabinets, and beige marble counter tops; a white refrigerator between the kitchen cabinets; a pot on an induction cooker on the counter top to the right of the sink; the sink placed on the left side of the counter; a range hood above the induction cooker; a cupboard above the counter with the sink; boxes of \"Chicky\", \"Rice Bubbles\", and \"Jello\", jars, a stack of plates, and a gallon of water on the counter; a dining table with a box of \"Shortbread\", a jug, a wine glass, a plate and a gallon of water on top; white chairs around the table; a round light on the white ceiling.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747867409,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 142,
+        "prompt_tokens": 12496,
+        "total_tokens": 12638,
+        "completion_time": 0.599848518,
+        "prompt_time": 0.338629153,
+        "queue_time": 2.529802954,
+        "total_time": 0.938477671
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvtg84htetfs6ck44p6vxv4e"
+    }
+}

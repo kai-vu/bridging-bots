@@ -1,21 +1,42 @@
-@prefix : <http://www.w3.org/1999/02/rdf-schema#> .
-@prefix :env .
-@prefix :obj .
-@prefix :affordance .
+Certainly! Here is the Knowledge Graph in Turtle format based on the images you provided:
 
-:env a :Environment ;
-    hasComponent :cabinet ;
-    hasComponent :sink ;
-    hasComponent :counter.
+```turtle
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr/action#> .
+@prefix geo: <http://www.opengis.net/ont/>.
 
-:cabinet a :Furniture ;
-    hasAffordance :hasLocation ;
-    hasLocation :kitchen.
+<http://example.org/data/Environment> a owl:Class ;
+  rdfs:subClassOf psr:Environment .
 
-:sink a :Appliance ;
-    hasAffordance :hasLocation ;
-    hasLocation :bathroom.
+[a psr:Environment] psr:hasComponent [a psr:Component] .
 
-:counter a :Furniture ;
-    hasAffordance :hasLocation ;
-    hasLocation :kitchen.
+[a psr:Component] psr:hasAffordance [a psr:Affordance] .
+
+[a psr:Component] psr:hasLocation [a psr:Location] .
+
+[a psr:Component] psr:onTopOf [a psr:Location] .
+
+[a psr:Component] psr:contains [a psr:Location] .
+
+[a psr:Component] psr:isWithin [a psr:Location] .
+
+[a psr:Component] psr:overlaps [a psr:Location] .
+
+<http://example.org/data/Furniture> a owl:Class ;
+  rdfs:subClassOf psr:Component .
+
+<http://example.org/data/Appliance> a owl:Class ;
+  rdfs:subClassOf psr:Component .
+
+<http://example.org/data/Object> a owl:Class ;
+  rdfs:subClassOf psr:Component .
+
+[a psr:Location] geo:sfContainedIn [a psr:Location] .
+
+[a psr:Location] geo:sfWithin [a psr:Location] .
+
+[a psr:Location] geo:sfOverlaps [a psr:Location] .
+```
+
+Please note that the Knowledge Graph does not include specific actions or states of the environment as it is a general ontology-based representation. The actual actions, objects, and locations within this environment will need to be defined or instantiated separately based on your use case and the additional information you may have about the environment.

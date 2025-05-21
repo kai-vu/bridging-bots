@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BZmUKyr1P529jxpAmqjYD1g6ubrRJ",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "A white refrigerator stands in a corner, to the right of tall black cabinetry. Along the adjoining L-shaped black countertop, from left to right, there is a stack of white plates, a jar of jam, a box of strawberry Jell-O, a container of salt, a cereal box labeled “Rice Bubbles,” and another box labeled “Chucky Mania.” Near the stove area at the corner of the countertop sits a small pot on the cooktop, with a wooden vent hood overhead. Beside the pot is a mug and an additional “Chucky Mania” box paired with another jar of jam. A single sink is inset in the counter beneath a wooden-framed window.\n\nFacing away from the kitchen, a wooden dining table with white chairs occupies the adjacent room. At the center of the table sits a white fruit bowl containing several oranges and a lemon. In front of the fruit bowl is a large plastic water bottle and off to the side is a smaller rectangular box of snacks. A clear pitcher of water and an empty wine glass rest on the table near one seat. The dining area is otherwise open, with the door behind one end of the table.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1747867568,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 1847,
+        "prompt_tokens": 3541,
+        "total_tokens": 5388,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1600,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

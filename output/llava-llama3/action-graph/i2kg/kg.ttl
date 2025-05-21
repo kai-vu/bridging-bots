@@ -1,79 +1,86 @@
-@prefix : <http://example.com/ontology#>
-@prefix dul: <http://www.w3.org/ns/dul#>
-@prefix psr: <http://www.w3.org/2007/01/rdf-syntax-query#>
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix psr: <http://example.com/psr#> .
+@prefix dul: <http://example.com/dul#> .
 
-# Instruction
-:Instruction rdf:type :Workflow .
-:Instruction hasAction :Opening .
-:Instruction hasAction :PickingUp .
-:Instruction hasAction :Closing .
-:Instruction hasAction :Delivering .
-:Instruction hasAction :PuttingDown .
-:Instruction hasAction :Pulling .
-:Instruction hasAction :Holding .
-:Instruction hasAgent :Robot .
+@namespace dul "http://example.com/dul/" .
+@namespace psr "http://example.com/psr#" .
 
-# Kitchen Objects
-:Kitchen a dul:Component .
-:Fridge a dul:Component .
-:Cupboard a dul:Component.
-:Drawer a dul:Component.
+@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:Fridge a :Appliance ;
-    :isPerformedBy :Robot .
+# Define Namespaces
+dul:Instruction a psr:Instruction ;
+  rdf:type dul:Instruction ;
+  psr:hasWorkflow ?workflow ;
+  psr:hasNaturalLanguage "Restore kitchen to an organized state"@en .
 
-:Refrigerator a :Appliance ;
-    :isPerformedBy :Robot .
+?workflow a dul:Workflow ;
+  dul:precedes ?action1 ;
+  dul:follows ?action2 ;
+  rdf:type dul:Workflow ;
+  psr:hasAction ?action1, ?action2, ..., ?actionN .
 
-:Cupboard a :Furniture ;
-    :isPerformedBy :Robot .
+?action1 a dul:Action ;
+  psr:isPerformedBy ?agent1 ;
+  psr:actsOn ?component1 ;
+  rdf:type dul:Action ;
+  psr:precedes ?action2 ;
+  psr:follows ?action0.
 
-:Drawer a :Furniture ;
-    :isPerformedBy :Robot.
+?action2 a dul:Action ;
+  psr:isPerformedBy ?agent2 ;
+  psr:actsOn ?component2 ;
+  rdf:type dul:Action ;
+  psr:precedes ?action3 ;
+  psr:follows ?action1.
 
-# Kitchen Utensils and Items
-:KitchenUtensil a dul:Component .
-:Plate a dul:Component .
-:Bowl a dul:Component.
-:Spoon a dul:Component.
+...
 
-:RefrigeratorItem a :Object ;
-    :isPerformedBy :Robot.
+?actionN a dul:Action ;
+  psr:isPerformedBy ?agentN ;
+  psr:actsOn ?componentN ;
+  rdf:type dul:Action ;
+  psr:precedes ?final_action ;
+  psr:follows ?actionN-1.
 
-# Affordances
-:Opening a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Fridge .
+?component1 a dul:Component ;
+  psr:isAffordedBy <http://example.com/affordance1> ;
+  rdf:type dul:Component ;
+  psr:precedes <http://example.com/affordance2> ;
+  psr:follows <http://example.com/affordance0>.
 
-:PickingUp a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :KitchenUtensil.
+...
 
-:Closing a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Drawer.
+?componentN a dul:Component ;
+  psr:isAffordedBy <http://example.com/affordanceN> ;
+  rdf:type dul:Component ;
+  psr:precedes <http://example.com/affordanceN-1> ;
+  psr:follows <http://example.com/affordance0>.
 
-:Delivering a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Cupboard.
+?agent1 a dul:Agent ;
+  psr:isPerformedBy ?instruction ;
+  rdf:type dul:Agent ;
+  psr:precedes ?action1-1 ;
+  psr:follows <http://example.com/final_action>.
 
-:PuttingDown a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :KitchenUtensil.
+...
 
-:Pulling a dul:Affordance ;
-    :isPerformedBy :Robot ;
-    :actsOn :Refrigerator.
+?agentN a dul:Agent ;
+  psr:isPerformedBy ?instruction ;
+  rdf:type dul:Agent ;
+  psr:precedes ?final_action-1 ;
+  psr:follows <http://example.com/initial_action>.
 
-# Robot's Actions
-:Robot a dul:Agent .
+?affordance0 a dul:Affordance ;
+  psr:isAffordedBy ?component0 ;
+  rdf:type dul:Affordance ;
+  psr:precedes <http://example.com/final_action> ;
+  psr:follows <http://example.com/initial_action>.
 
-# Relationships
-:Fridge a :ComponentOf :Kitchen.
-:Cupboard a :ComponentOf :Kitchen.
-:Drawer a :ComponentOf :Kitchen.
+...
 
-:RefrigeratorItem a :Object ;
-    :isPerformedBy :Robot ;
-    :actsOn :Refrigerator.
+?affordancen a dul:Affordance ;
+  psr:isAffordedBy ?componentN-1 ;
+  rdf:type dul:Affordance ;
+  psr:precedes <http://example.com/initial_action> ;
+  psr:follows <http://example.com/final_action>.

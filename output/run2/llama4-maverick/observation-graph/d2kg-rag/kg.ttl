@@ -1,0 +1,115 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:DarkGrayCabinets, ex:BeigeMarbleCounterTops, ex:WhiteRefrigerator, ex:InductionCooker, ex:Sink, ex:RangeHood, ex:Cupboard, ex:DiningTable, ex:WhiteChairs, ex:RoundLight .
+
+ex:DarkGrayCabinets a psr:Furniture .
+
+ex:BeigeMarbleCounterTops a psr:Furniture ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+    dul:hasLocation ex:RefrigeratorLocation .
+
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:InductionCooker .
+
+ex:InductionCooker a psr:Appliance ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:LeftCounterTopLocation .
+
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:AboveInductionCookerLocation .
+
+ex:Cupboard a psr:Furniture ;
+    dul:hasLocation ex:AboveSinkCounterTopLocation .
+
+ex:Boxes a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:ChickyBox a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:RiceBubblesBox a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:JelloBox a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:Jars a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:StackOfPlates a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:GallonOfWaterOnCounter a psr:Object ;
+    dul:hasLocation ex:CounterTopLocation .
+
+ex:DiningTable a psr:Furniture .
+
+ex:WhiteChairs a psr:Furniture .
+
+ex:ShortbreadBox a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Jug a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:PlateOnTable a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:GallonOfWaterOnTable a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:RoundLight a psr:Object ;
+    dul:hasLocation ex:Ceiling .
+
+ex:CounterTopLocation a psr:Location .
+
+ex:LeftCounterTopLocation a psr:Location .
+
+ex:RefrigeratorLocation a psr:Location .
+
+ex:AboveInductionCookerLocation a psr:Location .
+
+ex:AboveSinkCounterTopLocation a psr:Location .
+
+ex:DiningTableLocation a psr:Location .
+
+ex:Ceiling a psr:Location .
+
+ex:InductionCooker dul:hasLocation ex:RightCounterTopLocation .
+ex:RightCounterTopLocation a psr:Location .
+
+ex:Sink geo:sfWithin ex:LeftCounterTopLocation .
+ex:InductionCooker geo:sfWithin ex:RightCounterTopLocation .
+ex:Cupboard geo:sfWithin ex:AboveSinkCounterTopLocation .
+ex:RangeHood geo:sfWithin ex:AboveInductionCookerLocation .
+
+ex:WhiteRefrigerator geo:sfWithin ex:RefrigeratorLocation .
+ex:DarkGrayCabinets dul:hasLocation ex:Kitchen .
+
+ex:BeigeMarbleCounterTops dul:hasLocation ex:CounterTopLocation .
+ex:Pot dul:hasLocation ex:InductionCooker .
+
+ex:DiningTable dul:hasLocation ex:DiningTableLocation .
+ex:WhiteChairs dul:hasLocation ex:DiningTableLocation .
+
+ex:ShortbreadBox dul:hasLocation ex:DiningTable .
+ex:Jug dul:hasLocation ex:DiningTable .
+ex:WineGlass dul:hasLocation ex:DiningTable .
+ex:PlateOnTable dul:hasLocation ex:DiningTable .
+ex:GallonOfWaterOnTable dul:hasLocation ex:DiningTable .
+
+ex:RoundLight dul:hasLocation ex:Ceiling .

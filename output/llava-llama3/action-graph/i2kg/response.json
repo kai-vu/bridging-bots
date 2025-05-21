@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-1ebcb990-f9a0-4695-88b3-30a4e5f10c07",
-    "created": 1747771192,
+    "id": "llava:7b-4002d13d-e087-4121-91bd-0b731f3fe61e",
+    "created": 1747870494,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```turtle\n@prefix : <http://example.com/ontology#>\n@prefix dul: <http://www.w3.org/ns/dul#>\n@prefix psr: <http://www.w3.org/2007/01/rdf-syntax-query#>\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n\n# Instruction\n:Instruction rdf:type :Workflow .\n:Instruction hasAction :Opening .\n:Instruction hasAction :PickingUp .\n:Instruction hasAction :Closing .\n:Instruction hasAction :Delivering .\n:Instruction hasAction :PuttingDown .\n:Instruction hasAction :Pulling .\n:Instruction hasAction :Holding .\n:Instruction hasAgent :Robot .\n\n# Kitchen Objects\n:Kitchen a dul:Component .\n:Fridge a dul:Component .\n:Cupboard a dul:Component.\n:Drawer a dul:Component.\n\n:Fridge a :Appliance ;\n    :isPerformedBy :Robot .\n\n:Refrigerator a :Appliance ;\n    :isPerformedBy :Robot .\n\n:Cupboard a :Furniture ;\n    :isPerformedBy :Robot .\n\n:Drawer a :Furniture ;\n    :isPerformedBy :Robot.\n\n# Kitchen Utensils and Items\n:KitchenUtensil a dul:Component .\n:Plate a dul:Component .\n:Bowl a dul:Component.\n:Spoon a dul:Component.\n\n:RefrigeratorItem a :Object ;\n    :isPerformedBy :Robot.\n\n# Affordances\n:Opening a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Fridge .\n\n:PickingUp a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :KitchenUtensil.\n\n:Closing a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Drawer.\n\n:Delivering a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Cupboard.\n\n:PuttingDown a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :KitchenUtensil.\n\n:Pulling a dul:Affordance ;\n    :isPerformedBy :Robot ;\n    :actsOn :Refrigerator.\n\n# Robot's Actions\n:Robot a dul:Agent .\n\n# Relationships\n:Fridge a :ComponentOf :Kitchen.\n:Cupboard a :ComponentOf :Kitchen.\n:Drawer a :ComponentOf :Kitchen.\n\n:RefrigeratorItem a :Object ;\n    :isPerformedBy :Robot ;\n    :actsOn :Refrigerator.\n``` ",
+                "content": " ```turtle\n@prefix psr: <http://example.com/psr#> .\n@prefix dul: <http://example.com/dul#> .\n\n@namespace dul \"http://example.com/dul/\" .\n@namespace psr \"http://example.com/psr#\" .\n\n@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n# Define Namespaces\ndul:Instruction a psr:Instruction ;\n  rdf:type dul:Instruction ;\n  psr:hasWorkflow ?workflow ;\n  psr:hasNaturalLanguage \"Restore kitchen to an organized state\"@en .\n\n?workflow a dul:Workflow ;\n  dul:precedes ?action1 ;\n  dul:follows ?action2 ;\n  rdf:type dul:Workflow ;\n  psr:hasAction ?action1, ?action2, ..., ?actionN .\n\n?action1 a dul:Action ;\n  psr:isPerformedBy ?agent1 ;\n  psr:actsOn ?component1 ;\n  rdf:type dul:Action ;\n  psr:precedes ?action2 ;\n  psr:follows ?action0.\n\n?action2 a dul:Action ;\n  psr:isPerformedBy ?agent2 ;\n  psr:actsOn ?component2 ;\n  rdf:type dul:Action ;\n  psr:precedes ?action3 ;\n  psr:follows ?action1.\n\n...\n\n?actionN a dul:Action ;\n  psr:isPerformedBy ?agentN ;\n  psr:actsOn ?componentN ;\n  rdf:type dul:Action ;\n  psr:precedes ?final_action ;\n  psr:follows ?actionN-1.\n\n?component1 a dul:Component ;\n  psr:isAffordedBy <http://example.com/affordance1> ;\n  rdf:type dul:Component ;\n  psr:precedes <http://example.com/affordance2> ;\n  psr:follows <http://example.com/affordance0>.\n\n...\n\n?componentN a dul:Component ;\n  psr:isAffordedBy <http://example.com/affordanceN> ;\n  rdf:type dul:Component ;\n  psr:precedes <http://example.com/affordanceN-1> ;\n  psr:follows <http://example.com/affordance0>.\n\n?agent1 a dul:Agent ;\n  psr:isPerformedBy ?instruction ;\n  rdf:type dul:Agent ;\n  psr:precedes ?action1-1 ;\n  psr:follows <http://example.com/final_action>.\n\n...\n\n?agentN a dul:Agent ;\n  psr:isPerformedBy ?instruction ;\n  rdf:type dul:Agent ;\n  psr:precedes ?final_action-1 ;\n  psr:follows <http://example.com/initial_action>.\n\n?affordance0 a dul:Affordance ;\n  psr:isAffordedBy ?component0 ;\n  rdf:type dul:Affordance ;\n  psr:precedes <http://example.com/final_action> ;\n  psr:follows <http://example.com/initial_action>.\n\n...\n\n?affordancen a dul:Affordance ;\n  psr:isAffordedBy ?componentN-1 ;\n  rdf:type dul:Affordance ;\n  psr:precedes <http://example.com/initial_action> ;\n  psr:follows <http://example.com/final_action>.\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 68.81,
-        "prompt_token/s": 1949.39,
-        "total_duration": 12689964509,
-        "load_duration": 51742287,
+        "response_token/s": 7.22,
+        "prompt_token/s": 44.07,
+        "total_duration": 228401860251,
+        "load_duration": 50091256,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2101169656,
-        "eval_count": 723,
-        "completion_tokens": 723,
-        "eval_duration": 10507954861,
-        "approximate_total": "0h0m12s",
-        "total_tokens": 4819,
+        "prompt_eval_duration": 92948496763,
+        "eval_count": 977,
+        "completion_tokens": 977,
+        "eval_duration": 135369868475,
+        "approximate_total": "0h3m48s",
+        "total_tokens": 5073,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

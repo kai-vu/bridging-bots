@@ -1,44 +1,60 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:Evian_water kitchen:isA kitchen:water .
+kitchen:Close_the_cabinet kitchen:actsOn kitchen:kitchen_cabinets .
 
-kitchen:Move_to_the_kitchen_counter kitchen:follows kitchen:Pick_up_the_large_bottle_of_Evian_water,
-        kitchen:Pick_up_the_toaster .
+kitchen:Close_the_refrigerator_door kitchen:actsOn kitchen:refrigerator .
 
-kitchen:Put_down_the_large_bottle_of_Evian_water kitchen:actsOn kitchen:large_bottle_of_Evian_water .
+kitchen:Identify_the_bottle_of_Evian_water_on_the_table kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:Put_down_the_toaster kitchen:actsOn kitchen:toaster .
+kitchen:Identify_the_box_of_Jello_on_the_countertop kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:assistant kitchen:hasAction kitchen:Move_to_the_dining_table,
-        kitchen:Pick_up_the_toaster .
+kitchen:Identify_the_box_of_Rice_Bubbles_cereal_on_the_countertop kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:board_game kitchen:isA kitchen:game .
+kitchen:Identify_the_red_and_white_jar_labeled__Chunky_Monkey__on_the_countertop kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:box_of_Alpen_Salt kitchen:isA kitchen:box .
+kitchen:Identify_the_yellow_cup_on_the_countertop kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:box_of_Jell-O kitchen:isA kitchen:box .
+kitchen:Inspect_the_kitchen_countertop kitchen:isPerformedBy kitchen:assistant .
 
-kitchen:dining_table kitchen:isLocatedIn kitchen:kitchen .
+kitchen:Move_to_the_kitchen_cabinets kitchen:actsOn kitchen:kitchen_cabinets .
 
-kitchen:jar_of_jam_or_preserves kitchen:isA kitchen:jar .
+kitchen:Open_a_cabinet kitchen:actsOn kitchen:kitchen_cabinets .
 
-kitchen:kitchen_counter kitchen:isLocatedIn kitchen:kitchen .
+kitchen:Open_the_refrigerator_door kitchen:actsOn kitchen:refrigerator .
 
-kitchen:pan kitchen:isA kitchen:cooking_vessel .
+kitchen:Pick_up_the_bottle_of_Evian_water kitchen:actsOn kitchen:bottle_of_Evian_water .
 
-kitchen:pot kitchen:isA kitchen:cooking_vessel .
+kitchen:Pick_up_the_box_of_Jello kitchen:actsOn kitchen:box_of_Jello .
 
-kitchen:puzzle_book kitchen:isA kitchen:book .
+kitchen:Pick_up_the_box_of_Rice_Bubbles_cereal kitchen:actsOn kitchen:box_of_Rice_Bubbles_cereal .
 
-kitchen:stacks_of_paper_plates kitchen:isA kitchen:plates .
+kitchen:Pick_up_the_red_and_white_jar kitchen:actsOn kitchen:red_and_white_jar .
 
-kitchen:yellow_mug kitchen:isA kitchen:mug .
+kitchen:Pick_up_the_yellow_cup kitchen:actsOn kitchen:yellow_cup .
 
-kitchen:Move_to_the_dining_table kitchen:precedes kitchen:Pick_up_the_large_bottle_of_Evian_water .
+kitchen:Place_the_bottle_of_Evian_water_inside_the_refrigerator kitchen:actsOn kitchen:bottle_of_Evian_water .
 
-kitchen:Pick_up_the_large_bottle_of_Evian_water kitchen:actsOn kitchen:large_bottle_of_Evian_water .
+kitchen:Place_the_box_of_Jello_inside_the_cabinet kitchen:actsOn kitchen:box_of_Jello .
 
-kitchen:Pick_up_the_toaster kitchen:actsOn kitchen:toaster .
+kitchen:Place_the_box_of_Rice_Bubbles_cereal_inside_the_cabinet kitchen:actsOn kitchen:box_of_Rice_Bubbles_cereal .
 
-kitchen:large_bottle_of_Evian_water kitchen:isA kitchen:bottle .
+kitchen:Place_the_red_and_white_jar_inside_the_cabinet kitchen:actsOn kitchen:red_and_white_jar .
+
+kitchen:Place_the_yellow_cup_inside_the_cabinet kitchen:actsOn kitchen:yellow_cup .
+
+kitchen:dining_room kitchen:has kitchen:dining_table .
+
+kitchen:Move_to_the_kitchen kitchen:actsOn kitchen:kitchen .
+
+kitchen:dining_table kitchen:has kitchen:bottle_of_Evian_water .
+
+kitchen:kitchen kitchen:has kitchen:kitchen_countertop,
+        kitchen:refrigerator .
+
+kitchen:kitchen_countertop kitchen:has kitchen:box_of_Jello,
+        kitchen:box_of_Rice_Bubbles_cereal,
+        kitchen:red_and_white_jar,
+        kitchen:yellow_cup .
+
+kitchen:assistant kitchen:performs kitchen:Move_to_the_kitchen .
 

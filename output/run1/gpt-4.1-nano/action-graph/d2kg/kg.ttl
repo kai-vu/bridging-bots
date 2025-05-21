@@ -5,169 +5,167 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
 
-# Define the workflow for restoring the kitchen
-psr:kitchenRestorationWorkflow a owl:Class, dul:Workflow ;
-    rdfs:label "Kitchen Restoration Workflow"@en .
+###############################
+# Step 1: Identify misplaced items
+###############################
 
-# Actions involved in the process
-psr:RetrieveMisplacedItems a owl:Class, dul:Action ;
-    rdfs:label "Retrieve Misplaced Items"@en .
+<ex:IdentifyMisplacedItems> a psr:Instruction ;
+    psr:hasNaturalLanguage "Identify all misplaced items on the countertop."@en .
 
-psr:ReturnItemsToStorage a owl:Class, dul:Action ;
-    rdfs:label "Return Items to Storage"@en .
+<ex:SceneObject1> a psr:Object ;
+    rdfs:label "box of Jello"@en .
 
-# Agents
-psr:RobotAgent a owl:Class, dul:Agent ;
+<ex:SceneObject2> a psr:Object ;
+    rdfs:label "box of rice bubbles"@en .
+
+<ex:SceneObject3> a psr:Object ;
+    rdfs:label "pack of shortbread"@en .
+
+<ex:SceneObject4> a psr:Object ;
+    rdfs:label "jug"@en .
+
+<ex:SceneObject5> a psr:Object ;
+    rdfs:label "two glasses"@en .
+
+<ex:SceneObject6> a psr:Object ;
+    rdfs:label "bottle of water"@en .
+
+<ex:SceneObject7> a psr:Object ;
+    rdfs:label "box with child's face"@en .
+
+###############################
+# Step 2: Pick up misplaced items
+###############################
+
+<ex:PickUpBoxJello> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the box of Jello."@en .
+
+<ex:pickUpBoxJelloAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject1> .
+
+<ex:PickUpBoxRice> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the box of rice bubbles."@en .
+
+<ex:pickUpBoxRiceAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject2> .
+
+<ex:PickUpShortbread> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the pack of shortbread."@en .
+
+<ex:pickUpShortbreadAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject3> .
+
+<ex:PickUpJug> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the jug."@en .
+
+<ex:pickUpJugAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject4> .
+
+<ex:PickUpGlass1> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the first glass."@en .
+
+<ex:pickUpGlass1Action> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject5> .
+
+<ex:PickUpGlass2> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the second glass."@en .
+
+<ex:pickUpGlass2Action> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject5> .
+
+<ex:PickUpWaterBottle> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the bottle of water."@en .
+
+<ex:pickUpWaterBottleAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject6> .
+
+<ex:PickUpBoxChildFace> a psr:Instruction ;
+    psr:hasNaturalLanguage "Pick up the box with child's face."@en .
+
+<ex:pickUpBoxChildFaceAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject7> .
+
+###############################
+# Step 3: Place each item in its standard storage location
+###############################
+
+<ex:PlaceJelloInFridge> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the box of Jello into the fridge."@en .
+
+<ex:placeJelloAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject1> .
+
+<ex:PlaceRiceBubblesInCabinet> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the box of rice bubbles in the cabinet."@en .
+
+<ex:placeRiceBubblesAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject2> .
+
+<ex:PlaceShortbreadInContainer> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the pack of shortbread in the container."@en .
+
+<ex:placeShortbreadAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject3> .
+
+<ex:PlaceJugInCabinet> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the jug in the cabinet."@en .
+
+<ex:placeJugAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject4> .
+
+<ex:PlaceGlass1InCabinet> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the first glass in the cabinet."@en .
+
+<ex:placeGlass1Action> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject5> .
+
+<ex:PlaceGlass2InCabinet> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the second glass in the cabinet."@en .
+
+<ex:placeGlass2Action> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject5> .
+
+<ex:PlaceWaterBottleInCabinet> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the bottle of water in the cabinet."@en .
+
+<ex:placeWaterBottleAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject6> .
+
+<ex:PlaceChildFaceBoxInStorage> a psr:Instruction ;
+    psr:hasNaturalLanguage "Place the box with child's face in storage."@en .
+
+<ex:placeChildFaceBoxAction> a dul:Action ;
+    psr:isPerformedBy <ex:RobotAgent1> ;
+    psr:actsOn <ex:SceneObject7> .
+
+###############################
+# Step 4: End of task
+###############################
+
+<ex:EndOrganizingTask> a psr:Instruction ;
+    psr:hasNaturalLanguage "Complete the organization of the kitchen."@en .
+
+###############################
+# Additional metadata
+###############################
+
+<ex:RobotAgent1> a psr:Agent ;
     rdfs:label "Robot Agent"@en .
-
-# Define the instruction
-psr:RestoreKitchenInstruction a owl:Class, psr:Instruction ;
-    rdfs:label "Restore the kitchen to an organized state by retrieving misplaced items and returning them to storage"@en ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow psr:kitchenRestorationWorkflow .
-
-# Define the workflow sequence
-psr:kitchenRestorationWorkflow
-    rdfs:subClassOf dul:Workflow ;
-    rdfs:comment "Sequential workflow to restore kitchen organization."@en .
-
-# Define sequence of actions
-psr:RetrieveAndReturnSequence a owl:NamedIndividual ;
-    a owl:Sequence ;
-    rdfs:comment "Sequence of actions to retrieve and return misplaced items."@en .
-
-# Link actions to workflow
-psr:kitchenRestorationWorkflow
-    psr:hasAction psr:RetrieveMisplacedItems, psr:ReturnItemsToStorage .
-
-# Actions details
-psr:RetrieveMisplacedItems
-    psr:actsOn psr:BoxOfJELLO, psr:BoxOfRiceBubbles, psr:SmallRedContainerStrawberryJam, psr:RedWhiteContainerBloodOrangePreserves, psr:SmallDishOfBread, psr:WaterBottle, psr:YellowCup, psr:GlassOfWine, psr:JugCremater ;
-    rdfs:comment "Identify and retrieve all misplaced objects on the countertop and nearby."@en .
-
-psr:ReturnItemsToStorage
-    psr:actsOn psr:Object ;
-    rdfs:comment "Return all retrieved items to their respective standard storage locations."@en .
-
-# Example object instances (assuming their types based on description)
-psr:JELLO a psr:Object, dul:Entity ;
-    rdfs:label "JELLO box"@en .
-
-psr:RiceBubbles a psr:Object, dul:Entity ;
-    rdfs:label "Rice bubbles box"@en .
-
-psr:StrawberryJam a psr:Object, dul:Entity ;
-    rdfs:label "Strawberry jam container"@en .
-
-psr:BloodOrangePreserves a psr:Object, dul:Entity ;
-    rdfs:label "Blood orange preserves container"@en .
-
-psr:SlicedBreadDish a psr:Object, dul:Entity ;
-    rdfs:label "Dish of sliced bread"@en .
-
-psr:WaterBottle a psr:Object, dul:Entity ;
-    rdfs:label "Water bottle"@en .
-
-psr:YellowCup a psr:Object, dul:Entity ;
-    rdfs:label "Yellow cup"@en .
-
-psr:WineGlass a psr:Object, dul:Entity ;
-    rdfs:label "Glass of wine"@en .
-
-psr:JugCreamer a psr:Object, dul:Entity ;
-    rdfs:label "Jug/Creamer"@en .
-
-# Define actions as instances
-psr:ActionRetrieveJELLO a dul:Action ;
-    rdfs:label "Retrieve JELLO box"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JELLO .
-
-psr:ActionRetrieveRiceBubbles a dul:Action ;
-    rdfs:label "Retrieve Rice Bubbles"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:RiceBubbles .
-
-psr:ActionRetrieveStrawberryJam a dul:Action ;
-    rdfs:label "Retrieve Strawberry Jam"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:StrawberryJam .
-
-psr:ActionRetrieveBloodOrangePreserves a dul:Action ;
-    rdfs:label "Retrieve Blood Orange Preserves"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:BloodOrangePreserves .
-
-psr:ActionRetrieveDishOfBread a dul:Action ;
-    rdfs:label "Retrieve Dish of Sliced Bread"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:SlicedBreadDish .
-
-psr:ActionRetrieveWaterBottle a dul:Action ;
-    rdfs:label "Retrieve Water Bottle"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:WaterBottle .
-
-psr:ActionRetrieveYellowCup a dul:Action ;
-    rdfs:label "Retrieve Yellow Cup"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:YellowCup .
-
-psr:ActionRetrieveWineGlass a dul:Action ;
-    rdfs:label "Retrieve Wine Glass"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:WineGlass .
-
-psr:ActionRetrieveJugCreamer a dul:Action ;
-    rdfs:label "Retrieve Jug/Creamer"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JugCreamer .
-
-# Returning actions (assuming return to original storage locations)
-psr:ActionReturnJELLO a dul:Action ;
-    rdfs:label "Return JELLO box to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JELLO .
-
-# Similarly, define for other objects
-psr:ActionReturnRiceBubbles a dul:Action ;
-    rdfs:label "Return Rice Bubbles to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:RiceBubbles .
-
-psr:ActionReturnStrawberryJam a dul:Action ;
-    rdfs:label "Return Strawberry Jam to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:StrawberryJam .
-
-psr:ActionReturnBloodOrangePreserves a dul:Action ;
-    rdfs:label "Return Blood Orange Preserves to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:BloodOrangePreserves .
-
-psr:ActionReturnDishOfBread a dul:Action ;
-    rdfs:label "Return Dish of Sliced Bread to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:SlicedBreadDish .
-
-psr:ActionReturnWaterBottle a dul:Action ;
-    rdfs:label "Return Water Bottle to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:WaterBottle .
-
-psr:ActionReturnYellowCup a dul:Action ;
-    rdfs:label "Return Yellow Cup to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:YellowCup .
-
-psr:ActionReturnWineGlass a dul:Action ;
-    rdfs:label "Return Wine Glass to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:WineGlass .
-
-psr:ActionReturnJugCreamer a dul:Action ;
-    rdfs:label "Return Jug/Creamer to storage"@en ;
-    psr:isPerformedBy psr:RobotAgent ;
-    psr:actsOn psr:JugCreamer .

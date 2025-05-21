@@ -7,8 +7,9 @@ from pyshacl import validate
 from rdflib import Graph
 
 
-output_txt = "../../output/validation/shacl_validation_report.txt"
-output_csv = "../../output/validation/shacl_validation_report.csv"
+output_txt = "../../output/validation/shacl/shacl_validation_report.txt"
+output_csv = "../../output/validation/shacl/shacl_validation_report.csv"
+output_ttl = "../../output/validation/shacl/shacl_validation_report.ttl"
 
 files_observation_graph = [
     # llava-llama3
@@ -97,7 +98,8 @@ def validate_graph(g_file, sg_file, og_file, log_file_path):
         print(f"[ERROR] Could not validate {g_file}: {e}")
         return None
 
-def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path, csv_rows):
+def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path, csv_rows, output_ttl):
+    final_results_graph = Graph()
     for file in file_list:
         print(f"Validating: {file}")
         result = validate_graph(file, shapes_file, ontology_file, result_txt_path)
@@ -110,6 +112,7 @@ def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path, 
             continue
 
         conforms, results_graph, results_text = result
+        final_results_graph += results_graph
 
         with open(result_txt_path, "a") as out_txt:
             out_txt.write(f"=== Validation Report for: {file} ===\n")
@@ -120,15 +123,16 @@ def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path, 
             "file": file,
             "conforms": conforms
         })
+    final_results_graph.serialize(destination=output_ttl, format="turtle")
 
-
+        
 os.makedirs(os.path.dirname(output_txt), exist_ok=True)
 with open(output_txt, "w") as f:
     f.write("SHACL Validation Report\n\n")
 
 csv_data = []
-run_all_validations(files_observation_graph, shapes_observation_graph, ontology_observation_graph, output_txt, csv_data)
-run_all_validations(files_action_graph, shapes_action_graph, ontology_action_graph, output_txt, csv_data)
+run_all_validations(files_observation_graph, shapes_observation_graph, ontology_observation_graph, output_txt, csv_data, output_ttl)
+run_all_validations(files_action_graph, shapes_action_graph, ontology_action_graph, output_txt, csv_data, output_ttl)
 
 with open(output_csv, "w", newline="") as csvfile:
     fieldnames = ["file", "conforms"]

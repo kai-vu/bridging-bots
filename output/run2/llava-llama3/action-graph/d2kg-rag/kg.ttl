@@ -1,0 +1,94 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:action1 a dul:Action ;
+    rdfs:label "Identify misplaced items"@en ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action2 a dul:Action ;
+    rdfs:label "Pick up bottle"@en ;
+    psr:actsOn ex:bottle ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:action3 .
+
+ex:bottle a psr:Component ;
+    rdfs:label "Bottle"@en .
+
+ex:action3 a dul:Action ;
+    rdfs:label "Put down bottle"@en ;
+    psr:actsOn ex:bottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:action4 .
+
+ex:action4 a dul:Action ;
+    rdfs:label "Pick up box on table"@en ;
+    psr:actsOn ex:boxOnTable ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:action5 .
+
+ex:boxOnTable a psr:Component ;
+    rdfs:label "Box on table"@en .
+
+ex:action5 a dul:Action ;
+    rdfs:label "Put down box on table"@en ;
+    psr:actsOn ex:boxOnTable ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:action6 .
+
+ex:action6 a dul:Action ;
+    rdfs:label "Pick up book"@en ;
+    psr:actsOn ex:book ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:action7 .
+
+ex:book a psr:Component ;
+    rdfs:label "Book"@en .
+
+ex:action7 a dul:Action ;
+    rdfs:label "Put down book"@en ;
+    psr:actsOn ex:book ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:action8 .
+
+ex:action8 a dul:Action ;
+    rdfs:label "Open cabinet"@en ;
+    psr:actsOn ex:cabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:action9 .
+
+ex:cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en .
+
+ex:action9 a dul:Action ;
+    rdfs:label "Place items in cabinet"@en ;
+    psr:actsOn ex:items ;
+    psr:isAffordedBy soma:Pushing ;
+    psr:precedes ex:action10 .
+
+ex:items a psr:Component ;
+    rdfs:label "Items"@en .
+
+ex:action10 a dul:Action ;
+    rdfs:label "Close cabinet"@en ;
+    psr:actsOn ex:cabinet ;
+    psr:isAffordedBy soma:Closing .
+
+ex:workflow a psr:Workflow ;
+    psr:hasAction ex:action1 ;
+    psr:hasAction ex:action2 ;
+    psr:hasAction ex:action3 ;
+    psr:hasAction ex:action4 ;
+    psr:hasAction ex:action5 ;
+    psr:hasAction ex:action6 ;
+    psr:hasAction ex:action7 ;
+    psr:hasAction ex:action8 ;
+    psr:hasAction ex:action9 ;
+    psr:hasAction ex:action10 .
+
+ex:instruction a psr:Instruction ;
+    psr:hasWorkflow ex:workflow .

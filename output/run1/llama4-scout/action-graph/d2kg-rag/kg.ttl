@@ -1,113 +1,75 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
 
-psr:RestoreKitchen a dul:Action ;
-  rdfs:label "Restore Kitchen"@en .
+ex:RestoreKitchenTask a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItems .
 
-psr:RestoreKitchen psr:hasWorkflow psr:Workflow_RestoreKitchen .
+ex:IdentifyMisplacedItems a dul:Action ;
+  rdfs:label "Identify Misplaced Items"@en ;
+  psr:actsOn ex:Kitchen ;
+  psr:isAffordedBy soma:Grasping ;
+  psr:follows ex:EnterKitchen .
 
-psr:Workflow_RestoreKitchen a psr:Workflow .
+ex:EnterKitchen a dul:Action ;
+  rdfs:label "Enter Kitchen"@en ;
+  psr:actsOn ex:Kitchen ;
+  psr:isAffordedBy soma:Opening .
 
-psr:Workflow_RestoreKitchen psr:hasAction psr:IdentifyMisplacedItems .
+ex:Kitchen a psr:Component ;
+  rdfs:label "Kitchen"@en .
 
-psr:IdentifyMisplacedItems a dul:Action ;
-  rdfs:label "Identify Misplaced Items"@en .
+ex:MisplacedItem1 a psr:Object ;
+  rdfs:label "Yellow Cup"@en .
 
-psr:IdentifyMisplacedItems psr:actsOn psr:MisplacedItems .
+ex:MisplacedItem2 a psr:Object ;
+  rdfs:label "Bottle of Evian Water"@en .
 
-psr:MisplacedItems a psr:Component .
+ex:PickUpYellowCup a dul:Action ;
+  rdfs:label "Pick Up Yellow Cup"@en ;
+  psr:actsOn ex:MisplacedItem1 ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:IdentifyMisplacedItems .
 
-psr:Workflow_RestoreKitchen psr:hasAction psr:ReturnItemsToStorage .
+ex:PickUpBottleOfEvianWater a dul:Action ;
+  rdfs:label "Pick Up Bottle of Evian Water"@en ;
+  psr:actsOn ex:MisplacedItem2 ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:IdentifyMisplacedItems .
 
-psr:ReturnItemsToStorage a dul:Action ;
-  rdfs:label "Return Items to Storage"@en .
+ex:MoveToStorageLocation1 a dul:Action ;
+  rdfs:label "Move to Storage Location 1"@en ;
+  psr:actsOn ex:MisplacedItem1 ;
+  psr:isAffordedBy soma:Pushing ;
+  psr:follows ex:PickUpYellowCup .
 
-psr:ReturnItemsToStorage psr:actsOn psr:MisplacedItems .
+ex:MoveToStorageLocation2 a dul:Action ;
+  rdfs:label "Move to Storage Location 2"@en ;
+  psr:actsOn ex:MisplacedItem2 ;
+  psr:isAffordedBy soma:Pushing ;
+  psr:follows ex:PickUpBottleOfEvianWater .
 
-psr:ReturnItemsToStorage psr:follows psr:IdentifyMisplacedItems .
+ex:PutDownYellowCup a dul:Action ;
+  rdfs:label "Put Down Yellow Cup"@en ;
+  psr:actsOn ex:MisplacedItem1 ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:MoveToStorageLocation1 .
 
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayJars .
+ex:PutDownBottleOfEvianWater a dul:Action ;
+  rdfs:label "Put Down Bottle of Evian Water"@en ;
+  psr:actsOn ex:MisplacedItem2 ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:MoveToStorageLocation2 .
 
-psr:PutAwayJars a dul:Action ;
-  rdfs:label "Put Away Jars"@en .
+ex:StandardStorageLocation1 a psr:Component ;
+  rdfs:label "Standard Storage Location 1"@en .
 
-psr:PutAwayJars psr:actsOn psr:Jars .
+ex:StandardStorageLocation2 a psr:Component ;
+  rdfs:label "Standard Storage Location 2"@en .
 
-psr:Jars a psr:Component .
-
-psr:PutAwayJars psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayJars psr:follows psr:ReturnItemsToStorage .
-
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayJellO .
-
-psr:PutAwayJellO a dul:Action ;
-  rdfs:label "Put Away Jell-O"@en .
-
-psr:PutAwayJellO psr:actsOn psr:JellO .
-
-psr:JellO a psr:Component .
-
-psr:PutAwayJellO psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayJellO psr:follows psr:PutAwayJars .
-
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayAlpenSalt .
-
-psr:PutAwayAlpenSalt a dul:Action ;
-  rdfs:label "Put Away Alpen Salt"@en .
-
-psr:PutAwayAlpenSalt psr:actsOn psr:AlpenSalt .
-
-psr:AlpenSalt a psr:Component .
-
-psr:PutAwayAlpenSalt psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayAlpenSalt psr:follows psr:PutAwayJellO .
-
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayPaperPlates .
-
-psr:PutAwayPaperPlates a dul:Action ;
-  rdfs:label "Put Away Paper Plates"@en .
-
-psr:PutAwayPaperPlates psr:actsOn psr:PaperPlates .
-
-psr:PaperPlates a psr:Component .
-
-psr:PutAwayPaperPlates psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayPaperPlates psr:follows psr:PutAwayAlpenSalt .
-
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayPot .
-
-psr:PutAwayPot a dul:Action ;
-  rdfs:label "Put Away Pot"@en .
-
-psr:PutAwayPot psr:actsOn psr:Pot .
-
-psr:Pot a psr:Component .
-
-psr:PutAwayPot psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayPot psr:follows psr:PutAwayPaperPlates .
-
-psr:Workflow_RestoreKitchen psr:hasAction psr:PutAwayBottle .
-
-psr:PutAwayBottle a dul:Action ;
-  rdfs:label "Put Away Bottle"@en .
-
-psr:PutAwayBottle psr:actsOn psr:Bottle .
-
-psr:Bottle a psr:Component .
-
-psr:PutAwayBottle psr:isAffordedBy soma:PuttingDown .
-
-psr:PutAwayBottle psr:follows psr:PutAwayPot .
-
-psr:RestoreKitchen psr:isPerformedBy psr:Robot .
-
-psr:Robot a dul:Agent .
+ex:RestoreKitchenTask psr:follows ex:PutDownYellowCup .
+ex:RestoreKitchenTask psr:follows ex:PutDownBottleOfEvianWater .

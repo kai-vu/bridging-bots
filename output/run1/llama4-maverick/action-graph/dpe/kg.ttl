@@ -1,42 +1,12 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:Instruction_1 kitchen:hasAction kitchen:Identifying_misplaced_items ;
-    kitchen:precedes kitchen:Instruction_2 .
+kitchen:countertop kitchen:hasItem kitchen:jello_box .
 
-kitchen:Instruction_10 kitchen:hasAction kitchen:Moving_to_the_adjacent_room .
+kitchen:dining_table kitchen:hasItem kitchen:bottle .
 
-kitchen:Instruction_12 kitchen:hasAction kitchen:Picking_up_the_packet_of_biscuits .
+kitchen:light_fixture kitchen:isLocatedOn kitchen:ceiling .
 
-kitchen:Instruction_13 kitchen:hasAction kitchen:Moving_to_the_kitchen .
+kitchen:bottle kitchen:isStoredIn kitchen:dark_gray_kitchen_cabinets .
 
-kitchen:Instruction_14 kitchen:hasAction kitchen:Storing_the_packet_of_biscuits .
-
-kitchen:Instruction_4 kitchen:hasAction kitchen:Picking_up__JELLO__box .
-
-kitchen:Instruction_5 kitchen:hasAction kitchen:Storing__JELLO__box .
-
-kitchen:_JELLO__box kitchen:isLocatedIn kitchen:counter ;
-    kitchen:isStoredIn kitchen:cabinet .
-
-kitchen:bottle_of_water kitchen:isLocatedIn kitchen:dining_table ;
-    kitchen:isStoredIn kitchen:fridge .
-
-kitchen:mugs kitchen:isLocatedIn kitchen:dining_table ;
-    kitchen:isStoredIn kitchen:cabinet .
-
-kitchen:packet_of_biscuits kitchen:isLocatedIn kitchen:dining_table ;
-    kitchen:isStoredIn kitchen:cabinet .
-
-kitchen:wine_glass kitchen:isLocatedIn kitchen:dining_table ;
-    kitchen:isStoredIn kitchen:cabinet .
-
-kitchen:Instruction_2 kitchen:actsOn kitchen:_CHICKY__chip_packet ;
-    kitchen:hasAction kitchen:Picking_up__CHICKY__chip_packet ;
-    kitchen:precedes kitchen:Instruction_3 .
-
-kitchen:Instruction_3 kitchen:actsOn kitchen:_CHICKY__chip_packet ;
-    kitchen:hasAction kitchen:Storing__CHICKY__chip_packet .
-
-kitchen:_CHICKY__chip_packet kitchen:isLocatedIn kitchen:counter ;
-    kitchen:isStoredIn kitchen:cabinet .
+kitchen:jello_box kitchen:isStoredIn kitchen:dark_gray_kitchen_cabinets .
 

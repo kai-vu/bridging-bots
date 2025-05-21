@@ -1,0 +1,57 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow ;
+    kitchen:isPerformedBy kitchen:pick_up_cup_from_kitchen_counter,
+        kitchen:pick_up_food_packaging_from_kitchen_counter .
+
+kitchen:close_trash_can kitchen:actsOn kitchen:trash_can .
+
+kitchen:dispose_of_food_packaging_in_trash_can kitchen:actsOn kitchen:food_packaging ;
+    kitchen:precedes kitchen:close_trash_can .
+
+kitchen:identify_misplaced_items_on_kitchen_counter kitchen:precedes kitchen:pick_up_box_of_cereal_from_kitchen_counter .
+
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:move_to_kitchen_counter .
+
+kitchen:move_to_kitchen_counter kitchen:precedes kitchen:identify_misplaced_items_on_kitchen_counter .
+
+kitchen:move_to_trash_can kitchen:precedes kitchen:open_trash_can .
+
+kitchen:open_kitchen_cabinet kitchen:actsOn kitchen:kitchen_cabinet ;
+    kitchen:precedes kitchen:store_box_of_cereal_in_kitchen_cabinet,
+        kitchen:store_cup_in_kitchen_cabinet .
+
+kitchen:open_trash_can kitchen:actsOn kitchen:trash_can ;
+    kitchen:precedes kitchen:dispose_of_food_packaging_in_trash_can .
+
+kitchen:pick_up_box_of_cereal_from_kitchen_counter kitchen:actsOn kitchen:box_of_cereal ;
+    kitchen:precedes kitchen:move_to_kitchen_cabinets .
+
+kitchen:pick_up_cup_from_kitchen_counter kitchen:actsOn kitchen:cup ;
+    kitchen:precedes kitchen:move_to_kitchen_cabinets .
+
+kitchen:pick_up_food_packaging_from_kitchen_counter kitchen:actsOn kitchen:food_packaging ;
+    kitchen:precedes kitchen:move_to_trash_can .
+
+kitchen:store_box_of_cereal_in_kitchen_cabinet kitchen:actsOn kitchen:box_of_cereal ;
+    kitchen:precedes kitchen:close_kitchen_cabinet .
+
+kitchen:store_cup_in_kitchen_cabinet kitchen:actsOn kitchen:cup ;
+    kitchen:precedes kitchen:close_kitchen_cabinet .
+
+kitchen:box_of_cereal kitchen:isAffordedBy kitchen:grasping .
+
+kitchen:close_kitchen_cabinet kitchen:actsOn kitchen:kitchen_cabinet .
+
+kitchen:cup kitchen:isAffordedBy kitchen:grasping .
+
+kitchen:food_packaging kitchen:isAffordedBy kitchen:grasping .
+
+kitchen:kitchen_cabinet kitchen:isAffordedBy kitchen:closing,
+        kitchen:opening .
+
+kitchen:move_to_kitchen_cabinets kitchen:precedes kitchen:open_kitchen_cabinet .
+
+kitchen:trash_can kitchen:isAffordedBy kitchen:closing,
+        kitchen:opening .
+

@@ -1,0 +1,52 @@
+The output format is Turtle. Here's the generated Knowledge Graph:
+
+```turtle
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://example.org/data/> .
+
+psr:Environment a owl:Class ;
+    psr:hasComponent psr:DiningTable ;
+    psr:hasComponent psr:Refrigerator .
+
+psr:Component a owl:Class ;
+    rdfs:subClassOf psr:Environment.
+
+psr:DiningTable a owl:Class ;
+    psr:onTopOf psr:DiningTable ;
+    psr:hasLocation psr:TableLocation .
+
+psr:Refrigerator a owl:Class ;
+    psr:onTopOf psr:Refrigerator.
+
+psr:Furniture a owl:Class ;
+    rdfs:subClassOf psr:Component.
+
+psr:TableLocation a owl:Class ;
+    rdfs:subClassOf psr:Location.
+
+psr:Location a owl:Class ;
+    rdfs:subClassOf psr:Environment.
+
+psr:Object a owl:Class ;
+    rdfs:subClassOf psr:Component.
+
+psr:DiningTable a psr:Entity ;
+    psr:onTopOf psr:Refrigerator ;
+    psr:hasLocation psr:TableLocation.
+
+psr:Refrigerator a psr:Entity ;
+    psr:hasLocation psr:RefrigeratorLocation.
+
+psr:Object a psr:Entity ;
+    psr:onTopOf psr:DiningTable ;
+    psr:hasLocation psr:ObjectLocation.
+
+psr:TableLocation a psr:Entity ;
+    psr:label "TableLocation"@en.
+
+psr:RefrigeratorLocation a psr:Entity ;
+    psr:label "RefrigeratorLocation"@en.
+
+psr:ObjectLocation a psr:Entity ;
+    psr:label "ObjectLocation"@en.

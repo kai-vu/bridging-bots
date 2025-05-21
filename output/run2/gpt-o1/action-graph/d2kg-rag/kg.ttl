@@ -1,0 +1,149 @@
+@prefix kitchen: <http://example.org/ontology/kitchen#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:action1 a kitchen:IdentifyAllMisplacedItems ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasNextAction ex:action2 .
+
+ex:action2 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jamJar1 ;
+    kitchen:fromLocation ex:countertop1 ;
+    kitchen:hasNextAction ex:action3 .
+
+ex:action3 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jamJar1 ;
+    kitchen:toLocation ex:refrigerator1 ;
+    kitchen:hasNextAction ex:action4 .
+
+ex:action4 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jamJar2 ;
+    kitchen:fromLocation ex:stoveArea1 ;
+    kitchen:hasNextAction ex:action5 .
+
+ex:action5 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jamJar2 ;
+    kitchen:toLocation ex:refrigerator1 ;
+    kitchen:hasNextAction ex:action6 .
+
+ex:action6 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jelloBox1 ;
+    kitchen:fromLocation ex:countertop1 ;
+    kitchen:hasNextAction ex:action7 .
+
+ex:action7 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:jelloBox1 ;
+    kitchen:toLocation ex:pantry1 ;
+    kitchen:hasNextAction ex:action8 .
+
+ex:action8 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:riceBubbles1 ;
+    kitchen:fromLocation ex:countertop1 ;
+    kitchen:hasNextAction ex:action9 .
+
+ex:action9 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:riceBubbles1 ;
+    kitchen:toLocation ex:pantry1 ;
+    kitchen:hasNextAction ex:action10 .
+
+ex:action10 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:chuckyMania1 ;
+    kitchen:fromLocation ex:countertop1 ;
+    kitchen:hasNextAction ex:action11 .
+
+ex:action11 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:chuckyMania1 ;
+    kitchen:toLocation ex:pantry1 ;
+    kitchen:hasNextAction ex:action12 .
+
+ex:action12 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:chuckyMania2 ;
+    kitchen:fromLocation ex:stoveArea1 ;
+    kitchen:hasNextAction ex:action13 .
+
+ex:action13 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:chuckyMania2 ;
+    kitchen:toLocation ex:pantry1 ;
+    kitchen:hasNextAction ex:action14 .
+
+ex:action14 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:pot1 ;
+    kitchen:fromLocation ex:stoveArea1 ;
+    kitchen:hasNextAction ex:action15 .
+
+ex:action15 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:pot1 ;
+    kitchen:toLocation ex:potStorage1 ;
+    kitchen:hasNextAction ex:action16 .
+
+ex:action16 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:mug1 ;
+    kitchen:fromLocation ex:stoveArea1 ;
+    kitchen:hasNextAction ex:action17 .
+
+ex:action17 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:mug1 ;
+    kitchen:toLocation ex:cupboard1 ;
+    kitchen:hasNextAction ex:action18 .
+
+ex:action18 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:waterBottle1 ;
+    kitchen:fromLocation ex:diningTable1 ;
+    kitchen:hasNextAction ex:action19 .
+
+ex:action19 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:waterBottle1 ;
+    kitchen:toLocation ex:refrigerator1 ;
+    kitchen:hasNextAction ex:action20 .
+
+ex:action20 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:snackBox1 ;
+    kitchen:fromLocation ex:diningTable1 ;
+    kitchen:hasNextAction ex:action21 .
+
+ex:action21 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:snackBox1 ;
+    kitchen:toLocation ex:pantry1 ;
+    kitchen:hasNextAction ex:action22 .
+
+ex:action22 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:waterPitcher1 ;
+    kitchen:fromLocation ex:diningTable1 ;
+    kitchen:hasNextAction ex:action23 .
+
+ex:action23 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:waterPitcher1 ;
+    kitchen:toLocation ex:sink1 ;
+    kitchen:hasNextAction ex:action24 .
+
+ex:action24 a kitchen:PickUpAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:wineGlass1 ;
+    kitchen:fromLocation ex:diningTable1 ;
+    kitchen:hasNextAction ex:action25 .
+
+ex:action25 a kitchen:PlaceAction ;
+    kitchen:performedBy ex:robot1 ;
+    kitchen:hasObject ex:wineGlass1 ;
+    kitchen:toLocation ex:cupboard1 .

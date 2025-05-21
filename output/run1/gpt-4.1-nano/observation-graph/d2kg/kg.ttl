@@ -3,130 +3,137 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
-@prefix :       <http://example.org/data/> .
+@prefix psr:    <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex:     <http://example.org/data/> .
 
-# Environment
-psr:KitchenEnvironment a owl:Class, dul:Entity ;
+# Define Environment: Kitchen
+ex:kitchen a psr:Environment ;
     rdfs:label "Kitchen Environment"@en .
 
-# Environment instance
-:environment1 a psr:Environment ;
-    rdfs:label "Kitchen Scene"@en .
+# Define main environment and components
+ex:countertop a psr:Location ;
+    rdfs:label "Countertop"@en ;
+    dul:hasComponent ex:foodItems, ex:objects, ex:containers, ex:countertopSurface .
 
-# Components in the environment
-:upperCabinets a psr:Component ;
-    rdfs:label "Upper Cabinets"@en .
+ex:foodItems a psr:Object ;
+    rdfs:label "Food Items on Countertop"@en .
 
-:lowerCabinets a psr:Component ;
-    rdfs:label "Lower Cabinets"@en .
+ex:boxJello a psr:Object ;
+    rdfs:label "Box of Jello"@en ;
+    dul:hasLocation ex:countertop .
 
-:countertop a psr:Component ;
-    rdfs:label "Countertop"@en .
+ex:riceBubblesBox a psr:Object ;
+    rdfs:label "Box of Rice Bubbles"@en ;
+    dul:hasLocation ex:countertop .
 
-:wallSpaceAboveCounter a psr:Component ;
-    rdfs:label "Wall Space Above Counter"@en .
+ex:shortbreadPack a psr:Object ;
+    rdfs:label "Pack of Shortbread"@en ;
+    dul:hasLocation ex:countertop .
 
-# Objects on the countertop
-:JELLOBox a psr:Object ;
-    rdfs:label "JELLO Box"@en .
+ex:jug a psr:Object ;
+    rdfs:label "Jug"@en ;
+    dul:hasLocation ex:countertop .
 
-:riceBubblesBox a psr:Object ;
-    rdfs:label "Rice Bubbles Box"@en .
+ex:glass1 a psr:Object ;
+    rdfs:label "Glass 1"@en ;
+    dul:hasLocation ex:countertop .
 
-:redStrawberryJam a psr:Object ;
-    rdfs:label "Red Strawberry Jam"@en .
+ex:glass2 a psr:Object ;
+    rdfs:label "Glass 2"@en ;
+    dul:hasLocation ex:countertop .
 
-:redWhitePreserves a psr:Object ;
-    rdfs:label "Blood Orange Preserves"@en .
+ex:bottleWater a psr:Object ;
+    rdfs:label "Bottle of Water"@en ;
+    dul:hasLocation ex:countertop .
 
-:slicedBreadDish a psr:Object ;
-    rdfs:label "Sliced Bread Dish"@en .
+ex:childFaceBox a psr:Object ;
+    rdfs:label "Box with Child's Face"@en ;
+    dul:hasLocation ex:countertop .
 
-:waterBottle a psr:Object ;
-    rdfs:label "Water Bottle"@en .
+# Define objects stacked or nested on the counter
+ex:plates a psr:Object ;
+    rdfs:label "Plates with Food Items"@en ;
+    dul:hasLocation ex:countertop .
 
-:yellowCup a psr:Object ;
-    rdfs:label "Yellow Cup"@en .
+# Define Wall Above Counter
+ex:wallAboveCounter a psr:Object ;
+    rdfs:label "Wall above Counter"@en .
 
-:wineGlass a psr:Object ;
-    rdfs:label "Glass of Wine"@en .
+ex:smallSquareFrame a psr:Object ;
+    rdfs:label "Small Square Wooden Frame or Window"@en ;
+    dul:hasLocation ex:wallAboveCounter .
 
-:jugCreamer a psr:Object ;
-    rdfs:label "Jug/Creamer"@en .
+# Define Wall with Door
+ex:wallWithDoor a psr:Object ;
+    rdfs:label "Wall with Door"@en .
 
-# Positioning objects on the countertop (mostly towards left side)
-:JELLOBox psr:hasLocation :countertop .
-:riceBubblesBox psr:hasLocation :countertop .
-:redStrawberryJam psr:hasLocation :countertop .
-:redWhitePreserves psr:hasLocation :countertop .
-:slicedBreadDish psr:hasLocation :countertop .
-:waterBottle psr:hasLocation :countertop .
-:yellowCup psr:hasLocation :countertop .
-:wineGlass psr:hasLocation :countertop .
-:jugCreamer psr:hasLocation :countertop .
+ex:door a psr:Object ;
+    rdfs:label "White Door with Black Handle"@en ;
+    dul:hasLocation ex:wallWithDoor .
 
-# Items stacked and side by side
-:JELLOBox psr:onTopOf :riceBubblesBox .
+# Position of door (slightly open)
+ex:doorPosition a psr:Location ;
+    rdfs:label "Door Slightly Open"@en ;
+    geo:sfWithin ex:door .
 
-# Other objects positioned toward right side
-:waterBottle psr:onTopOf :countertop .
-:yellowCup psr:onTopOf :countertop .
-:wineGlass psr:onTopOf :countertop .
-:jugCreamer psr:onTopOf :countertop .
+# Define Cabinet above Counter
+ex:blackCabinets a psr:Object ;
+    rdfs:label "Black Cabinets with Blue Handles"@en ;
+    dul:hasLocation ex:countertop .
 
-# Wall with window
-:rearWall a psr:Object ;
-    rdfs:label "Rear Wall"@en .
+ex:rangeHood a psr:Object ;
+    rdfs:label "Wooden Range Hood"@en ;
+    dul:hasLocation ex:blackCabinets .
 
-:window a psr:Object ;
-    rdfs:label "Small Window"@en .
+# Define Floor
+ex:floor a psr:Object ;
+    rdfs:label "Wooden Floor with Parquet Pattern"@en .
 
-:window psr:hasLocation :wallSpaceAboveCounter .
-:window psr:onTopOf :wallSpaceAboveCounter .
+# Define Ceiling Light
+ex:ceilingLight a psr:Object ;
+    rdfs:label "Round Ceiling Light"@en .
 
-# Cabinets above counter
-:upperGrayCabinets a psr:Component ;
-    rdfs:label "Dark Gray Upper Cabinets"@en .
+# Define environment layout relations
+ex:countertop dul:hasComponent ex:foodItems ;
+ex:countertop dul:hasComponent ex:plates ;
+ex:countertop dul:hasComponent ex:jug ;
+ex:countertop dul:hasComponent ex:glass1 ;
+ex:countertop dul:hasComponent ex:glass2 ;
+ex:countertop dul:hasComponent ex:bottleWater ;
+ex:countertop dul:hasComponent ex:childFaceBox ;
+ex:countertop dul:hasComponent ex:containers .
 
-:lowerGrayCabinets a psr:Component ;
-    rdfs:label "Dark Gray Lower Cabinets"@en .
+ex:foodItems a psr:Object ;
+    rdfs:label "Food Items"@en .
 
-:upperGrayCabinets psr:hasLocation :upperCabinets .
-:lowerGrayCabinets psr:hasLocation :lowerCabinets .
+# Relations to specify positions and containment
+ex:foodItems geo:sfContains ex:boxJello, ex:riceBubblesBox, ex:shortbreadPack, ex:childFaceBox .
+ex:containers a psr:Object ;
+    rdfs:label "Containers and dishes"@en .
 
-# Extractor fan / range hood
-:rangeHood a psr:Object ;
-    rdfs:label "Range Hood"@en .
+# Location relations
+ex:boxJello dul:hasLocation ex:countertop .
+ex:riceBubblesBox dul:hasLocation ex:countertop .
+ex:shortbreadPack dul:hasLocation ex:countertop .
+ex:jug dul:hasLocation ex:countertop .
+ex:glass1 dul:hasLocation ex:countertop .
+ex:glass2 dul:hasLocation ex:countertop .
+ex:bottleWater dul:hasLocation ex:countertop .
+ex:childFaceBox dul:hasLocation ex:countertop .
 
-:rangeHood psr:hasLocation :wallSpaceAboveCounter .
+# The wall above the countertop
+ex:wallAboveCounter dul:hasComponent ex:smallSquareFrame .
 
-# Floor
-:floor a psr:Object ;
-    rdfs:label "Wooded Parquet Floor"@en .
+# The wall with the door
+ex:wallWithDoor dul:hasComponent ex:door .
+ex:door a psr:Object ;
+    rdfs:label "Door"@en .
 
-# Door
-:door a psr:Object ;
-    rdfs:label "White Six-Panel Door"@en .
+# The door position
+ex:doorPosition geo:sfWithin ex:door .
 
-:door psr:hasLocation :wallSpaceAboveCounter .
+# The ceiling light
+ex:ceilingLight dul:hasLocation ex:ceiling .
 
-# Ceiling lights
-:ceilingLight1 a psr:Object ;
-    rdfs:label "Ceiling Light Fixture 1"@en .
-
-:ceilingLight2 a psr:Object ;
-    rdfs:label "Ceiling Light Fixture 2"@en .
-
-# Wall junction, textured walls, decor
-:wallJunction a psr:Object ;
-    rdfs:label "Wall Junction"@en .
-
-:texturedWall a psr:Object ;
-    rdfs:label "White Textured Wall"@en .
-
-:decor a psr:Object ;
-    rdfs:label "Sparse Decor"@en .
-
-# Linking environment to components
-:environment1 dul:hasComponent :upperCabinets, :lowerCabinets, :countertop, :wallSpaceAboveCounter, :rearWall, :rangeHood, :door, :floor, :ceilingLight1, :ceilingLight2, :wallJunction, :decor .
+# The environment (kitchen) contains main areas
+ex:kitchen dul:hasComponent ex:countertop, ex:wallAboveCounter, ex:wallWithDoor, ex:floor, ex:ceilingLight .

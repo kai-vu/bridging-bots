@@ -3,365 +3,98 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
 
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Cabinets, psr:Countertop, psr:Fridge, psr:DiningTable, psr:Rangehood, psr:Stove, psr:Sink, psr:Door .
+ex:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent ex:KitchenCabinets, ex:Countertop, ex:Sink, ex:Stove, ex:Pot, ex:Refrigerator, ex:JelloBox, ex:AlpenSaltBox, ex:StrawberryShortcakeBox, ex:TwoJars, ex:Backsplash, ex:Floor, ex:Walls, ex:Ceiling, ex:Mirror, ex:Hood, ex:DiningTable, ex:WhiteChairs, ex:Bottle, ex:Boxes, ex:LightFixture .
 
-psr:Cabinets a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_Cabinets ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:KitchenCabinets a psr:Appliance ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:CurrentLocation_Cabinets a psr:CurrentLocation .
+ex:Countertop a psr:Furniture ;
+    dul:hasLocation ex:KitchenCabinets .
 
-psr:Countertop a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_Countertop ;
-    psr:hasAffordance soma:Holding, soma:PuttingDown ;
-    dul:hasComponent psr:Plates, psr:RedJamJars, psr:ChickyChipPacket, psr:JelloBox, psr:AlpenSaltBox, psr:Sink .
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:Countertop ;
+    psr:hasAffordance soma:Holding .
 
-psr:CurrentLocation_Countertop a psr:CurrentLocation ;
-    psr:onTopOf psr:Cabinets .
+ex:Stove a psr:Appliance ;
+    dul:hasLocation ex:KitchenCabinets .
 
-psr:Plates a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Plates .
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:Stove ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
 
-psr:CurrentLocation_Plates a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
+ex:Refrigerator a psr:Appliance ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:RedJamJars a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_RedJamJars .
+ex:JelloBox a psr:Object ;
+    dul:hasLocation ex:Countertop .
 
-psr:CurrentLocation_RedJamJars a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
+ex:AlpenSaltBox a psr:Object ;
+    dul:hasLocation ex:Countertop .
 
-psr:ChickyChipPacket a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_ChickyChipPacket .
+ex:StrawberryShortcakeBox a psr:Object ;
+    dul:hasLocation ex:Countertop .
 
-psr:CurrentLocation_ChickyChipPacket a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
+ex:TwoJars a psr:Object ;
+    dul:hasLocation ex:Countertop .
 
-psr:JelloBox a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_JelloBox .
+ex:Backsplash a psr:Furniture ;
+    dul:hasLocation ex:KitchenCabinets .
 
-psr:CurrentLocation_JelloBox a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
+ex:Floor a psr:Furniture ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:AlpenSaltBox a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_AlpenSaltBox .
+ex:Walls a psr:Furniture ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:CurrentLocation_AlpenSaltBox a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
+ex:Ceiling a psr:Furniture ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:Fridge a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Fridge ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Mirror a psr:Object ;
+    dul:hasLocation ex:Walls .
 
-psr:CurrentLocation_Fridge a psr:CurrentLocation ;
-    geo:sfWithin psr:Kitchen .
+ex:Hood a psr:Appliance ;
+    dul:hasLocation ex:Stove .
 
-psr:DiningTable a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_DiningTable ;
-    dul:hasComponent psr:BottleOfWater, psr:PacketOfBiscuits, psr:Mugs, psr:WineGlass .
+ex:DiningTable a psr:Furniture ;
+    dul:hasLocation ex:KitchenEnvironment .
 
-psr:CurrentLocation_DiningTable a psr:CurrentLocation ;
-    geo:sfWithin psr:Kitchen .
+ex:WhiteChairs a psr:Furniture ;
+    dul:hasLocation ex:DiningTable .
 
-psr:BottleOfWater a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_BottleOfWater .
+ex:Bottle a psr:Object ;
+    dul:hasLocation ex:DiningTable .
 
-psr:CurrentLocation_BottleOfWater a psr:CurrentLocation ;
-    geo:sfWithin psr:DiningTable .
+ex:Boxes a psr:Object ;
+    dul:hasLocation ex:DiningTable .
 
-psr:PacketOfBiscuits a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_PacketOfBiscuits .
+ex:LightFixture a psr:Object ;
+    dul:hasLocation ex:Ceiling .
 
-psr:CurrentLocation_PacketOfBiscuits a psr:CurrentLocation ;
-    geo:sfWithin psr:DiningTable .
+ex:Countertop dul:hasLocation ex:KitchenCabinets .
+ex:Countertop psr:onTopOf ex:KitchenCabinets .
 
-psr:Mugs a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Mugs .
+ex:Sink geo:sfWithin ex:Countertop .
 
-psr:CurrentLocation_Mugs a psr:CurrentLocation ;
-    geo:sfWithin psr:DiningTable .
+ex:Stove geo:sfWithin ex:KitchenCabinets .
 
-psr:WineGlass a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_WineGlass .
+ex:Pot geo:sfWithin ex:Stove .
 
-psr:CurrentLocation_WineGlass a psr:CurrentLocation ;
-    geo:sfWithin psr:DiningTable .
+ex:JelloBox geo:sfWithin ex:Countertop .
+ex:AlpenSaltBox geo:sfWithin ex:Countertop .
+ex:StrawberryShortcakeBox geo:sfWithin ex:Countertop .
+ex:TwoJars geo:sfWithin ex:Countertop .
 
-psr:Rangehood a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Rangehood ;
-    psr:hasAffordance soma:Pulling, soma:Pushing .
+ex:Mirror geo:sfOverlaps ex:Walls .
 
-psr:CurrentLocation_Rangehood a psr:CurrentLocation ;
-    geo:sfOverlaps psr:Stove .
+ex:Hood geo:sfOverlaps ex:Stove .
 
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Stove ;
-    dul:hasComponent psr:Pot ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:DiningTable geo:sfWithin ex:KitchenEnvironment .
 
-# Note that soma:TurningOn and soma:TurningOff are not defined in the given ontology. 
-# For the sake of completeness, let's assume that they are subclasses of psr:Affordance.
+ex:Bottle geo:sfWithin ex:DiningTable .
+ex:Boxes geo:sfWithin ex:DiningTable .
 
-# To correct, we will just remove the affordances for Stove.
-
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Stove ;
-    dul:hasComponent psr:Pot .
-
-psr:CurrentLocation_Stove a psr:CurrentLocation .
-
-psr:Pot a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Pot .
-
-psr:CurrentLocation_Pot a psr:CurrentLocation ;
-    geo:sfWithin psr:Stove .
-
-psr:Sink a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Sink ;
-    psr:hasAffordance soma:Holding, soma:PuttingDown .
-
-psr:CurrentLocation_Sink a psr:CurrentLocation ;
-    geo:sfWithin psr:Countertop .
-
-psr:Door a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Door ;
-    dul:hasComponent psr:SilverHandle ;
-    psr:hasAffordance soma:Opening, soma:Closing, soma:Grasping .
-
-psr:CurrentLocation_Door a psr:CurrentLocation .
-
-psr:SilverHandle a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_SilverHandle .
-
-psr:CurrentLocation_SilverHandle a psr:CurrentLocation ;
-    geo:sfWithin psr:Door .
-
-# Revised to remove undefined classes and properties
-
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
-
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Cabinets, psr:Countertop, psr:Fridge, psr:DiningTable, psr:Rangehood, psr:Stove, psr:Sink, psr:Door .
-
-psr:Cabinets a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_Cabinets .
-
-psr:CurrentLocation_Cabinets a psr:CurrentLocation .
-
-psr:Countertop a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_Countertop ;
-    dul:hasComponent psr:Plates, psr:RedJamJars, psr:ChickyChipPacket, psr:JelloBox, psr:AlpenSaltBox, psr:Sink .
-
-psr:CurrentLocation_Countertop a psr:CurrentLocation .
-
-psr:Plates a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Plates .
-
-psr:CurrentLocation_Plates a psr:CurrentLocation .
-
-psr:RedJamJars a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_RedJamJars .
-
-psr:CurrentLocation_RedJamJars a psr:CurrentLocation .
-
-psr:ChickyChipPacket a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_ChickyChipPacket .
-
-psr:CurrentLocation_ChickyChipPacket a psr:CurrentLocation .
-
-psr:JelloBox a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_JelloBox .
-
-psr:CurrentLocation_JelloBox a psr:CurrentLocation .
-
-psr:AlpenSaltBox a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_AlpenSaltBox .
-
-psr:CurrentLocation_AlpenSaltBox a psr:CurrentLocation .
-
-psr:Fridge a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Fridge .
-
-psr:CurrentLocation_Fridge a psr:CurrentLocation .
-
-psr:DiningTable a psr:Furniture ;
-    dul:hasLocation psr:CurrentLocation_DiningTable ;
-    dul:hasComponent psr:BottleOfWater, psr:PacketOfBiscuits, psr:Mugs, psr:WineGlass .
-
-psr:CurrentLocation_DiningTable a psr:CurrentLocation .
-
-psr:BottleOfWater a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_BottleOfWater .
-
-psr:CurrentLocation_BottleOfWater a psr:CurrentLocation .
-
-psr:PacketOfBiscuits a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_PacketOfBiscuits .
-
-psr:CurrentLocation_PacketOfBiscuits a psr:CurrentLocation .
-
-psr:Mugs a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Mugs .
-
-psr:CurrentLocation_Mugs a psr:CurrentLocation .
-
-psr:WineGlass a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_WineGlass .
-
-psr:CurrentLocation_WineGlass a psr:CurrentLocation .
-
-psr:Rangehood a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Rangehood .
-
-psr:CurrentLocation_Rangehood a psr:CurrentLocation .
-
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Stove ;
-    dul:hasComponent psr:Pot .
-
-psr:CurrentLocation_Stove a psr:CurrentLocation .
-
-psr:Pot a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Pot .
-
-psr:CurrentLocation_Pot a psr:CurrentLocation .
-
-psr:Sink a psr:Appliance ;
-    dul:hasLocation psr:CurrentLocation_Sink .
-
-psr:CurrentLocation_Sink a psr:CurrentLocation .
-
-psr:Door a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_Door ;
-    dul:hasComponent psr:SilverHandle .
-
-psr:CurrentLocation_Door a psr:CurrentLocation .
-
-psr:SilverHandle a psr:Object ;
-    dul:hasLocation psr:CurrentLocation_SilverHandle .
-
-psr:CurrentLocation_SilverHandle a psr:CurrentLocation .
-
-psr:CurrentLocation_Plates geo:sfWithin psr:Countertop .
-psr:CurrentLocation_RedJamJars geo:sfWithin psr:Countertop .
-psr:CurrentLocation_ChickyChipPacket geo:sfWithin psr:Countertop .
-psr:CurrentLocation_JelloBox geo:sfWithin psr:Countertop .
-psr:CurrentLocation_AlpenSaltBox geo:sfWithin psr:Countertop .
-
-psr:CurrentLocation_BottleOfWater geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_PacketOfBiscuits geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_Mugs geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_WineGlass geo:sfWithin psr:DiningTable .
-
-psr:CurrentLocation_Sink geo:sfWithin psr:Countertop .
-psr:CurrentLocation_Pot geo:sfWithin psr:Stove .
-psr:CurrentLocation_SilverHandle geo:sfWithin psr:Door .
-
-psr:Fridge geo:sfOverlaps psr:Countertop . # Assuming "fridge to the right of the counter"
-psr:CurrentLocation_Rangehood geo:sfOverlaps psr:Stove .
-
-# corrected version output 
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
-
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Cabinets, psr:Countertop, psr:Fridge, psr:DiningTable, psr:Rangehood, psr:Stove, psr:Sink, psr:Door .
-
-psr:Cabinets a psr:Furniture .
-psr:Countertop a psr:Furniture ;
-    dul:hasComponent psr:Plates, psr:RedJamJars, psr:ChickyChipPacket, psr:JelloBox, psr:AlpenSaltBox, psr:Sink .
-
-psr:Plates a psr:Object .
-psr:RedJamJars a psr:Object .
-psr:ChickyChipPacket a psr:Object .
-psr:JelloBox a psr:Object .
-psr:AlpenSaltBox a psr:Object .
-psr:Fridge a psr:Appliance .
-psr:DiningTable a psr:Furniture ;
-    dul:hasComponent psr:BottleOfWater, psr:PacketOfBiscuits, psr:Mugs, psr:WineGlass .
-
-psr:BottleOfWater a psr:Object .
-psr:PacketOfBiscuits a psr:Object .
-psr:Mugs a psr:Object .
-psr:WineGlass a psr:Object .
-psr:Rangehood a psr:Appliance .
-psr:Stove a psr:Appliance ;
-    dul:hasComponent psr:Pot .
-
-psr:Pot a psr:Object .
-psr:Sink a psr:Appliance .
-psr:Door a psr:Object ;
-    dul:hasComponent psr:SilverHandle .
-
-psr:SilverHandle a psr:Object .
-
-psr:Cabinets dul:hasLocation psr:CurrentLocation_Cabinets .
-psr:Countertop dul:hasLocation psr:CurrentLocation_Countertop .
-psr:Plates dul:hasLocation psr:CurrentLocation_Plates .
-psr:RedJamJars dul:hasLocation psr:CurrentLocation_RedJamJars .
-psr:ChickyChipPacket dul:hasLocation psr:CurrentLocation_ChickyChipPacket .
-psr:JelloBox dul:hasLocation psr:CurrentLocation_JelloBox .
-psr:AlpenSaltBox dul:hasLocation psr:CurrentLocation_AlpenSaltBox .
-psr:Fridge dul:hasLocation psr:CurrentLocation_Fridge .
-psr:DiningTable dul:hasLocation psr:CurrentLocation_DiningTable .
-psr:BottleOfWater dul:hasLocation psr:CurrentLocation_BottleOfWater .
-psr:PacketOfBiscuits dul:hasLocation psr:CurrentLocation_PacketOfBiscuits .
-psr:Mugs dul:hasLocation psr:CurrentLocation_Mugs .
-psr:WineGlass dul:hasLocation psr:CurrentLocation_WineGlass .
-psr:Rangehood dul:hasLocation psr:CurrentLocation_Rangehood .
-psr:Stove dul:hasLocation psr:CurrentLocation_Stove .
-psr:Pot dul:hasLocation psr:CurrentLocation_Pot .
-psr:Sink dul:hasLocation psr:CurrentLocation_Sink .
-psr:Door dul:hasLocation psr:CurrentLocation_Door .
-psr:SilverHandle dul:hasLocation psr:CurrentLocation_SilverHandle .
-
-psr:CurrentLocation_Plates geo:sfWithin psr:Countertop .
-psr:CurrentLocation_RedJamJars geo:sfWithin psr:Countertop .
-psr:CurrentLocation_ChickyChipPacket geo:sfWithin psr:Countertop .
-psr:CurrentLocation_JelloBox geo:sfWithin psr:Countertop .
-psr:CurrentLocation_AlpenSaltBox geo:sfWithin psr:Countertop .
-psr:CurrentLocation_Sink geo:sfWithin psr:Countertop .
-
-psr:CurrentLocation_BottleOfWater geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_PacketOfBiscuits geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_Mugs geo:sfWithin psr:DiningTable .
-psr:CurrentLocation_WineGlass geo:sfWithin psr:DiningTable .
-
-psr:CurrentLocation_Pot geo:sfWithin psr:Stove .
-
-psr:CurrentLocation_SilverHandle geo:sfWithin psr:Door .
-
-psr:CurrentLocation_Fridge geo:sfOverlaps psr:Countertop .
-psr:CurrentLocation_Rangehood geo:sfOverlaps psr:Stove .
-
-psr:CurrentLocation_Cabinets a psr:CurrentLocation .
-psr:CurrentLocation_Countertop a psr:CurrentLocation .
-psr:CurrentLocation_Plates a psr:CurrentLocation .
-psr:CurrentLocation_RedJamJars a psr:CurrentLocation .
-psr:CurrentLocation_ChickyChipPacket a psr:CurrentLocation .
-psr:CurrentLocation_JelloBox a psr:CurrentLocation .
-psr:CurrentLocation_AlpenSaltBox a psr:CurrentLocation .
-psr:CurrentLocation_Fridge a psr:CurrentLocation .
-psr:CurrentLocation_DiningTable a psr:CurrentLocation .
-psr:CurrentLocation_BottleOfWater a psr:CurrentLocation .
-psr:CurrentLocation_PacketOfBiscuits a psr:CurrentLocation .
-psr:CurrentLocation_Mugs a psr:CurrentLocation .
-psr:CurrentLocation_WineGlass a psr:CurrentLocation .
-psr:CurrentLocation_Rangehood a psr:CurrentLocation .
-psr:CurrentLocation_Stove a psr:CurrentLocation .
-psr:CurrentLocation_Pot a psr:CurrentLocation .
-psr:CurrentLocation_Sink a psr:CurrentLocation .
-psr:CurrentLocation_Door a psr:CurrentLocation .
-psr:CurrentLocation_SilverHandle a psr:CurrentLocation .
+ex:LightFixture geo:sfWithin ex:Ceiling .

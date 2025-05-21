@@ -1,60 +1,56 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:Alpen_Salt kitchen:hasLocation kitchen:counter .
+kitchen:Evian_water_bottle kitchen:sfWithin kitchen:table .
 
-kitchen:Evian_water kitchen:hasLocation kitchen:dining_table .
+kitchen:ceiling kitchen:hasComponent kitchen:light_fixture .
 
-kitchen:Jell-O kitchen:hasLocation kitchen:counter .
+kitchen:eggs_carton kitchen:sfWithin kitchen:table .
 
-kitchen:board_game kitchen:hasLocation kitchen:dining_table .
+kitchen:environment kitchen:hasComponent kitchen:dining_room,
+        kitchen:kitchen .
 
-kitchen:clock kitchen:hasLocation kitchen:table .
+kitchen:floor kitchen:hasProperty kitchen:material .
 
-kitchen:cupboards kitchen:hasLocation kitchen:above_counters .
+kitchen:shortbread_cookies_box kitchen:sfWithin kitchen:table .
 
-kitchen:door kitchen:hasLocation kitchen:wall .
+kitchen:walls kitchen:hasProperty kitchen:color .
 
-kitchen:fruit kitchen:hasLocation kitchen:dining_table .
+kitchen:Chunky_Monkey_jar kitchen:hasProperty kitchen:label .
 
-kitchen:jars_of_jam kitchen:hasLocation kitchen:counter ;
-    kitchen:toTheLeftOf kitchen:refrigerator .
+kitchen:cabinets kitchen:hasAffordance kitchen:handles ;
+    kitchen:hasProperty kitchen:color .
 
-kitchen:jugs kitchen:hasLocation kitchen:dining_table .
+kitchen:countertop kitchen:hasComponent kitchen:Chunky_Monkey_jar,
+        kitchen:Jello_box,
+        kitchen:Rice_Bubbles_cereal_box,
+        kitchen:pot,
+        kitchen:sink,
+        kitchen:yellow_cup ;
+    kitchen:sfContains kitchen:items .
 
-kitchen:kitchen_cabinets kitchen:hasColor kitchen:dark_gray ;
-    kitchen:hasComponent kitchen:range_hood .
+kitchen:handles kitchen:hasProperty kitchen:color .
 
-kitchen:kitchen_counters kitchen:hasSurface kitchen:beige_surface .
+kitchen:kitchen kitchen:adjacentTo kitchen:dining_room ;
+    kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertop,
+        kitchen:refrigerator,
+        kitchen:stove .
 
-kitchen:light kitchen:above kitchen:dining_table ;
-    kitchen:hasLocation kitchen:ceiling .
+kitchen:refrigerator kitchen:hasLocation kitchen:next_to_cabinets .
 
-kitchen:pan kitchen:onTopOf kitchen:stove .
+kitchen:sink kitchen:hasComponent kitchen:faucet .
 
-kitchen:paper_plates kitchen:hasLocation kitchen:counter .
+kitchen:stove kitchen:hasComponent kitchen:pot .
 
-kitchen:pot kitchen:onTopOf kitchen:electric_burner .
+kitchen:chairs kitchen:hasProperty kitchen:number .
 
-kitchen:puzzle_book kitchen:hasLocation kitchen:dining_table .
+kitchen:dining_room kitchen:hasComponent kitchen:chairs,
+        kitchen:table .
 
-kitchen:puzzle_books kitchen:hasLocation kitchen:kitchen_counter .
+kitchen:items kitchen:hasProperty kitchen:scattered .
 
-kitchen:room kitchen:hasFloor kitchen:dark_wood_parquet_floors .
-
-kitchen:toaster kitchen:hasLocation kitchen:dining_table .
-
-kitchen:wall_frame kitchen:hasLocation kitchen:wall .
-
-kitchen:yellow_mug kitchen:hasLocation kitchen:kitchen_counter .
-
-kitchen:electric_burner kitchen:hasLocation kitchen:stove .
-
-kitchen:sink kitchen:hasLocation kitchen:wall .
-
-kitchen:refrigerator kitchen:hasLocation kitchen:wall ;
-    kitchen:onTopOf kitchen:floor ;
-    kitchen:toTheRightOf kitchen:sink .
-
-kitchen:dining_table kitchen:hasLocation kitchen:adjacent_room ;
-    kitchen:perpendicularTo kitchen:refrigerator .
+kitchen:table kitchen:hasComponent kitchen:chairs,
+        kitchen:items ;
+    kitchen:hasLocation kitchen:dining_room ;
+    kitchen:sfContains kitchen:items .
 

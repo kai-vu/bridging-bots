@@ -5,8 +5,8 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
-@prefix :       <https://example.org/data/> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix :       <http://example.org/data/> .
 
 psr:Instruction a owl:Class, dul:Entity ;
     rdfs:label "Instruction"@en ;
@@ -29,15 +29,15 @@ psr:Component a owl:Class, dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-psr:Appliance a owl:Class, dul:Entity, psr:Component ;
+psr:Appliance a psr:Component ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a type of component."@en .
 
-psr:Furniture a owl:Class, dul:Entity, psr:Component ;
+psr:Furniture a psr:Component ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "A furniture is a type of component."@en .
 
-psr:Object a owl:Class, dul:Entity, psr:Component ;
+psr:Object a psr:Component ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a type of component."@en .
 
@@ -45,39 +45,39 @@ psr:Affordance a owl:Class, dul:Entity ;
     rdfs:label "Affordance"@en ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a owl:Class, dul:Entity, psr:Affordance ;
+soma:Closing a psr:Affordance ;
     rdfs:label "Closing"@en ;
     rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a owl:Class, dul:Entity, psr:Affordance ;
+soma:Opening a psr:Affordance ;
     rdfs:label "Opening"@en ;
     rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a owl:Class, dul:Entity, psr:Affordance ;
+soma:Delivering a psr:Affordance ;
     rdfs:label "Delivering"@en ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a owl:Class, dul:Entity, psr:Affordance ;
+soma:Holding a psr:Affordance ;
     rdfs:label "Holding"@en ;
     rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a owl:Class, dul:Entity, psr:Affordance ;
+soma:PickingUp a psr:Affordance ;
     rdfs:label "PickingUp"@en ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a owl:Class, dul:Entity, psr:Affordance ;
+soma:PuttingDown a psr:Affordance ;
     rdfs:label "PuttingDown"@en ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a owl:Class, dul:Entity, psr:Affordance ;
+soma:Pulling a psr:Affordance ;
     rdfs:label "Pulling"@en ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a owl:Class, dul:Entity, psr:Affordance ;
+soma:Pushing a psr:Affordance ;
     rdfs:label "Pushing"@en ;
     rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a owl:Class, dul:Entity, psr:Affordance ;
+soma:Grasping a psr:Affordance ;
     rdfs:label "Grasping"@en ;
     rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 
@@ -98,7 +98,7 @@ psr:hasAction a owl:ObjectProperty ;
     rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
 
 psr:precedes a owl:ObjectProperty ;
-    rdfs:subPropertyOf dul:precedes ;
+    rdfs:subPropertyOf  dul:precedes ;
     rdfs:domain dul:Action ;
     rdfs:range dul:Action ;
     rdfs:label "precedes" ;
@@ -129,63 +129,95 @@ psr:isAffordedBy a owl:ObjectProperty ;
     rdfs:label "is afforded by"@en ;
     rdfs:comment "An action is afforded by an affordance."@en .
 
-# Action sequence actions as per environment understanding:
+###################################
+# DATA PROPERTIES
+###################################
 
-:Action1 a dul:Action ;
-    rdfs:label "Pick up misplaced object"@en ;
+psr:hasNaturalLanguage a owl:DatatypeProperty ;
+    rdfs:domain psr:Instruction ;
+    rdfs:range xsd:string ;
+    rdfs:label "has natural language"@en ;
+    rdfs:comment "The instruction is expressed in a natural language."@en .
+
+# Actions sequence for restoring kitchen
+
+:Step1 a dul:Action ;
+    rdfs:label "Identify all misplaced items" ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedObject ;
-    psr:isAffordedBy soma:PickingUp .
+    psr:actsOn :MisplacedItems .
 
-:Action2 a dul:Action ;
-    rdfs:label "Move object to storage location"@en ;
+:Step2 a dul:Action ;
+    rdfs:label "Pick up each identified misplaced item" ;
+    psr:precedes :Step3 ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedObject ;
-    psr:isAffordedBy soma:Holding .
+    psr:actsOn :MisplacedItems .
 
-:Action3 a dul:Action ;
-    rdfs:label "Put down object in storage"@en ;
+:Step3 a dul:Action ;
+    rdfs:label "Return each item to its standard storage location" ;
+    psr:follows :Step2 ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedObject ;
-    psr:isAffordedBy soma:PuttingDown .
+    psr:actsOn :ItemsAndStorageLocations .
 
-:Action4 a dul:Action ;
-    rdfs:label "Open storage cabinet door"@en ;
+:IdentifyMisplacedItems a dul:Action ;
+    rdfs:label "Identify all misplaced items" ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :StorageDoor ;
-    psr:isAffordedBy soma:Opening .
+    psr:actsOn :Environment .
 
-:Action5 a dul:Action ;
-    rdfs:label "Close storage cabinet door"@en ;
+:PickUpItem1 a dul:Action ;
+    rdfs:label "Pick up misplaced item 1" ;
+    psr:precedes :ReturnItem1 ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :StorageDoor ;
-    psr:isAffordedBy soma:Closing .
+    psr:actsOn :MisplacedItem1 .
 
-:Action6 a dul:Action ;
-    rdfs:label "Return stored object to its standard location"@en ;
+:ReturnItem1 a dul:Action ;
+    rdfs:label "Return item 1 to designated storage" ;
+    psr:follows :PickUpItem1 ;
     psr:isPerformedBy :Robot ;
-    psr:actsOn :StandardStorageLocation ;
-    psr:isAffordedBy soma:PuttingDown .
+    psr:actsOn :StorageLocation1 .
 
-# Link order of actions
-:Action1 psr:precedes :Action2 ;
-:Action2 psr:precedes :Action3 ;
-:Action3 psr:precedes :Action4 ;
-:Action4 psr:precedes :Action5 ;
-:Action5 psr:precedes :Action6 .
+:PickUpItem2 a dul:Action ;
+    rdfs:label "Pick up misplaced item 2" ;
+    psr:precedes :ReturnItem2 ;
+    psr:isPerformedBy :Robot ;
+    psr:actsOn :MisplacedItem2 .
 
-# Define entities involved
+:ReturnItem2 a dul:Action ;
+    rdfs:label "Return item 2 to designated storage" ;
+    psr:follows :PickUpItem2 ;
+    psr:isPerformedBy :Robot ;
+    psr:actsOn :StorageLocation2 .
+
+:ItemsAndStorageLocations a dul:Action ;
+    rdfs:label "Items and their designated storage locations" ;
+    psr:isPerformedBy :Robot ;
+    psr:actsOn :Items .
+
+:Items a dul:Entity ;
+    rdfs:label "All items" .
+
+:MisplacedItems a dul:Entity ;
+    rdfs:label "Misplaced items" .
+
+:MisplacedItem1 a :Object ;
+    rdfs:label "Misplaced item 1" .
+
+:MisplacedItem2 a :Object ;
+    rdfs:label "Misplaced item 2" .
+
+:StorageLocation1 a :Object ;
+    rdfs:label "Storage location 1" .
+
+:StorageLocation2 a :Object ;
+    rdfs:label "Storage location 2" .
+
+:Environment a dul:Entity ;
+    rdfs:label "Environment" .
+
 :Robot a dul:Agent ;
-    rdfs:label "Robot"@en .
+    rdfs:label "Robot" .
 
-:MisplacedObject a psr:Object ;
-    rdfs:label "Misplaced Item"@en .
-
-:StorageDoor a psr:Furniture ;
-    rdfs:label "Kitchen Storage Door"@en .
-
-:StandardStorageLocation a psr:Furniture ;
-    rdfs:label "Standard Storage Location"@en .
-
-# The initial environment shows objects misplaced and a storage door open;
-# the robot will pick up objects, open/close doors, and return objects to their location
+# Linking actions in sequence
+:IdentifyMisplacedItems psr:precedes :PickUpItem1 .
+:PickUpItem1 psr:precedes :ReturnItem1 .
+:ReturnItem1 psr:precedes :PickUpItem2 .
+:PickUpItem2 psr:precedes :ReturnItem2 .

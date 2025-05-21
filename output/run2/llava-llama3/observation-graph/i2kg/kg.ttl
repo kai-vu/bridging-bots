@@ -1,0 +1,59 @@
+Based on the provided images and ontology, here is a Knowledge Graph describing the environment:
+
+```turtle
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/data/> .
+
+<environment> a owl:Environment ;
+  rdfs:label "Environment"@en ;
+  ex:hasComponent [
+    a owl:Component ;
+    ex:componentType "Furniture" ;
+    rdfs:label "Furniture"@en ;
+    ex:affordance [
+      a owl:Affordance ;
+      rdfs:label "Opening"@en ;
+      ex:hasComponent <furniture> .
+    ] .
+  ] .
+
+<furniture> a owl:Furniture ;
+  ex:location [
+    a owl:Location ;
+    rdfs:label "Table"@en ;
+    ex:affordance [
+      a owl:Affordance ;
+      rdfs:label "Delivering"@en ;
+      ex:hasComponent <object> .
+    ] .
+  ] .
+
+<object> a owl:Object ;
+  ex:location [
+    a owl:Location ;
+    rdfs:label "Robot"@en ;
+    ex:affordance [
+      a owl:Affordance ;
+      rdfs:label "Holding"@en .
+    ] .
+  ] .
+
+<table> a owl:Table ;
+  ex:location <furniture> .
+
+<robot> a owl:Robot ;
+  ex:location [
+    a owl:Location ;
+    rdfs:label "Floor"@en ;
+    ex:affordance [
+      a owl:Affordance ;
+      rdfs:label "PickingUp"@en .
+    ] .
+  ] .
+
+<floor> a owl:Floor ;
+  rdfs:label "Floor"@en .
+```
+
+Please note that this Knowledge Graph assumes the presence of objects on the table, which is not directly visible in the provided images. Based on the ontology, one can infer the existence of an object for the robot to hold and manipulate.

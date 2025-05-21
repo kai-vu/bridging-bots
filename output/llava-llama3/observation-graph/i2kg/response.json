@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-613a2cbf-79c2-4a14-bf35-977a66d6a0bf",
-    "created": 1747771136,
+    "id": "llava:7b-f8572e66-5d1c-43ce-9a5b-b4bb20317ed3",
+    "created": 1747870233,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```python\n@prefix : <http://www.w3.org/1999/02/rdf-schema#> .\n@prefix :env .\n@prefix :obj .\n@prefix :affordance .\n\n:env a :Environment ;\n    hasComponent :cabinet ;\n    hasComponent :sink ;\n    hasComponent :counter.\n\n:cabinet a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n\n:sink a :Appliance ;\n    hasAffordance :hasLocation ;\n    hasLocation :bathroom.\n\n:counter a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n``` ",
+                "content": " Certainly! Here is the Knowledge Graph in Turtle format based on the images you provided:\n\n```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr/action#> .\n@prefix geo: <http://www.opengis.net/ont/>.\n\n<http://example.org/data/Environment> a owl:Class ;\n  rdfs:subClassOf psr:Environment .\n\n[a psr:Environment] psr:hasComponent [a psr:Component] .\n\n[a psr:Component] psr:hasAffordance [a psr:Affordance] .\n\n[a psr:Component] psr:hasLocation [a psr:Location] .\n\n[a psr:Component] psr:onTopOf [a psr:Location] .\n\n[a psr:Component] psr:contains [a psr:Location] .\n\n[a psr:Component] psr:isWithin [a psr:Location] .\n\n[a psr:Component] psr:overlaps [a psr:Location] .\n\n<http://example.org/data/Furniture> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n<http://example.org/data/Appliance> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n<http://example.org/data/Object> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n[a psr:Location] geo:sfContainedIn [a psr:Location] .\n\n[a psr:Location] geo:sfWithin [a psr:Location] .\n\n[a psr:Location] geo:sfOverlaps [a psr:Location] .\n```\n\nPlease note that the Knowledge Graph does not include specific actions or states of the environment as it is a general ontology-based representation. The actual actions, objects, and locations within this environment will need to be defined or instantiated separately based on your use case and the additional information you may have about the environment. ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 69.36,
-        "prompt_token/s": 1867.77,
-        "total_duration": 4810478431,
-        "load_duration": 49686793,
+        "response_token/s": 7.22,
+        "prompt_token/s": 44.04,
+        "total_duration": 172037176321,
+        "load_duration": 49963984,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2192992710,
-        "eval_count": 176,
-        "completion_tokens": 176,
-        "eval_duration": 2537310424,
-        "approximate_total": "0h0m4s",
-        "total_tokens": 4272,
+        "prompt_eval_duration": 92999283942,
+        "eval_count": 570,
+        "completion_tokens": 570,
+        "eval_duration": 78957757271,
+        "approximate_total": "0h2m52s",
+        "total_tokens": 4666,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

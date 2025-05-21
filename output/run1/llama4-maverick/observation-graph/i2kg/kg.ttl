@@ -3,100 +3,119 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
 
-psr:Kitchen a psr:Environment ;
-    dul:hasComponent psr:Table, psr:Chairs, psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan, psr:Door .
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Cabinet1 ;
+    dul:hasComponent ex:Cabinet2 ;
+    dul:hasComponent ex:Refrigerator1 ;
+    dul:hasComponent ex:DiningTable1 ;
+    dul:hasComponent ex:Chair1 ;
+    dul:hasComponent ex:Chair2 ;
+    dul:hasComponent ex:Chair3 ;
+    dul:hasComponent ex:Sink1 ;
+    dul:hasComponent ex:Stove1 .
 
-psr:Table a psr:Furniture ;
-    dul:hasLocation psr:DiningArea ;
-    psr:hasAffordance soma:Holding .
+ex:Cabinet1 a psr:Furniture ;
+    psr:hasAffordance soma:Opening ;
+    psr:hasAffordance soma:Closing ;
+    dul:hasLocation ex:CounterTop1 .
 
-psr:Chairs a psr:Furniture ;
-    dul:hasLocation psr:DiningArea ;
-    psr:hasAffordance soma:Sitting .
+ex:Cabinet2 a psr:Furniture ;
+    psr:hasAffordance soma:Opening ;
+    psr:hasAffordance soma:Closing ;
+    dul:hasLocation ex:CounterTop2 .
 
-psr:Cabinet a psr:Furniture ;
-    dul:hasLocation psr:KitchenArea ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Refrigerator1 a psr:Appliance ;
+    psr:hasAffordance soma:Opening ;
+    psr:hasAffordance soma:Closing .
 
-psr:Fridge a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:DiningTable1 a psr:Furniture ;
+    psr:hasAffordance soma:PickingUp ;
+    dul:hasLocation ex:Room1 .
 
-psr:Sink a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea ;
-    psr:hasAffordance soma:Containing .
+ex:Chair1 a psr:Furniture ;
+    dul:hasLocation ex:Room1 .
 
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea ;
-    psr:hasAffordance soma:Heating .
+ex:Chair2 a psr:Furniture ;
+    dul:hasLocation ex:Room1 .
 
-psr:ExhaustFan a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea ;
-    psr:hasAffordance soma:Ventilating .
+ex:Chair3 a psr:Furniture ;
+    dul:hasLocation ex:Room1 .
 
-psr:Door a psr:Furniture ;
-    dul:hasLocation psr:DiningArea ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Sink1 a psr:Appliance ;
+    psr:hasAffordance soma:Delivering ;
+    dul:hasLocation ex:CounterTop2 .
 
-psr:DiningArea a soma:Location ;
-    geo:sfContains psr:Table, psr:Chairs .
+ex:Stove1 a psr:Appliance .
 
-psr:KitchenArea a soma:Location ;
-    geo:sfContains psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan .
+ex:CounterTop1 a psr:Component ;
+    geo:sfContains ex:Jar1 ;
+    geo:sfContains ex:Jello1 ;
+    geo:sfContains ex:AlpenSalt1 .
 
-psr:JelloBox a psr:Object ;
-    dul:hasLocation psr:CounterTop ;
-    psr:onTopOf psr:Cabinet .
+ex:CounterTop2 a psr:Component ;
+    geo:sfContains ex:Pot1 ;
+    geo:sfContains ex:Chicky1 ;
+    geo:sfContains ex:Jar2 ;
+    geo:sfContains ex:RiceBubbles1 ;
+    geo:sfContains ex:Chicky2 ;
+    geo:sfContains ex:PlateStack1 ;
+    geo:sfContains ex:Jar3 ;
+    geo:sfContains ex:Jello2 ;
+    geo:sfContains ex:AlpenSalt2 .
 
-psr:AlpenSalt a psr:Object ;
-    dul:hasLocation psr:CounterTop ;
-    psr:onTopOf psr:Cabinet .
+ex:DiningTableTop1 a psr:Component ;
+    geo:sfContains ex:Book1 ;
+    geo:sfContains ex:Evian1 ;
+    geo:sfContains ex:Evian2 ;
+    geo:sfContains ex:Mug1 .
 
-psr:ChunkyBox a psr:Object ;
-    dul:hasLocation psr:CounterTop ;
-    psr:onTopOf psr:Cabinet .
+ex:Jar1 a psr:Object .
+ex:Jello1 a psr:Object .
+ex:AlpenSalt1 a psr:Object .
+ex:Pot1 a psr:Object .
+ex:Chicky1 a psr:Object .
+ex:Jar2 a psr:Object .
+ex:RiceBubbles1 a psr:Object .
+ex:Chicky2 a psr:Object .
+ex:PlateStack1 a psr:Object .
+ex:Jar3 a psr:Object .
+ex:Jello2 a psr:Object .
+ex:AlpenSalt2 a psr:Object .
+ex:Book1 a psr:Object .
+ex:Evian1 a psr:Object .
+ex:Evian2 a psr:Object .
+ex:Mug1 a psr:Object .
 
-psr:RiceBubblesBox a psr:Object ;
-    dul:hasLocation psr:CounterTop ;
-    psr:onTopOf psr:Cabinet .
+ex:Room1 a soma:Location .
 
-psr:Plates a psr:Object ;
-    dul:hasLocation psr:CounterTop ;
-    psr:onTopOf psr:Cabinet .
+ex:Cabinet1 dul:hasLocation ex:Room1 .
+ex:Cabinet2 dul:hasLocation ex:Room1 .
+ex:Refrigerator1 dul:hasLocation ex:Room1 .
+ex:DiningTable1 dul:hasLocation ex:Room1 .
+ex:Chair1 dul:hasLocation ex:Room1 .
+ex:Chair2 dul:hasLocation ex:Room1 .
+ex:Chair3 dul:hasLocation ex:Room1 .
 
-psr:WaterBottle a psr:Object ;
-    dul:hasLocation psr:Table ;
-    psr:onTopOf psr:Table .
+ex:CounterTop1 psr:onTopOf ex:Cabinet1 .
+ex:CounterTop2 psr:onTopOf ex:Cabinet2 .
+ex:DiningTableTop1 psr:onTopOf ex:DiningTable1 .
 
-psr:FruitBox a psr:Object ;
-    dul:hasLocation psr:Table ;
-    psr:onTopOf psr:Table .
-
-psr:CounterTop a soma:Location ;
-    geo:sfContains psr:JelloBox, psr:AlpenSalt, psr:ChunkyBox, psr:RiceBubblesBox, psr:Plates .
-
-psr:Cabinet a psr:Furniture ;
-    dul:hasLocation psr:KitchenArea .
-
-psr:Fridge a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea .
-
-psr:Sink a psr:Appliance ;
-    dul:hasLocation psr:CounterTop .
-
-psr:Stove a psr:Appliance ;
-    dul:hasLocation psr:CounterTop .
-
-psr:ExhaustFan a psr:Appliance ;
-    dul:hasLocation psr:KitchenArea .
-
-psr:Door a psr:Furniture ;
-    dul:hasLocation psr:DiningArea .
-
-psr:WaterBottle a psr:Object ;
-    dul:hasLocation psr:Table .
-
-psr:FruitBox a psr:Object ;
-    dul:hasLocation psr:Table .
+ex:Jar1 geo:sfWithin ex:CounterTop1 .
+ex:Jello1 geo:sfWithin ex:CounterTop1 .
+ex:AlpenSalt1 geo:sfWithin ex:CounterTop1 .
+ex:Pot1 geo:sfWithin ex:CounterTop2 .
+ex:Chicky1 geo:sfWithin ex:CounterTop2 .
+ex:Jar2 geo:sfWithin ex:CounterTop2 .
+ex:RiceBubbles1 geo:sfWithin ex:CounterTop2 .
+ex:Chicky2 geo:sfWithin ex:CounterTop2 .
+ex:PlateStack1 geo:sfWithin ex:CounterTop2 .
+ex:Jar3 geo:sfWithin ex:CounterTop2 .
+ex:Jello2 geo:sfWithin ex:CounterTop2 .
+ex:AlpenSalt2 geo:sfWithin ex:CounterTop2 .
+ex:Book1 geo:sfWithin ex:DiningTableTop1 .
+ex:Evian1 geo:sfWithin ex:DiningTableTop1 .
+ex:Evian2 geo:sfWithin ex:DiningTableTop1 .
+ex:Mug1 geo:sfWithin ex:DiningTableTop1 .

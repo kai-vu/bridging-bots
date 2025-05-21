@@ -1,33 +1,33 @@
 {
-    "id": "chatcmpl-b98ec3de-e7e2-4fb9-909c-93770f1d444f",
+    "id": "chatcmpl-ef906c6a-3695-4f7a-877b-1474294b33d7",
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd: <http://www.w33.org/2001/XMLSchema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:Instruction_1 a psr:Instruction ;\n    psr:hasWorkflow psr:Workflow_1 ;\n    psr:hasNaturalLanguage \"Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically.\"@en .\n\npsr:Workflow_1 a psr:Workflow ;\n    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .\n\npsr:Action_1 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    rdfs:label \"Pick up the bottle\"@en ;\n    psr:precedes psr:Action_2 .\n\npsr:Action_2 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    rdfs:label \"Put down the bottle in the kitchen\"@en ;\n    psr:precedes psr:Action_3 .\n\npsr:Action_3 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_2 ;\n    psr:isAffordedBy soma:PickingUp ;\n    rdfs:label \"Pick up the box\"@en ;\n    psr:precedes psr:Action_4 .\n\npsr:Action_4 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_2 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    rdfs:label \"Put down the box in the kitchen\"@en ;\n    psr:precedes psr:Action_5 .\n\npsr:Action_5 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_3 ;\n    psr:isAffordedBy soma:PickingUp ;\n    rdfs:label \"Pick up the jar\"@en ;\n    psr:precedes psr:Action_6 .\n\npsr:Action_6 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Object_3 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    rdfs:label \"Put down the jar in the kitchen\"@en ;\n    psr:precedes psr:Action_7 .\n\npsr:Action_7 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Component_1 ;\n    psr:isAffordedBy soma:Opening ;\n    rdfs:label \"Open the cabinet\"@en ;\n    psr:precedes psr:Action_8 .\n\npsr:Action_8 a dul:Action ;\n    soma:isPerformedBy dul:Agent_1 ;\n    psr:actsOn psr:Component_1 ;\n    psr:isAffordedBy soma:Closing ;\n    rdfs:label \"Close the cabinet\"@en .\n\ndul:Agent_1 a dul:Agent .\n\npsr:Object_1 a psr:Object ;\n    rdfs:label \"Bottle\"@en .\n\npsr:Object_2 a psr:Object ;\n    rdfs:label \"Box\"@en .\n\npsr:Object_3 a psr:Object ;\n    rdfs:label \"Jar\"@en .\n\npsr:Component_1 a psr:Component ;\n    rdfs:label \"Cabinet\"@en .",
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n\npsr:Instruction_1 a psr:Instruction ;\n    psr:hasWorkflow psr:Workflow_1 ;\n    psr:hasNaturalLanguage \"Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically.\"@en .\n\npsr:Workflow_1 a psr:Workflow ;\n    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8, psr:Action_9, psr:Action_10, psr:Action_11, psr:Action_12 .\n\npsr:Action_1 a dul:Action ;\n    rdfs:label \"Pick up bottle\"@en ;\n    psr:actsOn psr:Object_Bottle ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action_2 .\n\npsr:Action_2 a dul:Action ;\n    rdfs:label \"Put down bottle\"@en ;\n    psr:actsOn psr:Object_Bottle ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_1 ;\n    psr:precedes psr:Action_3 .\n\npsr:Action_3 a dul:Action ;\n    rdfs:label \"Open fridge\"@en ;\n    psr:actsOn psr:Component_Fridge ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:Opening ;\n    psr:follows psr:Action_2 ;\n    psr:precedes psr:Action_4 .\n\npsr:Action_4 a dul:Action ;\n    rdfs:label \"Put bottle in fridge\"@en ;\n    psr:actsOn psr:Object_Bottle ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_3 ;\n    psr:precedes psr:Action_5 .\n\npsr:Action_5 a dul:Action ;\n    rdfs:label \"Close fridge\"@en ;\n    psr:actsOn psr:Component_Fridge ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:Closing ;\n    psr:follows psr:Action_4 ;\n    psr:precedes psr:Action_6 .\n\npsr:Action_6 a dul:Action ;\n    rdfs:label \"Pick up Jell-O\"@en ;\n    psr:actsOn psr:Object_JellO ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows psr:Action_5 ;\n    psr:precedes psr:Action_7 .\n\npsr:Action_7 a dul:Action ;\n    rdfs:label \"Put Jell-O away\"@en ;\n    psr:actsOn psr:Object_JellO ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_6 ;\n    psr:precedes psr:Action_8 .\n\npsr:Action_8 a dul:Action ;\n    rdfs:label \"Pick up Alpen Salt\"@en ;\n    psr:actsOn psr:Object_AlpenSalt ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows psr:Action_7 ;\n    psr:precedes psr:Action_9 .\n\npsr:Action_9 a dul:Action ;\n    rdfs:label \"Put Alpen Salt away\"@en ;\n    psr:actsOn psr:Object_AlpenSalt ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_8 ;\n    psr:precedes psr:Action_10 .\n\npsr:Action_10 a dul:Action ;\n    rdfs:label \"Pick up cookie box\"@en ;\n    psr:actsOn psr:Object_CookieBox ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows psr:Action_9 ;\n    psr:precedes psr:Action_11 .\n\npsr:Action_11 a dul:Action ;\n    rdfs:label \"Put cookie box away\"@en ;\n    psr:actsOn psr:Object_CookieBox ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_10 ;\n    psr:precedes psr:Action_12 .\n\npsr:Action_12 a dul:Action ;\n    rdfs:label \"Organize remaining items\"@en ;\n    psr:actsOn psr:Component_KitchenCounter ;\n    soma:isPerformedBy psr:Agent_Robot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:Action_11 .\n\npsr:Object_Bottle a psr:Object .\npsr:Object_JellO a psr:Object .\npsr:Object_AlpenSalt a psr:Object .\npsr:Object_CookieBox a psr:Object .\npsr:Component_Fridge a psr:Component .\npsr:Component_KitchenCounter a psr:Component .\npsr:Agent_Robot a dul:Agent .",
                 "role": "assistant"
             }
         }
     ],
-    "created": 1747771380,
+    "created": 1747864393,
     "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
     "object": "chat.completion",
     "system_fingerprint": "fp_c527aa4474",
     "usage": {
-        "completion_tokens": 994,
-        "prompt_tokens": 14161,
-        "total_tokens": 15155,
-        "completion_time": 4.980229279,
-        "prompt_time": 0.376740952,
-        "queue_time": 7.769675655,
-        "total_time": 5.356970231
+        "completion_tokens": 1447,
+        "prompt_tokens": 14065,
+        "total_tokens": 15512,
+        "completion_time": 6.078497081,
+        "prompt_time": 0.437342303,
+        "queue_time": 4.369798042999999,
+        "total_time": 6.5158393839999995
     },
     "usage_breakdown": {
         "models": null
     },
     "x_groq": {
-        "id": "req_01jvqmncdgfm2scjpxeyxxwmbr"
+        "id": "req_01jvtdc1ffet2tc5cdk3rphb2t"
     }
 }

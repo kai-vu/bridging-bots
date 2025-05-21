@@ -1,21 +1,49 @@
-@prefix : <http://www.w3.org/1999/02/rdf-schema#> .
-@prefix :env .
-@prefix :obj .
-@prefix :affordance .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/> .
+@prefix psr: <https://example.org/data/> .
+@prefix :       <http://example.org/data/> .
 
-:env a :Environment ;
-    hasComponent :cabinet ;
-    hasComponent :sink ;
-    hasComponent :counter.
+<http://www.w3.org/2002/07/owl-features#ObjectProperty> rdfs:subPropertyOf rdfs:Property .
 
-:cabinet a :Furniture ;
-    hasAffordance :hasLocation ;
-    hasLocation :kitchen.
+:Environment a owl:Class ;
+    psr:hasComponent :Robot .
 
-:sink a :Appliance ;
-    hasAffordance :hasLocation ;
-    hasLocation :bathroom.
+:Environment a psr:Entity ;
+    psr:label "Environment"@en ;
+    psr:comment "An environment is an area or context in which components are found."@en .
 
-:counter a :Furniture ;
-    hasAffordance :hasLocation ;
-    hasLocation :kitchen.
+:Robot a owl:Class ;
+    psr:hasComponent :Table .
+
+:Table a owl:Class ;
+    psr:hasAffordance psr:Closing ;
+    psr:hasLocation psr:OnTopOf .
+
+:Object a owl:Class ;
+    psr:hasComponent psr:Appliance.
+
+:Appliance a owl:Class ;
+    psr:hasAffordance psr:Opening .
+
+:Furniture a owl:Class ;
+    psr:hasLocation psr:OnTopOf .
+
+:Location a owl:Class ;
+    psr:hasComponent psr:Table.
+
+psr:CurrentLocation a psr:Location ;
+    rdfs:label "Current Location"@en ;
+    rdfs:comment "The current location of a component within the environment."@en .
+
+psr:StandardLocation a psr:Location ;
+    rdfs:label "Standard Location"@en ;
+    rdfs:comment "The location where a component is intended or supposed to be located, which can differ from its current location."@en .
+
+:Robot a geo:SpatialThing ;
+    rdfs:label "Robot"@en ;
+    rdfs:comment "A robot in the environment."@en .
+
+psr:OnTopOf a geo:RelatedLink ;
+    rdfs:label "On Top Of"@en ;
+    rdfs:comment "The location of a component can be on top of another component."@en .

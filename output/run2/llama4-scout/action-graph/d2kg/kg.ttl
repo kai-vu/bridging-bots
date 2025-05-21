@@ -1,0 +1,259 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenInstruction a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItemsAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Kitchen ;
+  psr:follows ex:None .
+
+ex:RobotAgent a dul:Agent .
+
+ex:Kitchen a psr:Component ;
+  rdfs:label "Kitchen"@en .
+
+ex:IdentifyMisplacedItemsActionResult a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Kitchen ;
+  psr:follows ex:IdentifyMisplacedItemsAction .
+
+ex:PickUpYellowMugAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:YellowMug ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:IdentifyMisplacedItemsActionResult .
+
+ex:YellowMug a psr:Object ;
+  rdfs:label "Yellow Mug"@en .
+
+ex:PutDownYellowMugAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:YellowMug ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpYellowMugAction .
+
+ex:Cabinet ex:GrayCabinet a psr:Component ;
+  rdfs:label "Gray Cabinet"@en .
+
+ex:PickUpBookChuckyAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:BookChucky ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownYellowMugAction .
+
+ex:BookChucky a psr:Object ;
+  rdfs:label "Book Chucky"@en .
+
+ex:PutDownBookChuckyAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:BookChucky ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpBookChuckyAction .
+
+ex:Bookshelf ex:BookshelfComponent a psr:Component ;
+  rdfs:label "Bookshelf"@en .
+
+ex:PickUpJarRedLidAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:JarRedLid ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownBookChuckyAction .
+
+ex:JarRedLid a psr:Object ;
+  rdfs:label "Jar with Red Lid"@en .
+
+ex:PutDownJarRedLidAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:JarRedLid ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpJarRedLidAction .
+
+ex:Counter ex:KitchenCounter a psr:Component ;
+  rdfs:label "Kitchen Counter"@en .
+
+ex:PickUpRiceBubblesCerealAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:RiceBubblesCereal ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownJarRedLidAction .
+
+ex:RiceBubblesCereal a psr:Object ;
+  rdfs:label "Rice Bubbles Cereal"@en .
+
+ex:PutDownRiceBubblesCerealAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:RiceBubblesCereal ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpRiceBubblesCerealAction .
+
+ex:GrayCabinet ex:StorageLocation a psr:Component ;
+  rdfs:label "Gray Cabinet Storage"@en .
+
+ex:PickUpJelloAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Jello ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownRiceBubblesCerealAction .
+
+ex:Jello a psr:Object ;
+  rdfs:label "Jello"@en .
+
+ex:PutDownJelloAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Jello ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpJelloAction .
+
+ex:PickUpWhitePlatesAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:WhitePlates ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownJelloAction .
+
+ex:WhitePlates a psr:Object ;
+  rdfs:label "White Plates"@en .
+
+ex:PutDownWhitePlatesAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:WhitePlates ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpWhitePlatesAction .
+
+ex:Stove ex:StoveComponent a psr:Component ;
+  rdfs:label "Stove"@en .
+
+ex:PickUpPotAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Pot ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownWhitePlatesAction .
+
+ex:Pot a psr:Object ;
+  rdfs:label "Pot"@en .
+
+ex:PutDownPotAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:Pot ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpPotAction .
+
+ex:DiningTable ex:DiningTableComponent a psr:Component ;
+  rdfs:label "Dining Table"@en .
+
+ex:PickUpEvianWaterAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:EvianWater ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownPotAction .
+
+ex:EvianWater a psr:Object ;
+  rdfs:label "Evian Water"@en .
+
+ex:PutDownEvianWaterAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:EvianWater ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpEvianWaterAction .
+
+ex:PickUpChocolateCakeMixAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:ChocolateCakeMix ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownEvianWaterAction .
+
+ex:ChocolateCakeMix a psr:Object ;
+  rdfs:label "Chocolate Cake Mix"@en .
+
+ex:PutDownChocolateCakeMixAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:ChocolateCakeMix ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpChocolateCakeMixAction .
+
+ex:PickUpSecondBookChuckyAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:SecondBookChucky ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownChocolateCakeMixAction .
+
+ex:SecondBookChucky a psr:Object ;
+  rdfs:label "Second Book Chucky"@en .
+
+ex:PutDownSecondBookChuckyAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:SecondBookChucky ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpSecondBookChuckyAction .
+
+ex:PickUpJarRedLidSecondAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:JarRedLidSecond ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownSecondBookChuckyAction .
+
+ex:JarRedLidSecond a psr:Object ;
+  rdfs:label "Second Jar with Red Lid"@en .
+
+ex:PutDownJarRedLidSecondAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:JarRedLidSecond ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpJarRedLidSecondAction .
+
+ex:PickUpPlateWithBowlAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:PlateWithBowl ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:follows ex:PutDownJarRedLidSecondAction .
+
+ex:PlateWithBowl a psr:Object ;
+  rdfs:label "Plate with Bowl"@en .
+
+ex:PutDownPlateWithBowlAction a dul:Action ;
+  psr:isPerformedBy ex:RobotAgent ;
+  psr:actsOn ex:PlateWithBowl ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:follows ex:PickUpPlateWithBowlAction .
+
+ex:RestoreKitchenInstruction 
+  psr:hasWorkflow ex:RestoreKitchenWorkflow .
+
+ex:RestoreKitchenWorkflow 
+  psr:hasAction ex:IdentifyMisplacedItemsAction ;
+  psr:hasAction ex:IdentifyMisplacedItemsActionResult ;
+  psr:hasAction ex:PickUpYellowMugAction ;
+  psr:hasAction ex:PutDownYellowMugAction ;
+  psr:hasAction ex:PickUpBookChuckyAction ;
+  psr:hasAction ex:PutDownBookChuckyAction ;
+  psr:hasAction ex:PickUpJarRedLidAction ;
+  psr:hasAction ex:PutDownJarRedLidAction ;
+  psr:hasAction ex:PickUpRiceBubblesCerealAction ;
+  psr:hasAction ex:PutDownRiceBubblesCerealAction ;
+  psr:hasAction ex:PickUpJelloAction ;
+  psr:hasAction ex:PutDownJelloAction ;
+  psr:hasAction ex:PickUpWhitePlatesAction ;
+  psr:hasAction ex:PutDownWhitePlatesAction ;
+  psr:hasAction ex:PickUpPotAction ;
+  psr:hasAction ex:PutDownPotAction ;
+  psr:hasAction ex:PickUpEvianWaterAction ;
+  psr:hasAction ex:PutDownEvianWaterAction ;
+  psr:hasAction ex:PickUpChocolateCakeMixAction ;
+  psr:hasAction ex:PutDownChocolateCakeMixAction ;
+  psr:hasAction ex:PickUpSecondBookChuckyAction ;
+  psr:hasAction ex:PutDownSecondBookChuckyAction ;
+  psr:hasAction ex:PickUpJarRedLidSecondAction ;
+  psr:hasAction ex:PutDownJarRedLidSecondAction ;
+  psr:hasAction ex:PickUpPlateWithBowlAction ;
+  psr:hasAction ex:PutDownPlateWithBowlAction .

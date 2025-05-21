@@ -1,0 +1,178 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <http://www.ease-crc.org/ont/SOMA.owl#> .
+
+@prefix ex: <http://example.org/data/> .
+
+# Define the environment
+ex:Kitchen a psr:Environment ;
+    rdfs:label "Kitchen Environment"@en .
+
+# Define objects on the left side of the environment
+# Countertop
+ex:LeftCountertop a psr:Object ;
+    rdfs:label "Left Side Countertop"@en ;
+    dul:hasLocation ex:LeftCountertopLocation .
+
+# Location of the left countertop within the environment
+ex:LeftCountertopLocation a psr:StandardLocation ;
+    rdfs:label "Left Side Countertop Location"@en ;
+    dul:hasComponent ex:LeftCountertop .
+
+# Food items on the left countertop
+ex:JelloBox a psr:Object ;
+    rdfs:label "Box of Jello"@en ;
+    dul:hasLocation ex:JelloBoxLocation .
+
+ex:JelloBoxLocation a psr:StandardLocation ;
+    rdfs:label "Jello Box Location"@en ;
+    dul:hasComponent ex:JelloBox .
+
+ex:RiceBubblesBox a psr:Object ;
+    rdfs:label "Box of Rice Bubbles Cereal"@en ;
+    dul:hasLocation ex:RiceBubblesBoxLocation .
+
+ex:RiceBubblesBoxLocation a psr:StandardLocation ;
+    rdfs:label "Rice Bubbles Box Location"@en ;
+    dul:hasComponent ex:RiceBubblesBox .
+
+ex:StrawberryJamJar a psr:Object ;
+    rdfs:label "Jar of Strawberry Jam"@en ;
+    dul:hasLocation ex:StrawberryJamJarLocation .
+
+ex:StrawberryJamJarLocation a psr:StandardLocation ;
+    rdfs:label "Strawberry Jam Jar Location"@en ;
+    dul:hasComponent ex:StrawberryJamJar .
+
+ex:AlpenSaltCarton a psr:Object ;
+    rdfs:label "Carton of Alpen Salt"@en ;
+    dul:hasLocation ex:AlpenSaltCartonLocation .
+
+ex:AlpenSaltCartonLocation a psr:StandardLocation ;
+    rdfs:label "Alpen Salt Carton Location"@en ;
+    dul:hasComponent ex:AlpenSaltCarton .
+
+ex:ShortbreadCookiesPkg a psr:Object ;
+    rdfs:label "Package of Shortbread Cookies"@en ;
+    dul:hasLocation ex:ShortbreadCookiesLocation .
+
+ex:ShortbreadCookiesLocation a psr:StandardLocation ;
+    rdfs:label "Shortbread Cookies Location"@en ;
+    dul:hasComponent ex:ShortbreadCookiesPkg .
+
+# Cabinets behind objects
+ex:DarkCabinets a psr:Object ;
+    rdfs:label "Dark-colored Cabinets"@en ;
+    dul:hasLocation ex:CabinetsLocation .
+
+ex:CabinetsLocation a psr:StandardLocation ;
+    rdfs:label "Cabinets Location"@en ;
+    dul:hasComponent ex:DarkCabinets .
+
+# Refrigerator to the right
+ex:WhiteRefrigerator a psr:Object ;
+    rdfs:label "White Refrigerator"@en ;
+    dul:hasLocation ex:RefrigeratorLocation .
+
+ex:RefrigeratorLocation a psr:StandardLocation ;
+    rdfs:label "Refrigerator Location"@en ;
+    dul:hasComponent ex:WhiteRefrigerator .
+
+# Define middle view objects
+# Continue countertop
+ex:MiddleCountertop a psr:Object ;
+    rdfs:label "Middle Countertop"@en ;
+    dul:hasLocation ex:MiddleCountertopLocation .
+
+ex:MiddleCountertopLocation a psr:StandardLocation ;
+    rdfs:label "Middle Countertop Location"@en ;
+    dul:hasComponent ex:MiddleCountertop .
+
+# Food items on the middle countertop
+ex:EvianBottle a psr:Object ;
+    rdfs:label "Bottle of Evian Water"@en ;
+    dul:hasLocation ex:EvianBottleLocation .
+
+ex:EvianBottleLocation a psr:StandardLocation ;
+    rdfs:label "Evian Bottle Location"@en ;
+    dul:hasComponent ex:EvianBottle .
+
+ex:SmallCerealBox a psr:Object ;
+    rdfs:label "Small Box of Cereal"@en ;
+    dul:hasLocation ex:SmallCerealBoxLocation .
+
+ex:SmallCerealBoxLocation a psr:StandardLocation ;
+    rdfs:label "Small Cereal Box Location"@en ;
+    dul:hasComponent ex:SmallCerealBox .
+
+ex:Pitcher a psr:Object ;
+    rdfs:label "Pitcher"@en ;
+    dul:hasLocation ex:PitcherLocation .
+
+ex:PitcherLocation a psr:StandardLocation ;
+    rdfs:label "Pitcher Location"@en ;
+    dul:hasComponent ex:Pitcher .
+
+ex:DrinkingGlass a psr:Object ;
+    rdfs:label "Drinking Glass"@en ;
+    dul:hasLocation ex:DrinkingGlassLocation .
+
+ex:DrinkingGlassLocation a psr:StandardLocation ;
+    rdfs:label "Drinking Glass Location"@en ;
+    dul:hasComponent ex:DrinkingGlass .
+
+ex:CerealBowl a psr:Object ;
+    rdfs:label "Bowl of Cereal"@en ;
+    dul:hasLocation ex:CerealBowlLocation .
+
+ex:CerealBowlLocation a psr:StandardLocation ;
+    rdfs:label "Cereal Bowl Location"@en ;
+    dul:hasComponent ex:CerealBowl .
+
+# Chairs around the table
+ex:WhiteChair1 a psr:Object ;
+    rdfs:label "White Chair 1"@en ;
+    dul:hasLocation ex:Chair1Location .
+
+ex:Chair1Location a psr:StandardLocation ;
+    rdfs:label "Chair 1 Location"@en ;
+    dul:hasComponent ex:WhiteChair1 .
+
+ex:WhiteChair2 a psr:Object ;
+    rdfs:label "White Chair 2"@en ;
+    dul:hasLocation ex:Chair2Location .
+
+ex:Chair2Location a psr:StandardLocation ;
+    rdfs:label "Chair 2 Location"@en ;
+    dul:hasComponent ex:WhiteChair2 .
+
+# View emphasizing upper cabinets and small window
+ex:UpperCabinets a psr:Object ;
+    rdfs:label "Upper Cabinets"@en ;
+    dul:hasLocation ex:UpperCabinetsLocation .
+
+ex:UpperCabinetsLocation a psr:StandardLocation ;
+    rdfs:label "Upper Cabinets Location"@en ;
+    dul:hasComponent ex:UpperCabinets .
+
+ex:SmallWindow a psr:Object ;
+    rdfs:label "Small Wooden Framed Window"@en ;
+    dul:hasLocation ex:SmallWindowLocation .
+
+ex:SmallWindowLocation a psr:StandardLocation ;
+    rdfs:label "Window Location"@en ;
+    dul:hasComponent ex:SmallWindow .
+
+# Above objects: ceiling light
+ex:CeilingLight a psr:Object ;
+    rdfs:label "Ceiling Round White Light Fixture"@en ;
+    dul:hasLocation ex:CeilingLightLocation .
+
+ex:CeilingLightLocation a psr:StandardLocation ;
+    rdfs:label "Ceiling Light Location"@en ;
+    dul:hasComponent ex:CeilingLight .
+
+# Summary: all components are located via their respective locations, linked to the environment and scene as needed.

@@ -1,53 +1,87 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix :       <http://example.org/data/> .
+@prefix ex: <http://example.org/data/> .
 
-:Kitchen a psr:Environment .
-:Refrigerator a psr:Appliance ;
-    dul:hasLocation :Countertop .
-:DiningTable a psr:Furniture ;
-    dul:hasLocation :Kitchen .
-:Countertop a psr:Component ;
-    dul:hasLocation :Kitchen .
-:Oven a psr:Appliance ;
-    dul:hasLocation :Kitchen .
-:Sinks a psr:Component ;
-    dul:hasLocation :Kitchen .
-:LightFixture a psr:Component ;
-    dul:hasLocation :Kitchen .
-:TrashCan a psr:Object ;
-    dul:hasLocation :UnderWindow .
-:UnderWindow a psr:Location ;
-    dul:hasLocation :Kitchen .
-:Window a psr:Component ;
-    dul:hasLocation :Kitchen .
-:GlassDoor a psr:Component ;
-    dul:hasLocation :Kitchen .
-:LightSwitch a psr:Component ;
-    dul:hasLocation :Hallway .
-:Hallway a psr:Environment ;
-    dul:hasLocation :Kitchen .
-:WhiteDoor a psr:Component ;
-    dul:hasLocation :Hallway .
-:Cups a psr:Object ;
-    dul:hasLocation :Countertop .
-:Bowls a psr:Object ;
-    dul:hasLocation :Countertop .
-:Bottles a psr:Object ;
-    dul:hasLocation :Countertop .
-:CerealBoxes a psr:Object ;
-    dul:hasLocation :Countertop .
-:LoafOfBread a psr:Object ;
-    dul:hasLocation :Countertop .
-:RollOfPaperTowels a psr:Object ;
-    dul:hasLocation :DiningTable .
-:CartonOfMilk a psr:Object ;
-    dul:hasLocation :DiningTable .
-:SmallRefrigerator a psr:Appliance ;
-    dul:hasLocation :DiningTable .
-:Bowl a psr:Object ;
-    dul:hasLocation :DiningTable .
+ex:kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en ;
+    dul:hasComponent ex:fridge, ex:table, ex:countertop, ex:sink, ex:cabinetry, ex:coffee_cup, ex:sun_maid_box, ex:bottle_of_water, ex:cereal_box, ex:knife, ex:paper_towels, ex:trash .
+
+ex:fridge a psr:Appliance ;
+    rdfs:label "Fridge"@en ;
+    dul:hasLocation ex:countertop ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:table a psr:Furniture ;
+    rdfs:label "Table"@en ;
+    dul:hasLocation ex:kitchen_floor ;
+    psr:hasAffordance soma:Pushing, soma:Pulling .
+
+ex:countertop a psr:Component ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation ex:kitchen ;
+    psr:hasAffordance soma:PuttingDown, soma:PickingUp .
+
+ex:sink a psr:Component ;
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:kitchen ;
+    psr:hasAffordance soma:Pushing, soma:Pulling .
+
+ex:cabinetry a psr:Component ;
+    rdfs:label "Cabinetry"@en ;
+    dul:hasLocation ex:kitchen ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:coffee_cup a psr:Object ;
+    rdfs:label "Coffee Cup"@en ;
+    dul:hasLocation ex:countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:sun_maid_box a psr:Object ;
+    rdfs:label "Sun-Maid Box"@en ;
+    dul:hasLocation ex:countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:bottle_of_water a psr:Object ;
+    rdfs:label "Bottle of Water"@en ;
+    dul:hasLocation ex:countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:cereal_box a psr:Object ;
+    rdfs:label "Cereal Box"@en ;
+    dul:hasLocation ex:countertop ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:knife a psr:Object ;
+    rdfs:label "Knife"@en ;
+    dul:hasLocation ex:table ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:paper_towels a psr:Object ;
+    rdfs:label "Paper Towels"@en ;
+    dul:hasLocation ex:sink ;
+    psr:hasAffordance soma:Grasping, soma:Holding .
+
+ex:trash a psr:Object ;
+    rdfs:label "Trash"@en ;
+    dul:hasLocation ex:kitchen_floor ;
+    psr:hasAffordance soma:Pushing, soma:Pulling .
+
+ex:kitchen_floor a soma:Location ;
+    rdfs:label "Kitchen Floor"@en .
+
+ex:countertop a soma:Location ;
+    rdfs:label "Countertop"@en ;
+    geo:sfContains ex:coffee_cup, ex:sun_maid_box, ex:bottle_of_water, ex:cereal_box ;
+    geo:sfOverlaps ex:sink, ex:cabinetry .
+
+ex:fridge_door a soma:Location ;
+    rdfs:label "Fridge Door"@en ;
+    geo:sfWithin ex:fridge .
+
+ex:table_setting a soma:Location ;
+    rdfs:label "Table Setting"@en ;
+    geo:sfWithin ex:table .

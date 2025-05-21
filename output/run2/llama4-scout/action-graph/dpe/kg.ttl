@@ -1,0 +1,86 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:book_on_table kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:book_titled_Chucky kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:bottle_of_Evian_water kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:box_of_Jello kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:box_of_Rice_Bubbles_cereal kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:box_of_chocolate_cake_mix kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:jar_with_red_lid kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:other_book_titled_Chucky kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:other_jar_with_red_lid kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:plate_with_bowl_on_top kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:pot kitchen:isPlacedOn kitchen:stove .
+
+kitchen:refrigerator kitchen:isLocatedIn kitchen:kitchen .
+
+kitchen:stack_of_white_plates kitchen:isLocatedOn kitchen:kitchen_counter ;
+    kitchen:isOrganizedBy kitchen:assistant .
+
+kitchen:affordance kitchen:isAffordedBy kitchen:dark_gray_cabinet .
+
+kitchen:move_to_kitchen_counter kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:pick_up_yellow_mug kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:put_book_on_table_in_dark_gray_cabinet kitchen:precedes kitchen:pick_up_box_of_chocolate_cake_mix .
+
+kitchen:put_book_titled_Chucky_in_dark_gray_cabinet kitchen:precedes kitchen:pick_up_jar_with_red_lid .
+
+kitchen:put_box_of_Jello_in_dark_gray_cabinet kitchen:follows kitchen:pick_up_other_jar_with_red_lid .
+
+kitchen:put_box_of_Rice_Bubbles_cereal_in_dark_gray_cabinet kitchen:precedes kitchen:pick_up_box_of_Jello .
+
+kitchen:put_box_of_chocolate_cake_mix_in_dark_gray_cabinet kitchen:follows kitchen:pick_up_plate_with_bowl_on_top .
+
+kitchen:put_jar_with_red_lid_in_dark_gray_cabinet kitchen:follows kitchen:pick_up_box_of_Rice_Bubbles_cereal .
+
+kitchen:put_other_book_titled_Chucky_in_dark_gray_cabinet kitchen:follows kitchen:move_to_dining_area .
+
+kitchen:put_other_jar_with_red_lid_in_dark_gray_cabinet kitchen:precedes kitchen:pick_up_other_book_titled_Chucky .
+
+kitchen:put_yellow_mug_in_dark_gray_cabinet kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:stove kitchen:isLocatedIn kitchen:kitchen .
+
+kitchen:workflow kitchen:hasAction kitchen:move_to_kitchen_counter .
+
+kitchen:yellow_mug kitchen:isPickedUpBy kitchen:assistant .
+
+kitchen:dark_gray_cabinet kitchen:hasAffordance kitchen:affordance ;
+    kitchen:isLocatedIn kitchen:kitchen .
+
+kitchen:kitchen_counter kitchen:isLocatedIn kitchen:kitchen .
+
+kitchen:assistant kitchen:actsOn kitchen:dark_gray_cabinet,
+        kitchen:kitchen_counter,
+        kitchen:yellow_mug ;
+    kitchen:hasAction kitchen:organize_stack_of_white_plates,
+        kitchen:pick_up_book_on_table,
+        kitchen:pick_up_book_titled_Chucky,
+        kitchen:pick_up_bottle_of_Evian_water,
+        kitchen:pick_up_yellow_mug,
+        kitchen:put_book_on_table_in_dark_gray_cabinet,
+        kitchen:put_book_titled_Chucky_in_dark_gray_cabinet,
+        kitchen:put_bottle_of_Evian_water_in_refrigerator,
+        kitchen:put_box_of_Jello_in_dark_gray_cabinet,
+        kitchen:put_box_of_Rice_Bubbles_cereal_in_dark_gray_cabinet,
+        kitchen:put_box_of_chocolate_cake_mix_in_dark_gray_cabinet,
+        kitchen:put_jar_with_red_lid_in_dark_gray_cabinet,
+        kitchen:put_other_book_titled_Chucky_in_dark_gray_cabinet,
+        kitchen:put_other_jar_with_red_lid_in_dark_gray_cabinet,
+        kitchen:put_plate_with_bowl_on_top_in_stack_of_white_plates,
+        kitchen:put_pot_on_stove,
+        kitchen:put_yellow_mug_in_dark_gray_cabinet ;
+    kitchen:hasWorkflow kitchen:workflow .
+

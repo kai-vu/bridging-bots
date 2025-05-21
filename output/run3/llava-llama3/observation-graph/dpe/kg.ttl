@@ -1,0 +1,28 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:kitchen kitchen:HAS_APPLIANCE kitchen:refrigerator,
+        kitchen:stove ;
+    kitchen:HAS_AREA kitchen:dining_area ;
+    kitchen:HAS_FLOORING kitchen:light-colored_wood_or_laminate ;
+    kitchen:HAS_FURNITURE kitchen:cabinets,
+        kitchen:counter ;
+    kitchen:HAS_LIGHTING kitchen:light_fixture ;
+    kitchen:IS_SEPARATED_BY kitchen:textured_white_wall .
+
+kitchen:cabinets kitchen:HAS_OBJECT kitchen:clock .
+
+kitchen:counter kitchen:HAS_ITEM kitchen:box_of_cereal,
+        kitchen:cup,
+        kitchen:food_packaging .
+
+kitchen:dining_area kitchen:HAS_FURNITURE kitchen:dining_table .
+
+kitchen:dining_table kitchen:HAS_ITEM kitchen:bowl,
+        kitchen:box_of_cereal,
+        kitchen:food_packaging,
+        kitchen:spoon .
+
+kitchen:refrigerator kitchen:IS_NEXT_TO kitchen:paper_towel_dispenser .
+
+kitchen:stove kitchen:IS_NEXT_TO kitchen:cabinet .
+

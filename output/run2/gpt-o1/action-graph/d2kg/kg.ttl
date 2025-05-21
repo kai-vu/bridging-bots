@@ -1,0 +1,232 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."^^xsd:string ;
+    psr:hasWorkflow ex:Workflow1 .
+
+ex:Workflow1 a psr:Workflow ;
+    psr:hasAction ex:Action1 , ex:Action2 , ex:Action3 , ex:Action4 , ex:Action5 , ex:Action6 , ex:Action7 , ex:Action8 , ex:Action9 , ex:Action10 ,
+                  ex:Action11 , ex:Action12 , ex:Action13 , ex:Action14 , ex:Action15 , ex:Action16 , ex:Action17 , ex:Action18 , ex:Action19 , ex:Action20 ,
+                  ex:Action21 , ex:Action22 , ex:Action23 , ex:Action24 , ex:Action25 , ex:Action26 , ex:Action27 , ex:Action28 , ex:Action29 , ex:Action30 ,
+                  ex:Action31 , ex:Action32 .
+
+ex:Robot a dul:Agent .
+
+ex:Cabinet a psr:Furniture .
+ex:Fridge a psr:Appliance .
+
+ex:WhitePlates a psr:Object .
+ex:BoxStrawberryJello a psr:Object .
+ex:ContainerSalt a psr:Object .
+ex:BoxRiceBubbles a psr:Object .
+ex:BoxChuckyMania1 a psr:Object .
+ex:BoxChuckyMania2 a psr:Object .
+ex:SmallPot a psr:Object .
+ex:Mug a psr:Object .
+ex:BoxSnacks a psr:Object .
+ex:EmptyWineGlass a psr:Object .
+ex:JarJam1 a psr:Object .
+ex:JarJam2 a psr:Object .
+ex:LargeWaterBottle a psr:Object .
+ex:ClearPitcher a psr:Object .
+
+# Cabinet actions
+ex:Action1 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Cabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action2 .
+
+ex:Action2 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:WhitePlates ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action3 .
+
+ex:Action3 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:WhitePlates ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action4 .
+
+ex:Action4 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxStrawberryJello ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action5 .
+
+ex:Action5 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxStrawberryJello ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action6 .
+
+ex:Action6 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ContainerSalt ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action7 .
+
+ex:Action7 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ContainerSalt ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action8 .
+
+ex:Action8 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxRiceBubbles ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action9 .
+
+ex:Action9 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxRiceBubbles ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action10 .
+
+ex:Action10 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxChuckyMania1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action11 .
+
+ex:Action11 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxChuckyMania1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action12 .
+
+ex:Action12 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxChuckyMania2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action13 .
+
+ex:Action13 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxChuckyMania2 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action14 .
+
+ex:Action14 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SmallPot ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action15 .
+
+ex:Action15 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SmallPot ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action16 .
+
+ex:Action16 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Mug ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action17 .
+
+ex:Action17 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Mug ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action18 .
+
+ex:Action18 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxSnacks ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action19 .
+
+ex:Action19 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxSnacks ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action20 .
+
+ex:Action20 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:EmptyWineGlass ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action21 .
+
+ex:Action21 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:EmptyWineGlass ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action22 .
+
+ex:Action22 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Cabinet ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes ex:Action23 .
+
+# Fridge actions
+ex:Action23 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Fridge ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action24 .
+
+ex:Action24 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:JarJam1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action25 .
+
+ex:Action25 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:JarJam1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action26 .
+
+ex:Action26 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:JarJam2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action27 .
+
+ex:Action27 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:JarJam2 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action28 .
+
+ex:Action28 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LargeWaterBottle ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action29 .
+
+ex:Action29 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LargeWaterBottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action30 .
+
+ex:Action30 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ClearPitcher ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action31 .
+
+ex:Action31 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ClearPitcher ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action32 .
+
+ex:Action32 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Fridge ;
+    psr:isAffordedBy soma:Closing .

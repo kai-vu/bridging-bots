@@ -3,140 +3,99 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
-@prefix ex:     <https://example.org/data/> .
-@prefix dol:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix psr:    <http://www.example.org/psr#> .
+@prefix ex:     <http://example.org/data/> .
 
-############################
 # Environment
-############################
-
-psr:Kitchen a owl:Class, psr:Environment ;
+psr:Kitchen a psr:Environment ;
     rdfs:label "Kitchen"@en ;
-    rdfs:comment "A kitchen environment containing various components and objects."@en .
+    dul:hasComponent ex:fridge, ex:table, ex:cabinet, ex:chair, ex:foodItems .
 
-ex:Environment1 a psr:Environment ;
-    rdfs:label "Kitchen Environment"@en .
-
-############################
 # Components
-############################
-
-ex:Refrigerator a owl:Class, psr:Component ;
+ex:fridge a psr:Appliance ;
     rdfs:label "Refrigerator"@en ;
-    rdfs:comment "A refrigerator component located in the kitchen."@en .
+    dul:hasLocation ex:CurrentLocation1, ex:StandardLocation1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-ex:RefrigeratorInstance a psr:Component ;
-    a ex:Refrigerator ;
-    rdfs:hasLocation ex:RefrigeratorLocation .
-
-ex:RefrigeratorLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:KitchenCorner .
-
-ex:Counter a owl:Class, psr:Furniture ;
-    rdfs:label "Counter"@en ;
-    rdfs:comment "A kitchen counter."@en .
-
-ex:CounterInstance a psr:Furniture ;
-    a ex:Counter ;
-    rdfs:hasLocation ex:CounterLocation .
-
-ex:CounterLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:CenterOfKitchen .
-
-ex:Table a owl:Class, psr:Furniture ;
+ex:table a psr:Furniture ;
     rdfs:label "Dining Table"@en ;
-    rdfs:comment "A dining table in the kitchen."@en .
+    dul:hasLocation ex:CurrentLocation2, ex:StandardLocation2 ;
+    psr:hasAffordance soma:Pulling, soma:PuttingDown .
 
-ex:TableInstance a psr:Furniture ;
-    a ex:Table ;
-    rdfs:hasLocation ex:TableLocation .
+ex:cabinet a psr:Furniture ;
+    rdfs:label "Kitchen Cabinet"@en ;
+    dul:hasLocation ex:CurrentLocation3, ex:StandardLocation3 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
 
-ex:TableLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:CenterOfRoom .
+ex:chair a psr:Furniture ;
+    rdfs:label "Chair"@en ;
+    dul:hasLocation ex:CurrentLocation4, ex:StandardLocation4 ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:DiningChair a owl:Class, psr:Furniture ;
-    rdfs:label "Dining Chair"@en ;
-    rdfs:comment "A chair for dining."@en .
+# Food items (Objects)
+ex:foodJar a psr:Object ;
+    rdfs:label "Food Jar"@en ;
+    dul:hasLocation ex:CurrentLocation5, ex:StandardLocation5 ;
+    psr:hasAffordance soma:Holding, soma:Pushing .
 
-ex:ChairInstance a psr:Furniture ;
-    a ex:DiningChair ;
-    rdfs:hasLocation ex:ChairLocation .
+ex:jelloBox a psr:Object ;
+    rdfs:label "Jello Box"@en ;
+    dul:hasLocation ex:CurrentLocation6, ex:StandardLocation6 ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
 
-ex:ChairLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:AroundTable .
+ex:snackBox a psr:Object ;
+    rdfs:label "Snack Box"@en ;
+    dul:hasLocation ex:CurrentLocation7, ex:StandardLocation7 ;
+    psr:hasAffordance soma:Holding, soma:PickingUp .
 
-############################
-# Objects
-############################
+# Food items locations
+ex:CurrentLocation1 a psr:CurrentLocation ;
+    rdfs:label "Refrigerator Interior"@en ;
+    geo:sfContains ex:foodJar .
 
-ex:BoxOfJelly a owl:Class, psr:Object ;
-    rdfs:label "Box of Jelly"@en ;
-    rdfs:comment "A box of Jello on the counter."@en .
+ex:CurrentLocation2 a psr:CurrentLocation ;
+    rdfs:label "Kitchen Table"@en ;
+    geo:sfContains ex:jelloBox, ex:snackBox .
 
-ex:BoxOfJellyInstance a psr:Object ;
-    a ex:BoxOfJelly ;
-    rdfs:hasLocation ex:JellyBoxLocation .
+ex:CurrentLocation3 a psr:CurrentLocation ;
+    rdfs:label "Kitchen Cabinets"@en .
 
-ex:JellyBoxLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:CounterTop .
+ex:CurrentLocation4 a psr:CurrentLocation ;
+    rdfs:label "Kitchen Chair Location"@en .
 
-ex:BottleOfWater a owl:Class, psr:Object ;
-    rdfs:label "Bottle of Water"@en ;
-    rdfs:comment "A bottle of water on the table."@en .
+ex:CurrentLocation5 a psr:CurrentLocation ;
+    rdfs:label "Inside Refrigerator"@en ;
+    geo:sfContains ex:foodJar .
 
-ex:BottleOfWaterInstance a psr:Object ;
-    a ex:BottleOfWater ;
-    rdfs:hasLocation ex:WaterBottleLocation .
+ex:CurrentLocation6 a psr:CurrentLocation ;
+    rdfs:label "On Counter"@en ;
+    geo:sfContains ex:jelloBox .
 
-ex:WaterBottleLocation a psr:CurrentLocation ;
-    rdfs:hasLocation ex:TableSurface .
+ex:CurrentLocation7 a psr:CurrentLocation ;
+    rdfs:label "On Counter"@en ;
+    geo:sfContains ex:snackBox .
 
-############################
-# Affordances
-############################
+# Standard Locations (where objects are supposed to be)
+ex:StandardLocation1 a psr:StandardLocation ;
+    rdfs:label "Refrigerator"@en .
 
-ex:OpenRefrigerator a soma:Opening ;
-    rdfs:label "Opening Refrigerator"@en .
+ex:StandardLocation2 a psr:StandardLocation ;
+    rdfs:label "Dining Table"@en .
 
-ex:CloseRefrigerator a soma:Closing ;
-    rdfs:label "Closing Refrigerator"@en .
+ex:StandardLocation3 a psr:StandardLocation ;
+    rdfs:label "Kitchen Cabinets"@en .
 
-ex:PickUpJelly a soma:PickingUp ;
-    rdfs:label "Picking Up Jello"@en .
+ex:StandardLocation4 a psr:StandardLocation ;
+    rdfs:label "Kitchen Chair Position"@en .
 
-ex:PutDownJelly a soma:PuttingDown ;
-    rdfs:label "Putting Down Jello"@en .
+ex:StandardLocation5 a psr:StandardLocation ;
+    rdfs:label "Refrigerator Interior"@en .
 
-ex:HoldWaterBottle a soma:Holding ;
-    rdfs:label "Holding Water Bottle"@en .
+ex:StandardLocation6 a psr:StandardLocation ;
+    rdfs:label "Counter"@en .
 
-############################
-# Relations
-############################
+ex:StandardLocation7 a psr:StandardLocation ;
+    rdfs:label "Counter"@en .
 
-# The environment has components
-ex:Kitchen dul:hasComponent ex:RefrigeratorInstance, ex:CounterInstance, ex:TableInstance, ex:ChairInstance .
-
-# Components and objects and locations
-ex:RefrigeratorInstance dul:hasLocation ex:RefrigeratorLocation .
-ex:CounterInstance dul:hasLocation ex:CounterLocation .
-ex:TableInstance dul:hasLocation ex:TableLocation .
-ex:ChairInstance dul:hasLocation ex:ChairLocation .
-
-ex:BoxOfJellyInstance dul:hasLocation ex:JellyBoxLocation .
-ex:BottleOfWaterInstance dul:hasLocation ex:WaterBottleLocation .
-
-# Locations within the environment
-ex:RefrigeratorLocation geo:sfWithin ex:Refrigerator .
-ex:CounterLocation geo:sfWithin ex:Counter .
-ex:TableLocation geo:sfWithin ex:Table .
-ex:ChairLocation geo:sfWithin ex:DiningChair .
-
-ex:JellyBoxLocation geo:sfContains ex:BoxOfJelly .
-ex:WaterBottleLocation geo:sfContains ex:BottleOfWater .
-
-# Affordances of components and objects
-ex:Refrigerator dol:hasFunction ex:OpenRefrigerator, ex:CloseRefrigerator .
-ex:BoxOfJelly dol:hasFunction ex:PickUpJelly, ex:PutDownJelly .
-ex:BottleOfWater dol:hasFunction ex:HoldWaterBottle .
+# Additional assumptions (if needed, can be refined based on actual images)
+# e.g., Door locations, appliance states etc., are inferred from the environment images to be static or dynamic components.

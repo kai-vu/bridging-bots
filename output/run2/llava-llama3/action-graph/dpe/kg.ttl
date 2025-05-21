@@ -1,0 +1,99 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow ;
+    kitchen:isPerformedBy kitchen:close_cabinet_above_black_countertop,
+        kitchen:close_cabinet_above_white_countertop,
+        kitchen:close_open_cabinet_in_corner_of_kitchen,
+        kitchen:examine_box_for_labels_or_contents,
+        kitchen:identify_items_on_shelves,
+        kitchen:move_to_kitchen_area,
+        kitchen:open_cabinet_above_white_countertop,
+        kitchen:pick_up_bottle_from_dining_table,
+        kitchen:pick_up_box_from_dining_table,
+        kitchen:pick_up_cups_and_bowls_from_dining_table,
+        kitchen:pick_up_items,
+        kitchen:place_bottle_into_cabinet,
+        kitchen:place_box_into_storage_location,
+        kitchen:place_cups_and_bowls_into_open_cabinet,
+        kitchen:place_items_into_open_cabinet .
+
+kitchen:items kitchen:hasAffordance kitchen:placing .
+
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:move_to_kitchen_area .
+
+kitchen:move_to_appropriate_storage_location kitchen:precedes kitchen:place_box_into_storage_location .
+
+kitchen:move_to_cabinet_above_white_countertop kitchen:precedes kitchen:open_cabinet_above_white_countertop .
+
+kitchen:move_to_dining_table kitchen:precedes kitchen:pick_up_bottle_from_dining_table .
+
+kitchen:move_to_open_cabinet_in_corner_of_kitchen kitchen:precedes kitchen:place_items_into_open_cabinet .
+
+kitchen:open_cabinet_in_corner_of_kitchen kitchen:hasAffordance kitchen:closing .
+
+kitchen:bottle kitchen:hasAffordance kitchen:picking_up,
+        kitchen:placing .
+
+kitchen:cabinet_above_black_countertop kitchen:hasAffordance kitchen:closing,
+        kitchen:opening .
+
+kitchen:cabinet_above_white_countertop kitchen:hasAffordance kitchen:closing,
+        kitchen:opening .
+
+kitchen:close_cabinet_above_black_countertop kitchen:actsOn kitchen:cabinet_above_black_countertop ;
+    kitchen:follows kitchen:move_to_open_cabinet_in_corner_of_kitchen .
+
+kitchen:close_cabinet_above_white_countertop kitchen:actsOn kitchen:cabinet_above_white_countertop ;
+    kitchen:follows kitchen:pick_up_box_from_dining_table .
+
+kitchen:close_open_cabinet_in_corner_of_kitchen kitchen:actsOn kitchen:open_cabinet_in_corner_of_kitchen ;
+    kitchen:follows kitchen:move_to_dining_table .
+
+kitchen:cups_and_bowls kitchen:hasAffordance kitchen:picking_up,
+        kitchen:placing .
+
+kitchen:examine_box_for_labels_or_contents kitchen:actsOn kitchen:box ;
+    kitchen:follows kitchen:move_to_appropriate_storage_location .
+
+kitchen:identify_items_on_shelves kitchen:actsOn kitchen:items_on_shelves ;
+    kitchen:follows kitchen:pick_up_items .
+
+kitchen:items_on_shelves kitchen:hasAffordance kitchen:picking_up .
+
+kitchen:move_to_kitchen_area kitchen:follows kitchen:open_cabinet_above_black_countertop ;
+    kitchen:precedes kitchen:open_cabinet_above_black_countertop .
+
+kitchen:open_cabinet_above_black_countertop kitchen:actsOn kitchen:cabinet_above_black_countertop ;
+    kitchen:precedes kitchen:identify_items_on_shelves .
+
+kitchen:open_cabinet_above_white_countertop kitchen:actsOn kitchen:cabinet_above_white_countertop ;
+    kitchen:follows kitchen:place_bottle_into_cabinet .
+
+kitchen:pick_up_bottle_from_dining_table kitchen:actsOn kitchen:bottle ;
+    kitchen:follows kitchen:move_to_cabinet_above_white_countertop .
+
+kitchen:pick_up_box_from_dining_table kitchen:actsOn kitchen:box ;
+    kitchen:follows kitchen:examine_box_for_labels_or_contents .
+
+kitchen:pick_up_cups_and_bowls_from_dining_table kitchen:actsOn kitchen:cups_and_bowls ;
+    kitchen:precedes kitchen:place_cups_and_bowls_into_open_cabinet .
+
+kitchen:pick_up_items kitchen:actsOn kitchen:items_on_shelves ;
+    kitchen:precedes kitchen:close_cabinet_above_black_countertop .
+
+kitchen:place_bottle_into_cabinet kitchen:actsOn kitchen:bottle ;
+    kitchen:follows kitchen:close_cabinet_above_white_countertop .
+
+kitchen:place_box_into_storage_location kitchen:actsOn kitchen:box ;
+    kitchen:follows kitchen:pick_up_book_from_in_front_of_dining_table .
+
+kitchen:place_cups_and_bowls_into_open_cabinet kitchen:actsOn kitchen:cups_and_bowls ;
+    kitchen:follows kitchen:close_open_cabinet_in_corner_of_kitchen .
+
+kitchen:place_items_into_open_cabinet kitchen:actsOn kitchen:items ;
+    kitchen:follows kitchen:pick_up_cups_and_bowls_from_dining_table .
+
+kitchen:box kitchen:hasAffordance kitchen:examining,
+        kitchen:picking_up,
+        kitchen:placing .
+

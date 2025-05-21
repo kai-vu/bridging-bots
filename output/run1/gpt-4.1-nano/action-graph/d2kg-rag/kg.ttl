@@ -1,40 +1,42 @@
-@prefix : <http://www.semanticweb.org/ontology#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/data/> .
 
-:Robot a :Agent .
+ex:StartCleaning a Action ;
+    ex:hasActionType "Identify misplaced items" ;
+    ex:performedBy ex:Robot .
 
-:Object a rdfs:Class .
+ex:IdentifyMisplacedItems a Action ;
+    ex:hasObject ex:Countertop ;
+    ex:targetObject ex:MisplacedItems .
 
-:Countertop a :Location .
+ex:MisplacedItems a Object ;
+    ex:isLocatedAt ex:Countertop .
 
-:Cabinet a :Location .
+ex:MoveToObject a Action ;
+    ex:performedBy ex:Robot ;
+    ex:hasTarget ex:MisplacedItems .
 
-:Dish a :Object ; :locatedAt :Countertop .
+ex:PickUpObject a Action ;
+    ex:performedBy ex:Robot ;
+    ex:hasObject ex:MisplacedItems .
 
-:JELLO a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+ex:IdentifyStorageLocation a Action ;
+    ex:hasObject ex:MisplacedItems ;
+    ex:targetLocation ex:DesignatedStorageLocation .
 
-:RiceBubbles a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+ex:DesignatedStorageLocation a Location ;
+    ex:forObjectType ex:ItemType .
 
-:StrawberryJam a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+ex:ReturnItemsToStorage a Action ;
+    ex:performedBy ex:Robot ;
+    ex:hasObject ex:MisplacedItems ;
+    ex:toLocation ex:DesignatedStorageLocation .
 
-:BloodOrangePreserves a :Object ; :type :Condiment ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+ex:AdjustPosition a Action ;
+    ex:performedBy ex:Robot ;
+    ex:hasObject ex:MisplacedItems .
 
-:BreadSlice a :Object ; :type :FoodItem ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
+ex:FinishCleaning a Action ;
+    ex:hasNextStep ex:End .
 
-:WaterBottle a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
-
-:YellowCup a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
-
-:WineGlass a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
-
-:JugCreamer a :Object ; :misplacedOn :Countertop ; :standardLocation :Cabinet .
-
-:Robot_Action1 a :Action ; :performs :Retrieval ; :targets :JELLO, :RiceBubbles ; :aimsToReturn :StandardStorage .
-
-:Robot_Action2 a :Action ; :performs :Retrieval ; :targets :StrawberryJam, :BloodOrangePreserves, :BreadSlice ; :aimsToReturn :StandardStorage .
-
-:Robot_Action3 a :Action ; :performs :Retrieval ; :targets :WaterBottle, :YellowCup, :WineGlass, :JugCreamer ; :aimsToReturn :StandardStorage .
-
-:StandardStorage a :Location ; :type :Cabinet .
-
-# Additional steps: The robot should navigate to each misplaced item, retrieve it, and place it in its standard storage location, following the sequence from the most urgent to the less urgent based on the context.
+ex:End a Action ;
+    ex:hasStatus "Organized State Achieved" .

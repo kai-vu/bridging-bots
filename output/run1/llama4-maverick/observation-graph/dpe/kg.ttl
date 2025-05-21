@@ -1,21 +1,22 @@
 @prefix kitchen: <http://example.org/kitchen#> .
 
-kitchen:counter kitchen:hasComponent kitchen:sink ;
-    kitchen:hasObject kitchen:_CHICKY__chip_packet,
-        kitchen:plates,
-        kitchen:red_jam_jars .
+kitchen:Bottle kitchen:onTopOf kitchen:Dining_table .
 
-kitchen:dining_table kitchen:hasObject kitchen:bottle_of_water ;
-    kitchen:isLocatedIn kitchen:adjacent_room .
+kitchen:Hood kitchen:above kitchen:Stove .
 
-kitchen:fridge kitchen:isLocated kitchen:right_of_counter .
+kitchen:Jello_box kitchen:onTopOf kitchen:Countertop .
 
-kitchen:kitchen kitchen:hasComponent kitchen:beige_marble_countertop,
-        kitchen:dark_gray_cabinets .
+kitchen:Kitchen_cabinets kitchen:onTopOf kitchen:Countertop .
 
-kitchen:rangehood kitchen:isAbove kitchen:stove .
+kitchen:Light_fixture kitchen:hasLocation kitchen:Ceiling .
 
-kitchen:white_door kitchen:hasComponent kitchen:silver_handle .
+kitchen:Mirror kitchen:hasLocation kitchen:Wall .
 
-kitchen:stove kitchen:hasObject kitchen:pot .
+kitchen:Pot kitchen:onTopOf kitchen:Stove .
+
+kitchen:Refrigerator kitchen:nextTo kitchen:Cabinets .
+
+kitchen:Sink kitchen:hasLocation kitchen:Right_side_of_Countertop .
+
+kitchen:Dining_table kitchen:hasComponent kitchen:Chairs .
 

@@ -1,0 +1,75 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:DarkGrayCabinets, ex:WhiteRefrigerator, ex:BeigeMarbleCounterTop, ex:Sink, ex:InductionCooker, ex:Pot, ex:RangeHood, ex:Cupboard, ex:Boxes, ex:Jars, ex:StackOfPlates, ex:GallonOfWater, ex:DiningTable, ex:WhiteChairs, ex:RoundLight .
+
+ex:DarkGrayCabinets a psr:Furniture .
+ex:WhiteRefrigerator a psr:Appliance .
+ex:BeigeMarbleCounterTop a psr:Furniture .
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:LeftSideOfCounter .
+ex:InductionCooker a psr:Appliance ;
+    dul:hasLocation ex:CounterTopRightOfSink .
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:InductionCooker .
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:AboveInductionCooker .
+ex:Cupboard a psr:Furniture ;
+    dul:hasLocation ex:AboveCounterWithSink .
+ex:Boxes a psr:Object ;
+    dul:hasLocation ex:CounterTop .
+ex:Jars a psr:Object ;
+    dul:hasLocation ex:CounterTop .
+ex:StackOfPlates a psr:Object ;
+    dul:hasLocation ex:CounterTop .
+ex:GallonOfWater a psr:Object ;
+    dul:hasLocation ex:CounterTop, ex:DiningTable .
+ex:DiningTable a psr:Furniture .
+ex:WhiteChairs a psr:Furniture .
+ex:RoundLight a psr:Object ;
+    dul:hasLocation ex:WhiteCeiling .
+
+ex:CounterTop a psr:Component .
+ex:LeftSideOfCounter a psr:Location ;
+    geo:sfWithin ex:CounterTop .
+ex:CounterTopRightOfSink a psr:Location ;
+    geo:sfWithin ex:CounterTop ;
+    geo:sfOverlaps ex:LeftSideOfCounter .
+ex:AboveInductionCooker a psr:Location ;
+    psr:onTopOf ex:InductionCooker .
+ex:AboveCounterWithSink a psr:Location ;
+    psr:onTopOf ex:CounterTopWithSink .
+ex:CounterTopWithSink a psr:Component ;
+    geo:sfContains ex:Sink .
+
+ex:DiningTable a psr:Furniture ;
+    dul:hasComponent ex:BoxOfShortbread, ex:Jug, ex:WineGlass, ex:Plate, ex:GallonOfWater .
+
+ex:BoxOfShortbread a psr:Object .
+ex:Jug a psr:Object .
+ex:WineGlass a psr:Object .
+ex:Plate a psr:Object .
+
+ex:WhiteRefrigerator dul:hasLocation ex:BetweenKitchenCabinets .
+ex:BetweenKitchenCabinets a psr:Location ;
+    geo:sfWithin ex:KitchenCabinets .
+ex:KitchenCabinets a psr:Component ;
+    dul:hasComponent ex:DarkGrayCabinets .
+
+ex:Boxes psr:hasAffordance soma:Holding .
+ex:Jars psr:hasAffordance soma:Holding .
+ex:StackOfPlates psr:hasAffordance soma:Holding .
+ex:Pot psr:hasAffordance soma:Holding, soma:Grasping .
+ex:WhiteRefrigerator psr:hasAffordance soma:Opening, soma:Closing .
+ex:Cupboard psr:hasAffordance soma:Opening, soma:Closing .
+ex:InductionCooker psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:RangeHood psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:Sink psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:DiningTable psr:hasAffordance soma:Holding .
+ex:WhiteChairs psr:hasAffordance soma:Moving .

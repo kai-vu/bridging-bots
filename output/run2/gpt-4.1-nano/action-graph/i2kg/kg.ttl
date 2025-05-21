@@ -1,0 +1,57 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+
+psr:MoveToKitchenCenter a dul:Action ;
+    rdfs:label "Move to kitchen center"@en ;
+    psr:actsOn psr:Environment ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:IdentifyMisplacedItems a dul:Action ;
+    rdfs:label "Identify all misplaced items"@en ;
+    psr:actsOn psr:Object ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:PickUpMisplacedItems a dul:Action ;
+    rdfs:label "Pick up all misplaced items"@en ;
+    psr:actsOn psr:Object ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:MoveItemsToStorage a dul:Action ;
+    rdfs:label "Move items to their storage locations"@en ;
+    psr:actsOn psr:Object ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:ReturnItemsToStorage a dul:Action ;
+    rdfs:label "Return items to storage"@en ;
+    psr:actsOn psr:Object ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:MoveToDiningRoom a dul:Action ;
+    rdfs:label "Move to dining room"@en ;
+    psr:actsOn psr:Environment ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:PlaceItemsOnTable a dul:Action ;
+    rdfs:label "Place items on the dining table"@en ;
+    psr:actsOn psr:Object ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:CompleteTask a dul:Action ;
+    rdfs:label "Complete organization task"@en ;
+    psr:actsOn psr:Environment ;
+    psr:isAAction "true"^^xsd:boolean .
+
+psr:hasWorkflow psr:RestoreKitchenWorkflow ;
+    rdfs:label "Restore Kitchen Workflow"@en ;
+    psr:hasAction psr:MoveToKitchenCenter, psr:IdentifyMisplacedItems, psr:PickUpMisplacedItems, psr:MoveItemsToStorage, psr:ReturnItemsToStorage, psr:MoveToDiningRoom, psr:PlaceItemsOnTable, psr:CompleteTask .
+
+psr:RestoreKitchenInstruction a psr:Instruction ;
+    rdfs:label "Restore the kitchen to an organized state"@en ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations."@en ;
+    psr:hasWorkflow psr:RestoreKitchenWorkflow .

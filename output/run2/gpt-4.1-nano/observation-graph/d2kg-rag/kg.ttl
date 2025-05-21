@@ -1,0 +1,97 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix environment: <http://example.org/data/environment#> .
+@prefix ex: <http://example.org/data/> .
+
+# Space and environment
+<environment:Kitchen> a environment:Kitchen ;
+    environment:hasPart <environment:CountertopLeft> , <environment:CountertopMiddle> , <environment:CountertopRight> , <environment:CabinetLeft> , <environment:CabinetRight> , <environment:Refrigerator> , <environment:Window> , <environment:CeilingLight> , <environment:Floor> , <environment:WallBehindCountertop> , <environment:WallRight> .
+
+# Countertop on the left side
+<environment:CountertopLeft> a environment:Countertop ;
+    environment:locatedIn <environment:Kitchen> ;
+    environment:hasObject <ex:JelloBox> , <ex:RiceBubblesBox> , <ex:StrawberryJamJar> , <ex:AlpenSaltCarton> , <ex:ShortbreadCookiesPackage> .
+
+# Food items on the left countertop
+<ex:JelloBox> a environment:FoodItem ; rdfs:label "Box of Jello" .
+<ex:RiceBubblesBox> a environment:FoodItem ; rdfs:label "Box of rice bubbles cereal" .
+<ex:StrawberryJamJar> a environment:FoodItem ; rdfs:label "Jar of strawberry jam" .
+<ex:AlpenSaltCarton> a environment:FoodItem ; rdfs:label "Carton of Alpen salt" .
+<ex:ShortbreadCookiesPackage> a environment:FoodItem ; rdfs:label "Package of shortbread cookies" .
+
+# Cabinets behind the left countertop
+<environment:CabinetLeft> a environment:Cabinet ;
+    environment:hasHandleType "Vertical" ;
+    environment:locatedIn <environment:Kitchen> .
+
+<environment:CabinetRight> a environment:Cabinet ;
+    environment:hasHandleType "Vertical" ;
+    environment:locatedIn <environment:Kitchen> .
+
+# Refrigerator positioned to the right of the cabinets
+<environment:Refrigerator> a environment:Refrigerator ;
+    environment:positioning <environment:RightOf> <environment:CabinetRight> ;
+    environment:locatedIn <environment:Kitchen> .
+
+# Wall behind the countertop
+<environment:WallBehindCountertop> a environment:Wall ;
+    rdfs:label "Plain white wall" ;
+    environment:hasColor "white" .
+
+# Middle countertop continuation
+<environment:CountertopMiddle> a environment:Countertop ;
+    environment:locatedIn <environment:Kitchen> ;
+    environment:hasObject <ex:WaterBottle> , <ex:CerealBoxSmall> , <ex:Pitcher> , <ex:DrinkingGlass> , <ex:CerealBowl> .
+
+# Items on middle countertop
+<ex:WaterBottle> a environment:FoodItem ; rdfs:label "Bottle of Evian water" .
+<ex:CerealBoxSmall> a environment:FoodItem ; rdfs:label "Small box of cereal" .
+<ex:Pitcher> a environment:Kitchenware ; rdfs:label "Pitcher" .
+<ex:DrinkingGlass> a environment:Kitchenware ; rdfs:label "Drinking glass" .
+<ex:CerealBowl> a environment:Kitchenware ; rdfs:label "Bowl of cereal" .
+
+# Wall behind the dining table
+<environment:WallRight> a environment:Wall ;
+    rdfs:label "Plain white wall" .
+
+# Dining table and chairs
+<environment:Table> a environment:Table ;
+    environment:hasPart <ex:WhiteChairRight> .
+
+<ex:WhiteChairRight> a environment:Chair ;
+    environment:positioning <environment:AtRightEdgeOf> <environment:Table> .
+
+# Upper cabinets with handles and window
+<environment:UpperCabinetLeft> a environment:Cabinet ;
+    environment:hasHandleType "Vertical" ;
+    environment:locatedIn <environment:Kitchen> .
+
+<environment:UpperCabinetRight> a environment:Cabinet ;
+    environment:hasHandleType "Vertical" ;
+    environment:locatedIn <environment:Kitchen> .
+
+<environment:Window> a environment:Window ;
+    environment:hasFrame <ex:Wooden> ;
+    environment:hasScreen <ex:BlackMesh> ;
+    environment:positioning <environment:Above> <environment:Countertop> ;
+    environment:locatedIn <environment:Kitchen> .
+
+# Ceiling light fixture
+<environment:CeilingLight> a environment:LightFixture ;
+    environment:shape "Large round" ;
+    environment:color "White" ;
+    environment:locatedIn <environment:Ceiling> .
+
+# Floor and general environment
+<environment:Floor> a environment:Floor ;
+    environment:material "Wooden" .
+
+<environment:Kitchen> a environment:Room .
+
+# Additional objects
+<ex:CabinetHandle> a environment:Handle ;
+    environment:handleType "Vertical" .
+
+<ex:Wooden> a environment:FrameMaterial .
+<ex:BlackMesh> a environment:Screen ; rdfs:label "Black mesh screen" .

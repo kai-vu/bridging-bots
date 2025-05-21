@@ -5,145 +5,141 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
 
-psr:RestoreKitchen a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+ex:Instruction1 a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  psr:hasWorkflow ex:Workflow1 .
 
-psr:organizeKitchenWorkflow a psr:Workflow ;
-  psr:hasAction psr:identifyMisplacedItemsAction ;
-  psr:hasAction psr:returnItemsToStorageAction .
+ex:Workflow1 a psr:Workflow ;
+  psr:hasAction ex:Action1 ;
+  psr:hasAction ex:Action2 ;
+  psr:hasAction ex:Action3 ;
+  psr:hasAction ex:Action4 .
 
-psr:identifyMisplacedItemsAction a dul:Action ;
-  psr:actsOn psr:kitchenCounter ;
-  psr:isAffordedBy soma:Identifying .
+ex:Action1 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:yellowCup ;
+  soma:isPerformedBy ex:Robot .
 
-psr:returnItemsToStorageAction a dul:Action ;
-  psr:actsOn psr:misplacedItems ;
-  psr:isAffordedBy soma:Returning .
+ex:yellowCup a psr:Object ;
+  ex:locatedIn ex:kitchenCountertop .
 
-psr:kitchenCounter a psr:Component ;
-  rdfs:label "kitchen counter"@en .
+ex:Action2 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:yellowCup ;
+  soma:isPerformedBy ex:Robot .
 
-psr:misplacedItems a psr:Component ;
-  rdfs:label "misplaced items"@en .
+ex:Workflow1 psr:precedes ex:Action2 .
 
-psr:standardStorageLocations a psr:Component ;
-  rdfs:label "standard storage locations"@en .
+ex:Action3 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:ChunkyMonkeyJar ;
+  soma:isPerformedBy ex:Robot .
 
-psr:identifyMisplacedItemsAction2 a dul:Action ;
-  psr:actsOn psr:jarOfJam ;
-  psr:isAffordedBy soma:PickingUp .
+ex:ChunkyMonkeyJar a psr:Object ;
+  ex:locatedIn ex:kitchenCountertop .
 
-psr:jarOfJam a psr:Object ;
-  rdfs:label "jar of jam"@en .
+ex:Action4 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:ChunkyMonkeyJar ;
+  soma:isPerformedBy ex:Robot .
 
-psr:identifyMisplacedItemsAction3 a dul:Action ;
-  psr:actsOn psr:boxOfJellO ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Action2 psr:follows ex:Action1 .
 
-psr:boxOfJellO a psr:Object ;
-  rdfs:label "box of Jell-O"@en .
+ex:Action4 psr:follows ex:Action3 .
 
-psr:identifyMisplacedItemsAction4 a dul:Action ;
-  psr:actsOn psr:boxOfAlpenSalt ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Robot a dul:Agent .
 
-psr:boxOfAlpenSalt a psr:Object ;
-  rdfs:label "box of Alpen Salt"@en .
+ex:kitchenCountertop a psr:Component ;
+  ex:partOf ex:kitchen .
 
-psr:identifyMisplacedItemsAction5 a dul:Action ;
-  psr:actsOn psr:stacksOfPaperPlates ;
-  psr:isAffordedBy soma:PickingUp .
+ex:kitchen a psr:Component .
 
-psr:stacksOfPaperPlates a psr:Object ;
-  rdfs:label "stacks of paper plates"@en .
+ex:EvianWater a psr:Object ;
+  ex:locatedIn ex:diningTable .
 
-psr:identifyMisplacedItemsAction6 a dul:Action ;
-  psr:actsOn psr:largeBottleOfEvianWater ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Action5 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:EvianWater ;
+  soma:isPerformedBy ex:Robot .
 
-psr:largeBottleOfEvianWater a psr:Object ;
-  rdfs:label "large bottle of Evian water"@en .
+ex:Action6 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:EvianWater ;
+  soma:isPerformedBy ex:Robot .
 
-psr:identifyMisplacedItemsAction7 a dul:Action ;
-  psr:actsOn psr:toaster ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Workflow1 psr:hasAction ex:Action5 ;
+  psr:hasAction ex:Action6 .
 
-psr:toaster a psr:Appliance ;
-  rdfs:label "toaster"@en .
+ex:diningTable a psr:Component ;
+  ex:partOf ex:diningRoom .
 
-psr:identifyMisplacedItemsAction8 a dul:Action ;
-  psr:actsOn psr:fruit ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Action7 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:boxOfShortbreadCookies ;
+  soma:isPerformedBy ex:Robot .
 
-psr:fruit a psr:Object ;
-  rdfs:label "fruit"@en .
+ex:boxOfShortbreadCookies a psr:Object ;
+  ex:locatedIn ex:diningTable .
 
-psr:identifyMisplacedItemsAction9 a dul:Action ;
-  psr:actsOn psr:puzzleBook ;
-  psr:isAffordedBy soma:PickingUp .
+ex:Action8 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:boxOfShortbreadCookies ;
+  soma:isPerformedBy ex:Robot .
 
-psr:puzzleBook a psr:Object ;
-  rdfs:label "puzzle book"@en .
+ex:Action5 psr:precedes ex:Action6 .
 
-psr:boardGame a psr:Object ;
-  rdfs:label "board game"@en .
+ex:Action7 psr:follows ex:Action6 .
 
-psr:jugsOrBottles a psr:Object ;
-  rdfs:label "jugs or bottles"@en .
+ex:boxOfRiceBubbles a psr:Object ;
+  ex:locatedIn ex:kitchenCountertop .
 
-psr:pan a psr:Object ;
-  rdfs:label "pan"@en .
+ex:Action9 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  soma:isPerformedBy ex:Robot .
 
-psr:clock a psr:Object ;
-  rdfs:label "clock"@en .
+ex:Action10 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  soma:isPerformedBy ex:Robot .
 
-psr:light a psr:Object ;
-  rdfs:label "light"@en .
+ex:Action8 psr:follows ex:Action7 .
 
-psr:twoPuzzleBooks a psr:Object ;
-  rdfs:label "two puzzle books"@en .
+ex:Action9 psr:precedes ex:Action10 .
 
-psr:yellowMug a psr:Object ;
-  rdfs:label "yellow mug"@en .
+ex:boxOfJello a psr:Object ;
+  ex:locatedIn ex:kitchenCountertop .
 
-psr:refrigerator a psr:Appliance ;
-  rdfs:label "refrigerator"@en .
+ex:Action11 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:boxOfJello ;
+  soma:isPerformedBy ex:Robot .
 
-psr:electricBurner a psr:Appliance ;
-  rdfs:label "electric burner"@en .
+ex:Action12 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:boxOfJello ;
+  soma:isPerformedBy ex:Robot .
 
-psr:diningTable a psr:Furniture ;
-  rdfs:label "dining table"@en .
+ex:Action10 psr:follows ex:Action9 .
 
-psr:fourWhiteChairs a psr:Furniture ;
-  rdfs:label "four white chairs"@en .
+ex:Action11 psr:precedes ex:Action12 .
 
-psr:kitchenCabinets a psr:Component ;
-  rdfs:label "kitchen cabinets"@en .
+ex:cartonOfEggs a psr:Object ;
+  ex:locatedIn ex:diningTable .
 
-psr:RestoreKitchen psr:hasWorkflow psr:organizeKitchenWorkflow .
+ex:Action13 a dul:Action ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:actsOn ex:cartonOfEggs ;
+  soma:isPerformedBy ex:Robot .
 
-psr:identifyMisplacedItemsAction psr:follows psr:returnItemsToStorageAction .
-psr:returnItemsToStorageAction psr:precedes psr:identifyMisplacedItemsAction .
+ex:Action14 a dul:Action ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:actsOn ex:cartonOfEggs ;
+  soma:isPerformedBy ex:Robot .
 
-psr:agent a dul:Agent ;
-  soma:isPerformedBy psr:identifyMisplacedItemsAction ;
-  soma:isPerformedBy psr:returnItemsToStorageAction .
+ex:Action12 psr:follows ex:Action11 .
 
-psr:jarOfJam psr:isAffordedBy soma:PickingUp .
-psr:boxOfJellO psr:isAffordedBy soma:PickingUp .
-psr:boxOfAlpenSalt psr:isAffordedBy soma:PickingUp .
-psr:stacksOfPaperPlates psr:isAffordedBy soma:PickingUp .
-psr:largeBottleOfEvianWater psr:isAffordedBy soma:PickingUp .
-psr:toaster psr:isAffordedBy soma:PickingUp .
-psr:fruit psr:isAffordedBy soma:PickingUp .
-psr:puzzleBook psr:isAffordedBy soma:PickingUp .
-psr:boardGame psr:isAffordedBy soma:PuttingDown .
-psr:jugsOrBottles psr:isAffordedBy soma:PuttingDown .
-psr:pan psr:isAffordedBy soma:PuttingDown .
-psr:clock psr:isAffordedBy soma:PuttingDown .
-psr:light psr:isAffordedBy soma:PuttingDown .
-psr:twoPuzzleBooks psr:isAffordedBy soma:PuttingDown .
-psr:yellowMug psr:isAffordedBy soma:PuttingDown .
+ex:Action13 psr:precedes ex:Action14 .

@@ -1,0 +1,201 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+# Step 1: Identify misplaced items on the countertop
+ex:IdentifyMisplacedItems a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Identify all misplaced items on the countertop."@en ;
+    psr:hasWorkflow ex:WorkflowIdentifyMisplacedItems .
+
+ex:WorkflowIdentifyMisplacedItems a psr:Workflow ;
+    rdfs:label "Workflow to identify misplaced items"@en ;
+    psr:hasAction ex:ActionIdentifyItems .
+
+ex:ActionIdentifyItems a dul:Action ;
+    rdfs:label "Identify items on the countertop"@en ;
+    psr:actsOn ex:Countertop ;
+    soma:isPerformedBy ex:RobotAgent .
+
+# Step 2: For each identified misplaced item, pick it up
+# Example for box of Jello
+ex:PickUpJello a dul:Action ;
+    rdfs:label "Pick up the box of Jello"@en ;
+    psr:actsOn ex:BoxOfJello ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupJelloWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Jello"@en ;
+    psr:hasAction ex:PickUpJello .
+
+ex:ActPickupJello a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the box of Jello from the countertop."@en ;
+    psr:hasWorkflow ex:PickupJelloWorkflow .
+
+# Similarly for other misplaced objects
+ex:PickUpRiceBubbles a dul:Action ;
+    rdfs:label "Pick up the box of rice bubbles cereal"@en ;
+    psr:actsOn ex:RiceBubblesCereal ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupRiceBubblesWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Rice Bubbles Cereal"@en ;
+    psr:hasAction ex:PickUpRiceBubbles .
+
+ex:ActPickupRiceBubbles a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the box of rice bubbles cereal from the countertop."@en ;
+    psr:hasWorkflow ex:PickupRiceBubbles .
+
+ex:PickUpJamJar a dul:Action ;
+    rdfs:label "Pick up the jar of strawberry jam"@en ;
+    psr:actsOn ex:JamJar ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupJamWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Jam Jar"@en ;
+    psr:hasAction ex:PickUpJamJar .
+
+ex:ActPickupJam a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the jar of strawberry jam from the countertop."@en ;
+    psr:hasWorkflow ex:PickupJamWorkflow .
+
+ex:PickUpAlpenSalt a dul:Action ;
+    rdfs:label "Pick up the carton of Alpen salt"@en ;
+    psr:actsOn ex:AlpenSalt ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupAlpenSaltWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Alpen Salt"@en ;
+    psr:hasAction ex:PickUpAlpenSalt .
+
+ex:ActPickupAlpenSalt a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the carton of Alpen salt from the countertop."@en ;
+    psr:hasWorkflow ex:PickupAlpenSaltWorkflow .
+
+ex:PickUpCookies a dul:Action ;
+    rdfs:label "Pick up the package of shortbread cookies"@en ;
+    psr:actsOn ex:Cookies ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupCookiesWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Cookies"@en ;
+    psr:hasAction ex:PickUpCookies .
+
+ex:ActPickupCookies a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the package of shortbread cookies from the countertop."@en ;
+    psr:hasWorkflow ex:PickupCookiesWorkflow .
+
+# Repeat for other objects in the middle and upper right views
+ex:PickUpEvianBottle a dul:Action ;
+    rdfs:label "Pick up the Evian water bottle"@en ;
+    psr:actsOn ex:EvianBottle ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupEvianWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Evian Bottle"@en ;
+    psr:hasAction ex:PickUpEvianBottle .
+
+ex:ActPickupEvian a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the Evian water bottle from the countertop."@en ;
+    psr:hasWorkflow ex:PickupEvianWorkflow .
+
+ex:PickUpCerealBox a dul:Action ;
+    rdfs:label "Pick up the small cereal box"@en ;
+    psr:actsOn ex:SmallCerealBox ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PickupCerealBoxWorkflow a psr:Workflow ;
+    rdfs:label "Pickup Cereal Box"@en ;
+    psr:hasAction ex:PickUpCerealBox .
+
+ex:ActPickupCerealBox a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Pick up the small cereal box from the countertop."@en ;
+    psr:hasWorkflow ex:PickupCerealBoxWorkflow .
+
+# Step 3: Return each item to its standard storage location.
+# For example, placing Jello in the fridge or cabinets
+ex:PlaceJelloInFridge a dul:Action ;
+    rdfs:label "Place the Jello in the refrigerator"@en ;
+    psr:actsOn ex:Jello ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PlaceJelloWorkflow a psr:Workflow ;
+    rdfs:label "Place Jello in Refrigerator"@en ;
+    psr:hasAction ex:PlaceJelloInFridge .
+
+ex:ActPlaceJelloInFridge a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Place the box of Jello into the refrigerator."@en ;
+    psr:hasWorkflow ex:PlaceJelloWorkflow .
+
+ex:PlaceRiceBubblesInCabinet a dul:Action ;
+    rdfs:label "Place the rice bubbles cereal in the cabinet"@en ;
+    psr:actsOn ex:RiceBubblesCereal ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PlaceRiceBubblesWorkflow a psr:Workflow ;
+    rdfs:label "Place Rice Bubbles in Cabinet"@en ;
+    psr:hasAction ex:PlaceRiceBubblesInCabinet .
+
+ex:ActPlaceRiceBubblesInCabinet a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Place the box of rice bubbles cereal into its storage cabinet."@en ;
+    psr:hasWorkflow ex:PlaceRiceBubblesWorkflow .
+
+ex:PlaceJamInStorage a dul:Action ;
+    rdfs:label "Place the strawberry jam in its storage"@en ;
+    psr:actsOn ex:JamJar ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PlaceJamWorkflow a psr:Workflow ;
+    rdfs:label "Place Jam in Storage"@en ;
+    psr:hasAction ex:PlaceJamInStorage .
+
+ex:ActPlaceJamInStorage a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Return the strawberry jam jar to its designated storage."@en ;
+    psr:hasWorkflow ex:PlaceJamWorkflow .
+
+ex:PlaceAlpenSaltInStorage a dul:Action ;
+    rdfs:label "Place the Alpen salt in storage"@en ;
+    psr:actsOn ex:AlpenSalt ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PlaceAlpenSaltWorkflow a psr:Workflow ;
+    rdfs:label "Place Alpen Salt in Storage"@en ;
+    psr:hasAction ex:PlaceAlpenSaltInStorage .
+
+ex:ActPlaceAlpenSaltInStorage a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Return the Alpen salt carton to its storage."@en ;
+    psr:hasWorkflow ex:PlaceAlpenSaltWorkflow .
+
+ex:PlaceCookiesInStorage a dul:Action ;
+    rdfs:label "Place the shortbread cookies in storage"@en ;
+    psr:actsOn ex:Cookies ;
+    soma:isPerformedBy ex:RobotAgent .
+
+ex:PlaceCookiesWorkflow a psr:Workflow ;
+    rdfs:label "Place Cookies in Storage"@en ;
+    psr:hasAction ex:PlaceCookiesInStorage .
+
+ex:ActPlaceCookiesInStorage a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Put the package of shortbread cookies into its storage location."@en ;
+    psr:hasWorkflow ex:PlaceCookiesWorkflow .
+
+# Step 4: Finalize the organization
+ex:FinalizeOrganization a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Ensure all objects are returned to their appropriate storage and environment is organized."@en ;
+    psr:hasWorkflow ex:WorkflowFinalize .
+
+ex:WorkflowFinalize a psr:Workflow ;
+    rdfs:label "Finalize Environment Organization"@en ;
+    psr:hasAction ex:CheckOrganization .
+
+ex:CheckOrganization a dul:Action ;
+    rdfs:label "Check environment for organization"@en ;
+    psr:actsOn ex:CountertopAndSurroundings ;
+    soma:isPerformedBy ex:RobotAgent .
+
+# Note: The environment objects such as ex:BoxOfJello, ex:RiceBubblesCereal, etc., are placeholders representing specific objects detected and should be linked as instances of psr:Component when instantiated in that context.

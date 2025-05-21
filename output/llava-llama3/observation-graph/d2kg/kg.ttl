@@ -3,132 +3,66 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-task#> .
-@prefix :       <http://example.org/data/> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
 
+ex:kitchen a psr:Environment .
+ex:kitchen dul:hasComponent ex:counter .
+ex:kitchen dul:hasComponent ex:refrigerator .
+ex:kitchen dul:hasComponent ex:sink .
+ex:kitchen dul:hasComponent ex:robot .
+ex:kitchen dul:hasComponent ex:diningTable .
 
-:Kitchen a psr:Environment .
-:Refrigerator a psr:Appliance, psr:Component .
-:DiningTable a psr:Furniture, psr:Component .
-:Countertop a psr:Component .
-:Oven a psr:Appliance, psr:Component .
-:Sink a psr:Component .
-:LightFixture a psr:Component .
-:GlassDoor a psr:Component .
-:TrashCan a psr:Component .
-:Window a psr:Component .
-:LightSwitch a psr:Component .
-:WhiteDoor a psr:Component .
-:Cups a psr:Object, psr:Component .
-:Bowls a psr:Object, psr:Component .
-:Bottles a psr:Object, psr:Component .
-:CerealBoxes a psr:Object, psr:Component .
-:LoafOfBread a psr:Object, psr:Component .
-:PaperTowels a psr:Object, psr:Component .
-:CartonOfMilk a psr:Object, psr:Component .
-:Chairs a psr:Furniture, psr:Component .
+ex:counter a psr:Component .
+ex:counter dul:hasLocation ex:counterLocation .
+ex:counter psr:hasAffordance soma:Pulling .
+ex:counter psr:hasAffordance soma:Pushing .
 
-:Kitchen dul:hasComponent :Refrigerator .
-:Kitchen dul:hasComponent :DiningTable .
-:Kitchen dul:hasComponent :Countertop .
-:Kitchen dul:hasComponent :Oven .
-:Kitchen dul:hasComponent :Sink .
-:Kitchen dul:hasComponent :LightFixture .
-:Kitchen dul:hasComponent :GlassDoor .
-:Kitchen dul:hasComponent :TrashCan .
-:Kitchen dul:hasComponent :Window .
-:Kitchen dul:hasComponent :LightSwitch .
-:Kitchen dul:hasComponent :WhiteDoor .
-:Kitchen dul:hasComponent :Cups .
-:Kitchen dul:hasComponent :Bowls .
-:Kitchen dul:hasComponent :Bottles .
-:Kitchen dul:hasComponent :CerealBoxes .
-:Kitchen dul:hasComponent :LoafOfBread .
-:Kitchen dul:hasComponent :PaperTowels .
-:Kitchen dul:hasComponent :CartonOfMilk .
-:Kitchen dul:hasComponent :Chairs .
+ex:counterLocation a psr:Location .
+ex:counterLocation geo:sfWithin ex:kitchen .
 
-:Countertop dul:hasLocation :Kitchen .
-:Oven dul:hasLocation :Kitchen .
-:Sink dul:hasLocation :Kitchen .
-:LightFixture dul:hasLocation :Kitchen .
-:GlassDoor dul:hasLocation :Kitchen .
-:TrashCan dul:hasLocation :Kitchen .
-:Window dul:hasLocation :Kitchen .
-:LightSwitch dul:hasLocation :Kitchen .
-:WhiteDoor dul:hasLocation :Kitchen .
-:Refrigerator dul:hasLocation :Kitchen .
-:DiningTable dul:hasLocation :Kitchen .
-:Cups dul:hasLocation :Countertop .
-:Bowls dul:hasLocation :Countertop .
-:Bottles dul:hasLocation :Countertop .
-:CerealBoxes dul:hasLocation :Countertop .
-:LoafOfBread dul:hasLocation :Countertop .
-:PaperTowels dul:hasLocation :DiningTable .
-:CartonOfMilk dul:hasLocation :DiningTable .
+ex:refrigerator a psr:Appliance .
+ex:refrigerator dul:hasLocation ex:refrigeratorLocation .
+ex:refrigerator psr:hasAffordance soma:Opening .
+ex:refrigerator psr:hasAffordance soma:Closing .
 
-:Refrigerator psr:onTopOf :Countertop .
-:Oven psr:onTopOf :Countertop .
-:Sink psr:onTopOf :Countertop .
-:LightFixture psr:onTopOf :Countertop .
-:GlassDoor geo:sfWithin :Kitchen .
-:TrashCan geo:sfWithin :Window .
-:Window geo:sfWithin :Kitchen .
-:LightSwitch geo:sfWithin :GlassDoor .
-:WhiteDoor geo:sfWithin :GlassDoor .
-:Cups geo:sfWithin :Countertop .
-:Bowls geo:sfWithin :Countertop .
-:Bottles geo:sfWithin :Countertop .
-:CerealBoxes geo:sfWithin :Countertop .
-:LoafOfBread geo:sfWithin :Countertop .
-:PaperTowels geo:sfWithin :DiningTable .
-:CartonOfMilk geo:sfWithin :DiningTable .
+ex:refrigeratorLocation a psr:Location .
+ex:refrigeratorLocation geo:sfWithin ex:kitchen .
 
-:Countertop psr:hasAffordance soma:Grasping .
-:Countertop psr:hasAffordance soma:Holding .
-:Countertop psr:hasAffordance soma:Pulling .
-:Countertop psr:hasAffordance soma:Pushing .
-:Oven psr:hasAffordance soma:Opening .
-:Oven psr:hasAffordance soma:Closing .
-:Sink psr:hasAffordance soma:Grasping .
-:Sink psr:hasAffordance soma:Holding .
-:LightFixture psr:hasAffordance soma:Grasping .
-:LightFixture psr:hasAffordance soma:Holding .
-:GlassDoor psr:hasAffordance soma:Opening .
-:GlassDoor psr:hasAffordance soma:Closing .
-:TrashCan psr:hasAffordance soma:Grasping .
-:TrashCan psr:hasAffordance soma:Holding .
-:Window psr:hasAffordance soma:Opening .
-:Window psr:hasAffordance soma:Closing .
-:LightSwitch psr:hasAffordance soma:Grasping .
-:LightSwitch psr:hasAffordance soma:Holding .
-:WhiteDoor psr:hasAffordance soma:Opening .
-:WhiteDoor psr:hasAffordance soma:Closing .
-:Cups psr:hasAffordance soma:Grasping .
-:Cups psr:hasAffordance soma:Holding .
-:Cups psr:hasAffordance soma:Pulling .
-:Cups psr:hasAffordance soma:Pushing .
-:Bowls psr:hasAffordance soma:Grasping .
-:Bowls psr:hasAffordance soma:Holding .
-:Bowls psr:hasAffordance soma:Pulling .
-:Bowls psr:hasAffordance soma:Pushing .
-:Bottles psr:hasAffordance soma:Grasping .
-:Bottles psr:hasAffordance soma:Holding .
-:Bottles psr:hasAffordance soma:Pulling .
-:Bottles psr:hasAffordance soma:Pushing .
-:CerealBoxes psr:hasAffordance soma:Grasping .
-:CerealBoxes psr:hasAffordance soma:Holding .
-:CerealBoxes psr:hasAffordance soma:Pulling .
-:CerealBoxes psr:hasAffordance soma:Pushing .
-:LoafOfBread psr:hasAffordance soma:Grasping .
-:LoafOfBread psr:hasAffordance soma:Holding .
-:LoafOfBread psr:hasAffordance soma:Pulling .
-:LoafOfBread psr:hasAffordance soma:Pushing .
-:PaperTowels psr:hasAffordance soma:Grasping .
-:PaperTowels psr:hasAffordance soma:Holding .
-:PaperTowels psr:hasAffordance soma:Pulling .
-:PaperTowels psr:hasAffordance soma:Pushing .
-:CartonOfMilk psr:hasAffordance soma:Grasping .
-:CartonOfMilk psr:hasAffordance soma:Holding .
-:CartonOfMilk psr:hasAffordance soma:Pulling .
-:CartonOfMilk psr:hasAffordance soma:Pushing .
+ex:sink a psr:Component .
+ex:sink dul:hasLocation ex:sinkLocation .
+
+ex:sinkLocation a psr:Location .
+ex:sinkLocation geo:sfWithin ex:kitchen .
+
+ex:robot a psr:Object .
+ex:robot dul:hasLocation ex:robotLocation .
+ex:robot psr:hasAffordance soma:Grasping .
+ex:robot psr:hasAffordance soma:Holding .
+
+ex:robotLocation a psr:Location .
+ex:robotLocation psr:onTopOf ex:table .
+
+ex:table a psr:Furniture .
+ex:table dul:hasLocation ex:tableLocation .
+
+ex:tableLocation a psr:Location .
+ex:tableLocation geo:sfWithin ex:kitchen .
+
+ex:diningTable a psr:Furniture .
+ex:diningTable dul:hasLocation ex:diningTableLocation .
+
+ex:diningTableLocation a psr:Location .
+ex:diningTableLocation geo:sfWithin ex:diningArea .
+
+ex:diningArea a psr:Environment .
+ex:diningArea dul:hasComponent ex:diningTable .
+ex:diningArea dul:hasComponent ex:door .
+
+ex:door a psr:Component .
+ex:door dul:hasLocation ex:doorLocation .
+ex:door psr:hasAffordance soma:Opening .
+ex:door psr:hasAffordance soma:Closing .
+
+ex:doorLocation a psr:Location .
+ex:doorLocation geo:sfWithin ex:diningArea .

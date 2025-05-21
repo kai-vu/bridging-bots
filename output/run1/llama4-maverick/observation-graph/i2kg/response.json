@@ -1,33 +1,33 @@
 {
-    "id": "chatcmpl-9080ec84-27c5-43f7-8081-46db4e0765c1",
+    "id": "chatcmpl-a8eafe60-ae00-4b13-a6b8-f77f54584d26",
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
             "message": {
-                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-task#> .\n\npsr:Kitchen a psr:Environment ;\n    dul:hasComponent psr:Table, psr:Chairs, psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan, psr:Door .\n\npsr:Table a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Holding .\n\npsr:Chairs a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Sitting .\n\npsr:Cabinet a psr:Furniture ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Fridge a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Containing .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Heating .\n\npsr:ExhaustFan a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea ;\n    psr:hasAffordance soma:Ventilating .\n\npsr:Door a psr:Furniture ;\n    dul:hasLocation psr:DiningArea ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\npsr:DiningArea a soma:Location ;\n    geo:sfContains psr:Table, psr:Chairs .\n\npsr:KitchenArea a soma:Location ;\n    geo:sfContains psr:Cabinet, psr:Fridge, psr:Sink, psr:Stove, psr:ExhaustFan .\n\npsr:JelloBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:AlpenSalt a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:ChunkyBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:RiceBubblesBox a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:Plates a psr:Object ;\n    dul:hasLocation psr:CounterTop ;\n    psr:onTopOf psr:Cabinet .\n\npsr:WaterBottle a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:onTopOf psr:Table .\n\npsr:FruitBox a psr:Object ;\n    dul:hasLocation psr:Table ;\n    psr:onTopOf psr:Table .\n\npsr:CounterTop a soma:Location ;\n    geo:sfContains psr:JelloBox, psr:AlpenSalt, psr:ChunkyBox, psr:RiceBubblesBox, psr:Plates .\n\npsr:Cabinet a psr:Furniture ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Fridge a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Sink a psr:Appliance ;\n    dul:hasLocation psr:CounterTop .\n\npsr:Stove a psr:Appliance ;\n    dul:hasLocation psr:CounterTop .\n\npsr:ExhaustFan a psr:Appliance ;\n    dul:hasLocation psr:KitchenArea .\n\npsr:Door a psr:Furniture ;\n    dul:hasLocation psr:DiningArea .\n\npsr:WaterBottle a psr:Object ;\n    dul:hasLocation psr:Table .\n\npsr:FruitBox a psr:Object ;\n    dul:hasLocation psr:Table .",
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:Kitchen a psr:Environment ;\n    dul:hasComponent ex:Cabinet1 ;\n    dul:hasComponent ex:Cabinet2 ;\n    dul:hasComponent ex:Refrigerator1 ;\n    dul:hasComponent ex:DiningTable1 ;\n    dul:hasComponent ex:Chair1 ;\n    dul:hasComponent ex:Chair2 ;\n    dul:hasComponent ex:Chair3 ;\n    dul:hasComponent ex:Sink1 ;\n    dul:hasComponent ex:Stove1 .\n\nex:Cabinet1 a psr:Furniture ;\n    psr:hasAffordance soma:Opening ;\n    psr:hasAffordance soma:Closing ;\n    dul:hasLocation ex:CounterTop1 .\n\nex:Cabinet2 a psr:Furniture ;\n    psr:hasAffordance soma:Opening ;\n    psr:hasAffordance soma:Closing ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:Refrigerator1 a psr:Appliance ;\n    psr:hasAffordance soma:Opening ;\n    psr:hasAffordance soma:Closing .\n\nex:DiningTable1 a psr:Furniture ;\n    psr:hasAffordance soma:PickingUp ;\n    dul:hasLocation ex:Room1 .\n\nex:Chair1 a psr:Furniture ;\n    dul:hasLocation ex:Room1 .\n\nex:Chair2 a psr:Furniture ;\n    dul:hasLocation ex:Room1 .\n\nex:Chair3 a psr:Furniture ;\n    dul:hasLocation ex:Room1 .\n\nex:Sink1 a psr:Appliance ;\n    psr:hasAffordance soma:Delivering ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:Stove1 a psr:Appliance .\n\nex:CounterTop1 a psr:Component ;\n    geo:sfContains ex:Jar1 ;\n    geo:sfContains ex:Jello1 ;\n    geo:sfContains ex:AlpenSalt1 .\n\nex:CounterTop2 a psr:Component ;\n    geo:sfContains ex:Pot1 ;\n    geo:sfContains ex:Chicky1 ;\n    geo:sfContains ex:Jar2 ;\n    geo:sfContains ex:RiceBubbles1 ;\n    geo:sfContains ex:Chicky2 ;\n    geo:sfContains ex:PlateStack1 ;\n    geo:sfContains ex:Jar3 ;\n    geo:sfContains ex:Jello2 ;\n    geo:sfContains ex:AlpenSalt2 .\n\nex:DiningTableTop1 a psr:Component ;\n    geo:sfContains ex:Book1 ;\n    geo:sfContains ex:Evian1 ;\n    geo:sfContains ex:Evian2 ;\n    geo:sfContains ex:Mug1 .\n\nex:Jar1 a psr:Object .\nex:Jello1 a psr:Object .\nex:AlpenSalt1 a psr:Object .\nex:Pot1 a psr:Object .\nex:Chicky1 a psr:Object .\nex:Jar2 a psr:Object .\nex:RiceBubbles1 a psr:Object .\nex:Chicky2 a psr:Object .\nex:PlateStack1 a psr:Object .\nex:Jar3 a psr:Object .\nex:Jello2 a psr:Object .\nex:AlpenSalt2 a psr:Object .\nex:Book1 a psr:Object .\nex:Evian1 a psr:Object .\nex:Evian2 a psr:Object .\nex:Mug1 a psr:Object .\n\nex:Room1 a soma:Location .\n\nex:Cabinet1 dul:hasLocation ex:Room1 .\nex:Cabinet2 dul:hasLocation ex:Room1 .\nex:Refrigerator1 dul:hasLocation ex:Room1 .\nex:DiningTable1 dul:hasLocation ex:Room1 .\nex:Chair1 dul:hasLocation ex:Room1 .\nex:Chair2 dul:hasLocation ex:Room1 .\nex:Chair3 dul:hasLocation ex:Room1 .\n\nex:CounterTop1 psr:onTopOf ex:Cabinet1 .\nex:CounterTop2 psr:onTopOf ex:Cabinet2 .\nex:DiningTableTop1 psr:onTopOf ex:DiningTable1 .\n\nex:Jar1 geo:sfWithin ex:CounterTop1 .\nex:Jello1 geo:sfWithin ex:CounterTop1 .\nex:AlpenSalt1 geo:sfWithin ex:CounterTop1 .\nex:Pot1 geo:sfWithin ex:CounterTop2 .\nex:Chicky1 geo:sfWithin ex:CounterTop2 .\nex:Jar2 geo:sfWithin ex:CounterTop2 .\nex:RiceBubbles1 geo:sfWithin ex:CounterTop2 .\nex:Chicky2 geo:sfWithin ex:CounterTop2 .\nex:PlateStack1 geo:sfWithin ex:CounterTop2 .\nex:Jar3 geo:sfWithin ex:CounterTop2 .\nex:Jello2 geo:sfWithin ex:CounterTop2 .\nex:AlpenSalt2 geo:sfWithin ex:CounterTop2 .\nex:Book1 geo:sfWithin ex:DiningTableTop1 .\nex:Evian1 geo:sfWithin ex:DiningTableTop1 .\nex:Evian2 geo:sfWithin ex:DiningTableTop1 .\nex:Mug1 geo:sfWithin ex:DiningTableTop1 .",
                 "role": "assistant"
             }
         }
     ],
-    "created": 1747771308,
+    "created": 1747864324,
     "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
     "object": "chat.completion",
-    "system_fingerprint": "fp_fcf8b6b0bf",
+    "system_fingerprint": "fp_c527aa4474",
     "usage": {
-        "completion_tokens": 968,
-        "prompt_tokens": 13955,
-        "total_tokens": 14923,
-        "completion_time": 4.876720277,
-        "prompt_time": 0.447993785,
-        "queue_time": 13.396011718,
-        "total_time": 5.324714062
+        "completion_tokens": 1237,
+        "prompt_tokens": 13932,
+        "total_tokens": 15169,
+        "completion_time": 5.15745405,
+        "prompt_time": 0.351533686,
+        "queue_time": 1.985972251,
+        "total_time": 5.508987736
     },
     "usage_breakdown": {
         "models": null
     },
     "x_groq": {
-        "id": "req_01jvqmjyz0e0stnd663wyx580h"
+        "id": "req_01jvtda0b2ercvdfqd46759q4g"
     }
 }

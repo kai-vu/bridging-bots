@@ -3,73 +3,63 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-task#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
 
-psr:kitchen a psr:Environment ;
-    rdfs:label "kitchen"@en .
+ex:Environment a psr:Environment ;
+    dul:hasComponent ex:Kitchen ;
+    dul:hasComponent ex:DiningRoom .
 
-psr:refrigerator a psr:Appliance ;
-    rdfs:label "refrigerator"@en ;
-    psr:hasLocation psr:kitchen .
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Refrigerator ;
+    dul:hasComponent ex:Counter ;
+    dul:hasComponent ex:Cabinet ;
+    dul:hasComponent ex:Stove .
 
-psr:table a psr:Furniture ;
-    rdfs:label "table"@en ;
-    psr:hasLocation psr:kitchen .
+ex:DiningRoom a psr:Environment ;
+    dul:hasComponent ex:Table ;
+    dul:hasComponent ex:Chair .
 
-psr:chair a psr:Furniture ;
-    rdfs:label "chair"@en ;
-    psr:hasLocation psr:kitchen .
+ex:Refrigerator a psr:Appliance ;
+    psr:hasAffordance soma:Opening ;
+    dul:hasLocation ex:Kitchen .
 
-psr:cupboard a psr:Appliance ;
-    rdfs:label "cupboard"@en ;
-    psr:hasLocation psr:kitchen .
+ex:Counter a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
 
-psr:plate a psr:Object ;
-    rdfs:label "plate"@en ;
-    psr:hasLocation psr:table .
+ex:Cabinet a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
 
-psr:glass a psr:Object ;
-    rdfs:label "glass"@en ;
-    psr:hasLocation psr:table .
+ex:Stove a psr:Appliance ;
+    psr:hasAffordance soma:Opening ;
+    dul:hasLocation ex:Kitchen .
 
-psr:book a psr:Object ;
-    rdfs:label "book"@en ;
-    psr:hasLocation psr:table .
+ex:Table a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom .
 
-psr:milk a psr:Object ;
-    rdfs:label "milk"@en ;
-    psr:hasLocation psr:table .
+ex:Chair a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom .
 
-psr:jello a psr:Object ;
-    rdfs:label "jello"@en ;
-    psr:hasLocation psr:cupboard .
+ex:Alpen a psr:Object ;
+    dul:hasLocation ex:Counter .
 
-psr:jar a psr:Object ;
-    rdfs:label "jar"@en ;
-    psr:hasLocation psr:cupboard .
+ex:Jello a psr:Object ;
+    dul:hasLocation ex:Counter .
 
-psr:alpen a psr:Object ;
-    rdfs:label "alpen"@en ;
-    psr:hasLocation psr:cupboard .
+ex:Evian a psr:Object ;
+    dul:hasLocation ex:Counter .
 
-psr:rice a psr:Object ;
-    rdfs:label "rice"@en ;
-    psr:hasLocation psr:cupboard .
+ex:Orange a psr:Object ;
+    dul:hasLocation ex:Table .
 
-psr:sugar a psr:Object ;
-    rdfs:label "sugar"@en ;
-    psr:hasLocation psr:cupboard .
+ex:Book a psr:Object ;
+    dul:hasLocation ex:Table .
 
-dul:hasComponent(psr:kitchen, psr:refrigerator) .
-dul:hasComponent(psr:kitchen, psr:table) .
-dul:hasComponent(psr:kitchen, psr:chair) .
-dul:hasComponent(psr:kitchen, psr:cupboard) .
-dul:hasComponent(psr:kitchen, psr:plate) .
-dul:hasComponent(psr:kitchen, psr:glass) .
-dul:hasComponent(psr:kitchen, psr:book) .
-dul:hasComponent(psr:kitchen, psr:milk) .
-dul:hasComponent(psr:kitchen, psr:jello) .
-dul:hasComponent(psr:kitchen, psr:jar) .
-dul:hasComponent(psr:kitchen, psr:alpen) .
-dul:hasComponent(psr:kitchen, psr:rice) .
-dul:hasComponent(psr:kitchen, psr:sugar) .
+ex:Mug a psr:Object ;
+    dul:hasLocation ex:Table .
+
+ex:Plate a psr:Object ;
+    dul:hasLocation ex:Counter .
+
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:Stove .

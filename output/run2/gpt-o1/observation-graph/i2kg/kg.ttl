@@ -1,0 +1,179 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Fridge,
+                     ex:Countertop,
+                     ex:Stove,
+                     ex:Sink,
+                     ex:Table,
+                     ex:Chair1,
+                     ex:Chair2,
+                     ex:Chair3,
+                     ex:Chair4,
+                     ex:Door,
+                     ex:Window .
+
+ex:Fridge a psr:Appliance ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing ;
+    dul:hasLocation ex:LocationFridge .
+
+ex:LocationFridge a psr:CurrentLocation .
+
+ex:Countertop a psr:Furniture .
+
+ex:Stove a psr:Appliance .
+
+ex:Sink a psr:Object .
+
+ex:Table a psr:Furniture .
+
+ex:Chair1 a psr:Furniture .
+ex:Chair2 a psr:Furniture .
+ex:Chair3 a psr:Furniture .
+ex:Chair4 a psr:Furniture .
+
+ex:Door a psr:Object ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing,
+                       soma:Pushing,
+                       soma:Pulling .
+
+ex:Window a psr:Object ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing .
+
+##################################################
+# Objects on the countertop
+##################################################
+
+ex:SaltContainer1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocSaltContainer1 .
+
+ex:LocSaltContainer1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:JamJar1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocJamJar1 .
+
+ex:LocJamJar1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:JelloBox1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocJelloBox1 .
+
+ex:LocJelloBox1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:PlateStack1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocPlateStack1 .
+
+ex:LocPlateStack1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:Mug1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocMug1 .
+
+ex:LocMug1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:CerealBox1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocCerealBox1 .
+
+ex:LocCerealBox1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:CerealBox2 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocCerealBox2 .
+
+ex:LocCerealBox2 a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+##################################################
+# Objects on the stove
+##################################################
+
+ex:Pot1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocPot1 .
+
+ex:LocPot1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Stove .
+
+##################################################
+# Objects on the table
+##################################################
+
+ex:WaterBottle1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocWaterBottle1 .
+
+ex:LocWaterBottle1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Table .
+
+ex:FruitBowl1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocFruitBowl1 .
+
+ex:LocFruitBowl1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Table .
+
+ex:CookiesBox1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocCookiesBox1 .
+
+ex:LocCookiesBox1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Table .
+
+ex:Pitcher1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocPitcher1 .
+
+ex:LocPitcher1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Table .
+
+ex:Glass1 a psr:Object ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding ;
+    dul:hasLocation ex:LocGlass1 .
+
+ex:LocGlass1 a psr:CurrentLocation ;
+    psr:onTopOf ex:Table .

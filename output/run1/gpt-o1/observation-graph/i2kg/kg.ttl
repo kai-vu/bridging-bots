@@ -1,166 +1,165 @@
-@prefix : <http://example.com/env#> .
-@prefix psr: <https://w3id.org/psr-task#> .
-@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
 
-:KitchenDiningRoom a psr:Environment ;
-    dul:hasComponent :Fridge,
-                     :RangeHood,
-                     :KitchenCabinet,
-                     :Countertop,
-                     :DiningTable,
-                     :DiningChair1,
-                     :DiningChair2,
-                     :DiningChair3,
-                     :DiningChair4,
-                     :Hob,
-                     :JamJar,
-                     :JelloBox,
-                     :Salt,
-                     :RiceBubbles,
-                     :ChuckyCereal,
-                     :Plates,
-                     :Pot,
-                     :Mug,
-                     :SnacksBox,
-                     :FruitBowl,
-                     :EvianBottle,
-                     :Pitcher,
-                     :WineGlass
-.
+ex:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent ex:Refrigerator,
+                     ex:KitchenTable,
+                     ex:DiningChair1,
+                     ex:DiningChair2,
+                     ex:DiningChair3,
+                     ex:DiningChair4,
+                     ex:Counter,
+                     ex:UpperCabinets,
+                     ex:LowerCabinets,
+                     ex:KitchenDoor,
+                     ex:Window,
+                     ex:StrawberryJam,
+                     ex:JelloBox,
+                     ex:AlpenSalt,
+                     ex:RiceBubbles,
+                     ex:ChuckyCereal,
+                     ex:OrangeMug,
+                     ex:CookingPot,
+                     ex:EvianBottle,
+                     ex:FruitBowl,
+                     ex:SnackBox,
+                     ex:Pitcher,
+                     ex:Plates .
 
-:Fridge a psr:Appliance ;
-    psr:hasAffordance :FridgeOpening,
-                       :FridgeClosing
-.
+#################################################################
+# Furniture, Appliances, and Other Components
+#################################################################
 
-:FridgeOpening a soma:Opening .
-:FridgeClosing a soma:Closing .
+ex:Refrigerator a psr:Appliance ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing,
+                       soma:Holding .
 
-:RangeHood a psr:Appliance .
+ex:KitchenTable a psr:Furniture ;
+    psr:hasAffordance soma:Holding,
+                       soma:PuttingDown .
 
-:KitchenCabinet a psr:Furniture .
+ex:DiningChair1 a psr:Furniture ;
+    psr:hasAffordance soma:Holding .
+ex:DiningChair2 a psr:Furniture ;
+    psr:hasAffordance soma:Holding .
+ex:DiningChair3 a psr:Furniture ;
+    psr:hasAffordance soma:Holding .
+ex:DiningChair4 a psr:Furniture ;
+    psr:hasAffordance soma:Holding .
 
-:Countertop a psr:Furniture .
+ex:Counter a psr:Furniture ;
+    psr:hasAffordance soma:Holding,
+                       soma:PuttingDown .
 
-:DiningTable a psr:Furniture .
+ex:UpperCabinets a psr:Furniture ;
+    psr:hasAffordance soma:Holding,
+                       soma:Opening,
+                       soma:Closing .
+ex:LowerCabinets a psr:Furniture ;
+    psr:hasAffordance soma:Holding,
+                       soma:Opening,
+                       soma:Closing .
 
-:DiningChair1 a psr:Furniture .
-:DiningChair2 a psr:Furniture .
-:DiningChair3 a psr:Furniture .
-:DiningChair4 a psr:Furniture .
+ex:KitchenDoor a psr:Object ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing .
 
-:Hob a psr:Appliance .
+ex:Window a psr:Object ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing .
 
-:JamJar a psr:Object ;
-    dul:hasLocation :Loc_JamJar
-.
+#################################################################
+# Current Locations
+#################################################################
 
-:Loc_JamJar a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+ex:CountertopLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:Counter .
 
-:JelloBox a psr:Object ;
-    dul:hasLocation :Loc_JelloBox
-.
+ex:TabletopLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:KitchenTable .
 
-:Loc_JelloBox a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+#################################################################
+# Objects on the Counter
+#################################################################
 
-:Salt a psr:Object ;
-    dul:hasLocation :Loc_Salt
-.
+ex:StrawberryJam a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Loc_Salt a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+ex:JelloBox a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:RiceBubbles a psr:Object ;
-    dul:hasLocation :Loc_RiceBubbles
-.
+ex:AlpenSalt a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Loc_RiceBubbles a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+ex:RiceBubbles a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:ChuckyCereal a psr:Object ;
-    dul:hasLocation :Loc_ChuckyCereal
-.
+ex:ChuckyCereal a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Loc_ChuckyCereal a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+ex:OrangeMug a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Plates a psr:Object ;
-    dul:hasLocation :Loc_Plates
-.
+ex:CookingPot a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Loc_Plates a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
+ex:Plates a psr:Object ;
+    dul:hasLocation ex:CountertopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Pot a psr:Object ;
-    dul:hasLocation :Loc_Pot ;
-    psr:hasAffordance :PotPickingUp
-.
+#################################################################
+# Objects on the Table
+#################################################################
 
-:Loc_Pot a psr:CurrentLocation ;
-    psr:onTopOf :Hob
-.
+ex:EvianBottle a psr:Object ;
+    dul:hasLocation ex:TabletopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:PotPickingUp a soma:PickingUp .
+ex:FruitBowl a psr:Object ;
+    dul:hasLocation ex:TabletopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Mug a psr:Object ;
-    dul:hasLocation :Loc_Mug ;
-    psr:hasAffordance :MugPickingUp
-.
+ex:SnackBox a psr:Object ;
+    dul:hasLocation ex:TabletopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .
 
-:Loc_Mug a psr:CurrentLocation ;
-    psr:onTopOf :Countertop
-.
-
-:MugPickingUp a soma:PickingUp .
-
-:SnacksBox a psr:Object ;
-    dul:hasLocation :Loc_SnacksBox
-.
-
-:Loc_SnacksBox a psr:CurrentLocation ;
-    psr:onTopOf :DiningTable
-.
-
-:FruitBowl a psr:Object ;
-    dul:hasLocation :Loc_FruitBowl
-.
-
-:Loc_FruitBowl a psr:CurrentLocation ;
-    psr:onTopOf :DiningTable
-.
-
-:EvianBottle a psr:Object ;
-    dul:hasLocation :Loc_EvianBottle
-.
-
-:Loc_EvianBottle a psr:CurrentLocation ;
-    psr:onTopOf :DiningTable
-.
-
-:Pitcher a psr:Object ;
-    dul:hasLocation :Loc_Pitcher
-.
-
-:Loc_Pitcher a psr:CurrentLocation ;
-    psr:onTopOf :DiningTable
-.
-
-:WineGlass a psr:Object ;
-    dul:hasLocation :Loc_WineGlass
-.
-
-:Loc_WineGlass a psr:CurrentLocation ;
-    psr:onTopOf :DiningTable
-.
+ex:Pitcher a psr:Object ;
+    dul:hasLocation ex:TabletopLocation ;
+    psr:hasAffordance soma:PickingUp,
+                       soma:PuttingDown,
+                       soma:Holding .

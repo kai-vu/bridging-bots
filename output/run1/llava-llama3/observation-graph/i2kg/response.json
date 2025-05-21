@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-613a2cbf-79c2-4a14-bf35-977a66d6a0bf",
-    "created": 1747771136,
+    "id": "llava:7b-1a254cff-0635-4453-a2b4-d64a9c65d963",
+    "created": 1747863683,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " ```python\n@prefix : <http://www.w3.org/1999/02/rdf-schema#> .\n@prefix :env .\n@prefix :obj .\n@prefix :affordance .\n\n:env a :Environment ;\n    hasComponent :cabinet ;\n    hasComponent :sink ;\n    hasComponent :counter.\n\n:cabinet a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n\n:sink a :Appliance ;\n    hasAffordance :hasLocation ;\n    hasLocation :bathroom.\n\n:counter a :Furniture ;\n    hasAffordance :hasLocation ;\n    hasLocation :kitchen.\n``` ",
+                "content": " ```python\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix geo: <http://www.opengis.net/ont/> .\n@prefix psr: <https://example.org/data/> .\n\n<http://www.w3.org/2002/07/owl-features#ObjectProperty> rdfs:subPropertyOf rdfs:Property .\n\n:Environment a owl:Class ;\n    psr:hasComponent :Robot .\n\n:Environment a psr:Entity ;\n    psr:label \"Environment\"@en ;\n    psr:comment \"An environment is an area or context in which components are found.\"@en .\n\n:Robot a owl:Class ;\n    psr:hasComponent :Table .\n\n:Table a owl:Class ;\n    psr:hasAffordance psr:Closing ;\n    psr:hasLocation psr:OnTopOf .\n\n:Object a owl:Class ;\n    psr:hasComponent psr:Appliance.\n\n:Appliance a owl:Class ;\n    psr:hasAffordance psr:Opening .\n\n:Furniture a owl:Class ;\n    psr:hasLocation psr:OnTopOf .\n\n:Location a owl:Class ;\n    psr:hasComponent psr:Table.\n\npsr:CurrentLocation a psr:Location ;\n    rdfs:label \"Current Location\"@en ;\n    rdfs:comment \"The current location of a component within the environment.\"@en .\n\npsr:StandardLocation a psr:Location ;\n    rdfs:label \"Standard Location\"@en ;\n    rdfs:comment \"The location where a component is intended or supposed to be located, which can differ from its current location.\"@en .\n\n:Robot a geo:SpatialThing ;\n    rdfs:label \"Robot\"@en ;\n    rdfs:comment \"A robot in the environment.\"@en .\n\npsr:OnTopOf a geo:RelatedLink ;\n    rdfs:label \"On Top Of\"@en ;\n    rdfs:comment \"The location of a component can be on top of another component.\"@en .\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 69.36,
-        "prompt_token/s": 1867.77,
-        "total_duration": 4810478431,
-        "load_duration": 49686793,
+        "response_token/s": 6.38,
+        "prompt_token/s": 31.72,
+        "total_duration": 219842938639,
+        "load_duration": 47363859,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 2192992710,
-        "eval_count": 176,
-        "completion_tokens": 176,
-        "eval_duration": 2537310424,
-        "approximate_total": "0h0m4s",
-        "total_tokens": 4272,
+        "prompt_eval_duration": 129141339001,
+        "eval_count": 578,
+        "completion_tokens": 578,
+        "eval_duration": 90621598172,
+        "approximate_total": "0h3m39s",
+        "total_tokens": 4674,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,

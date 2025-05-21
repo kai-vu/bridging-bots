@@ -1,0 +1,127 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenDiningArea a psr:Environment ;
+  dul:hasComponent ex:Kitchen ;
+  dul:hasComponent ex:DiningArea .
+
+ex:Kitchen a psr:Component ;
+  psr:hasAffordance soma:Opening ;
+  dul:hasLocation ex:KitchenLocation ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:KitchenFloor a psr:Component ;
+  rdfs:label "Brown Wooden Floor"@en .
+
+ex:KitchenWalls a psr:Component ;
+  rdfs:label "White Walls"@en .
+
+ex:KitchenCounters a psr:Component ;
+  dul:hasComponent ex:BeigeMarbleCounter ;
+  dul:hasComponent ex:DarkGrayCabinets .
+
+ex:BeigeMarbleCounter a psr:Component ;
+  dul:hasComponent ex:Pot ;
+  dul:hasComponent ex:YellowMug ;
+  dul:hasComponent ex:Book_Chucky_1 ;
+  dul:hasComponent ex:Jar_RedLid_1 ;
+  dul:hasComponent ex:RiceBubblesCereal ;
+  dul:hasComponent ex:Jello .
+
+ex:Pot a psr:Object ;
+  psr:hasAffordance soma:PuttingDown .
+
+ex:YellowMug a psr:Object ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:Book_Chucky_1 a psr:Object ;
+  rdfs:label "Chucky"@en ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:Jar_RedLid_1 a psr:Object ;
+  psr:hasAffordance soma:Opening .
+
+ex:RiceBubblesCereal a psr:Object ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:Jello a psr:Object ;
+  psr:hasAffordance soma:Opening .
+
+ex:DarkGrayCabinets a psr:Component .
+
+ex:Refrigerator a psr:Appliance ;
+  dul:hasLocation ex:RefrigeratorLocation ;
+  psr:hasAffordance soma:Opening .
+
+ex:RefrigeratorLocation a psr:Location ;
+  psr:onTopOf ex:KitchenFloor .
+
+ex:Stove a psr:Appliance ;
+  dul:hasComponent ex:Pot ;
+  psr:hasAffordance soma:PuttingDown .
+
+ex:RangeHood a psr:Appliance ;
+  dul:hasLocation ex:RangeHoodLocation .
+
+ex:RangeHoodLocation a psr:Location ;
+  psr:onTopOf ex:KitchenCounters .
+
+ex:DiningArea a psr:Component ;
+  dul:hasComponent ex:WoodenTable ;
+  dul:hasComponent ex:WhiteChairs .
+
+ex:WoodenTable a psr:Component ;
+  dul:hasComponent ex:Bottle_EvianWater ;
+  dul:hasComponent ex:Plate_with_Bowl ;
+  dul:hasComponent ex:ChocolateCakeMix ;
+  dul:hasComponent ex:Book .
+
+ex:Bottle_EvianWater a psr:Object ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:Plate_with_Bowl a psr:Object ;
+  psr:hasAffordance soma:PuttingDown .
+
+ex:ChocolateCakeMix a psr:Object ;
+  psr:hasAffordance soma:Opening .
+
+ex:Book a psr:Object ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:WhiteChairs a psr:Component .
+
+ex:Door a psr:Component ;
+  dul:hasLocation ex:DoorLocation .
+
+ex:DoorLocation a psr:Location ;
+  psr:onTopOf ex:KitchenDiningAreaFloor .
+
+ex:KitchenDiningAreaFloor a psr:Component .
+
+ex:Book_Chucky_2 a psr:Object ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:hasAffordance soma:PickingUp .
+
+ex:Jar_RedLid_2 a psr:Object ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:hasAffordance soma:Opening .
+
+ex:Stack_of_White_Plates a psr:Object ;
+  dul:hasLocation ex:KitchenCounters ;
+  psr:hasAffordance soma:PuttingDown .
+
+ex:KitchenLocation a psr:Location .
+
+ex:DiningAreaLocation a psr:Location .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+  dul:hasLocation ex:AgainstTheWallLocation ;
+  psr:hasAffordance soma:Opening .
+
+ex:AgainstTheWallLocation a psr:Location ;
+  psr:onTopOf ex:KitchenFloor .

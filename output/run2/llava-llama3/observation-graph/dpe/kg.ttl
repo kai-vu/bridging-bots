@@ -1,0 +1,31 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:book kitchen:hasAffordance kitchen:reading .
+
+kitchen:bottle kitchen:hasAffordance kitchen:holding_liquid .
+
+kitchen:bowls kitchen:hasAffordance kitchen:holding_food .
+
+kitchen:box kitchen:hasAffordance kitchen:holding_items .
+
+kitchen:cabinet kitchen:hasAffordance kitchen:storing_items .
+
+kitchen:cups kitchen:hasAffordance kitchen:holding_liquid .
+
+kitchen:dining_table kitchen:hasAffordance kitchen:holding_items .
+
+kitchen:kitchen kitchen:hasComponent kitchen:countertop,
+        kitchen:fridge,
+        kitchen:ovens,
+        kitchen:sink ;
+    kitchen:sfAdjacent kitchen:dining_area .
+
+kitchen:light_fixture kitchen:hasAffordance kitchen:lighting .
+
+kitchen:dining_area kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertop .
+
+kitchen:fridge kitchen:hasAffordance kitchen:cooling .
+
+kitchen:countertop kitchen:hasAffordance kitchen:holding_items .
+

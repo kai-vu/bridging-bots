@@ -1,0 +1,126 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/data/> .
+
+# Identify all misplaced items on the kitchen countertop
+ex:IdentifyMisplacedItems rdf:type ex:Action ;
+    ex:targets ex:KitchenObject ;
+    ex:hasStep "Scan countertop objects for misplaced items" .
+
+# Pick up each identified misplaced food item
+ex:PickUpJello rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:Jello ;
+    ex:hasPrecondition ex:JelloMisplaced ;
+    ex:hasEffect ex:JelloPickedUp .
+
+ex:PickUpRiceBubblesRomano rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:RiceBubblesCereal ;
+    ex:hasPrecondition ex:RiceBubblesCerealMisplaced ;
+    ex:hasEffect ex:RiceBubblesCerealPickedUp .
+
+ex:PickUpStrawberryJam rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:StrawberryJam ;
+    ex:hasPrecondition ex:StrawberryJamMisplaced ;
+    ex:hasEffect ex:StrawberryJamPickedUp .
+
+ex:PickUpAlpenSalt rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:AlpenSalt ;
+    ex:hasPrecondition ex:AlpenSaltMisplaced ;
+    ex:hasEffect ex:AlpenSaltPickedUp .
+
+ex:PickUpShortbreadCookies rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:ShortbreadCookies ;
+    ex:hasPrecondition ex:ShortbreadCookiesMisplaced ;
+    ex:hasEffect ex:ShortbreadCookiesPickedUp .
+
+ex:PickUpEvianWater rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:EvianWater ;
+    ex:hasPrecondition ex:EvianWaterMisplaced ;
+    ex:hasEffect ex:EvianWaterPickedUp .
+
+ex:PickUpSmallBoxCereal rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:SmallBoxCereal ;
+    ex:hasPrecondition ex:SmallBoxCerealMisplaced ;
+    ex:hasEffect ex:SmallBoxCerealPickedUp .
+
+ex:PickUpPitcher rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:Pitcher ;
+    ex:hasPrecondition ex:PitcherMisplaced ;
+    ex:hasEffect ex:PitcherPickedUp .
+
+ex:PickUpDrinkingGlass rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:DrinkingGlass ;
+    ex:hasPrecondition ex:DrinkingGlassMisplaced ;
+    ex:hasEffect ex:DrinkingGlassPickedUp .
+
+ex:PickUpBowlOfCereal rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:BowlOfCereal ;
+    ex:hasPrecondition ex:BowlOfCerealMisplaced ;
+    ex:hasEffect ex:BowlOfCerealPickedUp .
+
+# Transport each object to its designated storage location
+ex:PlaceJelloInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:Jello ;
+    ex:hasTargetDevice ex:Cabinet ;
+    ex:hasPurpose "Return to standard storage location" .
+
+ex:PlaceRiceBubblesCerealInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:RiceBubblesCereal ;
+    ex:hasTargetDevice ex:Cabinet .
+
+ex:PlaceStrawberryJamInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:StrawberryJam ;
+    ex:hasTargetDevice ex:Cabinet .
+
+ex:PlaceAlpenSaltInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:AlpenSalt ;
+    ex:hasTargetDevice ex:Cabinet .
+
+ex:PlaceShortbreadCookiesInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:ShortbreadCookies ;
+    ex:hasTargetDevice ex:Cabinet .
+
+ex:PlaceEvianWaterInRefrigerator rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:EvianWater ;
+    ex:hasTargetDevice ex:Refrigerator .
+
+ex:PlaceSmallBoxCerealInCabinet rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:SmallBoxCereal ;
+    ex:hasTargetDevice ex:Cabinet .
+
+ex:PlacePitcherInStorage rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:Pitcher ;
+    ex:hasTargetDevice ex:StorageRoom .
+
+ex:PlaceDrinkingGlassInStorage rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:DrinkingGlass ;
+    ex:hasTargetDevice ex:StorageRoom .
+
+ex:PlaceBowlOfCerealInStorage rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasObject ex:BowlOfCereal ;
+    ex:hasTargetDevice ex:StorageRoom .
+
+# Finalize and confirm storage placement
+ex:CompleteRestoration rdf:type ex:Action ;
+    ex:hasActor ex:Robot ;
+    ex:hasPurpose "Ensure all items are returned to their proper storage locations" .

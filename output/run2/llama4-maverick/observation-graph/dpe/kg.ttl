@@ -1,0 +1,29 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:cupboard kitchen:hasLocation kitchen:counter_with_sink .
+
+kitchen:dining_table kitchen:hasAffordance kitchen:white_chairs ;
+    kitchen:hasComponent kitchen:box_of__Shortbread_,
+        kitchen:gallon_of_water,
+        kitchen:jug,
+        kitchen:plate,
+        kitchen:wine_glass .
+
+kitchen:kitchen kitchen:hasComponent kitchen:beige_marble_counter_tops,
+        kitchen:dark_gray_cabinets .
+
+kitchen:pot kitchen:onTopOf kitchen:induction_cooker .
+
+kitchen:range_hood kitchen:hasLocation kitchen:induction_cooker .
+
+kitchen:sink kitchen:hasLocation kitchen:left_side_of_counter .
+
+kitchen:white_refrigerator kitchen:hasLocation kitchen:kitchen_cabinets .
+
+kitchen:counter_top kitchen:hasComponent kitchen:boxes,
+        kitchen:gallon_of_water,
+        kitchen:jars,
+        kitchen:stack_of_plates .
+
+kitchen:induction_cooker kitchen:hasLocation kitchen:counter_top .
+

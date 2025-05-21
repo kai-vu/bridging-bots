@@ -1,82 +1,65 @@
-@prefix ex: <http://example.org/> .
-@prefix gro: <http://purl.org/gro/community#> .
-@prefix env: <http://example.org/environment#> .
+@prefix : <http://example.org/data/> .
 @prefix schema: <http://schema.org/> .
 
-ex:KitchenScene a env:Scene ;
-    env:hasObject ex:UpperCabinets, ex:LowerCabinets, ex:Countertop, ex:WallSpaceAboveCounter, ex:Door, ex:Floor, ex:Ceiling, ex:WallJunction, ex:Decor ;
-    env:hasObject ex:CountertopItems, ex:WallWin, ex:ExtractorFan, ex:CeilingLights .
+:Environment a <Environment> ;
+    <hasLocation> :Kitchen .
 
-ex:UpperCabinets a env:Furniture ;
-    env:hasMaterial "dark gray" ;
-    env:hasHandle "silver" .
+:Kitchen a <Room> ;
+    <hasFeature> :Countertop , :Wall , :Floor , :Lighting , :Cabinet .
 
-ex:LowerCabinets a env:Furniture ;
-    env:hasMaterial "dark gray" ;
-    env:hasHandle "silver" .
+:Countertop a <Surface> ;
+    <hasObject> :JelloBox , :RiceBubblesBox , :ShortbreadPack , :Jug , :Glass1 , :Glass2 , :WaterBottle , :ChildFaceBox .
 
-ex:Countertop a env:Surface ;
-    env:hasObject ex:JELLO, ex:RiceBubbles, ex:StrawberryJam, ex:BloodOrangePreserves, ex:SlicedBread, ex:WaterBottle, ex:YellowCup, ex:WineGlass, ex:JugCreamer .
+:JelloBox a <Box> ;
+    <containsFood> :Jello .
 
-ex:JELLO a env:Object ;
-    env:placedOn ex:Countertop ;
-    env:stackedWith ex:RiceBubbles .
+:RiceBubblesBox a <Box> ;
+    <containsFood> :RiceBubbles .
 
-ex:RiceBubbles a env:Object ;
-    env:placedOn ex:Countertop ;
-    env:stackedWith ex:JELLO .
+:ShortbreadPack a <Pack> ;
+    <containsFood> :Shortbread .
 
-ex:StrawberryJam a env:Object ;
-    env:placedOn ex:Countertop .
+:Jug a <Container> ;
+    <containsLiquid> :Water .
 
-ex:BloodOrangePreserves a env:Object ;
-    env:placedOn ex:Countertop .
+:Glass1 a <Glass> ;
+    <containsLiquid> :Water .
 
-ex:SlicedBread a env:Object ;
-    env:placedOn ex:Countertop .
+:Glass2 a <Glass> ;
+    <containsLiquid> :Water .
 
-ex:WaterBottle a env:Object ;
-    env:placedOn ex:Countertop .
+:WaterBottle a <Bottle> ;
+    <containsLiquid> :Water .
 
-ex:YellowCup a env:Object ;
-    env:placedOn ex:Countertop .
+:ChildFaceBox a <Box> .
 
-ex:WineGlass a env:Object ;
-    env:placedOn ex:Countertop .
+:Wall a <Wall> ;
+    <hasFeature> :SquareWindow .
 
-ex:JugCreamer a env:Object ;
-    env:placedOn ex:Countertop .
+:SquareWindow a <Window> ;
+    <shape> "square" .
 
-ex:WallWin a env:Window ;
-    env:hasMaterial "wood" ;
-    env:hasFrameType "wooden" .
+:Doorway a <Doorway> ;
+    <hasDoor> :WhiteDoor .
 
-ex:ExtractorFan a env:Object ;
-    env:madeOf "wood" ;
-    env:hasPart ex:BlackGrille .
+:WhiteDoor a <Door> ;
+    <hasHandle> :BlackHandle ;
+    <status> "slightly open" .
 
-ex:BlackGrille a env:Object .
+:BlackHandle a <Handle> .
 
-ex:WallSpaceAboveCounter a env:WallSpace .
+:AboveCounter a <Location> ;
+    <locatedIn> :Countertop .
 
-ex:Door a env:Door ;
-    env:hasDesign "six-panel" ;
-    env:hasColor "white" .
+:Cabinet a <Furniture> ;
+    <hasHandle> :BlueHandle , :WoodenRangeHood .
 
-ex:Floor a env:Floor ;
-    env:hasMaterial "wooden parquet" .
+:BlueHandle a <Handle> .
 
-ex:Ceiling a env:Ceiling ;
-    env:hasLightFixture ex:RoundLightFixture1, ex:RoundLightFixture2 .
+:WoodenRangeHood a <RangeHood> .
 
-ex:RoundLightFixture1 a env:LightFixture ;
-    env:shape "round" .
+:Floor a <Floor> ;
+    <hasPattern> "parquet" .
 
-ex:RoundLightFixture2 a env:LightFixture ;
-    env:shape "round" .
-
-ex:WallJunction a env:WallJunction .
-
-ex:Decor a env:Decoration .
-
-# Note: No additional significant objects beyond what is specified are included.
+:Lighting a <Light> ;
+    <type> "round ceiling light" .

@@ -2,105 +2,86 @@
 
 kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow .
 
-kitchen:check_if_items_need_to_be_stored kitchen:actsOn kitchen:items .
+kitchen:check_coffee_machine_location kitchen:actsOn kitchen:coffee_machine_location_check .
 
-kitchen:close_cabinet_door kitchen:actsOn kitchen:cabinet_door .
+kitchen:close_cabinet kitchen:actsOn kitchen:cabinet_closing .
 
-kitchen:close_refrigerator_door kitchen:actsOn kitchen:refrigerator_door .
+kitchen:close_refrigerator_door kitchen:actsOn kitchen:refrigerator_closing .
 
-kitchen:empty_trash_can kitchen:actsOn kitchen:trash_can .
+kitchen:counter kitchen:isPartOf kitchen:kitchen .
 
-kitchen:move_to_cabinet kitchen:precedes kitchen:open_cabinet_door .
+kitchen:cups kitchen:isStoredIn kitchen:cabinet .
 
-kitchen:move_to_countertop kitchen:precedes kitchen:pick_up_bottles,
-        kitchen:pick_up_bowls,
+kitchen:determine_box_storage_location kitchen:actsOn kitchen:box_storage_location .
+
+kitchen:determine_item_storage_locations kitchen:actsOn kitchen:item_storage_locations .
+
+kitchen:identify_box_on_dining_table kitchen:actsOn kitchen:box_on_dining_table .
+
+kitchen:identify_items_on_counter kitchen:actsOn kitchen:items_on_counter .
+
+kitchen:identify_misplaced_items kitchen:actsOn kitchen:items_on_floor_or_counter .
+
+kitchen:inspect_kitchen_and_dining_area kitchen:actsOn kitchen:kitchen_and_dining_area .
+
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:check_coffee_machine_location,
+        kitchen:close_cabinet,
+        kitchen:close_refrigerator_door,
+        kitchen:determine_box_storage_location,
+        kitchen:determine_item_storage_locations,
+        kitchen:identify_box_on_dining_table,
+        kitchen:identify_items_on_counter,
+        kitchen:identify_misplaced_items,
+        kitchen:inspect_kitchen_and_dining_area,
+        kitchen:move_coffee_machine_to_storage,
+        kitchen:move_to_box_storage_location,
+        kitchen:move_to_coffee_machine,
+        kitchen:move_to_counter,
+        kitchen:move_to_dining_table,
+        kitchen:move_to_item_storage_locations,
+        kitchen:move_to_refrigerator,
+        kitchen:open_cabinet,
+        kitchen:pick_up_box,
         kitchen:pick_up_cups,
-        kitchen:pick_up_loaf_of_bread .
+        kitchen:pick_up_items,
+        kitchen:pick_up_misplaced_items,
+        kitchen:place_box_in_storage_location,
+        kitchen:place_cups_in_cabinet,
+        kitchen:place_items_in_refrigerator,
+        kitchen:place_items_in_storage_locations,
+        kitchen:verify_kitchen_organization .
 
-kitchen:move_to_pantry kitchen:precedes kitchen:store_cereal_boxes .
+kitchen:move_coffee_machine_to_storage kitchen:actsOn kitchen:coffee_machine_and_storage .
 
-kitchen:move_to_refrigerator kitchen:precedes kitchen:open_refrigerator_door .
+kitchen:move_to_box_storage_location kitchen:actsOn kitchen:box_storage_location .
 
-kitchen:move_to_small_white_refrigerator kitchen:precedes kitchen:open_small_white_refrigerator_door .
+kitchen:move_to_coffee_machine kitchen:actsOn kitchen:coffee_machine .
 
-kitchen:move_to_storage_area kitchen:precedes kitchen:store_bottles,
-        kitchen:store_loaf_of_bread .
+kitchen:move_to_counter kitchen:actsOn kitchen:counter .
 
-kitchen:move_to_trash_can kitchen:precedes kitchen:check_if_trash_can_is_full .
+kitchen:move_to_dining_table kitchen:actsOn kitchen:dining_table .
 
-kitchen:store_bowl kitchen:actsOn kitchen:bowl .
+kitchen:move_to_item_storage_locations kitchen:actsOn kitchen:item_storage_locations .
 
-kitchen:store_bowls kitchen:actsOn kitchen:bowls .
+kitchen:move_to_refrigerator kitchen:actsOn kitchen:refrigerator .
 
-kitchen:store_carton_of_milk kitchen:actsOn kitchen:carton_of_milk .
+kitchen:open_cabinet kitchen:actsOn kitchen:cabinet_opening .
 
-kitchen:store_cups kitchen:actsOn kitchen:cups .
-
-kitchen:store_items kitchen:actsOn kitchen:items .
-
-kitchen:check_if_trash_can_is_full kitchen:actsOn kitchen:trash_can .
-
-kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:move_to_dining_table .
-
-kitchen:move_to_dining_table kitchen:precedes kitchen:pick_up_bowl,
-        kitchen:pick_up_carton_of_milk,
-        kitchen:pick_up_cereal_boxes .
-
-kitchen:open_cabinet_door kitchen:actsOn kitchen:cabinet_door .
-
-kitchen:open_refrigerator_door kitchen:actsOn kitchen:refrigerator_door .
-
-kitchen:open_small_white_refrigerator_door kitchen:actsOn kitchen:small_white_refrigerator_door .
-
-kitchen:pick_up_bottles kitchen:actsOn kitchen:bottles .
-
-kitchen:pick_up_bowl kitchen:actsOn kitchen:bowl .
-
-kitchen:pick_up_bowls kitchen:actsOn kitchen:bowls .
-
-kitchen:pick_up_carton_of_milk kitchen:actsOn kitchen:carton_of_milk .
-
-kitchen:pick_up_cereal_boxes kitchen:actsOn kitchen:cereal_boxes .
+kitchen:pick_up_box kitchen:actsOn kitchen:box_pickup .
 
 kitchen:pick_up_cups kitchen:actsOn kitchen:cups .
 
-kitchen:pick_up_loaf_of_bread kitchen:actsOn kitchen:loaf_of_bread .
+kitchen:pick_up_items kitchen:actsOn kitchen:items_pickup .
 
-kitchen:small_white_refrigerator_door kitchen:isPartOf kitchen:small_white_refrigerator .
+kitchen:pick_up_misplaced_items kitchen:actsOn kitchen:items_pickup .
 
-kitchen:store_bottles kitchen:actsOn kitchen:bottles .
+kitchen:place_box_in_storage_location kitchen:actsOn kitchen:box_and_storage_location .
 
-kitchen:store_cereal_boxes kitchen:actsOn kitchen:cereal_boxes .
+kitchen:place_cups_in_cabinet kitchen:actsOn kitchen:cups_and_cabinet .
 
-kitchen:store_loaf_of_bread kitchen:actsOn kitchen:loaf_of_bread .
+kitchen:place_items_in_refrigerator kitchen:actsOn kitchen:items_and_refrigerator .
 
-kitchen:bottles kitchen:isAffordedBy kitchen:countertop,
-        kitchen:storage_area .
+kitchen:place_items_in_storage_locations kitchen:actsOn kitchen:items_and_storage_locations .
 
-kitchen:bowl kitchen:isAffordedBy kitchen:cabinet,
-        kitchen:dining_table .
-
-kitchen:bowls kitchen:isAffordedBy kitchen:cabinet,
-        kitchen:countertop .
-
-kitchen:cabinet_door kitchen:isPartOf kitchen:cabinet .
-
-kitchen:carton_of_milk kitchen:isAffordedBy kitchen:dining_table,
-        kitchen:refrigerator .
-
-kitchen:cereal_boxes kitchen:isAffordedBy kitchen:dining_table,
-        kitchen:pantry .
-
-kitchen:cups kitchen:isAffordedBy kitchen:cabinet,
-        kitchen:countertop .
-
-kitchen:items kitchen:isAffordedBy kitchen:small_white_refrigerator,
-        kitchen:various_storage_areas .
-
-kitchen:loaf_of_bread kitchen:isAffordedBy kitchen:countertop,
-        kitchen:storage_area .
-
-kitchen:refrigerator_door kitchen:isPartOf kitchen:refrigerator .
-
-kitchen:trash_can kitchen:isAffordedBy kitchen:floor .
+kitchen:verify_kitchen_organization kitchen:actsOn kitchen:kitchen_organization .
 

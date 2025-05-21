@@ -1,0 +1,12 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Instruction_1 kitchen:hasAction kitchen:Identify .
+
+kitchen:Instruction_2 kitchen:hasAction kitchen:Move .
+
+kitchen:boxes kitchen:contains kitchen:Chicky .
+
+kitchen:dark_gray_cabinets kitchen:isA kitchen:Furniture .
+
+kitchen:pot kitchen:isLocatedOn kitchen:induction_cooker .
+

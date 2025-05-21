@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-6349001a-7487-43bb-a876-98eb3e7b7d2a",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment contains a kitchen and dining area. \n\nThe kitchen has brown wooden floors and white walls. There is a white refrigerator against the wall to the right of the kitchen counters. The kitchen counters are beige marble with dark gray cabinets underneath and dark gray cabinets above. On the counter in the visible part of the kitchen are various items, including a pot on the stove, a yellow mug, a book titled \"Chucky\", a jar with a red lid, a box of Rice Bubbles cereal, a box of Jello, another jar with a red lid, another book titled \"Chucky\", and a stack of white plates. \n\nThe dining area has a wooden table with four white chairs around it. On the table are a bottle of Evian water, a plate with a bowl on top, a box of chocolate cake mix, and another book. \n\nThe room has a door in the dining area and appears to have a range hood above the stove. The overall layout suggests a small apartment or house with an open-plan kitchen and dining area.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1747867301,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 212,
+        "prompt_tokens": 12500,
+        "total_tokens": 12712,
+        "completion_time": 0.414168147,
+        "prompt_time": 0.335045662,
+        "queue_time": 1.733681605,
+        "total_time": 0.749213809
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvtg4vcgerms2a87pgrbbcw1"
+    }
+}

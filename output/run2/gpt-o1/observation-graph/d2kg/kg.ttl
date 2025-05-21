@@ -1,0 +1,132 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDiningRoom a psr:Environment ;
+    dul:hasComponent ex:WhiteRefrigerator ;
+    dul:hasComponent ex:TallBlackCabinetry ;
+    dul:hasComponent ex:LShapedBlackCountertop ;
+    dul:hasComponent ex:WhitePlatesStack ;
+    dul:hasComponent ex:JamJar1 ;
+    dul:hasComponent ex:StrawberryJellOBox ;
+    dul:hasComponent ex:SaltContainer ;
+    dul:hasComponent ex:RiceBubblesBox ;
+    dul:hasComponent ex:ChuckyManiaBox1 ;
+    dul:hasComponent ex:SmallPot ;
+    dul:hasComponent ex:Cooktop ;
+    dul:hasComponent ex:WoodenVentHood ;
+    dul:hasComponent ex:Mug1 ;
+    dul:hasComponent ex:ChuckyManiaBox2 ;
+    dul:hasComponent ex:JamJar2 ;
+    dul:hasComponent ex:SingleSink ;
+    dul:hasComponent ex:WoodenFramedWindow ;
+    dul:hasComponent ex:WoodenDiningTable ;
+    dul:hasComponent ex:WhiteChairs ;
+    dul:hasComponent ex:WhiteFruitBowl ;
+    dul:hasComponent ex:LargePlasticWaterBottle ;
+    dul:hasComponent ex:SnacksBox ;
+    dul:hasComponent ex:ClearPitcherOfWater ;
+    dul:hasComponent ex:EmptyWineGlass ;
+    dul:hasComponent ex:Oranges ;
+    dul:hasComponent ex:Lemon ;
+    dul:hasComponent ex:Door .
+
+ex:WhiteRefrigerator a psr:Appliance .
+ex:TallBlackCabinetry a psr:Furniture .
+ex:LShapedBlackCountertop a psr:Furniture .
+ex:WhitePlatesStack a psr:Object .
+ex:JamJar1 a psr:Object .
+ex:StrawberryJellOBox a psr:Object .
+ex:SaltContainer a psr:Object .
+ex:RiceBubblesBox a psr:Object .
+ex:ChuckyManiaBox1 a psr:Object .
+ex:SmallPot a psr:Object .
+ex:Cooktop a psr:Appliance .
+ex:WoodenVentHood a psr:Appliance .
+ex:Mug1 a psr:Object .
+ex:ChuckyManiaBox2 a psr:Object .
+ex:JamJar2 a psr:Object .
+ex:SingleSink a psr:Appliance .
+ex:WoodenFramedWindow a psr:Component .
+ex:WoodenDiningTable a psr:Furniture .
+ex:WhiteChairs a psr:Furniture .
+ex:WhiteFruitBowl a psr:Object .
+ex:LargePlasticWaterBottle a psr:Object .
+ex:SnacksBox a psr:Object .
+ex:ClearPitcherOfWater a psr:Object .
+ex:EmptyWineGlass a psr:Object .
+ex:Oranges a psr:Object .
+ex:Lemon a psr:Object .
+ex:Door a psr:Component .
+
+ex:WhitePlatesStack dul:hasLocation ex:LocWhitePlatesStack .
+ex:LocWhitePlatesStack a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:JamJar1 dul:hasLocation ex:LocJamJar1 .
+ex:LocJamJar1 a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:StrawberryJellOBox dul:hasLocation ex:LocStrawberryJellOBox .
+ex:LocStrawberryJellOBox a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:SaltContainer dul:hasLocation ex:LocSaltContainer .
+ex:LocSaltContainer a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:RiceBubblesBox dul:hasLocation ex:LocRiceBubblesBox .
+ex:LocRiceBubblesBox a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:ChuckyManiaBox1 dul:hasLocation ex:LocChuckyManiaBox1 .
+ex:LocChuckyManiaBox1 a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:SmallPot dul:hasLocation ex:LocSmallPot .
+ex:LocSmallPot a psr:CurrentLocation ;
+    psr:onTopOf ex:Cooktop .
+
+ex:Mug1 dul:hasLocation ex:LocMug1 .
+ex:LocMug1 a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:ChuckyManiaBox2 dul:hasLocation ex:LocChuckyManiaBox2 .
+ex:LocChuckyManiaBox2 a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:JamJar2 dul:hasLocation ex:LocJamJar2 .
+ex:LocJamJar2 a psr:CurrentLocation ;
+    psr:onTopOf ex:LShapedBlackCountertop .
+
+ex:WhiteFruitBowl dul:hasLocation ex:LocWhiteFruitBowl .
+ex:LocWhiteFruitBowl a psr:CurrentLocation ;
+    psr:onTopOf ex:WoodenDiningTable .
+
+ex:Oranges dul:hasLocation ex:LocOranges .
+ex:LocOranges a psr:CurrentLocation ;
+    geo:sfWithin ex:WhiteFruitBowl .
+
+ex:Lemon dul:hasLocation ex:LocLemon .
+ex:LocLemon a psr:CurrentLocation ;
+    geo:sfWithin ex:WhiteFruitBowl .
+
+ex:LargePlasticWaterBottle dul:hasLocation ex:LocLargePlasticWaterBottle .
+ex:LocLargePlasticWaterBottle a psr:CurrentLocation ;
+    psr:onTopOf ex:WoodenDiningTable .
+
+ex:SnacksBox dul:hasLocation ex:LocSnacksBox .
+ex:LocSnacksBox a psr:CurrentLocation ;
+    psr:onTopOf ex:WoodenDiningTable .
+
+ex:ClearPitcherOfWater dul:hasLocation ex:LocClearPitcherOfWater .
+ex:LocClearPitcherOfWater a psr:CurrentLocation ;
+    psr:onTopOf ex:WoodenDiningTable .
+
+ex:EmptyWineGlass dul:hasLocation ex:LocEmptyWineGlass .
+ex:LocEmptyWineGlass a psr:CurrentLocation ;
+    psr:onTopOf ex:WoodenDiningTable .
