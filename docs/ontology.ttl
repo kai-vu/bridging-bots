@@ -1,23 +1,23 @@
-@prefix : <https://w3id.org/psr-task#> .
+@prefix : <https://w3id.org/psr-action#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/psr-task#> .
+@base <https://w3id.org/psr-action#> .
 
-<https://w3id.org/psr-task#> rdf:type owl:Ontology ;
-                              <http://purl.org/dc/elements/1.1/creator> _:genid1 ,
-                                                                        _:genid4 ,
-                                                                        _:genid6 ,
-                                                                        _:genid8 ;
-                              <http://purl.org/dc/elements/1.1/description> "An ontology to model environments, components, affordances, instructions, workflows, and actions related to robotic task execution."@en ;
-                              <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                              <http://purl.org/dc/elements/1.1/title> "Personal Service Robot (PSR) - Task Ontology"@en ;
-                              <http://purl.org/dc/terms/created> "2025-05-16"^^xsd:date ;
-                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "psr" ;
-                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/psr-task#" ;
-                              owl:versionInfo "1.0.0" .
+<https://w3id.org/psr-action#> rdf:type owl:Ontology ;
+                                <http://purl.org/dc/elements/1.1/creator> _:genid1 ,
+                                                                          _:genid4 ,
+                                                                          _:genid6 ,
+                                                                          _:genid8 ;
+                                <http://purl.org/dc/elements/1.1/description> "An ontology to model environments, components, affordances, instructions, workflows, and actions related to robotic task execution."@en ;
+                                <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                <http://purl.org/dc/elements/1.1/title> "Personal Service Robot (PSR) - Action Ontology"@en ;
+                                <http://purl.org/dc/terms/created> "2025-05-16"^^xsd:date ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "psr" ;
+                                <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/psr-action#" ;
+                                owl:versionInfo "1.0.0" .
 
 _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
           <http://schema.org/identifier> _:genid2 ;
@@ -181,7 +181,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                 rdfs:range :Component .
 
 
-###  https://w3id.org/psr-task#actsOn
+###  https://w3id.org/psr-action#actsOn
 :actsOn rdf:type owl:ObjectProperty ;
         rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
         rdfs:range :Component ;
@@ -189,7 +189,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "acts on"@en .
 
 
-###  https://w3id.org/psr-task#follows
+###  https://w3id.org/psr-action#follows
 :follows rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#follows> ;
          rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -198,7 +198,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "follow" .
 
 
-###  https://w3id.org/psr-task#hasAction
+###  https://w3id.org/psr-action#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            rdfs:domain :Workflow ;
            rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -206,7 +206,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "has action"@en .
 
 
-###  https://w3id.org/psr-task#hasAffordance
+###  https://w3id.org/psr-action#hasAffordance
 :hasAffordance rdf:type owl:ObjectProperty ;
                rdfs:domain :Component ;
                rdfs:range :Affordance ;
@@ -214,7 +214,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has affordance"@en .
 
 
-###  https://w3id.org/psr-task#hasWorkflow
+###  https://w3id.org/psr-action#hasWorkflow
 :hasWorkflow rdf:type owl:ObjectProperty ;
              rdfs:domain :Instruction ;
              rdfs:range :Workflow ;
@@ -222,7 +222,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "has workflow"@en .
 
 
-###  https://w3id.org/psr-task#isAffordedBy
+###  https://w3id.org/psr-action#isAffordedBy
 :isAffordedBy rdf:type owl:ObjectProperty ;
               rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
               rdfs:range :Affordance ;
@@ -230,7 +230,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "is afforded by"@en .
 
 
-###  https://w3id.org/psr-task#onTopOf
+###  https://w3id.org/psr-action#onTopOf
 :onTopOf rdf:type owl:ObjectProperty ;
          rdfs:domain :Location ;
          rdfs:range :Component ;
@@ -238,7 +238,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "on top of"@en .
 
 
-###  https://w3id.org/psr-task#precedes
+###  https://w3id.org/psr-action#precedes
 :precedes rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes> ;
           rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
@@ -251,12 +251,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/psr-task#:hasNaturalLanguage
-<https://w3id.org/psr-task#:hasNaturalLanguage> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain :Instruction ;
-                                                rdfs:range xsd:string ;
-                                                rdfs:comment "The instruction is expressed in a natural language."@en ;
-                                                rdfs:label "has natural language"@en .
+###  https://w3id.org/psr-action#:hasNaturalLanguage
+<https://w3id.org/psr-action#:hasNaturalLanguage> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain :Instruction ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "The instruction is expressed in a natural language."@en ;
+                                                  rdfs:label "has natural language"@en .
 
 
 #################################################################
@@ -271,44 +271,8 @@ xsd:date rdf:type rdfs:Datatype .
 <http://schema.org/PropertyValue> rdf:type owl:Class .
 
 
-###  http://www.ease-crc.org/ont/SOMA.owl#Closing
-<http://www.ease-crc.org/ont/SOMA.owl#Closing> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Delivering
-<http://www.ease-crc.org/ont/SOMA.owl#Delivering> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Grasping
-<http://www.ease-crc.org/ont/SOMA.owl#Grasping> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Holding
-<http://www.ease-crc.org/ont/SOMA.owl#Holding> rdf:type owl:Class .
-
-
 ###  http://www.ease-crc.org/ont/SOMA.owl#Location
 <http://www.ease-crc.org/ont/SOMA.owl#Location> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Opening
-<http://www.ease-crc.org/ont/SOMA.owl#Opening> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#PickingUp
-<http://www.ease-crc.org/ont/SOMA.owl#PickingUp> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Pulling
-<http://www.ease-crc.org/ont/SOMA.owl#Pulling> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#Pushing
-<http://www.ease-crc.org/ont/SOMA.owl#Pushing> rdf:type owl:Class .
-
-
-###  http://www.ease-crc.org/ont/SOMA.owl#PuttingDown
-<http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> rdf:type owl:Class .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action
@@ -335,47 +299,27 @@ owl:Property rdf:type owl:Class .
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#Affordance
+###  https://w3id.org/psr-action#Affordance
 :Affordance rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#Appliance
-:Appliance rdf:type owl:Class .
-
-
-###  https://w3id.org/psr-task#Component
+###  https://w3id.org/psr-action#Component
 :Component rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#CurrentLocation
-:CurrentLocation rdf:type owl:Class .
-
-
-###  https://w3id.org/psr-task#Environment
+###  https://w3id.org/psr-action#Environment
 :Environment rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#Furniture
-:Furniture rdf:type owl:Class .
-
-
-###  https://w3id.org/psr-task#Instruction
+###  https://w3id.org/psr-action#Instruction
 :Instruction rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#Location
+###  https://w3id.org/psr-action#Location
 :Location rdf:type owl:Class .
 
 
-###  https://w3id.org/psr-task#Object
-:Object rdf:type owl:Class .
-
-
-###  https://w3id.org/psr-task#StandardLocation
-:StandardLocation rdf:type owl:Class .
-
-
-###  https://w3id.org/psr-task#Workflow
+###  https://w3id.org/psr-action#Workflow
 :Workflow rdf:type owl:Class ;
           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Workflow> .
 
@@ -386,26 +330,30 @@ owl:Property rdf:type owl:Class .
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Closing
 <http://www.ease-crc.org/ont/SOMA.owl#Closing> rdf:type owl:NamedIndividual ,
-                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                        :Affordance .
+                                                        :Affordance ;
+                                               rdfs:comment "Closing is an affordance that enables a component to be closed."@en ;
+                                               rdfs:label "Closing"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Delivering
 <http://www.ease-crc.org/ont/SOMA.owl#Delivering> rdf:type owl:NamedIndividual ,
-                                                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                           :Affordance .
+                                                           :Affordance ;
+                                                  rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en ;
+                                                  rdfs:label "Delivering"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Grasping
 <http://www.ease-crc.org/ont/SOMA.owl#Grasping> rdf:type owl:NamedIndividual ,
-                                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                         :Affordance .
+                                                         :Affordance ;
+                                                rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en ;
+                                                rdfs:label "Grasping"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Holding
 <http://www.ease-crc.org/ont/SOMA.owl#Holding> rdf:type owl:NamedIndividual ,
-                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                        :Affordance .
+                                                        :Affordance ;
+                                               rdfs:comment "Holding is an affordance that enables a component to be held."@en ;
+                                               rdfs:label "Holding"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Location
@@ -415,32 +363,37 @@ owl:Property rdf:type owl:Class .
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Opening
 <http://www.ease-crc.org/ont/SOMA.owl#Opening> rdf:type owl:NamedIndividual ,
-                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                        :Affordance .
+                                                        :Affordance ;
+                                               rdfs:comment "Opening is an affordance that enables a component to be opened."@en ;
+                                               rdfs:label "Opening"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#PickingUp
 <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> rdf:type owl:NamedIndividual ,
-                                                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                          :Affordance .
+                                                          :Affordance ;
+                                                 rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en ;
+                                                 rdfs:label "PickingUp"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Pulling
 <http://www.ease-crc.org/ont/SOMA.owl#Pulling> rdf:type owl:NamedIndividual ,
-                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                        :Affordance .
+                                                        :Affordance ;
+                                               rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en ;
+                                               rdfs:label "Pulling"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#Pushing
 <http://www.ease-crc.org/ont/SOMA.owl#Pushing> rdf:type owl:NamedIndividual ,
-                                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                        :Affordance .
+                                                        :Affordance ;
+                                               rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en ;
+                                               rdfs:label "Pushing"@en .
 
 
 ###  http://www.ease-crc.org/ont/SOMA.owl#PuttingDown
 <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> rdf:type owl:NamedIndividual ,
-                                                            <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                                                            :Affordance .
+                                                            :Affordance ;
+                                                   rdfs:comment "Putting down is an affordance that enables a component to be put down."@en ;
+                                                   rdfs:label "PuttingDown"@en .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action
@@ -468,57 +421,62 @@ owl:Property rdf:type owl:Class .
                                                          owl:Property .
 
 
-###  https://w3id.org/psr-task#Affordance
+###  https://w3id.org/psr-action#Affordance
 :Affordance rdf:type owl:NamedIndividual ,
                      <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psr-task#Appliance
+###  https://w3id.org/psr-action#Appliance
 :Appliance rdf:type owl:NamedIndividual ,
-                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                    :Component .
+                    :Component ;
+           rdfs:comment "An appliance is a type of component."@en ;
+           rdfs:label "Appliance"@en .
 
 
-###  https://w3id.org/psr-task#Component
+###  https://w3id.org/psr-action#Component
 :Component rdf:type owl:NamedIndividual ,
                     <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psr-task#CurrentLocation
+###  https://w3id.org/psr-action#CurrentLocation
 :CurrentLocation rdf:type owl:NamedIndividual ,
-                          <http://www.ease-crc.org/ont/SOMA.owl#Location> ,
-                          <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+                          <http://www.ease-crc.org/ont/SOMA.owl#Location> ;
+                 rdfs:comment "The current location of a component within the environment."@en ;
+                 rdfs:label "Current Location"@en .
 
 
-###  https://w3id.org/psr-task#Environment
+###  https://w3id.org/psr-action#Environment
 :Environment rdf:type owl:NamedIndividual ,
                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psr-task#Furniture
+###  https://w3id.org/psr-action#Furniture
 :Furniture rdf:type owl:NamedIndividual ,
-                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                    :Component .
+                    :Component ;
+           rdfs:comment "A furniture is a type of component."@en ;
+           rdfs:label "Furniture"@en .
 
 
-###  https://w3id.org/psr-task#Instruction
+###  https://w3id.org/psr-action#Instruction
 :Instruction rdf:type owl:NamedIndividual ,
                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
 
-###  https://w3id.org/psr-task#Object
+###  https://w3id.org/psr-action#Object
 :Object rdf:type owl:NamedIndividual ,
-                 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ,
-                 :Component .
+                 :Component ;
+        rdfs:comment "An object is a type of component."@en ;
+        rdfs:label "Object"@en .
 
 
-###  https://w3id.org/psr-task#StandardLocation
+###  https://w3id.org/psr-action#StandardLocation
 :StandardLocation rdf:type owl:NamedIndividual ,
-                           <http://www.ease-crc.org/ont/SOMA.owl#Location> ,
-                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
+                           <http://www.ease-crc.org/ont/SOMA.owl#Location> ;
+                  rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en ;
+                  rdfs:label "Standard Location"@en .
 
 
-###  https://w3id.org/psr-task#Workflow
+###  https://w3id.org/psr-action#Workflow
 :Workflow rdf:type owl:NamedIndividual ,
                    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> .
 
@@ -527,44 +485,8 @@ owl:Property rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-<http://www.ease-crc.org/ont/SOMA.owl#Closing> rdfs:comment "Closing is an affordance that enables a component to be closed."@en ;
-                                               rdfs:label "Closing"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Delivering> rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en ;
-                                                  rdfs:label "Delivering"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Grasping> rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en ;
-                                                rdfs:label "Grasping"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Holding> rdfs:comment "Holding is an affordance that enables a component to be held."@en ;
-                                               rdfs:label "Holding"@en .
-
-
 <http://www.ease-crc.org/ont/SOMA.owl#Location> rdfs:comment "A location of a specific component within the environment."@en ;
                                                 rdfs:label "Location"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Opening> rdfs:comment "Opening is an affordance that enables a component to be opened."@en ;
-                                               rdfs:label "Opening"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#PickingUp> rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en ;
-                                                 rdfs:label "PickingUp"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Pulling> rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en ;
-                                               rdfs:label "Pulling"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#Pushing> rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en ;
-                                               rdfs:label "Pushing"@en .
-
-
-<http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> rdfs:comment "Putting down is an affordance that enables a component to be put down."@en ;
-                                                   rdfs:label "PuttingDown"@en .
 
 
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> rdfs:comment "An action is an atomic, single, clear action that is carried out to fulfil the instruction."@en ;
@@ -591,36 +513,16 @@ owl:Property rdf:type owl:Class .
             rdfs:label "Affordance"@en .
 
 
-:Appliance rdfs:comment "An appliance is a type of component."@en ;
-           rdfs:label "Appliance"@en .
-
-
 :Component rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en ;
            rdfs:label "Component"@en .
-
-
-:CurrentLocation rdfs:comment "The current location of a component within the environment."@en ;
-                 rdfs:label "Current Location"@en .
 
 
 :Environment rdfs:comment "An environment is an area or context in which components are found."@en ;
              rdfs:label "Environment"@en .
 
 
-:Furniture rdfs:comment "A furniture is a type of component."@en ;
-           rdfs:label "Furniture"@en .
-
-
 :Instruction rdfs:comment "An instruction is a command or directive given to a robot."@en ;
              rdfs:label "Instruction"@en .
-
-
-:Object rdfs:comment "An object is a type of component."@en ;
-        rdfs:label "Object"@en .
-
-
-:StandardLocation rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en ;
-                  rdfs:label "Standard Location"@en .
 
 
 :Workflow rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en ;
