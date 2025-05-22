@@ -2,86 +2,53 @@
 
 kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow .
 
-kitchen:check_coffee_machine_location kitchen:actsOn kitchen:coffee_machine_location_check .
+kitchen:identify_items_on_the_countertop kitchen:precedes kitchen:pick_up_each_item_on_the_countertop .
 
-kitchen:close_cabinet kitchen:actsOn kitchen:cabinet_closing .
+kitchen:identify_items_on_the_drainboard kitchen:precedes kitchen:pick_up_each_item_on_the_drainboard .
 
-kitchen:close_refrigerator_door kitchen:actsOn kitchen:refrigerator_closing .
+kitchen:identify_items_on_the_shelves_of_the_refrigerator kitchen:precedes kitchen:pick_up_each_item_that_is_not_in_its_standard_storage_location .
 
-kitchen:counter kitchen:isPartOf kitchen:kitchen .
+kitchen:identify_items_on_the_table kitchen:precedes kitchen:pick_up_each_item_on_the_table .
 
-kitchen:cups kitchen:isStoredIn kitchen:cabinet .
+kitchen:identify_items_on_top_of_the_wooden_cabinet kitchen:precedes kitchen:pick_up_each_item_on_the_wooden_cabinet .
 
-kitchen:determine_box_storage_location kitchen:actsOn kitchen:box_storage_location .
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:move_to_kitchen_area .
 
-kitchen:determine_item_storage_locations kitchen:actsOn kitchen:item_storage_locations .
+kitchen:move_to_kitchen_area kitchen:precedes kitchen:identify_items_on_top_of_the_wooden_cabinet .
 
-kitchen:identify_box_on_dining_table kitchen:actsOn kitchen:box_on_dining_table .
+kitchen:move_to_the_countertop kitchen:precedes kitchen:identify_items_on_the_countertop .
 
-kitchen:identify_items_on_counter kitchen:actsOn kitchen:items_on_counter .
+kitchen:move_to_the_dining_room_area kitchen:precedes kitchen:identify_items_on_the_table .
 
-kitchen:identify_misplaced_items kitchen:actsOn kitchen:items_on_floor_or_counter .
+kitchen:move_to_the_refrigerator kitchen:precedes kitchen:identify_items_on_the_shelves_of_the_refrigerator .
 
-kitchen:inspect_kitchen_and_dining_area kitchen:actsOn kitchen:kitchen_and_dining_area .
+kitchen:move_to_the_sink_area kitchen:precedes kitchen:identify_items_on_the_drainboard .
 
-kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:check_coffee_machine_location,
-        kitchen:close_cabinet,
-        kitchen:close_refrigerator_door,
-        kitchen:determine_box_storage_location,
-        kitchen:determine_item_storage_locations,
-        kitchen:identify_box_on_dining_table,
-        kitchen:identify_items_on_counter,
-        kitchen:identify_misplaced_items,
-        kitchen:inspect_kitchen_and_dining_area,
-        kitchen:move_coffee_machine_to_storage,
-        kitchen:move_to_box_storage_location,
-        kitchen:move_to_coffee_machine,
-        kitchen:move_to_counter,
-        kitchen:move_to_dining_table,
-        kitchen:move_to_item_storage_locations,
-        kitchen:move_to_refrigerator,
-        kitchen:open_cabinet,
-        kitchen:pick_up_box,
-        kitchen:pick_up_cups,
-        kitchen:pick_up_items,
-        kitchen:pick_up_misplaced_items,
-        kitchen:place_box_in_storage_location,
-        kitchen:place_cups_in_cabinet,
-        kitchen:place_items_in_refrigerator,
-        kitchen:place_items_in_storage_locations,
-        kitchen:verify_kitchen_organization .
+kitchen:pick_up_each_item_on_the_countertop kitchen:precedes kitchen:determine_the_type_and_function_of_each_item_picked_up .
 
-kitchen:move_coffee_machine_to_storage kitchen:actsOn kitchen:coffee_machine_and_storage .
+kitchen:pick_up_each_item_on_the_drainboard kitchen:precedes kitchen:determine_the_type_and_function_of_each_item_picked_up .
 
-kitchen:move_to_box_storage_location kitchen:actsOn kitchen:box_storage_location .
+kitchen:pick_up_each_item_on_the_table kitchen:precedes kitchen:determine_the_type_and_function_of_each_item_picked_up .
 
-kitchen:move_to_coffee_machine kitchen:actsOn kitchen:coffee_machine .
+kitchen:pick_up_each_item_on_the_wooden_cabinet kitchen:precedes kitchen:determine_the_type_and_function_of_each_item_picked_up .
 
-kitchen:move_to_counter kitchen:actsOn kitchen:counter .
+kitchen:pick_up_each_item_that_is_not_in_its_standard_storage_location kitchen:precedes kitchen:determine_the_type_and_function_of_each_item_picked_up .
 
-kitchen:move_to_dining_table kitchen:actsOn kitchen:dining_table .
+kitchen:return_food_packaging_to_the_trash_or_recycling kitchen:precedes kitchen:verify_all_items_are_in_their_standard_storage_locations .
 
-kitchen:move_to_item_storage_locations kitchen:actsOn kitchen:item_storage_locations .
+kitchen:return_items_that_are_cooking_utensils_to_the_drawer_or_relevant_storage kitchen:precedes kitchen:move_to_the_countertop,
+        kitchen:move_to_the_refrigerator,
+        kitchen:move_to_the_sink_area,
+        kitchen:return_food_packaging_to_the_trash_or_recycling .
 
-kitchen:move_to_refrigerator kitchen:actsOn kitchen:refrigerator .
+kitchen:return_items_that_are_dishes_or_glasses_to_the_cabinet_with_a_window kitchen:precedes kitchen:return_items_that_are_food_or_spices_to_the_pantry_or_relevant_storage .
 
-kitchen:open_cabinet kitchen:actsOn kitchen:cabinet_opening .
+kitchen:return_items_that_are_food_or_drinks_to_their_standard_storage_locations kitchen:precedes kitchen:move_to_the_dining_room_area .
 
-kitchen:pick_up_box kitchen:actsOn kitchen:box_pickup .
+kitchen:return_items_that_are_food_or_spices_to_the_pantry_or_relevant_storage kitchen:precedes kitchen:return_items_that_are_cooking_utensils_to_the_drawer_or_relevant_storage .
 
-kitchen:pick_up_cups kitchen:actsOn kitchen:cups .
+kitchen:verify_all_items_are_in_their_standard_storage_locations kitchen:precedes kitchen:confirm_the_kitchen_is_in_an_organized_state .
 
-kitchen:pick_up_items kitchen:actsOn kitchen:items_pickup .
-
-kitchen:pick_up_misplaced_items kitchen:actsOn kitchen:items_pickup .
-
-kitchen:place_box_in_storage_location kitchen:actsOn kitchen:box_and_storage_location .
-
-kitchen:place_cups_in_cabinet kitchen:actsOn kitchen:cups_and_cabinet .
-
-kitchen:place_items_in_refrigerator kitchen:actsOn kitchen:items_and_refrigerator .
-
-kitchen:place_items_in_storage_locations kitchen:actsOn kitchen:items_and_storage_locations .
-
-kitchen:verify_kitchen_organization kitchen:actsOn kitchen:kitchen_organization .
+kitchen:determine_the_type_and_function_of_each_item_picked_up kitchen:precedes kitchen:return_items_that_are_dishes_or_glasses_to_the_cabinet_with_a_window,
+        kitchen:return_items_that_are_food_or_drinks_to_their_standard_storage_locations .
 

@@ -1,0 +1,78 @@
+@prefix psr: <https://w3id.org/psr/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dul: <https://w3id.org/psr/actions/> .
+
+@namespace a psr:ActionProperty ;
+
+:Instruction1 a psr:Instruction ;
+   :hasWorkflow :Workflow1 ;
+   :isPerformedBy :RobotAgent ;
+
+:Instruction2 a psr:Instruction ;
+   :hasWorkflow :Workflow2 ;
+   :isPerformedBy :RobotAgent ;
+
+:Instruction3 a psr:Instruction ;
+   :hasWorkflow :Workflow3 ;
+   :isPerformedBy :RobotAgent ;
+
+:Workflow1 a psr:Workflow ;
+   :precedes :Action2 ;
+
+:Workflow2 a psr:Workflow ;
+   :precedes :Action4 ;
+
+:Workflow3 a psr:Workflow ;
+   :precedes :Action6 ;
+
+:RobotAgent a dul:Agent ;
+
+:Affordance1 a dul:Affordance ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component1 ;
+   :isAffordedBy :Instruction2 ;
+
+:Affordance2 a dul:Affordance ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component3 ;
+   :isAffordedBy :Instruction2 ;
+
+:Affordance3 a dul:Affordance ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component2 ;
+   :isAffordedBy :Instruction2 ;
+
+:Affordance4 a dul:Affordance ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component2 ;
+   :isAffordedBy :Instruction3 ;
+
+:Component1 a dul:Component ;
+   :hasType "Appliance" ;
+
+:Component2 a dul:Component ;
+   :hasType "Furniture" ;
+
+:Component3 a dul:Component ;
+   :hasType "Object" ;
+
+:Action1 a dul:Action ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component1 ;
+   :isAffordedBy :Instruction1 ;
+
+:Action2 a dul:Action ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component3 ;
+   :isAffordedBy :Instruction1 ;
+
+:Action4 a dul:Action ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component2 ;
+   :isAffordedBy :Instruction1 ;
+
+:Action6 a dul:Action ;
+   :isPerformedBy :RobotAgent ;
+   :actsOn :Component3 ;
+   :isAffordedBy :Instruction3 ;

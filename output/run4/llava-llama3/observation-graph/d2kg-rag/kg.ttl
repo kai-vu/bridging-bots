@@ -1,0 +1,104 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en ;
+    dul:hasComponent ex:cabinet, ex:countertop, ex:drawer, ex:window, ex:oven, ex:refrigerator, ex:sink, ex:box_of_cereal, ex:bag_of_groceries .
+
+ex:cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en ;
+    dul:hasLocation ex:cabinet_location .
+
+ex:cabinet_location a soma:Location ;
+    rdfs:label "Cabinet Location"@en .
+
+ex:countertop a psr:Component ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation ex:countertop_location .
+
+ex:countertop_location a soma:Location ;
+    rdfs:label "Countertop Location"@en .
+
+ex:drawer a psr:Component ;
+    rdfs:label "Drawer"@en ;
+    dul:hasLocation ex:drawer_location .
+
+ex:drawer_location a soma:Location ;
+    rdfs:label "Drawer Location"@en .
+
+ex:window a psr:Component ;
+    rdfs:label "Window"@en ;
+    dul:hasLocation ex:window_location .
+
+ex:window_location a soma:Location ;
+    rdfs:label "Window Location"@en .
+
+ex:oven a psr:Component ;
+    rdfs:label "Oven"@en ;
+    dul:hasLocation ex:oven_location .
+
+ex:oven_location a soma:Location ;
+    rdfs:label "Oven Location"@en .
+
+ex:refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation ex:refrigerator_location .
+
+ex:refrigerator_location a soma:Location ;
+    rdfs:label "Refrigerator Location"@en .
+
+ex:sink a psr:Component ;
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:sink_location .
+
+ex:sink_location a soma:Location ;
+    rdfs:label "Sink Location"@en .
+
+ex:box_of_cereal a psr:Component ;
+    rdfs:label "Box of Cereal"@en ;
+    dul:hasLocation ex:box_of_cereal_location .
+
+ex:box_of_cereal_location a soma:Location ;
+    rdfs:label "Box of Cereal Location"@en .
+
+ex:bag_of_groceries a psr:Component ;
+    rdfs:label "Bag of Groceries"@en ;
+    dul:hasLocation ex:bag_of_groceries_location .
+
+ex:bag_of_groceries_location a soma:Location ;
+    rdfs:label "Bag of Groceries Location"@en .
+
+ex:cabinet geo:sfContains ex:drawer ;
+    geo:sfContains ex:countertop .
+
+ex:countertop geo:sfContains ex:box_of_cereal ;
+    geo:sfContains ex:bag_of_groceries .
+
+ex:window geo:sfWithin ex:kitchen .
+
+ex:oven geo:sfWithin ex:kitchen .
+
+ex:refrigerator geo:sfWithin ex:kitchen .
+
+ex:sink geo:sfWithin ex:kitchen .
+
+ex:box_of_cereal geo:sfWithin ex:kitchen .
+
+ex:bag_of_groceries geo:sfWithin ex:kitchen .
+
+ex:cabinet psr:onTopOf ex:drawer .
+
+ex:countertop psr:onTopOf ex:cabinet .
+
+ex:oven psr:onTopOf ex:refrigerator .
+
+ex:sink psr:onTopOf ex:window .
+
+ex:box_of_cereal psr:onTopOf ex:countertop .
+
+ex:bag_of_groceries psr:onTopOf ex:countertop .

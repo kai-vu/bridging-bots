@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-c7e3b9aa-1749-480a-943d-da7ce570ab98",
+    "created": 1747902868,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```python\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix psr: <https://w3id.org/psr/action#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.org/data/> psr:Environment a owl:Class ;\n    rdfs:subClassOf owl:Class ;\n    rdfs:comment \"An environment is an area or context in which components are found.\".\n\n<http://example.org/data/> psr:Component a owl:Class ;\n    rdfs:subClassOf owl:Class ;\n    rdfs:comment \"A component is a part of an environment that can be used to perform tasks or actions.\".\n\n<http://example.org/data/> psr:Appliance a psr:Component ;\n    rdfs:subClassOf psr:Component ;\n    rdfs:comment \"An appliance is a type of component.\".\n\n<http://example.org/data/> psr:Furniture a psr:Component ;\n    rdfs:subClassOf psr:Component ;\n    rdfs:comment \"A furniture is a type of component.\".\n\n<http://example.org/data/> psr:Object a psr:Component ;\n    rdfs:subClassOf psr:Component ;\n    rdfs:comment \"An object is a type of component.\".\n\n<http://example.org/data/> psr:Location a owl:Class ;\n    rdfs:subClassOf owl:Class ;\n    rdfs:comment \"A location is a specific component within the environment\" .\n\n<http://example.org/data/> psr:CurrentLocation a psr:Location ;\n    rdfs:subClassOf psr:Location ;\n    rdfs:comment \"The current location of a component within the environment.\".\n\n<http://example.org/data/> psr:StandardLocation a psr:Location ;\n    rdfs:subClassOf psr:Location ;\n    rdfs:comment \"The location where a component is intended or supposed to be located, which can be different to its current location.\".\n\n<http://example.org/data/> psr:Affordance a owl:Class ;\n    rdfs:subClassOf owl:Class ;\n    rdfs:comment \"An affordance is a property of an object that indicates how it can be used.\".\n\n<http://example.org/data/> psr:Opening a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Opening is an affordance that enables a component to be opened.\".\n\n<http://example.org/data/> psr:Delivering a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Delivering is an affordance that enables a component to be delivered.\".\n\n<http://example.org/data/> psr:Holding a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Holding is an affordance that enables a component to be held.\".\n\n<http://example.org/data/> psr:PickingUp a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Picking up is an affordance that enables a component to be picked up.\".\n\n<http://example.org/data/> psr:PuttingDown a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Putting down is an affordance that enables a component to be put down.\".\n\n<http://example.org/data/> psr:Pulling a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Pulling is an affordance that enables a component to be pulled.\".\n\n<http://example.org/data/> psr:Grabbing a psr:Affordance ;\n    rdfs:subClassOf psr:Affordance ;\n    rdfs:comment \"Grabbing is an affordance that enables a component to be grabbed.\".\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 68.84,
+        "prompt_token/s": 1886.65,
+        "total_duration": 20240678482,
+        "load_duration": 2216860869,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2171045001,
+        "eval_count": 1088,
+        "completion_tokens": 1088,
+        "eval_duration": 15805180339,
+        "approximate_total": "0h0m20s",
+        "total_tokens": 5184,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

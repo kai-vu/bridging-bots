@@ -1,19 +1,19 @@
-,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance (valid/used),Class Coverage (groups matched/defined),Distinct properties used,Property Compliance (valid/used),Property Coverage (groups matched/defined)
-../../output/llava-llama3/action-graph/dpe/kg.ttl,True,34,34,0,0,0.0% (0/0),0.0% (0/6),6,0.0% (0/6),0.0% (0/8)
-../../output/llava-llama3/action-graph/i2kg/kg.ttl,True,23,23,0,2,0.0% (0/2),0.0% (0/6),11,0.0% (0/11),0.0% (0/8)
-../../output/llava-llama3/action-graph/d2kg/kg.ttl,True,107,107,0,6,100.0% (6/6),83.3% (5/6),10,80.0% (8/10),100.0% (8/8)
-../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,True,77,77,0,5,100.0% (5/5),66.7% (4/6),9,77.8% (7/9),87.5% (7/8)
-../../output/llama4-scout/action-graph/dpe/kg.ttl,True,62,62,0,0,0.0% (0/0),0.0% (0/6),8,0.0% (0/8),0.0% (0/8)
-../../output/llama4-scout/action-graph/i2kg/kg.ttl,False,71,0,71,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/llama4-scout/action-graph/d2kg/kg.ttl,True,146,146,0,6,100.0% (6/6),83.3% (5/6),11,54.5% (6/11),75.0% (6/8)
-../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,True,89,89,0,7,100.0% (7/7),66.7% (4/6),8,50.0% (4/8),50.0% (4/8)
-../../output/llama4-maverick/action-graph/dpe/kg.ttl,True,6,6,0,0,0.0% (0/0),0.0% (0/6),5,0.0% (0/5),0.0% (0/8)
-../../output/llama4-maverick/action-graph/i2kg/kg.ttl,True,136,136,0,5,100.0% (5/5),83.3% (5/6),8,62.5% (5/8),62.5% (5/8)
-../../output/llama4-maverick/action-graph/d2kg/kg.ttl,True,51,51,0,6,100.0% (6/6),83.3% (5/6),10,60.0% (6/10),75.0% (6/8)
-../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,True,155,155,0,6,100.0% (6/6),83.3% (5/6),10,80.0% (8/10),100.0% (8/8)
-../../output/gpt-o1/action-graph/i2kg/kg.ttl,True,181,181,0,7,100.0% (7/7),83.3% (5/6),8,87.5% (7/8),87.5% (7/8)
-../../output/gpt-o1/action-graph/d2kg/kg.ttl,True,332,332,0,7,100.0% (7/7),83.3% (5/6),8,87.5% (7/8),87.5% (7/8)
-../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl,True,149,149,0,3,0.0% (0/3),0.0% (0/6),7,0.0% (0/7),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
+,Full_Parse_OK,Total_triples_in_KG,Valid_triples,Invalid_triples,Distinct_classes_used,Class_Compliance,Class_Coverage,Distinct_properties_used,Property_Compliance,Property_Coverage
+../../output/llava-llama3/action-graph/dpe/kg.ttl,True,28,28,0,0,0/0,0/6,3,0/3,0/8
+../../output/llava-llama3/action-graph/i2kg/kg.ttl,False,13,0,13,0,0/0,0/6,0,0/0,0/8
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,True,88,88,0,8,8/8,5/6,9,8/9,8/8
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,True,62,62,0,2,2/2,2/6,5,3/5,3/8
+../../output/llama4-scout/action-graph/dpe/kg.ttl,True,31,31,0,0,0/0,0/6,12,0/12,0/8
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,True,79,79,0,6,6/6,4/6,7,6/7,6/8
+../../output/llama4-scout/action-graph/d2kg/kg.ttl,True,49,49,0,6,6/6,5/6,9,6/9,6/8
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,True,152,152,0,5,5/5,4/6,9,4/9,4/8
+../../output/llama4-maverick/action-graph/dpe/kg.ttl,True,14,14,0,0,0/0,0/6,5,0/5,0/8
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,True,61,61,0,6,6/6,5/6,9,7/9,7/8
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,True,128,128,0,5,5/5,5/6,10,8/10,8/8
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,True,144,144,0,6,6/6,5/6,10,8/10,8/8
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,True,199,199,0,7,7/7,5/6,9,8/9,8/8
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,True,240,240,0,7,7/7,5/6,8,7/8,7/8
+../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl,True,102,102,0,3,0/3,0/6,6,0/6,0/8
+../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl,True,69,69,0,3,3/3,3/6,8,5/8,5/8
+../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl,False,35,0,35,0,0/0,0/6,0,0/0,0/8
+../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl,False,15,0,15,0,0/0,0/6,0,0/0,0/8

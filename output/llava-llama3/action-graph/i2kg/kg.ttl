@@ -1,86 +1,25 @@
-@prefix psr: <http://example.com/psr#> .
-@prefix dul: <http://example.com/dul#> .
+@prefix psr: <http://www.w3.org/ns/psr#>
+@prefix dul: <http://www.w3.org/2007/05/xml-schema-version1#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix rdf: <http://www.w3.org/1999/01/rdf-syntax-ns#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema.xsd#>
 
-@namespace dul "http://example.com/dul/" .
-@namespace psr "http://example.com/psr#" .
-
-@prefix rdf: <http://www.w3.org/1999/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-# Define Namespaces
-dul:Instruction a psr:Instruction ;
-  rdf:type dul:Instruction ;
-  psr:hasWorkflow ?workflow ;
-  psr:hasNaturalLanguage "Restore kitchen to an organized state"@en .
-
-?workflow a dul:Workflow ;
-  dul:precedes ?action1 ;
-  dul:follows ?action2 ;
-  rdf:type dul:Workflow ;
-  psr:hasAction ?action1, ?action2, ..., ?actionN .
-
-?action1 a dul:Action ;
-  psr:isPerformedBy ?agent1 ;
-  psr:actsOn ?component1 ;
-  rdf:type dul:Action ;
-  psr:precedes ?action2 ;
-  psr:follows ?action0.
-
-?action2 a dul:Action ;
-  psr:isPerformedBy ?agent2 ;
-  psr:actsOn ?component2 ;
-  rdf:type dul:Action ;
-  psr:precedes ?action3 ;
-  psr:follows ?action1.
-
-...
-
-?actionN a dul:Action ;
-  psr:isPerformedBy ?agentN ;
-  psr:actsOn ?componentN ;
-  rdf:type dul:Action ;
-  psr:precedes ?final_action ;
-  psr:follows ?actionN-1.
-
-?component1 a dul:Component ;
-  psr:isAffordedBy <http://example.com/affordance1> ;
-  rdf:type dul:Component ;
-  psr:precedes <http://example.com/affordance2> ;
-  psr:follows <http://example.com/affordance0>.
-
-...
-
-?componentN a dul:Component ;
-  psr:isAffordedBy <http://example.com/affordanceN> ;
-  rdf:type dul:Component ;
-  psr:precedes <http://example.com/affordanceN-1> ;
-  psr:follows <http://example.com/affordance0>.
-
-?agent1 a dul:Agent ;
-  psr:isPerformedBy ?instruction ;
-  rdf:type dul:Agent ;
-  psr:precedes ?action1-1 ;
-  psr:follows <http://example.com/final_action>.
-
-...
-
-?agentN a dul:Agent ;
-  psr:isPerformedBy ?instruction ;
-  rdf:type dul:Agent ;
-  psr:precedes ?final_action-1 ;
-  psr:follows <http://example.com/initial_action>.
-
-?affordance0 a dul:Affordance ;
-  psr:isAffordedBy ?component0 ;
-  rdf:type dul:Affordance ;
-  psr:precedes <http://example.com/final_action> ;
-  psr:follows <http://example.com/initial_action>.
-
-...
-
-?affordancen a dul:Affordance ;
-  psr:isAffordedBy ?componentN-1 ;
-  rdf:type dul:Affordance ;
-  psr:precedes <http://example.com/initial_action> ;
-  psr:follows <http://example.com/final_action>.
+<http://example.com/instruction1> psr:Instruction .
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en.
+    
+<http://example.com/workflow1> psr:Workflow .
+    <http://example.com/workflow1> psr:precedes <http://example.com/action1>.
+    <http://example.com/workflow1> psr:follows <http://example.com/action2>.
+    
+<http://example.com/action1> psr:Action .
+    <http://example.com/action1> psr:isPerformedBy <http://example.com/agent1>.
+    <http://example.com/action1> psr:actsOn <http://example.com/component1>.
+    
+<http://example.com/agent1> psr:Agent .
+    
+<http://example.com/component1> psr:Component .
+    <http://example.com/component1> psr:hasAffordance <http://example.com/affordance1>.
+    
+<http://example.com/affordance1> psr:Affordance .
+    <http://example.com/affordance1> psr:isAffordedBy <http://example.com/action1>.

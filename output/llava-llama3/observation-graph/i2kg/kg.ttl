@@ -1,42 +1,40 @@
-Certainly! Here is the Knowledge Graph in Turtle format based on the images you provided:
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix psr: <http://example.org/data/>
+@prefix geo: <http://www.opengis.net/ont/>
 
-```turtle
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr/action#> .
-@prefix geo: <http://www.opengis.net/ont/>.
+# Environmental Class and Property Definitions
+<Environment> ex:hasLocation ex:currentLocation .
+<Component> ex:hasLocation ex:standardLocation .
+<Location> ex:onTopOf ex:isWithin ex:overlaps .
+<Affordance> ex:closes ex:opens ex:delivers ex:holds ex:picksUp ex:putsDown ex:pulls ex:grasps .
 
-<http://example.org/data/Environment> a owl:Class ;
-  rdfs:subClassOf psr:Environment .
+# Instantiated Entities from Images
+<Environment> psr:hasComponent <Fridge> ;
+                           psr:hasComponent <Shelf> ;
+                           psr:hasComponent <Doorway> .
 
-[a psr:Environment] psr:hasComponent [a psr:Component] .
+<Fridge> ex:onTopOf <Shelf> ;
+              ex:isWithin <Environment> ;
+              ex:overlaps <Doorway> .
 
-[a psr:Component] psr:hasAffordance [a psr:Affordance] .
+<Shelf> ex:onTopOf <Table> ;
+              ex:hasAffordance psr:closes .
 
-[a psr:Component] psr:hasLocation [a psr:Location] .
+<Table> ex:hasAffordance psr:opens .
 
-[a psr:Component] psr:onTopOf [a psr:Location] .
+<Doorway> ex:hasAffordance psr:pulls .
 
-[a psr:Component] psr:contains [a psr:Location] .
+# Affordances of Components
+<Fridge> ex:affordances [ a psr:Action ;
+                                rdfs:label "Open"@en ] .
 
-[a psr:Component] psr:isWithin [a psr:Location] .
+<Shelf> ex:affordances [ a psr:Action ;
+                                 rdfs:label "Deliver"@en ] .
 
-[a psr:Component] psr:overlaps [a psr:Location] .
+<Table> ex:affordances [ a psr:Action ;
+                                   rdfs:label "Grab"@en ] .
 
-<http://example.org/data/Furniture> a owl:Class ;
-  rdfs:subClassOf psr:Component .
-
-<http://example.org/data/Appliance> a owl:Class ;
-  rdfs:subClassOf psr:Component .
-
-<http://example.org/data/Object> a owl:Class ;
-  rdfs:subClassOf psr:Component .
-
-[a psr:Location] geo:sfContainedIn [a psr:Location] .
-
-[a psr:Location] geo:sfWithin [a psr:Location] .
-
-[a psr:Location] geo:sfOverlaps [a psr:Location] .
-```
-
-Please note that the Knowledge Graph does not include specific actions or states of the environment as it is a general ontology-based representation. The actual actions, objects, and locations within this environment will need to be defined or instantiated separately based on your use case and the additional information you may have about the environment.
+# Relations Between Objects
+<Fridge> ex:currentLocation <Shelf> .
+<Shelf> ex:currentLocation <Table> .

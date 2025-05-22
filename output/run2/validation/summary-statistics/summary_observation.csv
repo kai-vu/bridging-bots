@@ -1,4 +1,4 @@
-,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance,Class Coverage,Distinct properties used,Property Compliance,Property Coverage 
+,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance,Class Coverage,Distinct properties used,Property Compliance,Property Coverage
 ../../output/llava-llama3/observation-graph/dpe/kg.ttl,True,17,17,0,0,0.0%,0.0%,3,0.0%,0.0% 
 ../../output/llava-llama3/observation-graph/i2kg/kg.ttl,False,16,0,16,0,0.0%,0.0%,0,0.0%,0.0% 
 ../../output/llava-llama3/observation-graph/d2kg/kg.ttl,True,95,95,0,3,100.0%,75.0%,5,80.0%,66.7% 

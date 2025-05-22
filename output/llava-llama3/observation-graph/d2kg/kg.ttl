@@ -6,63 +6,68 @@
 @prefix psr:    <https://w3id.org/psr-action#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:kitchen a psr:Environment .
-ex:kitchen dul:hasComponent ex:counter .
-ex:kitchen dul:hasComponent ex:refrigerator .
-ex:kitchen dul:hasComponent ex:sink .
-ex:kitchen dul:hasComponent ex:robot .
-ex:kitchen dul:hasComponent ex:diningTable .
+ex:environment a psr:Environment .
+ex:environment dul:hasComponent ex:kitchen .
+ex:environment dul:hasComponent ex:dining_room .
+ex:environment dul:hasComponent ex:cabinet_above_countertop .
+ex:environment dul:hasComponent ex:oven .
+ex:environment dul:hasComponent ex:sink .
+ex:environment dul:hasComponent ex:cabinet_with_window .
+ex:environment dul:hasComponent ex:refrigerator .
+ex:environment dul:hasComponent ex:table .
+ex:environment dul:hasComponent ex:chair .
+ex:environment dul:hasComponent ex:doorway .
 
-ex:counter a psr:Component .
-ex:counter dul:hasLocation ex:counterLocation .
-ex:counter psr:hasAffordance soma:Pulling .
-ex:counter psr:hasAffordance soma:Pushing .
-
-ex:counterLocation a psr:Location .
-ex:counterLocation geo:sfWithin ex:kitchen .
-
-ex:refrigerator a psr:Appliance .
-ex:refrigerator dul:hasLocation ex:refrigeratorLocation .
-ex:refrigerator psr:hasAffordance soma:Opening .
-ex:refrigerator psr:hasAffordance soma:Closing .
-
-ex:refrigeratorLocation a psr:Location .
-ex:refrigeratorLocation geo:sfWithin ex:kitchen .
-
+ex:kitchen a psr:Component .
+ex:dining_room a psr:Component .
+ex:cabinet_above_countertop a psr:Furniture .
+ex:oven a psr:Appliance .
 ex:sink a psr:Component .
-ex:sink dul:hasLocation ex:sinkLocation .
-
-ex:sinkLocation a psr:Location .
-ex:sinkLocation geo:sfWithin ex:kitchen .
-
-ex:robot a psr:Object .
-ex:robot dul:hasLocation ex:robotLocation .
-ex:robot psr:hasAffordance soma:Grasping .
-ex:robot psr:hasAffordance soma:Holding .
-
-ex:robotLocation a psr:Location .
-ex:robotLocation psr:onTopOf ex:table .
-
+ex:cabinet_with_window a psr:Furniture .
+ex:refrigerator a psr:Appliance .
 ex:table a psr:Furniture .
-ex:table dul:hasLocation ex:tableLocation .
+ex:chair a psr:Furniture .
+ex:doorway a psr:Component .
 
-ex:tableLocation a psr:Location .
-ex:tableLocation geo:sfWithin ex:kitchen .
+ex:cabinet_above_countertop dul:hasLocation ex:countertop_location .
+ex:oven dul:hasLocation ex:oven_location .
+ex:sink dul:hasLocation ex:sink_location .
+ex:cabinet_with_window dul:hasLocation ex:cabinet_with_window_location .
+ex:refrigerator dul:hasLocation ex:refrigerator_location .
+ex:table dul:hasLocation ex:table_location .
+ex:chair dul:hasLocation ex:chair_location .
+ex:doorway dul:hasLocation ex:doorway_location .
 
-ex:diningTable a psr:Furniture .
-ex:diningTable dul:hasLocation ex:diningTableLocation .
+ex:countertop_location a psr:Location .
+ex:oven_location a psr:Location .
+ex:sink_location a psr:Location .
+ex:cabinet_with_window_location a psr:Location .
+ex:refrigerator_location a psr:Location .
+ex:table_location a psr:Location .
+ex:chair_location a psr:Location .
+ex:doorway_location a psr:Location .
 
-ex:diningTableLocation a psr:Location .
-ex:diningTableLocation geo:sfWithin ex:diningArea .
+ex:cabinet_above_countertop psr:onTopOf ex:countertop .
+ex:oven geo:sfWithin ex:kitchen .
+ex:sink geo:sfWithin ex:kitchen .
+ex:cabinet_with_window geo:sfWithin ex:kitchen .
+ex:refrigerator geo:sfWithin ex:kitchen .
+ex:table geo:sfWithin ex:dining_room .
+ex:chair geo:sfWithin ex:dining_room .
+ex:doorway geo:sfWithin ex:dining_room .
 
-ex:diningArea a psr:Environment .
-ex:diningArea dul:hasComponent ex:diningTable .
-ex:diningArea dul:hasComponent ex:door .
+ex:countertop a psr:Component .
+ex:kitchen geo:sfContains ex:countertop .
+ex:dining_room geo:sfOverlaps ex:countertop .
 
-ex:door a psr:Component .
-ex:door dul:hasLocation ex:doorLocation .
-ex:door psr:hasAffordance soma:Opening .
-ex:door psr:hasAffordance soma:Closing .
-
-ex:doorLocation a psr:Location .
-ex:doorLocation geo:sfWithin ex:diningArea .
+ex:cabinet_above_countertop psr:hasAffordance soma:Closing .
+ex:cabinet_above_countertop psr:hasAffordance soma:Opening .
+ex:oven psr:hasAffordance soma:Closing .
+ex:oven psr:hasAffordance soma:Opening .
+ex:sink psr:hasAffordance soma:Delivering .
+ex:cabinet_with_window psr:hasAffordance soma:Closing .
+ex:cabinet_with_window psr:hasAffordance soma:Opening .
+ex:refrigerator psr:hasAffordance soma:Closing .
+ex:refrigerator psr:hasAffordance soma:Opening .
+ex:table psr:hasAffordance soma:Holding .
+ex:chair psr:hasAffordance soma:Holding .

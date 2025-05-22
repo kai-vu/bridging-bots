@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-33236228-36ae-4acf-ab8b-e72deed0cfa1",
+    "created": 1747902845,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The kitchen has a modern design with a neutral color palette. There is a dark wooden cabinet with a handle on one side. A white countertop and wooden drawer fronts are installed beneath it. On the right side of the kitchen, there's a large window. Opposite to the cabinet, there's an oven under a cabinet door with a light above it. The countertop is clear except for two items: a box of cereal on the far left and a bag of groceries in the middle right. To the right of the counter, there's a white refrigerator with a wooden handle. Adjacent to the refrigerator, the oven is visible. A sink is installed under the window to the left of the cabinet. The floor has a tile pattern, and there are two boxes of cereal on it; one near the sink and another in front of the countertop. In front of the countertop, there's an image of a person with a speech bubble that reads \"Happy Birthday\". To the right of the kitchen, there's a dining area. The wall separating the kitchen from the dining area has light-colored tiles, and there is a lamp mounted on it above the cabinet. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.78,
+        "prompt_token/s": 1773.15,
+        "total_duration": 7625827275,
+        "load_duration": 2176880870,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 1728561314,
+        "eval_count": 256,
+        "completion_tokens": 256,
+        "eval_duration": 3668415127,
+        "approximate_total": "0h0m7s",
+        "total_tokens": 3321,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

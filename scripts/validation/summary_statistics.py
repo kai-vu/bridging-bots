@@ -37,13 +37,24 @@ def try_parse_graph(file_path):
                 buffer = ""
         return g_partial, False, invalid_triples
 
+def load_ontology_graph(ontology_path):
+    g = Graph()
+    g.parse(ontology_path, format='turtle')
+    return g
+
+def clean_kg_graph(kg_graph, ontology_graph):
+    kg_graph_cleaned = Graph()
+    for triple in kg_graph:
+        if triple not in ontology_graph:
+            kg_graph_cleaned.add(triple)
+    return kg_graph_cleaned
+
 def get_used_terms(kg_graph):
     used_classes = set(kg_graph.objects(None, RDF.type))
     used_properties = set(kg_graph.predicates(None, None))
     return used_classes, used_properties
 
 def compute_compliance(required_groups, used_terms):
-    # flatten all allowed terms from your groups
     allowed_terms = set().union(*required_groups)
     valid_terms = used_terms & allowed_terms
     total_used = len(used_terms)
@@ -69,30 +80,29 @@ def summarize_kg(kg_graph, required_class_groups, required_property_groups, full
     prop_compliance_pct, valid_properties, total_used_properties = compute_compliance(required_property_groups, used_properties)
 
     return {
-        'Full Parse OK': full_parse,
-        'Total triples in KG': total_triples + invalid_triples,
-        'Valid triples': total_triples,
-        'Invalid triples': invalid_triples,
+        'Full_Parse_OK': full_parse,
+        'Total_triples_in_KG': total_triples + invalid_triples,
+        'Valid_triples': total_triples,
+        'Invalid_triples': invalid_triples,
 
-        'Distinct classes used': total_used_classes,
-        'Class Compliance (valid/used)': f"{class_compliance_pct:.1f}%",
-        'Class Coverage (groups matched/defined)': f"{class_coverage_pct:.1f}%",
+        'Distinct_classes_used': total_used_classes,
+        'Class_Compliance': f"{valid_classes}/{total_used_classes}",
+        'Class_Coverage': f"{matched_class_groups}/{total_class_groups}",
 
-        'Distinct properties used': total_used_properties,
-        'Property Compliance (valid/used)': f"{prop_compliance_pct:.1f}%",
-        'Property Coverage (groups matched/defined)': f"{prop_coverage_pct:.1f}%",
+        'Distinct_properties_used': total_used_properties,
+        'Property_Compliance': f"{valid_properties}/{total_used_properties}",
+        'Property_Coverage': f"{matched_prop_groups}/{total_prop_groups}",
     }
 
-def main(kg_paths, output_file, required_class_groups, required_property_groups):
+def main(kg_paths, output_file, required_class_groups, required_property_groups, ontology_path):
     all_data = []
-
+    ontology_graph = load_ontology_graph(ontology_path)
     for kg_path in kg_paths:
         print(f"Validating {kg_path}")
-
         kg_graph, full_parse_ok, invalid_triples = try_parse_graph(kg_path)
-        summary = summarize_kg(kg_graph, required_class_groups, required_property_groups, full_parse_ok, invalid_triples)
+        kg_graph_cleaned = clean_kg_graph(kg_graph, ontology_graph)
+        summary = summarize_kg(kg_graph_cleaned, required_class_groups, required_property_groups, full_parse_ok, invalid_triples)
         all_data.append(summary)
-
     df = pd.DataFrame(all_data, index=kg_paths)
     print(df)
     df.to_csv(output_file)
@@ -228,8 +238,11 @@ if __name__ == '__main__':
         {URIRef("https://w3id.org/psr-action#isAffordedBy")},
         {URIRef("https://w3id.org/psr-action#hasNaturalLanguage")},
     ]
-
+    
     main(files_observation_graph, output_observation, 
-         required_class_observation, required_property_observation)
+     required_class_observation, required_property_observation, 
+     ontology_observation_graph)
+
     main(files_action_graph, output_action, 
-         required_class_action, required_property_action)
+        required_class_action, required_property_action, 
+        ontology_action_graph)

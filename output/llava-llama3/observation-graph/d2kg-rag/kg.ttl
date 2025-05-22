@@ -7,67 +7,55 @@
 @prefix ex: <http://example.org/data/> .
 
 ex:kitchen a psr:Environment ;
-    dul:hasComponent ex:counter, ex:refrigerator, ex:sink, ex:robot, ex:diningTable, ex:coffeeMachine, ex:cups, ex:bottle .
+    dul:hasComponent ex:cabinet, ex:oven, ex:sink, ex:drainboard, ex:refrigerator .
 
-ex:counter a psr:Component ;
-    dul:hasLocation ex:kitchenLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:diningRoom a psr:Environment ;
+    dul:hasComponent ex:table, ex:chair, ex:bowl, ex:foodPackaging .
 
-ex:refrigerator a psr:Component ;
-    dul:hasLocation ex:kitchenLocation ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en ;
+    dul:hasLocation ex:countertop .
+
+ex:oven a psr:Component ;
+    rdfs:label "Oven"@en ;
+    dul:hasLocation ex:countertop .
 
 ex:sink a psr:Component ;
-    dul:hasLocation ex:kitchenLocation ;
-    psr:hasAffordance soma:Grasping .
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:countertop .
 
-ex:robot a psr:Component ;
-    dul:hasLocation ex:diningTableLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:drainboard a psr:Component ;
+    rdfs:label "Drainboard"@en ;
+    dul:hasLocation ex:sink .
 
-ex:diningTable a psr:Component ;
-    dul:hasLocation ex:diningAreaLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation ex:kitchen .
 
-ex:coffeeMachine a psr:Component ;
-    dul:hasLocation ex:counterLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:table a psr:Component ;
+    rdfs:label "Table"@en ;
+    dul:hasLocation ex:diningRoom .
 
-ex:cups a psr:Component ;
-    dul:hasLocation ex:counterLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:chair a psr:Component ;
+    rdfs:label "Chair"@en ;
+    dul:hasLocation ex:diningRoom .
 
-ex:bottle a psr:Component ;
-    dul:hasLocation ex:diningTableLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:bowl a psr:Component ;
+    rdfs:label "Bowl"@en ;
+    dul:hasLocation ex:table .
 
-ex:kitchenLocation a soma:Location ;
+ex:foodPackaging a psr:Component ;
+    rdfs:label "Food Packaging"@en ;
+    dul:hasLocation ex:table .
+
+ex:countertop a soma:Location ;
+    rdfs:label "Countertop"@en ;
     geo:sfWithin ex:kitchen .
 
-ex:counterLocation a soma:Location ;
-    geo:sfWithin ex:counter ;
-    psr:onTopOf ex:counter .
+ex:kitchen a soma:Location ;
+    rdfs:label "Kitchen"@en ;
+    geo:sfContains ex:countertop .
 
-ex:refrigeratorLocation a soma:Location ;
-    geo:sfWithin ex:refrigerator ;
-    psr:onTopOf ex:refrigerator .
-
-ex:sinkLocation a soma:Location ;
-    geo:sfWithin ex:sink ;
-    psr:onTopOf ex:sink .
-
-ex:diningTableLocation a soma:Location ;
-    geo:sfWithin ex:diningTable ;
-    psr:onTopOf ex:diningTable .
-
-ex:diningAreaLocation a soma:Location ;
-    geo:sfWithin ex:diningArea ;
-    psr:onTopOf ex:diningArea .
-
-ex:diningArea a psr:Environment ;
-    dul:hasComponent ex:diningTable, ex:bottle, ex:doorway ;
-    dul:hasLocation ex:diningAreaLocation .
-
-ex:doorway a psr:Component ;
-    dul:hasLocation ex:diningAreaLocation ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+ex:diningRoom a soma:Location ;
+    rdfs:label "Dining Room"@en ;
+    geo:sfOverlaps ex:kitchen .

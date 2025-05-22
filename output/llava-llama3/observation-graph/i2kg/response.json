@@ -1,6 +1,6 @@
 {
-    "id": "llava:7b-f8572e66-5d1c-43ce-9a5b-b4bb20317ed3",
-    "created": 1747870233,
+    "id": "llava:7b-cf12c395-0f69-44f2-9760-219e6c3e3d61",
+    "created": 1747905534,
     "model": "llava:7b",
     "choices": [
         {
@@ -8,25 +8,25 @@
             "logprobs": null,
             "finish_reason": "stop",
             "message": {
-                "content": " Certainly! Here is the Knowledge Graph in Turtle format based on the images you provided:\n\n```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr/action#> .\n@prefix geo: <http://www.opengis.net/ont/>.\n\n<http://example.org/data/Environment> a owl:Class ;\n  rdfs:subClassOf psr:Environment .\n\n[a psr:Environment] psr:hasComponent [a psr:Component] .\n\n[a psr:Component] psr:hasAffordance [a psr:Affordance] .\n\n[a psr:Component] psr:hasLocation [a psr:Location] .\n\n[a psr:Component] psr:onTopOf [a psr:Location] .\n\n[a psr:Component] psr:contains [a psr:Location] .\n\n[a psr:Component] psr:isWithin [a psr:Location] .\n\n[a psr:Component] psr:overlaps [a psr:Location] .\n\n<http://example.org/data/Furniture> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n<http://example.org/data/Appliance> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n<http://example.org/data/Object> a owl:Class ;\n  rdfs:subClassOf psr:Component .\n\n[a psr:Location] geo:sfContainedIn [a psr:Location] .\n\n[a psr:Location] geo:sfWithin [a psr:Location] .\n\n[a psr:Location] geo:sfOverlaps [a psr:Location] .\n```\n\nPlease note that the Knowledge Graph does not include specific actions or states of the environment as it is a general ontology-based representation. The actual actions, objects, and locations within this environment will need to be defined or instantiated separately based on your use case and the additional information you may have about the environment. ",
+                "content": " ```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix psr: <http://example.org/data/>\n@prefix geo: <http://www.opengis.net/ont/>\n\n# Environmental Class and Property Definitions\n<Environment> ex:hasLocation ex:currentLocation .\n<Component> ex:hasLocation ex:standardLocation .\n<Location> ex:onTopOf ex:isWithin ex:overlaps .\n<Affordance> ex:closes ex:opens ex:delivers ex:holds ex:picksUp ex:putsDown ex:pulls ex:grasps .\n\n# Instantiated Entities from Images\n<Environment> psr:hasComponent <Fridge> ;\n                           psr:hasComponent <Shelf> ;\n                           psr:hasComponent <Doorway> .\n\n<Fridge> ex:onTopOf <Shelf> ;\n              ex:isWithin <Environment> ;\n              ex:overlaps <Doorway> .\n\n<Shelf> ex:onTopOf <Table> ;\n              ex:hasAffordance psr:closes .\n\n<Table> ex:hasAffordance psr:opens .\n\n<Doorway> ex:hasAffordance psr:pulls .\n\n# Affordances of Components\n<Fridge> ex:affordances [ a psr:Action ;\n                                rdfs:label \"Open\"@en ] .\n\n<Shelf> ex:affordances [ a psr:Action ;\n                                 rdfs:label \"Deliver\"@en ] .\n\n<Table> ex:affordances [ a psr:Action ;\n                                   rdfs:label \"Grab\"@en ] .\n\n# Relations Between Objects\n<Fridge> ex:currentLocation <Shelf> .\n<Shelf> ex:currentLocation <Table> .\n``` ",
                 "role": "assistant"
             }
         }
     ],
     "object": "chat.completion",
     "usage": {
-        "response_token/s": 7.22,
-        "prompt_token/s": 44.04,
-        "total_duration": 172037176321,
-        "load_duration": 49963984,
+        "response_token/s": 67.75,
+        "prompt_token/s": 1999.95,
+        "total_duration": 9553403539,
+        "load_duration": 49109541,
         "prompt_eval_count": 4096,
         "prompt_tokens": 4096,
-        "prompt_eval_duration": 92999283942,
-        "eval_count": 570,
-        "completion_tokens": 570,
-        "eval_duration": 78957757271,
-        "approximate_total": "0h2m52s",
-        "total_tokens": 4666,
+        "prompt_eval_duration": 2048046235,
+        "eval_count": 503,
+        "completion_tokens": 503,
+        "eval_duration": 7424835980,
+        "approximate_total": "0h0m9s",
+        "total_tokens": 4599,
         "completion_tokens_details": {
             "reasoning_tokens": 0,
             "accepted_prediction_tokens": 0,
