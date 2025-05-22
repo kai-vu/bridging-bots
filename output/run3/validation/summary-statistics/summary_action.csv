@@ -1,19 +1,19 @@
-,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance (valid/used),Class Coverage (groups matched/defined),Distinct properties used,Property Compliance (valid/used),Property Coverage (groups matched/defined)
-../../output/llava-llama3/action-graph/dpe/kg.ttl,True,34,34,0,0,0.0% (0/0),0.0% (0/6),6,0.0% (0/6),0.0% (0/8)
-../../output/llava-llama3/action-graph/i2kg/kg.ttl,True,23,23,0,2,0.0% (0/2),0.0% (0/6),11,0.0% (0/11),0.0% (0/8)
-../../output/llava-llama3/action-graph/d2kg/kg.ttl,True,107,107,0,6,100.0% (6/6),83.3% (5/6),10,80.0% (8/10),100.0% (8/8)
-../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,True,77,77,0,5,100.0% (5/5),66.7% (4/6),9,77.8% (7/9),87.5% (7/8)
-../../output/llama4-scout/action-graph/dpe/kg.ttl,True,62,62,0,0,0.0% (0/0),0.0% (0/6),8,0.0% (0/8),0.0% (0/8)
-../../output/llama4-scout/action-graph/i2kg/kg.ttl,False,71,0,71,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/llama4-scout/action-graph/d2kg/kg.ttl,True,146,146,0,6,100.0% (6/6),83.3% (5/6),11,54.5% (6/11),75.0% (6/8)
-../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,True,89,89,0,7,100.0% (7/7),66.7% (4/6),8,50.0% (4/8),50.0% (4/8)
-../../output/llama4-maverick/action-graph/dpe/kg.ttl,True,6,6,0,0,0.0% (0/0),0.0% (0/6),5,0.0% (0/5),0.0% (0/8)
-../../output/llama4-maverick/action-graph/i2kg/kg.ttl,True,136,136,0,5,100.0% (5/5),83.3% (5/6),8,62.5% (5/8),62.5% (5/8)
-../../output/llama4-maverick/action-graph/d2kg/kg.ttl,True,51,51,0,6,100.0% (6/6),83.3% (5/6),10,60.0% (6/10),75.0% (6/8)
-../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,True,155,155,0,6,100.0% (6/6),83.3% (5/6),10,80.0% (8/10),100.0% (8/8)
-../../output/gpt-o1/action-graph/i2kg/kg.ttl,True,181,181,0,7,100.0% (7/7),83.3% (5/6),8,87.5% (7/8),87.5% (7/8)
-../../output/gpt-o1/action-graph/d2kg/kg.ttl,True,332,332,0,7,100.0% (7/7),83.3% (5/6),8,87.5% (7/8),87.5% (7/8)
-../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl,True,149,149,0,3,0.0% (0/3),0.0% (0/6),7,0.0% (0/7),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
-../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl,False,26,0,26,0,0.0% (0/0),0.0% (0/6),0,0.0% (0/0),0.0% (0/8)
+,Full Parse OK,Total triples in KG,Valid triples,Invalid triples,Distinct classes used,Class Compliance,Class Coverage,Distinct properties used,Property Compliance,Property Coverage 
+../../output/llava-llama3/action-graph/dpe/kg.ttl,True,34,34,0,0,0.0%,0.0%,6,0.0%,0.0% 
+../../output/llava-llama3/action-graph/i2kg/kg.ttl,True,23,23,0,2,0.0%,0.0%,11,0.0%,0.0% 
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,True,107,107,0,6,100.0%,83.3%,10,80.0%,100.0% 
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,True,77,77,0,5,100.0%,66.7%,9,77.8%,87.5% 
+../../output/llama4-scout/action-graph/dpe/kg.ttl,True,62,62,0,0,0.0%,0.0%,8,0.0%,0.0% 
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,False,71,0,71,0,0.0%,0.0%,0,0.0%,0.0% 
+../../output/llama4-scout/action-graph/d2kg/kg.ttl,True,146,146,0,6,100.0%,83.3%,11,54.5%,75.0% 
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,True,89,89,0,7,100.0%,66.7%,8,50.0%,50.0% 
+../../output/llama4-maverick/action-graph/dpe/kg.ttl,True,6,6,0,0,0.0%,0.0%,5,0.0%,0.0% 
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,True,136,136,0,5,100.0%,83.3%,8,62.5%,62.5% 
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,True,51,51,0,6,100.0%,83.3%,10,60.0%,75.0% 
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,True,155,155,0,6,100.0%,83.3%,10,80.0%,100.0% 
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,True,181,181,0,7,100.0%,83.3%,8,87.5%,87.5% 
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,True,332,332,0,7,100.0%,83.3%,8,87.5%,87.5% 
+../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl,True,149,149,0,3,0.0%,0.0%,7,0.0%,0.0% 
+../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl,False,26,0,26,0,0.0%,0.0%,0,0.0%,0.0% 
+../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl,False,26,0,26,0,0.0%,0.0%,0,0.0%,0.0% 
+../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl,False,26,0,26,0,0.0%,0.0%,0,0.0%,0.0% 

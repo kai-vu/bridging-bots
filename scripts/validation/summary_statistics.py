@@ -75,12 +75,12 @@ def summarize_kg(kg_graph, required_class_groups, required_property_groups, full
         'Invalid triples': invalid_triples,
 
         'Distinct classes used': total_used_classes,
-        'Class Compliance (valid/used)': f"{class_compliance_pct:.1f}% ({valid_classes}/{total_used_classes})",
-        'Class Coverage (groups matched/defined)': f"{class_coverage_pct:.1f}% ({matched_class_groups}/{total_class_groups})",
+        'Class Compliance (valid/used)': f"{class_compliance_pct:.1f}%",
+        'Class Coverage (groups matched/defined)': f"{class_coverage_pct:.1f}%",
 
         'Distinct properties used': total_used_properties,
-        'Property Compliance (valid/used)': f"{prop_compliance_pct:.1f}% ({valid_properties}/{total_used_properties})",
-        'Property Coverage (groups matched/defined)': f"{prop_coverage_pct:.1f}% ({matched_prop_groups}/{total_prop_groups})",
+        'Property Compliance (valid/used)': f"{prop_compliance_pct:.1f}%",
+        'Property Coverage (groups matched/defined)': f"{prop_coverage_pct:.1f}%",
     }
 
 def main(kg_paths, output_file, required_class_groups, required_property_groups):
