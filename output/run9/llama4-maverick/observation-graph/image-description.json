@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-797ffc2e-9306-4abd-b179-9e40cbd6462a",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with dark gray cabinets and light-colored countertops; a white refrigerator located in the corner of the room between two white walls and next to the cabinets; the countertop holding various food items including a jar of jam, a box of jello, and a box of salt; a sink with a faucet on the countertop to the right of the cabinets; a stove top with a pot on it; a range hood above the stove; a dining table with a light brown top and white chairs around it, located in a separate area from the kitchen; various items on the dining table including bottles, a box of crackers, and a glass; the floor made of dark wood parquet; white walls surrounding the kitchen and dining area.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748101495,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_7c27472e1f",
+    "usage": {
+        "completion_tokens": 148,
+        "prompt_tokens": 12496,
+        "total_tokens": 12644,
+        "completion_time": 0.414263628,
+        "prompt_time": 0.264632598,
+        "queue_time": 1.748026446,
+        "total_time": 0.678896226
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jw1ffw0derws3ar78ass2k1g"
+    }
+}

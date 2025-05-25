@@ -1,0 +1,24 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Box_of_crackers kitchen:isOn kitchen:Dining_table ;
+    kitchen:isPickedUpBy kitchen:Agent ;
+    kitchen:isStoredIn kitchen:Cabinet .
+
+kitchen:Box_of_jello kitchen:isOn kitchen:Countertop ;
+    kitchen:isPickedUpBy kitchen:Agent ;
+    kitchen:isStoredIn kitchen:Cabinet .
+
+kitchen:Box_of_salt kitchen:isOn kitchen:Countertop ;
+    kitchen:isPickedUpBy kitchen:Agent ;
+    kitchen:isStoredIn kitchen:Cabinet .
+
+kitchen:Jar_of_jam kitchen:isOn kitchen:Countertop ;
+    kitchen:isPickedUpBy kitchen:Agent ;
+    kitchen:isStoredIn kitchen:Cabinet .
+
+kitchen:Pot kitchen:isOn kitchen:Stove_top ;
+    kitchen:isRemovedFrom kitchen:Stove_top ;
+    kitchen:isStoredIn kitchen:Designated_storage_location .
+
+kitchen:Countertop kitchen:hasAction kitchen:Identify_misplaced_items .
+

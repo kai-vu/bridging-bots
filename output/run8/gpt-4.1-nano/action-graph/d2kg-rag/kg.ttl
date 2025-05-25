@@ -1,0 +1,74 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:identifyMisplacedItems a Action ;
+    ex:involvesObject :stovetop, :pot, :foodItems, :countertop, :diningArea, :table, :foodItems ;
+    ex:hasSubAction ex:scanCountertop, ex:scanDiningArea, ex:identifyMisplacedItemsOnCountertop, ex:identifyMisplacedItemsOnDiningArea .
+
+ex:scanCountertop a Action ;
+    ex:performedOn :countertop ;
+    ex:involvesObject :foodItems, :stovetop, :pot .
+
+ex:scanDiningArea a Action ;
+    ex:performedOn :table ;
+    ex:involvesObject :foodItems .
+
+ex:identifyMisplacedItemsOnCountertop a Action ;
+    ex:hasInput :foodItems ;
+    ex:hasOutput :misplacedFoodItems .
+
+ex:identifyMisplacedItemsOnDiningArea a Action ;
+    ex:hasInput :foodItems ;
+    ex:hasOutput :misplacedFoodItems .
+
+ex:moveToObject a Action ;
+    ex:toObject :misplacedItem .
+
+ex:pickUpItem a Action ;
+    ex:selectObject :misplacedItem .
+
+ex:placeItemInStorage a Action ;
+    ex:placesObject :misplacedItem ;
+    ex:atLocation :appropriateStorageLocation .
+
+ex:restoreKitchen a Action ;
+    ex:hasSubActions ( ex:identifyMisplacedItems ex:moveToObject ex:pickUpItem ex:placeItemInStorage ) .
+
+ex:misplacedFoodItems a Object ;
+    ex:hasPart :misplacedJellO, :misplacedRiceBubbles, :misplacedShortbread, :misplacedJam, :misplacedWaterBottle, :misplacedPitcher .
+
+ex:misplacedJellO a Object ; ex:locatedOn :diningArea .
+ex:misplacedRiceBubbles a Object ; ex:locatedOn :countertop .
+ex:misplacedShortbread a Object ; ex:locatedOn :countertop .
+ex:misplacedJam a Object ; ex:locatedOn :countertop .
+ex:misplacedWaterBottle a Object ; ex:locatedOn :countertop .
+ex:misplacedPitcher a Object ; ex:locatedOn :countertop .
+
+ex:appropriateStorageLocation a Location ;
+    ex:correspondsToObjectType :foodItem, :drinkware .
+
+ex:countertop a Location ;
+    ex:hasObject :foodItems .
+
+ex:foodItems a Object ;
+    ex:includes :JellO, :riceBubbles, :shortbread, :jam, :waterBottle, :pitcher .
+
+ex:JellO a FoodItem ; ex:storedIn :pantry .
+ex:riceBubbles a FoodItem ; ex:storedIn :pantry .
+ex:shortbread a FoodItem ; ex:storedIn :pantry .
+ex:jam a FoodItem ; ex:storedIn :pantry .
+ex:waterBottle a Drinkware ; ex:storedIn :cabinet .
+ex:pitcher a Drinkware ; ex:storedIn :cabinet .
+
+ex:moveToObject a Action ;
+    ex:toObject :misplacedItem .
+
+ex:pickUpItem a Action ;
+    ex:object :misplacedItem .
+
+ex:placeItemInStorage a Action ;
+    ex:object :misplacedItem ;
+    ex:atLocation :appropriateStorageLocation .
+
+ex:restoreKitchen a Action ;
+    ex:hasSubActions ( ex:identifyMisplacedItems ex:moveToObject ex:pickUpItem ex:placeItemInStorage ) .

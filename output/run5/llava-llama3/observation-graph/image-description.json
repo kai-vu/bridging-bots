@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-c982af38-a367-4cf2-9718-1448bd6dff7b",
+    "created": 1747994575,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " The image provided is too small for me to analyze and describe in detail. If you could provide a larger image or more detailed information about the objects in the images, I would be able to assist you better. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 64.72,
+        "prompt_token/s": 1793.15,
+        "total_duration": 4024380157,
+        "load_duration": 1575197991,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 1709282479,
+        "eval_count": 44,
+        "completion_tokens": 44,
+        "eval_duration": 679824309,
+        "approximate_total": "0h0m4s",
+        "total_tokens": 3109,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

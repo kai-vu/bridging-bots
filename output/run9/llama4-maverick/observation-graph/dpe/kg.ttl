@@ -1,0 +1,32 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:dining_area kitchen:sfContains kitchen:dining_table .
+
+kitchen:floor kitchen:isPartOf kitchen:kitchen .
+
+kitchen:range_hood kitchen:isAbove kitchen:stove_top .
+
+kitchen:sink kitchen:hasLocation kitchen:countertop .
+
+kitchen:walls kitchen:surrounds kitchen:kitchen_and_dining_area .
+
+kitchen:cabinets kitchen:isNextTo kitchen:refrigerator .
+
+kitchen:countertop kitchen:hasAffordance kitchen:holding ;
+    kitchen:onTopOf kitchen:box_of_jello,
+        kitchen:box_of_salt,
+        kitchen:jar_of_jam .
+
+kitchen:dining_table kitchen:onTopOf kitchen:bottles,
+        kitchen:box_of_crackers,
+        kitchen:glass .
+
+kitchen:kitchen kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertops ;
+    kitchen:sfContains kitchen:refrigerator .
+
+kitchen:stove_top kitchen:onTopOf kitchen:pot .
+
+kitchen:refrigerator kitchen:hasLocation kitchen:corner_of_the_room ;
+    kitchen:isA kitchen:Appliance .
+

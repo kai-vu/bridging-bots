@@ -1,0 +1,45 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:close_cabinet kitchen:actsOn kitchen:cabinet ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:countertop_items kitchen:isA kitchen:Object .
+
+kitchen:inspect_countertop_items kitchen:actsOn kitchen:countertop_items ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:kitchen_area kitchen:hasAffordance kitchen:move .
+
+kitchen:kitchen_workflow kitchen:hasAction kitchen:move_to_kitchen_area .
+
+kitchen:move_to_cabinet kitchen:actsOn kitchen:cabinet ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:move_to_kitchen_area kitchen:follows kitchen:none ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:open_cabinet kitchen:actsOn kitchen:cabinet ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:pick_up_yellow_mug kitchen:actsOn kitchen:yellow_mug ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:put_yellow_mug_in_cabinet kitchen:actsOn kitchen:yellow_mug ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:yellow_mug kitchen:hasAffordance kitchen:picking_up ;
+    kitchen:isA kitchen:Object .
+
+kitchen:cabinet kitchen:hasAffordance kitchen:closing,
+        kitchen:move,
+        kitchen:opening .
+
+kitchen:assistant kitchen:actsOn kitchen:kitchen_area ;
+    kitchen:hasAction kitchen:close_cabinet,
+        kitchen:inspect_countertop_items,
+        kitchen:move_to_cabinet,
+        kitchen:open_cabinet,
+        kitchen:pick_up_yellow_mug,
+        kitchen:put_yellow_mug_in_cabinet ;
+    kitchen:hasWorkflow kitchen:kitchen_workflow .
+

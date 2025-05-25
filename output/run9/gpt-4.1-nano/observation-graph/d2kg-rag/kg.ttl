@@ -1,0 +1,60 @@
+@prefix : <http://example.org/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix data: <http://example.org/data/> .
+
+# Environment
+data:Environment a :Environment .
+
+# Areas
+data:Kitchen a :Room ; :hasPart data:KitchenArea .
+data:DiningArea a :Room ; :hasPart data:DiningArea .
+
+# Kitchen specifics
+data:KitchenArea a :Area ; :locatedIn data:Environment .
+
+# Countertop and furniture
+data:Countertop a :Surface ; :locatedIn data:KitchenArea ; :hasMaterial :beigeMarble .
+data:BlackCabinet a :Furniture ; :locatedIn data:KitchenArea ; :hasColor :black .
+data:WoodenVentHood a :Furniture ; :locatedIn data:KitchenArea ; :hasMaterial :wood .
+
+# Wall and window
+data:Wall a :Wall ; :locatedIn data:KitchenArea .
+data:Window a :Window ; :locatedIn data:KitchenArea ; :hasFrameColor :wood .
+
+# Stove and saucepan
+data:Stove a :Appliance ; :locatedIn data:KitchenArea .
+data:SmallSaucepan a :Device ; :locatedIn data:KitchenArea ; :usedWith data:Stove .
+
+# Food items on countertop
+data:JellO a :FoodItem ; :locatedOn data:Countertop ; :hasName "Jell-O" .
+data:RiceBubblesBox a :FoodItem ; :locatedOn data:Countertop ; :hasName "rice bubbles" .
+data:StrawberryJam a :FoodItem ; :locatedOn data:Countertop ; :hasName "strawberry jam" .
+data:AlpenSalz a :FoodItem ; :locatedOn data:Countertop ; :hasName "Alpen Salz" .
+data:Jam2 a :FoodItem ; :locatedOn data:Countertop ; :hasName "jam" .
+
+# Items in the dining area
+data:WaterBottle a :FoodItem ; :locatedIn data:DiningArea ; :hasName "large water bottle" .
+data:WineGlass a :FoodItem ; :locatedIn data:DiningArea ; :hasName "glass of wine" .
+data:Pitcher a :FoodItem ; :locatedIn data:DiningArea ; :hasName "pitcher" .
+data:ShortbreadBox a :FoodItem ; :locatedIn data:DiningArea ; :hasName "red box of shortbread" .
+data:RiceBubblesBoxDining a :FoodItem ; :locatedIn data:DiningArea ; :hasName "box of rice bubbles" .
+data:ChuckyAlbumCover a :FoodItem ; :locatedIn data:DiningArea ; :hasName "Chucky album cover" .
+data:JamJars a :FoodItem ; :locatedIn data:DiningArea ; :hasName "additional jars of jam" .
+
+# Furniture in dining area
+data:HighBackWhiteChair a :Furniture ; :locatedIn data:DiningArea .
+
+# Walls and door
+data:Wall2 a :Wall ; :locatedIn data:Environment .
+data:Door a :Door ; :locatedIn data:Environment ; :separates data:Kitchen from data:DiningArea ; :hasDesign "simple panel" ; :hasHandle "brushed metal" .
+
+# Ceiling
+data:Ceiling a :Ceiling ; :locatedIn data:Environment ; :hasColor :white .
+data:CeilingLight a :Lighting ; :locatedIn data:Ceiling ; :hasType "circular" .
+
+# Environment composition
+:data:Environment a :Environment ; :contains data:Kitchen , data:DiningArea .
+
+This knowledge graph represents the spatial and object relationships within the described environment according to the specified ontology.

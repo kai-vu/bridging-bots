@@ -1,0 +1,152 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDiningArea a psr:Environment ;
+  rdfs:label "Kitchen and Dining Area"@en .
+
+ex:KitchenArea a soma:Location ;
+  rdfs:label "Kitchen Area"@en ;
+  geo:sfWithin ex:KitchenAndDiningArea .
+
+ex:DiningArea a soma:Location ;
+  rdfs:label "Dining Area"@en ;
+  geo:sfWithin ex:KitchenAndDiningArea .
+
+ex:Wall a psr:Component ;
+  rdfs:label "Wall"@en ;
+  dul:hasLocation ex:KitchenAndDiningArea ;
+  rdfs:comment "The wall in the kitchen and dining area."@en .
+
+ex:Floor a psr:Component ;
+  rdfs:label "Floor"@en ;
+  dul:hasLocation ex:KitchenAndDiningArea ;
+  rdfs:comment "The brown wooden floor in the kitchen and dining area."@en .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  dul:hasLocation ex:KitchenArea ;
+  rdfs:comment "The black cabinets in the kitchen area."@en .
+
+ex:Countertop a psr:Component ;
+  rdfs:label "Countertop"@en ;
+  dul:hasLocation ex:KitchenArea ;
+  rdfs:comment "The beige marble countertop in the kitchen area."@en .
+
+ex:Sink a psr:Component ;
+  rdfs:label "Sink"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The sink on the countertop."@en .
+
+ex:Stove a psr:Component ;
+  rdfs:label "Stove"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The stove on the countertop."@en .
+
+ex:Pot a psr:Component ;
+  rdfs:label "Pot"@en ;
+  dul:hasLocation ex:Stove ;
+  rdfs:comment "The pot on the stove."@en .
+
+ex:RangeHood a psr:Component ;
+  rdfs:label "Range Hood"@en ;
+  dul:hasLocation ex:KitchenArea ;
+  rdfs:comment "The range hood above the stove."@en ;
+  psr:onTopOf ex:Stove .
+
+ex:Window a psr:Component ;
+  rdfs:label "Window"@en ;
+  dul:hasLocation ex:KitchenArea ;
+  rdfs:comment "The window in the kitchen area."@en .
+
+ex:Cup a psr:Component ;
+  rdfs:label "Cup"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The yellow cup on the countertop."@en .
+
+ex:MrsMurrarysStrawberryJam a psr:Component ;
+  rdfs:label "Mrs. Murrary's Strawberry Jam"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The red-and-white jar labeled 'Mrs. Murrary's Strawberry Jam' on the countertop."@en .
+
+ex:RiceBubblesCereal a psr:Component ;
+  rdfs:label "Rice Bubbles Cereal"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The blue-and-white box of Rice Bubbles cereal on the countertop."@en .
+
+ex:CHUCKY a psr:Component ;
+  rdfs:label "CHUCKY"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The red box labeled 'CHUCKY' with a picture of a doll on it on the countertop."@en .
+
+ex:Jello a psr:Component ;
+  rdfs:label "Jello"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The red box of Jello on the countertop."@en .
+
+ex:Plates a psr:Component ;
+  rdfs:label "Plates"@en ;
+  dul:hasLocation ex:Countertop ;
+  rdfs:comment "The stack of white plates on the countertop."@en .
+
+ex:Table a psr:Component ;
+  rdfs:label "Table"@en ;
+  dul:hasLocation ex:DiningArea ;
+  rdfs:comment "The brown wooden table in the dining area."@en .
+
+ex:Chairs a psr:Component ;
+  rdfs:label "Chairs"@en ;
+  dul:hasLocation ex:DiningArea ;
+  rdfs:comment "The four white chairs in the dining area."@en .
+
+ex:EvianWater a psr:Component ;
+  rdfs:label "Evian Water"@en ;
+  dul:hasLocation ex:Table ;
+  rdfs:comment "The bottle of Evian water on the table."@en .
+
+ex:PlateWithMugAndSpoon a psr:Component ;
+  rdfs:label "Plate with Mug and Spoon"@en ;
+  dul:hasLocation ex:Table ;
+  rdfs:comment "The plate with a mug and a spoon on it on the table."@en .
+
+ex:Book a psr:Component ;
+  rdfs:label "Book"@en ;
+  dul:hasLocation ex:Table ;
+  rdfs:comment "The book titled 'Chocolate Cake Murder' on the table."@en .
+
+ex:FruitBowl a psr:Component ;
+  rdfs:label "Fruit Bowl"@en ;
+  dul:hasLocation ex:Table ;
+  rdfs:comment "The bowl of fruit on the table."@en .
+
+ex:Refrigerator a psr:Component ;
+  rdfs:label "Refrigerator"@en ;
+  dul:hasLocation ex:KitchenAndDiningArea ;
+  rdfs:comment "The white refrigerator against the wall between the kitchen and dining areas."@en .
+
+ex:KitchenAndDiningArea dul:hasComponent ex:Wall .
+ex:KitchenAndDiningArea dul:hasComponent ex:Floor .
+ex:KitchenArea dul:hasComponent ex:Cabinets .
+ex:KitchenArea dul:hasComponent ex:Countertop .
+ex:Countertop dul:hasComponent ex:Sink .
+ex:Countertop dul:hasComponent ex:Stove .
+ex:Countertop dul:hasComponent ex:Pot .
+ex:KitchenArea dul:hasComponent ex:RangeHood .
+ex:KitchenArea dul:hasComponent ex:Window .
+ex:Countertop dul:hasComponent ex:Cup .
+ex:Countertop dul:hasComponent ex:MrsMurrarysStrawberryJam .
+ex:Countertop dul:hasComponent ex:RiceBubblesCereal .
+ex:Countertop dul:hasComponent ex:CHUCKY .
+ex:Countertop dul:hasComponent ex:Jello .
+ex:Countertop dul:hasComponent ex:Plates .
+ex:DiningArea dul:hasComponent ex:Table .
+ex:DiningArea dul:hasComponent ex:Chairs .
+ex:Table dul:hasComponent ex:EvianWater .
+ex:Table dul:hasComponent ex:PlateWithMugAndSpoon .
+ex:Table dul:hasComponent ex:Book .
+ex:Table dul:hasComponent ex:FruitBowl .
+ex:KitchenAndDiningArea dul:hasComponent ex:Refrigerator .

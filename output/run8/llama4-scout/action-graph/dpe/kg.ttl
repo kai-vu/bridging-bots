@@ -1,0 +1,57 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Alpen_Salt kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:kitchen_counter .
+
+kitchen:Rice_Bubbles kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:kitchen_counter .
+
+kitchen:box_of_Jello kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:kitchen_counter .
+
+kitchen:cookbook kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:table .
+
+kitchen:milk_bottle kitchen:hasAction kitchen:Open,
+        kitchen:PutDown ;
+    kitchen:on kitchen:table .
+
+kitchen:puzzle_box kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:table .
+
+kitchen:stack_of_plates kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:kitchen_counter .
+
+kitchen:Move kitchen:actsOn kitchen:assistant .
+
+kitchen:dining_area kitchen:locatedNear kitchen:kitchen .
+
+kitchen:jar_of_jam kitchen:hasAction kitchen:PutDown ;
+    kitchen:on kitchen:kitchen_counter .
+
+kitchen:standard_storage_location kitchen:affordedBy kitchen:kitchen_cabinet,
+        kitchen:refrigerator .
+
+kitchen:Close kitchen:actsOn kitchen:kitchen_cabinet,
+        kitchen:refrigerator .
+
+kitchen:Open kitchen:actsOn kitchen:kitchen_cabinet,
+        kitchen:refrigerator .
+
+kitchen:assistant kitchen:performs kitchen:Move .
+
+kitchen:kitchen_cabinet kitchen:hasAction kitchen:Close,
+        kitchen:Open ;
+    kitchen:hasAffordance kitchen:standard_storage_location ;
+    kitchen:locatedIn kitchen:kitchen .
+
+kitchen:refrigerator kitchen:hasAction kitchen:Close ;
+    kitchen:locatedIn kitchen:kitchen .
+
+kitchen:table kitchen:locatedIn kitchen:dining_area .
+
+kitchen:kitchen_counter kitchen:locatedIn kitchen:kitchen .
+
+kitchen:PutDown kitchen:actsOn kitchen:jar_of_jam ;
+    kitchen:isPerformedBy kitchen:assistant .
+

@@ -1,0 +1,146 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix :       <http://example.org/data/> .
+
+##############################
+# Environment and Locations
+##############################
+
+:diningRoom a psr:Environment ;
+    rdfs:label "Dining Room"@en .
+
+:floorLevel a psr:StandardLocation ;
+    rdfs:label "Floor Level"@en .
+
+:currentPos a psr:CurrentLocation ;
+    rdfs:label "Current Position"@en .
+
+:table a psr:Object ;
+    rdfs:label "Dining Table"@en .
+
+:wall a psr:Object ;
+    rdfs:label "Wall"@en .
+
+##############################
+# Components (Objects)
+##############################
+
+:refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en .
+
+:table a psr:Furniture ;
+    rdfs:label "Dining Table"@en .
+
+:kitchenCounter a psr:Furniture ;
+    rdfs:label "Kitchen Counter"@en .
+
+:plate a psr:Object ;
+    rdfs:label "Plate"@en .
+
+:box ofJelly a psr:Object ;
+    rdfs:label "Jelly Box"@en .
+
+:bottleWater a psr:Object ;
+    rdfs:label "Water Bottle"@en .
+
+:box ofRiceBubbles a psr:Object ;
+    rdfs:label "Rice Bubbles Box"@en .
+
+:box ofChocolate a psr:Object ;
+    rdfs:label "Chocolate Box"@en .
+
+##############################
+# Locations of Components
+##############################
+
+:refrigeratorLoc a soma:Location ;
+    rdfs:label "Refrigerator Location"@en .
+
+:counterLoc a soma:Location ;
+    rdfs:label "Counter Location"@en .
+
+:plateLoc a soma:Location ;
+    rdfs:label "Plate Location"@en .
+
+:boxJellyLoc a soma:Location ;
+    rdfs:label "Jelly Box Location"@en .
+
+:bottleWaterLoc a soma:Location ;
+    rdfs:label "Water Bottle Location"@en .
+
+:riceBubblesBoxLoc a soma:Location ;
+    rdfs:label "Rice Bubbles Box Location"@en .
+
+:chocolateBoxLoc a soma:Location ;
+    rdfs:label "Chocolate Box Location"@en .
+
+##############################
+# Relations: Environment Components and Locations
+##############################
+
+:environment a psr:Environment ;
+    dul:hasComponent :refrigerator, :kitchenCounter, :table .
+
+:refrigerator :hasLocation :refrigeratorLoc .
+:kitchenCounter :hasLocation :counterLoc .
+:table :hasLocation :plateLoc .
+
+:plate :hasLocation :plateLoc .
+
+:box ofJelly :hasLocation :boxJellyLoc .
+:bottleWater :hasLocation :bottleWaterLoc .
+:box ofRiceBubbles :hasLocation :riceBubblesBoxLoc .
+:box ofChocolate :hasLocation :chocolateBoxLoc .
+
+##############################
+# Specific Location Relationships
+##############################
+
+:refrigeratorLoc geo:sfContains :refrigerator .
+:counterLoc geo:sfContains :kitchenCounter .
+:plateLoc geo:sfContains :plate .
+
+:boxJellyLoc geo:sfContains :box ofJelly .
+:bottleWaterLoc geo:sfContains :bottleWater .
+:riceBubblesBoxLoc geo:sfContains :box ofRiceBubbles .
+:chocolateBoxLoc geo:sfContains :box ofChocolate .
+
+##############################
+# Object Relationships (e.g., on top of, within)
+##############################
+
+:plate a psr:Object ;
+    rdfs:label "Plate"@en .
+
+:plateOnTable a psr:Location ;
+    rdfs:label "on the table"@en .
+
+:plate :onTopOf :table .
+
+:box ofJelly :onTopOf :plate .
+:bottleWater :onTopOf :plate .
+:box ofRiceBubbles :onTopOf :plate .
+:box ofChocolate :onTopOf :plate .
+
+##############################
+# Affordances (if applicable, example actions)
+##############################
+
+:refrigerator psr:hasAffordance soma:Opening .
+:refrigerator psr:hasAffordance soma:Closing .
+
+:door a psr:Object ;
+    rdfs:label "Refrigerator Door"@en .
+
+:door soma:Opening :refrigerator .
+:door soma:Closing :refrigerator .
+
+##############################
+# Summary of the environment
+##############################
+
+# The environment includes a refrigerator, a kitchen counter, a dining table, and various objects like food boxes and bottles placed on the table and counter. The locations specify where objects are situated. Relations define spatial relations such as 'on top of' and containment. The refrigerator has affordances to open and close.

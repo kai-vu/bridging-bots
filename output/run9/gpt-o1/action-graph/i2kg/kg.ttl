@@ -1,0 +1,180 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+
+psr:Instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
+    psr:hasWorkflow psr:Workflow1 .
+
+psr:Workflow1 a psr:Workflow ;
+    psr:hasAction psr:Action1 ,
+                 psr:Action2 ,
+                 psr:Action3 ,
+                 psr:Action4 ,
+                 psr:Action5 ,
+                 psr:Action6 ,
+                 psr:Action7 ,
+                 psr:Action8 ,
+                 psr:Action9 ,
+                 psr:Action10 ,
+                 psr:Action11 ,
+                 psr:Action12 ,
+                 psr:Action13 ,
+                 psr:Action14 ,
+                 psr:Action15 ,
+                 psr:Action16 ,
+                 psr:Action17 ,
+                 psr:Action18 ,
+                 psr:Action19 ,
+                 psr:Action20 .
+
+################################################################
+# AGENT AND COMPONENTS
+################################################################
+
+:Robot1 a dul:Agent .
+
+:Cupboard1 a psr:Furniture .
+:Fridge1 a psr:Appliance .
+
+:Jam a psr:Object .
+:JelloBox a psr:Object .
+:Salt a psr:Object .
+:CerealBox1 a psr:Object .
+:CerealBox2 a psr:Object .
+:PlateStack a psr:Object .
+:Pot1 a psr:Object .
+:Mug1 a psr:Object .
+:WaterBottle a psr:Object .
+
+################################################################
+# ACTIONS (OPEN CUPBOARD, PICK/PUT ITEMS IN CUPBOARD, CLOSE CUPBOARD)
+################################################################
+
+psr:Action1 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Cupboard1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes psr:Action2 .
+
+psr:Action2 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Jam ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action3 .
+
+psr:Action3 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Jam ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action4 .
+
+psr:Action4 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :JelloBox ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action5 .
+
+psr:Action5 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :JelloBox ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action6 .
+
+psr:Action6 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Salt ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action7 .
+
+psr:Action7 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Salt ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action8 .
+
+psr:Action8 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :CerealBox1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action9 .
+
+psr:Action9 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :CerealBox1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action10 .
+
+psr:Action10 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :CerealBox2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action11 .
+
+psr:Action11 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :CerealBox2 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action12 .
+
+psr:Action12 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :PlateStack ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action13 .
+
+psr:Action13 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :PlateStack ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action14 .
+
+psr:Action14 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Pot1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action15 .
+
+psr:Action15 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Pot1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action16 .
+
+psr:Action16 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Cupboard1 ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes psr:Action17 .
+
+################################################################
+# ACTIONS (OPEN FRIDGE, PICK/PUT WATER BOTTLE, CLOSE FRIDGE)
+################################################################
+
+psr:Action17 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Fridge1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes psr:Action18 .
+
+psr:Action18 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :WaterBottle ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:Action19 .
+
+psr:Action19 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :WaterBottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action20 .
+
+psr:Action20 a dul:Action ;
+    soma:isPerformedBy :Robot1 ;
+    psr:actsOn :Fridge1 ;
+    psr:isAffordedBy soma:Closing .

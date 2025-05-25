@@ -1,0 +1,187 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix onto: <http://example.org/ontology#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:action1 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:bonne_maman_strawberry_preserves ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action2 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:fridge1 .
+
+ex:action3 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:bonne_maman_strawberry_preserves ;
+   onto:hasLocation ex:fridge1 .
+
+ex:action4 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:jam_2 ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action5 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:fridge1 .
+
+ex:action6 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:jam_2 ;
+   onto:hasLocation ex:fridge1 .
+
+ex:action7 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:strawberry_jello_box ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action8 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:pantry1 .
+
+ex:action9 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:strawberry_jello_box ;
+   onto:hasLocation ex:pantry1 .
+
+ex:action10 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:alpen_salz ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action11 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:spice_cabinet1 .
+
+ex:action12 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:alpen_salz ;
+   onto:hasLocation ex:spice_cabinet1 .
+
+ex:action13 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:rice_bubbles_box ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action14 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:pantry1 .
+
+ex:action15 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:rice_bubbles_box ;
+   onto:hasLocation ex:pantry1 .
+
+ex:action16 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:chucky_cereal_box ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action17 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:pantry1 .
+
+ex:action18 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:chucky_cereal_box ;
+   onto:hasLocation ex:pantry1 .
+
+ex:action19 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:stack_of_white_plates ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action20 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:dish_cabinet1 .
+
+ex:action21 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:stack_of_white_plates ;
+   onto:hasLocation ex:dish_cabinet1 .
+
+ex:action22 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:orange_mug ;
+   onto:hasLocation ex:countertop1 .
+
+ex:action23 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:dish_cabinet1 .
+
+ex:action24 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:orange_mug ;
+   onto:hasLocation ex:dish_cabinet1 .
+
+ex:action25 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:small_metal_pot ;
+   onto:hasLocation ex:stovetop1 .
+
+ex:action26 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:pot_cabinet1 .
+
+ex:action27 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:small_metal_pot ;
+   onto:hasLocation ex:pot_cabinet1 .
+
+ex:action28 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:evian_bottle ;
+   onto:hasLocation ex:dining_table1 .
+
+ex:action29 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:fridge1 .
+
+ex:action30 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:evian_bottle ;
+   onto:hasLocation ex:fridge1 .
+
+ex:action31 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:shortbread_box ;
+   onto:hasLocation ex:dining_table1 .
+
+ex:action32 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:pantry1 .
+
+ex:action33 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:shortbread_box ;
+   onto:hasLocation ex:pantry1 .
+
+ex:action34 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:clear_pitcher ;
+   onto:hasLocation ex:dining_table1 .
+
+ex:action35 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:dish_cabinet1 .
+
+ex:action36 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:clear_pitcher ;
+   onto:hasLocation ex:dish_cabinet1 .
+
+ex:action37 a onto:PickUpAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:wine_glass ;
+   onto:hasLocation ex:dining_table1 .
+
+ex:action38 a onto:MoveAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasDestination ex:glass_cabinet1 .
+
+ex:action39 a onto:PlaceAction ;
+   onto:hasAgent ex:robot1 ;
+   onto:hasObject ex:wine_glass ;
+   onto:hasLocation ex:glass_cabinet1 .

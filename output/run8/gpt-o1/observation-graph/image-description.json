@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BakktTafFxV8atCzbrvcgvJwMjvjX",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The kitchen occupies one corner, with black cabinets along two adjoining walls and a marble‐colored countertop. A white refrigerator stands against the wall to the right of the tall black cabinet. On the left portion of the countertop (near the fridge), there is a small cluster of grocery items: a jar of jam, a box of strawberry Jell-O, a container of Alpen Salz, and a short stack of white plates. Toward the corner beneath the wooden-framed window, the countertop contains a sink with a faucet, and next to it a small stovetop holding a metal pot. A wooden range hood hangs above this stove area. On the right side of the counter are two cereal boxes (“Chucky” and “Rice Bubbles”), an orange mug, and another jar of jam. \n\nAcross from the kitchen setup, a rectangular dining table with a wooden top sits in an open area. Four white, upholstered chairs are arranged around it. On the table’s surface stand a large plastic water bottle in a wraparound carrier, a white fruit bowl (holding several oranges and possibly other fruit), a transparent pitcher, and a single wine glass. A small rectangular box of food (dark packaging) lies near the fruit bowl. The dining area is bordered by plain white walls, with a white door set into one wall to the right of the table. The hardwood floor runs continuously from the kitchen area to the dining space.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748099235,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 2025,
+        "prompt_tokens": 3541,
+        "total_tokens": 5566,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1728,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

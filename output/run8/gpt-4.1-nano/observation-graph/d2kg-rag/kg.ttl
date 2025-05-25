@@ -1,0 +1,106 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+<http://example.org/environment> a Environment ;
+    hasPart <http://example.org/kitchen> .
+
+<http://example.org/kitchen> a Kitchen ;
+    hasPart <http://example.org/countertop> ;
+    hasPart <http://example.org/diningArea> ;
+    hasPart <http://example.org/compactKitchen> .
+
+<http://example.org/countertop> a Countertop ;
+    locatedIn <http://example.org/kitchen> ;
+    hasPart <http://example.org/stovetop> ;
+    hasPart <http://example.org/foodItems> ;
+    hasPart <http://example.org/sink> .
+
+<http://example.org/stovetop> a Stovetop ;
+    locatedOn <http://example.org/countertop> ;
+    hasPart <http://example.org/pot> .
+
+<http://example.org/pot> a Pot ;
+    locatedOn <http://example.org/stovetop> .
+
+<http://example.org/foodItems> a FoodItemCollection ;
+    hasPart <http://example.org/boxJellO> ;
+    hasPart <http://example.org/boxRiceBubbles> ;
+    hasPart <http://example.org/packageShortbread> ;
+    hasPart <http://example.org/jarJam> ;
+    hasPart <http://example.org/waterBottle> ;
+    hasPart <http://example.org/whitePitcher> .
+
+<http://example.org/boxJellO> a FoodItem ;
+    name "Jell-O" .
+
+<http://example.org/boxRiceBubbles> a FoodItem ;
+    name "rice bubbles" .
+
+<http://example.org/packageShortbread> a FoodItem ;
+    name "shortbread" .
+
+<http://example.org/jarJam> a FoodItem ;
+    name "jam" .
+
+<http://example.org/waterBottle> a FoodItem ;
+    name "water bottle" .
+
+<http://example.org/whitePitcher> a FoodItem ;
+    name "white pitcher" .
+
+<http://example.org/sink> a Sink ;
+    locatedIn <http://example.org/kitchen> ;
+    hasPart <http://example.org/woodenCabinet> .
+
+<http://example.org/woodenCabinet> a Cabinet ;
+    material "wood" ;
+    hasPart <http://example.org/glassDoorCabinet> ;
+    locatedAbove <http://example.org/sink> .
+
+<http://example.org/glassDoorCabinet> a Cabinet ;
+    material "wood with glass door" .
+
+<http://example.org/diningArea> a DiningArea ;
+    adjacentTo <http://example.org/countertop> ;
+    hasPart <http://example.org/woodenTable> ;
+    hasPart <http://example.org/wineGlass> ;
+    hasPart <http://example.org/smallJar> ;
+    hasPart <http://example.org/boxRiceBubblesTable> ;
+    hasPart <http://example.org/boxJellOTable> .
+
+<http://example.org/woodenTable> a Table ;
+    locatedIn <http://example.org/diningArea> .
+
+<http://example.org/wineGlass> a Glass ;
+    on <http://example.org/woodenTable> .
+
+<http://example.org/smallJar> a Jar ;
+    on <http://example.org/woodenTable> .
+
+<http://example.org/boxRiceBubblesTable> a FoodItem ;
+    name "rice bubbles" .
+
+<http://example.org/boxJellOTable> a FoodItem ;
+    name "Jell-O" .
+
+<http://example.org/Wall> a Wall ;
+    hasColor "white" ;
+    locationBehind <http://example.org/woodenTable> .
+
+<http://example.org/DoorFrame> a Frame ;
+    locatedIn <http://example.org/wall> ;
+    position "right side" .
+
+<http://example.org/compactKitchen> a Space ;
+    includes <http://example.org/kitchen> ;
+    includes <http://example.org/diningArea> ;
+    featuresDarkCabinet <http://example.org/darkCabinet> ;
+    featuresWhiteWalls "white" ;
+    featuresWoodenAccents ;
+    featuresParquetFloor .
+
+<http://example.org/darkCabinet> a Cabinet ;
+    material "dark" .

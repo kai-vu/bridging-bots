@@ -1,0 +1,35 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:environment kitchen:sfContains kitchen:dining_area,
+        kitchen:kitchen .
+
+kitchen:countertop kitchen:sfContains kitchen:aluminum_foil,
+        kitchen:box_of_jello,
+        kitchen:box_of_rice_bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:jar_of_jam,
+        kitchen:mug,
+        kitchen:plate .
+
+kitchen:kitchen kitchen:onTopOf kitchen:left ;
+    kitchen:sfContains kitchen:cabinets,
+        kitchen:countertop,
+        kitchen:refrigerator,
+        kitchen:sink,
+        kitchen:stove ;
+    kitchen:sfOverlaps kitchen:dining_area ;
+    kitchen:sfWithin kitchen:room .
+
+kitchen:table kitchen:sfContains kitchen:bottle_of_water,
+        kitchen:box_of_chocolates,
+        kitchen:plate,
+        kitchen:stack_of_cups,
+        kitchen:wine_glass .
+
+kitchen:dining_area kitchen:sfContains kitchen:chairs,
+        kitchen:table ;
+    kitchen:sfWithin kitchen:room .
+
+kitchen:room kitchen:sfContains kitchen:floor,
+        kitchen:walls .
+

@@ -1,0 +1,118 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en ;
+    psr:hasWorkflow psr:Workflow_1 .
+
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8, psr:Action_9, psr:Action_10, psr:Action_11, psr:Action_12 .
+
+psr:Action_1 a dul:Action ;
+    rdfs:label "Pick up the box of 'Chucky'"@en ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_2 .
+
+psr:Action_2 a dul:Action ;
+    rdfs:label "Put down the box of 'Chucky' in the cupboard"@en ;
+    psr:actsOn psr:Object_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_3 .
+
+psr:Action_3 a dul:Action ;
+    rdfs:label "Pick up the jar of orange juice"@en ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_4 .
+
+psr:Action_4 a dul:Action ;
+    rdfs:label "Put down the jar of orange juice in the cupboard"@en ;
+    psr:actsOn psr:Object_2 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_5 .
+
+psr:Action_5 a dul:Action ;
+    rdfs:label "Pick up the jar of 'Marmalade'"@en ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_6 .
+
+psr:Action_6 a dul:Action ;
+    rdfs:label "Put down the jar of 'Marmalade' in the cupboard"@en ;
+    psr:actsOn psr:Object_3 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_7 .
+
+psr:Action_7 a dul:Action ;
+    rdfs:label "Pick up the box of 'Jello'"@en ;
+    psr:actsOn psr:Object_4 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_8 .
+
+psr:Action_8 a dul:Action ;
+    rdfs:label "Put down the box of 'Jello' in the cupboard"@en ;
+    psr:actsOn psr:Object_4 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_9 .
+
+psr:Action_9 a dul:Action ;
+    rdfs:label "Pick up the box of 'Alpen Salt'"@en ;
+    psr:actsOn psr:Object_5 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_10 .
+
+psr:Action_10 a dul:Action ;
+    rdfs:label "Put down the box of 'Alpen Salt' in the cupboard"@en ;
+    psr:actsOn psr:Object_5 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_11 .
+
+psr:Action_11 a dul:Action ;
+    rdfs:label "Pick up the pack of plates"@en ;
+    psr:actsOn psr:Object_6 ;
+    psr:isAffordedBy soma:PickingUp ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:precedes psr:Action_12 .
+
+psr:Action_12 a dul:Action ;
+    rdfs:label "Put down the pack of plates in the cupboard"@en ;
+    psr:actsOn psr:Object_6 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    soma:isPerformedBy dul:Agent_1 .
+
+dul:Agent_1 a dul:Agent .
+
+psr:Object_1 a psr:Object ;
+    rdfs:label "Box of 'Chucky'"@en .
+
+psr:Object_2 a psr:Object ;
+    rdfs:label "Jar of orange juice"@en .
+
+psr:Object_3 a psr:Object ;
+    rdfs:label "Jar of 'Marmalade'"@en .
+
+psr:Object_4 a psr:Object ;
+    rdfs:label "Box of 'Jello'"@en .
+
+psr:Object_5 a psr:Object ;
+    rdfs:label "Box of 'Alpen Salt'"@en .
+
+psr:Object_6 a psr:Object ;
+    rdfs:label "Pack of plates"@en .

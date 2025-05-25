@@ -1,0 +1,104 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+
+psr:Instruction_1 a psr:Instruction ;
+    psr:hasWorkflow psr:Workflow_1 ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+
+psr:Workflow_1 a psr:Workflow ;
+    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8, psr:Action_9, psr:Action_10, psr:Action_11, psr:Action_12 .
+
+psr:Action_1 a dul:Action ;
+    rdfs:label "PickUp"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Jello ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:Action_2 a dul:Action ;
+    rdfs:label "PutDown"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Jello ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action_3 .
+
+psr:Action_3 a dul:Action ;
+    rdfs:label "Open"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_Cabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes psr:Action_4 .
+
+psr:Action_4 a dul:Action ;
+    rdfs:label "PutDown"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Jello ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action_5 .
+
+psr:Action_5 a dul:Action ;
+    rdfs:label "Close"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_Cabinet ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes psr:Action_6 .
+
+psr:Action_6 a dul:Action ;
+    rdfs:label "PickUp"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Bottle ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:Action_7 a dul:Action ;
+    rdfs:label "PutDown"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Bottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action_8 .
+
+psr:Action_8 a dul:Action ;
+    rdfs:label "Open"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_Refrigerator ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes psr:Action_9 .
+
+psr:Action_9 a dul:Action ;
+    rdfs:label "PutDown"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Bottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes psr:Action_10 .
+
+psr:Action_10 a dul:Action ;
+    rdfs:label "Close"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Component_Refrigerator ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes psr:Action_11 .
+
+psr:Action_11 a dul:Action ;
+    rdfs:label "PickUp"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Box ;
+    psr:isAffordedBy soma:PickingUp .
+
+psr:Action_12 a dul:Action ;
+    rdfs:label "PutDown"@en ;
+    soma:isPerformedBy dul:Agent_1 ;
+    psr:actsOn psr:Object_Box ;
+    psr:isAffordedBy soma:PuttingDown .
+
+dul:Agent_1 a dul:Agent .
+
+psr:Object_Jello a psr:Object .
+psr:Object_Bottle a psr:Object .
+psr:Object_Box a psr:Object .
+
+psr:Component_Cabinet a psr:Component .
+psr:Component_Refrigerator a psr:Component .

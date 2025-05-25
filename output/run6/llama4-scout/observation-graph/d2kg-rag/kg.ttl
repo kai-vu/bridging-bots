@@ -1,0 +1,179 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDiningRoom a psr:Environment ;
+  rdfs:label "Kitchen and Dining Room"@en .
+
+ex:Kitchen a psr:Location ;
+  rdfs:label "Kitchen"@en ;
+  geo:sfWithin ex:KitchenAndDiningRoom .
+
+ex:DiningRoom a psr:Location ;
+  rdfs:label "Dining Room"@en ;
+  geo:sfWithin ex:KitchenAndDiningRoom .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  dul:hasLocation ex:Kitchen .
+
+ex:Countertop a psr:Component ;
+  rdfs:label "Tan Marble Countertop"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:Cabinets .
+
+ex:JarOfJam1 a psr:Component ;
+  rdfs:label "Jar of Jam"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:BoxOfJellO a psr:Component ;
+  rdfs:label "Box of Jell-O"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:PackOfAlpenSalt a psr:Component ;
+  rdfs:label "Pack of Alpen Salt"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:BoxOfRiceBubbles a psr:Component ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:BoxOfShortbread a psr:Component ;
+  rdfs:label "Box of Shortbread"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:JarOfJam2 a psr:Component ;
+  rdfs:label "Jar of Jam"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:StackOfPaperPlates a psr:Component ;
+  rdfs:label "Stack of Paper Plates"@en ;
+  dul:hasLocation ex:Countertop .
+
+ex:Sink a psr:Component ;
+  rdfs:label "Sink"@en ;
+  dul:hasLocation ex:Kitchen .
+
+ex:Pot a psr:Component ;
+  rdfs:label "Pot"@en ;
+  dul:hasLocation ex:Sink .
+
+ex:Stovetop a psr:Component ;
+  rdfs:label "Stovetop"@en ;
+  dul:hasLocation ex:Kitchen ;
+  psr:onTopOf ex:Sink .
+
+ex:Window a psr:Component ;
+  rdfs:label "Window"@en ;
+  dul:hasLocation ex:Kitchen .
+
+ex:VentHood a psr:Component ;
+  rdfs:label "Vent Hood"@en ;
+  dul:hasLocation ex:Kitchen .
+
+ex:Refrigerator a psr:Component ;
+  rdfs:label "White Refrigerator"@en ;
+  dul:hasLocation ex:Kitchen .
+
+ex:Table a psr:Component ;
+  rdfs:label "Wooden Table"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:Chair1 a psr:Component ;
+  rdfs:label "White Chair"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:Chair2 a psr:Component ;
+  rdfs:label "White Chair"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:Chair3 a psr:Component ;
+  rdfs:label "White Chair"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:Chair4 a psr:Component ;
+  rdfs:label "White Chair"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:BottlesOfWater1 a psr:Component ;
+  rdfs:label "Bottle of Water"@en ;
+  dul:hasLocation ex:Table .
+
+ex:BottlesOfWater2 a psr:Component ;
+  rdfs:label "Bottle of Water"@en ;
+  dul:hasLocation ex:Table .
+
+ex:BowlOfFruit a psr:Component ;
+  rdfs:label "Bowl of Fruit"@en ;
+  dul:hasLocation ex:Table .
+
+ex:Cookbook a psr:Component ;
+  rdfs:label "Cookbook"@en ;
+  dul:hasLocation ex:Table .
+
+ex:LightFixture a psr:Component ;
+  rdfs:label "Large Light Fixture"@en ;
+  dul:hasLocation ex:DiningRoom .
+
+ex:WoodParquetFloor a psr:Component ;
+  rdfs:label "Dark Wood Parquet Floor"@en ;
+  dul:hasLocation ex:KitchenAndDiningRoom .
+
+ex:WhiteWalls a psr:Component ;
+  rdfs:label "White Walls"@en ;
+  dul:hasLocation ex:KitchenAndDiningRoom .
+
+ex:KitchenAndDiningRoom dul:hasComponent ex:Cabinets .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Countertop .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Sink .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Stovetop .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Window .
+ex:KitchenAndDiningRoom dul:hasComponent ex:VentHood .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Refrigerator .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Table .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Chair1 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Chair2 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Chair3 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Chair4 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:BottlesOfWater1 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:BottlesOfWater2 .
+ex:KitchenAndDiningRoom dul:hasComponent ex:BowlOfFruit .
+ex:KitchenAndDiningRoom dul:hasComponent ex:Cookbook .
+ex:KitchenAndDiningRoom dul:hasComponent ex:LightFixture .
+ex:KitchenAndDiningRoom dul:hasComponent ex:WoodParquetFloor .
+ex:KitchenAndDiningRoom dul:hasComponent ex:WhiteWalls .
+
+ex:Cabinets psr:hasAffordance soma:Opening .
+ex:Countertop psr:hasAffordance soma:Grasping .
+ex:Sink psr:hasAffordance soma:Opening .
+ex:Stovetop psr:hasAffordance soma:Pushing .
+ex:Refrigerator psr:hasAffordance soma:Opening .
+
+ex:Table dul:hasLocation ex:DiningRoom .
+ex:Chair1 dul:hasLocation ex:DiningRoom .
+ex:Chair2 dul:hasLocation ex:DiningRoom .
+ex:Chair3 dul:hasLocation ex:DiningRoom .
+ex:Chair4 dul:hasLocation ex:DiningRoom .
+
+ex:Kitchen geo:sfContains ex:Cabinets .
+ex:Kitchen geo:sfContains ex:Countertop .
+ex:Kitchen geo:sfContains ex:Sink .
+ex:Kitchen geo:sfContains ex:Stovetop .
+ex:Kitchen geo:sfContains ex:Window .
+ex:Kitchen geo:sfContains ex:VentHood .
+ex:Kitchen geo:sfContains ex:Refrigerator .
+
+ex:DiningRoom geo:sfContains ex:Table .
+ex:DiningRoom geo:sfContains ex:Chair1 .
+ex:DiningRoom geo:sfContains ex:Chair2 .
+ex:DiningRoom geo:sfContains ex:Chair3 .
+ex:DiningRoom geo:sfContains ex:Chair4 .
+ex:DiningRoom geo:sfContains ex:BottlesOfWater1 .
+ex:DiningRoom geo:sfContains ex:BottlesOfWater2 .
+ex:DiningRoom geo:sfContains ex:BowlOfFruit .
+ex:DiningRoom geo:sfContains ex:Cookbook .
+ex:DiningRoom geo:sfContains ex:LightFixture .

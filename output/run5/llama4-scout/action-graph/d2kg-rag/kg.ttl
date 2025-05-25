@@ -1,0 +1,77 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItemsAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+  rdfs:label "Identify Misplaced Items"@en ;
+  psr:actsOn ex:KitchenEnvironment ;
+  psr:isAffordedBy soma:Grasping ;
+  psr:followedBy ex:PickUpItemAction .
+
+ex:KitchenEnvironment a psr:Component ;
+  rdfs:label "Kitchen Environment"@en .
+
+ex:PickUpItemAction a dul:Action ;
+  rdfs:label "Pick Up Item"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:followedBy ex:MoveItemToStorageLocationAction .
+
+ex:MisplacedItem a psr:Object ;
+  rdfs:label "Misplaced Item"@en .
+
+ex:MoveItemToStorageLocationAction a dul:Action ;
+  rdfs:label "Move Item to Storage Location"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:Pushing ;
+  psr:followedBy ex:PutDownItemAction .
+
+ex:StorageLocation a psr:Component ;
+  rdfs:label "Storage Location"@en .
+
+ex:PutDownItemAction a dul:Action ;
+  rdfs:label "Put Down Item"@en ;
+  psr:actsOn ex:StorageLocation ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:StandardStorageLocation a psr:Component ;
+  rdfs:label "Standard Storage Location"@en .
+
+ex:IdentifyTypeAndFunctionAction a dul:Action ;
+  rdfs:label "Identify Type and Function"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:Grasping .
+
+ex:PrioritizeActionsAction a dul:Action ;
+  rdfs:label "Prioritize Actions"@en ;
+  psr:actsOn ex:Workflow ;
+  psr:isAffordedBy soma:Opening .
+
+ex:Workflow a psr:Workflow ;
+  rdfs:label "Workflow"@en .
+
+ex:RestoreKitchenTask psr:hasAction ex:IdentifyTypeAndFunctionAction ;
+ex:RestoreKitchenTask psr:hasAction ex:PrioritizeActionsAction .
+
+ex:MisplacedItem psr:follows ex:IdentifyMisplacedItemsAction .
+
+ex:PickUpItemAction psr:precedes ex:MoveItemToStorageLocationAction .
+
+ex:MoveItemToStorageLocationAction psr:precedes ex:PutDownItemAction .
+
+ex:PutDownItemAction psr:follows ex:MoveItemToStorageLocationAction .
+
+ex:StandardStorageLocation psr:hasAction ex:PutDownItemAction .
+
+ex:KitchenEnvironment psr:actsOn ex:IdentifyMisplacedItemsAction .
+
+ex:MisplacedItem psr:isAffordedBy soma:PickingUp .
+
+ex:StorageLocation psr:actsOn ex:MoveItemToStorageLocationAction .

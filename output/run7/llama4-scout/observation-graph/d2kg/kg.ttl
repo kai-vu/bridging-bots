@@ -1,0 +1,126 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenDiningArea a psr:Environment ;
+  rdfs:label "Kitchen and Dining Area"@en .
+
+ex:Kitchen a psr:Component, psr:Environment ;
+  rdfs:label "Kitchen"@en ;
+  dul:hasComponent ex:Cabinets, ex:Countertop, ex:Sink, ex:Stove, ex:RangeHood, ex:Window, ex:Cup, ex:Jar, ex:CerealBox, ex:ChuckyBox, ex:JelloBox, ex:Plates .
+
+ex:DiningArea a psr:Component, psr:Environment ;
+  rdfs:label "Dining Area"@en ;
+  dul:hasComponent ex:Table, ex:Chairs, ex:WaterBottle, ex:Plate, ex:Mug, ex:Spoon, ex:Book, ex:FruitBowl .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  psr:hasAffordance soma:Opening .
+
+ex:Countertop a psr:Component ;
+  rdfs:label "Countertop"@en ;
+  dul:hasComponent ex:Sink, ex:Stove, ex:RangeHood .
+
+ex:Sink a psr:Component ;
+  rdfs:label "Sink"@en .
+
+ex:Stove a psr:Component ;
+  rdfs:label "Stove"@en ;
+  dul:hasComponent ex:Pot .
+
+ex:Pot a psr:Component ;
+  rdfs:label "Pot"@en .
+
+ex:RangeHood a psr:Component ;
+  rdfs:label "Range Hood"@en .
+
+ex:Window a psr:Component ;
+  rdfs:label "Window"@en .
+
+ex:Cup a psr:Object ;
+  rdfs:label "Yellow Cup"@en ;
+  rdfs:comment "A yellow cup."@en .
+
+ex:Jar a psr:Object ;
+  rdfs:label "Mrs. Murrary's Strawberry Jam"@en ;
+  rdfs:comment "A red-and-white jar labeled 'Mrs. Murrary's Strawberry Jam'."@en .
+
+ex:CerealBox a psr:Object ;
+  rdfs:label "Rice Bubbles Cereal"@en ;
+  rdfs:comment "A blue-and-white box of Rice Bubbles cereal."@en .
+
+ex:ChuckyBox a psr:Object ;
+  rdfs:label "CHUCKY"@en ;
+  rdfs:comment "A red box labeled 'CHUCKY' with a picture of a doll on it."@en .
+
+ex:JelloBox a psr:Object ;
+  rdfs:label "Jello"@en ;
+  rdfs:comment "A red box of Jello."@en .
+
+ex:Plates a psr:Object ;
+  rdfs:label "White Plates"@en ;
+  rdfs:comment "A stack of white plates."@en .
+
+ex:Table a psr:Furniture ;
+  rdfs:label "Brown Wooden Table"@en .
+
+ex:Chairs a psr:Furniture ;
+  rdfs:label "Four White Chairs"@en .
+
+ex:WaterBottle a psr:Object ;
+  rdfs:label "Evian Water Bottle"@en .
+
+ex:Plate a psr:Object ;
+  rdfs:label "Plate"@en .
+
+ex:Mug a psr:Object ;
+  rdfs:label "Mug"@en .
+
+ex:Spoon a psr:Object ;
+  rdfs:label "Spoon"@en .
+
+ex:Book a psr:Object ;
+  rdfs:label "Chocolate Cake Murder"@en .
+
+ex:FruitBowl a psr:Object ;
+  rdfs:label "Bowl of Fruit"@en .
+
+ex:Refrigerator a psr:Appliance ;
+  rdfs:label "White Refrigerator"@en .
+
+ex:KitchenDiningArea dul:hasComponent ex:Kitchen, ex:DiningArea .
+
+ex:Kitchen dul:hasComponent ex:Cabinets, ex:Countertop, ex:Window, ex:Refrigerator .
+
+ex:Countertop dul:hasComponent ex:Sink, ex:Stove, ex:Pot, ex:RangeHood, ex:Cup, ex:Jar, ex:CerealBox, ex:ChuckyBox, ex:JelloBox, ex:Plates .
+
+ex:DiningArea dul:hasComponent ex:Table, ex:Chairs, ex:WaterBottle, ex:Plate, ex:Mug, ex:Spoon, ex:Book, ex:FruitBowl .
+
+ex:Cabinets psr:hasAffordance soma:Opening .
+
+ex:Window geo:sfWithin ex:Kitchen .
+
+ex:Refrigerator psr:CurrentLocation ex:BetweenKitchenDining .
+
+ex:Kitchen psr:onTopOf ex:KitchenFloor .
+
+ex:DiningArea psr:onTopOf ex:DiningFloor .
+
+ex:KitchenFloor a psr:Location ;
+  rdfs:label "Kitchen Floor"@en .
+
+ex:DiningFloor a psr:Location ;
+  rdfs:label "Dining Floor"@en .
+
+ex:BetweenKitchenDining a psr:Location ;
+  rdfs:label "Between Kitchen and Dining Areas"@en .
+
+ex:Kitchen geo:sfWithin ex:KitchenDiningArea .
+
+ex:DiningArea geo:sfWithin ex:KitchenDiningArea .
+
+ex:Refrigerator geo:sfWithin ex:KitchenDiningArea .

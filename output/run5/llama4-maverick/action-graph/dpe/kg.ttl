@@ -1,0 +1,21 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Workflow kitchen:hasAction kitchen:Instruction_1 .
+
+kitchen:Instruction_1 kitchen:actsOn kitchen:countertop ;
+    kitchen:precedes kitchen:Instruction_3 .
+
+kitchen:Instruction_3 kitchen:hasAction kitchen:PickingUp ;
+    kitchen:precedes kitchen:Instruction_4 .
+
+kitchen:Instruction_4 kitchen:hasAction kitchen:Storing .
+
+kitchen:PickingUp kitchen:actsOn kitchen:stack_of_white_plates .
+
+kitchen:Storing kitchen:actsOn kitchen:stack_of_white_plates .
+
+kitchen:countertop kitchen:hasObject kitchen:stack_of_white_plates .
+
+kitchen:stack_of_white_plates kitchen:isLocatedIn kitchen:countertop ;
+    kitchen:isStoredIn kitchen:black_and_beige_kitchen_cabinets .
+

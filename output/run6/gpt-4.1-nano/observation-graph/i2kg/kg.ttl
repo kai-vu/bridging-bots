@@ -1,0 +1,129 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+
+@prefix : <http://example.org/data/> .
+
+:Kitchen a psr:Environment .
+
+:Countertop a psr:Object ;
+    dul:hasLocation :CountertopLocation .
+
+:Refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation :RefrigeratorLocation .
+
+:Table a psr:Furniture ;
+    rdfs:label "Dining Table"@en ;
+    dul:hasLocation :TableLocation .
+
+:Door a psr:Object ;
+    rdfs:label "Door"@en ;
+    dul:hasLocation :DoorLocation .
+
+:Plate a psr:Object ;
+    rdfs:label "Plate"@en ;
+    dul:hasLocation :PlateLocation .
+
+:Box of Rice Bubbles a psr:Object ;
+    rdfs:label "Rice Bubbles"@en ;
+    dul:hasLocation :CounterLocation .
+
+:Box of Jello a psr:Object ;
+    rdfs:label "Jello"@en ;
+    dul:hasLocation :CounterLocation .
+
+:Box of Shortbread a psr:Object ;
+    rdfs:label "Shortbread"@en ;
+    dul:hasLocation :CounterLocation .
+
+:WaterBottle a psr:Object ;
+    rdfs:label "Water Bottle"@en ;
+    dul:hasLocation :CounterLocation .
+
+:Glass a psr:Object ;
+    rdfs:label "Glass"@en ;
+    dul:hasLocation :TableLocation .
+
+:Pat a psr:Object ;
+    rdfs:label "Pat"@en ;
+    dul:hasLocation :CounterLocation .
+
+:Pan a psr:Object ;
+    rdfs:label "Pan"@en ;
+    dul:hasLocation :StoveLocation .
+
+:Oven a psr:Appliance ;
+    rdfs:label "Oven"@en ;
+    dul:hasLocation :StoveLocation .
+
+:Cooktop a psr:Appliance ;
+    rdfs:label "Cooktop"@en ;
+    dul:hasLocation :StoveLocation .
+
+:Stove a psr:Component ;
+    rdfs:label "Stove"@en ;
+    dul:hasComponent :Oven, :Cooktop .
+
+:CounterLocation a psr:Location ;
+    geo:sfContains :Countertop, :Box_of_Rice_Bubbles, :Box_of_Jello, :Box_of_Shortbread, :Water_Bottle, :Pat, :Pan, :Oven, :Cooktop .
+
+:RefrigeratorLocation a psr:Location ;
+    geo:sfContains :Refrigerator .
+
+:TableLocation a psr:Location ;
+    geo:sfContains :Table, :Glass .
+
+:DoorLocation a psr:Location ;
+    geo:sfContains :Door .
+
+:CountertopLocation a psr:Location ;
+    geo:sfContains :Countertop .
+
+:PlateLocation a psr:Location ;
+    geo:sfContains :Plate .
+
+:StoveLocation a psr:Location ;
+    geo:sfContains :Stove .
+
+:Box_of_Rice_Bubbles a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Box_of_Jello a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Box_of_Shortbread a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Water_Bottle a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Pat a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Pan a psr:Object ;
+    dul:hasLocation :Countertop .
+
+:Oven a psr:Appliance ;
+    dul:hasLocation :Stove .
+
+:Cooktop a psr:Appliance ;
+    dul:hasLocation :Stove .
+
+:Refrigerator a psr:Appliance ;
+    dul:hasLocation :Refrigerator .
+
+:Table a psr:Furniture ;
+    dul:hasLocation :Table .
+
+:Door a psr:Object ;
+    dul:hasLocation :Door .
+
+:Glass a psr:Object ;
+    dul:hasLocation :Table .
+
+:Past a psr:Object ;
+    dul:hasLocation :Countertop .

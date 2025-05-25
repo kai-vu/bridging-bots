@@ -1,0 +1,40 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:floor kitchen:isMadeOf kitchen:dark_wood .
+
+kitchen:range_hood kitchen:isAbove kitchen:stove .
+
+kitchen:round_light_fixture kitchen:isOn kitchen:ceiling .
+
+kitchen:walls kitchen:hasColor kitchen:white .
+
+kitchen:bottle kitchen:onTopOf kitchen:dining_table .
+
+kitchen:box kitchen:onTopOf kitchen:dining_table .
+
+kitchen:door kitchen:isOn kitchen:wall .
+
+kitchen:kitchen kitchen:hasComponent kitchen:beige_marble_countertop,
+        kitchen:dark_gray_cabinets,
+        kitchen:refrigerator .
+
+kitchen:refrigerator kitchen:isToTheRightOf kitchen:dark_gray_cabinets ;
+    kitchen:sfWithin kitchen:kitchen .
+
+kitchen:sink kitchen:onTopOf kitchen:countertop ;
+    kitchen:sfNear kitchen:wall .
+
+kitchen:stack_of_plates kitchen:onTopOf kitchen:dining_table .
+
+kitchen:countertop kitchen:hasComponent kitchen:sink,
+        kitchen:stove .
+
+kitchen:stove kitchen:onTopOf kitchen:countertop ;
+    kitchen:sfNear kitchen:wall .
+
+kitchen:dining_table kitchen:hasComponent kitchen:bottle,
+        kitchen:box,
+        kitchen:four_white_chairs,
+        kitchen:stack_of_plates ;
+    kitchen:sfNear kitchen:door .
+

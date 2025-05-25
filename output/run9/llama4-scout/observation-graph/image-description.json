@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-df9d8073-7ece-4c8b-b568-4a560f690b8c",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment contains a kitchen and a dining area. \nIn the kitchen, there are black cabinets with a tan marble countertop. On the countertop, there are various items: a yellow mug, a box of shortbread, a jar of jam, a box of rice bubbles, a box of jello, aluminum foil, and a plate. The kitchen also features a sink, a stove, and a white refrigerator. \n\nThe dining area has a wooden table with four white chairs. On the table, there is a bottle of water, a plate, a wine glass, a box of chocolates, and a plate with a stack of cups.\n\nThe room has white walls and a brown wooden floor. The kitchen and dining area are separated by a wall with a door. The kitchen appears to be located to the left of the dining area.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748101367,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 170,
+        "prompt_tokens": 12500,
+        "total_tokens": 12670,
+        "completion_time": 0.341954924,
+        "prompt_time": 0.326728417,
+        "queue_time": 2.062173666,
+        "total_time": 0.668683341
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jw1fbzr8enrvmnq64h5gb9g4"
+    }
+}

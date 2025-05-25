@@ -1,0 +1,133 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en ;
+    dul:hasComponent ex:sink, ex:coffeeMaker, ex:cabinets, ex:refrigerator, ex:table, ex:vase, ex:oven, ex:box1, ex:box2, ex:chair, ex:flowers, ex:items .
+
+ex:sink a psr:Component ;
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:sinkLocation .
+
+ex:sinkLocation a soma:Location ;
+    rdfs:label "Sink Location"@en ;
+    geo:sfWithin ex:kitchen .
+
+ex:coffeeMaker a psr:Component ;
+    rdfs:label "Coffee Maker"@en ;
+    dul:hasLocation ex:coffeeMakerLocation .
+
+ex:coffeeMakerLocation a soma:Location ;
+    rdfs:label "Coffee Maker Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:countertop .
+
+ex:cabinets a psr:Component ;
+    rdfs:label "Cabinets"@en ;
+    dul:hasLocation ex:cabinetsLocation .
+
+ex:cabinetsLocation a soma:Location ;
+    rdfs:label "Cabinets Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:sink .
+
+ex:refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation ex:refrigeratorLocation .
+
+ex:refrigeratorLocation a soma:Location ;
+    rdfs:label "Refrigerator Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:box1 .
+
+ex:box1 a psr:Component ;
+    rdfs:label "Box 1"@en ;
+    dul:hasLocation ex:box1Location .
+
+ex:box1Location a soma:Location ;
+    rdfs:label "Box 1 Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:refrigerator .
+
+ex:table a psr:Component ;
+    rdfs:label "Table"@en ;
+    dul:hasLocation ex:tableLocation .
+
+ex:tableLocation a soma:Location ;
+    rdfs:label "Table Location"@en ;
+    geo:sfWithin ex:kitchen .
+
+ex:vase a psr:Component ;
+    rdfs:label "Vase"@en ;
+    dul:hasLocation ex:vaseLocation .
+
+ex:vaseLocation a soma:Location ;
+    rdfs:label "Vase Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:table .
+
+ex:oven a psr:Component ;
+    rdfs:label "Oven"@en ;
+    dul:hasLocation ex:ovenLocation .
+
+ex:ovenLocation a soma:Location ;
+    rdfs:label "Oven Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:box2 .
+
+ex:box2 a psr:Component ;
+    rdfs:label "Box 2"@en ;
+    dul:hasLocation ex:box2Location .
+
+ex:box2Location a soma:Location ;
+    rdfs:label "Box 2 Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:oven .
+
+ex:chair a psr:Component ;
+    rdfs:label "Chair"@en ;
+    dul:hasLocation ex:chairLocation .
+
+ex:chairLocation a soma:Location ;
+    rdfs:label "Chair Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:floor .
+
+ex:flowers a psr:Component ;
+    rdfs:label "Flowers"@en ;
+    dul:hasLocation ex:flowersLocation .
+
+ex:flowersLocation a soma:Location ;
+    rdfs:label "Flowers Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:vase .
+
+ex:items a psr:Component ;
+    rdfs:label "Items"@en ;
+    dul:hasLocation ex:itemsLocation .
+
+ex:itemsLocation a soma:Location ;
+    rdfs:label "Items Location"@en ;
+    geo:sfWithin ex:kitchen ;
+    psr:onTopOf ex:countertop .
+
+ex:countertop a psr:Component ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation ex:countertopLocation .
+
+ex:countertopLocation a soma:Location ;
+    rdfs:label "Countertop Location"@en ;
+    geo:sfWithin ex:kitchen .
+
+ex:floor a psr:Component ;
+    rdfs:label "Floor"@en ;
+    dul:hasLocation ex:floorLocation .
+
+ex:floorLocation a soma:Location ;
+    rdfs:label "Floor Location"@en ;
+    geo:sfWithin ex:kitchen .

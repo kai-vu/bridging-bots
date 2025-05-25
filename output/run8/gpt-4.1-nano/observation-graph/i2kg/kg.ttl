@@ -1,0 +1,100 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <http://www.psr-action#> .
+
+@prefix : <http://example.org/data/> .
+
+# Environment
+:environment1 a psr:Environment .
+
+# Current locations of components
+:fridgeCurrentLoc a psr:CurrentLocation ;
+    rdfs:label "Current Location of Fridge"@en .
+
+:tableCurrentLoc a psr:CurrentLocation ;
+    rdfs:label "Current Location of Table"@en .
+
+:table2CurrentLoc a psr:CurrentLocation ;
+    rdfs:label "Current Location of Table2"@en .
+
+# Standard locations
+:fridgeStandardLoc a psr:StandardLocation ;
+    rdfs:label "Standard Location for Fridge"@en .
+
+:tableStandardLoc a psr:StandardLocation ;
+    rdfs:label "Standard Location for Table"@en .
+
+:table2StandardLoc a psr:StandardLocation ;
+    rdfs:label "Standard Location for Table2"@en .
+
+# Components in environment
+:fridge a psr:Object ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation :fridgeCurrentLoc, :fridgeStandardLoc ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+:table a psr:Furniture ;
+    rdfs:label "Table"@en ;
+    dul:hasLocation :tableCurrentLoc, :tableStandardLoc ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+
+:table2 a psr:Furniture ;
+    rdfs:label "Table2"@en ;
+    dul:hasLocation :table2CurrentLoc, :table2StandardLoc ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+
+:box a psr:Object ;
+    rdfs:label "Box"@en ;
+    dul:hasLocation :tableCurrentLoc ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
+
+# Relations among locations and components
+:location1 a psr:Location ;
+    rdfs:label "Location1"@en ;
+    geo:sfContains :fridge, :table, :table2 ;
+    geo:sfWithin :environment1 .
+
+:location2 a psr:Location ;
+    rdfs:label "Location2"@en ;
+    geo:sfContains :box ;
+    geo:sfWithin :location1 .
+
+# Accessories and objects
+:apple a psr:Object ;
+    rdfs:label "Apple"@en ;
+    dul:hasLocation :table .
+
+:bowl a psr:Object ;
+    rdfs:label "Bowl"@en ;
+    dul:hasLocation :table .
+
+:plate a psr:Object ;
+    rdfs:label "Plate"@en ;
+    dul:hasLocation :table .
+
+:jello a psr:Object ;
+    rdfs:label "Jello"@en ;
+    dul:hasLocation :table .
+
+# Appliances
+:refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation :environment1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+# Objets sur la table
+:boxOnTable a psr:Object ;
+    rdfs:label "Box on Table"@en ;
+    dul:hasLocation :table .
+
+# Relations
+:table2OnTable a psr:Object ;
+    rdfs:label "Table2 on Table"@en ;
+    geo:sfOverlaps :table, :table2 .
+
+# Summary of the environment
+:summary a dul:Entity ;
+    rdfs:comment "The environment includes two tables with objects such as food and appliances, and a refrigerator. Components have current and standard locations, and affordances."@en .

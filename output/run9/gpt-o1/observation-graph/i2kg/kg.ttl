@@ -1,0 +1,86 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Fridge,
+                     ex:KitchenCounter,
+                     ex:DiningTable,
+                     ex:DiningChair1,
+                     ex:DiningChair2,
+                     ex:DiningChair3,
+                     ex:DiningChair4 .
+
+ex:Fridge a psr:Appliance ;
+    psr:hasAffordance soma:Opening,
+                       soma:Closing .
+
+ex:KitchenCounter a psr:Furniture .
+
+ex:DiningTable a psr:Furniture .
+
+ex:DiningChair1 a psr:Furniture .
+ex:DiningChair2 a psr:Furniture .
+ex:DiningChair3 a psr:Furniture .
+ex:DiningChair4 a psr:Furniture .
+
+ex:KitchenCounterLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:KitchenCounter .
+
+ex:DiningTableLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:DiningTable .
+
+ex:JamJar a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:JelloBox a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:SaltContainer a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:PlateStack a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Holding .
+
+ex:ChuckyCerealBox a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:RiceBubblesBox a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:Mug a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Holding .
+
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:KitchenCounterLocation ;
+    psr:hasAffordance soma:Holding .
+
+ex:BottledWater a psr:Object ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:FruitBowl a psr:Object ;
+    dul:hasLocation ex:DiningTableLocation .
+
+ex:SnackBox a psr:Object ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Opening .
+
+ex:Pitcher a psr:Object ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Holding .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:DiningTableLocation ;
+    psr:hasAffordance soma:Holding .

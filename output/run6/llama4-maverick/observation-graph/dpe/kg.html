@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "kitchen", "label": "kitchen", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "refrigerator", "label": "refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dark gray cabinets", "label": "dark gray cabinets", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "beige marble countertop", "label": "beige marble countertop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dining table", "label": "dining table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "box", "label": "box", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "stack of plates", "label": "stack of plates", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "door", "label": "door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bottle", "label": "bottle", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "four white chairs", "label": "four white chairs", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "countertop", "label": "countertop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "sink", "label": "sink", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "stove", "label": "stove", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "wall", "label": "wall", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "range hood", "label": "range hood", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "floor", "label": "floor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "dark wood", "label": "dark wood", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "walls", "label": "walls", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "white", "label": "white", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "round light fixture", "label": "round light fixture", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "ceiling", "label": "ceiling", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "ea86ecab-a142-44b8-ad2c-0a9c2ccb785f", "label": "ea86ecab-a142-44b8-ad2c-0a9c2ccb785f", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "kitchen", "label": "hasComponent", "to": "refrigerator", "width": 1}, {"arrows": "to", "from": "kitchen", "label": "hasComponent", "to": "dark gray cabinets", "width": 1}, {"arrows": "to", "from": "kitchen", "label": "hasComponent", "to": "beige marble countertop", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "sfWithin", "to": "kitchen", "width": 1}, {"arrows": "to", "from": "refrigerator", "label": "isToTheRightOf", "to": "dark gray cabinets", "width": 1}, {"arrows": "to", "from": "dining table", "label": "hasComponent", "to": "box", "width": 1}, {"arrows": "to", "from": "dining table", "label": "hasComponent", "to": "stack of plates", "width": 1}, {"arrows": "to", "from": "dining table", "label": "sfNear", "to": "door", "width": 1}, {"arrows": "to", "from": "dining table", "label": "hasComponent", "to": "bottle", "width": 1}, {"arrows": "to", "from": "dining table", "label": "hasComponent", "to": "four white chairs", "width": 1}, {"arrows": "to", "from": "bottle", "label": "onTopOf", "to": "dining table", "width": 1}, {"arrows": "to", "from": "stack of plates", "label": "onTopOf", "to": "dining table", "width": 1}, {"arrows": "to", "from": "box", "label": "onTopOf", "to": "dining table", "width": 1}, {"arrows": "to", "from": "countertop", "label": "hasComponent", "to": "sink", "width": 1}, {"arrows": "to", "from": "countertop", "label": "hasComponent", "to": "stove", "width": 1}, {"arrows": "to", "from": "stove", "label": "onTopOf", "to": "countertop", "width": 1}, {"arrows": "to", "from": "stove", "label": "sfNear", "to": "wall", "width": 1}, {"arrows": "to", "from": "sink", "label": "onTopOf", "to": "countertop", "width": 1}, {"arrows": "to", "from": "sink", "label": "sfNear", "to": "wall", "width": 1}, {"arrows": "to", "from": "door", "label": "isOn", "to": "wall", "width": 1}, {"arrows": "to", "from": "range hood", "label": "isAbove", "to": "stove", "width": 1}, {"arrows": "to", "from": "floor", "label": "isMadeOf", "to": "dark wood", "width": 1}, {"arrows": "to", "from": "walls", "label": "hasColor", "to": "white", "width": 1}, {"arrows": "to", "from": "round light fixture", "label": "isOn", "to": "ceiling", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

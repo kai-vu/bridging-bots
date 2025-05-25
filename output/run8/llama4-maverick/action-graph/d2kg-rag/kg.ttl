@@ -1,0 +1,125 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction ex:IdentifyMisplacedItemsAction ;
+    psr:hasAction ex:ReturnItemsToStorageLocationsAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:MisplacedItems ;
+    psr:follows ex:None ;
+    psr:precedes ex:ReturnItemsToStorageLocationsAction .
+
+ex:ReturnItemsToStorageLocationsAction a dul:Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:MisplacedItems ;
+    psr:follows ex:IdentifyMisplacedItemsAction .
+
+ex:PickUpBottleAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Bottle ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownBottleAction .
+
+ex:PutDownBottleAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Bottle ;
+    psr:follows ex:PickUpBottleAction .
+
+ex:PickUpPitcherAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Pitcher ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownPitcherAction .
+
+ex:PutDownPitcherAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Pitcher ;
+    psr:follows ex:PickUpPitcherAction .
+
+ex:PickUpWineGlassAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:WineGlass ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownWineGlassAction .
+
+ex:PutDownWineGlassAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:WineGlass ;
+    psr:follows ex:PickUpWineGlassAction .
+
+ex:PickUpPlateAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Plate ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownPlateAction .
+
+ex:PutDownPlateAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Plate ;
+    psr:follows ex:PickUpPlateAction .
+
+ex:PickUpCrackersAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Crackers ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownCrackersAction .
+
+ex:PutDownCrackersAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Crackers ;
+    psr:follows ex:PickUpCrackersAction .
+
+ex:PickUpPotAction a soma:PickingUp ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Pot ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutDownPotAction .
+
+ex:PutDownPotAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Pot ;
+    psr:follows ex:PickUpPotAction .
+
+ex:Bottle a psr:Object ;
+    rdfs:label "Bottle"@en .
+
+ex:Pitcher a psr:Object ;
+    rdfs:label "Pitcher"@en .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Wine Glass"@en .
+
+ex:Plate a psr:Object ;
+    rdfs:label "Plate"@en .
+
+ex:Crackers a psr:Object ;
+    rdfs:label "Crackers"@en .
+
+ex:Pot a psr:Object ;
+    rdfs:label "Pot"@en .
+
+ex:RobotAgent a dul:Agent ;
+    rdfs:label "Robot Agent"@en .
+
+ex:MisplacedItems a psr:Component ;
+    rdfs:label "Misplaced Items"@en .
+
+ex:None a dul:Action ;
+    rdfs:label "None"@en .
+
+ex:Kitchen a psr:Component ;
+    rdfs:label "Kitchen"@en .
+
+ex:StandardStorageLocations a psr:Component ;
+    rdfs:label "Standard Storage Locations"@en .

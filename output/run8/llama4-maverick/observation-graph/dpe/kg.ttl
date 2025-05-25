@@ -1,0 +1,22 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:counter kitchen:hasObject kitchen:sink .
+
+kitchen:door kitchen:hasComponent kitchen:silver_handle .
+
+kitchen:kitchen kitchen:hasComponent kitchen:beige_marble_countertop,
+        kitchen:black_cabinets,
+        kitchen:white_refrigerator,
+        kitchen:wooden_table ;
+    kitchen:hasLocation kitchen:dining_area .
+
+kitchen:stove kitchen:hasAffordance kitchen:cooking ;
+    kitchen:hasObject kitchen:pot .
+
+kitchen:pitcher kitchen:holds kitchen:bottle .
+
+kitchen:white_refrigerator kitchen:beside kitchen:black_cabinets .
+
+kitchen:wooden_table kitchen:hasObject kitchen:bottle,
+        kitchen:pitcher .
+

@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BalVySO6CDqZAP2wTKa2N5fck3Ux2",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psr-action#> .\n\n@prefix : <http://example.org/data/> .\n\n# Environment\n:Environment1 a psr:Environment ;\n    rdfs:label \"Kitchen Environment\"@en .\n\n# Components\n:Counter a psr:Furniture ;\n    rdfs:label \"Kitchen Counter\"@en ;\n    dul:hasLocation :CounterLocation .\n\n:Refrigerator a psr:Appliance ;\n    rdfs:label \"Refrigerator\"@en ;\n    dul:hasLocation :RefrigeratorLocation .\n\n:Table a psr:Furniture ;\n    rdfs:label \"Dining Table\"@en ;\n    dul:hasLocation :TableLocation .\n\n:Chair1 a psr:Furniture ;\n    rdfs:label \"Chair 1\"@en ;\n    dul:hasLocation :Chair1Location .\n\n:Chair2 a psr:Furniture ;\n    rdfs:label \"Chair 2\"@en ;\n    dul:hasLocation :Chair2Location .\n\n:ObjectsOnCounter a psr:Object ;\n    rdfs:label \"Objects on Counter\"@en .\n\n# Locations\n:CounterLocation a soma:Location ;\n    geo:sfContains :ObjectA, :ObjectB .\n\n:RefrigeratorLocation a soma:Location .\n\n:TableLocation a soma:Location ;\n    geo:sfContains :Plate, :Cup .\n\n:Chair1Location a soma:Location ;\n    geo:sfContains :Chair1 .\n\n:Chair2Location a soma:Location ;\n    geo:sfContains :Chair2 .\n\n# Objects\n:ObjectA a psr:Object ;\n    rdfs:label \"Jelly\"@en ;\n    dul:hasLocation :ObjectsOnCounter ;\n    psr:hasAffordance :UsingObject .\n\n:ObjectB a psr:Object ;\n    rdfs:label \"Box of Shortbread\"@en ;\n    dul:hasLocation :ObjectsOnCounter ;\n    psr:hasAffordance :UsingObject .\n\n:Plate a psr:Object ;\n    rdfs:label \"Plate\"@en ;\n    dul:hasLocation :ObjectsOnCounter .\n\n:Cup a psr:Object ;\n    rdfs:label \"Cup\"@en ;\n    dul:hasLocation :ObjectsOnCounter .\n\n:Chair1 a psr:Furniture ;\n    rdfs:label \"Chair\"@en .\n\n:Chair2 a psr:Furniture ;\n    rdfs:label \"Chair\"@en .\n\n# Specific Object with affordances\n:ObjectWithAffordance a psr:Object ;\n    rdfs:label \"Object with affordances\"@en ;\n    dul:hasLocation :ObjectsOnCounter ;\n    psr:hasAffordance :PickingUp, :PuttingDown, :Holding .\n\n# Affordances\n:Pushing a psr:Affordance ;\n    rdfs:label \"Pushing\"@en .\n\n:Pulling a psr:Affordance ;\n    rdfs:label \"Pulling\"@en .\n\n:PickingUp a psr:Affordance ;\n    rdfs:label \"Picking Up\"@en .\n\n:PuttingDown a psr:Affordance ;\n    rdfs:label \"Putting Down\"@en .\n\n:Holding a psr:Affordance ;\n    rdfs:label \"Holding\"@en .\n\n# Relationships\n:Refrigerator dul:hasLocation :RefrigeratorLocation ;\n    psr:hasComponent :Refrigerator .\n\n:Counter dul:hasComponent :Counter .\n\n:Table dul:hasComponent :Table .\n\n:Chair1 dul:hasComponent :Chair1 .\n\n:Chair2 dul:hasComponent :Chair2 .\n\n:ObjectsOnCounter geo:sfContains :ObjectA, :ObjectB, :Plate, :Cup .\n\n:ObjectA psr:hasAffordance :PickingUp, :PuttingDown, :Holding .\n\n:ObjectB psr:hasAffordance :PickingUp, :PuttingDown, :Holding .\n\n# Locations (Relation with environment)\n:CounterLocation geo:sfWithin :Environment1 .\n:RefrigeratorLocation geo:sfWithin :Environment1 .\n:TableLocation geo:sfWithin :Environment1 .\n:Chair1Location geo:sfWithin :Environment1 .\n:Chair2Location geo:sfWithin :Environment1 .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748102154,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 996,
+        "prompt_tokens": 20214,
+        "total_tokens": 21210,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

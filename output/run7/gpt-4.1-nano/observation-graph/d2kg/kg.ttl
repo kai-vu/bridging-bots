@@ -1,0 +1,179 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <http://www.ease-crc.org/ont/PSR.owl#> .
+
+@prefix ex:     <http://example.org/data/> .
+
+###########################
+# Environment
+###########################
+
+ex:KitchenEnvironment a psr:Environment ;
+    rdfs:label "Kitchen Environment"@en ;
+    rdfs:comment "A kitchen environment with countertop, appliances, and dining area."@en .
+
+###########################
+# Countertop
+###########################
+
+ex:Countertop a psr:Object ;
+    rdfs:label "Kitchen Countertop"@en ;
+    rdfs:comment "A beige marbled kitchen countertop."@en ;
+    dul:hasLocation ex:KitchenCountertopLocation .
+
+ex:KitchenCountertopLocation a psr:StandardLocation ;
+    rdfs:label "Kitchen Countertop Location"@en .
+
+###########################
+# Objects on the Countertop
+###########################
+
+ex:JelloPuddingBox a psr:Object ;
+    rdfs:label "Box of Jello pudding mix"@en ;
+    rdfs:comment "A box of Jello pudding mix placed near the center of the countertop."@en .
+
+ex:AlpenSaltCarton a psr:Object ;
+    rdfs:label "Carton of Alpen Salz"@en ;
+    rdfs:comment "A carton of Alpen Salz near the center of the countertop."@en .
+
+ex:RiceBubblesPackage a psr:Object ;
+    rdfs:label "Packaging of rice bubbles"@en ;
+    rdfs:comment "A package of rice bubbles positioned near the Jello and Alpen Salz."@en .
+
+ex:StrawberryJamJar a psr:Object ;
+    rdfs:label "Small jar of strawberry jam"@en ;
+    rdfs:comment "A small jar of strawberry jam nearby but spaced apart from other items."@en .
+
+ex:WaterBottle a psr:Object ;
+    rdfs:label "Plastic water bottle"@en ;
+    rdfs:comment "A plastic water bottle placed towards the right side of the countertop."@en .
+
+ex:Pitcher a psr:Object ;
+    rdfs:label "Pitcher"@en ;
+    rdfs:comment "A pitcher placed close to the water bottle toward the right side."@en .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Glass of white wine"@en ;
+    rdfs:comment "A wine glass containing white wine, nearby but spaced apart."@en .
+
+###########################
+# Placement of objects (Positions Relative)
+###########################
+
+# Near the center
+ex:JelloPuddingBox psr:hasLocation ex:CountertopCenterLocation .
+ex:AlpenSaltCarton psr:hasLocation ex:CountertopCenterLocation .
+
+# Near the right side
+ex:WaterBottle psr:hasLocation ex:CountertopRightLocation .
+ex:Pitcher psr:hasLocation ex:CountertopRightLocation .
+
+# Spaced apart but nearby
+ex:StrawberryJamJar psr:hasLocation ex:CountertopSpacedLocation .
+ex:WineGlass psr:hasLocation ex:CountertopSpacedLocation2 .
+
+###########################
+# Other Fixtures and Appliances
+###########################
+
+ex:Refrigerator a psr:Object ;
+    rdfs:label "Tall White Refrigerator"@en ;
+    rdfs:comment "A tall white refrigerator located at the right end of the counter."@en ;
+    dul:hasLocation ex:RefrigeratorLocation .
+
+ex:RefrigeratorLocation a psr:StandardLocation ;
+    rdfs:label "Refrigerator Location"@en .
+
+ex:KitchenCabinetUpper a psr:Object ;
+    rdfs:label "Dark Kitchen Upper Cabinet"@en ;
+    rdfs:comment "An upper dark cabinet above the countertop."@en .
+
+ex:KitchenCabinetLower a psr:Object ;
+    rdfs:label "Dark Kitchen Lower Cabinet"@en ;
+    rdfs:comment "A dark cabinet with handles beneath the countertop, containing storage."@en .
+
+ex:CountertopHandle a psr:Object ;
+    rdfs:label "Countertop Handle"@en ;
+    rdfs:comment "Handle on the dark kitchen cabinet."@en .
+
+###########################
+# Environment Details
+###########################
+
+ex:WallWindow a psr:Object ;
+    rdfs:label "Window Above Sink"@en ;
+    rdfs:comment "A window above the sink on the kitchen wall."@en .
+
+ex:Sink a psr:Object ;
+    rdfs:label "Embedded Sink"@en ;
+    rdfs:comment "Sink embedded in the beige countertop."@en ;
+    dul:hasLocation ex:SinkLocation .
+
+ex:SinkLocation a psr:StandardLocation ;
+    rdfs:label "Sink Location"@en .
+
+ex:DecorItem1 a psr:Object ;
+    rdfs:label "Decorative Item"@en ;
+    rdfs:comment "Decor items on the wall or upper cabinets."@en .
+
+###########################
+# Relations
+###########################
+
+# Environment has components
+ex:KitchenEnvironment dul:hasComponent ex:Countertop, ex:Refrigerator, ex:UpperCabinet, ex:LowerCabinet, ex:Sink, ex:DecorItem1 .
+
+# Components have locations
+ex:Countertop dul:hasLocation ex:KitchenCountertopLocation .
+ex:Refrigerator dul:hasLocation ex:RefrigeratorLocation .
+ex:UpperCabinet dul:hasLocation ex:UpperCabinetLocation .
+ex:LowerCabinet dul:hasLocation ex:LowerCabinetLocation .
+ex:Sink dul:hasLocation ex:SinkLocation .
+
+ex:UpperCabinet a psr:Object ;
+    rdfs:label "Upper Cabinet"@en ;
+    rdfs:comment "Upper kitchen cabinet"@en ;
+    dul:hasLocation ex:UpperCabinetLocation .
+
+ex:UpperCabinetLocation a psr:StandardLocation ;
+    rdfs:label "Upper Cabinet Location"@en .
+
+ex:LowerCabinet a psr:Object ;
+    rdfs:label "Lower Cabinet"@en ;
+    rdfs:comment "Lower kitchen cabinet with handles."@en ;
+
+ex:LowerCabinetLocation a psr:StandardLocation ;
+    rdfs:label "Lower Cabinet Location"@en .
+
+ex:Sink a psr:Object ;
+    rdfs:label "Kitchen Sink"@en ;
+    rdfs:comment "Embedded sink in the countertop."@en ;
+    dul:hasLocation ex:SinkLocation .
+
+# Additional relations
+ex:Refrigerator ex:hasAffordance soma:Opening .
+ex:UpperCabinet ex:hasAffordance soma:Opening .
+ex:LowerCabinet ex:hasAffordance soma:Opening .
+ex:Sink ex:hasAffordance soma:Opening .
+
+# Position relations (e.g., on top of)
+ex:WaterBottle geo:sfOnTopOf ex:Countertop .
+ex:Pitcher geo:sfOnTopOf ex:Countertop .
+ex:JelloPuddingBox geo:sfOnTopOf ex:Countertop .
+ex:AlpenSaltCarton geo:sfOnTopOf ex:Countertop .
+ex:StrawberryJamJar geo:sfOnTopOf ex:Countertop .
+ex:WineGlass geo:sfOnTopOf ex:Countertop .
+
+# Remember to specify the actual positions contextually, or as extra notes, if needed - here, simplified as above.
+
+###########################
+# Summary
+###########################
+
+# The environment is modeled with the kitchen environment containing a countertop.
+# Objects are located on the countertop, with their relative locations.
+# The refrigerator and cabinets are part of the environment, with locations above or beneath the countertop.
+# Additional fixtures like sink and window are included, with relevant relations.

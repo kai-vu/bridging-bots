@@ -1,0 +1,42 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:hasAction kitchen:close_broom_closet_door,
+        kitchen:close_cabinet_door,
+        kitchen:close_drawer,
+        kitchen:move_to_broom_closet,
+        kitchen:move_to_cabinet,
+        kitchen:move_to_drawer,
+        kitchen:move_to_kitchen_area,
+        kitchen:move_to_kitchen_counter,
+        kitchen:open_broom_closet_door,
+        kitchen:open_cabinet_door,
+        kitchen:open_drawer,
+        kitchen:pick_up_bowl,
+        kitchen:pick_up_broom,
+        kitchen:pick_up_knife,
+        kitchen:pick_up_toaster,
+        kitchen:scan_kitchen_area,
+        kitchen:scan_kitchen_counter,
+        kitchen:scan_kitchen_floor,
+        kitchen:scan_kitchen_table ;
+    kitchen:identifies kitchen:bowl,
+        kitchen:broom,
+        kitchen:knife,
+        kitchen:toaster .
+
+kitchen:kitchen_area kitchen:hasAffordance kitchen:scanning .
+
+kitchen:kitchen_counter kitchen:hasAffordance kitchen:scanning .
+
+kitchen:kitchen_floor kitchen:hasAffordance kitchen:scanning .
+
+kitchen:kitchen_table kitchen:hasAffordance kitchen:scanning .
+
+kitchen:bowl kitchen:isPlacedOn kitchen:middle_shelf_of_cabinet .
+
+kitchen:broom kitchen:isPlacedOn kitchen:broom_closet .
+
+kitchen:knife kitchen:isPlacedOn kitchen:knife_holder .
+
+kitchen:toaster kitchen:isPlacedOn kitchen:toaster_slot .
+

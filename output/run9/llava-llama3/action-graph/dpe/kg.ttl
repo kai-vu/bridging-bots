@@ -1,0 +1,28 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Cup kitchen:IS_PICKED_UP_BY kitchen:Assistant ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Items_from_open_cabinets kitchen:IS_PICKED_UP_BY kitchen:Assistant ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Packaged_food_product kitchen:IS_PICKED_UP_BY kitchen:Assistant ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Plastic_bottle kitchen:IS_PICKED_UP_BY kitchen:Assistant ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Assistant kitchen:CONFIRMS kitchen:Kitchen_is_organized ;
+    kitchen:IDENTIFIES kitchen:Cup,
+        kitchen:Items_from_open_cabinets,
+        kitchen:Packaged_food_product,
+        kitchen:Plastic_bottle ;
+    kitchen:PERFORMS kitchen:Move_to_dining_table,
+        kitchen:Move_to_kitchen_counter,
+        kitchen:Move_to_open_cabinets,
+        kitchen:Move_to_standard_storage_location,
+        kitchen:Pick_up_items_from_open_cabinets,
+        kitchen:Pick_up_packaged_food_product,
+        kitchen:Store_packaged_food_product ;
+    kitchen:VERIFIES kitchen:Kitchen .
+

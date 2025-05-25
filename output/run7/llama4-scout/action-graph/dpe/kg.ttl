@@ -1,0 +1,39 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:blue-and-white_box kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:cabinet .
+
+kitchen:book kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutOn kitchen:shelf .
+
+kitchen:bottle_of_Evian_water kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:refrigerator .
+
+kitchen:bowl_of_fruit kitchen:isPutOn kitchen:kitchen_counter .
+
+kitchen:plate kitchen:hasObject kitchen:mug,
+        kitchen:spoon ;
+    kitchen:isPutOn kitchen:stack_of_white_plates .
+
+kitchen:red-and-white_jar kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:cabinet .
+
+kitchen:red_box kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:cabinet .
+
+kitchen:refrigerator_door kitchen:isClosed kitchen:assistant .
+
+kitchen:yellow_cup kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:cabinet .
+
+kitchen:kitchen_counter kitchen:isLocatedIn kitchen:kitchen .
+
+kitchen:mug kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:cabinet .
+
+kitchen:spoon kitchen:isPickedUp kitchen:assistant ;
+    kitchen:isPutIn kitchen:drawer .
+
+kitchen:assistant kitchen:performsAction kitchen:Closing,
+        kitchen:PickingUp .
+

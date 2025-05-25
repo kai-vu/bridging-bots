@@ -1,0 +1,113 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:BlackKitchenCabinets, ex:BeigeKitchenCabinets, ex:WhiteRefrigerator, ex:BeigeMarbleCountertop, ex:StackOfWhitePlates, ex:JarOfJam1, ex:BoxOfJello, ex:BoxOfSalt, ex:WoodenDiningTable, ex:WhiteChairs, ex:PlasticBottle, ex:Carton, ex:Mug, ex:WineGlass, ex:RangeHood, ex:YellowCup, ex:BoxOfCrackers, ex:JarOfJam2, ex:BrownWoodenParquetFlooring, ex:WhiteWalls, ex:CircularLight .
+
+ex:BlackKitchenCabinets a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BeigeKitchenCabinets a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BeigeMarbleCountertop a psr:Furniture ;
+    dul:hasLocation ex:KitchenCabinets .
+
+ex:StackOfWhitePlates a psr:Object ;
+    dul:hasLocation ex:BeigeMarbleCountertop .
+
+ex:JarOfJam1 a psr:Object ;
+    dul:hasLocation ex:BeigeMarbleCountertop .
+
+ex:BoxOfJello a psr:Object ;
+    dul:hasLocation ex:BeigeMarbleCountertop .
+
+ex:BoxOfSalt a psr:Object ;
+    dul:hasLocation ex:BeigeMarbleCountertop .
+
+ex:WoodenDiningTable a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WhiteChairs a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:PlasticBottle a psr:Object ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:Carton a psr:Object ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:Mug a psr:Object ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:AboveStove .
+
+ex:YellowCup a psr:Object ;
+    dul:hasLocation ex:CounterNextToSink .
+
+ex:BoxOfCrackers a psr:Object ;
+    dul:hasLocation ex:CounterNextToSink .
+
+ex:JarOfJam2 a psr:Object ;
+    dul:hasLocation ex:CounterNextToSink .
+
+ex:BrownWoodenParquetFlooring a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WhiteWalls a psr:Component ;
+    dul:hasLocation ex:Kitchen .
+
+ex:CircularLight a psr:Object ;
+    dul:hasLocation ex:Ceiling .
+
+ex:KitchenCabinets dul:hasLocation ex:Kitchen .
+ex:WhiteRefrigerator dul:hasLocation ex:NextToCabinets .
+ex:BeigeMarbleCountertop dul:hasLocation ex:OnCabinets .
+
+ex:CounterNextToSink psr:onTopOf ex:CabinetsNextToSink .
+ex:BeigeMarbleCountertop psr:onTopOf ex:KitchenCabinets .
+
+ex:AboveStove a psr:Location ;
+    psr:onTopOf ex:Stove .
+
+ex:NextToCabinets a psr:Location ;
+    geo:sfWithin ex:Kitchen .
+
+ex:OnCabinets a psr:Location ;
+    psr:onTopOf ex:KitchenCabinets .
+
+ex:CabinetsNextToSink a psr:Component ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Stove a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Ceiling a psr:Location ;
+    geo:sfWithin ex:Kitchen .
+
+ex:BlackKitchenCabinets psr:hasAffordance soma:Opening, soma:Closing .
+ex:BeigeKitchenCabinets psr:hasAffordance soma:Opening, soma:Closing .
+ex:WhiteRefrigerator psr:hasAffordance soma:Opening, soma:Closing .
+ex:StackOfWhitePlates psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:JarOfJam1 psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .
+ex:BoxOfJello psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:BoxOfSalt psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:PlasticBottle psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .
+ex:Carton psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:Mug psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .
+ex:WineGlass psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .
+ex:YellowCup psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .
+ex:BoxOfCrackers psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:JarOfJam2 psr:hasAffordance soma:Grasping, soma:PickingUp, soma:PuttingDown .

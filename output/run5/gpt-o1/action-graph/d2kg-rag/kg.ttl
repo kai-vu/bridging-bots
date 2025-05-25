@@ -1,0 +1,164 @@
+@prefix ont: <http://example.org/ontology#> .
+@prefix ex: <http://example.org/data/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:Robot a ont:Robot .
+
+ex:IdentifyAllMisplacedItems
+    a ont:DetectAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasLocation ex:Kitchen ;
+    ont:precedes ex:PickUpCerealBoxChuckyHaros .
+
+ex:PickUpCerealBoxChuckyHaros
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:CerealBoxChuckyHaros ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceCerealBoxChuckyHarosInPantry .
+
+ex:PlaceCerealBoxChuckyHarosInPantry
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:CerealBoxChuckyHaros ;
+    ont:hasDestination ex:Pantry ;
+    ont:precedes ex:PickUpCerealBoxRiceBubbles .
+
+ex:PickUpCerealBoxRiceBubbles
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:CerealBoxRiceBubbles ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceCerealBoxRiceBubblesInPantry .
+
+ex:PlaceCerealBoxRiceBubblesInPantry
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:CerealBoxRiceBubbles ;
+    ont:hasDestination ex:Pantry ;
+    ont:precedes ex:PickUpJam .
+
+ex:PickUpJam
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:JarStrawberryJam ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceJamInFridge .
+
+ex:PlaceJamInFridge
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:JarStrawberryJam ;
+    ont:hasDestination ex:Refrigerator ;
+    ont:precedes ex:PickUpAlpenSalt .
+
+ex:PickUpAlpenSalt
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:AlpenSalt ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceAlpenSaltInPantry .
+
+ex:PlaceAlpenSaltInPantry
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:AlpenSalt ;
+    ont:hasDestination ex:Pantry ;
+    ont:precedes ex:PickUpJelloBox .
+
+ex:PickUpJelloBox
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:JelloBox ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceJelloBoxInPantry .
+
+ex:PlaceJelloBoxInPantry
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:JelloBox ;
+    ont:hasDestination ex:Pantry ;
+    ont:precedes ex:PickUpMug .
+
+ex:PickUpMug
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:Mug ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlaceMugInCabinet .
+
+ex:PlaceMugInCabinet
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:Mug ;
+    ont:hasDestination ex:Cabinet ;
+    ont:precedes ex:PickUpPlates .
+
+ex:PickUpPlates
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:StackWhitePlates ;
+    ont:hasLocation ex:KitchenCounter ;
+    ont:precedes ex:PlacePlatesInCabinet .
+
+ex:PlacePlatesInCabinet
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:StackWhitePlates ;
+    ont:hasDestination ex:Cabinet ;
+    ont:precedes ex:PickUpCookies .
+
+ex:PickUpCookies
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:ShortbreadCookies ;
+    ont:hasLocation ex:DiningTable ;
+    ont:precedes ex:PlaceCookiesInPantry .
+
+ex:PlaceCookiesInPantry
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:ShortbreadCookies ;
+    ont:hasDestination ex:Pantry ;
+    ont:precedes ex:PickUpWaterBottle .
+
+ex:PickUpWaterBottle
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:EvianBottle ;
+    ont:hasLocation ex:DiningTable ;
+    ont:precedes ex:PlaceWaterBottleInFridge .
+
+ex:PlaceWaterBottleInFridge
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:EvianBottle ;
+    ont:hasDestination ex:Refrigerator ;
+    ont:precedes ex:PickUpPitcher .
+
+ex:PickUpPitcher
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:ClearGlassPitcher ;
+    ont:hasLocation ex:DiningTable ;
+    ont:precedes ex:PlacePitcherInCabinet .
+
+ex:PlacePitcherInCabinet
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:ClearGlassPitcher ;
+    ont:hasDestination ex:Cabinet ;
+    ont:precedes ex:PickUpWineGlass .
+
+ex:PickUpWineGlass
+    a ont:PickUpAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:StemmedWineGlass ;
+    ont:hasLocation ex:DiningTable ;
+    ont:precedes ex:PlaceWineGlassInCabinet .
+
+ex:PlaceWineGlassInCabinet
+    a ont:PlaceAction ;
+    ont:hasAgent ex:Robot ;
+    ont:hasTheme ex:StemmedWineGlass ;
+    ont:hasDestination ex:Cabinet .

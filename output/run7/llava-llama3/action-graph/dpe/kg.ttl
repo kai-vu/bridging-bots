@@ -1,0 +1,57 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:PROVIDES kitchen:instructions .
+
+kitchen:access_shelf kitchen:ACTS_ON kitchen:shelf .
+
+kitchen:approach_oven kitchen:ACTS_ON kitchen:oven .
+
+kitchen:check_coffee_maker_surroundings kitchen:ACTS_ON kitchen:coffee_maker .
+
+kitchen:check_kitchen_counter kitchen:ACTS_ON kitchen:kitchen_counter .
+
+kitchen:close_cabinets kitchen:ACTS_ON kitchen:cabinets .
+
+kitchen:confirm_organization kitchen:ACTS_ON kitchen:kitchen .
+
+kitchen:countertop kitchen:IS_PART_OF kitchen:kitchen .
+
+kitchen:dining_area kitchen:IS_PART_OF kitchen:kitchen .
+
+kitchen:examine_refrigerator_top kitchen:ACTS_ON kitchen:refrigerator .
+
+kitchen:inspect_countertop kitchen:ACTS_ON kitchen:countertop .
+
+kitchen:inspect_dining_area kitchen:ACTS_ON kitchen:dining_area .
+
+kitchen:instructions kitchen:HAS_WORKFLOW kitchen:kitchen_organization_workflow .
+
+kitchen:investigate_small_table kitchen:ACTS_ON kitchen:small_table .
+
+kitchen:kitchen_counter kitchen:IS_PART_OF kitchen:kitchen .
+
+kitchen:kitchen_organization_workflow kitchen:HAS_ACTION kitchen:access_shelf,
+        kitchen:approach_oven,
+        kitchen:check_coffee_maker_surroundings,
+        kitchen:check_kitchen_counter,
+        kitchen:close_cabinets,
+        kitchen:confirm_organization,
+        kitchen:examine_refrigerator_top,
+        kitchen:inspect_dining_area,
+        kitchen:investigate_small_table,
+        kitchen:move_to_kitchen_area,
+        kitchen:open_cabinets,
+        kitchen:return_misplaced_items .
+
+kitchen:move_to_kitchen_area kitchen:PRECEDES kitchen:inspect_countertop .
+
+kitchen:open_cabinets kitchen:ACTS_ON kitchen:cabinets .
+
+kitchen:return_misplaced_items kitchen:ACTS_ON kitchen:misplaced_items .
+
+kitchen:shelf kitchen:IS_PART_OF kitchen:kitchen .
+
+kitchen:small_table kitchen:IS_PART_OF kitchen:kitchen .
+
+kitchen:cabinets kitchen:IS_PART_OF kitchen:kitchen .
+

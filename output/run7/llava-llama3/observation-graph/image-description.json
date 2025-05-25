@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-2b937d57-be36-4983-bb44-77b0ebba0a01",
+    "created": 1748033714,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " In this image, there is a modern kitchen with a clean and minimalistic design. The layout includes a wooden flooring and white walls which contribute to the brightness of the space. On the left side of the room, there is a sink under a window and next to it, a coffee maker on the countertop. Above the sink, there are cabinets. To the right of the sink, there's a refrigerator with a small box on top.\n\nThe kitchen features a small table with a vase containing flowers. The dining area has a white table with a wooden chair at one end and is situated in front of the kitchen counter, which also houses a vase with flowers and some other items. Opposite to the window where the sink is installed, there is an oven. Above the oven, on a shelf, you can spot another box, possibly for food or cleaning supplies.\n\nThe room is well-organized and uncluttered. There are no visible people or animals in the image. The lighting seems to be natural, coming from a source not visible within the image itself. The overall atmosphere of the environment appears to be calm and orderly. ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.96,
+        "prompt_token/s": 1798.5,
+        "total_duration": 6831594262,
+        "load_duration": 1590980377,
+        "prompt_eval_count": 3065,
+        "prompt_tokens": 3065,
+        "prompt_eval_duration": 1704194878,
+        "eval_count": 244,
+        "completion_tokens": 244,
+        "eval_duration": 3487590081,
+        "approximate_total": "0h0m6s",
+        "total_tokens": 3309,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

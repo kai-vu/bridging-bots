@@ -1,0 +1,70 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+# Define Actions for the task sequence
+ex:InspectEnvironment a psr:Action ;
+    rdfs:label "Inspect environment for misplaced items"@en .
+
+ex:IdentifyMisplacedItems a psr:Action ;
+    rdfs:label "Identify all misplaced items"@en .
+
+ex:SelectItem a psr:Action ;
+    rdfs:label "Select a misplaced item"@en .
+
+ex:DetermineStorageLocation a psr:Action ;
+    rdfs:label "Determine standard storage location based on item type"@en .
+
+ex:PickUpObject a psr:Action ;
+    rdfs:label "Pick up the object"@en .
+
+ex:MoveObjectToStorage a psr:Action ;
+    rdfs:label "Move the object to its storage location"@en .
+
+ex:RepeatActions a psr:Action ;
+    rdfs:label "Repeat identification and placement for all misplaced items"@en .
+
+# Define the workflow
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+    rdfs:hasAction ex:InspectEnvironment, ex:IdentifyMisplacedItems, ex:RepeatActions .
+
+# Connect the actions sequentially
+ex:InspectEnvironment psr:precedes ex:IdentifyMisplacedItems .
+
+ex:IdentifyMisplacedItems psr:precedes ex:SelectItem .
+
+ex:SelectItem psr:precedes ex:DetermineStorageLocation .
+
+ex:DetermineStorageLocation psr:precedes ex:PickUpObject .
+
+ex:PickUpObject psr:precedes ex:MoveObjectToStorage .
+
+ex:MoveObjectToStorage psr:precedes ex:RepeatActions .
+
+# Associate the instruction with the workflow
+psr:Instruction a owl:Class ;
+    rdfs:label "Instruction"@en .
+
+ex:RestoreKitchenInstruction a psr:Instruction ;
+    rdfs:hasWorkflow ex:RestoreKitchenWorkflow ;
+    rdfs:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations, performing each step atomically."@en .
+
+# Relationships indicating the process flow
+ex:InspectEnvironment psr:hasAction ex:InspectEnvironment .
+ex:IdentifyMisplacedItems psr:hasAction ex:IdentifyMisplacedItems .
+ex:SelectItem psr:hasAction ex:SelectItem .
+ex:DetermineStorageLocation psr:hasAction ex:DetermineStorageLocation .
+ex:PickUpObject psr:hasAction ex:PickUpObject .
+ex:MoveObjectToStorage psr:hasAction ex:MoveObjectToStorage .
+ex:RepeatActions psr:hasAction ex:RepeatActions .
+
+# Attach levels or priorities if needed (optional for logical order)
+# (Not explicitly specified in ontology, but implied by the sequence)
+
+# End of Knowledge Graph

@@ -1,0 +1,141 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Instruction ;
+  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  psr:hasWorkflow ex:Workflow .
+
+ex:Workflow a psr:Workflow .
+
+ex:IdentifyMisplacedItems a dul:Action ;
+  psr:actsOn ex:kitchen ;
+  soma:isPerformedBy ex:Robot .
+
+ex:kitchen a psr:Component .
+
+ex:Robot a dul:Agent .
+
+ex:Workflow ex:psr:hasAction ex:IdentifyMisplacedItems .
+
+ex:PickUpYellowMug a dul:Action ;
+  psr:actsOn ex:yellowMug ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:yellowMug a psr:Object .
+
+ex:PutDownYellowMugInCabinet a dul:Action ;
+  psr:actsOn ex:yellowMug ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:blackCabinet a psr:Component .
+
+ex:PickUpJarOfJam a dul:Action ;
+  psr:actsOn ex:jarOfJam ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:jarOfJam a psr:Object .
+
+ex:PutDownJarOfJamInCabinet a dul:Action ;
+  psr:actsOn ex:jarOfJam ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PickUpBoxOfShortbread a dul:Action ;
+  psr:actsOn ex:boxOfShortbread ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:boxOfShortbread a psr:Object .
+
+ex:PutDownBoxOfShortbreadInCabinet a dul:Action ;
+  psr:actsOn ex:boxOfShortbread ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PickUpBoxOfRiceBubbles a dul:Action ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:boxOfRiceBubbles a psr:Object .
+
+ex:PutDownBoxOfRiceBubblesInCabinet a dul:Action ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PickUpBoxOfJello a dul:Action ;
+  psr:actsOn ex:boxOfJello ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:boxOfJello a psr:Object .
+
+ex:PutDownBoxOfJelloInCabinet a dul:Action ;
+  psr:actsOn ex:boxOfJello ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PickUpAluminumFoil a dul:Action ;
+  psr:actsOn ex:aluminumFoil ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:aluminumFoil a psr:Object .
+
+ex:PutDownAluminumFoilInCabinet a dul:Action ;
+  psr:actsOn ex:aluminumFoil ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PickUpPlateFromCounter a dul:Action ;
+  psr:actsOn ex:plate ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:plate a psr:Object .
+
+ex:PutDownPlateInCabinet a dul:Action ;
+  psr:actsOn ex:plate ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:Workflow ex:psr:hasAction ex:PickUpYellowMug .
+ex:Workflow ex:psr:hasAction ex:PutDownYellowMugInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpJarOfJam .
+ex:Workflow ex:psr:hasAction ex:PutDownJarOfJamInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpBoxOfShortbread .
+ex:Workflow ex:psr:hasAction ex:PutDownBoxOfShortbreadInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpBoxOfRiceBubbles .
+ex:Workflow ex:psr:hasAction ex:PutDownBoxOfRiceBubblesInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpBoxOfJello .
+ex:Workflow ex:psr:hasAction ex:PutDownBoxOfJelloInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpAluminumFoil .
+ex:Workflow ex:psr:hasAction ex:PutDownAluminumFoilInCabinet .
+ex:Workflow ex:psr:hasAction ex:PickUpPlateFromCounter .
+ex:Workflow ex:psr:hasAction ex:PutDownPlateInCabinet .
+
+ex:PickUpYellowMug psr:follows ex:IdentifyMisplacedItems .
+ex:PutDownYellowMugInCabinet psr:follows ex:PickUpYellowMug .
+ex:PickUpJarOfJam psr:follows ex:PutDownYellowMugInCabinet .
+ex:PutDownJarOfJamInCabinet psr:follows ex:PickUpJarOfJam .
+ex:PickUpBoxOfShortbread psr:follows ex:PutDownJarOfJamInCabinet .
+ex:PutDownBoxOfShortbreadInCabinet psr:follows ex:PickUpBoxOfShortbread .
+ex:PickUpBoxOfRiceBubbles psr:follows ex:PutDownBoxOfShortbreadInCabinet .
+ex:PutDownBoxOfRiceBubblesInCabinet psr:follows ex:PickUpBoxOfRiceBubbles .
+ex:PickUpBoxOfJello psr:follows ex:PutDownBoxOfRiceBubblesInCabinet .
+ex:PutDownBoxOfJelloInCabinet psr:follows ex:PickUpBoxOfJello .
+ex:PickUpAluminumFoil psr:follows ex:PutDownBoxOfJelloInCabinet .
+ex:PutDownAluminumFoilInCabinet psr:follows ex:PickUpAluminumFoil .
+ex:PickUpPlateFromCounter psr:follows ex:PutDownAluminumFoilInCabinet .
+ex:PutDownPlateInCabinet psr:follows ex:PickUpPlateFromCounter .

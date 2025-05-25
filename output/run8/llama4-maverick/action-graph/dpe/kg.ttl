@@ -1,0 +1,20 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Instruction_1 kitchen:actsOn kitchen:table ;
+    kitchen:hasAction kitchen:Identify_objects .
+
+kitchen:Instruction_11 kitchen:hasAction kitchen:Pick_up_pitcher .
+
+kitchen:Instruction_12 kitchen:hasAction kitchen:Remove_bottle .
+
+kitchen:Instruction_3 kitchen:hasAction kitchen:Pick_up_wine_glass .
+
+kitchen:Instruction_4 kitchen:hasAction kitchen:Place_wine_glass .
+
+kitchen:bottle kitchen:isContainedIn kitchen:pitcher .
+
+kitchen:wine_glass kitchen:isLocatedOn kitchen:table ;
+    kitchen:isPlacedIn kitchen:cabinet .
+
+kitchen:pitcher kitchen:isLocatedOn kitchen:counter .
+

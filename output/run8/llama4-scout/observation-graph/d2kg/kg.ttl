@@ -1,0 +1,169 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDiningArea a psr:Environment ;
+  dul:hasComponent ex:Kitchen ;
+  dul:hasComponent ex:DiningArea .
+
+ex:Kitchen a psr:Component ;
+  rdfs:label "Kitchen"@en ;
+  dul:hasComponent ex:Cabinets ;
+  dul:hasComponent ex:Countertop ;
+  dul:hasComponent ex:Sink ;
+  dul:hasComponent ex:VentHood ;
+  dul:hasComponent ex:Refrigerator ;
+  psr:hasLocation ex:KitchenLocation .
+
+ex:KitchenLocation a psr:CurrentLocation ;
+  rdfs:label "Kitchen Location"@en .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  dul:hasLocation ex:CabinetsLocation .
+
+ex:CabinetsLocation a psr:StandardLocation ;
+  rdfs:label "Cabinets Location"@en ;
+  psr:onTopOf ex:Countertop .
+
+ex:Countertop a psr:Component ;
+  rdfs:label "Countertop"@en ;
+  dul:hasLocation ex:CountertopLocation ;
+  dul:hasComponent ex:JarOfJam1 ;
+  dul:hasComponent ex:BoxOfJello ;
+  dul:hasComponent ex:BoxOfAlpenSalt ;
+  dul:hasComponent ex:BoxOfRiceBubbles ;
+  dul:hasComponent ex:JarOfJam2 ;
+  dul:hasComponent ex:BoxOfShortbreadCookies ;
+  dul:hasComponent ex:StackOfPlates .
+
+ex:CountertopLocation a psr:StandardLocation ;
+  rdfs:label "Countertop Location"@en .
+
+ex:JarOfJam1 a psr:Object ;
+  rdfs:label "Jar of Jam 1"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:BoxOfJello a psr:Object ;
+  rdfs:label "Box of Jello"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:BoxOfAlpenSalt a psr:Object ;
+  rdfs:label "Box of Alpen Salt"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:BoxOfRiceBubbles a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:JarOfJam2 a psr:Object ;
+  rdfs:label "Jar of Jam 2"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:BoxOfShortbreadCookies a psr:Object ;
+  rdfs:label "Box of Shortbread Cookies"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:StackOfPlates a psr:Object ;
+  rdfs:label "Stack of Plates"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:CountertopLocation .
+
+ex:Sink a psr:Component ;
+  rdfs:label "Sink"@en ;
+  dul:hasLocation ex:SinkLocation ;
+  psr:hasAffordance soma:Opening .
+
+ex:SinkLocation a psr:StandardLocation ;
+  rdfs:label "Sink Location"@en .
+
+ex:VentHood a psr:Component ;
+  rdfs:label "Vent Hood"@en ;
+  dul:hasLocation ex:VentHoodLocation .
+
+ex:VentHoodLocation a psr:StandardLocation ;
+  rdfs:label "Vent Hood Location"@en .
+
+ex:Refrigerator a psr:Appliance ;
+  rdfs:label "Refrigerator"@en ;
+  dul:hasLocation ex:RefrigeratorLocation .
+
+ex:RefrigeratorLocation a psr:StandardLocation ;
+  rdfs:label "Refrigerator Location"@en .
+
+ex:DiningArea a psr:Component ;
+  rdfs:label "Dining Area"@en ;
+  dul:hasComponent ex:Table ;
+  dul:hasComponent ex:Chairs .
+
+ex:Table a psr:Furniture ;
+  rdfs:label "Table"@en ;
+  dul:hasLocation ex:TableLocation ;
+  dul:hasComponent ex:BottleOfWater1 ;
+  dul:hasComponent ex:MilkBottle ;
+  dul:hasComponent ex:Cookbook ;
+  dul:hasComponent ex:PuzzleBox .
+
+ex:TableLocation a psr:CurrentLocation ;
+  rdfs:label "Table Location"@en .
+
+ex:Chairs a psr:Furniture ;
+  rdfs:label "Chairs"@en ;
+  dul:hasLocation ex:ChairsLocation .
+
+ex:ChairsLocation a psr:StandardLocation ;
+  rdfs:label "Chairs Location"@en .
+
+ex:BottleOfWater1 a psr:Object ;
+  rdfs:label "Bottle of Water 1"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:TableLocation .
+
+ex:MilkBottle a psr:Object ;
+  rdfs:label "Milk Bottle"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:TableLocation .
+
+ex:Cookbook a psr:Object ;
+  rdfs:label "Cookbook"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:TableLocation .
+
+ex:PuzzleBox a psr:Object ;
+  rdfs:label "Puzzle Box"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:TableLocation .
+
+ex:BottleOfWater2 a psr:Object ;
+  rdfs:label "Bottle of Water 2"@en ;
+  psr:hasAffordance soma:Grasping ;
+  dul:hasLocation ex:TableLocation .
+
+ex:WhiteChairs a psr:Component ;
+  rdfs:label "White Chairs"@en .
+
+ex:Chair1 a psr:Component ;
+  rdfs:label "Chair 1"@en ;
+  dul:hasLocation ex:ChairsLocation .
+
+ex:Chair2 a psr:Component ;
+  rdfs:label "Chair 2"@en ;
+  dul:hasLocation ex:ChairsLocation .
+
+ex:Chair3 a psr:Component ;
+  rdfs:label "Chair 3"@en ;
+  dul:hasLocation ex:ChairsLocation .
+
+ex:Chair4 a psr:Component ;
+  rdfs:label "Chair 4"@en ;
+  dul:hasLocation ex:ChairsLocation .

@@ -1,0 +1,44 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Move kitchen:actsOn kitchen:dining_table ;
+    kitchen:isPerformedBy kitchen:Agent .
+
+kitchen:Pick_up kitchen:actsOn kitchen:bottle,
+        kitchen:stack_of_plates .
+
+kitchen:Place kitchen:actsOn kitchen:bottle,
+        kitchen:jar_of_jam,
+        kitchen:stack_of_plates .
+
+kitchen:box kitchen:isInspected kitchen:Inspect ;
+    kitchen:isLocatedOn kitchen:dining_table .
+
+kitchen:boxes_of_Chicky_and_Jello kitchen:isLocatedOn kitchen:countertop .
+
+kitchen:cups kitchen:isLocatedOn kitchen:countertop .
+
+kitchen:food_items kitchen:areStoredIn kitchen:respective_storage_locations ;
+    kitchen:isStoredIn kitchen:respective_storage_locations .
+
+kitchen:plates kitchen:isLocatedOn kitchen:countertop .
+
+kitchen:Inspect kitchen:actsOn kitchen:contents_of_box .
+
+kitchen:dark_gray_cabinets kitchen:isA kitchen:cabinet ;
+    kitchen:stores kitchen:stack_of_plates .
+
+kitchen:jar_of_jam kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isStoredIn kitchen:dark_gray_cabinets .
+
+kitchen:misplaced_items kitchen:areReturnedTo kitchen:designated_storage_locations .
+
+kitchen:bottle kitchen:isLocatedOn kitchen:dining_table ;
+    kitchen:isMovedTo kitchen:countertop .
+
+kitchen:stack_of_plates kitchen:isLocatedOn kitchen:dining_table .
+
+kitchen:dining_table kitchen:hasObject kitchen:bottle .
+
+kitchen:countertop kitchen:isInspectedFor kitchen:misplaced_items ;
+    kitchen:isNear kitchen:sink .
+

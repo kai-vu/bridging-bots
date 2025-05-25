@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BaUptvmtKq3Yy20bz3R9695JEYRSB",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "A small kitchen with black lower and upper cabinets lines one corner, topped by a marble‐colored countertop. A sink is set into the left portion of the counter below a wooden‐framed window. Moving right along the counter, a stove with a small pot sits near a wooden range hood overhead. Next to the stove are an orange mug, a box featuring a cartoon face, a jar of fruit spread, a stack of white dishes, a box labeled “Rice Bubbles,” another red box with similar graphics, a package of strawberry gelatin dessert, and a cylindrical container of salt. Under and above this counter are closed black cabinets with matching handles. A tall black cabinet stands beside a white refrigerator, which marks the transition from the kitchen to the dining area.\n\nIn the dining area, a rectangular wooden table occupies the center, surrounded by four white upholstered chairs. On the table, a white rectangular bowl containing several round fruits also cradles a large water bottle. A black rectangular carton rests nearby, along with a clear pitcher and a single stemmed glass. A white door is set in the wall behind the table, and a round ceiling light fixture hangs above. The floor throughout is a parquet wood pattern, and the walls are painted white.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748038041,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 2182,
+        "prompt_tokens": 3541,
+        "total_tokens": 5723,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 1920,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 3200
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-962c9355-3bba-4ef0-8b0e-319ac2b02963",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "black and beige kitchen cabinets; white refrigerator next to the cabinets; beige marble countertop on the cabinets; stack of white plates, jar of jam, box of jello and box of salt on the counter; wooden dining table with white chairs around it; plastic bottle, carton, mug and wine glass on the table; range hood above the stove; yellow cup, box of crackers and jar of jam on the counter next to the sink; brown wooden parquet flooring; white walls; circular light on the ceiling.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748014832,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 103,
+        "prompt_tokens": 12496,
+        "total_tokens": 12599,
+        "completion_time": 0.515137279,
+        "prompt_time": 0.325361645,
+        "queue_time": 2.3467545349999996,
+        "total_time": 0.840498924
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvywv4f0eye8gyx2czq8r862"
+    }
+}

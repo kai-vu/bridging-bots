@@ -1,0 +1,12 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:analysis kitchen:REQUIRES kitchen:larger_image .
+
+kitchen:assistant kitchen:CAN_ASSIST kitchen:description_task .
+
+kitchen:image kitchen:HAS_SIZE kitchen:small_size .
+
+kitchen:detailed_information kitchen:IS_ABOUT kitchen:objects .
+
+kitchen:larger_image kitchen:PROVIDES kitchen:detailed_information .
+

@@ -1,0 +1,31 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Instruction_1 kitchen:hasAction kitchen:Identify_objects .
+
+kitchen:Instruction_11 kitchen:hasAction kitchen:Pick_up .
+
+kitchen:Instruction_12 kitchen:hasAction kitchen:Store .
+
+kitchen:Instruction_2 kitchen:hasAction kitchen:Pick_up .
+
+kitchen:Instruction_20 kitchen:hasAction kitchen:Store .
+
+kitchen:Instruction_3 kitchen:hasAction kitchen:Store .
+
+kitchen:Identify_objects kitchen:actsOn kitchen:objects_on_countertop .
+
+kitchen:knife kitchen:is_stored_in kitchen:designated_drawer .
+
+kitchen:Pick_up kitchen:actsOn kitchen:bottle_of_water,
+        kitchen:box_of_JELLO .
+
+kitchen:bottle_of_water kitchen:is_on kitchen:dining_table ;
+    kitchen:is_stored_in kitchen:refrigerator .
+
+kitchen:box_of_JELLO kitchen:is_on kitchen:countertop ;
+    kitchen:is_stored_in kitchen:cabinet .
+
+kitchen:Store kitchen:actsOn kitchen:bottle_of_water,
+        kitchen:box_of_JELLO,
+        kitchen:knife .
+

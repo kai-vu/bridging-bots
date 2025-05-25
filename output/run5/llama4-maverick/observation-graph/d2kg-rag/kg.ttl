@@ -1,0 +1,93 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent ex:BlackKitchenCabinets, ex:WhiteRefrigerator, ex:BeigeMarbleCountertop, ex:StackOfWhitePlates, ex:JarOfJam1, ex:BoxOfJello, ex:BoxOfSalt, ex:WoodenDiningTable, ex:WhiteChairs, ex:PlasticBottle, ex:Carton, ex:Mug, ex:WineGlass, ex:RangeHood, ex:YellowCup, ex:BoxOfCrackers, ex:JarOfJam2, ex:BrownWoodenParquetFlooring, ex:WhiteWalls, ex:CircularLight .
+
+ex:BlackKitchenCabinets a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+    dul:hasLocation ex:NextToBlackKitchenCabinets ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:BeigeMarbleCountertop a psr:Furniture ;
+    dul:hasLocation ex:OnTopOfBlackKitchenCabinets .
+
+ex:StackOfWhitePlates a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:JarOfJam1 a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:BoxOfJello a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:BoxOfSalt a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:WoodenDiningTable a psr:Furniture ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+
+ex:WhiteChairs a psr:Furniture ;
+    dul:hasLocation ex:AroundWoodenDiningTable .
+
+ex:PlasticBottle a psr:Object ;
+    dul:hasLocation ex:OnTopOfWoodenDiningTable .
+
+ex:Carton a psr:Object ;
+    dul:hasLocation ex:OnTopOfWoodenDiningTable .
+
+ex:Mug a psr:Object ;
+    dul:hasLocation ex:OnTopOfWoodenDiningTable .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:OnTopOfWoodenDiningTable .
+
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:AboveStove .
+
+ex:YellowCup a psr:Object ;
+    dul:hasLocation ex:NextToSink .
+
+ex:BoxOfCrackers a psr:Object ;
+    dul:hasLocation ex:NextToSink .
+
+ex:JarOfJam2 a psr:Object ;
+    dul:hasLocation ex:NextToSink .
+
+ex:BrownWoodenParquetFlooring a psr:Furniture .
+
+ex:WhiteWalls a psr:Component .
+
+ex:CircularLight a psr:Object ;
+    dul:hasLocation ex:OnTheCeiling .
+
+ex:NextToBlackKitchenCabinets a soma:Location ;
+    geo:sfWithin ex:KitchenEnvironment .
+
+ex:OnTopOfBlackKitchenCabinets a soma:Location ;
+    geo:sfWithin ex:BlackKitchenCabinets .
+
+ex:OnTopOfBeigeMarbleCountertop a soma:Location ;
+    geo:sfWithin ex:BeigeMarbleCountertop .
+
+ex:OnTopOfWoodenDiningTable a soma:Location ;
+    geo:sfWithin ex:WoodenDiningTable .
+
+ex:AroundWoodenDiningTable a soma:Location ;
+    geo:sfWithin ex:WoodenDiningTable .
+
+ex:AboveStove a soma:Location ;
+    geo:sfWithin ex:KitchenEnvironment .
+
+ex:NextToSink a soma:Location ;
+    geo:sfWithin ex:KitchenEnvironment .
+
+ex:OnTheCeiling a soma:Location ;
+    geo:sfWithin ex:KitchenEnvironment .

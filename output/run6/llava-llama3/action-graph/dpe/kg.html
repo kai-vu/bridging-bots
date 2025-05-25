@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "assistant", "label": "assistant", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen organization workflow", "label": "kitchen organization workflow", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up pot of coffee", "label": "pick up pot of coffee", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to refrigerator", "label": "move to refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "inspect kitchen", "label": "inspect kitchen", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to open cabinet", "label": "move to open cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to white countertop", "label": "move to white countertop", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "close refrigerator door", "label": "close refrigerator door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to island", "label": "move to island", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "verify organization", "label": "verify organization", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "place food items in refrigerator", "label": "place food items in refrigerator", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up tin can", "label": "pick up tin can", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up cups", "label": "pick up cups", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "cups", "label": "cups", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "place cups in cabinet", "label": "place cups in cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "PickingUp", "label": "PickingUp", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pot of coffee", "label": "pot of coffee", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "place pot of coffee in cabinet", "label": "place pot of coffee in cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up food items", "label": "pick up food items", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "open refrigerator door", "label": "open refrigerator door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "food items", "label": "food items", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "refrigerator door", "label": "refrigerator door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up box of cereal", "label": "pick up box of cereal", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "box of cereal", "label": "box of cereal", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "place box of cereal in cabinet", "label": "place box of cereal in cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "close open cabinet", "label": "close open cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "open cabinet", "label": "open cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "tin can", "label": "tin can", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "place tin can in cabinet", "label": "place tin can in cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "accbb998-b2f5-4335-ae2f-7acc3709ae2d", "label": "accbb998-b2f5-4335-ae2f-7acc3709ae2d", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "assistant", "label": "hasWorkflow", "to": "kitchen organization workflow", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "pick up pot of coffee", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "move to refrigerator", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "inspect kitchen", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "move to open cabinet", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "move to white countertop", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "close refrigerator door", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "move to island", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "verify organization", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "place food items in refrigerator", "width": 1}, {"arrows": "to", "from": "kitchen organization workflow", "label": "hasAction", "to": "pick up tin can", "width": 1}, {"arrows": "to", "from": "move to island", "label": "precedes", "to": "pick up cups", "width": 1}, {"arrows": "to", "from": "pick up cups", "label": "actsOn", "to": "cups", "width": 1}, {"arrows": "to", "from": "pick up cups", "label": "follows", "to": "place cups in cabinet", "width": 1}, {"arrows": "to", "from": "cups", "label": "isAffordedBy", "to": "PickingUp", "width": 1}, {"arrows": "to", "from": "place cups in cabinet", "label": "actsOn", "to": "cups", "width": 1}, {"arrows": "to", "from": "place cups in cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "pick up pot of coffee", "label": "actsOn", "to": "pot of coffee", "width": 1}, {"arrows": "to", "from": "pick up pot of coffee", "label": "follows", "to": "place pot of coffee in cabinet", "width": 1}, {"arrows": "to", "from": "pot of coffee", "label": "isAffordedBy", "to": "PickingUp", "width": 1}, {"arrows": "to", "from": "place pot of coffee in cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "place pot of coffee in cabinet", "label": "actsOn", "to": "pot of coffee", "width": 1}, {"arrows": "to", "from": "move to refrigerator", "label": "precedes", "to": "pick up food items", "width": 1}, {"arrows": "to", "from": "pick up food items", "label": "follows", "to": "open refrigerator door", "width": 1}, {"arrows": "to", "from": "pick up food items", "label": "actsOn", "to": "food items", "width": 1}, {"arrows": "to", "from": "food items", "label": "isAffordedBy", "to": "PickingUp", "width": 1}, {"arrows": "to", "from": "open refrigerator door", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "open refrigerator door", "label": "actsOn", "to": "refrigerator door", "width": 1}, {"arrows": "to", "from": "place food items in refrigerator", "label": "actsOn", "to": "food items", "width": 1}, {"arrows": "to", "from": "place food items in refrigerator", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "close refrigerator door", "label": "actsOn", "to": "refrigerator door", "width": 1}, {"arrows": "to", "from": "close refrigerator door", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "move to open cabinet", "label": "precedes", "to": "pick up box of cereal", "width": 1}, {"arrows": "to", "from": "pick up box of cereal", "label": "actsOn", "to": "box of cereal", "width": 1}, {"arrows": "to", "from": "pick up box of cereal", "label": "follows", "to": "place box of cereal in cabinet", "width": 1}, {"arrows": "to", "from": "pick up box of cereal", "label": "follows", "to": "close open cabinet", "width": 1}, {"arrows": "to", "from": "box of cereal", "label": "isAffordedBy", "to": "PickingUp", "width": 1}, {"arrows": "to", "from": "close open cabinet", "label": "actsOn", "to": "open cabinet", "width": 1}, {"arrows": "to", "from": "close open cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "move to white countertop", "label": "precedes", "to": "pick up box of cereal", "width": 1}, {"arrows": "to", "from": "place box of cereal in cabinet", "label": "actsOn", "to": "box of cereal", "width": 1}, {"arrows": "to", "from": "place box of cereal in cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "pick up tin can", "label": "actsOn", "to": "tin can", "width": 1}, {"arrows": "to", "from": "pick up tin can", "label": "follows", "to": "place tin can in cabinet", "width": 1}, {"arrows": "to", "from": "tin can", "label": "isAffordedBy", "to": "PickingUp", "width": 1}, {"arrows": "to", "from": "place tin can in cabinet", "label": "actsOn", "to": "tin can", "width": 1}, {"arrows": "to", "from": "place tin can in cabinet", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "inspect kitchen", "label": "isPerformedBy", "to": "assistant", "width": 1}, {"arrows": "to", "from": "verify organization", "label": "isPerformedBy", "to": "assistant", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

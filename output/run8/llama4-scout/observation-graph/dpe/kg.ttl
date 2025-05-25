@@ -1,0 +1,29 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:environment kitchen:hasComponent kitchen:dining_area,
+        kitchen:kitchen .
+
+kitchen:floor kitchen:hasProperty kitchen:dark_wood_parquet_tiles .
+
+kitchen:walls kitchen:hasProperty kitchen:white .
+
+kitchen:countertops kitchen:hasComponent kitchen:box_of_Alpen_Salt,
+        kitchen:box_of_Jello,
+        kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread_cookies,
+        kitchen:jar_of_jam,
+        kitchen:stack_of_plates .
+
+kitchen:dining_area kitchen:hasComponent kitchen:white_chairs,
+        kitchen:wooden_table .
+
+kitchen:kitchen kitchen:hasComponent kitchen:cabinets,
+        kitchen:countertops,
+        kitchen:refrigerator,
+        kitchen:sink .
+
+kitchen:wooden_table kitchen:hasComponent kitchen:bottles_of_water,
+        kitchen:cookbook,
+        kitchen:milk_bottle,
+        kitchen:puzzle_box .
+

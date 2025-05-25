@@ -1,0 +1,51 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Alpen_Salt kitchen:hasLocation kitchen:countertop .
+
+kitchen:Rice_Bubbles kitchen:hasLocation kitchen:countertop .
+
+kitchen:bottles_of_water kitchen:hasLocation kitchen:table .
+
+kitchen:bowl_of_fruit kitchen:hasLocation kitchen:table .
+
+kitchen:box_of_Jell-O kitchen:hasLocation kitchen:countertop .
+
+kitchen:cabinets kitchen:hasAffordance kitchen:handles ;
+    kitchen:hasLocation kitchen:kitchen .
+
+kitchen:chairs kitchen:hasLocation kitchen:dining_room .
+
+kitchen:cookbook kitchen:hasLocation kitchen:table .
+
+kitchen:floor kitchen:sfWithin kitchen:environment .
+
+kitchen:jar_of_jam kitchen:hasLocation kitchen:countertop .
+
+kitchen:light_fixture kitchen:hasLocation kitchen:dining_room .
+
+kitchen:pot kitchen:hasLocation kitchen:stovetop .
+
+kitchen:refrigerator kitchen:hasLocation kitchen:kitchen .
+
+kitchen:shortbread kitchen:hasLocation kitchen:countertop .
+
+kitchen:sink kitchen:hasLocation kitchen:kitchen .
+
+kitchen:vent_hood kitchen:hasLocation kitchen:kitchen .
+
+kitchen:walls kitchen:sfWithin kitchen:environment .
+
+kitchen:window kitchen:hasLocation kitchen:kitchen .
+
+kitchen:stovetop kitchen:hasLocation kitchen:kitchen .
+
+kitchen:dining_room kitchen:sfWithin kitchen:environment .
+
+kitchen:table kitchen:hasLocation kitchen:dining_room .
+
+kitchen:environment kitchen:isA kitchen:kitchen_and_dining_room .
+
+kitchen:countertop kitchen:hasLocation kitchen:kitchen .
+
+kitchen:kitchen kitchen:sfWithin kitchen:environment .
+

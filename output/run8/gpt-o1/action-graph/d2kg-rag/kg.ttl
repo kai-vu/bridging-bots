@@ -1,0 +1,218 @@
+@prefix ex: <http://example.org/data/> .
+@prefix ont: <http://example.org/ontology#> .
+
+ex:action1 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:jamJar1 ;
+   ont:hasLocation ex:countertopNearFridge ;
+   ont:order 1 .
+
+ex:action2 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:fridge ;
+   ont:order 2 .
+
+ex:action3 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:jamJar1 ;
+   ont:hasLocation ex:fridgeInterior ;
+   ont:order 3 .
+
+ex:action4 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:plasticWaterBottle1 ;
+   ont:hasLocation ex:diningTable ;
+   ont:order 4 .
+
+ex:action5 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:plasticWaterBottle1 ;
+   ont:hasLocation ex:fridgeInterior ;
+   ont:order 5 .
+
+ex:action6 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:fridge ;
+   ont:order 6 .
+
+ex:action7 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:boxStrawberryJello1 ;
+   ont:hasLocation ex:countertopNearFridge ;
+   ont:order 7 .
+
+ex:action8 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:saltContainer1 ;
+   ont:hasLocation ex:countertopNearFridge ;
+   ont:order 8 .
+
+ex:action9 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet1 ;
+   ont:order 9 .
+
+ex:action10 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:boxStrawberryJello1 ;
+   ont:hasLocation ex:upperCabinet1Interior ;
+   ont:order 10 .
+
+ex:action11 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:saltContainer1 ;
+   ont:hasLocation ex:upperCabinet1Interior ;
+   ont:order 11 .
+
+ex:action12 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cookieBox1 ;
+   ont:hasLocation ex:diningTable ;
+   ont:order 12 .
+
+ex:action13 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cookieBox1 ;
+   ont:hasLocation ex:upperCabinet1Interior ;
+   ont:order 13 .
+
+ex:action14 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet1 ;
+   ont:order 14 .
+
+ex:action15 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cerealBoxChucky ;
+   ont:hasLocation ex:countertopNearStove ;
+   ont:order 15 .
+
+ex:action16 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cerealBoxRiceBubbles ;
+   ont:hasLocation ex:countertopNearStove ;
+   ont:order 16 .
+
+ex:action17 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet2 ;
+   ont:order 17 .
+
+ex:action18 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cerealBoxChucky ;
+   ont:hasLocation ex:upperCabinet2Interior ;
+   ont:order 18 .
+
+ex:action19 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:cerealBoxRiceBubbles ;
+   ont:hasLocation ex:upperCabinet2Interior ;
+   ont:order 19 .
+
+ex:action20 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet2 ;
+   ont:order 20 .
+
+ex:action21 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:orangeMug1 ;
+   ont:hasLocation ex:countertopNearStove ;
+   ont:order 21 .
+
+ex:action22 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:wineGlass1 ;
+   ont:hasLocation ex:diningTable ;
+   ont:order 22 .
+
+ex:action23 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:clearGlassPitcher1 ;
+   ont:hasLocation ex:diningTable ;
+   ont:order 23 .
+
+ex:action24 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet3 ;
+   ont:order 24 .
+
+ex:action25 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:orangeMug1 ;
+   ont:hasLocation ex:upperCabinet3Interior ;
+   ont:order 25 .
+
+ex:action26 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:wineGlass1 ;
+   ont:hasLocation ex:upperCabinet3Interior ;
+   ont:order 26 .
+
+ex:action27 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:clearGlassPitcher1 ;
+   ont:hasLocation ex:upperCabinet3Interior ;
+   ont:order 27 .
+
+ex:action28 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:upperCabinet3 ;
+   ont:order 28 .
+
+ex:action29 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:smallMetalPot1 ;
+   ont:hasLocation ex:countertopNearStove ;
+   ont:order 29 .
+
+ex:action30 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:lowerCabinet1 ;
+   ont:order 30 .
+
+ex:action31 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:smallMetalPot1 ;
+   ont:hasLocation ex:lowerCabinet1Interior ;
+   ont:order 31 .
+
+ex:action32 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:stackOfPlates1 ;
+   ont:hasLocation ex:countertopNearFridge ;
+   ont:order 32 .
+
+ex:action33 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:stackOfPlates1 ;
+   ont:hasLocation ex:lowerCabinet1Interior ;
+   ont:order 33 .
+
+ex:action34 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:lowerCabinet1 ;
+   ont:order 34 .
+
+ex:action35 a ont:PickUp ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:jamJar2 ;
+   ont:hasLocation ex:countertopNearStove ;
+   ont:order 35 .
+
+ex:action36 a ont:Open ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:fridge ;
+   ont:order 36 .
+
+ex:action37 a ont:Place ;
+   ont:hasAgent ex:robot ;
+   ont:hasObject ex:jamJar2 ;
+   ont:hasLocation ex:fridgeInterior ;
+   ont:order 37 .
+
+ex:action38 a ont:Close ;
+   ont:hasAgent ex:robot ;
+   ont:hasTarget ex:fridge ;
+   ont:order 38 .

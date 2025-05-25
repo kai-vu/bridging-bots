@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "assistant", "label": "assistant", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "bowl", "label": "bowl", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to broom closet", "label": "move to broom closet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "close drawer", "label": "close drawer", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "toaster", "label": "toaster", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "scan kitchen floor", "label": "scan kitchen floor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "scan kitchen counter", "label": "scan kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "knife", "label": "knife", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to kitchen counter", "label": "move to kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up knife", "label": "pick up knife", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "close broom closet door", "label": "close broom closet door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "open drawer", "label": "open drawer", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "scan kitchen area", "label": "scan kitchen area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "broom", "label": "broom", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up toaster", "label": "pick up toaster", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to cabinet", "label": "move to cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up broom", "label": "pick up broom", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to drawer", "label": "move to drawer", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "pick up bowl", "label": "pick up bowl", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "open cabinet door", "label": "open cabinet door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "move to kitchen area", "label": "move to kitchen area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "close cabinet door", "label": "close cabinet door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "scan kitchen table", "label": "scan kitchen table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "open broom closet door", "label": "open broom closet door", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen floor", "label": "kitchen floor", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "scanning", "label": "scanning", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "toaster slot", "label": "toaster slot", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen counter", "label": "kitchen counter", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "middle shelf of cabinet", "label": "middle shelf of cabinet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen table", "label": "kitchen table", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "knife holder", "label": "knife holder", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "kitchen area", "label": "kitchen area", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "broom closet", "label": "broom closet", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "711d3254-2e4f-4790-81bc-52a5f03418fa", "label": "711d3254-2e4f-4790-81bc-52a5f03418fa", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "assistant", "label": "identifies", "to": "bowl", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "move to broom closet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "close drawer", "width": 1}, {"arrows": "to", "from": "assistant", "label": "identifies", "to": "toaster", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "scan kitchen floor", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "scan kitchen counter", "width": 1}, {"arrows": "to", "from": "assistant", "label": "identifies", "to": "knife", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "move to kitchen counter", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up knife", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "close broom closet door", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "open drawer", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "scan kitchen area", "width": 1}, {"arrows": "to", "from": "assistant", "label": "identifies", "to": "broom", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up toaster", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "move to cabinet", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up broom", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "move to drawer", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "pick up bowl", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "open cabinet door", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "move to kitchen area", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "close cabinet door", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "scan kitchen table", "width": 1}, {"arrows": "to", "from": "assistant", "label": "hasAction", "to": "open broom closet door", "width": 1}, {"arrows": "to", "from": "kitchen floor", "label": "hasAffordance", "to": "scanning", "width": 1}, {"arrows": "to", "from": "toaster", "label": "isPlacedOn", "to": "toaster slot", "width": 1}, {"arrows": "to", "from": "kitchen counter", "label": "hasAffordance", "to": "scanning", "width": 1}, {"arrows": "to", "from": "bowl", "label": "isPlacedOn", "to": "middle shelf of cabinet", "width": 1}, {"arrows": "to", "from": "kitchen table", "label": "hasAffordance", "to": "scanning", "width": 1}, {"arrows": "to", "from": "knife", "label": "isPlacedOn", "to": "knife holder", "width": 1}, {"arrows": "to", "from": "kitchen area", "label": "hasAffordance", "to": "scanning", "width": 1}, {"arrows": "to", "from": "broom", "label": "isPlacedOn", "to": "broom closet", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

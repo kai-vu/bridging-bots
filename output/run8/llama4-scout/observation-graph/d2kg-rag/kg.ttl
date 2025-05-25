@@ -1,0 +1,143 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDiningArea a psr:Environment ;
+  rdfs:label "Kitchen and Dining Area"@en .
+
+ex:Kitchen a psr:Location ;
+  rdfs:label "Kitchen"@en ;
+  geo:sfWithin ex:KitchenAndDiningArea .
+
+ex:DiningArea a psr:Location ;
+  rdfs:label "Dining Area"@en ;
+  geo:sfWithin ex:KitchenAndDiningArea .
+
+ex:Cabinets a psr:Component ;
+  rdfs:label "Cabinets"@en ;
+  psr:CurrentLocation ex:Kitchen .
+
+ex:Countertops a psr:Component ;
+  rdfs:label "Countertops"@en ;
+  psr:CurrentLocation ex:Kitchen ;
+  psr:onTopOf ex:Cabinets .
+
+ex:Sink a psr:Component ;
+  rdfs:label "Sink"@en ;
+  psr:CurrentLocation ex:Kitchen ;
+  psr:onTopOf ex:Countertops .
+
+ex:UpperCabinets a psr:Component ;
+  rdfs:label "Upper Cabinets"@en ;
+  psr:CurrentLocation ex:Kitchen ;
+  geo:sfOverlaps ex:Countertops .
+
+ex:VentHood a psr:Component ;
+  rdfs:label "Vent Hood"@en ;
+  psr:CurrentLocation ex:Kitchen ;
+  geo:sfOverlaps ex:Countertops .
+
+ex:JarOfJam1 a psr:Object ;
+  rdfs:label "Jar of Jam 1"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:BoxOfJello a psr:Object ;
+  rdfs:label "Box of Jello"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:BoxOfAlpenSalt a psr:Object ;
+  rdfs:label "Box of Alpen Salt"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:BoxOfRiceBubbles a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:JarOfJam2 a psr:Object ;
+  rdfs:label "Jar of Jam 2"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:BoxOfShortbreadCookies a psr:Object ;
+  rdfs:label "Box of Shortbread Cookies"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:StackOfPlates a psr:Object ;
+  rdfs:label "Stack of Plates"@en ;
+  psr:CurrentLocation ex:Countertops .
+
+ex:Refrigerator a psr:Appliance ;
+  rdfs:label "Refrigerator"@en ;
+  psr:CurrentLocation ex:Kitchen .
+
+ex:Table a psr:Furniture ;
+  rdfs:label "Table"@en ;
+  psr:CurrentLocation ex:DiningArea .
+
+ex:Chair1 a psr:Furniture ;
+  rdfs:label "Chair 1"@en ;
+  psr:CurrentLocation ex:DiningArea .
+
+ex:Chair2 a psr:Furniture ;
+  rdfs:label "Chair 2"@en ;
+  psr:CurrentLocation ex:DiningArea .
+
+ex:Chair3 a psr:Furniture ;
+  rdfs:label "Chair 3"@en ;
+  psr:CurrentLocation ex:DiningArea .
+
+ex:Chair4 a psr:Furniture ;
+  rdfs:label "Chair 4"@en ;
+  psr:CurrentLocation ex:DiningArea .
+
+ex:BottleOfWater1 a psr:Object ;
+  rdfs:label "Bottle of Water 1"@en ;
+  psr:CurrentLocation ex:Table .
+
+ex:MilkBottle a psr:Object ;
+  rdfs:label "Milk Bottle"@en ;
+  psr:CurrentLocation ex:Table .
+
+ex:Cookbook a psr:Object ;
+  rdfs:label "Cookbook"@en ;
+  psr:CurrentLocation ex:Table .
+
+ex:PuzzleBox a psr:Object ;
+  rdfs:label "Puzzle Box"@en ;
+  psr:CurrentLocation ex:Table .
+
+ex:BottleOfWater2 a psr:Object ;
+  rdfs:label "Bottle of Water 2"@en ;
+  psr:CurrentLocation ex:Table .
+
+dul:hasComponent ex:KitchenAndDiningArea ex:Kitchen .
+dul:hasComponent ex:KitchenAndDiningArea ex:DiningArea .
+
+dul:hasLocation ex:Cabinets ex:Kitchen .
+dul:hasLocation ex:Countertops ex:Kitchen .
+dul:hasLocation ex:Sink ex:Kitchen .
+dul:hasLocation ex:UpperCabinets ex:Kitchen .
+dul:hasLocation ex:VentHood ex:Kitchen .
+dul:hasLocation ex:Refrigerator ex:Kitchen .
+
+dul:hasLocation ex:Table ex:DiningArea .
+dul:hasLocation ex:Chair1 ex:DiningArea .
+dul:hasLocation ex:Chair2 ex:DiningArea .
+dul:hasLocation ex:Chair3 ex:DiningArea .
+dul:hasLocation ex:Chair4 ex:DiningArea .
+
+geo:sfContains ex:Kitchen ex:Cabinets .
+geo:sfContains ex:Kitchen ex:Countertops .
+geo:sfContains ex:Kitchen ex:Sink .
+geo:sfContains ex:Kitchen ex:UpperCabinets .
+geo:sfContains ex:Kitchen ex:VentHood .
+geo:sfContains ex:Kitchen ex:Refrigerator .
+
+geo:sfContains ex:DiningArea ex:Table .
+geo:sfContains ex:DiningArea ex:Chair1 .
+geo:sfContains ex:DiningArea ex:Chair2 .
+geo:sfContains ex:DiningArea ex:Chair3 .
+geo:sfContains ex:DiningArea ex:Chair4 .

@@ -1,0 +1,123 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+
+@prefix : <http://example.org/data/> .
+
+# Environment
+:Environment1 a psr:Environment ;
+    rdfs:label "Kitchen Environment"@en .
+
+# Components
+:Counter a psr:Furniture ;
+    rdfs:label "Kitchen Counter"@en ;
+    dul:hasLocation :CounterLocation .
+
+:Refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation :RefrigeratorLocation .
+
+:Table a psr:Furniture ;
+    rdfs:label "Dining Table"@en ;
+    dul:hasLocation :TableLocation .
+
+:Chair1 a psr:Furniture ;
+    rdfs:label "Chair 1"@en ;
+    dul:hasLocation :Chair1Location .
+
+:Chair2 a psr:Furniture ;
+    rdfs:label "Chair 2"@en ;
+    dul:hasLocation :Chair2Location .
+
+:ObjectsOnCounter a psr:Object ;
+    rdfs:label "Objects on Counter"@en .
+
+# Locations
+:CounterLocation a soma:Location ;
+    geo:sfContains :ObjectA, :ObjectB .
+
+:RefrigeratorLocation a soma:Location .
+
+:TableLocation a soma:Location ;
+    geo:sfContains :Plate, :Cup .
+
+:Chair1Location a soma:Location ;
+    geo:sfContains :Chair1 .
+
+:Chair2Location a soma:Location ;
+    geo:sfContains :Chair2 .
+
+# Objects
+:ObjectA a psr:Object ;
+    rdfs:label "Jelly"@en ;
+    dul:hasLocation :ObjectsOnCounter ;
+    psr:hasAffordance :UsingObject .
+
+:ObjectB a psr:Object ;
+    rdfs:label "Box of Shortbread"@en ;
+    dul:hasLocation :ObjectsOnCounter ;
+    psr:hasAffordance :UsingObject .
+
+:Plate a psr:Object ;
+    rdfs:label "Plate"@en ;
+    dul:hasLocation :ObjectsOnCounter .
+
+:Cup a psr:Object ;
+    rdfs:label "Cup"@en ;
+    dul:hasLocation :ObjectsOnCounter .
+
+:Chair1 a psr:Furniture ;
+    rdfs:label "Chair"@en .
+
+:Chair2 a psr:Furniture ;
+    rdfs:label "Chair"@en .
+
+# Specific Object with affordances
+:ObjectWithAffordance a psr:Object ;
+    rdfs:label "Object with affordances"@en ;
+    dul:hasLocation :ObjectsOnCounter ;
+    psr:hasAffordance :PickingUp, :PuttingDown, :Holding .
+
+# Affordances
+:Pushing a psr:Affordance ;
+    rdfs:label "Pushing"@en .
+
+:Pulling a psr:Affordance ;
+    rdfs:label "Pulling"@en .
+
+:PickingUp a psr:Affordance ;
+    rdfs:label "Picking Up"@en .
+
+:PuttingDown a psr:Affordance ;
+    rdfs:label "Putting Down"@en .
+
+:Holding a psr:Affordance ;
+    rdfs:label "Holding"@en .
+
+# Relationships
+:Refrigerator dul:hasLocation :RefrigeratorLocation ;
+    psr:hasComponent :Refrigerator .
+
+:Counter dul:hasComponent :Counter .
+
+:Table dul:hasComponent :Table .
+
+:Chair1 dul:hasComponent :Chair1 .
+
+:Chair2 dul:hasComponent :Chair2 .
+
+:ObjectsOnCounter geo:sfContains :ObjectA, :ObjectB, :Plate, :Cup .
+
+:ObjectA psr:hasAffordance :PickingUp, :PuttingDown, :Holding .
+
+:ObjectB psr:hasAffordance :PickingUp, :PuttingDown, :Holding .
+
+# Locations (Relation with environment)
+:CounterLocation geo:sfWithin :Environment1 .
+:RefrigeratorLocation geo:sfWithin :Environment1 .
+:TableLocation geo:sfWithin :Environment1 .
+:Chair1Location geo:sfWithin :Environment1 .
+:Chair2Location geo:sfWithin :Environment1 .

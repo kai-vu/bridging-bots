@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-499aac74-fc62-429c-a5a8-ce1642177af3",
+    "created": 1748097349,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```markdown\n@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:   <http://example.org/data/> .\n\n@namespace psr \"http://example.org/data/\" .\n\n<http://example.org/data/robot_environment> a owl:Environment ;\n  rdfs:label \"Robot Environment\"@en .\n\n<http://example.org/data/table> a owl:Component ;\n  rdfs:label \"Table\"@en ;\n  psr:isWithin <http://example.org/data/room> .\n\n<http://example.org/data/room> a owl:Environment ;\n  rdfs:label \"Room\"@en ;\n  psr:isWithin <http://example.org/data/building> .\n\n<http://example.org/data/building> a owl:Environment ;\n  rdfs:label \"Building\"@en ;\n  psr:hasLocation <http://example.org/data/outdoors> .\n\n<http://example.org/data/outdoors> a owl:Location ;\n  rdfs:label \"Outdoors\"@en .\n\n<http://example.org/data/desk_chair> a owl:Component ;\n  rdfs:label \"Desk Chair\"@en ;\n  psr:isWithin <http://example.org/data/room> ;\n  psr:hasAffordance <http://example.org/data/pulling> ;\n  psr:hasAffordance <http://example.org/data/pushing> .\n\n<http://example.org/data/floor_lamp> a owl:Component ;\n  rdfs:label \"Floor Lamp\"@en ;\n  psr:isWithin <http://example.org/data/room> ;\n  psr:hasAffordance <http://example.org/data/turning_on> .\n\n<http://example.org/data/bookshelf> a owl:Component ;\n  rdfs:label \"Bookshelf\"@en ;\n  psr:isWithin <http://example.org/data/room> ;\n  psr:hasAffordance <http://example.org/data/picking_up> .\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 68.08,
+        "prompt_token/s": 2002.95,
+        "total_duration": 10879680699,
+        "load_duration": 49492099,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2044983567,
+        "eval_count": 596,
+        "completion_tokens": 596,
+        "eval_duration": 8754819051,
+        "approximate_total": "0h0m10s",
+        "total_tokens": 4692,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

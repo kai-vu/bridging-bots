@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-876bbfc2-6031-44e4-a1b0-dca95c5e43cc",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment is a kitchen and dining room. \nIn the kitchen, there are black cabinets with blue handles and a tan marble countertop. On the countertop, there are various items: a jar of jam, a box of Jell-O, a pack of Alpen Salt, a box of Rice Bubbles, a box of shortbread, a jar of jam, and a stack of paper plates. A sink with a pot on the stovetop is also present. Above the counter, there is a window and a vent hood. A white refrigerator is located next to the cabinets.\n\nIn the dining room, there is a wooden table with four white chairs. On the table, there are two bottles of water, a bowl of fruit, and a cookbook. A large light fixture hangs from the ceiling.\n\nThe floor is made of dark wood parquet, and the walls are painted white. The overall atmosphere suggests a clean and organized home environment.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748029882,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 192,
+        "prompt_tokens": 12500,
+        "total_tokens": 12692,
+        "completion_time": 0.390727779,
+        "prompt_time": 0.334845721,
+        "queue_time": 2.2356928910000002,
+        "total_time": 0.7255735
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzb6d6eeb9bemmxa8kjx1vm"
+    }
+}

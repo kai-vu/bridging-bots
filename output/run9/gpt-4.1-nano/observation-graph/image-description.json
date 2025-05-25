@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BalVjLSxGEllFvDbY4F2vKXAebGJo",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Objects visible include a series of food items and household items distributed across a kitchen and dining area. \n\nIn the kitchen area (first, third, and fourth images), a beige marble countertop is decorated with several food items, including a box of Jell-O, a box of rice bubbles, a small container of strawberry jam, a bottle of Alpen Salz, and a second container of jam. The countertop extends across the lower part of the scenes, with a black cabinet underneath featuring vertical silver handles. Above, a matching black cabinet and a wooden vent hood are mounted on the wall. A small window with a wooden frame is also present, positioned near the stove area that contains a small saucepan.\n\nIn the dining area (second and third images), a wooden table with a light finish holds additional items including a large water bottle, a glass of wine, a pitcher, and various snack items such as a red box of shortbread, a box of rice bubbles, a Chucky album cover, and additional jars of jam. Surrounding the table are high-back, white upholstered chairs.\n\nThe environment has white textured walls and a brown hardwood floor, with the wall junctions and doorframes visible at the back. A door with a simple panel design and a brushed metal handle separates the kitchen from the dining area, visible in the third and fourth images. The ceiling is white with a circular ceiling light.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748102139,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 278,
+        "prompt_tokens": 18687,
+        "total_tokens": 18965,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

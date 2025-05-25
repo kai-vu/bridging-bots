@@ -1,0 +1,285 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction ex:IdentifyMisplacedItemsAction ;
+    psr:hasAction ex:PickUpMisplacedItemsAction ;
+    psr:hasAction ex:ReturnItemsToStorageLocationsAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+    psr:precedes ex:PickUpMisplacedItemsAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:MisplacedItems .
+
+ex:PickUpMisplacedItemsAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:ReturnItemsToStorageLocationsAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:MisplacedItems ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnItemsToStorageLocationsAction a dul:Action ;
+    psr:follows ex:PickUpMisplacedItemsAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:MisplacedItems ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:MisplacedItems a psr:Object ;
+    rdfs:label "Misplaced items in the kitchen"@en .
+
+ex:RobotAgent a dul:Agent ;
+    rdfs:label "Robot agent performing the task"@en .
+
+ex:StackOfPlates a psr:Object ;
+    rdfs:label "Stack of white plates"@en .
+
+ex:JarOfJam1 a psr:Object ;
+    rdfs:label "Jar of jam on the counter"@en .
+
+ex:BoxOfJello a psr:Object ;
+    rdfs:label "Box of jello on the counter"@en .
+
+ex:BoxOfSalt a psr:Object ;
+    rdfs:label "Box of salt on the counter"@en .
+
+ex:PlasticBottle a psr:Object ;
+    rdfs:label "Plastic bottle on the dining table"@en .
+
+ex:Carton a psr:Object ;
+    rdfs:label "Carton on the dining table"@en .
+
+ex:Mug a psr:Object ;
+    rdfs:label "Mug on the dining table"@en .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Wine glass on the dining table"@en .
+
+ex:YellowCup a psr:Object ;
+    rdfs:label "Yellow cup on the counter next to the sink"@en .
+
+ex:BoxOfCrackers a psr:Object ;
+    rdfs:label "Box of crackers on the counter next to the sink"@en .
+
+ex:JarOfJam2 a psr:Object ;
+    rdfs:label "Jar of jam on the counter next to the sink"@en .
+
+ex:KitchenCabinets a psr:Furniture ;
+    rdfs:label "Black and beige kitchen cabinets"@en .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+    rdfs:label "White refrigerator next to the cabinets"@en .
+
+ex:DiningTable a psr:Furniture ;
+    rdfs:label "Wooden dining table"@en .
+
+ex:Countertop a psr:Furniture ;
+    rdfs:label "Beige marble countertop on the cabinets"@en .
+
+ex:IdentifyMisplacedItemsAction1 a dul:Action ;
+    psr:precedes ex:PickUpStackOfPlatesAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:StackOfPlates .
+
+ex:PickUpStackOfPlatesAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction1 ;
+    psr:precedes ex:ReturnStackOfPlatesToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:StackOfPlates ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnStackOfPlatesToStorageAction a dul:Action ;
+    psr:follows ex:PickUpStackOfPlatesAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:StackOfPlates ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction2 a dul:Action ;
+    psr:precedes ex:PickUpJarOfJam1Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam1 .
+
+ex:PickUpJarOfJam1Action a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction2 ;
+    psr:precedes ex:ReturnJarOfJam1ToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam1 ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnJarOfJam1ToStorageAction a dul:Action ;
+    psr:follows ex:PickUpJarOfJam1Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam1 ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction3 a dul:Action ;
+    psr:precedes ex:PickUpBoxOfJelloAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfJello .
+
+ex:PickUpBoxOfJelloAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction3 ;
+    psr:precedes ex:ReturnBoxOfJelloToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfJello ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnBoxOfJelloToStorageAction a dul:Action ;
+    psr:follows ex:PickUpBoxOfJelloAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfJello ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction4 a dul:Action ;
+    psr:precedes ex:PickUpBoxOfSaltAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfSalt .
+
+ex:PickUpBoxOfSaltAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction4 ;
+    psr:precedes ex:ReturnBoxOfSaltToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfSalt ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnBoxOfSaltToStorageAction a dul:Action ;
+    psr:follows ex:PickUpBoxOfSaltAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfSalt ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction5 a dul:Action ;
+    psr:precedes ex:PickUpPlasticBottleAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:PlasticBottle .
+
+ex:PickUpPlasticBottleAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction5 ;
+    psr:precedes ex:ReturnPlasticBottleToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:PlasticBottle ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnPlasticBottleToStorageAction a dul:Action ;
+    psr:follows ex:PickUpPlasticBottleAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:PlasticBottle ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction6 a dul:Action ;
+    psr:precedes ex:PickUpCartonAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Carton .
+
+ex:PickUpCartonAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction6 ;
+    psr:precedes ex:ReturnCartonToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Carton ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnCartonToStorageAction a dul:Action ;
+    psr:follows ex:PickUpCartonAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Carton ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction7 a dul:Action ;
+    psr:precedes ex:PickUpMugAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Mug .
+
+ex:PickUpMugAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction7 ;
+    psr:precedes ex:ReturnMugToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Mug ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnMugToStorageAction a dul:Action ;
+    psr:follows ex:PickUpMugAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:Mug ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction8 a dul:Action ;
+    psr:precedes ex:PickUpWineGlassAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:WineGlass .
+
+ex:PickUpWineGlassAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction8 ;
+    psr:precedes ex:ReturnWineGlassToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:WineGlass ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnWineGlassToStorageAction a dul:Action ;
+    psr:follows ex:PickUpWineGlassAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:WineGlass ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction9 a dul:Action ;
+    psr:precedes ex:PickUpYellowCupAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:YellowCup .
+
+ex:PickUpYellowCupAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction9 ;
+    psr:precedes ex:ReturnYellowCupToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:YellowCup ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnYellowCupToStorageAction a dul:Action ;
+    psr:follows ex:PickUpYellowCupAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:YellowCup ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction10 a dul:Action ;
+    psr:precedes ex:PickUpBoxOfCrackersAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfCrackers .
+
+ex:PickUpBoxOfCrackersAction a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction10 ;
+    psr:precedes ex:ReturnBoxOfCrackersToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfCrackers ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnBoxOfCrackersToStorageAction a dul:Action ;
+    psr:follows ex:PickUpBoxOfCrackersAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:BoxOfCrackers ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:IdentifyMisplacedItemsAction11 a dul:Action ;
+    psr:precedes ex:PickUpJarOfJam2Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam2 .
+
+ex:PickUpJarOfJam2Action a dul:Action ;
+    psr:follows ex:IdentifyMisplacedItemsAction11 ;
+    psr:precedes ex:ReturnJarOfJam2ToStorageAction ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam2 ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:ReturnJarOfJam2ToStorageAction a dul:Action ;
+    psr:follows ex:PickUpJarOfJam2Action ;
+    soma:isPerformedBy ex:RobotAgent ;
+    psr:actsOn ex:JarOfJam2 ;
+    psr:isAffordedBy soma:PuttingDown .

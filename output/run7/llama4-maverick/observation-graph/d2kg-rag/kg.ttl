@@ -1,0 +1,148 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en .
+
+ex:BlackCabinets a psr:Furniture ;
+    rdfs:label "Black Cabinets"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:TanMarbleCountertop a psr:Furniture ;
+    rdfs:label "Tan Marble Countertop"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WhiteRefrigerator a psr:Appliance ;
+    rdfs:label "White Refrigerator"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BoxOfJELLO a psr:Object ;
+    rdfs:label "Box of JELLO"@en ;
+    dul:hasLocation ex:TanMarbleCountertop .
+
+ex:JarOfRaspberryJam a psr:Object ;
+    rdfs:label "Jar of Raspberry Jam"@en ;
+    dul:hasLocation ex:TanMarbleCountertop .
+
+ex:BoxOfAlpenSalt a psr:Object ;
+    rdfs:label "Box of Alpen Salt"@en ;
+    dul:hasLocation ex:TanMarbleCountertop .
+
+ex:StackOfWhitePlates a psr:Object ;
+    rdfs:label "Stack of White Plates"@en ;
+    dul:hasLocation ex:TanMarbleCountertop .
+
+ex:Sink a psr:Object ;
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:TanMarbleCountertop .
+
+ex:Pot a psr:Object ;
+    rdfs:label "Pot"@en ;
+    dul:hasLocation ex:StoveTop .
+
+ex:StoveTop a psr:Appliance ;
+    rdfs:label "Stove Top"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:KitchenHood a psr:Appliance ;
+    rdfs:label "Kitchen Hood"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WoodenDiningTable a psr:Furniture ;
+    rdfs:label "Wooden Dining Table"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:WhiteChairs a psr:Furniture ;
+    rdfs:label "White Chairs"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BottleOfWater a psr:Object ;
+    rdfs:label "Bottle of Water"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Wine Glass"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:CoffeeTeaMug a psr:Object ;
+    rdfs:label "Coffee/Tea Mug"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:Plate a psr:Object ;
+    rdfs:label "Plate"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:Knife a psr:Object ;
+    rdfs:label "Knife"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:BoxOfSkonnbread a psr:Object ;
+    rdfs:label "Box of Skonnbread"@en ;
+    dul:hasLocation ex:WoodenDiningTable .
+
+ex:WhiteWalls a psr:Component ;
+    rdfs:label "White Walls"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BrownParquetFloor a psr:Component ;
+    rdfs:label "Brown Parquet Floor"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Door a psr:Object ;
+    rdfs:label "Door"@en ;
+    dul:hasLocation ex:Kitchen .
+
+ex:TanMarbleCountertop dul:hasComponent ex:BoxOfJELLO .
+ex:TanMarbleCountertop dul:hasComponent ex:JarOfRaspberryJam .
+ex:TanMarbleCountertop dul:hasComponent ex:BoxOfAlpenSalt .
+ex:TanMarbleCountertop dul:hasComponent ex:StackOfWhitePlates .
+ex:TanMarbleCountertop dul:hasComponent ex:Sink .
+
+ex:StoveTop dul:hasComponent ex:Pot .
+
+ex:WoodenDiningTable dul:hasComponent ex:BottleOfWater .
+ex:WoodenDiningTable dul:hasComponent ex:WineGlass .
+ex:WoodenDiningTable dul:hasComponent ex:CoffeeTeaMug .
+ex:WoodenDiningTable dul:hasComponent ex:Plate .
+ex:WoodenDiningTable dul:hasComponent ex:Knife .
+ex:WoodenDiningTable dul:hasComponent ex:BoxOfSkonnbread .
+
+ex:Kitchen dul:hasComponent ex:BlackCabinets .
+ex:Kitchen dul:hasComponent ex:TanMarbleCountertop .
+ex:Kitchen dul:hasComponent ex:WhiteRefrigerator .
+ex:Kitchen dul:hasComponent ex:StoveTop .
+ex:Kitchen dul:hasComponent ex:KitchenHood .
+ex:Kitchen dul:hasComponent ex:WoodenDiningTable .
+ex:Kitchen dul:hasComponent ex:WhiteChairs .
+ex:Kitchen dul:hasComponent ex:WhiteWalls .
+ex:Kitchen dul:hasComponent ex:BrownParquetFloor .
+ex:Kitchen dul:hasComponent ex:Door .
+
+ex:BoxOfJELLO dul:hasLocation ex:TanMarbleCountertop .
+ex:JarOfRaspberryJam dul:hasLocation ex:TanMarbleCountertop .
+ex:BoxOfAlpenSalt dul:hasLocation ex:TanMarbleCountertop .
+ex:StackOfWhitePlates dul:hasLocation ex:TanMarbleCountertop .
+ex:Sink dul:hasLocation ex:TanMarbleCountertop .
+ex:Pot dul:hasLocation ex:StoveTop .
+ex:BottleOfWater dul:hasLocation ex:WoodenDiningTable .
+ex:WineGlass dul:hasLocation ex:WoodenDiningTable .
+ex:CoffeeTeaMug dul:hasLocation ex:WoodenDiningTable .
+ex:Plate dul:hasLocation ex:WoodenDiningTable .
+ex:Knife dul:hasLocation ex:WoodenDiningTable .
+ex:BoxOfSkonnbread dul:hasLocation ex:WoodenDiningTable .
+
+ex:WhiteRefrigerator geo:sfWithin ex:Kitchen .
+ex:BlackCabinets geo:sfWithin ex:Kitchen .
+ex:TanMarbleCountertop geo:sfWithin ex:Kitchen .
+ex:StoveTop geo:sfWithin ex:Kitchen .
+ex:KitchenHood geo:sfWithin ex:Kitchen .
+ex:WoodenDiningTable geo:sfWithin ex:Kitchen .
+ex:WhiteChairs geo:sfWithin ex:Kitchen .
+ex:WhiteWalls geo:sfWithin ex:Kitchen .
+ex:BrownParquetFloor geo:sfWithin ex:Kitchen .
+ex:Door geo:sfWithin ex:Kitchen .

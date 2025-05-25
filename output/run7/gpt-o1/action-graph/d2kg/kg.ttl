@@ -1,0 +1,333 @@
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Instruction_1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
+    psr:hasWorkflow ex:Workflow_1 .
+
+ex:Workflow_1 a psr:Workflow ;
+    psr:hasAction ex:Action_1, ex:Action_2, ex:Action_3, ex:Action_4, ex:Action_5,
+                  ex:Action_6, ex:Action_7, ex:Action_8, ex:Action_9, ex:Action_10,
+                  ex:Action_11, ex:Action_12, ex:Action_13, ex:Action_14, ex:Action_15,
+                  ex:Action_16, ex:Action_17, ex:Action_18, ex:Action_19, ex:Action_20,
+                  ex:Action_21, ex:Action_22, ex:Action_23, ex:Action_24, ex:Action_25,
+                  ex:Action_26, ex:Action_27, ex:Action_28, ex:Action_29, ex:Action_30,
+                  ex:Action_31, ex:Action_32, ex:Action_33, ex:Action_34, ex:Action_35,
+                  ex:Action_36, ex:Action_37, ex:Action_38, ex:Action_39, ex:Action_40,
+                  ex:Action_41, ex:Action_42, ex:Action_43, ex:Action_44, ex:Action_45,
+                  ex:Action_46, ex:Action_47 .
+
+ex:Robot a dul:Agent .
+
+ex:LowerCabinet a psr:Furniture .
+ex:UpperCabinet a psr:Furniture .
+ex:Refrigerator a psr:Appliance .
+ex:TallBlackCabinet a psr:Furniture .
+
+ex:SmallPot a psr:Object .
+ex:OrangeMug a psr:Object .
+ex:BoxWithCartoonFace a psr:Object .
+ex:FruitSpreadJar a psr:Object .
+ex:WhiteDishesStack a psr:Object .
+ex:RiceBubblesBox a psr:Object .
+ex:RedBox a psr:Object .
+ex:StrawberryGelatinPackage a psr:Object .
+ex:SaltContainer a psr:Object .
+ex:LargeWaterBottle a psr:Object .
+ex:BlackRectCarton a psr:Object .
+ex:ClearPitcher a psr:Object .
+ex:StemmedGlass a psr:Object .
+
+#################################################################
+# Actions sequence
+#################################################################
+
+# Lower Cabinet sequence (Pot)
+ex:Action_1 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LowerCabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action_2 .
+
+ex:Action_2 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SmallPot ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_3 .
+
+ex:Action_3 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SmallPot ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_4 .
+
+ex:Action_4 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SmallPot ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_5 .
+
+ex:Action_5 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LowerCabinet ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes ex:Action_6 .
+
+# Upper Cabinet sequence (Mug, Boxes, Dishes, Salt, Pitcher, Glass, etc.)
+ex:Action_6 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:UpperCabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action_7 .
+
+ex:Action_7 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:OrangeMug ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_8 .
+
+ex:Action_8 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:OrangeMug ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_9 .
+
+ex:Action_9 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:OrangeMug ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_10 .
+
+ex:Action_10 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxWithCartoonFace ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_11 .
+
+ex:Action_11 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxWithCartoonFace ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_12 .
+
+ex:Action_12 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BoxWithCartoonFace ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_13 .
+
+ex:Action_13 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:WhiteDishesStack ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_14 .
+
+ex:Action_14 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:WhiteDishesStack ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_15 .
+
+ex:Action_15 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:WhiteDishesStack ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_16 .
+
+ex:Action_16 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RiceBubblesBox ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_17 .
+
+ex:Action_17 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RiceBubblesBox ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_18 .
+
+ex:Action_18 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RiceBubblesBox ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_19 .
+
+ex:Action_19 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RedBox ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_20 .
+
+ex:Action_20 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RedBox ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_21 .
+
+ex:Action_21 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:RedBox ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_22 .
+
+ex:Action_22 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StrawberryGelatinPackage ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_23 .
+
+ex:Action_23 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StrawberryGelatinPackage ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_24 .
+
+ex:Action_24 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StrawberryGelatinPackage ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_25 .
+
+ex:Action_25 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SaltContainer ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_26 .
+
+ex:Action_26 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SaltContainer ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_27 .
+
+ex:Action_27 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:SaltContainer ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_28 .
+
+ex:Action_28 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ClearPitcher ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_29 .
+
+ex:Action_29 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ClearPitcher ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_30 .
+
+ex:Action_30 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:ClearPitcher ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_31 .
+
+ex:Action_31 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StemmedGlass ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_32 .
+
+ex:Action_32 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StemmedGlass ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_33 .
+
+ex:Action_33 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:StemmedGlass ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_34 .
+
+ex:Action_34 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:UpperCabinet ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes ex:Action_35 .
+
+# Refrigerator sequence (FruitSpreadJar, LargeWaterBottle)
+ex:Action_35 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Refrigerator ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action_36 .
+
+ex:Action_36 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:FruitSpreadJar ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_37 .
+
+ex:Action_37 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:FruitSpreadJar ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_38 .
+
+ex:Action_38 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:FruitSpreadJar ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_39 .
+
+ex:Action_39 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LargeWaterBottle ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_40 .
+
+ex:Action_40 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LargeWaterBottle ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_41 .
+
+ex:Action_41 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:LargeWaterBottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_42 .
+
+ex:Action_42 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Refrigerator ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes ex:Action_43 .
+
+# Tall black cabinet sequence (BlackRectCarton)
+ex:Action_43 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:TallBlackCabinet ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:Action_44 .
+
+ex:Action_44 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BlackRectCarton ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:Action_45 .
+
+ex:Action_45 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BlackRectCarton ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:Action_46 .
+
+ex:Action_46 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:BlackRectCarton ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:Action_47 .
+
+ex:Action_47 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:TallBlackCabinet ;
+    psr:isAffordedBy soma:Closing .

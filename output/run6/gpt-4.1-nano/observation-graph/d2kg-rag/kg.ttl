@@ -1,0 +1,77 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+:Environment a :Environment .
+
+:KitchenSetup a :Room ;
+    :hasPart :LeftSide ;
+    :hasPart :RightSide .
+
+:LeftSide a :KitchenArea ;
+    :hasObject :KitchenCabinet , :BeigeCountertop .
+
+:KitchenCabinet a :Furniture ;
+    rdfs:label "Black kitchen cabinet" ;
+    :hasPart :Drawers , :Doors ;
+    :locatedBelow :Countertop .
+
+:Drawers a :FurniturePart .
+
+:Doors a :FurniturePart .
+
+:Countertop a :Surface ;
+    rdfs:label "beige countertop" ;
+    :hasObject :RedWhiteJar , :JELLOBox , :AlpineSalt , :StackedPlates .
+
+:RedWhiteJar a :Container ;
+    rdfs:label "red and white jar" .
+
+:JELLOBox a :Box ;
+    rdfs:label "JELLO" .
+
+:AlpineSalt a :Item ;
+    rdfs:label "small carton of Alpine salt" .
+
+:StackedPlates a :Items .
+
+:RightSide a :KitchenArea ;
+    :hasObject :BoxChucky , :RedWhiteJar2 , :Plate2 , :TransparentPitcher , :EvianBottle , :WineGlass , :CakeSlice .
+
+:BoxChucky a :Box ;
+    rdfs:label "box labeled \"CHUCKY\"" .
+
+:RedWhiteJar2 a :Container ;
+    rdfs:label "small red and white jar" .
+
+:Plate2 a :Plate .
+
+:TransparentPitcher a :Container ;
+    rdfs:label "transparent pitcher with a handle" .
+
+:EvianBottle a :Bottle ;
+    rdfs:label "large bottle of Evian water" .
+
+:WineGlass a :Glass .
+
+:CakeSlice a :Food .
+
+:Wall a :Wall ;
+    :hasPart :WhiteWalls .
+
+:WhiteWalls a :WallMaterial ;
+    rdfs:label "white walls" .
+
+:Window a :Window ;
+    rdfs:label "small wooden-framed rectangular window" ;
+    :locatedOn :Wall .
+
+:CeilingLight a :Light ;
+    rdfs:label "circular ceiling light" .
+
+:Floor a :Floor ;
+    :hasMaterial :WoodenParquet .
+
+:WoodenParquet a :FloorMaterial .

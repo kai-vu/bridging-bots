@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-bb56e7a4-62c9-4cbf-ae84-892110acb05a",
+    "created": 1747994590,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```turtle\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://example.com/psr#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix ex: <http://example.org/data/> .\n\n<http://www.w3.org/2002/07/owl#Environment> a owl:Class, rdfs:SubClassOf [ a owl:Class ] .\n<http://www.w3.org/2002/07/owl#Component> a owl:Class, rdfs:SubClassOf [ a owl:Class ] .\n<http://www.w3.org/2002/07/owl#Location> a owl:Class, rdfs:SubClassOf [ a owl:Class ] .\n<http://www.w3.org/2001/XMLSchema#string> a xsd:Datatype.\n\n<ex:CurrentEnvironment> a psr:Environment .\n<ex:ObjectOnTable> a psr:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .\n<ex:Table> a psr:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .\n\n<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:Door> a psr:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:ClosingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:Wall> a psr:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:ClosingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:PullingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:PuttingDownOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:OpeningOnDoor> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:ClosingOnDoor> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:PushingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n\n<ex:GraspingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 68.57,
+        "prompt_token/s": 2018.4,
+        "total_duration": 14174967924,
+        "load_duration": 49991882,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2029329448,
+        "eval_count": 827,
+        "completion_tokens": 827,
+        "eval_duration": 12060229740,
+        "approximate_total": "0h0m14s",
+        "total_tokens": 4923,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

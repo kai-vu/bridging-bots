@@ -1,0 +1,45 @@
+@prefix ex: <http://example.org/data/> .
+
+ex:IdentifyMisplacedItems a ontology:Action ;
+    ontology:targetsObject ?objectsOnCounter .
+
+?objectsOnCounter a ontology:Object , ontology:MisplacedObject ;
+    ontology:locatedIn environment:Countertop .
+
+ex:PickUpMisplacedItem a ontology:Action ;
+    ontology:hasTarget ?misplacedObject ;
+    ontology:performedBy robot:Robot .
+
+?misplacedObject a ontology:Object , ontology:MisplacedObject ;
+    ontology:locatedIn environment:Countertop .
+
+ex:DetermineTargetStorageLocation a ontology:Action ;
+    ontology:basedOnObjectType ?misplacedObject .
+
+?misplacedObject a ontology:Object ;
+    ontology:hasType ?objectType .
+
+?objectType a ontology:ObjectType ;
+    ontology:standardStorageLocation ?standardLocation .
+
+ex:MoveObjectToStorage a ontology:Action ;
+    ontology:hasTarget ?misplacedObject ;
+    ontology:destination ?standardLocation .
+
+?standardLocation a ontology:Location .
+
+ex:RestoreKitchenState a ontology:CompositeAction ;
+    ontology:includes ex:IdentifyMisplacedItems, ex:PickUpMisplacedItem, ex:DetermineTargetStorageLocation, ex:MoveObjectToStorage .
+
+# Sequence:
+ex:IdentifyMisplacedItems a ontology:Action ;
+    ontology:nextAction ex:PickUpMisplacedItem .
+
+ex:PickUpMisplacedItem a ontology:Action ;
+    ontology:nextAction ex:DetermineTargetStorageLocation .
+
+ex:DetermineTargetStorageLocation a ontology:Action ;
+    ontology:nextAction ex:MoveObjectToStorage .
+
+ex:MoveObjectToStorage a ontology:Action ;
+    ontology:nextAction null .

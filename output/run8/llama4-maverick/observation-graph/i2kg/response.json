@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-d438afc8-fab1-4646-87e6-d6d7c2112128",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:Environment1 a psr:Environment ;\n    dul:hasComponent ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:Table1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Chair4, ex:Sink1, ex:Stove1, ex:Cabinet3 .\n\nex:Cabinet1 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\nex:Cabinet2 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\nex:Cabinet3 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\nex:Refrigerator1 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\nex:Table1 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    psr:hasAffordance soma:Supporting .\n\nex:Chair1 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    psr:hasAffordance soma:Sitting .\n\nex:Chair2 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    psr:hasAffordance soma:Sitting .\n\nex:Chair3 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    psr:hasAffordance soma:Sitting .\n\nex:Chair4 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    psr:hasAffordance soma:Sitting .\n\nex:Sink1 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Containing .\n\nex:Stove1 a psr:Appliance ;\n    dul:hasLocation ex:Kitchen1 ;\n    psr:hasAffordance soma:Heating .\n\nex:JelloBox1 a psr:Object ;\n    dul:hasLocation ex:CounterTop1 ;\n    psr:hasAffordance soma:Containing .\n\nex:AlpenSaltBox1 a psr:Object ;\n    dul:hasLocation ex:CounterTop1 ;\n    psr:hasAffordance soma:Containing .\n\nex:EvianBottle1 a psr:Object ;\n    dul:hasLocation ex:Table1 ;\n    psr:hasAffordance soma:Containing .\n\nex:CounterTop1 a psr:Component ;\n    dul:hasLocation ex:Kitchen1 .\n\nex:Kitchen1 a soma:Location .\n\nex:DiningRoom1 a soma:Location .\n\nex:Kitchen1 geo:sfContains ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:Sink1, ex:Stove1 .\nex:DiningRoom1 geo:sfContains ex:Table1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Chair4 .\n\nex:CounterTop1 psr:onTopOf ex:Cabinet1 .\nex:JelloBox1 psr:onTopOf ex:CounterTop1 .\nex:AlpenSaltBox1 psr:onTopOf ex:CounterTop1 .\nex:EvianBottle1 psr:onTopOf ex:Table1 .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748098081,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_feed890e3d",
+    "usage": {
+        "completion_tokens": 849,
+        "prompt_tokens": 13932,
+        "total_tokens": 14781,
+        "completion_time": 1.13240757,
+        "prompt_time": 0.300558501,
+        "queue_time": 5.0615349819999995,
+        "total_time": 1.432966071
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jw1c7ktyf8c91dbdky2ea83a"
+    }
+}

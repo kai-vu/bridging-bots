@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BaUqgE5wrq7FPEAz2jASpr1CLGzhA",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:KitchenEnv a psr:Environment ;\n   dul:hasComponent ex:Fridge,\n                    ex:Countertop,\n                    ex:WallCabinet,\n                    ex:LowerCabinet,\n                    ex:DiningTable,\n                    ex:DiningChair1,\n                    ex:DiningChair2,\n                    ex:DiningChair3,\n                    ex:DiningChair4,\n                    ex:JelloBox,\n                    ex:StrawberryJam,\n                    ex:AlpenSalt,\n                    ex:ChuckyCereal,\n                    ex:RiceBubbles,\n                    ex:PlateStack,\n                    ex:Pot,\n                    ex:Mug,\n                    ex:EvianBottle,\n                    ex:FruitBowl,\n                    ex:Pitcher,\n                    ex:Glass,\n                    ex:TeaBox .\n\nex:Fridge a psr:Appliance ;\n   psr:hasAffordance soma:Opening,\n                      soma:Closing .\n\nex:Countertop a psr:Furniture .\n\nex:WallCabinet a psr:Furniture ;\n   psr:hasAffordance soma:Opening,\n                      soma:Closing .\n\nex:LowerCabinet a psr:Furniture ;\n   psr:hasAffordance soma:Opening,\n                      soma:Closing .\n\nex:DiningTable a psr:Furniture .\n\nex:DiningChair1 a psr:Furniture .\nex:DiningChair2 a psr:Furniture .\nex:DiningChair3 a psr:Furniture .\nex:DiningChair4 a psr:Furniture .\n\nex:JelloBox a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:StrawberryJam a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:AlpenSalt a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:ChuckyCereal a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:RiceBubbles a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:PlateStack a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:Pot a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:Mug a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:EvianBottle a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:FruitBowl a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:Pitcher a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:Glass a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:TeaBox a psr:Object ;\n   psr:hasAffordance soma:PickingUp,\n                      soma:PuttingDown .\n\nex:CountertopSurface a psr:CurrentLocation ;\n   psr:onTopOf ex:Countertop .\n\nex:TableSurface a psr:CurrentLocation ;\n   psr:onTopOf ex:DiningTable .\n\nex:JelloBox dul:hasLocation ex:CountertopSurface .\nex:StrawberryJam dul:hasLocation ex:CountertopSurface .\nex:AlpenSalt dul:hasLocation ex:CountertopSurface .\nex:ChuckyCereal dul:hasLocation ex:CountertopSurface .\nex:RiceBubbles dul:hasLocation ex:CountertopSurface .\nex:PlateStack dul:hasLocation ex:CountertopSurface .\nex:Pot dul:hasLocation ex:CountertopSurface .\nex:Mug dul:hasLocation ex:CountertopSurface .\n\nex:EvianBottle dul:hasLocation ex:TableSurface .\nex:FruitBowl dul:hasLocation ex:TableSurface .\nex:Pitcher dul:hasLocation ex:TableSurface .\nex:Glass dul:hasLocation ex:TableSurface .\nex:TeaBox dul:hasLocation ex:TableSurface .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748038090,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4571,
+        "prompt_tokens": 5068,
+        "total_tokens": 9639,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 3520,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 4736
+        }
+    }
+}

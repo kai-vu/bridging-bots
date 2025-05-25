@@ -1,0 +1,187 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+
+psr:Instruction a owl:Class, dul:Entity ;
+    rdfs:label "Instruction"@en ;
+    rdfs:comment "An instruction is a command or directive given to a robot."@en .
+
+psr:Workflow a owl:Class, dul:Entity ;
+    rdfs:subClassOf dul:Workflow ;
+    rdfs:label "Workflow"@en ;
+    rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
+
+dul:Action a owl:Class, dul:Entity ;
+    rdfs:label "Action"@en ;
+    rdfs:comment "An action is an atomic, single, clear action that is carried out to fulfil the instruction."@en .
+
+dul:Agent a owl:Class, dul:Entity ;
+    rdfs:label "Agent"@en ;
+    rdfs:comment "An agent performing an action."@en .
+
+psr:Component a owl:Class, dul:Entity ;
+    rdfs:label "Component"@en ;
+    rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
+
+psr:Appliance a psr:Component ;
+    rdfs:label "Appliance"@en ;
+    rdfs:comment "An appliance is a type of component."@en .
+
+psr:Furniture a psr:Component ;
+    rdfs:label "Furniture"@en ;
+    rdfs:comment "A furniture is a type of component."@en .
+
+psr:Object a psr:Component ;
+    rdfs:label "Object"@en ;
+    rdfs:comment "An object is a type of component."@en .
+
+psr:Affordance a owl:Class, dul:Entity ;
+    rdfs:label "Affordance"@en ;
+    rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
+
+soma:Closing a psr:Affordance ;
+    rdfs:label "Closing"@en ;
+    rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
+
+soma:Opening a psr:Affordance ;
+    rdfs:label "Opening"@en ;
+    rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
+
+soma:Delivering a psr:Affordance ;
+    rdfs:label "Delivering"@en ;
+    rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
+
+soma:Holding a psr:Affordance ;
+    rdfs:label "Holding"@en ;
+    rdfs:comment "Holding is an affordance that enables a component to be held."@en .
+
+soma:PickingUp a psr:Affordance ;
+    rdfs:label "PickingUp"@en ;
+    rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
+
+soma:PuttingDown a psr:Affordance ;
+    rdfs:label "PuttingDown"@en ;
+    rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
+
+soma:Pulling a psr:Affordance ;
+    rdfs:label "Pulling"@en ;
+    rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
+
+soma:Pushing a psr:Affordance ;
+    rdfs:label "Pushing"@en ;
+    rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
+
+soma:Grasping a psr:Affordance ;
+    rdfs:label "Grasping"@en ;
+    rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
+
+###################################
+# OBJECT PROPERTIES
+###################################
+
+psr:hasWorkflow a owl:ObjectProperty ;
+    rdfs:domain psr:Instruction ;
+    rdfs:range psr:Workflow ;
+    rdfs:label "has workflow"@en ;
+    rdfs:comment "An instruction has a workflow that needs to be executed."@en .
+
+psr:hasAction a owl:ObjectProperty ;
+    rdfs:domain psr:Workflow ;
+    rdfs:range dul:Action ;
+    rdfs:label "has action"@en ;
+    rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
+
+psr:precedes a owl:ObjectProperty ;
+    rdfs:subPropertyOf  dul:precedes ;
+    rdfs:domain dul:Action ;
+    rdfs:range dul:Action ;
+    rdfs:label "precedes" ;
+    rdfs:comment "An action can precede another action."@en .
+
+psr:follows a owl:ObjectProperty ;
+    rdfs:subPropertyOf dul:follows ;
+    rdfs:domain dul:Action ;
+    rdfs:range dul:Action ;
+    rdfs:label "follow" ;
+    rdfs:comment "An action can follow another action."@en .
+
+soma:isPerformedBy a owl:ObjectProperty ;
+    rdfs:domain dul:Action ;
+    rdfs:range dul:Agent ;
+    rdfs:label "is performed by"@en ;
+    rdfs:comment "An action is performed by an agent."@en .
+
+psr:actsOn a owl:ObjectProperty ;
+    rdfs:domain dul:Action ;
+    rdfs:range psr:Component ;
+    rdfs:label "acts on"@en ;
+    rdfs:comment "An action acts on a component."@en .
+
+psr:isAffordedBy a owl:ObjectProperty ;
+    rdfs:domain dul:Action ;
+    rdfs:range psr:Affordance ;
+    rdfs:label "is afforded by"@en ;
+    rdfs:comment "An action is afforded by an affordance."@en .
+
+#################################################################
+# Define objects and actions for spatial understanding
+#################################################################
+
+# Objects: misplaced items in the environment
+psr:MisplacedObject a psr:Object ;
+    rdfs:label "Misplaced Object"@en .
+
+# Standard storage locations
+psr:StorageLocation a psr:Furniture, psr:Object ;
+    rdfs:label "Storage Location"@en .
+
+# Action: pick up misplaced object
+psr:PickUpMisplacedObject a dul:Action ;
+    rdfs:label "Pick Up Misplaced Object" ;
+    rdfs:comment "Pick up the misplaced object from its current location." .
+
+# Action: put down object into storage
+psr:PutObjectInStorage a dul:Action ;
+    rdfs:label "Put Object in Storage" ;
+    rdfs:comment "Place the object into its designated storage location." .
+
+# Agent: robot
+ex:Robot a dul:Agent ;
+    rdfs:label "Robot" .
+
+# Workflow: organize kitchen
+psr:OrganizeKitchenWorkflow a psr:Workflow ;
+    rdfs:label "Organize Kitchen Workflow" .
+
+# Instructions and actions sequence
+<:#Instruction1> a psr:Instruction ;
+    rdfs:hasNaturalLanguage "Identify all misplaced items and retrieve them." ;
+    psr:hasWorkflow psr:KitchenWorkflow1 .
+
+psr:KitchenWorkflow1 a psr:Workflow ;
+    psr:hasAction psr:PickUpMisplacedObject1, psr:PutObjectInStorage1 .
+
+psr:PickUpMisplacedObject1 a dul:Action ;
+    rdfs:label "Pick up misplaced object" .
+
+psr:PutObjectInStorage1 a dul:Action ;
+    rdfs:label "Put object into correct storage" .
+
+psr:PickUpMisplacedObject1 psr:isPerformedBy ex:Robot ;
+psr:PutObjectInStorage1 psr:isPerformedBy ex:Robot .
+
+psr:PickUpMisplacedObject1 psr:actsOn psr:MisplacedObject .
+psr:PutObjectInStorage1 psr:actsOn psr:MisplacedObject .
+
+# The sequence order
+psr:PickUpMisplacedObject1 psr:precedes psr:PutObjectInStorage1 .
+
+# Final step
+psr:CompleteRestoration a psr:Instruction ;
+    rdfs:label "Complete the organization of the kitchen." ;
+    psr:hasWorkflow psr:KitchenWorkflow1 .

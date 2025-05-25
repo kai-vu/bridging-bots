@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BaTDLFmQt4OleCNITbaKHbjjjlJlv",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "In the environment, there is a kitchen setup with various objects. \n\nOn the left side, there is a black kitchen cabinet with several drawers and doors, located beneath a beige countertop. On the countertop, there are some items: a red and white jar, a red box labeled \"JELLO,\" a small carton of Alpine salt, and some stacked plates. \n\nAdjacent to the countertop, there is a white refrigerator positioned near the corner, with black handles. \n\nOn the right side, there is another section of the beige countertop with more objects: a box labeled \"CHUCKY,\" a small red and white jar, a plate, a transparent pitcher with a handle, a large bottle of Evian water, a small wine glass, and a slice of cake. Above this section, dark gray cabinets are mounted on the wall. \n\nThe environment has white walls, with a small wooden-framed rectangular window on the wall behind the countertop, and a circular ceiling light providing illumination. The floor is made of wooden parquet.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748031807,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 206,
+        "prompt_tokens": 18687,
+        "total_tokens": 18893,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@prefix psr: <http://example.org/psr#>
+@prefix dul: <http://www.w3.org/2007/gldata/docs/example/dul-onto#>
+@prefix owl: <http://www.w3.org/2004/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix rdf: <http://www.w3.org/1999/01/rdf-syntax-ns#>
+
+# Robot Task Sequence
+
+psr:Instruction a psr:Task {
+  dul:workflow psr:Workflow {
+    dul:action a dul:Action {
+      psr:affordance psr:Affordance {
+        dul:component a dul:Appliance {
+          dul:type "dishwasher" .
+        }
+      }.
+      psr:agent a dul:RobotAgent {
+        psr:name "Kitchen Robot" .
+      }.
+      psr:component a dul:Furniture {
+        dul:type "table" .
+      }.
+      rdf:label "Turn on the dishwasher."@en .
+    }.
+    psr:precedes psr:Affordance {
+      dul:component a dul:Appliance {
+        dul:type "oven" .
+      }.
+    }.
+    psr:follows psr:Affordance {
+      dul:component a dul:Furniture {
+        dul:type "drawer" .
+      }.
+    }.
+    rdf:label "Load dishes into the dishwasher."@en .
+  }.
+  psr:affordance psr:Affordance {
+    dul:component a dul:Furniture {
+      dul:type "sink" .
+    }.
+  }.
+  rdf:label "Wash dishes in the sink."@en .
+}

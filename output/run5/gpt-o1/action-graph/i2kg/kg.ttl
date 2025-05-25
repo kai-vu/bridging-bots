@@ -1,0 +1,136 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix :       <http://example.org#> .
+
+:RestoreKitchenInstruction a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    psr:hasWorkflow :KitchenWorkflow_1 .
+
+:KitchenWorkflow_1 a psr:Workflow ;
+    psr:hasAction :OpenCabinetDoor_1 ,
+                   :PickUpCerealBox_1 ,
+                   :PutDownCerealBox_1 ,
+                   :PickUpJello_1 ,
+                   :PutDownJello_1 ,
+                   :PickUpSalt_1 ,
+                   :PutDownSalt_1 ,
+                   :PickUpPlates_1 ,
+                   :PutDownPlates_1 ,
+                   :CloseCabinetDoor_1 ,
+                   :OpenFridgeDoor_1 ,
+                   :PickUpJam_1 ,
+                   :PutDownJam_1 ,
+                   :PickUpWaterBottle_1 ,
+                   :PutDownWaterBottle_1 ,
+                   :CloseFridgeDoor_1 .
+
+:Robot a dul:Agent .
+:CabinetDoor_1 a psr:Component .
+:FridgeDoor_1 a psr:Component .
+:CerealBox_1 a psr:Object .
+:Jello_1 a psr:Object .
+:Salt_1 a psr:Object .
+:Plates_1 a psr:Object .
+:Jam_1 a psr:Object .
+:WaterBottle_1 a psr:Object .
+
+:OpenCabinetDoor_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :CabinetDoor_1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes :PickUpCerealBox_1 .
+
+:PickUpCerealBox_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :CerealBox_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownCerealBox_1 .
+
+:PutDownCerealBox_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :CerealBox_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :PickUpJello_1 .
+
+:PickUpJello_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Jello_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownJello_1 .
+
+:PutDownJello_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Jello_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :PickUpSalt_1 .
+
+:PickUpSalt_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Salt_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownSalt_1 .
+
+:PutDownSalt_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Salt_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :PickUpPlates_1 .
+
+:PickUpPlates_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Plates_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownPlates_1 .
+
+:PutDownPlates_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Plates_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :CloseCabinetDoor_1 .
+
+:CloseCabinetDoor_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :CabinetDoor_1 ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes :OpenFridgeDoor_1 .
+
+:OpenFridgeDoor_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :FridgeDoor_1 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes :PickUpJam_1 .
+
+:PickUpJam_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Jam_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownJam_1 .
+
+:PutDownJam_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :Jam_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :PickUpWaterBottle_1 .
+
+:PickUpWaterBottle_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :WaterBottle_1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes :PutDownWaterBottle_1 .
+
+:PutDownWaterBottle_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :WaterBottle_1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes :CloseFridgeDoor_1 .
+
+:CloseFridgeDoor_1 a dul:Action ;
+    soma:isPerformedBy :Robot ;
+    psr:actsOn :FridgeDoor_1 ;
+    psr:isAffordedBy soma:Closing .

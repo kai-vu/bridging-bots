@@ -1,0 +1,68 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:kitchen a psr:Environment .
+ex:diningTable a psr:Component ;
+    rdfs:label "Dining Table"@en .
+ex:refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en .
+ex:microWaveOven a psr:Component ;
+    rdfs:label "Micro Wave Oven"@en .
+ex:toaster a psr:Component ;
+    rdfs:label "Toaster"@en .
+ex:sink a psr:Component ;
+    rdfs:label "Sink"@en .
+ex:window a psr:Component ;
+    rdfs:label "Window"@en .
+ex:kitchenCounter a psr:Component ;
+    rdfs:label "Kitchen Counter"@en .
+ex:cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en .
+ex:packagedFoodProduct a psr:Component ;
+    rdfs:label "Packaged Food Product"@en .
+ex:plasticBottle a psr:Component ;
+    rdfs:label "Plastic Bottle"@en .
+ex:cup a psr:Component ;
+    rdfs:label "Cup"@en .
+ex:foodItem a psr:Component ;
+    rdfs:label "Food Item"@en .
+
+ex:kitchen dul:hasComponent ex:diningTable .
+ex:kitchen dul:hasComponent ex:refrigerator .
+ex:kitchen dul:hasComponent ex:microWaveOven .
+ex:kitchen dul:hasComponent ex:toaster .
+ex:kitchen dul:hasComponent ex:sink .
+ex:kitchen dul:hasComponent ex:window .
+ex:kitchen dul:hasComponent ex:kitchenCounter .
+ex:kitchen dul:hasComponent ex:cabinet .
+ex:kitchen dul:hasComponent ex:packagedFoodProduct .
+ex:kitchen dul:hasComponent ex:plasticBottle .
+ex:kitchen dul:hasComponent ex:cup .
+ex:kitchen dul:hasComponent ex:foodItem .
+
+ex:diningTable dul:hasLocation ex:kitchen .
+ex:refrigerator dul:hasLocation ex:kitchen .
+ex:microWaveOven dul:hasLocation ex:kitchenCounter .
+ex:toaster dul:hasLocation ex:kitchenCounter .
+ex:sink dul:hasLocation ex:kitchen .
+ex:window dul:hasLocation ex:kitchen .
+ex:kitchenCounter dul:hasLocation ex:kitchen .
+ex:cabinet dul:hasLocation ex:kitchen .
+ex:packagedFoodProduct dul:hasLocation ex:diningTable .
+ex:plasticBottle dul:hasLocation ex:diningTable .
+ex:cup dul:hasLocation ex:kitchenCounter .
+ex:foodItem dul:hasLocation ex:kitchenCounter .
+
+ex:diningTable geo:sfWithin ex:kitchen .
+ex:refrigerator geo:sfWithin ex:kitchen .
+ex:microWaveOven geo:sfWithin ex:kitchen .
+ex:toaster geo:sfWithin ex:kitchen .
+ex:sink geo:sfWithin ex:kitchen .
+ex:window geo:sfWithin ex:kitchen .
+ex:kitchenCounter geo:sfWithin ex:kitchen .
+ex:cabinet geo:sfWithin ex:kitchen .

@@ -1,0 +1,27 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:kitchen kitchen:hasComponent kitchen:black_cabinets,
+        kitchen:brown_parquet_floor,
+        kitchen:door,
+        kitchen:kitchen_hood,
+        kitchen:tan_marble_countertop,
+        kitchen:white_refrigerator,
+        kitchen:white_walls,
+        kitchen:wooden_dining_table .
+
+kitchen:stove_top kitchen:hasAffordance kitchen:cooking ;
+    kitchen:onTopOf kitchen:pot .
+
+kitchen:tan_marble_countertop kitchen:hasLocation kitchen:sink ;
+    kitchen:onTopOf kitchen:box_of__Alpen_Salt_,
+        kitchen:box_of__JELLO_,
+        kitchen:jar_of__Raspberry_Jam_,
+        kitchen:stack_of_white_plates .
+
+kitchen:wooden_dining_table kitchen:onTopOf kitchen:bottle_of_water,
+        kitchen:box_of__Skonnbread_,
+        <http://example.org/kitchen#coffee/tea_mug>,
+        kitchen:knife,
+        kitchen:plate,
+        kitchen:wine_glass .
+

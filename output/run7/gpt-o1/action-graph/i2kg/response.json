@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BaV4qBgqspHXUNXmh8ZLlR2zNGaCf",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix psr:    <https://w3id.org/psr-action#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix :       <http://example.org/kb#> .\n\n:Instruction_1 a psr:Instruction ;\n    psr:hasNaturalLanguage \"Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically.\" ;\n    psr:hasWorkflow :Workflow_1 .\n\n:Workflow_1 a psr:Workflow ;\n    psr:hasAction :Action_1, :Action_2, :Action_3, :Action_4, :Action_5, :Action_6,\n                  :Action_7, :Action_8, :Action_9, :Action_10, :Action_11, :Action_12,\n                  :Action_13, :Action_14 .\n\n:Robot a dul:Agent .\n\n:Fridge a psr:Appliance .\n:Cabinet a psr:Furniture .\n\n:Jam a psr:Object .\n:WaterBottle a psr:Object .\n:Cereal a psr:Object .\n:Plates a psr:Object .\n:Pot a psr:Object .\n\n:Action_1 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Jam ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes :Action_2 .\n\n:Action_2 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Fridge ;\n    psr:isAffordedBy soma:Opening ;\n    psr:follows :Action_1 ;\n    psr:precedes :Action_3 .\n\n:Action_3 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Jam ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows :Action_2 ;\n    psr:precedes :Action_4 .\n\n:Action_4 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :WaterBottle ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows :Action_3 ;\n    psr:precedes :Action_5 .\n\n:Action_5 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :WaterBottle ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows :Action_4 ;\n    psr:precedes :Action_6 .\n\n:Action_6 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Fridge ;\n    psr:isAffordedBy soma:Closing ;\n    psr:follows :Action_5 ;\n    psr:precedes :Action_7 .\n\n:Action_7 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Cereal ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows :Action_6 ;\n    psr:precedes :Action_8 .\n\n:Action_8 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Cabinet ;\n    psr:isAffordedBy soma:Opening ;\n    psr:follows :Action_7 ;\n    psr:precedes :Action_9 .\n\n:Action_9 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Cereal ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows :Action_8 ;\n    psr:precedes :Action_10 .\n\n:Action_10 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Plates ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows :Action_9 ;\n    psr:precedes :Action_11 .\n\n:Action_11 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Plates ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows :Action_10 ;\n    psr:precedes :Action_12 .\n\n:Action_12 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Pot ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:follows :Action_11 ;\n    psr:precedes :Action_13 .\n\n:Action_13 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Pot ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows :Action_12 ;\n    psr:precedes :Action_14 .\n\n:Action_14 a dul:Action ;\n    soma:isPerformedBy :Robot ;\n    psr:actsOn :Cabinet ;\n    psr:isAffordedBy soma:Closing ;\n    psr:follows :Action_13 .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748038968,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4873,
+        "prompt_tokens": 5219,
+        "total_tokens": 10092,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 3712,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 4864
+        }
+    }
+}

@@ -1,0 +1,199 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenAndDining a psr:Environment ;
+    dul:hasComponent ex:blackCabinets,
+                     ex:counter,
+                     ex:sink,
+                     ex:stove,
+                     ex:rangeHood,
+                     ex:pot,
+                     ex:orangeMug,
+                     ex:cartoonBox,
+                     ex:jarOfFruitSpread,
+                     ex:stackWhiteDishes,
+                     ex:riceBubblesBox,
+                     ex:redBox,
+                     ex:strawberryGelatinPackage,
+                     ex:saltContainer,
+                     ex:tallBlackCabinet,
+                     ex:whiteRefrigerator,
+                     ex:woodenTable,
+                     ex:chair1,
+                     ex:chair2,
+                     ex:chair3,
+                     ex:chair4,
+                     ex:whiteBowl,
+                     ex:roundFruits,
+                     ex:largeWaterBottle,
+                     ex:blackCarton,
+                     ex:clearPitcher,
+                     ex:stemmedGlass,
+                     ex:whiteDoor .
+
+ex:blackCabinets a psr:Furniture ;
+    psr:hasAffordance ex:blackCabinetsOpen,
+                      ex:blackCabinetsClose .
+
+ex:blackCabinetsOpen a soma:Opening .
+ex:blackCabinetsClose a soma:Closing .
+
+ex:counter a psr:Furniture .
+
+ex:sink a psr:Object ;
+    dul:hasLocation ex:sinkLocation .
+
+ex:sinkLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:counter .
+
+ex:stove a psr:Appliance ;
+    dul:hasLocation ex:stoveLocation .
+
+ex:stoveLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:counter .
+
+ex:rangeHood a psr:Appliance ;
+    dul:hasLocation ex:rangeHoodLocation .
+
+ex:rangeHoodLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:KitchenAndDining .
+
+ex:pot a psr:Object ;
+    dul:hasLocation ex:onStoveLocation ;
+    psr:hasAffordance ex:potPickUpAffordance,
+                      ex:potPutDownAffordance .
+
+ex:onStoveLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:stove .
+
+ex:potPickUpAffordance a soma:PickingUp .
+ex:potPutDownAffordance a soma:PuttingDown .
+
+ex:counterTopLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:counter .
+
+ex:orangeMug a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:orangeMugPickUp,
+                      ex:orangeMugPutDown .
+
+ex:orangeMugPickUp a soma:PickingUp .
+ex:orangeMugPutDown a soma:PuttingDown .
+
+ex:cartoonBox a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:cartoonBoxOpen,
+                      ex:cartoonBoxClose .
+
+ex:cartoonBoxOpen a soma:Opening .
+ex:cartoonBoxClose a soma:Closing .
+
+ex:jarOfFruitSpread a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:jarOpen,
+                      ex:jarClose .
+
+ex:jarOpen a soma:Opening .
+ex:jarClose a soma:Closing .
+
+ex:stackWhiteDishes a psr:Object ;
+    dul:hasLocation ex:counterTopLocation .
+
+ex:riceBubblesBox a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:riceBoxOpen,
+                      ex:riceBoxClose .
+
+ex:riceBoxOpen a soma:Opening .
+ex:riceBoxClose a soma:Closing .
+
+ex:redBox a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:redBoxOpen,
+                      ex:redBoxClose .
+
+ex:redBoxOpen a soma:Opening .
+ex:redBoxClose a soma:Closing .
+
+ex:strawberryGelatinPackage a psr:Object ;
+    dul:hasLocation ex:counterTopLocation .
+
+ex:saltContainer a psr:Object ;
+    dul:hasLocation ex:counterTopLocation ;
+    psr:hasAffordance ex:saltContainerOpen,
+                      ex:saltContainerClose .
+
+ex:saltContainerOpen a soma:Opening .
+ex:saltContainerClose a soma:Closing .
+
+ex:tallBlackCabinet a psr:Furniture ;
+    psr:hasAffordance ex:tallBlackCabinetOpen,
+                      ex:tallBlackCabinetClose .
+
+ex:tallBlackCabinetOpen a soma:Opening .
+ex:tallBlackCabinetClose a soma:Closing .
+
+ex:whiteRefrigerator a psr:Appliance ;
+    psr:hasAffordance ex:fridgeOpenAffordance,
+                      ex:fridgeCloseAffordance .
+
+ex:fridgeOpenAffordance a soma:Opening .
+ex:fridgeCloseAffordance a soma:Closing .
+
+ex:woodenTable a psr:Furniture .
+
+ex:chair1 a psr:Furniture .
+ex:chair2 a psr:Furniture .
+ex:chair3 a psr:Furniture .
+ex:chair4 a psr:Furniture .
+
+ex:whiteBowl a psr:Object ;
+    dul:hasLocation ex:onTableLocation ;
+    psr:hasAffordance ex:whiteBowlHold .
+
+ex:onTableLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:woodenTable .
+
+ex:whiteBowlHold a soma:Holding .
+
+ex:roundFruits a psr:Object ;
+    dul:hasLocation ex:fruitsLocation .
+
+ex:fruitsLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:whiteBowl .
+
+ex:largeWaterBottle a psr:Object ;
+    dul:hasLocation ex:waterBottleLocation .
+
+ex:waterBottleLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:whiteBowl .
+
+ex:blackCarton a psr:Object ;
+    dul:hasLocation ex:blackCartonLocation .
+
+ex:blackCartonLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:woodenTable .
+
+ex:clearPitcher a psr:Object ;
+    dul:hasLocation ex:clearPitcherLocation .
+
+ex:clearPitcherLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:woodenTable .
+
+ex:stemmedGlass a psr:Object ;
+    dul:hasLocation ex:stemmedGlassLocation .
+
+ex:stemmedGlassLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:woodenTable .
+
+ex:whiteDoor a psr:Object ;
+    psr:hasAffordance ex:doorOpen,
+                      ex:doorClose .
+
+ex:doorOpen a soma:Opening .
+ex:doorClose a soma:Closing .

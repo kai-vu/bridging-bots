@@ -1,0 +1,210 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Environment a psr:Environment ;
+  rdfs:label "Environment"@en .
+
+ex:Kitchen a psr:Location ;
+  rdfs:label "Kitchen"@en ;
+  geo:sfWithin ex:Environment .
+
+ex:DiningArea a psr:Location ;
+  rdfs:label "Dining Area"@en ;
+  geo:sfWithin ex:Environment .
+
+ex:KitchenWall a psr:Component ;
+  rdfs:label "Kitchen Wall"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:DiningAreaWall a psr:Component ;
+  rdfs:label "Dining Area Wall"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:Door a psr:Component ;
+  rdfs:label "Door"@en ;
+  geo:sfWithin ex:KitchenWall .
+
+ex:KitchenCabinets a psr:Component ;
+  rdfs:label "Black Cabinets"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:MarbleCountertop a psr:Component ;
+  rdfs:label "Tan Marble Countertop"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:YellowMug a psr:Object ;
+  rdfs:label "Yellow Mug"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:ShortbreadBox a psr:Object ;
+  rdfs:label "Box of Shortbread"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:JamJar a psr:Object ;
+  rdfs:label "Jar of Jam"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:RiceBubblesBox a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:JelloBox a psr:Object ;
+  rdfs:label "Box of Jello"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:AluminumFoil a psr:Object ;
+  rdfs:label "Aluminum Foil"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:Plate a psr:Object ;
+  rdfs:label "Plate"@en ;
+  psr:CurrentLocation ex:MarbleCountertop ;
+  psr:onTopOf ex:MarbleCountertop .
+
+ex:Sink a psr:Appliance ;
+  rdfs:label "Sink"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:Stove a psr:Appliance ;
+  rdfs:label "Stove"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:Refrigerator a psr:Appliance ;
+  rdfs:label "White Refrigerator"@en ;
+  geo:sfWithin ex:Kitchen .
+
+ex:WoodenTable a psr:Furniture ;
+  rdfs:label "Wooden Table"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:WhiteChair1 a psr:Furniture ;
+  rdfs:label "White Chair 1"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:WhiteChair2 a psr:Furniture ;
+  rdfs:label "White Chair 2"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:WhiteChair3 a psr:Furniture ;
+  rdfs:label "White Chair 3"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:WhiteChair4 a psr:Furniture ;
+  rdfs:label "White Chair 4"@en ;
+  geo:sfWithin ex:DiningArea .
+
+ex:WaterBottle a psr:Object ;
+  rdfs:label "Bottle of Water"@en ;
+  psr:CurrentLocation ex:WoodenTable ;
+  psr:onTopOf ex:WoodenTable .
+
+ex:Plate2 a psr:Object ;
+  rdfs:label "Plate"@en ;
+  psr:CurrentLocation ex:WoodenTable ;
+  psr:onTopOf ex:WoodenTable .
+
+ex:WineGlass a psr:Object ;
+  rdfs:label "Wine Glass"@en ;
+  psr:CurrentLocation ex:WoodenTable ;
+  psr:onTopOf ex:WoodenTable .
+
+ex:ChocolatesBox a psr:Object ;
+  rdfs:label "Box of Chocolates"@en ;
+  psr:CurrentLocation ex:WoodenTable ;
+  psr:onTopOf ex:WoodenTable .
+
+ex:CupsPlate a psr:Object ;
+  rdfs:label "Plate with Cups"@en ;
+  psr:CurrentLocation ex:WoodenTable ;
+  psr:onTopOf ex:WoodenTable .
+
+ex:WoodenFloor a psr:Component ;
+  rdfs:label "Brown Wooden Floor"@en ;
+  geo:sfWithin ex:Environment .
+
+ex:WhiteWalls a psr:Component ;
+  rdfs:label "White Walls"@en ;
+  geo:sfWithin ex:Environment .
+
+ex:KitchenCabinets psr:hasAffordance soma:Opening .
+
+ex:Refrigerator psr:hasAffordance soma:Opening .
+
+ex:Sink psr:hasAffordance soma:Pushing .
+
+ex:Stove psr:hasAffordance soma:Pushing .
+
+ex:YellowMug psr:hasAffordance soma:Grasping .
+
+ex:ShortbreadBox psr:hasAffordance soma:Grasping .
+
+ex:JamJar psr:hasAffordance soma:Grasping .
+
+ex:RiceBubblesBox psr:hasAffordance soma:Grasping .
+
+ex:JelloBox psr:hasAffordance soma:Grasping .
+
+ex:AluminumFoil psr:hasAffordance soma:Grasping .
+
+ex:Plate psr:hasAffordance soma:PuttingDown .
+
+ex:WaterBottle psr:hasAffordance soma:Grasping .
+
+ex:WineGlass psr:hasAffordance soma:Grasping .
+
+ex:ChocolatesBox psr:hasAffordance soma:Grasping .
+
+ex:Environment dul:hasComponent ex:Kitchen .
+
+ex:Environment dul:hasComponent ex:DiningArea .
+
+ex:Kitchen dul:hasComponent ex:KitchenCabinets .
+
+ex:Kitchen dul:hasComponent ex:MarbleCountertop .
+
+ex:Kitchen dul:hasComponent ex:Sink .
+
+ex:Kitchen dul:hasComponent ex:Stove .
+
+ex:Kitchen dul:hasComponent ex:Refrigerator .
+
+ex:DiningArea dul:hasComponent ex:WoodenTable .
+
+ex:DiningArea dul:hasComponent ex:WhiteChair1 .
+
+ex:DiningArea dul:hasComponent ex:WhiteChair2 .
+
+ex:DiningArea dul:hasComponent ex:WhiteChair3 .
+
+ex:DiningArea dul:hasComponent ex:WhiteChair4 .
+
+ex:Kitchen geo:sfOverlaps ex:KitchenCabinets .
+
+ex:Kitchen geo:sfOverlaps ex:MarbleCountertop .
+
+ex:Kitchen geo:sfOverlaps ex:Sink .
+
+ex:Kitchen geo:sfOverlaps ex:Stove .
+
+ex:Kitchen geo:sfOverlaps ex:Refrigerator .
+
+ex:DiningArea geo:sfOverlaps ex:WoodenTable .
+
+ex:DiningArea geo:sfOverlaps ex:WhiteChair1 .
+
+ex:DiningArea geo:sfOverlaps ex:WhiteChair2 .
+
+ex:DiningArea geo:sfOverlaps ex:WhiteChair3 .
+
+ex:DiningArea geo:sfOverlaps ex:WhiteChair4 .

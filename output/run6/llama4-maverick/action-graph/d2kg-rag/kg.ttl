@@ -1,0 +1,63 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction ex:IdentifyMisplacedItemsAction ;
+    psr:hasAction ex:PickUpMisplacedItemAction ;
+    psr:hasAction ex:PutAwayMisplacedItemAction .
+
+ex:IdentifyMisplacedItemsAction a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:MisplacedItems ;
+    psr:follows ex:None ;
+    psr:precedes ex:PickUpMisplacedItemAction .
+
+ex:PickUpMisplacedItemAction a soma:PickingUp ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:MisplacedItem1 ;
+    psr:follows ex:IdentifyMisplacedItemsAction ;
+    psr:precedes ex:PutAwayMisplacedItemAction .
+
+ex:PutAwayMisplacedItemAction a soma:PuttingDown ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:MisplacedItem1 ;
+    psr:follows ex:PickUpMisplacedItemAction .
+
+ex:MisplacedItem1 a psr:Object ;
+    rdfs:label "Chicky box"@en .
+
+ex:Robot a dul:Agent ;
+    rdfs:label "Robot"@en .
+
+ex:DiningTable a psr:Furniture ;
+    rdfs:label "Dining Table"@en .
+
+ex:Countertop a psr:Furniture ;
+    rdfs:label "Countertop"@en .
+
+ex:Refrigerator a psr:Appliance ;
+    rdfs:label "Refrigerator"@en .
+
+ex:Stove a psr:Appliance ;
+    rdfs:label "Stove"@en .
+
+ex:Sink a psr:Object ;
+    rdfs:label "Sink"@en .
+
+ex:None a dul:Action .
+
+ex:MisplacedItems a psr:Component ;
+    rdfs:label "Misplaced Items"@en .
+
+ex:IdentifyMisplacedItemsAction psr:isAffordedBy soma:PickingUp .
+ex:PickUpMisplacedItemAction psr:isAffordedBy soma:PickingUp .
+ex:PutAwayMisplacedItemAction psr:isAffordedBy soma:PuttingDown .

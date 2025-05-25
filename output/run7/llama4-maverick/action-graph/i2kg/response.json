@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-6adada97-2d85-40f1-a0a9-878059f7dac8",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n\npsr:RestoreKitchenOrder_Instruction a psr:Instruction ;\n    psr:hasWorkflow psr:RestoreKitchenOrder_Workflow .\n\npsr:RestoreKitchenOrder_Workflow a psr:Workflow ;\n    psr:hasAction psr:PickUp_Bottle_Action ;\n    psr:hasAction psr:PutAway_Bottle_Action ;\n    psr:hasAction psr:PickUp_Box_Action ;\n    psr:hasAction psr:PutAway_Box_Action ;\n    psr:hasAction psr:PickUp_Jar_Action ;\n    psr:hasAction psr:PutAway_Jar_Action .\n\npsr:PickUp_Bottle_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Bottle_Object ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:PutAway_Bottle_Action .\n\npsr:PutAway_Bottle_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Bottle_Object ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:PickUp_Bottle_Action .\n\npsr:PickUp_Box_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Box_Object ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:PutAway_Box_Action .\n\npsr:PutAway_Box_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Box_Object ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:PickUp_Box_Action .\n\npsr:PickUp_Jar_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Jar_Object ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:PutAway_Jar_Action .\n\npsr:PutAway_Jar_Action a dul:Action ;\n    soma:isPerformedBy psr:Robot_Agent ;\n    psr:actsOn psr:Jar_Object ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:follows psr:PickUp_Jar_Action .\n\npsr:Robot_Agent a dul:Agent .\n\npsr:Bottle_Object a psr:Object .\npsr:Box_Object a psr:Object .\npsr:Jar_Object a psr:Object .\n\nsoma:PickingUp a psr:Affordance .\nsoma:PuttingDown a psr:Affordance .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748035266,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 751,
+        "prompt_tokens": 14065,
+        "total_tokens": 14816,
+        "completion_time": 3.142394011,
+        "prompt_time": 0.354215978,
+        "queue_time": 1.769706197,
+        "total_time": 3.496609989
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzgaqeyf1ptnhwf3cmmpwn1"
+    }
+}

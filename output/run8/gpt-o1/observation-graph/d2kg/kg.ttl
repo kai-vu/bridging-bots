@@ -1,0 +1,132 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenDining a psr:Environment ;
+    dul:hasComponent ex:BlackCabinets1 ,
+                     ex:BlackCabinets2 ,
+                     ex:Refrigerator ,
+                     ex:Countertop ,
+                     ex:LeftCountertop ,
+                     ex:RightCountertop ,
+                     ex:CornerCountertop ,
+                     ex:StovetopSurface ,
+                     ex:RangeHoodLocation ,
+                     ex:JamJar1 ,
+                     ex:JamJar2 ,
+                     ex:StrawberryJello ,
+                     ex:AlpenSalz ,
+                     ex:WhitePlates ,
+                     ex:Sink ,
+                     ex:Faucet ,
+                     ex:Stovetop ,
+                     ex:MetalPot ,
+                     ex:RangeHood ,
+                     ex:ChuckyCereal ,
+                     ex:RiceBubblesCereal ,
+                     ex:OrangeMug ,
+                     ex:DiningTable ,
+                     ex:DiningChair1 ,
+                     ex:DiningChair2 ,
+                     ex:DiningChair3 ,
+                     ex:DiningChair4 ,
+                     ex:TableSurface ,
+                     ex:WaterBottle ,
+                     ex:FruitBowl ,
+                     ex:TransparentPitcher ,
+                     ex:WineGlass ,
+                     ex:FoodBox ,
+                     ex:WhiteDoor ,
+                     ex:HardwoodFloor .
+
+ex:BlackCabinets1 a psr:Furniture .
+ex:BlackCabinets2 a psr:Furniture .
+ex:Refrigerator a psr:Appliance .
+ex:Countertop a psr:Furniture .
+
+ex:LeftCountertop a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:RightCountertop a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:CornerCountertop a psr:CurrentLocation ;
+    psr:onTopOf ex:Countertop .
+
+ex:StovetopSurface a psr:CurrentLocation ;
+    psr:onTopOf ex:Stovetop .
+
+ex:RangeHoodLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:Stovetop .
+
+ex:JamJar1 a psr:Object ;
+    dul:hasLocation ex:LeftCountertop .
+
+ex:JamJar2 a psr:Object ;
+    dul:hasLocation ex:RightCountertop .
+
+ex:StrawberryJello a psr:Object ;
+    dul:hasLocation ex:LeftCountertop .
+
+ex:AlpenSalz a psr:Object ;
+    dul:hasLocation ex:LeftCountertop .
+
+ex:WhitePlates a psr:Object ;
+    dul:hasLocation ex:LeftCountertop .
+
+ex:Sink a psr:Appliance ;
+    dul:hasLocation ex:CornerCountertop .
+
+ex:Faucet a psr:Object ;
+    dul:hasLocation ex:Sink .
+
+ex:Stovetop a psr:Appliance ;
+    dul:hasLocation ex:CornerCountertop .
+
+ex:MetalPot a psr:Object ;
+    dul:hasLocation ex:StovetopSurface .
+
+ex:RangeHood a psr:Object ;
+    dul:hasLocation ex:RangeHoodLocation .
+
+ex:ChuckyCereal a psr:Object ;
+    dul:hasLocation ex:RightCountertop .
+
+ex:RiceBubblesCereal a psr:Object ;
+    dul:hasLocation ex:RightCountertop .
+
+ex:OrangeMug a psr:Object ;
+    dul:hasLocation ex:RightCountertop .
+
+ex:DiningTable a psr:Furniture .
+
+ex:DiningChair1 a psr:Furniture .
+ex:DiningChair2 a psr:Furniture .
+ex:DiningChair3 a psr:Furniture .
+ex:DiningChair4 a psr:Furniture .
+
+ex:TableSurface a psr:CurrentLocation ;
+    psr:onTopOf ex:DiningTable .
+
+ex:WaterBottle a psr:Object ;
+    dul:hasLocation ex:TableSurface .
+
+ex:FruitBowl a psr:Object ;
+    dul:hasLocation ex:TableSurface .
+
+ex:TransparentPitcher a psr:Object ;
+    dul:hasLocation ex:TableSurface .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:TableSurface .
+
+ex:FoodBox a psr:Object ;
+    dul:hasLocation ex:TableSurface .
+
+ex:WhiteDoor a psr:Object .
+
+ex:HardwoodFloor a psr:Object .

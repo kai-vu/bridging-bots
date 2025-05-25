@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-40777e2b-9c71-411e-8574-7f28ea08d087",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:Environment1 a psr:Environment ;\n    dul:hasComponent ex:KitchenCabinet1, ex:Refrigerator1, ex:DiningTable1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Sink1, ex:CookingAppliance1 .\n\nex:KitchenCabinet1 a psr:Furniture ;\n    psr:hasAffordance soma:Opening, soma:Closing ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:KitchenCounter1 a psr:Location ;\n    geo:sfContains ex:Jar1, ex:Jello1, ex:Salt1, ex:Box1, ex:Glass1, ex:Pot1, ex:Book1 .\n\nex:Jar1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Jello1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Salt1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Refrigerator1 a psr:Appliance ;\n    psr:hasAffordance soma:Opening, soma:Closing .\n\nex:DiningTable1 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 ;\n    geo:sfContains ex:WaterBottle1, ex:Mug1, ex:Book2 .\n\nex:DiningRoom1 a psr:Location .\n\nex:Chair1 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 .\n\nex:Chair2 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 .\n\nex:Chair3 a psr:Furniture ;\n    dul:hasLocation ex:DiningRoom1 .\n\nex:Sink1 a psr:Furniture ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:CookingAppliance1 a psr:Appliance ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:WaterBottle1 a psr:Object ;\n    dul:hasLocation ex:DiningTable1 .\n\nex:Mug1 a psr:Object ;\n    dul:hasLocation ex:DiningTable1 .\n\nex:Book1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Book2 a psr:Object ;\n    dul:hasLocation ex:DiningTable1 .\n\nex:Pot1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Glass1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .\n\nex:Box1 a psr:Object ;\n    dul:hasLocation ex:KitchenCounter1 .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748031019,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 664,
+        "prompt_tokens": 13932,
+        "total_tokens": 14596,
+        "completion_time": 4.15494492,
+        "prompt_time": 0.319150739,
+        "queue_time": 3.6724771830000003,
+        "total_time": 4.474095659
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzc92x9f1xtdrn4neht7gvc"
+    }
+}

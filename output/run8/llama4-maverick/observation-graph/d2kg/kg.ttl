@@ -1,0 +1,97 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Cabinets, ex:Refrigerator, ex:Table, ex:Chairs, ex:Bottle, ex:Pitcher, ex:WineGlass, ex:Plate, ex:Crackers, ex:Pot, ex:Stove, ex:Sink, ex:RangeHood, ex:Mirror, ex:Door, ex:LightSource, ex:Floor .
+
+ex:Cabinets a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Refrigerator a psr:Appliance ;
+    dul:hasLocation ex:Kitchen ;
+    geo:sfWithin ex:Cabinets .
+
+ex:Table a psr:Furniture ;
+    dul:hasLocation ex:Kitchen ;
+    dul:hasComponent ex:Chairs .
+
+ex:Chairs a psr:Furniture ;
+    dul:hasLocation ex:Table .
+
+ex:Bottle a psr:Object ;
+    dul:hasLocation ex:Pitcher ;
+    psr:hasAffordance soma:Holding .
+
+ex:Pitcher a psr:Object ;
+    dul:hasLocation ex:Table ;
+    dul:hasComponent ex:Bottle ;
+    psr:hasAffordance soma:Holding .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:Table ;
+    psr:hasAffordance soma:Holding .
+
+ex:Plate a psr:Object ;
+    dul:hasLocation ex:Table ;
+    psr:hasAffordance soma:Holding .
+
+ex:Crackers a psr:Object ;
+    dul:hasLocation ex:Table ;
+    psr:hasAffordance soma:Holding .
+
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:Stove ;
+    psr:hasAffordance soma:Holding .
+
+ex:Stove a psr:Appliance ;
+    dul:hasLocation ex:Kitchen ;
+    dul:hasComponent ex:Pot .
+
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:Counter ;
+    psr:hasAffordance soma:Holding .
+
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:Stove .
+
+ex:Mirror a psr:Object ;
+    dul:hasLocation ex:Wall .
+
+ex:Door a psr:Object ;
+    dul:hasLocation ex:Wall ;
+    psr:hasAffordance soma:Opening .
+
+ex:LightSource a psr:Object ;
+    dul:hasLocation ex:Ceiling .
+
+ex:Floor a psr:Object ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Counter a psr:Object ;
+    dul:hasLocation ex:Cabinets ;
+    dul:hasComponent ex:Sink .
+
+ex:Cabinets dul:hasComponent ex:Counter .
+
+ex:Table dul:hasComponent ex:Bottle, ex:Pitcher, ex:WineGlass, ex:Plate, ex:Crackers .
+
+ex:Pitcher psr:onTopOf ex:Table .
+
+ex:Pot psr:onTopOf ex:Stove .
+
+ex:Sink psr:onTopOf ex:Counter .
+
+ex:RangeHood geo:sfOverlaps ex:Stove .
+
+ex:Mirror geo:sfWithin ex:Wall .
+
+ex:Door geo:sfWithin ex:Wall .
+
+ex:LightSource geo:sfWithin ex:Ceiling .
+
+ex:Floor geo:sfWithin ex:Kitchen .

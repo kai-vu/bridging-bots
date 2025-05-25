@@ -1,0 +1,160 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <http://www.justice.nc/public/psr#> .
+@prefix ex:     <http://example.org/data/> .
+
+# Instantiate Environment
+ex:KitchenEnvironment a psr:Environment ;
+    rdfs:label "Kitchen Setup"@en .
+
+# Instantiate Main Areas
+ex:LeftSide a psr:Location ;
+    rdfs:label "Left Side of Kitchen"@en .
+
+ex:RightSide a psr:Location ;
+    rdfs:label "Right Side of Kitchen"@en .
+
+ex:CountertopLeft a psr:Location ;
+    rdfs:label "Left Countertop"@en .
+
+ex:CountertopRight a psr:Location ;
+    rdfs:label "Right Countertop"@en .
+
+ex:Corner a psr:Location ;
+    rdfs:label "Corner"@en .
+
+# Instantiate Furniture and Appliances
+ex:KitchenCabinet a psr:Furniture ;
+    rdfs:label "Kitchen Cabinet"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+ex:Countertop a psr:Furniture ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+ex:BeigeCountertop a psr:Furniture ;
+    rdfs:label "Beige Countertop"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:Refrigerator a psr:Appliance ;
+    rdfs:label "White Refrigerator"@en ;
+    dul:hasLocation ex:CountertopRight ;
+    psr:hasAffordance soma:Opening .
+
+ex:DarkGrayCabinets a psr:Furniture ;
+    rdfs:label "Dark Gray Cabinets"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:CeilingLight a psr:Appliance ;
+    rdfs:label "Ceiling Light"@en .
+
+ex:Window a psr:Object ;
+    rdfs:label "Window"@en ;
+    dul:hasLocation ex:WallBehindCountertop .
+
+# Instantiate Objects on Left Countertop
+ex:RedWhiteJar_Left a psr:Object ;
+    rdfs:label "Red and White Jar (Left)"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+ex:JelloBox a psr:Object ;
+    rdfs:label "JELLO Box"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+ex:AlpineSaltCarton a psr:Object ;
+    rdfs:label "Small Carton of Alpine Salt"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+ex:StackedPlates_Left a psr:Object ;
+    rdfs:label "Stacked Plates"@en ;
+    dul:hasLocation ex:CountertopLeft .
+
+# Objects on Right Countertop
+ex:ChuckyBox a psr:Object ;
+    rdfs:label "Chucky Box"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:RedWhiteJar_Right a psr:Object ;
+    rdfs:label "Small Red and White Jar"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:Plate_Right a psr:Object ;
+    rdfs:label "Plate"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:TransparentPitcher a psr:Object ;
+    rdfs:label "Transparent Pitcher with Handle"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:EvianBottle a psr:Object ;
+    rdfs:label "Large Bottle of Evian Water"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Small Wine Glass"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+ex:CakeSlice a psr:Object ;
+    rdfs:label "Slice of Cake"@en ;
+    dul:hasLocation ex:CountertopRight .
+
+# Mounting dark gray cabinets
+ex:DarksGrayWallCabinets a psr:Furniture ;
+    rdfs:label "Dark Gray Cabinets"@en ;
+    dul:hasLocation ex:WallAboveCountertop .
+
+# Objects in Environment (not specifically located but associated)
+ex:WallBehindCountertop a psr:Location ;
+    rdfs:label "Wall Behind Countertop"@en .
+
+# Wall and Floor
+ex:Wall a psr:Object ;
+    rdfs:label "White Wall"@en ;
+    dul:hasLocation ex:WallBehindCountertop .
+
+ex:Floor a psr:Object ;
+    rdfs:label "Wooden Parquet Floor"@en .
+
+# Objects associated with floor and environment
+ex:Floor a psr:Location ;
+    rdfs:label "Floor"@en .
+
+# Relationships
+ex:KitchenEnvironment dul:hasComponent ex:KitchenCabinet , ex:Refrigerator , ex:DarkGrayCabinets , ex:CeilingLight , ex:WallBehindCountertop , ex:Countertop , ex:Floor .
+
+ex:CountertopLeft dul:hasComponent ex:RedWhiteJar_Left , ex:JelloBox , ex:AlpineSaltCarton , ex:StackedPlates_Left .
+
+ex:CountertopRight dul:hasComponent ex:ChuckyBox , ex:RedWhiteJar_Right , ex:Plate_Right , ex:TransparentPitcher , ex:EvianBottle , ex:WineGlass , ex:CakeSlice .
+
+# Link objects to their locations
+ex:RedWhiteJar_Left dul:hasLocation ex:CountertopLeft .
+ex:JelloBox dul:hasLocation ex:CountertopLeft .
+ex:AlpineSaltCarton dul:hasLocation ex:CountertopLeft .
+ex:StackedPlates_Left dul:hasLocation ex:CountertopLeft .
+
+ex:ChuckyBox dul:hasLocation ex:CountertopRight .
+ex:RedWhiteJar_Right dul:hasLocation ex:CountertopRight .
+ex:Plate_Right dul:hasLocation ex:CountertopRight .
+ex:TransparentPitcher dul:hasLocation ex:CountertopRight .
+ex:EvianBottle dul:hasLocation ex:CountertopRight .
+ex:WineGlass dul:hasLocation ex:CountertopRight .
+ex:CakeSlice dul:hasLocation ex:CountertopRight .
+
+# Additional placements
+ex:KitchenCabinet dul:hasLocation ex:LeftSide .
+ex:Countertop dul:hasLocation ex:LeftSide .
+ex:BeigeCountertop dul:hasLocation ex:RightSide .
+ex:Refrigerator dul:hasLocation ex:CountertopRight .
+ex:DarksGrayWallCabinets dul:hasLocation ex:WallAboveCountertop .
+
+# Window and wall relations
+ex:Window dul:hasLocation ex:WallBehindCountertop .
+
+# Light source
+ex:CeilingLight dul:hasLocation ex:Ceiling .
+
+# Floor relation
+ex:Floor dul:hasLocation ex:Environment .

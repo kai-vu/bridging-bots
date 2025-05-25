@@ -1,0 +1,122 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:kitchen a psr:Environment ;
+    rdfs:label "Kitchen"@en ;
+    dul:hasComponent ex:countertop, ex:sink, ex:cabinets, ex:oven, ex:refrigerator, ex:diningTable, ex:chairs, ex:paperTowels, ex:bottle, ex:boxes, ex:foodItems, ex:cookingIngredients, ex:milkBottles, ex:books .
+
+ex:countertop a psr:Component ;
+    rdfs:label "Countertop"@en ;
+    dul:hasLocation ex:kitchenCountertopLocation .
+
+ex:kitchenCountertopLocation a soma:Location ;
+    rdfs:label "Kitchen Countertop Location"@en .
+
+ex:sink a psr:Component ;
+    rdfs:label "Sink"@en ;
+    dul:hasLocation ex:kitchenSinkLocation .
+
+ex:kitchenSinkLocation a soma:Location ;
+    rdfs:label "Kitchen Sink Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:cabinets a psr:Component ;
+    rdfs:label "Cabinets"@en ;
+    dul:hasLocation ex:kitchenCabinetsLocation .
+
+ex:kitchenCabinetsLocation a soma:Location ;
+    rdfs:label "Kitchen Cabinets Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:oven a psr:Component ;
+    rdfs:label "Oven"@en ;
+    dul:hasLocation ex:kitchenOvenLocation .
+
+ex:kitchenOvenLocation a soma:Location ;
+    rdfs:label "Kitchen Oven Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:refrigerator a psr:Component ;
+    rdfs:label "Refrigerator"@en ;
+    dul:hasLocation ex:kitchenRefrigeratorLocation .
+
+ex:kitchenRefrigeratorLocation a soma:Location ;
+    rdfs:label "Kitchen Refrigerator Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:diningTable a psr:Component ;
+    rdfs:label "Dining Table"@en ;
+    dul:hasLocation ex:kitchenDiningTableLocation .
+
+ex:kitchenDiningTableLocation a soma:Location ;
+    rdfs:label "Kitchen Dining Table Location"@en ;
+    geo:sfWithin ex:kitchen .
+
+ex:chairs a psr:Component ;
+    rdfs:label "Chairs"@en ;
+    dul:hasLocation ex:kitchenChairsLocation .
+
+ex:kitchenChairsLocation a soma:Location ;
+    rdfs:label "Kitchen Chairs Location"@en ;
+    geo:sfWithin ex:kitchenDiningTableLocation .
+
+ex:paperTowels a psr:Component ;
+    rdfs:label "Paper Towels"@en ;
+    dul:hasLocation ex:kitchenPaperTowelsLocation .
+
+ex:kitchenPaperTowelsLocation a soma:Location ;
+    rdfs:label "Kitchen Paper Towels Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:bottle a psr:Component ;
+    rdfs:label "Bottle"@en ;
+    dul:hasLocation ex:kitchenBottleLocation .
+
+ex:kitchenBottleLocation a soma:Location ;
+    rdfs:label "Kitchen Bottle Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:boxes a psr:Component ;
+    rdfs:label "Boxes"@en ;
+    dul:hasLocation ex:kitchenBoxesLocation .
+
+ex:kitchenBoxesLocation a soma:Location ;
+    rdfs:label "Kitchen Boxes Location"@en ;
+    geo:sfWithin ex:kitchenCountertopLocation .
+
+ex:foodItems a psr:Component ;
+    rdfs:label "Food Items"@en ;
+    dul:hasLocation ex:kitchenFoodItemsLocation .
+
+ex:kitchenFoodItemsLocation a soma:Location ;
+    rdfs:label "Kitchen Food Items Location"@en ;
+    geo:sfWithin ex:kitchenBoxesLocation .
+
+ex:cookingIngredients a psr:Component ;
+    rdfs:label "Cooking Ingredients"@en ;
+    dul:hasLocation ex:kitchenCookingIngredientsLocation .
+
+ex:kitchenCookingIngredientsLocation a soma:Location ;
+    rdfs:label "Kitchen Cooking Ingredients Location"@en ;
+    geo:sfWithin ex:kitchenBoxesLocation .
+
+ex:milkBottles a psr:Component ;
+    rdfs:label "Milk Bottles"@en ;
+    dul:hasLocation ex:kitchenMilkBottlesLocation .
+
+ex:kitchenMilkBottlesLocation a soma:Location ;
+    rdfs:label "Kitchen Milk Bottles Location"@en ;
+    geo:sfWithin ex:refrigerator .
+
+ex:books a psr:Component ;
+    rdfs:label "Books"@en ;
+    dul:hasLocation ex:kitchenBooksLocation .
+
+ex:kitchenBooksLocation a soma:Location ;
+    rdfs:label "Kitchen Books Location"@en ;
+    geo:sfWithin ex:kitchenDiningTableLocation .

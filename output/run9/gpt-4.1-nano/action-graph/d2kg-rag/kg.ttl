@@ -1,0 +1,71 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:IdentifyMisplacedItems a schema:Action ;
+    schema:hasParticipant ex:kitchen ;
+    schema:description "Identify all misplaced items in the kitchen and dining area" .
+
+ex:FindMisplacedItems a schema:Action ;
+    schema:hasParticipant ex:kitchen ;
+    schema:precondition ex:IdentifyMisplacedItems .
+
+ex:PickUpItem a schema:Action ;
+    schema:hasParticipant ?misplacedItem ;
+    schema:hasTarget ?misplacedItem ;
+    schema:precondition ex:FindMisplacedItems .
+
+ex:IdentifyProperStorageLocation a schema:Action ;
+    schema:hasParticipant ?item ;
+    schema:hasTarget ?item ;
+    schema:precondition ex:PickUpItem .
+
+ex:MoveToStorageLocation a schema:Action ;
+    schema:hasParticipant ex:robot ;
+    schema:hasTarget ?storageLocation ;
+    schema:precondition ex:IdentifyProperStorageLocation .
+
+ex:PlaceItemInStorage a schema:Action ;
+    schema:hasParticipant ex:robot ;
+    schema:hasTarget ?item ;
+    schema:hasLocation ?storageLocation ;
+    schema:precondition ex:MoveToStorageLocation .
+
+ex:ExecuteActionSequence a schema:Action ;
+    schema:hasSubAction ex:IdentifyMisplacedItems, ex:FindMisplacedItems, ex:PickUpItem, ex:IdentifyProperStorageLocation, ex:MoveToStorageLocation, ex:PlaceItemInStorage .
+
+<ex:IdentifyMisplacedItems> a schema:Action ;
+    schema:result ex:misplacedItemsList .
+
+<ex:misplacedItemsList> a schema:ItemList ;
+    schema:items (ex:JellOBox ex:RiceBubblesBox ex:StrawberryJamContainer ex:AlpenSalzBottle ex:JamContainer ex:WaterBottle ex:SnackBox ex:ChuckyAlbumCover) .
+
+# For each misplaced item, determine storage location, pick up, move, and place
+
+ex:JellOBox a schema:Object ;
+    schema:hasType "food" .
+
+ex:RiceBubblesBox a schema:Object ;
+    schema:hasType "food" .
+
+ex:StrawberryJamContainer a schema:Object ;
+    schema:hasType "household item" .
+
+ex:AlpenSalzBottle a schema:Object ;
+    schema:hasType "household item" .
+
+ex:JamContainer a schema:Object ;
+    schema:hasType "household item" .
+
+ex:WaterBottle a schema:Object ;
+    schema:hasType "beverage" .
+
+ex:SnackBox a schema:Object ;
+    schema:hasType "food" .
+
+ex:ChuckyAlbumCover a schema:Object ;
+    schema:hasType "entertainment" .
+
+# The sequence continues for each identified misplaced item, executing pick up, identifying storage, moving, and placing accordingly.

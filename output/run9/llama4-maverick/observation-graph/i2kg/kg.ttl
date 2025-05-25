@@ -1,0 +1,106 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:CounterTop1, ex:CounterTop2, ex:Cabinet1, ex:Cabinet2, ex:Cabinet3, ex:Fridge, ex:DiningTable, ex:Sink .
+
+ex:CounterTop1 a psr:Component ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:Kitchen .
+
+ex:CounterTop2 a psr:Component ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Cabinet1 a psr:Appliance ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Cabinet2 a psr:Appliance ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Cabinet3 a psr:Appliance ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Fridge a psr:Appliance ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:DiningTable a psr:Furniture ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:DiningRoom .
+
+ex:Sink a psr:Object ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop2 .
+
+ex:JelloBox a psr:Object ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop1 .
+
+ex:AlpenSalt a psr:Object ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop1 .
+
+ex:EvianBottle a psr:Object ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:DiningTable .
+
+ex:ChuckyBox a psr:Object ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop2 .
+
+ex:RiceBubblesBox a psr:Object ;
+    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop2 .
+
+ex:Stovepot a psr:Object ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop2 .
+
+ex:Plates a psr:Object ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:CounterTop2 .
+
+ex:Glass a psr:Object ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Mug a psr:Object ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:DiningTable .
+
+ex:DiningRoom a psr:Environment ;
+    dul:hasComponent ex:DiningTable, ex:Chair1, ex:Chair2, ex:Chair3 .
+
+ex:Chair1 a psr:Furniture ;
+    psr:hasAffordance soma:Pulling, soma:Pushing ;
+    dul:hasLocation ex:DiningRoom .
+
+ex:Chair2 a psr:Furniture ;
+    psr:hasAffordance soma:Pulling, soma:Pushing ;
+    dul:hasLocation ex:DiningRoom .
+
+ex:Chair3 a psr:Furniture ;
+    psr:hasAffordance soma:Pulling, soma:Pushing ;
+    dul:hasLocation ex:DiningRoom .
+
+ex:CounterTop1 dul:hasLocation ex:Cabinet1 .
+ex:CounterTop2 dul:hasLocation ex:Cabinet2 .
+
+ex:JelloBox psr:onTopOf ex:CounterTop1 .
+ex:AlpenSalt psr:onTopOf ex:CounterTop1 .
+ex:EvianBottle psr:onTopOf ex:DiningTable .
+ex:ChuckyBox psr:onTopOf ex:CounterTop2 .
+ex:RiceBubblesBox psr:onTopOf ex:CounterTop2 .
+ex:Stovepot psr:onTopOf ex:CounterTop2 .
+ex:Plates psr:onTopOf ex:CounterTop2 .
+ex:Glass psr:onTopOf ex:DiningTable .
+ex:Mug psr:onTopOf ex:DiningTable .

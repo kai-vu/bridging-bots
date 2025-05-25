@@ -1,0 +1,140 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    psr:hasWorkflow ex:workflow1 .
+
+ex:workflow1 a psr:Workflow ;
+    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10, ex:action11, ex:action12, ex:action13, ex:action14, ex:action15, ex:action16 .
+
+ex:action1 a dul:Action ;
+    psr:precedes ex:action2 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:kitchen ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action2 a dul:Action ;
+    psr:precedes ex:action3 ;
+    psr:follows ex:action1 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:sink ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action3 a dul:Action ;
+    psr:precedes ex:action4 ;
+    psr:follows ex:action2 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:cabinet ;
+    psr:isAffordedBy soma:Opening .
+
+ex:action4 a dul:Action ;
+    psr:precedes ex:action5 ;
+    psr:follows ex:action3 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:coffeeMaker ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action5 a dul:Action ;
+    psr:precedes ex:action6 ;
+    psr:follows ex:action4 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:coffeeMaker ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:action6 a dul:Action ;
+    psr:precedes ex:action7 ;
+    psr:follows ex:action5 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:refrigerator ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action7 a dul:Action ;
+    psr:precedes ex:action8 ;
+    psr:follows ex:action6 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:smallBox ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action8 a dul:Action ;
+    psr:precedes ex:action9 ;
+    psr:follows ex:action7 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:smallBox ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:action9 a dul:Action ;
+    psr:precedes ex:action10 ;
+    psr:follows ex:action8 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:table ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action10 a dul:Action ;
+    psr:precedes ex:action11 ;
+    psr:follows ex:action9 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:vase ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action11 a dul:Action ;
+    psr:precedes ex:action12 ;
+    psr:follows ex:action10 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:vase ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:action12 a dul:Action ;
+    psr:precedes ex:action13 ;
+    psr:follows ex:action11 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:oven ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action13 a dul:Action ;
+    psr:precedes ex:action14 ;
+    psr:follows ex:action12 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:boxOnShelf ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action14 a dul:Action ;
+    psr:precedes ex:action15 ;
+    psr:follows ex:action13 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:boxOnShelf ;
+    psr:isAffordedBy soma:PuttingDown .
+
+ex:action15 a dul:Action ;
+    psr:precedes ex:action16 ;
+    psr:follows ex:action14 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:diningTable ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:action16 a dul:Action ;
+    psr:follows ex:action15 ;
+    soma:isPerformedBy ex:robot ;
+    psr:actsOn ex:diningTable ;
+    psr:isAffordedBy soma:Grasping .
+
+ex:robot a dul:Agent .
+
+ex:kitchen a psr:Component .
+ex:sink a psr:Component .
+ex:cabinet a psr:Component .
+ex:coffeeMaker a psr:Component .
+ex:refrigerator a psr:Component .
+ex:smallBox a psr:Component .
+ex:table a psr:Component .
+ex:vase a psr:Component .
+ex:oven a psr:Component .
+ex:boxOnShelf a psr:Component .
+ex:diningTable a psr:Component .

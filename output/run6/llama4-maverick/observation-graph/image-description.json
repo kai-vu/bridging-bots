@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-799f48e2-9743-4351-bf1d-503702f1a9cf",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with dark gray cabinets and beige marble countertop, refrigerator on the right side; a dining table with four white chairs, a bottle, stack of plates, and box on top; a stove, sink, jar, and box on the countertop; food items, plates, and cups on the countertop, including boxes of Chicky and Jello, and jars of jam. The refrigerator is to the right of the dark gray cabinets. The dining table is near a door. The stove and sink are on the countertop near the wall. A range hood is above the stove. A door is on the adjacent wall to the dining area. The floor is made of dark wood. The walls are white. A round light fixture is on the ceiling.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748030995,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 154,
+        "prompt_tokens": 12496,
+        "total_tokens": 12650,
+        "completion_time": 0.662725337,
+        "prompt_time": 0.300778768,
+        "queue_time": 4.3797464360000005,
+        "total_time": 0.963504105
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzc8am2f19bz86gahxt8y1v"
+    }
+}

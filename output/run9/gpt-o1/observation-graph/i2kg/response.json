@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-Balj6SZwf6bXxoWcKUdjcBIhbqv6u",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psr-action#> .\n@prefix ex:     <http://example.org/data/> .\n\nex:Kitchen a psr:Environment ;\n    dul:hasComponent ex:Fridge,\n                     ex:KitchenCounter,\n                     ex:DiningTable,\n                     ex:DiningChair1,\n                     ex:DiningChair2,\n                     ex:DiningChair3,\n                     ex:DiningChair4 .\n\nex:Fridge a psr:Appliance ;\n    psr:hasAffordance soma:Opening,\n                       soma:Closing .\n\nex:KitchenCounter a psr:Furniture .\n\nex:DiningTable a psr:Furniture .\n\nex:DiningChair1 a psr:Furniture .\nex:DiningChair2 a psr:Furniture .\nex:DiningChair3 a psr:Furniture .\nex:DiningChair4 a psr:Furniture .\n\nex:KitchenCounterLocation a psr:CurrentLocation ;\n    psr:onTopOf ex:KitchenCounter .\n\nex:DiningTableLocation a psr:CurrentLocation ;\n    psr:onTopOf ex:DiningTable .\n\nex:JamJar a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:JelloBox a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:SaltContainer a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:PlateStack a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Holding .\n\nex:ChuckyCerealBox a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:RiceBubblesBox a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:Mug a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Holding .\n\nex:Pot a psr:Object ;\n    dul:hasLocation ex:KitchenCounterLocation ;\n    psr:hasAffordance soma:Holding .\n\nex:BottledWater a psr:Object ;\n    dul:hasLocation ex:DiningTableLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:FruitBowl a psr:Object ;\n    dul:hasLocation ex:DiningTableLocation .\n\nex:SnackBox a psr:Object ;\n    dul:hasLocation ex:DiningTableLocation ;\n    psr:hasAffordance soma:Opening .\n\nex:Pitcher a psr:Object ;\n    dul:hasLocation ex:DiningTableLocation ;\n    psr:hasAffordance soma:Holding .\n\nex:WineGlass a psr:Object ;\n    dul:hasLocation ex:DiningTableLocation ;\n    psr:hasAffordance soma:Holding .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748102968,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4349,
+        "prompt_tokens": 5068,
+        "total_tokens": 9417,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 3584,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 4736
+        }
+    }
+}

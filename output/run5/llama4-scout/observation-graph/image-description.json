@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-b8c874d8-1b1e-4fe0-9df8-a42e5035bb7b",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment appears to be a small kitchen and dining area. The kitchen has dark gray cabinets with light-colored marble countertops and a stainless steel sink. A white refrigerator is positioned against a wall adjacent to the cabinets. The dining area features a wooden table with four white chairs.\n\nObjects in the environment include:\n- A refrigerator\n- A table\n- Four chairs\n- Cabinets\n- A sink\n- A stove\n- Various food items such as cereal boxes, a bottle of milk, plates, and a jar of jam\n\nThe objects' positions relative to each other and the environment:\n- The refrigerator is against the wall next to the cabinets.\n- The table is in the dining area with chairs around it.\n- The cabinets are on one side of the kitchen with the sink and stove.\n- Food items are on the countertops and the table.\n\nSpatial orientation:\n- The kitchen and dining areas are adjacent.\n- The refrigerator is near the corner of the kitchen and dining areas.\n- The table is at the far end of the dining area.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748013787,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 212,
+        "prompt_tokens": 12500,
+        "total_tokens": 12712,
+        "completion_time": 0.507112951,
+        "prompt_time": 0.367651692,
+        "queue_time": 1.9669378600000003,
+        "total_time": 0.874764643
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvyvv81vffwa5f5y279sc471"
+    }
+}

@@ -1,0 +1,65 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+
+ex:RestoreKitchenWorkflow a psr:Workflow ;
+    psr:hasAction ex:IdentifyMisplacedItems ;
+    psr:hasAction ex:PickUpMisplacedItem1 ;
+    psr:hasAction ex:PutAwayMisplacedItem1 ;
+    psr:hasAction ex:PickUpMisplacedItem2 ;
+    psr:hasAction ex:PutAwayMisplacedItem2 ;
+    psr:hasAction ex:OrganizeKitchen .
+
+ex:IdentifyMisplacedItems a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Kitchen .
+
+ex:PickUpMisplacedItem1 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Bottle ;
+    psr:isAffordedBy soma:PickingUp .
+
+ex:PutAwayMisplacedItem1 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Bottle ;
+    psr:isAffordedBy soma:PuttingDown ;
+    dul:follows ex:PickUpMisplacedItem1 .
+
+ex:PickUpMisplacedItem2 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Pitcher ;
+    psr:isAffordedBy soma:PickingUp ;
+    dul:follows ex:PutAwayMisplacedItem1 .
+
+ex:PutAwayMisplacedItem2 a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Pitcher ;
+    psr:isAffordedBy soma:PuttingDown ;
+    dul:follows ex:PickUpMisplacedItem2 .
+
+ex:OrganizeKitchen a dul:Action ;
+    soma:isPerformedBy ex:Robot ;
+    psr:actsOn ex:Kitchen ;
+    dul:follows ex:PutAwayMisplacedItem2 .
+
+ex:Robot a dul:Agent .
+
+ex:Bottle a psr:Object .
+ex:Pitcher a psr:Object .
+ex:Kitchen a psr:Component .
+
+ex:IdentifyMisplacedItems psr:precedes ex:PickUpMisplacedItem1 .
+ex:PickUpMisplacedItem1 psr:precedes ex:PutAwayMisplacedItem1 .
+ex:PutAwayMisplacedItem1 psr:precedes ex:PickUpMisplacedItem2 .
+ex:PickUpMisplacedItem2 psr:precedes ex:PutAwayMisplacedItem2 .
+ex:PutAwayMisplacedItem2 psr:precedes ex:OrganizeKitchen .

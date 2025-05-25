@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-d47cb724-9f02-4ebc-85ba-5094ae9271b5",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment consists of a kitchen and dining area. The kitchen has dark gray cabinets with light-colored marble countertops and a sink on the left side. Above the counter, there are more cabinets and a vent hood. On the counter, there are various items, including a jar of jam, a box of Jello, a box of Alpen Salt, a box of Rice Bubbles, another jar of jam, a box of shortbread cookies, and a stack of plates. To the right of the kitchen, there is a white refrigerator against the wall.\n\nIn the dining area, there is a wooden table with four white chairs around it. On the table, there are two bottles of water, one of which is a milk bottle, a cookbook, and a puzzle box. The walls are white, and the floor is made of dark wood parquet tiles. The overall layout suggests a small, functional space for both food preparation and eating.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748097715,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_37da608fc1",
+    "usage": {
+        "completion_tokens": 189,
+        "prompt_tokens": 12500,
+        "total_tokens": 12689,
+        "completion_time": 0.396167944,
+        "prompt_time": 0.358613962,
+        "queue_time": 2.109425627,
+        "total_time": 0.754781906
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jw1bwgnwegxs961nw3tzhp2y"
+    }
+}

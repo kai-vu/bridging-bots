@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-ceba0241-8b59-42b6-a33b-ed89d6717ec7",
+    "created": 1747994631,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```turtle\n@prefix psr: <http://psr.example.org/>\n@prefix owl: <http://www.w3.org/2002/01/rdf-schema#>\n@prefix dul: <http://www.dul.com/ontology#>\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n\n# Define the prefixes\npsr: psr.example.org/ ;\nowl: rdf-schema.org/;\ndul: <http://www.dul.com/ontology#>;\nxsd: xmlschema.org/;\n\n# Define the classes\nowl:Instruction a psr:Instruction ;\npsr:Instruction a owl:Class ;\npsr:Workflow a psr:Instruction ;\ndul:Action a psr:Instruction ;\ndul:Agent a psr:Instruction ;\ndul:Component a psr:Instruction ;\ndul:Affordance a psr:Instruction ;\nowl:Entity a psr:Instruction ;\n\n# Define the properties\npsr:hasWorkflow a psr:Instruction psr:Workflow ;\npsr:hasAction a psr:Instruction dul:Action ;\npsr:precedes a psr:Instruction dul:Action ;\npsr:follows a psr:Instruction dul:Action ;\npsr:isPerformedBy a psr:Instruction dul:Agent ;\npsr:actsOn a psr:Instruction dul:Component ;\npsr:isAffordedBy a psr:Instruction dul:Affordance ;\n\n# Define the data properties\nowl:hasNaturalLanguage a psr:Instruction xsd:string ;\n\n# Assuming the robot must first identify all misplaced items, then categorize them by type and function, and finally return each item to its standard storage location based on their type and function.\n# The sequence of actions below represents this process:\ndul:Action a psr:Instruction ;\n  dul:label \"Identify misplaced items\"@en .\n  psr:precedes dul:Action dul:Action ;\n  psr:follows dul:Action dul:Action ;\n  psr:isPerformedBy dul:Agent ;\n  psr:actsOn dul:Component ;\ndul:Affordance a psr:Instruction dul:Action ;\n  dul:label \"Categorize items by type and function\"@en .\n  psr:precedes dul:Action dul:Action ;\n  psr:follows dul:Action dul:Action ;\n  psr:isAffordedBy dul:Agent ;\n  psr:actsOn dul:Component ;\ndul:Action a psr:Instruction ;\n  dul:label \"Return each item to its standard storage location\"@en .\n  psr:precedes dul:Action dul:Action ;\n  psr:follows dul:Action dul:Action ;\n  psr:isPerformedBy dul:Agent ;\n  psr:actsOn dul:Component ;\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.13,
+        "prompt_token/s": 1895.79,
+        "total_duration": 12818718570,
+        "load_duration": 49532106,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2160579741,
+        "eval_count": 731,
+        "completion_tokens": 731,
+        "eval_duration": 10574784164,
+        "approximate_total": "0h0m12s",
+        "total_tokens": 4827,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

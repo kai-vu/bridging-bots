@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-9e776419-6650-40c5-a9d2-f44ff35dcc90",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <https://w3id.org/psr-action#> .\n@prefix ex: <http://example.org/data/> .\n\nex:Kitchen a psr:Environment ;\n    dul:hasComponent ex:CounterTop1, ex:CounterTop2, ex:Cabinet1, ex:Cabinet2, ex:Cabinet3, ex:Fridge, ex:DiningTable, ex:Sink .\n\nex:CounterTop1 a psr:Component ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:Kitchen .\n\nex:CounterTop2 a psr:Component ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:Kitchen .\n\nex:Cabinet1 a psr:Appliance ;\n    psr:hasAffordance soma:Opening, soma:Closing ;\n    dul:hasLocation ex:Kitchen .\n\nex:Cabinet2 a psr:Appliance ;\n    psr:hasAffordance soma:Opening, soma:Closing ;\n    dul:hasLocation ex:Kitchen .\n\nex:Cabinet3 a psr:Appliance ;\n    psr:hasAffordance soma:Opening, soma:Closing ;\n    dul:hasLocation ex:Kitchen .\n\nex:Fridge a psr:Appliance ;\n    psr:hasAffordance soma:Opening, soma:Closing ;\n    dul:hasLocation ex:Kitchen .\n\nex:DiningTable a psr:Furniture ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:DiningRoom .\n\nex:Sink a psr:Object ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:JelloBox a psr:Object ;\n    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop1 .\n\nex:AlpenSalt a psr:Object ;\n    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop1 .\n\nex:EvianBottle a psr:Object ;\n    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:DiningTable .\n\nex:ChuckyBox a psr:Object ;\n    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:RiceBubblesBox a psr:Object ;\n    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:Stovepot a psr:Object ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:Plates a psr:Object ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:CounterTop2 .\n\nex:Glass a psr:Object ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:DiningTable .\n\nex:Mug a psr:Object ;\n    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;\n    dul:hasLocation ex:DiningTable .\n\nex:DiningRoom a psr:Environment ;\n    dul:hasComponent ex:DiningTable, ex:Chair1, ex:Chair2, ex:Chair3 .\n\nex:Chair1 a psr:Furniture ;\n    psr:hasAffordance soma:Pulling, soma:Pushing ;\n    dul:hasLocation ex:DiningRoom .\n\nex:Chair2 a psr:Furniture ;\n    psr:hasAffordance soma:Pulling, soma:Pushing ;\n    dul:hasLocation ex:DiningRoom .\n\nex:Chair3 a psr:Furniture ;\n    psr:hasAffordance soma:Pulling, soma:Pushing ;\n    dul:hasLocation ex:DiningRoom .\n\nex:CounterTop1 dul:hasLocation ex:Cabinet1 .\nex:CounterTop2 dul:hasLocation ex:Cabinet2 .\n\nex:JelloBox psr:onTopOf ex:CounterTop1 .\nex:AlpenSalt psr:onTopOf ex:CounterTop1 .\nex:EvianBottle psr:onTopOf ex:DiningTable .\nex:ChuckyBox psr:onTopOf ex:CounterTop2 .\nex:RiceBubblesBox psr:onTopOf ex:CounterTop2 .\nex:Stovepot psr:onTopOf ex:CounterTop2 .\nex:Plates psr:onTopOf ex:CounterTop2 .\nex:Glass psr:onTopOf ex:DiningTable .\nex:Mug psr:onTopOf ex:DiningTable .",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748101510,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_7c27472e1f",
+    "usage": {
+        "completion_tokens": 1155,
+        "prompt_tokens": 13932,
+        "total_tokens": 15087,
+        "completion_time": 1.423835741,
+        "prompt_time": 0.298504145,
+        "queue_time": 1.9732760900000001,
+        "total_time": 1.7223398859999999
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jw1fgak8esbbw17ts1bnxhy8"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-f273221f-5da9-455d-bc31-9d4ad95f3df3",
+    "created": 1748100288,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```\n@prefix psr: <http://example.org/psr#>\n@prefix dul: <http://www.w3.org/2007/gldata/docs/example/dul-onto#>\n@prefix owl: <http://www.w3.org/2004/01/rdf-schema#>\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n@prefix rdf: <http://www.w3.org/1999/01/rdf-syntax-ns#>\n\n# Robot Task Sequence\n\npsr:Instruction a psr:Task {\n  dul:workflow psr:Workflow {\n    dul:action a dul:Action {\n      psr:affordance psr:Affordance {\n        dul:component a dul:Appliance {\n          dul:type \"dishwasher\" .\n        }\n      }.\n      psr:agent a dul:RobotAgent {\n        psr:name \"Kitchen Robot\" .\n      }.\n      psr:component a dul:Furniture {\n        dul:type \"table\" .\n      }.\n      rdf:label \"Turn on the dishwasher.\"@en .\n    }.\n    psr:precedes psr:Affordance {\n      dul:component a dul:Appliance {\n        dul:type \"oven\" .\n      }.\n    }.\n    psr:follows psr:Affordance {\n      dul:component a dul:Furniture {\n        dul:type \"drawer\" .\n      }.\n    }.\n    rdf:label \"Load dishes into the dishwasher.\"@en .\n  }.\n  psr:affordance psr:Affordance {\n    dul:component a dul:Furniture {\n      dul:type \"sink\" .\n    }.\n  }.\n  rdf:label \"Wash dishes in the sink.\"@en .\n}\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 68.91,
+        "prompt_token/s": 1891.45,
+        "total_duration": 10005910230,
+        "load_duration": 47879468,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2165539586,
+        "eval_count": 535,
+        "completion_tokens": 535,
+        "eval_duration": 7763406280,
+        "approximate_total": "0h0m10s",
+        "total_tokens": 4631,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

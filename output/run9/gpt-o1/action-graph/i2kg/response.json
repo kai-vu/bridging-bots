@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-Balm7KGoGz93HmzbmONjxqhYS7YA2",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "@prefix owl:    <http://www.w3.org/2002/07/owl#> .\n@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .\n@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .\n@prefix geo:    <http://www.opengis.net/ont/geosparql#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr:    <https://w3id.org/psr-action#> .\n\npsr:Instruction1 a psr:Instruction ;\n    psr:hasNaturalLanguage \"Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function.\" ;\n    psr:hasWorkflow psr:Workflow1 .\n\npsr:Workflow1 a psr:Workflow ;\n    psr:hasAction psr:Action1 ,\n                 psr:Action2 ,\n                 psr:Action3 ,\n                 psr:Action4 ,\n                 psr:Action5 ,\n                 psr:Action6 ,\n                 psr:Action7 ,\n                 psr:Action8 ,\n                 psr:Action9 ,\n                 psr:Action10 ,\n                 psr:Action11 ,\n                 psr:Action12 ,\n                 psr:Action13 ,\n                 psr:Action14 ,\n                 psr:Action15 ,\n                 psr:Action16 ,\n                 psr:Action17 ,\n                 psr:Action18 ,\n                 psr:Action19 ,\n                 psr:Action20 .\n\n################################################################\n# AGENT AND COMPONENTS\n################################################################\n\n:Robot1 a dul:Agent .\n\n:Cupboard1 a psr:Furniture .\n:Fridge1 a psr:Appliance .\n\n:Jam a psr:Object .\n:JelloBox a psr:Object .\n:Salt a psr:Object .\n:CerealBox1 a psr:Object .\n:CerealBox2 a psr:Object .\n:PlateStack a psr:Object .\n:Pot1 a psr:Object .\n:Mug1 a psr:Object .\n:WaterBottle a psr:Object .\n\n################################################################\n# ACTIONS (OPEN CUPBOARD, PICK/PUT ITEMS IN CUPBOARD, CLOSE CUPBOARD)\n################################################################\n\npsr:Action1 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Cupboard1 ;\n    psr:isAffordedBy soma:Opening ;\n    psr:precedes psr:Action2 .\n\npsr:Action2 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Jam ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action3 .\n\npsr:Action3 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Jam ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action4 .\n\npsr:Action4 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :JelloBox ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action5 .\n\npsr:Action5 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :JelloBox ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action6 .\n\npsr:Action6 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Salt ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action7 .\n\npsr:Action7 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Salt ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action8 .\n\npsr:Action8 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :CerealBox1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action9 .\n\npsr:Action9 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :CerealBox1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action10 .\n\npsr:Action10 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :CerealBox2 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action11 .\n\npsr:Action11 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :CerealBox2 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action12 .\n\npsr:Action12 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :PlateStack ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action13 .\n\npsr:Action13 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :PlateStack ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action14 .\n\npsr:Action14 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Pot1 ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action15 .\n\npsr:Action15 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Pot1 ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action16 .\n\npsr:Action16 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Cupboard1 ;\n    psr:isAffordedBy soma:Closing ;\n    psr:precedes psr:Action17 .\n\n################################################################\n# ACTIONS (OPEN FRIDGE, PICK/PUT WATER BOTTLE, CLOSE FRIDGE)\n################################################################\n\npsr:Action17 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Fridge1 ;\n    psr:isAffordedBy soma:Opening ;\n    psr:precedes psr:Action18 .\n\npsr:Action18 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :WaterBottle ;\n    psr:isAffordedBy soma:PickingUp ;\n    psr:precedes psr:Action19 .\n\npsr:Action19 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :WaterBottle ;\n    psr:isAffordedBy soma:PuttingDown ;\n    psr:precedes psr:Action20 .\n\npsr:Action20 a dul:Action ;\n    soma:isPerformedBy :Robot1 ;\n    psr:actsOn :Fridge1 ;\n    psr:isAffordedBy soma:Closing .",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748103155,
+    "model": "o1-2024-12-17",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_03be0c45cc",
+    "usage": {
+        "completion_tokens": 4200,
+        "prompt_tokens": 5219,
+        "total_tokens": 9419,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 2560,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

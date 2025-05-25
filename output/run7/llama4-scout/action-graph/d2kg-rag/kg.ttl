@@ -1,0 +1,184 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItems .
+
+ex:IdentifyMisplacedItems a dul:Action ;
+  psr:actsOn ex:KitchenArea ;
+  soma:isPerformedBy ex:Robot .
+
+ex:KitchenArea a psr:Component ;
+  rdfs:label "Kitchen Area"@en .
+
+ex:Robot a dul:Agent ;
+  rdfs:label "Robot"@en .
+
+ex:IdentifyMisplacedItems psr:follows ex:EnterKitchen .
+
+ex:EnterKitchen a dul:Action ;
+  psr:actsOn ex:KitchenArea ;
+  soma:isPerformedBy ex:Robot .
+
+ex:IdentifyMisplacedItems psr:hasAction ex:FindYellowCup .
+
+ex:FindYellowCup a dul:Action ;
+  psr:actsOn ex:YellowCup ;
+  soma:isPerformedBy ex:Robot .
+
+ex:YellowCup a psr:Object ;
+  rdfs:label "Yellow Cup"@en .
+
+ex:FindYellowCup psr:follows ex:IdentifyMisplacedItems .
+
+ex:FindRedAndWhiteJar a dul:Action ;
+  psr:actsOn ex:RedAndWhiteJar ;
+  soma:isPerformedBy ex:Robot .
+
+ex:RedAndWhiteJar a psr:Object ;
+  rdfs:label "Red-and-white Jar"@en .
+
+ex:FindRedAndWhiteJar psr:follows ex:FindYellowCup .
+
+ex:FindBlueAndWhiteBox a dul:Action ;
+  psr:actsOn ex:BlueAndWhiteBox ;
+  soma:isPerformedBy ex:Robot .
+
+ex:BlueAndWhiteBox a psr:Object ;
+  rdfs:label "Blue-and-white Box"@en .
+
+ex:FindBlueAndWhiteBox psr:follows ex:FindRedAndWhiteJar .
+
+ex:FindRedBoxChucky a dul:Action ;
+  psr:actsOn ex:RedBoxChucky ;
+  soma:isPerformedBy ex:Robot .
+
+ex:RedBoxChucky a psr:Object ;
+  rdfs:label "Red Box Chucky"@en .
+
+ex:FindRedBoxChucky psr:follows ex:FindBlueAndWhiteBox .
+
+ex:FindRedBoxJello a dul:Action ;
+  psr:actsOn ex:RedBoxJello ;
+  soma:isPerformedBy ex:Robot .
+
+ex:RedBoxJello a psr:Object ;
+  rdfs:label "Red Box Jello"@en .
+
+ex:FindRedBoxJello psr:follows ex:FindRedBoxChucky .
+
+ex:FindStackOfWhitePlates a dul:Action ;
+  psr:actsOn ex:StackOfWhitePlates ;
+  soma:isPerformedBy ex:Robot .
+
+ex:StackOfWhitePlates a psr:Object ;
+  rdfs:label "Stack of White Plates"@en .
+
+ex:FindStackOfWhitePlates psr:follows ex:FindRedBoxJello .
+
+ex:PickUpYellowCup a dul:Action ;
+  psr:actsOn ex:YellowCup ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpYellowCup psr:follows ex:FindYellowCup .
+
+ex:PickUpRedAndWhiteJar a dul:Action ;
+  psr:actsOn ex:RedAndWhiteJar ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpRedAndWhiteJar psr:follows ex:FindRedAndWhiteJar .
+
+ex:PickUpBlueAndWhiteBox a dul:Action ;
+  psr:actsOn ex:BlueAndWhiteBox ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpBlueAndWhiteBox psr:follows ex:FindBlueAndWhiteBox .
+
+ex:PickUpRedBoxChucky a dul:Action ;
+  psr:actsOn ex:RedBoxChucky ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpRedBoxChucky psr:follows ex:FindRedBoxChucky .
+
+ex:PickUpRedBoxJello a dul:Action ;
+  psr:actsOn ex:RedBoxJello ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpRedBoxJello psr:follows ex:FindRedBoxJello .
+
+ex:PickUpStackOfWhitePlates a dul:Action ;
+  psr:actsOn ex:StackOfWhitePlates ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PickingUp .
+
+ex:PickUpStackOfWhitePlates psr:follows ex:FindStackOfWhitePlates .
+
+ex:PutAwayYellowCup a dul:Action ;
+  psr:actsOn ex:YellowCup ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayYellowCup psr:follows ex:PickUpYellowCup .
+
+ex:PutAwayRedAndWhiteJar a dul:Action ;
+  psr:actsOn ex:RedAndWhiteJar ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayRedAndWhiteJar psr:follows ex:PickUpRedAndWhiteJar .
+
+ex:PutAwayBlueAndWhiteBox a dul:Action ;
+  psr:actsOn ex:BlueAndWhiteBox ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayBlueAndWhiteBox psr:follows ex:PickUpBlueAndWhiteBox .
+
+ex:PutAwayRedBoxChucky a dul:Action ;
+  psr:actsOn ex:RedBoxChucky ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayRedBoxChucky psr:follows ex:PickUpRedBoxChucky .
+
+ex:PutAwayRedBoxJello a dul:Action ;
+  psr:actsOn ex:RedBoxJello ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayRedBoxJello psr:follows ex:PickUpRedBoxJello .
+
+ex:PutAwayStackOfWhitePlates a dul:Action ;
+  psr:actsOn ex:StackOfWhitePlates ;
+  soma:isPerformedBy ex:Robot ;
+  psr:isAffordedBy soma:PuttingDown .
+
+ex:PutAwayStackOfWhitePlates psr:follows ex:PickUpStackOfWhitePlates .
+
+ex:PutAwayYellowCup psr:actsOn ex:Cabinet .
+
+ex:Cabinet a psr:Component ;
+  rdfs:label "Cabinet"@en .
+
+ex:PutAwayRedAndWhiteJar psr:actsOn ex:Cabinet .
+
+ex:PutAwayBlueAndWhiteBox psr:actsOn ex:Cabinet .
+
+ex:PutAwayRedBoxChucky psr:actsOn ex:Storage .
+
+ex:Storage a psr:Component ;
+  rdfs:label "Storage"@en .
+
+ex:PutAwayRedBoxJello psr:actsOn ex:Storage .
+
+ex:PutAwayStackOfWhitePlates psr:actsOn ex:Cabinet .

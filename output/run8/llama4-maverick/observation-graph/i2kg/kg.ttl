@@ -1,0 +1,81 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Environment1 a psr:Environment ;
+    dul:hasComponent ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:Table1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Chair4, ex:Sink1, ex:Stove1, ex:Cabinet3 .
+
+ex:Cabinet1 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:Cabinet2 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:Cabinet3 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:Refrigerator1 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:Table1 a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom1 ;
+    psr:hasAffordance soma:Supporting .
+
+ex:Chair1 a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom1 ;
+    psr:hasAffordance soma:Sitting .
+
+ex:Chair2 a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom1 ;
+    psr:hasAffordance soma:Sitting .
+
+ex:Chair3 a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom1 ;
+    psr:hasAffordance soma:Sitting .
+
+ex:Chair4 a psr:Furniture ;
+    dul:hasLocation ex:DiningRoom1 ;
+    psr:hasAffordance soma:Sitting .
+
+ex:Sink1 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Containing .
+
+ex:Stove1 a psr:Appliance ;
+    dul:hasLocation ex:Kitchen1 ;
+    psr:hasAffordance soma:Heating .
+
+ex:JelloBox1 a psr:Object ;
+    dul:hasLocation ex:CounterTop1 ;
+    psr:hasAffordance soma:Containing .
+
+ex:AlpenSaltBox1 a psr:Object ;
+    dul:hasLocation ex:CounterTop1 ;
+    psr:hasAffordance soma:Containing .
+
+ex:EvianBottle1 a psr:Object ;
+    dul:hasLocation ex:Table1 ;
+    psr:hasAffordance soma:Containing .
+
+ex:CounterTop1 a psr:Component ;
+    dul:hasLocation ex:Kitchen1 .
+
+ex:Kitchen1 a soma:Location .
+
+ex:DiningRoom1 a soma:Location .
+
+ex:Kitchen1 geo:sfContains ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:Sink1, ex:Stove1 .
+ex:DiningRoom1 geo:sfContains ex:Table1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Chair4 .
+
+ex:CounterTop1 psr:onTopOf ex:Cabinet1 .
+ex:JelloBox1 psr:onTopOf ex:CounterTop1 .
+ex:AlpenSaltBox1 psr:onTopOf ex:CounterTop1 .
+ex:EvianBottle1 psr:onTopOf ex:Table1 .

@@ -1,0 +1,75 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Countertop1, ex:Fridge, ex:DiningTable, ex:Cabinet1, ex:Cabinet2, ex:ExhaustHood, ex:Sink .
+
+ex:Countertop1 a psr:Component ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:Kitchen ;
+    geo:sfContains ex:Jar1, ex:Jar2, ex:Box1, ex:Box2, ex:Plates .
+
+ex:Jar1 a psr:Object ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Jar2 a psr:Object ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Box1 a psr:Object ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Box2 a psr:Object ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Plates a psr:Object ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Fridge a psr:Appliance ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:DiningTable a psr:Furniture ;
+    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown ;
+    dul:hasLocation ex:Kitchen ;
+    geo:sfContains ex:WaterBottle, ex:Book1 .
+
+ex:WaterBottle a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Book1 a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Cabinet1 a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Cabinet2 a psr:Furniture ;
+    psr:hasAffordance soma:Opening, soma:Closing ;
+    dul:hasLocation ex:Kitchen .
+
+ex:ExhaustHood a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Sink a psr:Component ;
+    psr:hasAffordance soma:Holding ;
+    dul:hasLocation ex:Countertop1 .
+
+ex:Countertop1 dul:hasLocation ex:Kitchen ;
+    psr:onTopOf ex:Cabinet1 .
+
+ex:DiningTable dul:hasLocation ex:Kitchen .
+
+ex:Fridge dul:hasLocation ex:Kitchen .
+
+ex:Cabinet1 dul:hasLocation ex:Kitchen .
+
+ex:Cabinet2 dul:hasLocation ex:Kitchen .
+
+ex:ExhaustHood dul:hasLocation ex:Kitchen .
+
+ex:Sink dul:hasLocation ex:Countertop1 .

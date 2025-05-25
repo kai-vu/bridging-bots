@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-41d45cdc-9dd5-4ebe-aae2-f355f904c3db",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The environment contains a kitchen and dining area. The room has white walls and a brown wooden floor.\n\nIn the kitchen area, there are black cabinets with blue handles and a beige marble countertop. On the countertop, there is a sink, a pot on a stove, and a range hood above it. A window is also present. The items on the counter include a yellow cup, a red-and-white jar labeled \"Mrs. Murrary's Strawberry Jam,\" a blue-and-white box of Rice Bubbles cereal, a red box labeled \"CHUCKY\" with a picture of a doll on it, another red box of Jello, and a stack of white plates.\n\nAdjacent to the kitchen is a dining area with a brown wooden table and four white chairs. On the table, there is a bottle of Evian water, a plate with a mug and a spoon on it, a book titled \"Chocolate Cake Murder,\" and a bowl of fruit. \n\nA white refrigerator stands against the wall between the kitchen and dining areas. \n\nThe overall layout suggests a small, functional space for both food preparation and eating.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748034935,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_38b31b7025",
+    "usage": {
+        "completion_tokens": 227,
+        "prompt_tokens": 12500,
+        "total_tokens": 12727,
+        "completion_time": 0.46327853,
+        "prompt_time": 0.335737805,
+        "queue_time": 2.2751037590000003,
+        "total_time": 0.799016335
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzg0krefb3b30bhet42wcpw"
+    }
+}

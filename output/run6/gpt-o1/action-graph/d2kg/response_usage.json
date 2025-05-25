@@ -1,0 +1,15 @@
+{
+    "completion_tokens": 7396,
+    "prompt_tokens": 2192,
+    "total_tokens": 9588,
+    "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 5440,
+        "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+    }
+}

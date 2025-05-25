@@ -1,0 +1,82 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:kitchen a psr:Environment .
+ex:diningTable a psr:Furniture ;
+    dul:hasLocation ex:diningTableLocation .
+ex:diningTableLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:floor .
+ex:floor a psr:Component .
+
+ex:fridge a psr:Appliance ;
+    dul:hasLocation ex:fridgeLocation .
+ex:fridgeLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:kitchen .
+
+ex:kitchenCounter a psr:Component ;
+    dul:hasLocation ex:kitchenCounterLocation .
+ex:kitchenCounterLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:kitchen .
+ex:microWave a psr:Appliance ;
+    dul:hasLocation ex:microWaveLocation .
+ex:microWaveLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:kitchenCounter .
+
+ex:sink a psr:Component ;
+    dul:hasLocation ex:sinkLocation .
+ex:sinkLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:kitchen .
+
+ex:cabinet a psr:Component ;
+    dul:hasLocation ex:cabinetLocation .
+ex:cabinetLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:kitchen .
+
+ex:window a psr:Component ;
+    dul:hasLocation ex:windowLocation .
+ex:windowLocation a psr:CurrentLocation ;
+    geo:sfWithin ex:kitchen .
+
+ex:packagedFood a psr:Object ;
+    dul:hasLocation ex:foodLocation .
+ex:foodLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:diningTable .
+
+ex:plasticBottle a psr:Object ;
+    dul:hasLocation ex:bottleLocation .
+ex:bottleLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:diningTable .
+
+ex:cup a psr:Object ;
+    dul:hasLocation ex:cupLocation .
+ex:cupLocation a psr:CurrentLocation ;
+    psr:onTopOf ex:kitchenCounter .
+
+ex:diningTable a psr:Component ;
+    psr:hasAffordance soma:Grasping .
+ex:fridge a psr:Component ;
+    psr:hasAffordance soma:Opening .
+ex:fridge a psr:Component ;
+    psr:hasAffordance soma:Closing .
+ex:kitchenCounter a psr:Component ;
+    psr:hasAffordance soma:Pulling .
+ex:microWave a psr:Component ;
+    psr:hasAffordance soma:Pushing .
+ex:sink a psr:Component ;
+    psr:hasAffordance soma:Holding .
+ex:window a psr:Component ;
+    psr:hasAffordance soma:Opening .
+ex:window a psr:Component ;
+    psr:hasAffordance soma:Closing .
+
+ex:kitchen dul:hasComponent ex:diningTable .
+ex:kitchen dul:hasComponent ex:fridge .
+ex:kitchen dul:hasComponent ex:kitchenCounter .
+ex:kitchen dul:hasComponent ex:sink .
+ex:kitchen dul:hasComponent ex:cabinet .
+ex:kitchen dul:hasComponent ex:window .

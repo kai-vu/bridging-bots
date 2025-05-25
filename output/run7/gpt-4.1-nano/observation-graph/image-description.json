@@ -1,0 +1,36 @@
+{
+    "id": "chatcmpl-BaUjCrgP9gSk8eluNYwsRuguVaPVb",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Objects on the kitchen countertop include a box of Jello pudding mix, a carton of Alpen Salz, a packaging of rice bubbles, a small jar of strawberry jam, a plastic water bottle, a pitcher, and a glass of white wine. The box of Jello and the rice bubbles package are positioned near the center, with the water bottle and pitcher placed close together toward the right side. The jam jar, wine glass, and additional packaging are nearby but spaced apart. The countertop is beige with a marbled pattern.\n\nIn the environment, a tall white refrigerator is located at the right end of the counter, adjacent to a dark kitchen cabinet with a handle, positioned above the countertop. A dark cabinet with multiple handles is beneath the countertop, likely containing storage space.\n\nFrom different angles:\n- The first image shows the corner of the kitchen with the countertop, items on it, and the white fridge to the right.\n- The second image provides a front view of the same countertop, with a more complete view of the snack and beverage items, near white dining chairs.\n- The third image displays the same section of the countertop, emphasizing the arranged snack and drink items.\n- The fourth image is a lower angle showing the sink embedded in the beige counter, with the upper cabinets and a window above the sink. A round vent and additional decor items are on the wall.\n\nThe environment is a small, tidy kitchen with white walls, dark cabinetry, and a wooden floor. The environment appears to be a dining area connected to the kitchen, with a wooden dining table, white chairs, and decorative items on the table.",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": []
+            }
+        }
+    ],
+    "created": 1748037626,
+    "model": "gpt-4.1-nano-2025-04-14",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_eede8f0d45",
+    "usage": {
+        "completion_tokens": 322,
+        "prompt_tokens": 18687,
+        "total_tokens": 19009,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

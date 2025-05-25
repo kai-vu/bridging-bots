@@ -1,0 +1,99 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:kitchen a psr:Environment .
+ex:kitchen dul:hasComponent ex:island .
+ex:kitchen dul:hasComponent ex:refrigerator .
+ex:kitchen dul:hasComponent ex:cabinet .
+ex:kitchen dul:hasComponent ex:sink .
+ex:kitchen dul:hasComponent ex:countertop .
+ex:kitchen dul:hasComponent ex:table .
+ex:kitchen dul:hasComponent ex:chairs .
+ex:kitchen dul:hasComponent ex:window .
+ex:kitchen dul:hasComponent ex:pictureFrame .
+ex:kitchen dul:hasComponent ex:whiteboard .
+
+ex:island a psr:Component .
+ex:island dul:hasLocation ex:islandLocation .
+ex:islandLocation a psr:CurrentLocation .
+ex:island psr:hasAffordance soma:Pulling .
+ex:island psr:hasAffordance soma:Pushing .
+
+ex:stove a psr:Component .
+ex:stove dul:hasLocation ex:stoveLocation .
+ex:stoveLocation a psr:CurrentLocation .
+ex:stoveLocation psr:onTopOf ex:island .
+ex:stove psr:hasAffordance soma:Grasping .
+
+ex:pot a psr:Component .
+ex:pot dul:hasLocation ex:potLocation .
+ex:potLocation a psr:CurrentLocation .
+ex:potLocation psr:onTopOf ex:stove .
+ex:pot psr:hasAffordance soma:PickingUp .
+ex:pot psr:hasAffordance soma:PuttingDown .
+
+ex:cups a psr:Component .
+ex:cups dul:hasLocation ex:cupsLocation .
+ex:cupsLocation a psr:CurrentLocation .
+ex:cupsLocation psr:onTopOf ex:island .
+ex:cups psr:hasAffordance soma:Grasping .
+
+ex:refrigerator a psr:Component .
+ex:refrigerator dul:hasLocation ex:refrigeratorLocation .
+ex:refrigeratorLocation a psr:CurrentLocation .
+ex:refrigerator psr:hasAffordance soma:Opening .
+ex:refrigerator psr:hasAffordance soma:Closing .
+
+ex:microWave a psr:Component .
+ex:microWave dul:hasLocation ex:microWaveLocation .
+ex:microWaveLocation a psr:CurrentLocation .
+ex:microWaveLocation psr:onTopOf ex:refrigerator .
+ex:microWave psr:hasAffordance soma:Grasping .
+
+ex:cabinet a psr:Component .
+ex:cabinet dul:hasLocation ex:cabinetLocation .
+ex:cabinetLocation a psr:CurrentLocation .
+ex:cabinetLocation geo:sfAbove ex:refrigerator .
+ex:cabinet psr:hasAffordance soma:Opening .
+ex:cabinet psr:hasAffordance soma:Closing .
+
+ex:sink a psr:Component .
+ex:sink dul:hasLocation ex:sinkLocation .
+ex:sinkLocation a psr:CurrentLocation .
+ex:sink psr:hasAffordance soma:Grasping .
+
+ex:countertop a psr:Component .
+ex:countertop dul:hasLocation ex:countertopLocation .
+ex:countertopLocation a psr:CurrentLocation .
+ex:countertop psr:hasAffordance soma:Placing .
+
+ex:table a psr:Component .
+ex:table dul:hasLocation ex:tableLocation .
+ex:tableLocation a psr:CurrentLocation .
+ex:table psr:hasAffordance soma:Grasping .
+
+ex:chairs a psr:Component .
+ex:chairs dul:hasLocation ex:chairsLocation .
+ex:chairsLocation a psr:CurrentLocation .
+ex:chairs psr:hasAffordance soma:Grasping .
+
+ex:window a psr:Component .
+ex:window dul:hasLocation ex:windowLocation .
+ex:windowLocation a psr:CurrentLocation .
+ex:window psr:hasAffordance soma:Opening .
+ex:window psr:hasAffordance soma:Closing .
+
+ex:pictureFrame a psr:Component .
+ex:pictureFrame dul:hasLocation ex:pictureFrameLocation .
+ex:pictureFrameLocation a psr:CurrentLocation .
+ex:pictureFrame psr:hasAffordance soma:Grasping .
+
+ex:whiteboard a psr:Component .
+ex:whiteboard dul:hasLocation ex:whiteboardLocation .
+ex:whiteboardLocation a psr:CurrentLocation .
+ex:whiteboard psr:hasAffordance soma:Writing .

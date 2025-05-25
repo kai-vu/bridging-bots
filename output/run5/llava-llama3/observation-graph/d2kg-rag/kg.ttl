@@ -1,0 +1,13 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:environment1 a psr:Environment .
+ex:environment1 dul:hasComponent ex:component1 .
+ex:component1 a psr:Component .
+ex:component1 dul:hasLocation ex:location1 .
+ex:location1 a soma:Location .

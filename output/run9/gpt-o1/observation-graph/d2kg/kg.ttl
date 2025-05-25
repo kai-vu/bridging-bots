@@ -1,0 +1,151 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:KitchenEnvironment a psr:Environment ;
+    dul:hasComponent ex:Refrigerator,
+                     ex:Cabinetry,
+                     ex:KitchenCounter,
+                     ex:JarBonneMaman,
+                     ex:BoxJello,
+                     ex:ContainerAlpenSalz,
+                     ex:StackOfWhitePlates,
+                     ex:CerealBoxRiceBubbles,
+                     ex:CerealBoxChucky,
+                     ex:JamJar2,
+                     ex:OrangeMug,
+                     ex:MetalPot,
+                     ex:Stovetop,
+                     ex:VentHood,
+                     ex:StainlessSteelSink,
+                     ex:WoodenFramedWindow,
+                     ex:WoodenDiningTable,
+                     ex:WhiteUpholsteredChairs,
+                     ex:PlasticWaterBottleEvian,
+                     ex:WhiteCaddy,
+                     ex:SquareBoxShortbread,
+                     ex:WhiteFruitBowl,
+                     ex:ClearPitcher,
+                     ex:WineGlass,
+                     ex:WhiteDoor,
+                     ex:Oranges,
+                     ex:Lemon .
+
+ex:KitchenCounter dul:hasLocation ex:KitchenCounterSurface ;
+    a psr:Furniture ;
+    rdfs:label "beige marble-like kitchen counter"@en .
+
+ex:KitchenCounterSurface a psr:Location ;
+    rdfs:label "Counter surface location"@en ;
+    geo:sfContains ex:JarBonneMaman,
+                   ex:BoxJello,
+                   ex:ContainerAlpenSalz,
+                   ex:StackOfWhitePlates,
+                   ex:CerealBoxRiceBubbles,
+                   ex:CerealBoxChucky,
+                   ex:JamJar2,
+                   ex:OrangeMug,
+                   ex:Stovetop .
+
+ex:Stovetop dul:hasLocation ex:StovetopLocation ;
+    a psr:Appliance ;
+    rdfs:label "Stovetop"@en .
+
+ex:StovetopLocation a psr:Location ;
+    rdfs:label "Stovetop surface location"@en ;
+    geo:sfContains ex:MetalPot .
+
+ex:WoodenDiningTable dul:hasLocation ex:DiningTableSurface ;
+    a psr:Furniture ;
+    rdfs:label "Rectangular wooden dining table"@en .
+
+ex:DiningTableSurface a psr:Location ;
+    rdfs:label "Dining table surface location"@en ;
+    geo:sfContains ex:PlasticWaterBottleEvian,
+                   ex:WhiteCaddy,
+                   ex:SquareBoxShortbread,
+                   ex:WhiteFruitBowl,
+                   ex:ClearPitcher,
+                   ex:WineGlass .
+
+ex:WhiteFruitBowl dul:hasLocation ex:FruitBowlLocation ;
+    a psr:Object ;
+    rdfs:label "White fruit bowl"@en .
+
+ex:FruitBowlLocation a psr:Location ;
+    rdfs:label "Fruit bowl location"@en ;
+    geo:sfContains ex:Oranges,
+                   ex:Lemon .
+
+ex:Refrigerator a psr:Appliance ;
+    rdfs:label "white refrigerator"@en .
+
+ex:Cabinetry a psr:Furniture ;
+    rdfs:label "tall black cabinetry"@en .
+
+ex:JarBonneMaman a psr:Object ;
+    rdfs:label "Bonne Maman Strawberry Preserves jar"@en .
+
+ex:BoxJello a psr:Object ;
+    rdfs:label "Box of strawberry-flavored Jell-O"@en .
+
+ex:ContainerAlpenSalz a psr:Object ;
+    rdfs:label "Alpen Salz container"@en .
+
+ex:StackOfWhitePlates a psr:Object ;
+    rdfs:label "short stack of white plates"@en .
+
+ex:CerealBoxRiceBubbles a psr:Object ;
+    rdfs:label "Rice Bubbles cereal box"@en .
+
+ex:CerealBoxChucky a psr:Object ;
+    rdfs:label "Chucky cereal box"@en .
+
+ex:JamJar2 a psr:Object ;
+    rdfs:label "Additional jam jar"@en .
+
+ex:OrangeMug a psr:Object ;
+    rdfs:label "Orange mug"@en .
+
+ex:MetalPot a psr:Object ;
+    rdfs:label "Small metal pot"@en .
+
+ex:VentHood a psr:Appliance ;
+    rdfs:label "Wooden vent hood"@en .
+
+ex:StainlessSteelSink a psr:Appliance ;
+    rdfs:label "Stainless-steel sink"@en .
+
+ex:WoodenFramedWindow a psr:Component ;
+    rdfs:label "Wooden-framed window"@en .
+
+ex:WhiteUpholsteredChairs a psr:Furniture ;
+    rdfs:label "White-upholstered chairs"@en .
+
+ex:PlasticWaterBottleEvian a psr:Object ;
+    rdfs:label "Large plastic water bottle labeled Evian"@en .
+
+ex:WhiteCaddy a psr:Object ;
+    rdfs:label "White caddy"@en .
+
+ex:SquareBoxShortbread a psr:Object ;
+    rdfs:label "Square box labeled Shortbread"@en .
+
+ex:ClearPitcher a psr:Object ;
+    rdfs:label "Clear pitcher"@en .
+
+ex:WineGlass a psr:Object ;
+    rdfs:label "Single wine glass"@en .
+
+ex:WhiteDoor a psr:Component ;
+    rdfs:label "White door"@en .
+
+ex:Oranges a psr:Object ;
+    rdfs:label "Several oranges"@en .
+
+ex:Lemon a psr:Object ;
+    rdfs:label "One lemon"@en .

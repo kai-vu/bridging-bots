@@ -1,0 +1,77 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:close_open_cabinet kitchen:actsOn kitchen:open_cabinet ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:close_refrigerator_door kitchen:actsOn kitchen:refrigerator_door ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:inspect_kitchen kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:kitchen_organization_workflow kitchen:hasAction kitchen:close_refrigerator_door,
+        kitchen:inspect_kitchen,
+        kitchen:move_to_island,
+        kitchen:move_to_open_cabinet,
+        kitchen:move_to_refrigerator,
+        kitchen:move_to_white_countertop,
+        kitchen:pick_up_pot_of_coffee,
+        kitchen:pick_up_tin_can,
+        kitchen:place_food_items_in_refrigerator,
+        kitchen:verify_organization .
+
+kitchen:move_to_island kitchen:precedes kitchen:pick_up_cups .
+
+kitchen:move_to_open_cabinet kitchen:precedes kitchen:pick_up_box_of_cereal .
+
+kitchen:move_to_refrigerator kitchen:precedes kitchen:pick_up_food_items .
+
+kitchen:move_to_white_countertop kitchen:precedes kitchen:pick_up_box_of_cereal .
+
+kitchen:open_refrigerator_door kitchen:actsOn kitchen:refrigerator_door ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:pick_up_cups kitchen:actsOn kitchen:cups ;
+    kitchen:follows kitchen:place_cups_in_cabinet .
+
+kitchen:pick_up_food_items kitchen:actsOn kitchen:food_items ;
+    kitchen:follows kitchen:open_refrigerator_door .
+
+kitchen:pick_up_pot_of_coffee kitchen:actsOn kitchen:pot_of_coffee ;
+    kitchen:follows kitchen:place_pot_of_coffee_in_cabinet .
+
+kitchen:pick_up_tin_can kitchen:actsOn kitchen:tin_can ;
+    kitchen:follows kitchen:place_tin_can_in_cabinet .
+
+kitchen:place_box_of_cereal_in_cabinet kitchen:actsOn kitchen:box_of_cereal ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:place_cups_in_cabinet kitchen:actsOn kitchen:cups ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:place_food_items_in_refrigerator kitchen:actsOn kitchen:food_items ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:place_pot_of_coffee_in_cabinet kitchen:actsOn kitchen:pot_of_coffee ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:place_tin_can_in_cabinet kitchen:actsOn kitchen:tin_can ;
+    kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:verify_organization kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:box_of_cereal kitchen:isAffordedBy kitchen:PickingUp .
+
+kitchen:cups kitchen:isAffordedBy kitchen:PickingUp .
+
+kitchen:food_items kitchen:isAffordedBy kitchen:PickingUp .
+
+kitchen:pick_up_box_of_cereal kitchen:actsOn kitchen:box_of_cereal ;
+    kitchen:follows kitchen:close_open_cabinet,
+        kitchen:place_box_of_cereal_in_cabinet .
+
+kitchen:pot_of_coffee kitchen:isAffordedBy kitchen:PickingUp .
+
+kitchen:tin_can kitchen:isAffordedBy kitchen:PickingUp .
+
+kitchen:assistant kitchen:hasWorkflow kitchen:kitchen_organization_workflow .
+

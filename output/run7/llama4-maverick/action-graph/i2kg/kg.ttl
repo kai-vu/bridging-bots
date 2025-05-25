@@ -1,0 +1,64 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+
+psr:RestoreKitchenOrder_Instruction a psr:Instruction ;
+    psr:hasWorkflow psr:RestoreKitchenOrder_Workflow .
+
+psr:RestoreKitchenOrder_Workflow a psr:Workflow ;
+    psr:hasAction psr:PickUp_Bottle_Action ;
+    psr:hasAction psr:PutAway_Bottle_Action ;
+    psr:hasAction psr:PickUp_Box_Action ;
+    psr:hasAction psr:PutAway_Box_Action ;
+    psr:hasAction psr:PickUp_Jar_Action ;
+    psr:hasAction psr:PutAway_Jar_Action .
+
+psr:PickUp_Bottle_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Bottle_Object ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:PutAway_Bottle_Action .
+
+psr:PutAway_Bottle_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Bottle_Object ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows psr:PickUp_Bottle_Action .
+
+psr:PickUp_Box_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Box_Object ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:PutAway_Box_Action .
+
+psr:PutAway_Box_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Box_Object ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows psr:PickUp_Box_Action .
+
+psr:PickUp_Jar_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Jar_Object ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes psr:PutAway_Jar_Action .
+
+psr:PutAway_Jar_Action a dul:Action ;
+    soma:isPerformedBy psr:Robot_Agent ;
+    psr:actsOn psr:Jar_Object ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:follows psr:PickUp_Jar_Action .
+
+psr:Robot_Agent a dul:Agent .
+
+psr:Bottle_Object a psr:Object .
+psr:Box_Object a psr:Object .
+psr:Jar_Object a psr:Object .
+
+soma:PickingUp a psr:Affordance .
+soma:PuttingDown a psr:Affordance .

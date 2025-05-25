@@ -1,0 +1,95 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:inspect_countertop kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:bottle_of_water kitchen:isMovedTo kitchen:refrigerator .
+
+kitchen:dining_room kitchen:hasComponent kitchen:table .
+
+kitchen:kitchen kitchen:hasComponent kitchen:countertop .
+
+kitchen:move_bottle_of_water kitchen:actsOn kitchen:bottle_of_water .
+
+kitchen:move_bowl_of_fruit kitchen:actsOn kitchen:bowl_of_fruit .
+
+kitchen:move_box_of_Jell-O kitchen:actsOn kitchen:box_of_Jell-O .
+
+kitchen:move_box_of_Rice_Bubbles kitchen:actsOn kitchen:box_of_Rice_Bubbles .
+
+kitchen:move_box_of_shortbread kitchen:actsOn kitchen:box_of_shortbread .
+
+kitchen:move_cookbook kitchen:actsOn kitchen:cookbook .
+
+kitchen:move_duplicate_jar_of_jam kitchen:actsOn kitchen:duplicate_jar_of_jam .
+
+kitchen:move_jar_of_jam kitchen:actsOn kitchen:jar_of_jam .
+
+kitchen:move_pack_of_Alpen_Salt kitchen:actsOn kitchen:pack_of_Alpen_Salt .
+
+kitchen:move_second_bottle_of_water kitchen:actsOn kitchen:second_bottle_of_water .
+
+kitchen:move_stack_of_paper_plates kitchen:actsOn kitchen:stack_of_paper_plates .
+
+kitchen:move_to_kitchen kitchen:isPerformedBy kitchen:assistant .
+
+kitchen:second_bottle_of_water kitchen:isMovedTo kitchen:refrigerator .
+
+kitchen:two_bottles_of_water kitchen:isLocatedOn kitchen:table .
+
+kitchen:workflow kitchen:hasAction kitchen:move_to_kitchen .
+
+kitchen:assistant kitchen:actsOn kitchen:kitchen ;
+    kitchen:hasWorkflow kitchen:workflow ;
+    kitchen:inspects kitchen:table ;
+    kitchen:movesTo kitchen:dining_room ;
+    kitchen:performsAction kitchen:move_bottle_of_water,
+        kitchen:move_bowl_of_fruit,
+        kitchen:move_box_of_Jell-O,
+        kitchen:move_box_of_Rice_Bubbles,
+        kitchen:move_box_of_shortbread,
+        kitchen:move_cookbook,
+        kitchen:move_duplicate_jar_of_jam,
+        kitchen:move_jar_of_jam,
+        kitchen:move_pack_of_Alpen_Salt,
+        kitchen:move_second_bottle_of_water,
+        kitchen:move_stack_of_paper_plates .
+
+kitchen:bowl_of_fruit kitchen:isLocatedOn kitchen:table ;
+    kitchen:isMovedTo kitchen:cabinet_or_pantry .
+
+kitchen:box_of_Jell-O kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:box_of_Rice_Bubbles kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:box_of_shortbread kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:cookbook kitchen:isLocatedOn kitchen:table ;
+    kitchen:isMovedTo kitchen:book_storage_or_cabinet .
+
+kitchen:duplicate_jar_of_jam kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:jar_of_jam kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:pack_of_Alpen_Salt kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:stack_of_paper_plates kitchen:isLocatedOn kitchen:countertop ;
+    kitchen:isMovedTo kitchen:cabinet .
+
+kitchen:table kitchen:hasObject kitchen:bowl_of_fruit,
+        kitchen:cookbook,
+        kitchen:two_bottles_of_water .
+
+kitchen:countertop kitchen:hasObject kitchen:box_of_Jell-O,
+        kitchen:box_of_Rice_Bubbles,
+        kitchen:box_of_shortbread,
+        kitchen:duplicate_jar_of_jam,
+        kitchen:jar_of_jam,
+        kitchen:pack_of_Alpen_Salt,
+        kitchen:stack_of_paper_plates .
+

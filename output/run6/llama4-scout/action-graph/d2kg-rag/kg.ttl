@@ -1,0 +1,154 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:RestoreKitchenTask a psr:Workflow ;
+  psr:hasAction ex:IdentifyMisplacedItems .
+
+ex:IdentifyMisplacedItems a dul:Action ;
+  rdfs:label "Identify Misplaced Items"@en ;
+  psr:actsOn ex:KitchenItems ;
+  psr:isAffordedBy soma:Grasping ;
+  psr:followedBy ex:PickUpItem .
+
+ex:KitchenItems a psr:Component ;
+  rdfs:label "Kitchen Items"@en .
+
+ex:PickUpItem a dul:Action ;
+  rdfs:label "Pick Up Item"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:PickingUp ;
+  psr:followedBy ex:DetermineStorageLocation .
+
+ex:MisplacedItem a psr:Component ;
+  rdfs:label "Misplaced Item"@en .
+
+ex:DetermineStorageLocation a dul:Action ;
+  rdfs:label "Determine Storage Location"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:Opening ;
+  psr:followedBy ex:StoreItem .
+
+ex:StoreItem a dul:Action ;
+  rdfs:label "Store Item"@en ;
+  psr:actsOn ex:MisplacedItem ;
+  psr:isAffordedBy soma:PuttingDown ;
+  psr:precedes ex:CheckIfDone .
+
+ex:CheckIfDone a dul:Action ;
+  rdfs:label "Check If Done"@en ;
+  psr:actsOn ex:Kitchen ;
+  psr:isAffordedBy soma:Closing ;
+  psr:follows ex:StoreItem .
+
+ex:Kitchen a psr:Component ;
+  rdfs:label "Kitchen"@en .
+
+ex:jarOfJam a psr:Object ;
+  rdfs:label "Jar of Jam"@en .
+
+ex:boxOfJellO a psr:Object ;
+  rdfs:label "Box of Jell-O"@en .
+
+ex:packOfAlpenSalt a psr:Object ;
+  rdfs:label "Pack of Alpen Salt"@en .
+
+ex:boxOfRiceBubbles a psr:Object ;
+  rdfs:label "Box of Rice Bubbles"@en .
+
+ex:boxOfShortbread a psr:Object ;
+  rdfs:label "Box of Shortbread"@en .
+
+ex:bottlesOfWater a psr:Object ;
+  rdfs:label "Bottles of Water"@en .
+
+ex:bowlOfFruit a psr:Object ;
+  rdfs:label "Bowl of Fruit"@en .
+
+ex:cookbook a psr:Object ;
+  rdfs:label "Cookbook"@en .
+
+ex:jarOfJam2 a psr:Object ;
+  rdfs:label "Jar of Jam 2"@en .
+
+ex:stackOfPaperPlates a psr:Object ;
+  rdfs:label "Stack of Paper Plates"@en .
+
+ex:potOnStovetop a psr:Object ;
+  rdfs:label "Pot on Stovetop"@en .
+
+ex:RestoreKitchenTask psr:hasAction ex:IdentifyMisplacedItems ;
+  psr:hasAction ex:PickUpItem ;
+  psr:hasAction ex:DetermineStorageLocation ;
+  psr:hasAction ex:StoreItem ;
+  psr:hasAction ex:CheckIfDone .
+
+ex:IdentifyMisplacedItems psr:actsOn ex:jarOfJam ;
+  psr:actsOn ex:boxOfJellO ;
+  psr:actsOn ex:packOfAlpenSalt ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  psr:actsOn ex:boxOfShortbread ;
+  psr:actsOn ex:bottlesOfWater ;
+  psr:actsOn ex:bowlOfFruit ;
+  psr:actsOn ex:cookbook ;
+  psr:actsOn ex:jarOfJam2 ;
+  psr:actsOn ex:stackOfPaperPlates .
+
+ex:PickUpItem psr:actsOn ex:jarOfJam ;
+  psr:actsOn ex:boxOfJellO ;
+  psr:actsOn ex:packOfAlpenSalt ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  psr:actsOn ex:boxOfShortbread ;
+  psr:actsOn ex:bottlesOfWater ;
+  psr:actsOn ex:bowlOfFruit ;
+  psr:actsOn ex:cookbook ;
+  psr:actsOn ex:jarOfJam2 ;
+  psr:actsOn ex:stackOfPaperPlates .
+
+ex:DetermineStorageLocation psr:actsOn ex:jarOfJam ;
+  psr:actsOn ex:boxOfJellO ;
+  psr:actsOn ex:packOfAlpenSalt ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  psr:actsOn ex:boxOfShortbread ;
+  psr:actsOn ex:bottlesOfWater ;
+  psr:actsOn ex:bowlOfFruit ;
+  psr:actsOn ex:cookbook ;
+  psr:actsOn ex:jarOfJam2 ;
+  psr:actsOn ex:stackOfPaperPlates .
+
+ex:StoreItem psr:actsOn ex:jarOfJam ;
+  psr:actsOn ex:boxOfJellO ;
+  psr:actsOn ex:packOfAlpenSalt ;
+  psr:actsOn ex:boxOfRiceBubbles ;
+  psr:actsOn ex:boxOfShortbread ;
+  psr:actsOn ex:bottlesOfWater ;
+  psr:actsOn ex:bowlOfFruit ;
+  psr:actsOn ex:cookbook ;
+  psr:actsOn ex:jarOfJam2 ;
+  psr:actsOn ex:stackOfPaperPlates .
+
+ex:jarOfJam psr:isAffordedBy soma:PickingUp ;
+  ex:jarOfJam2 psr:isAffordedBy soma:PickingUp ;
+  ex:boxOfJellO psr:isAffordedBy soma:PickingUp ;
+  ex:packOfAlpenSalt psr:isAffordedBy soma:PickingUp ;
+  ex:boxOfRiceBubbles psr:isAffordedBy soma:PickingUp ;
+  ex:boxOfShortbread psr:isAffordedBy soma:PickingUp ;
+  ex:bottlesOfWater psr:isAffordedBy soma:PickingUp ;
+  ex:bowlOfFruit psr:isAffordedBy soma:PickingUp ;
+  ex:cookbook psr:isAffordedBy soma:PickingUp ;
+  ex:stackOfPaperPlates psr:isAffordedBy soma:PickingUp .
+
+ex:jarOfJam psr:follows ex:IdentifyMisplacedItems ;
+  ex:boxOfJellO psr:follows ex:IdentifyMisplacedItems ;
+  ex:packOfAlpenSalt psr:follows ex:IdentifyMisplacedItems ;
+  ex:boxOfRiceBubbles psr:follows ex:IdentifyMisplacedItems ;
+  ex:boxOfShortbread psr:follows ex:IdentifyMisplacedItems ;
+  ex:bottlesOfWater psr:follows ex:IdentifyMisplacedItems ;
+  ex:bowlOfFruit psr:follows ex:IdentifyMisplacedItems ;
+  ex:cookbook psr:follows ex:IdentifyMisplacedItems ;
+  ex:jarOfJam2 psr:follows ex:IdentifyMisplacedItems ;
+  ex:stackOfPaperPlates psr:follows ex:IdentifyMisplacedItems .

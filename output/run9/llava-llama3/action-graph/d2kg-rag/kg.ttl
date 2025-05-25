@@ -1,0 +1,102 @@
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:action1 a dul:Action ;
+    rdfs:label "Identify misplaced items"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:table .
+
+ex:table a psr:Component ;
+    rdfs:label "Dining table"@en .
+
+ex:action2 a dul:Action ;
+    rdfs:label "Pick up packaged food product"@en ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:actsOn ex:packagedFood ;
+    psr:precedes ex:action3 .
+
+ex:packagedFood a psr:Component ;
+    rdfs:label "Packaged food product"@en .
+
+ex:action3 a dul:Action ;
+    rdfs:label "Put down packaged food product in cabinet"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:cabinet ;
+    psr:follows ex:action2 .
+
+ex:cabinet a psr:Component ;
+    rdfs:label "Cabinet"@en .
+
+ex:action4 a dul:Action ;
+    rdfs:label "Pick up plastic bottle"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:plasticBottle ;
+    psr:precedes ex:action5 .
+
+ex:plasticBottle a psr:Component ;
+    rdfs:label "Plastic bottle"@en .
+
+ex:action5 a dul:Action ;
+    rdfs:label "Put down plastic bottle in cabinet"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:cabinet ;
+    psr:follows ex:action4 .
+
+ex:action6 a dul:Action ;
+    rdfs:label "Identify items on counter"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:counter .
+
+ex:counter a psr:Component ;
+    rdfs:label "Kitchen counter"@en .
+
+ex:action7 a dul:Action ;
+    rdfs:label "Pick up cup"@en ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:actsOn ex:cup ;
+    psr:precedes ex:action8 .
+
+ex:cup a psr:Component ;
+    rdfs:label "Cup"@en .
+
+ex:action8 a dul:Action ;
+    rdfs:label "Put down cup in cabinet"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:cabinet ;
+    psr:follows ex:action7 .
+
+ex:action9 a dul:Action ;
+    rdfs:label "Pick up food item"@en ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:actsOn ex:foodItem ;
+    psr:precedes ex:action10 .
+
+ex:foodItem a psr:Component ;
+    rdfs:label "Food item"@en .
+
+ex:action10 a dul:Action ;
+    rdfs:label "Put down food item in cabinet"@en ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:actsOn ex:cabinet ;
+    psr:follows ex:action9 .
+
+ex:workflow a psr:Workflow ;
+    psr:hasAction ex:action1 ;
+    psr:hasAction ex:action2 ;
+    psr:hasAction ex:action3 ;
+    psr:hasAction ex:action4 ;
+    psr:hasAction ex:action5 ;
+    psr:hasAction ex:action6 ;
+    psr:hasAction ex:action7 ;
+    psr:hasAction ex:action8 ;
+    psr:hasAction ex:action9 ;
+    psr:hasAction ex:action10 .
+
+ex:instruction a psr:Instruction ;
+    psr:hasWorkflow ex:workflow ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en .

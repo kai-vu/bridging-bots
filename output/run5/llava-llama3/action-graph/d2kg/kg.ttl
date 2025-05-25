@@ -1,0 +1,78 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+ex:instruction1 a psr:Instruction ;
+    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    psr:hasWorkflow ex:workflow1 .
+
+ex:workflow1 a psr:Workflow ;
+    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8 .
+
+ex:action1 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object1 ;
+    psr:isAffordedBy soma:Grasping ;
+    psr:precedes ex:action2 .
+
+ex:action2 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object1 ;
+    psr:isAffordedBy soma:PickingUp ;
+    psr:precedes ex:action3 ;
+    psr:follows ex:action1 .
+
+ex:action3 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object2 ;
+    psr:isAffordedBy soma:Pushing ;
+    psr:precedes ex:action4 ;
+    psr:follows ex:action2 .
+
+ex:action4 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object2 ;
+    psr:isAffordedBy soma:Opening ;
+    psr:precedes ex:action5 ;
+    psr:follows ex:action3 .
+
+ex:action5 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object1 ;
+    psr:isAffordedBy soma:Delivering ;
+    psr:precedes ex:action6 ;
+    psr:follows ex:action4 .
+
+ex:action6 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object1 ;
+    psr:isAffordedBy soma:PuttingDown ;
+    psr:precedes ex:action7 ;
+    psr:follows ex:action5 .
+
+ex:action7 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object2 ;
+    psr:isAffordedBy soma:Closing ;
+    psr:precedes ex:action8 ;
+    psr:follows ex:action6 .
+
+ex:action8 a dul:Action ;
+    psr:isPerformedBy ex:agent1 ;
+    psr:actsOn ex:object2 ;
+    psr:isAffordedBy soma:Holding ;
+    psr:follows ex:action7 .
+
+ex:object1 a psr:Object ;
+    a psr:Component .
+
+ex:object2 a psr:Appliance ;
+    a psr:Component .
+
+ex:agent1 a dul:Agent .

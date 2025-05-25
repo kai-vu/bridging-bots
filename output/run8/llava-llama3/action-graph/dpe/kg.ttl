@@ -1,0 +1,45 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:Assistant kitchen:CHECKS kitchen:Cabinets,
+        kitchen:Refrigerator,
+        kitchen:Refrigerator_contents ;
+    kitchen:CLOSES kitchen:Box_containing_cooking_or_baking_ingredients,
+        kitchen:Box_containing_food_items ;
+    kitchen:CONFIRMS kitchen:Kitchen ;
+    kitchen:DETERMINES kitchen:Standard_storage_location ;
+    kitchen:IDENTIFIES kitchen:Box_containing_cooking_or_baking_ingredients,
+        kitchen:Box_containing_food_items,
+        kitchen:Red_plastic_bottle,
+        kitchen:Stack_of_books_or_recipe_booklets ;
+    kitchen:MOVES_TO kitchen:Dining_table,
+        kitchen:Refrigerator,
+        kitchen:Standard_storage_location ;
+    kitchen:OPENS kitchen:Box_containing_cooking_or_baking_ingredients,
+        kitchen:Box_containing_food_items,
+        kitchen:Refrigerator_door ;
+    kitchen:PICKS_UP kitchen:Cooking_or_baking_ingredient,
+        kitchen:Food_item,
+        kitchen:Red_plastic_bottle,
+        kitchen:Stack_of_books_or_recipe_booklets ;
+    kitchen:PROVIDES_INSTRUCTION kitchen:Instruction_1 ;
+    kitchen:TURNS_ON kitchen:Refrigerator_light ;
+    kitchen:VERIFIES kitchen:Countertop .
+
+kitchen:Cooking_or_baking_ingredient kitchen:HAS_STORAGE_LOCATION kitchen:Standard_storage_location ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Food_item kitchen:HAS_STORAGE_LOCATION kitchen:Standard_storage_location ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Instruction_1 kitchen:HAS_ACTION kitchen:Move_to_countertop .
+
+kitchen:Red_plastic_bottle kitchen:HAS_STORAGE_LOCATION kitchen:Standard_storage_location ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Stack_of_books_or_recipe_booklets kitchen:HAS_STORAGE_LOCATION kitchen:Standard_storage_location ;
+    kitchen:IS_STORED_IN kitchen:Standard_storage_location .
+
+kitchen:Box_containing_cooking_or_baking_ingredients kitchen:HAS_AFFORDANCE kitchen:Opening .
+
+kitchen:Box_containing_food_items kitchen:HAS_AFFORDANCE kitchen:Opening .
+

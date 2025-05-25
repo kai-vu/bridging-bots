@@ -1,0 +1,125 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix ex:     <http://example.org/data/> .
+
+# Action 1: Identify all misplaced food items
+ex:IdentifyMisplacedItems a psr:Action ;
+    rdfs:label "Identify all misplaced food items"@en .
+
+# Action 2: Pick up each identified misplaced item
+ex:PickUpBoxJellO a psr:Action ;
+    rdfs:label "Pick up box of Jell-O"@en ;
+    psr:actsOn ex:BoxOfJellO .
+
+ex:PickUpBoxRiceBubbles a psr:Action ;
+    rdfs:label "Pick up box of rice bubbles"@en ;
+    psr:actsOn ex:BoxOfRiceBubbles .
+
+ex:PickUpPackageShortbread a psr:Action ;
+    rdfs:label "Pick up package of shortbread"@en ;
+    psr:actsOn ex:PackageOfShortbread .
+
+ex:PickUpJarJam a psr:Action ;
+    rdfs:label "Pick up jar of jam"@en ;
+    psr:actsOn ex:JarOfJam .
+
+ex:PickUpWaterBottle a psr:Action ;
+    rdfs:label "Pick up water bottle"@en ;
+    psr:actsOn ex:WaterBottle .
+
+ex:PickUpWhitePitcher a psr:Action ;
+    rdfs:label "Pick up white pitcher"@en ;
+    psr:actsOn ex:WhitePitcher .
+
+# Action 3: Move each misplaced food item to its storage location based on its type and function
+ex:MoveJellOToStorage a psr:Action ;
+    rdfs:label "Move Jell-O box to its storage location"@en ;
+    psr:actsOn ex:BoxOfJellO .
+
+ex:MoveRiceBubblesToStorage a psr:Action ;
+    rdfs:label "Move rice bubbles box to its storage location"@en ;
+    psr:actsOn ex:BoxOfRiceBubbles .
+
+ex:MoveShortbreadToStorage a psr:Action ;
+    rdfs:label "Move shortbread package to its storage location"@en ;
+    psr:actsOn ex:PackageOfShortbread .
+
+ex:MoveJamToStorage a psr:Action ;
+    rdfs:label "Move jam jar to its storage location"@en ;
+    psr:actsOn ex:JarOfJam .
+
+ex:MoveWaterBottleToStorage a psr:Action ;
+    rdfs:label "Move water bottle to its storage location"@en ;
+    psr:actsOn ex:WaterBottle .
+
+ex:MoveWhitePitcherToStorage a psr:Action ;
+    rdfs:label "Move white pitcher to its storage location"@en ;
+    psr:actsOn ex:WhitePitcher .
+
+# Action 4: Perform each movement atomically
+ex:PerformMoveJellO a psr:Action ;
+    rdfs:label "Perform movement of Jell-O box to storage"@en .
+
+ex:PerformMoveRiceBubbles a psr:Action ;
+    rdfs:label "Perform movement of rice bubbles box to storage"@en .
+
+ex:PerformMoveShortbread a psr:Action ;
+    rdfs:label "Perform movement of shortbread package to storage"@en .
+
+ex:PerformMoveJam a psr:Action ;
+    rdfs:label "Perform movement of jam jar to storage"@en .
+
+ex:PerformMoveWaterBottle a psr:Action ;
+    rdfs:label "Perform movement of water bottle to storage"@en .
+
+ex:PerformMoveWhitePitcher a psr:Action ;
+    rdfs:label "Perform movement of white pitcher to storage"@en .
+
+# Linking movement actions to pickup actions for sequence
+ex:MovementOfJellORelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpBoxJellO ;
+    rdfs:range ex:PerformMoveJellO .
+
+ex:MovementOfRiceBubblesRelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpBoxRiceBubbles ;
+    rdfs:range ex:PerformMoveRiceBubbles .
+
+ex:MovementOfShortbreadRelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpPackageShortbread ;
+    rdfs:range ex:PerformMoveShortbread .
+
+ex:MovementOfJamRelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpJarJam ;
+    rdfs:range ex:PerformMoveJam .
+
+ex:MovementOfWaterBottleRelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpWaterBottle ;
+    rdfs:range ex:PerformMoveWaterBottle .
+
+ex:MovementOfWhitePitcherRelatedToPickup a owl:ObjectProperty ;
+    rdfs:domain ex:PickUpWhitePitcher ;
+    rdfs:range ex:PerformMoveWhitePitcher .
+
+# Sequence order linking actions
+ex:IdentifyMisplacedItems psr:precedes ex:PickUpBoxJellO .
+ex:PickUpBoxJellO psr:precedes ex:MoveJellOToStorage .
+
+ex:PickUpBoxRiceBubbles psr:precedes ex:MoveRiceBubblesToStorage .
+ex:PickUpPackageShortbread psr:precedes ex:MoveShortbreadToStorage .
+ex:PickUpJarJam psr:precedes ex:MoveJamToStorage .
+ex:PickUpWaterBottle psr:precedes ex:MoveWaterBottleToStorage .
+ex:PickUpWhitePitcher psr:precedes ex:MoveWhitePitcherToStorage .
+
+# Perform all movements
+ex:MoveJellOToStorage psr:precedes ex:PerformMoveJellO .
+ex:MoveRiceBubblesToStorage psr:precedes ex:PerformMoveRiceBubbles .
+ex:MoveShortbreadToStorage psr:precedes ex:PerformMoveShortbread .
+ex:MoveJamToStorage psr:precedes ex:PerformMoveJam .
+ex:MoveWaterBottleToStorage psr:precedes ex:PerformMoveWaterBottle .
+ex:MoveWhitePitcherToStorage psr:precedes ex:PerformMoveWhitePitcher .

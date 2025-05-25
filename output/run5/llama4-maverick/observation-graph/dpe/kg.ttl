@@ -1,0 +1,22 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:brown_wooden_parquet_flooring kitchen:hasLocation kitchen:kitchen .
+
+kitchen:circular_light kitchen:onTopOf kitchen:ceiling .
+
+kitchen:range_hood kitchen:above kitchen:stove .
+
+kitchen:stack_of_white_plates kitchen:onTopOf kitchen:beige_marble_countertop .
+
+kitchen:white_chairs kitchen:around kitchen:wooden_dining_table .
+
+kitchen:white_refrigerator kitchen:nextTo kitchen:black_and_beige_kitchen_cabinets .
+
+kitchen:white_walls kitchen:hasLocation kitchen:kitchen .
+
+kitchen:beige_marble_countertop kitchen:onTopOf kitchen:black_and_beige_kitchen_cabinets .
+
+kitchen:wooden_dining_table kitchen:hasLocation kitchen:kitchen .
+
+kitchen:black_and_beige_kitchen_cabinets kitchen:hasLocation kitchen:kitchen .
+

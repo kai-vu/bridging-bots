@@ -1,0 +1,118 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix :       <http://example.org/data/> .
+
+# Step 1: Identify misplaced objects and plan retrieval
+:IdentifyMisplacedItems a psr:Instruction ;
+    rdfs:label "Identify misplaced items in the environment"@en .
+
+:Workflow1 a psr:Workflow ;
+    rdfs:label "Identify and locate misplaced items"@en ;
+    psr:hasAction :actionIdentifyItems .
+
+:actionIdentifyItems a dul:Action ;
+    rdfs:label "Identify misplaced items"@en .
+
+:IdentifyRedJar a dul:Action ;
+    rdfs:label "Locate red jar of preserves"@en .
+
+:IdentifyJelloBox a dul:Action ;
+    rdfs:label "Locate JELLO box"@en .
+
+:IdentifyBlueCarton a dul:Action ;
+    rdfs:label "Locate blue carton of Alpen Salz"@en .
+
+:IdentifyStrawberryBanana a dul:Action ;
+    rdfs:label "Locate red strawberry-flavored banana product"@en .
+
+:IdentifyFoodItemsOnTable a dul:Action ;
+    rdfs:label "Locate food items on the table"@en .
+
+# Step 2: Pick up misplaced items
+:PickUpRedJar a dul:Action ;
+    rdfs:label "Pick up red jar of preserves"@en .
+
+:PickUpJelloBox a dul:Action ;
+    rdfs:label "Pick up JELLO box"@en .
+
+:PickUpBlueCarton a dul:Action ;
+    rdfs:label "Pick up blue carton of Alpen Salz"@en .
+
+:PickUpStrawberryBanana a dul:Action ;
+    rdfs:label "Pick up red strawberry-flavored banana product"@en .
+
+:PickUpFoodItemsOnTable a dul:Action ;
+    rdfs:label "Pick up food items from the table"@en .
+
+:hasAction1 a psr:Workflow ;
+    psr:hasAction :IdentifyMisplacedItems, :actionIdentifyItems, :IdentifyRedJar, :IdentifyJelloBox, :IdentifyBlueCarton, :IdentifyStrawberryBanana, :IdentifyFoodItemsOnTable .
+
+# Step 3: Move to storage locations
+:NavigateToKitchenStorage a psr:Instruction ;
+    rdfs:label "Navigate to kitchen storage locations"@en .
+
+:MoveToCabinets a dul:Action ;
+    rdfs:label "Move to kitchen cabinets"@en .
+
+:MoveToRefrigerator a dul:Action ;
+    rdfs:label "Move to refrigerator"@en .
+
+:MoveToTable a dul:Action ;
+    rdfs:label "Move to dining table"@en .
+
+:hasAction2 a psr:Workflow ;
+    psr:hasAction :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable .
+
+# Step 4: Return each item to its standard storage location
+:PlaceRedJar in psr:actsOn :Cabinet ;
+    rdfs:label "Place red jar of preserves into the cabinet"@en .
+
+:PlaceJelloBox in psr:actsOn :Cabinet ;
+    rdfs:label "Place JELLO box into the cabinet"@en .
+
+:PlaceBlueCarton in psr:actsOn :Refrigerator ;
+    rdfs:label "Place blue carton of Alpen Salz into the refrigerator"@en .
+
+:PlaceStrawberryBanana in psr:actsOn :Cabinet ;
+    rdfs:label "Place strawberry-flavored banana product into the cabinet"@en .
+
+:PlaceFoodItemsOnTable in psr:actsOn :Table ;
+    rdfs:label "Return food items to the table"@en .
+
+# Step 5: Atomically perform each returning action
+:ReturnRedJar a dul:Action ;
+    rdfs:label "Return red jar to storage"@en .
+
+:ReturnJelloBox a dul:Action ;
+    rdfs:label "Return JELLO box to storage"@en .
+
+:ReturnBlueCarton a dul:Action ;
+    rdfs:label "Return blue carton to storage"@en .
+
+:ReturnStrawberryBanana a dul:Action ;
+    rdfs:label "Return strawberry-flavored banana product to storage"@en .
+
+:ReturnFoodItems a dul:Action ;
+    rdfs:label "Return food items to the table"@en .
+
+# Step 6: Complete the task with a final instruction
+:CompleteRestoration a psr:Instruction ;
+    rdfs:label "Complete the kitchen restoration"@en .
+
+# Link actions to the workflow
+:hasAction3 a psr:Workflow ;
+    psr:hasAction :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
+
+# The sequence of actions
+:SequenceOfActions a psr:Workflow ;
+    rdfs:label "Sequence of actions for kitchen organization"@en ;
+    psr:hasAction :IdentifyMisplacedItems, :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable, :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
+
+# Note: Each action node can be linked via 'precedes' property to define order if desired.
+# For simplicity, the core sequence is listed above.

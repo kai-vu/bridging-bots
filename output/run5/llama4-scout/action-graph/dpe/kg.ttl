@@ -1,0 +1,64 @@
+@prefix kitchen: <http://example.org/kitchen#> .
+
+kitchen:assistant kitchen:performs kitchen:close_refrigerator_door,
+        kitchen:move_to_cabinets,
+        kitchen:move_to_refrigerator,
+        kitchen:open_cabinet,
+        kitchen:open_refrigerator_door,
+        kitchen:pick_up_cereal_boxes,
+        kitchen:pick_up_jar_of_jam,
+        kitchen:pick_up_plates,
+        kitchen:place_bottle_of_milk,
+        kitchen:place_cereal_boxes,
+        kitchen:place_jar_of_jam,
+        kitchen:place_plates,
+        kitchen:task .
+
+kitchen:bottle_of_milk kitchen:placedIn kitchen:refrigerator .
+
+kitchen:cabinets kitchen:locatedIn kitchen:kitchen .
+
+kitchen:check_table kitchen:actsOn kitchen:table .
+
+kitchen:close_refrigerator_door kitchen:actsOn kitchen:refrigerator_door .
+
+kitchen:move_to_cabinets kitchen:actsOn kitchen:cabinets .
+
+kitchen:move_to_refrigerator kitchen:actsOn kitchen:refrigerator .
+
+kitchen:move_to_table kitchen:actsOn kitchen:table .
+
+kitchen:open_cabinet kitchen:actsOn kitchen:cabinet .
+
+kitchen:open_refrigerator_door kitchen:actsOn kitchen:refrigerator_door .
+
+kitchen:pick_up_cereal_boxes kitchen:actsOn kitchen:cereal_boxes .
+
+kitchen:pick_up_jar_of_jam kitchen:actsOn kitchen:jar_of_jam .
+
+kitchen:pick_up_plates kitchen:actsOn kitchen:plates .
+
+kitchen:place_bottle_of_milk kitchen:actsOn kitchen:bottle_of_milk .
+
+kitchen:place_cereal_boxes kitchen:actsOn kitchen:cereal_boxes .
+
+kitchen:place_jar_of_jam kitchen:actsOn kitchen:jar_of_jam .
+
+kitchen:place_plates kitchen:actsOn kitchen:plates .
+
+kitchen:task kitchen:hasAction kitchen:check_table,
+        kitchen:move_to_table .
+
+kitchen:jar_of_jam kitchen:placedIn kitchen:cabinet .
+
+kitchen:plates kitchen:locatedOn kitchen:countertops ;
+    kitchen:placedIn kitchen:cabinet .
+
+kitchen:cereal_boxes kitchen:locatedOn kitchen:table ;
+    kitchen:placedIn kitchen:cabinet .
+
+kitchen:table kitchen:hasItem kitchen:items ;
+    kitchen:locatedIn kitchen:dining_area .
+
+kitchen:cabinet kitchen:suitableFor kitchen:cereal_boxes .
+

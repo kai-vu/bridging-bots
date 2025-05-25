@@ -1,0 +1,33 @@
+{
+    "id": "chatcmpl-409b6ab7-fbc5-4f72-8826-c5a8f35137a9",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "a kitchen with black cabinets and a tan marble countertop; a white refrigerator to the right of the cabinets; a box of \"JELLO\", a jar of \"Raspberry Jam\", a box of \"Alpen Salt\", and a stack of white plates on the countertop; a sink is on the left side of the counter, and a pot is on a stove top to the left of the sink; a kitchen hood is above the stove; a wooden dining table with white chairs; a bottle of water, a wine glass, a coffee/tea mug, a plate, a knife, and a box of \"Skonnbread\" on the table; the room has white walls and a brown parquet floor; a door is on the right side of the room.",
+                "role": "assistant"
+            }
+        }
+    ],
+    "created": 1748035164,
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_c527aa4474",
+    "usage": {
+        "completion_tokens": 157,
+        "prompt_tokens": 12496,
+        "total_tokens": 12653,
+        "completion_time": 0.657667844,
+        "prompt_time": 0.314427934,
+        "queue_time": 1.577420104,
+        "total_time": 0.972095778
+    },
+    "usage_breakdown": {
+        "models": null
+    },
+    "x_groq": {
+        "id": "req_01jvzg7maqfj3agkb24sszvvsd"
+    }
+}

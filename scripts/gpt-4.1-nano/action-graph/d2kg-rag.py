@@ -8,56 +8,29 @@ from dotenv import load_dotenv
 from rdflib import Graph
 from openai import OpenAI
 
-def create_assistant(client, llm_model):
+def get_response(client, llm_model, ontology_path, user_query, assistant_instructions):
     assistant = client.beta.assistants.create(
         name="euRobin assistant",
-        instructions="""
-You are an intelligent assistant tasked to generate a **Knowledge Graph of the sequence of actions a robot must perform to accomplish a task**.
-
-The user will provide the description of the environment and the task the robot must performand. The ontology is stored in the vector. 
-
-Instructions:
-- Analyze the description carefully to understand the complete layout of the environment.
-- Based on the ontology stored in the vector, **generate the sequence of actions required for the robot to complete the task**.
-- Each action is a **single, atomic, clear action**.
-- **All actions, entities, and relationships must strictly follow the provided ontology.**
-- **Use only classes and properties from the ontology.**
-- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
-- The graph should represent actions, objects involved, and their relations according to the ontology's structure and semantics.
-
-Output format:
-- Return only the generated Knowledge Graph of actions.
-- Output only text, no extra explanations.
-- Use Turtle format for the output, such as <subject> <predicate> <object> .
-- Include all prefixes and namespaces at the beginning. 
-- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
-- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
-        """,
+        instructions=assistant_instructions,
         model=llm_model,
         tools=[{"type": "file_search"}],
     )
-    assistant_id = assistant.id
-    return assistant, assistant_id
-
-def create_vector_store(client, ttl_path):
     vector_store = client.vector_stores.create(name="euRobin vector store")
-    with open(ttl_path, "r", encoding="utf-8") as f:
-        ttl_text = f.read()
-    ttl_stream = io.BytesIO(ttl_text.encode("utf-8"))
-    ttl_stream.name = "ontology.txt"
-    file_batch = client.vector_stores.file_batches.upload_and_poll(
-        vector_store_id=vector_store.id, files=[ttl_stream]
-    )
-    return vector_store
+    with open(ontology_path, "r", encoding="utf-8") as original_file:
+        content = original_file.read()
+        fake_file = io.BytesIO(content.encode("utf-8"))
+        fake_file.name = "ontology.txt"
 
-def update_assistant(client, assistant_id, vector_store):
+        client.vector_stores.file_batches.upload_and_poll(
+            vector_store_id=vector_store.id, files=[fake_file])
     assistant = client.beta.assistants.update(
-        assistant_id=assistant_id,
+        assistant_id=assistant.id,
         tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
     )
-    return assistant
-
-def create_thread(client, user_query):
+    assistant = client.beta.assistants.update(
+    assistant_id=assistant.id,
+    tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
+    )
     thread = client.beta.threads.create(
         messages=[
             {
@@ -66,16 +39,10 @@ def create_thread(client, user_query):
             }
         ]
     )
-    return thread
-
-def get_response(client, llm_model, ontology_path, user_query):
-    assistant, assistant_id = create_assistant(client, llm_model)
-    vector_store = create_vector_store(client, ontology_path)
-    assistant = update_assistant(client, assistant_id, vector_store)
-    thread = create_thread(client, user_query)
     run = client.beta.threads.runs.create_and_poll(
         thread_id=thread.id, assistant_id=assistant.id
     )
+
     messages = list(client.beta.threads.messages.list(thread_id=thread.id, run_id=run.id))
     message_content = messages[0].content[0].text
     annotations = message_content.annotations
@@ -85,7 +52,6 @@ def get_response(client, llm_model, ontology_path, user_query):
         if file_citation := getattr(annotation, "file_citation", None):
             cited_file = client.files.retrieve(file_citation.file_id)
             citations.append(f"[{index}] {cited_file.filename}")
-    #print(message_content.value)
     response = message_content
     return response, run
 
@@ -108,9 +74,9 @@ def save_response(response, run, output_path):
         f.write(ttl_response)
     return 
 
-def main(gpt_key, llm_model, ontology_path, user_query, output_path):
+def main(gpt_key, llm_model, ontology_path, user_query, output_path, assistant_instructions):
     client = OpenAI(api_key=gpt_key)
-    response, run = get_response(client, llm_model, ontology_path, user_query)
+    response, run = get_response(client, llm_model, ontology_path, user_query, assistant_instructions)
     save_response(response, run, output_path)
 
 if __name__ == "__main__":
@@ -157,6 +123,29 @@ Output format:
 - Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
     """
 
-    main(gpt_key, llm_model, ontology_path, user_query, output_path)
+    assistant_instructions = """
+You are an intelligent assistant tasked to generate a **Knowledge Graph of the sequence of actions a robot must perform to accomplish a task**.
+
+The user will provide the description of the environment and the task the robot must performand. The ontology is stored in the vector. 
+
+Instructions:
+- Analyze the description carefully to understand the complete layout of the environment.
+- Based on the ontology stored in the vector, **generate the sequence of actions required for the robot to complete the task**.
+- Each action is a **single, atomic, clear action**.
+- **All actions, entities, and relationships must strictly follow the provided ontology.**
+- **Use only classes and properties from the ontology.**
+- Do **NOT invent or infer any terms or actions outside of the ontology schema.**
+- The graph should represent actions, objects involved, and their relations according to the ontology's structure and semantics.
+
+Output format:
+- Return only the generated Knowledge Graph of actions.
+- Output only text, no extra explanations.
+- Use Turtle format for the output, such as <subject> <predicate> <object> .
+- Include all prefixes and namespaces at the beginning. 
+- Use the ex: prefix with namespace <http://example.org/data/> only for newly instantiated entities instantiated, such as specific actions, objects, or locations.
+- Do not use the ex: prefix for ontology classes, properties, or schema definitions, those must strictly come from the provided ontology with their original prefixes and namespaces.
+    """
+
+    main(gpt_key, llm_model, ontology_path, user_query, output_path, assistant_instructions)
 
     

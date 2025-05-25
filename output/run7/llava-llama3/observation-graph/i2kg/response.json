@@ -1,0 +1,36 @@
+{
+    "id": "llava:7b-cf69e8f6-305f-4e3c-9f01-436de3c50fd6",
+    "created": 1748033739,
+    "model": "llava:7b",
+    "choices": [
+        {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "message": {
+                "content": " ```python\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix psr: <http://example.org/data/> .\n\n<http://www.w3.org/2002/07/owl#Environment> a owl:Class .\n[a owl:Class, a rdfs:label \"Environment\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://www.w3.org/2002/07/owl#Component> a owl:Class .\n[a owl:Class, a rdfs:label \"Component\" ] a psr:Entity ;\n    psr:hasAffordance psr:Affordance.\n\n<http://www.w3.org/2000/01/rdf-schema#Affordance> a owl:Class .\n[a owl:Class, a rdfs:label \"Affordance\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://www.w3.org/2000/01/rdf-schema#Action> a owl:Class .\n[a owl:Class, a rdfs:label \"Action\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:Closing a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Opening a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Delivering a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Holding a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:PickingUp a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:PuttingDown a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Pulling a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Grasping a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://www.w3.org/2000/01/rdf-schema#Action> psr:Pulling a owl:ObjectProperty .\n[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .\n\n<http://example.org/data/>psr:Closing a owl:Action.\n[a owl:Action, a rdfs:label \"Close\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:Opening a owl:Action.\n[a owl:Action, a rdfs:label \"Open\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:Delivering a owl:Action.\n[a owl:Action, a rdfs:label \"Deliver\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:Holding a owl:Action.\n[a owl:Action, a rdfs:label \"Hold\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:PickingUp a owl:Action.\n[a owl:Action, a rdfs:label \"Pick up\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:PuttingDown a owl:Action.\n[a owl:Action, a rdfs:label \"Put down\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://example.org/data/>psr:Grasping a owl:Action.\n[a owl:Action, a rdfs:label \"Grasp\" ] a psr:Entity ;\n    psr:hasComponent psr:Component.\n\n<http://www.w3.org/2000/01/rdf-schema#Location> a owl:Class .\n[a owl:Class, a rdfs:label \"Location\" ] a psr:Entity ;\n    psr:onTopOf psr:Component.\n\n<http://www.w3.org/2000/01/rdf-schema#Furniture> a owl:Class .\n[a owl:Class, a rdfs:label \"Furniture\" ] a psr:Entity ;\n    psr:onTopOf psr:Component.\n``` ",
+                "role": "assistant"
+            }
+        }
+    ],
+    "object": "chat.completion",
+    "usage": {
+        "response_token/s": 69.01,
+        "prompt_token/s": 2008.12,
+        "total_duration": 23279521429,
+        "load_duration": 49697990,
+        "prompt_eval_count": 4096,
+        "prompt_tokens": 4096,
+        "prompt_eval_duration": 2039720131,
+        "eval_count": 1460,
+        "completion_tokens": 1460,
+        "eval_duration": 21154831291,
+        "approximate_total": "0h0m23s",
+        "total_tokens": 5556,
+        "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "accepted_prediction_tokens": 0,
+            "rejected_prediction_tokens": 0
+        }
+    }
+}

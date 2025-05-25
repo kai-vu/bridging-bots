@@ -1,0 +1,118 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:Cabinets, ex:Countertop, ex:Refrigerator, ex:Sink, ex:Stove, ex:KitchenHood, ex:DiningTable, ex:Door .
+
+ex:Cabinets a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Countertop a psr:Furniture ;
+    dul:hasLocation ex:Kitchen ;
+    dul:hasComponent ex:BoxJELLO, ex:JarRaspberryJam, ex:BoxAlpenSalt, ex:StackWhitePlates .
+
+ex:Refrigerator a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BoxJELLO a psr:Object ;
+    dul:hasLocation ex:Countertop .
+
+ex:JarRaspberryJam a psr:Object ;
+    dul:hasLocation ex:Countertop .
+
+ex:BoxAlpenSalt a psr:Object ;
+    dul:hasLocation ex:Countertop .
+
+ex:StackWhitePlates a psr:Object ;
+    dul:hasLocation ex:Countertop .
+
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:Countertop .
+
+ex:Stove a psr:Appliance ;
+    dul:hasLocation ex:Kitchen ;
+    dul:hasComponent ex:Pot .
+
+ex:Pot a psr:Object ;
+    dul:hasLocation ex:Stove .
+
+ex:KitchenHood a psr:Appliance ;
+    dul:hasLocation ex:Kitchen .
+
+ex:DiningTable a psr:Furniture ;
+    dul:hasLocation ex:Kitchen ;
+    dul:hasComponent ex:BottleWater, ex:WineGlass, ex:CoffeeMug, ex:Plate, ex:Knife, ex:BoxSkonnbread .
+
+ex:BottleWater a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:WineGlass a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:CoffeeMug a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Plate a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Knife a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:BoxSkonnbread a psr:Object ;
+    dul:hasLocation ex:DiningTable .
+
+ex:Door a psr:Object ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Cabinets dul:hasLocation ex:Kitchen .
+ex:Refrigerator dul:hasLocation ex:Cabinets .
+ex:Countertop dul:hasLocation ex:Cabinets .
+ex:Sink geo:sfWithin ex:Countertop .
+ex:Stove geo:sfWithin ex:Countertop .
+ex:Pot psr:onTopOf ex:Stove .
+ex:Refrigerator geo:sfWithin ex:Kitchen .
+ex:DiningTable geo:sfWithin ex:Kitchen .
+ex:Door geo:sfWithin ex:Kitchen .
+
+ex:Cabinets dul:hasLocation ex:CurrentLocation_1 .
+ex:Countertop dul:hasLocation ex:CurrentLocation_2 .
+ex:Refrigerator dul:hasLocation ex:CurrentLocation_3 .
+ex:Sink dul:hasLocation ex:CurrentLocation_4 .
+ex:Stove dul:hasLocation ex:CurrentLocation_5 .
+ex:Pot dul:hasLocation ex:CurrentLocation_6 .
+ex:DiningTable dul:hasLocation ex:CurrentLocation_7 .
+ex:Door dul:hasLocation ex:CurrentLocation_8 .
+
+ex:CurrentLocation_1 a psr:CurrentLocation .
+ex:CurrentLocation_2 a psr:CurrentLocation .
+ex:CurrentLocation_3 a psr:CurrentLocation .
+ex:CurrentLocation_4 a psr:CurrentLocation .
+ex:CurrentLocation_5 a psr:CurrentLocation .
+ex:CurrentLocation_6 a psr:CurrentLocation .
+ex:CurrentLocation_7 a psr:CurrentLocation .
+ex:CurrentLocation_8 a psr:CurrentLocation .
+
+ex:Cabinets psr:hasAffordance soma:Holding .
+ex:Countertop psr:hasAffordance soma:Holding .
+ex:Refrigerator psr:hasAffordance soma:Opening, soma:Closing .
+ex:Sink psr:hasAffordance soma:Holding .
+ex:Stove psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:Pot psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
+ex:DiningTable psr:hasAffordance soma:Holding .
+ex:Door psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:BoxJELLO psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:JarRaspberryJam psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BoxAlpenSalt psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:StackWhitePlates psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BottleWater psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:WineGlass psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:CoffeeMug psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:Plate psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:Knife psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BoxSkonnbread psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .

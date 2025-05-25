@@ -1,0 +1,86 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/data/> .
+
+<http://example.org/environment/room> a <Room> ;
+    <hasPart> <http://example.org/environment/kitchen> ;
+    <hasPart> <http://example.org/environment/dining_area> .
+
+<http://example.org/environment/kitchen> a <Kitchen> ;
+    <locatedIn> <http://example.org/environment/room> ;
+    <hasPart> <http://example.org/environment/countertop> ;
+    <hasPart> <http://example.org/environment/fridge> ;
+    <hasPart> <http://example.org/environment/cabinet> ;
+    <hasPart> <http://example.org/environment/sink> ;
+    <hasPart> <http://example.org/environment/window> .
+
+<http://example.org/environment/dining_area> a <DiningArea> ;
+    <locatedIn> <http://example.org/environment/room> ;
+    <hasPart> <http://example.org/environment/diningTable> .
+
+<http://example.org/environment/countertop> a <Countertop> ;
+    <locatedIn> <http://example.org/environment/kitchen> ;
+    <hasObject> <http://example.org/object/boxJello> ;
+    <hasObject> <http://example.org/object/cartonAlpen> ;
+    <hasObject> <http://example.org/object/riceBubbles> ;
+    <hasObject> <http://example.org/object/strawberryJam> ;
+    <hasObject> <http://example.org/object/waterBottle> ;
+    <hasObject> <http://example.org/object/pitcher> ;
+    <hasObject> <http://example.org/object/whiteWineGlass> .
+
+<http://example.org/object/boxJello> a <Food> ;
+    <name> "Box of Jello pudding mix" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/cartonAlpen> a <Food> ;
+    <name> "Carton of Alpen Salz" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/riceBubbles> a <Food> ;
+    <name> "Packaging of rice bubbles" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/strawberryJam> a <Food> ;
+    <name> "Small jar of strawberry jam" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/waterBottle> a <Container> ;
+    <name> "Plastic water bottle" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/pitcher> a <Container> ;
+    <name> "Pitcher" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/object/whiteWineGlass> a <Drink> ;
+    <name> "Glass of white wine" ;
+    <locatedOn> <http://example.org/environment/countertop> .
+
+<http://example.org/environment/fridge> a <Refrigerator> ;
+    <locatedIn> <http://example.org/environment/kitchen> ;
+    <position> "right end of the counter" .
+
+<http://example.org/environment/cabinet> a <Cabinet> ;
+    <locatedIn> <http://example.org/environment/kitchen> ;
+    <color> "dark" ;
+    <feature> <hasHandle> .
+
+<http://example.org/environment/sink> a <Sink> ;
+    <locatedIn> <http://example.org/environment/kitchen> .
+
+<http://example.org/environment/window> a <Window> ;
+    <locatedIn> <http://example.org/environment/kitchen> .
+
+<http://example.org/environment/diningTable> a <Table> ;
+    <locatedIn> <http://example.org/environment/dining_area> ;
+    <hasPart> <http://example.org/object/whiteChairs> .
+
+<http://example.org/object/whiteChairs> a <Chair> ;
+    <color> "white" ;
+    <locatedOn> <http://example.org/environment/diningTable> .
+
+<http://example.org/object/decorItems> a <Decor> ;
+    <locatedIn> <http://example.org/environment/kitchen> , <http://example.org/environment/dining_area> .
+
+# Note: Additional relations and entities can be added as per specific details in the environment if required, but this captures the core layout and objects described.

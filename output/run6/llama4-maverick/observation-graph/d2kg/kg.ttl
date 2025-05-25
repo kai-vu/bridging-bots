@@ -1,0 +1,104 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psr: <https://w3id.org/psr-action#> .
+@prefix ex: <http://example.org/data/> .
+
+ex:Kitchen a psr:Environment ;
+    dul:hasComponent ex:DarkGrayCabinets, ex:BeigeMarbleCountertop, ex:Refrigerator, ex:DiningTable, ex:WhiteChairs, ex:Bottle, ex:StackOfPlates, ex:BoxOnDiningTable, ex:Stove, ex:Sink, ex:JarOnCountertop, ex:BoxOnCountertop, ex:ChickyBox, ex:JelloBox, ex:JamJar, ex:RangeHood, ex:Door, ex:Floor, ex:Walls, ex:RoundLightFixture, ex:FoodItems, ex:Cups .
+
+ex:DarkGrayCabinets a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:BeigeMarbleCountertop a psr:Furniture ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Refrigerator a psr:Appliance ;
+    dul:hasLocation ex:RightOfDarkGrayCabinets ;
+    psr:hasAffordance soma:Opening, soma:Closing .
+
+ex:DiningTable a psr:Furniture ;
+    dul:hasLocation ex:NearDoor .
+
+ex:WhiteChairs a psr:Furniture ;
+    dul:hasLocation ex:NearDiningTable .
+
+ex:Bottle a psr:Object ;
+    dul:hasLocation ex:OnTopOfDiningTable .
+
+ex:StackOfPlates a psr:Object ;
+    dul:hasLocation ex:OnTopOfDiningTable .
+
+ex:BoxOnDiningTable a psr:Object ;
+    dul:hasLocation ex:OnTopOfDiningTable .
+
+ex:Stove a psr:Appliance ;
+    dul:hasLocation ex:NearWall .
+
+ex:Sink a psr:Object ;
+    dul:hasLocation ex:NearWall .
+
+ex:JarOnCountertop a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:BoxOnCountertop a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:ChickyBox a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:JelloBox a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:JamJar a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:RangeHood a psr:Appliance ;
+    dul:hasLocation ex:AboveStove .
+
+ex:Door a psr:Object ;
+    dul:hasLocation ex:OnAdjacentWall .
+
+ex:Floor a psr:Object ;
+    dul:hasLocation ex:Kitchen .
+
+ex:Walls a psr:Object ;
+    dul:hasLocation ex:Kitchen .
+
+ex:RoundLightFixture a psr:Object ;
+    dul:hasLocation ex:OnCeiling .
+
+ex:FoodItems a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:Cups a psr:Object ;
+    dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
+
+ex:RightOfDarkGrayCabinets a psr:Location ;
+    psr:onTopOf ex:DarkGrayCabinets .
+
+ex:NearDoor a psr:Location ;
+    geo:sfNear ex:Door .
+
+ex:NearDiningTable a psr:Location ;
+    geo:sfNear ex:DiningTable .
+
+ex:OnTopOfDiningTable a psr:Location ;
+    psr:onTopOf ex:DiningTable .
+
+ex:NearWall a psr:Location ;
+    geo:sfNear ex:Walls .
+
+ex:OnTopOfBeigeMarbleCountertop a psr:Location ;
+    psr:onTopOf ex:BeigeMarbleCountertop .
+
+ex:AboveStove a psr:Location ;
+    geo:sfAbove ex:Stove .
+
+ex:OnAdjacentWall a psr:Location ;
+    geo:sfOn ex:Walls .
+
+ex:OnCeiling a psr:Location ;
+    geo:sfAbove ex:Walls .

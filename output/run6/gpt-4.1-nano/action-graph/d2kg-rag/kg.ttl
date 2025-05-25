@@ -1,0 +1,85 @@
+@prefix : <http://example.org/data/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:StartCleaning a :Action ;
+    :hasPart :IdentifyMisplacedItems ;
+    :relatedAbout :KitchenEnvironment .
+
+:IdentifyMisplacedItems a :Action ;
+    :performedOn :ObjectsInKitchen ;
+    :result :ListOfMisplacedItems .
+
+:ListOfMisplacedItems a :Entity ;
+    :hasMember :ItemOnCountertop1, :ItemOnCountertop2 .
+
+:ItemOnCountertop1 a :Object ;
+    :hasName "JELLO" ;
+    :isMisplaced true .
+
+:ItemOnCountertop2 a :Object ;
+    :hasName "cake slice" ;
+    :isMisplaced true .
+
+:MoveToStorage a :Action ;
+    :hasPart :SelectObjectToStore ;
+    :relatedAbout :ObjectsToStore .
+
+:SelectObjectToStore a :Object ;
+    :selects :JELLO, :CakeSlice .
+
+:JELLO a :Object ;
+    :locatedIn :Countertop ;
+    :hasType :FoodItem .
+
+:CakeSlice a :Object ;
+    :locatedIn :Countertop ;
+    :hasType :FoodItem .
+
+:DetermineStorageLocation a :Action ;
+    :hasPart :IdentifyStandardLocation .
+
+:IdentifyStandardLocation a :Object ;
+    :forItem :JELLO, :CakeSlice ;
+    :hasLocation :JellOStorage, :CakeStorage .
+
+:JellOStorage a :Location ;
+    :locatedIn :KitchenCabinet .
+
+:CakeStorage a :Location ;
+    :locatedIn :KitchenCabinet .
+
+:MoveObjectToLocation a :Action ;
+    :hasPart :PlaceJELLOInStorage, :PlaceCakeInStorage .
+
+:PlaceJELLOInStorage a :Object ;
+    :moves :JELLO ;
+    :toLocation :JellOStorage .
+
+:PlaceCakeInStorage a :Object ;
+    :moves :CakeSlice ;
+    :toLocation :CakeStorage .
+
+:VerifyRestoration a :Action ;
+    :confirms :AllItemsInProperStorage .
+
+:CompleteRestoration a :Action ;
+    :follows :VerifyRestoration ;
+    :hasPart :EndOfTask.
+
+:EndOfTask a :Entity .
+
+# Sequence
+:StartCleaning :hasPart :IdentifyMisplacedItems ;
+    :next :MoveToStorage .
+
+:IdentifyMisplacedItems :next :MoveToStorage .
+
+:MoveToStorage :next :DetermineStorageLocation .
+
+:DetermineStorageLocation :next :MoveObjectToLocation .
+
+:MoveObjectToLocation :next :VerifyRestoration .
+
+:VerifyRestoration :next :CompleteRestoration .

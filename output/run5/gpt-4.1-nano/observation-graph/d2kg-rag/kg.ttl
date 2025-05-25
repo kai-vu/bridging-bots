@@ -1,0 +1,100 @@
+@prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <http://example.org/data/> .
+
+:Kitchen a :Environment ;
+    :hasRegion :KitchenArea .
+
+:KitchenArea a :Room ;
+    :hasFeature :Cabinets, :Countertop, :Floor, :Wall, :Ceiling, :Lighting, :Door .
+
+:Cabinets a :Furniture ;
+    :locatedAbove :Countertop ;
+    :hasColor :DarkColor .
+
+:Countertop a :Surface ;
+    :hasColor :Beige ;
+    :hasObject :FoodItems .
+
+:FoodItems a :Collection ;
+    :contains :RedJarPreserves, :JELLOBox, :AlpenSaltCarton, :StrawberryBananaProduct .
+
+:RedJarPreserves a :FoodItem ;
+    :hasColor :Red ;
+    :hasLidColor :White ;
+    :label "preserves" .
+
+:JELLOBox a :FoodItem ;
+    :hasLabel "JELLO" ;
+    :hasColor :RedAndWhite .
+
+:AlpenSaltCarton a :FoodItem ;
+    :hasColor :Blue ;
+    :hasLabel "Alpen Salz" .
+
+:StrawberryBananaProduct a :FoodItem ;
+    :hasFlavor :StrawberryBanana ;
+    :hasColor :Red .
+
+:Refrigerator a :Appliance ;
+    :locatedAgainst :Wall ;
+    :hasPart :RefrigeratorDoor .
+
+:Wall a :Wall .
+
+:Floor a :Floor ;
+    :hasPattern :TileOrWoodPattern .
+
+:TileOrWoodPattern a :FloorPattern .
+
+:DiningTable a :Furniture ;
+    :adjacentTo :Wall ;
+    :contains :TableItems .
+
+:TableItems a :Collection ;
+    :contains :RiceBubblesBox, :ChuckyBox, :JamJar, :Glass1, :Glass2, :CeramicPitcher, :SmallBlackSpoon, :SnackBoxes .
+
+:RiceBubblesBox a :FoodContainer ;
+    :hasLabel "Rice Bubbles" .
+
+:ChuckyBox a :FoodContainer ;
+    :hasLabel "Chucky" .
+
+:JamJar a :FoodContainer ;
+    :hasLabel :JamOrJelly .
+
+:JamOrJelly a :FoodItem ;
+    :hasColor :Unknown .
+
+:Glass1 a :Drinkware .
+
+:Glass2 a :Drinkware .
+
+:CeramicPitcher a :Container ;
+    :madeOf :Ceramic .
+
+:SmallBlackSpoon a :Utensil ;
+    :hasColor :Black .
+
+:SnackBoxes a :FoodContainer .
+
+:Chair a :Furniture ;
+    :isPartOf :WhiteUpholsteredChair ;
+    :locatedNear :DiningTable .
+
+:WhiteUpholsteredChair a :Chair ;
+    :hasColor :White .
+
+:CeilingLight a :LightFixture ;
+    :locatedIn :Room .
+
+:Room a :Space ;
+    :hasFeature :Door .
+
+:Door a :AccessFeature ;
+    :connects :KitchenArea to :OtherRoom .
+
+:OtherRoom a :Room .
+
+# End of data
