@@ -1,3 +1,0 @@
-@prefix ex: <http://example.com/ontology#> .
-
-# No triples generated because no ontology definitions were provided.

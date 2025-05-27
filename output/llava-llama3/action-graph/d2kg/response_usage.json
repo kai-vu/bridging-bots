@@ -1,9 +1,0 @@
-{
-    "completion_tokens": 1010,
-    "prompt_tokens": 2169,
-    "total_tokens": 3179,
-    "completion_time": 3.672727273,
-    "prompt_time": 0.154715678,
-    "queue_time": 0.094782544,
-    "total_time": 3.827442951
-}
