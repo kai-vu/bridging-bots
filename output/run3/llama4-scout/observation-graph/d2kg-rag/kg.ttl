@@ -1,12 +1,12 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Environment a psr:Environment ;
+ex:Environment a obot:Environment ;
   rdfs:label "Kitchen and Dining Environment"@en .
 
 ex:KitchenArea a soma:Location ;
@@ -17,169 +17,169 @@ ex:DiningArea a soma:Location ;
   rdfs:label "Dining Area"@en ;
   geo:sfWithin ex:Environment .
 
-ex:KitchenCabinets a psr:Component ;
+ex:KitchenCabinets a obot:Component ;
   rdfs:label "Black Cabinets"@en ;
   dul:hasLocation ex:KitchenArea .
 
-ex:MarbleCountertops a psr:Component ;
+ex:MarbleCountertops a obot:Component ;
   rdfs:label "Marble Countertops"@en ;
   dul:hasLocation ex:KitchenArea ;
-  psr:onTopOf ex:KitchenCabinets .
+  obot:onTopOf ex:KitchenCabinets .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
   rdfs:label "Sink"@en ;
   dul:hasLocation ex:KitchenArea ;
-  psr:onTopOf ex:MarbleCountertops .
+  obot:onTopOf ex:MarbleCountertops .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
   rdfs:label "Pot"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:JarOfJam a psr:Object ;
+ex:JarOfJam a obot:Object ;
   rdfs:label "Jar of Jam"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:PuzzleBox a psr:Object ;
+ex:PuzzleBox a obot:Object ;
   rdfs:label "Puzzle Box"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:RiceBubblesBox a psr:Object ;
+ex:RiceBubblesBox a obot:Object ;
   rdfs:label "Rice Bubbles Box"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
   rdfs:label "Jello Box"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
   rdfs:label "Plate"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:Cup a psr:Object ;
+ex:Cup a obot:Object ;
   rdfs:label "Cup"@en ;
   dul:hasLocation ex:MarbleCountertops .
 
-ex:Mirror a psr:Component ;
+ex:Mirror a obot:Component ;
   rdfs:label "Wooden-Framed Mirror"@en ;
   dul:hasLocation ex:KitchenArea .
 
-ex:VentHood a psr:Component ;
+ex:VentHood a obot:Component ;
   rdfs:label "Vent Hood"@en ;
   dul:hasLocation ex:KitchenArea .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
   rdfs:label "White Refrigerator"@en ;
   dul:hasLocation ex:KitchenArea .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
   rdfs:label "Wooden Table"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:Chair1 a psr:Furniture ;
+ex:Chair1 a obot:Furniture ;
   rdfs:label "White Chair 1"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:Chair2 a psr:Furniture ;
+ex:Chair2 a obot:Furniture ;
   rdfs:label "White Chair 2"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:Chair3 a psr:Furniture ;
+ex:Chair3 a obot:Furniture ;
   rdfs:label "White Chair 3"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:Chair4 a psr:Furniture ;
+ex:Chair4 a obot:Furniture ;
   rdfs:label "White Chair 4"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:BottleOfWater1 a psr:Object ;
+ex:BottleOfWater1 a obot:Object ;
   rdfs:label "Bottle of Water 1"@en ;
   dul:hasLocation ex:Table .
 
-ex:BottleOfWater2 a psr:Object ;
+ex:BottleOfWater2 a obot:Object ;
   rdfs:label "Bottle of Water 2"@en ;
   dul:hasLocation ex:Table .
 
-ex:PartialWall a psr:Component ;
+ex:PartialWall a obot:Component ;
   rdfs:label "Partial Wall"@en ;
   dul:hasLocation ex:Environment ;
   geo:sfContains ex:KitchenArea ;
   geo:sfContains ex:DiningArea .
 
-ex:WoodParquetFloor a psr:Component ;
+ex:WoodParquetFloor a obot:Component ;
   rdfs:label "Dark Wood Parquet Floor"@en ;
   dul:hasLocation ex:Environment .
 
-ex:WhiteWalls a psr:Component ;
+ex:WhiteWalls a obot:Component ;
   rdfs:label "White Walls"@en ;
   dul:hasLocation ex:Environment .
 
-ex:LightFixture a psr:Component ;
+ex:LightFixture a obot:Component ;
   rdfs:label "Light Fixture"@en ;
   dul:hasLocation ex:Environment .
 
-ex:KitchenArea psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling .
+ex:KitchenArea obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling .
 
-ex:Refrigerator psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pushing .
+ex:Refrigerator obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Table psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Pushing .
+ex:Table obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Chair1 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Pushing .
+ex:Chair1 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Chair2 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Pushing .
+ex:Chair2 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Chair3 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Pushing .
+ex:Chair3 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Chair4 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Pulling ;
-  psr:hasAffordance soma:Pushing .
+ex:Chair4 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Pulling ;
+  obot:hasAffordance soma:Pushing .
 
-ex:Pot psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Pot obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:JarOfJam psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:JarOfJam obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:PuzzleBox psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:PuzzleBox obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:RiceBubblesBox psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:RiceBubblesBox obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:JelloBox psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:JelloBox obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:Plate psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Plate obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:Cup psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Cup obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:BottleOfWater1 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:BottleOfWater1 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:BottleOfWater2 psr:hasAffordance soma:Grasping ;
-  psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:BottleOfWater2 obot:hasAffordance soma:Grasping ;
+  obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .

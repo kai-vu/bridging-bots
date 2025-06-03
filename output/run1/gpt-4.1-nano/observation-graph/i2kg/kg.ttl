@@ -3,98 +3,98 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.example.org/psr#> .
+@prefix obot:    <http://www.example.org/psr#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Environment
-psr:Kitchen a psr:Environment ;
+obot:Kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en ;
     dul:hasComponent ex:fridge, ex:table, ex:cabinet, ex:chair, ex:foodItems .
 
 # Components
-ex:fridge a psr:Appliance ;
+ex:fridge a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation ex:CurrentLocation1, ex:StandardLocation1 ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:table a psr:Furniture ;
+ex:table a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation ex:CurrentLocation2, ex:StandardLocation2 ;
-    psr:hasAffordance soma:Pulling, soma:PuttingDown .
+    obot:hasAffordance soma:Pulling, soma:PuttingDown .
 
-ex:cabinet a psr:Furniture ;
+ex:cabinet a obot:Furniture ;
     rdfs:label "Kitchen Cabinet"@en ;
     dul:hasLocation ex:CurrentLocation3, ex:StandardLocation3 ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:chair a psr:Furniture ;
+ex:chair a obot:Furniture ;
     rdfs:label "Chair"@en ;
     dul:hasLocation ex:CurrentLocation4, ex:StandardLocation4 ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
 # Food items (Objects)
-ex:foodJar a psr:Object ;
+ex:foodJar a obot:Object ;
     rdfs:label "Food Jar"@en ;
     dul:hasLocation ex:CurrentLocation5, ex:StandardLocation5 ;
-    psr:hasAffordance soma:Holding, soma:Pushing .
+    obot:hasAffordance soma:Holding, soma:Pushing .
 
-ex:jelloBox a psr:Object ;
+ex:jelloBox a obot:Object ;
     rdfs:label "Jello Box"@en ;
     dul:hasLocation ex:CurrentLocation6, ex:StandardLocation6 ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+    obot:hasAffordance soma:Holding, soma:PickingUp .
 
-ex:snackBox a psr:Object ;
+ex:snackBox a obot:Object ;
     rdfs:label "Snack Box"@en ;
     dul:hasLocation ex:CurrentLocation7, ex:StandardLocation7 ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+    obot:hasAffordance soma:Holding, soma:PickingUp .
 
 # Food items locations
-ex:CurrentLocation1 a psr:CurrentLocation ;
+ex:CurrentLocation1 a obot:CurrentLocation ;
     rdfs:label "Refrigerator Interior"@en ;
     geo:sfContains ex:foodJar .
 
-ex:CurrentLocation2 a psr:CurrentLocation ;
+ex:CurrentLocation2 a obot:CurrentLocation ;
     rdfs:label "Kitchen Table"@en ;
     geo:sfContains ex:jelloBox, ex:snackBox .
 
-ex:CurrentLocation3 a psr:CurrentLocation ;
+ex:CurrentLocation3 a obot:CurrentLocation ;
     rdfs:label "Kitchen Cabinets"@en .
 
-ex:CurrentLocation4 a psr:CurrentLocation ;
+ex:CurrentLocation4 a obot:CurrentLocation ;
     rdfs:label "Kitchen Chair Location"@en .
 
-ex:CurrentLocation5 a psr:CurrentLocation ;
+ex:CurrentLocation5 a obot:CurrentLocation ;
     rdfs:label "Inside Refrigerator"@en ;
     geo:sfContains ex:foodJar .
 
-ex:CurrentLocation6 a psr:CurrentLocation ;
+ex:CurrentLocation6 a obot:CurrentLocation ;
     rdfs:label "On Counter"@en ;
     geo:sfContains ex:jelloBox .
 
-ex:CurrentLocation7 a psr:CurrentLocation ;
+ex:CurrentLocation7 a obot:CurrentLocation ;
     rdfs:label "On Counter"@en ;
     geo:sfContains ex:snackBox .
 
 # Standard Locations (where objects are supposed to be)
-ex:StandardLocation1 a psr:StandardLocation ;
+ex:StandardLocation1 a obot:StandardLocation ;
     rdfs:label "Refrigerator"@en .
 
-ex:StandardLocation2 a psr:StandardLocation ;
+ex:StandardLocation2 a obot:StandardLocation ;
     rdfs:label "Dining Table"@en .
 
-ex:StandardLocation3 a psr:StandardLocation ;
+ex:StandardLocation3 a obot:StandardLocation ;
     rdfs:label "Kitchen Cabinets"@en .
 
-ex:StandardLocation4 a psr:StandardLocation ;
+ex:StandardLocation4 a obot:StandardLocation ;
     rdfs:label "Kitchen Chair Position"@en .
 
-ex:StandardLocation5 a psr:StandardLocation ;
+ex:StandardLocation5 a obot:StandardLocation ;
     rdfs:label "Refrigerator Interior"@en .
 
-ex:StandardLocation6 a psr:StandardLocation ;
+ex:StandardLocation6 a obot:StandardLocation ;
     rdfs:label "Counter"@en .
 
-ex:StandardLocation7 a psr:StandardLocation ;
+ex:StandardLocation7 a obot:StandardLocation ;
     rdfs:label "Counter"@en .
 
 # Additional assumptions (if needed, can be refined based on actual images)

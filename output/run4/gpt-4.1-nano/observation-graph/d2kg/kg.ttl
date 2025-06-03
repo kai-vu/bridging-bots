@@ -3,25 +3,25 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.ease-crc.org/ont/psr#> .
+@prefix obot:    <http://www.ease-crc.org/ont/psr#> .
 @prefix ex: <http://example.org/data/> .
 
 ###################################
 # Environment
 ###################################
-ex:kitchenEnvironment a psr:Environment ;
+ex:kitchenEnvironment a obot:Environment ;
     rdfs:label "Kitchen Environment"@en .
 
 ###################################
 # Rooms - Locations
 ###################################
-ex:kitchenLocation a psr:StandardLocation ;
+ex:kitchenLocation a obot:StandardLocation ;
     rdfs:label "Kitchen Area"@en .
 
-ex:diningArea a psr:StandardLocation ;
+ex:diningArea a obot:StandardLocation ;
     rdfs:label "Dining Area"@en .
 
-ex:insideRoomLocation a psr:StandardLocation ;
+ex:insideRoomLocation a obot:StandardLocation ;
     rdfs:label "Inside Room"@en .
 
 # Link environment to rooms
@@ -32,115 +32,115 @@ ex:kitchenEnvironment dul:hasComponent ex:kitchenLocation , ex:diningArea , ex:i
 ###################################
 
 # Cabinets
-ex:darkCabinet a psr:Furniture ;
+ex:darkCabinet a obot:Furniture ;
     rdfs:label "Dark Cabinetry"@en .
 
-ex:darkCabinetLocation a psr:CurrentLocation ;
+ex:darkCabinetLocation a obot:CurrentLocation ;
     rdfs:label "Dark Cabinetry Location"@en .
 
 # Countertop
-ex:beigeCountertop a psr:Furniture ;
+ex:beigeCountertop a obot:Furniture ;
     rdfs:label "Beige Countertop"@en .
 
-ex:countertopLocation a psr:CurrentLocation ;
+ex:countertopLocation a obot:CurrentLocation ;
     rdfs:label "Countertop Location"@en .
 
 # Food Items and Packaging
-ex:foodItemsAndPackaging a psr:Object ;
+ex:foodItemsAndPackaging a obot:Object ;
     rdfs:label "Food Items and Packaging"@en .
 
 # Jar
-ex:jar a psr:Object ;
+ex:jar a obot:Object ;
     rdfs:label "Jar"@en .
 
 # Jell-O Box
-ex:jelloBox a psr:Object ;
+ex:jelloBox a obot:Object ;
     rdfs:label "Jell-O Box"@en .
 
 # Salt Packet
-ex:saltPacket a psr:Object ;
+ex:saltPacket a obot:Object ;
     rdfs:label "Salt Packet"@en .
 
 # White Refrigerator
-ex:whiteRefrigerator a psr:Appliance ;
+ex:whiteRefrigerator a obot:Appliance ;
     rdfs:label "White Refrigerator"@en .
 
-ex:refrigeratorLocation a psr:CurrentLocation ;
+ex:refrigeratorLocation a obot:CurrentLocation ;
     rdfs:label "Refrigerator Location"@en .
 
 # Kitchen Floor
-ex:woodenFloor a psr:Furniture ;
+ex:woodenFloor a obot:Furniture ;
     rdfs:label "Wooden Floor"@en .
 
 # White Pitcher
-ex:whitePitcher a psr:Object ;
+ex:whitePitcher a obot:Object ;
     rdfs:label "White Pitcher"@en .
 
 # Glass
-ex:glass a psr:Object ;
+ex:glass a obot:Object ;
     rdfs:label "Glass"@en .
 
 # Bowl
-ex:bowl a psr:Object ;
+ex:bowl a obot:Object ;
     rdfs:label "Bowl"@en .
 
 # Cereal Box
-ex:cerealBox a psr:Object ;
+ex:cerealBox a obot:Object ;
     rdfs:label "Cereal Box"@en .
 
 # Bottle of Water
-ex:bottleWater a psr:Object ;
+ex:bottleWater a obot:Object ;
     rdfs:label "Bottle of Water"@en .
 
 # Food Packaging (general)
-ex:foodPackaging a psr:Object ;
+ex:foodPackaging a obot:Object ;
     rdfs:label "Food Packaging"@en .
 
 # Stove with pan
-ex:stove a psr:Furniture ;
+ex:stove a obot:Furniture ;
     rdfs:label "Stove"@en .
 
-ex:pan a psr:Object ;
+ex:pan a obot:Object ;
     rdfs:label "Small Pan"@en .
 
 # Door
-ex:door a psr:Object ;
+ex:door a obot:Object ;
     rdfs:label "Door"@en .
 
 ###################################
 # Dining Area Components
 ###################################
-ex:woodenTable a psr:Furniture ;
+ex:woodenTable a obot:Furniture ;
     rdfs:label "Wooden Table"@en .
 
-ex:whiteChairs a psr:Furniture ;
+ex:whiteChairs a obot:Furniture ;
     rdfs:label "White Chairs"@en .
 
 # Items on table
-ex:tableFoodItems a psr:Object ;
+ex:tableFoodItems a obot:Object ;
     rdfs:label "Food Items on Table"@en .
 
-ex:whitePitcher a psr:Object ;
+ex:whitePitcher a obot:Object ;
     rdfs:label "White Pitcher"@en .
 
-ex:tableGlass a psr:Object ;
+ex:tableGlass a obot:Object ;
     rdfs:label "Glass"@en .
 
-ex:tableBowl a psr:Object ;
+ex:tableBowl a obot:Object ;
     rdfs:label "Bowl"@en .
 
-ex:cerealBoxOnTable a psr:Object ;
+ex:cerealBoxOnTable a obot:Object ;
     rdfs:label "Cereal Box on Table"@en .
 
-ex:waterBottleOnTable a psr:Object ;
+ex:waterBottleOnTable a obot:Object ;
     rdfs:label "Bottle of Water on Table"@en .
 
 # Wall behind table
-ex:whiteWall a psr:Furniture ;
+ex:whiteWall a obot:Furniture ;
     rdfs:label "Plain White Wall"@en .
 
 # Partially open door to kitchen
-ex:partiallyOpenDoor a psr:Object ;
+ex:partiallyOpenDoor a obot:Object ;
     rdfs:label "Partially Open Door"@en .
 
 ###################################
@@ -187,22 +187,22 @@ ex:whiteWall dul:hasLocation ex:diningArea .
 ex:partiallyOpenDoor dul:hasLocation ex:insideRoomLocation .
 
 # Relations of affordances (examples)
-ex:door a psr:Object ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:door a obot:Object ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:stove a psr:Object ;
-    psr:hasAffordance soma:Pushing, soma:Pulling .
+ex:stove a obot:Object ;
+    obot:hasAffordance soma:Pushing, soma:Pulling .
 
 # All food items and objects are within the environment
-ex:jar a psr:Object .
-ex:jelloBox a psr:Object .
-ex:saltPacket a psr:Object .
-ex:whitePitcher a psr:Object .
-ex:glass a psr:Object .
-ex:bowl a psr:Object .
-ex:cerealBox a psr:Object .
-ex:bottleWater a psr:Object .
-ex:pan a psr:Object .
+ex:jar a obot:Object .
+ex:jelloBox a obot:Object .
+ex:saltPacket a obot:Object .
+ex:whitePitcher a obot:Object .
+ex:glass a obot:Object .
+ex:bowl a obot:Object .
+ex:cerealBox a obot:Object .
+ex:bottleWater a obot:Object .
+ex:pan a obot:Object .
 
 # Ensure locations are connected
 ex:darkCabinetLocation geo:sfWithin ex:kitchenLocation .

@@ -1,349 +1,349 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction .
+ex:RestoreKitchenTask a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
   rdfs:label "Identify Misplaced Items"@en ;
-  psr:actsOn ex:Kitchen ;
-  psr:isAffordedBy soma:Grasping ;
-  psr:follows ex:EnterKitchenAction .
+  obot:actsOn ex:Kitchen ;
+  obot:isAffordedBy soma:Grasping ;
+  obot:follows ex:EnterKitchenAction .
 
 ex:EnterKitchenAction a dul:Action ;
   rdfs:label "Enter Kitchen"@en ;
-  psr:actsOn ex:Kitchen ;
-  psr:isAffordedBy soma:Opening .
+  obot:actsOn ex:Kitchen ;
+  obot:isAffordedBy soma:Opening .
 
-ex:Kitchen a psr:Component ;
+ex:Kitchen a obot:Component ;
   rdfs:label "Kitchen"@en .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Countertop"@en ;
-  psr:partOf ex:Kitchen .
+  obot:partOf ex:Kitchen .
 
 ex:MisplacedItemsIdentification a dul:Action ;
   rdfs:label "Identify Misplaced Items on Countertop"@en ;
-  psr:actsOn ex:Countertop ;
-  psr:isAffordedBy soma:Grasping .
+  obot:actsOn ex:Countertop ;
+  obot:isAffordedBy soma:Grasping .
 
-ex:PlateStack a psr:Object ;
+ex:PlateStack a obot:Object ;
   rdfs:label "Stack of White Plates"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpPlateStackAction a dul:Action ;
   rdfs:label "Pick Up Stack of White Plates"@en ;
-  psr:actsOn ex:PlateStack ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:PlateStack ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:WhiteFridge a psr:Appliance ;
+ex:WhiteFridge a obot:Appliance ;
   rdfs:label "White Fridge"@en ;
-  psr:locatedIn ex:Kitchen .
+  obot:locatedIn ex:Kitchen .
 
-ex:PlateStorageLocation a psr:Component ;
+ex:PlateStorageLocation a obot:Component ;
   rdfs:label "Plate Storage Location"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownPlateStackAction a dul:Action ;
   rdfs:label "Put Down Stack of White Plates"@en ;
-  psr:actsOn ex:PlateStack ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpPlateStackAction .
+  obot:actsOn ex:PlateStack ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpPlateStackAction .
 
-ex:JarRedLid a psr:Object ;
+ex:JarRedLid a obot:Object ;
   rdfs:label "Jar with Red Lid"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpJarRedLidAction a dul:Action ;
   rdfs:label "Pick Up Jar with Red Lid"@en ;
-  psr:actsOn ex:JarRedLid ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpPlateStackAction .
+  obot:actsOn ex:JarRedLid ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpPlateStackAction .
 
-ex:StorageLocationJar a psr:Component ;
+ex:StorageLocationJar a obot:Component ;
   rdfs:label "Storage Location for Jar"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownJarRedLidAction a dul:Action ;
   rdfs:label "Put Down Jar with Red Lid"@en ;
-  psr:actsOn ex:JarRedLid ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpJarRedLidAction .
+  obot:actsOn ex:JarRedLid ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpJarRedLidAction .
 
-ex:BoxJello1 a psr:Object ;
+ex:BoxJello1 a obot:Object ;
   rdfs:label "Box of Jello"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpBoxJello1Action a dul:Action ;
   rdfs:label "Pick Up Box of Jello"@en ;
-  psr:actsOn ex:BoxJello1 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownJarRedLidAction .
+  obot:actsOn ex:BoxJello1 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownJarRedLidAction .
 
-ex:StorageLocationJello a psr:Component ;
+ex:StorageLocationJello a obot:Component ;
   rdfs:label "Storage Location for Jello"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownBoxJello1Action a dul:Action ;
   rdfs:label "Put Down Box of Jello"@en ;
-  psr:actsOn ex:BoxJello1 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpBoxJello1Action .
+  obot:actsOn ex:BoxJello1 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpBoxJello1Action .
 
-ex:AlpenSalt a psr:Object ;
+ex:AlpenSalt a obot:Object ;
   rdfs:label "Box of Alpen Salt"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpAlpenSaltAction a dul:Action ;
   rdfs:label "Pick Up Box of Alpen Salt"@en ;
-  psr:actsOn ex:AlpenSalt ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownBoxJello1Action .
+  obot:actsOn ex:AlpenSalt ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownBoxJello1Action .
 
-ex:StorageLocationAlpenSalt a psr:Component ;
+ex:StorageLocationAlpenSalt a obot:Component ;
   rdfs:label "Storage Location for Alpen Salt"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownAlpenSaltAction a dul:Action ;
   rdfs:label "Put Down Box of Alpen Salt"@en ;
-  psr:actsOn ex:AlpenSalt ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpAlpenSaltAction .
+  obot:actsOn ex:AlpenSalt ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpAlpenSaltAction .
 
-ex:RiceBubbles a psr:Object ;
+ex:RiceBubbles a obot:Object ;
   rdfs:label "Box of Rice Bubbles"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpRiceBubblesAction a dul:Action ;
   rdfs:label "Pick Up Box of Rice Bubbles"@en ;
-  psr:actsOn ex:RiceBubbles ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownAlpenSaltAction .
+  obot:actsOn ex:RiceBubbles ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownAlpenSaltAction .
 
-ex:StorageLocationRiceBubbles a psr:Component ;
+ex:StorageLocationRiceBubbles a obot:Component ;
   rdfs:label "Storage Location for Rice Bubbles"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownRiceBubblesAction a dul:Action ;
   rdfs:label "Put Down Box of Rice Bubbles"@en ;
-  psr:actsOn ex:RiceBubbles ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpRiceBubblesAction .
+  obot:actsOn ex:RiceBubbles ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpRiceBubblesAction .
 
-ex:JarRedWhiteLid a psr:Object ;
+ex:JarRedWhiteLid a obot:Object ;
   rdfs:label "Jar with Red and White Lid"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpJarRedWhiteLidAction a dul:Action ;
   rdfs:label "Pick Up Jar with Red and White Lid"@en ;
-  psr:actsOn ex:JarRedWhiteLid ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownRiceBubblesAction .
+  obot:actsOn ex:JarRedWhiteLid ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownRiceBubblesAction .
 
-ex:StorageLocationJarRedWhiteLid a psr:Component ;
+ex:StorageLocationJarRedWhiteLid a obot:Component ;
   rdfs:label "Storage Location for Jar with Red and White Lid"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownJarRedWhiteLidAction a dul:Action ;
   rdfs:label "Put Down Jar with Red and White Lid"@en ;
-  psr:actsOn ex:JarRedWhiteLid ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpJarRedWhiteLidAction .
+  obot:actsOn ex:JarRedWhiteLid ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpJarRedWhiteLidAction .
 
-ex:YellowMug a psr:Object ;
+ex:YellowMug a obot:Object ;
   rdfs:label "Yellow Mug"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpYellowMugAction a dul:Action ;
   rdfs:label "Pick Up Yellow Mug"@en ;
-  psr:actsOn ex:YellowMug ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownJarRedWhiteLidAction .
+  obot:actsOn ex:YellowMug ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownJarRedWhiteLidAction .
 
-ex:StorageLocationMug a psr:Component ;
+ex:StorageLocationMug a obot:Component ;
   rdfs:label "Storage Location for Mug"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownYellowMugAction a dul:Action ;
   rdfs:label "Put Down Yellow Mug"@en ;
-  psr:actsOn ex:YellowMug ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpYellowMugAction .
+  obot:actsOn ex:YellowMug ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpYellowMugAction .
 
-ex:ChuckyPuzzleBox a psr:Object ;
+ex:ChuckyPuzzleBox a obot:Object ;
   rdfs:label "Puzzle Box with Chucky"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpChuckyPuzzleBoxAction a dul:Action ;
   rdfs:label "Pick Up Puzzle Box with Chucky"@en ;
-  psr:actsOn ex:ChuckyPuzzleBox ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownYellowMugAction .
+  obot:actsOn ex:ChuckyPuzzleBox ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownYellowMugAction .
 
-ex:StorageLocationChuckyPuzzleBox a psr:Component ;
+ex:StorageLocationChuckyPuzzleBox a obot:Component ;
   rdfs:label "Storage Location for Puzzle Box with Chucky"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownChuckyPuzzleBoxAction a dul:Action ;
   rdfs:label "Put Down Puzzle Box with Chucky"@en ;
-  psr:actsOn ex:ChuckyPuzzleBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpChuckyPuzzleBoxAction .
+  obot:actsOn ex:ChuckyPuzzleBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpChuckyPuzzleBoxAction .
 
-ex:BoxJello2 a psr:Object ;
+ex:BoxJello2 a obot:Object ;
   rdfs:label "Another Box of Jello"@en ;
-  psr:locatedIn ex:Countertop .
+  obot:locatedIn ex:Countertop .
 
 ex:PickUpBoxJello2Action a dul:Action ;
   rdfs:label "Pick Up Another Box of Jello"@en ;
-  psr:actsOn ex:BoxJello2 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownChuckyPuzzleBoxAction .
+  obot:actsOn ex:BoxJello2 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownChuckyPuzzleBoxAction .
 
-ex:StorageLocationJello2 a psr:Component ;
+ex:StorageLocationJello2 a obot:Component ;
   rdfs:label "Storage Location for Another Box of Jello"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownBoxJello2Action a dul:Action ;
   rdfs:label "Put Down Another Box of Jello"@en ;
-  psr:actsOn ex:BoxJello2 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpBoxJello2Action .
+  obot:actsOn ex:BoxJello2 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpBoxJello2Action .
 
-ex:Table a psr:Component ;
+ex:Table a obot:Component ;
   rdfs:label "Table"@en ;
-  psr:locatedIn ex:DiningArea .
+  obot:locatedIn ex:DiningArea .
 
-ex:PuzzleBoxOnTable a psr:Object ;
+ex:PuzzleBoxOnTable a obot:Object ;
   rdfs:label "Puzzle Box with Chucky on Table"@en ;
-  psr:locatedIn ex:Table .
+  obot:locatedIn ex:Table .
 
 ex:PickUpPuzzleBoxOnTableAction a dul:Action ;
   rdfs:label "Pick Up Puzzle Box with Chucky from Table"@en ;
-  psr:actsOn ex:PuzzleBoxOnTable ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownBoxJello2Action .
+  obot:actsOn ex:PuzzleBoxOnTable ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownBoxJello2Action .
 
-ex:StorageLocationPuzzleBoxOnTable a psr:Component ;
+ex:StorageLocationPuzzleBoxOnTable a obot:Component ;
   rdfs:label "Storage Location for Puzzle Box with Chucky"@en .
 
 ex:PutDownPuzzleBoxOnTableAction a dul:Action ;
   rdfs:label "Put Down Puzzle Box with Chucky"@en ;
-  psr:actsOn ex:PuzzleBoxOnTable ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpPuzzleBoxOnTableAction .
+  obot:actsOn ex:PuzzleBoxOnTable ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpPuzzleBoxOnTableAction .
 
-ex:BottleWater a psr:Object ;
+ex:BottleWater a obot:Object ;
   rdfs:label "Bottle of Water"@en ;
-  psr:locatedIn ex:Table .
+  obot:locatedIn ex:Table .
 
 ex:PickUpBottleWaterAction a dul:Action ;
   rdfs:label "Pick Up Bottle of Water"@en ;
-  psr:actsOn ex:BottleWater ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownPuzzleBoxOnTableAction .
+  obot:actsOn ex:BottleWater ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownPuzzleBoxOnTableAction .
 
-ex:StorageLocationBottleWater a psr:Component ;
+ex:StorageLocationBottleWater a obot:Component ;
   rdfs:label "Storage Location for Bottle of Water"@en .
 
 ex:PutDownBottleWaterAction a dul:Action ;
   rdfs:label "Put Down Bottle of Water"@en ;
-  psr:actsOn ex:BottleWater ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpBottleWaterAction .
+  obot:actsOn ex:BottleWater ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpBottleWaterAction .
 
-ex:WhitePlateOnTable a psr:Object ;
+ex:WhitePlateOnTable a obot:Object ;
   rdfs:label "White Plate on Table"@en ;
-  psr:locatedIn ex:Table .
+  obot:locatedIn ex:Table .
 
 ex:PickUpWhitePlateOnTableAction a dul:Action ;
   rdfs:label "Pick Up White Plate from Table"@en ;
-  psr:actsOn ex:WhitePlateOnTable ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownBottleWaterAction .
+  obot:actsOn ex:WhitePlateOnTable ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownBottleWaterAction .
 
-ex:StorageLocationWhitePlate a psr:Component ;
+ex:StorageLocationWhitePlate a obot:Component ;
   rdfs:label "Storage Location for White Plate"@en ;
-  psr:partOf ex:WhiteFridge .
+  obot:partOf ex:WhiteFridge .
 
 ex:PutDownWhitePlateOnTableAction a dul:Action ;
   rdfs:label "Put Down White Plate"@en ;
-  psr:actsOn ex:WhitePlateOnTable ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpWhitePlateOnTableAction .
+  obot:actsOn ex:WhitePlateOnTable ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpWhitePlateOnTableAction .
 
-ex:MugOnTable a psr:Object ;
+ex:MugOnTable a obot:Object ;
   rdfs:label "Mug on Table"@en ;
-  psr:locatedIn ex:Table .
+  obot:locatedIn ex:Table .
 
 ex:PickUpMugOnTableAction a dul:Action ;
   rdfs:label "Pick Up Mug from Table"@en ;
-  psr:actsOn ex:MugOnTable ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownWhitePlateOnTableAction .
+  obot:actsOn ex:MugOnTable ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownWhitePlateOnTableAction .
 
-ex:StorageLocationMugOnTable a psr:Component ;
+ex:StorageLocationMugOnTable a obot:Component ;
   rdfs:label "Storage Location for Mug"@en .
 
 ex:PutDownMugOnTableAction a dul:Action ;
   rdfs:label "Put Down Mug"@en ;
-  psr:actsOn ex:MugOnTable ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpMugOnTableAction .
+  obot:actsOn ex:MugOnTable ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpMugOnTableAction .
 
-ex:TwoWhiteCups a psr:Object ;
+ex:TwoWhiteCups a obot:Object ;
   rdfs:label "Two White Cups"@en ;
-  psr:locatedIn ex:Table .
+  obot:locatedIn ex:Table .
 
 ex:PickUpTwoWhiteCupsAction a dul:Action ;
   rdfs:label "Pick Up Two White Cups"@en ;
-  psr:actsOn ex:TwoWhiteCups ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PutDownMugOnTableAction .
+  obot:actsOn ex:TwoWhiteCups ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PutDownMugOnTableAction .
 
-ex:StorageLocationTwoWhiteCups a psr:Component ;
+ex:StorageLocationTwoWhiteCups a obot:Component ;
   rdfs:label "Storage Location for Two White Cups"@en .
 
 ex:PutDownTwoWhiteCupsAction a dul:Action ;
   rdfs:label "Put Down Two White Cups"@en ;
-  psr:actsOn ex:TwoWhiteCups ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpTwoWhiteCupsAction .
+  obot:actsOn ex:TwoWhiteCups ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpTwoWhiteCupsAction .
 
 ex:Robot a dul:Agent ;
   rdfs:label "Robot"@en ;
-  psr:performs ex:EnterKitchenAction ;
-  psr:performs ex:IdentifyMisplacedItemsAction ;
-  psr:performs ex:PickUpPlateStackAction ;
-  psr:performs ex:PutDownPlateStackAction ;
-  psr:performs ex:PickUpJarRedLidAction ;
-  psr:performs ex:PutDownJarRedLidAction ;
-  psr:performs ex:PickUpBoxJello1Action ;
-  psr:performs ex:PutDownBoxJello1Action ;
-  psr:performs ex:PickUpAlpenSaltAction ;
-  psr:performs ex:PutDownAlpenSaltAction ;
-  psr:performs ex:PickUpRiceBubblesAction ;
-  psr:performs ex:PutDownRiceBubblesAction ;
-  psr:performs ex:PickUpJarRedWhiteLidAction ;
-  psr:performs ex:PutDownJarRedWhiteLidAction ;
-  psr:performs ex:PickUpYellowMugAction ;
-  psr:performs ex:PutDownYellowMugAction ;
-  psr:performs ex:PickUpChuckyPuzzleBoxAction ;
-  psr:performs ex:PutDownChuckyPuzzleBoxAction ;
-  psr:performs ex:PickUpBoxJello2Action ;
-  psr:performs ex:PutDownBoxJello2Action ;
-  psr:performs ex:PickUpPuzzleBoxOnTableAction ;
-  psr:performs ex:PutDownPuzzleBoxOnTableAction ;
-  psr:performs ex:PickUpBottleWaterAction ;
-  psr:performs ex:PutDownBottleWaterAction ;
-  psr:performs ex:PickUpWhitePlateOnTableAction ;
-  psr:performs ex:PutDownWhitePlateOnTableAction ;
-  psr:performs ex:PickUpMugOnTableAction ;
-  psr:performs ex:PutDownMugOnTableAction ;
-  psr:performs ex:PickUpTwoWhiteCupsAction ;
-  psr:performs ex:PutDownTwoWhiteCupsAction .
+  obot:performs ex:EnterKitchenAction ;
+  obot:performs ex:IdentifyMisplacedItemsAction ;
+  obot:performs ex:PickUpPlateStackAction ;
+  obot:performs ex:PutDownPlateStackAction ;
+  obot:performs ex:PickUpJarRedLidAction ;
+  obot:performs ex:PutDownJarRedLidAction ;
+  obot:performs ex:PickUpBoxJello1Action ;
+  obot:performs ex:PutDownBoxJello1Action ;
+  obot:performs ex:PickUpAlpenSaltAction ;
+  obot:performs ex:PutDownAlpenSaltAction ;
+  obot:performs ex:PickUpRiceBubblesAction ;
+  obot:performs ex:PutDownRiceBubblesAction ;
+  obot:performs ex:PickUpJarRedWhiteLidAction ;
+  obot:performs ex:PutDownJarRedWhiteLidAction ;
+  obot:performs ex:PickUpYellowMugAction ;
+  obot:performs ex:PutDownYellowMugAction ;
+  obot:performs ex:PickUpChuckyPuzzleBoxAction ;
+  obot:performs ex:PutDownChuckyPuzzleBoxAction ;
+  obot:performs ex:PickUpBoxJello2Action ;
+  obot:performs ex:PutDownBoxJello2Action ;
+  obot:performs ex:PickUpPuzzleBoxOnTableAction ;
+  obot:performs ex:PutDownPuzzleBoxOnTableAction ;
+  obot:performs ex:PickUpBottleWaterAction ;
+  obot:performs ex:PutDownBottleWaterAction ;
+  obot:performs ex:PickUpWhitePlateOnTableAction ;
+  obot:performs ex:PutDownWhitePlateOnTableAction ;
+  obot:performs ex:PickUpMugOnTableAction ;
+  obot:performs ex:PutDownMugOnTableAction ;
+  obot:performs ex:PickUpTwoWhiteCupsAction ;
+  obot:performs ex:PutDownTwoWhiteCupsAction .

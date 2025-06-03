@@ -5,167 +5,167 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
 ###############################
 # Step 1: Identify misplaced items
 ###############################
 
-<ex:IdentifyMisplacedItems> a psr:Instruction ;
-    psr:hasNaturalLanguage "Identify all misplaced items on the countertop."@en .
+<ex:IdentifyMisplacedItems> a obot:Instruction ;
+    obot:hasNaturalLanguage "Identify all misplaced items on the countertop."@en .
 
-<ex:SceneObject1> a psr:Object ;
+<ex:SceneObject1> a obot:Object ;
     rdfs:label "box of Jello"@en .
 
-<ex:SceneObject2> a psr:Object ;
+<ex:SceneObject2> a obot:Object ;
     rdfs:label "box of rice bubbles"@en .
 
-<ex:SceneObject3> a psr:Object ;
+<ex:SceneObject3> a obot:Object ;
     rdfs:label "pack of shortbread"@en .
 
-<ex:SceneObject4> a psr:Object ;
+<ex:SceneObject4> a obot:Object ;
     rdfs:label "jug"@en .
 
-<ex:SceneObject5> a psr:Object ;
+<ex:SceneObject5> a obot:Object ;
     rdfs:label "two glasses"@en .
 
-<ex:SceneObject6> a psr:Object ;
+<ex:SceneObject6> a obot:Object ;
     rdfs:label "bottle of water"@en .
 
-<ex:SceneObject7> a psr:Object ;
+<ex:SceneObject7> a obot:Object ;
     rdfs:label "box with child's face"@en .
 
 ###############################
 # Step 2: Pick up misplaced items
 ###############################
 
-<ex:PickUpBoxJello> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the box of Jello."@en .
+<ex:PickUpBoxJello> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the box of Jello."@en .
 
 <ex:pickUpBoxJelloAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject1> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject1> .
 
-<ex:PickUpBoxRice> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the box of rice bubbles."@en .
+<ex:PickUpBoxRice> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the box of rice bubbles."@en .
 
 <ex:pickUpBoxRiceAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject2> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject2> .
 
-<ex:PickUpShortbread> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the pack of shortbread."@en .
+<ex:PickUpShortbread> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the pack of shortbread."@en .
 
 <ex:pickUpShortbreadAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject3> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject3> .
 
-<ex:PickUpJug> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the jug."@en .
+<ex:PickUpJug> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the jug."@en .
 
 <ex:pickUpJugAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject4> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject4> .
 
-<ex:PickUpGlass1> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the first glass."@en .
+<ex:PickUpGlass1> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the first glass."@en .
 
 <ex:pickUpGlass1Action> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject5> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject5> .
 
-<ex:PickUpGlass2> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the second glass."@en .
+<ex:PickUpGlass2> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the second glass."@en .
 
 <ex:pickUpGlass2Action> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject5> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject5> .
 
-<ex:PickUpWaterBottle> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the bottle of water."@en .
+<ex:PickUpWaterBottle> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the bottle of water."@en .
 
 <ex:pickUpWaterBottleAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject6> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject6> .
 
-<ex:PickUpBoxChildFace> a psr:Instruction ;
-    psr:hasNaturalLanguage "Pick up the box with child's face."@en .
+<ex:PickUpBoxChildFace> a obot:Instruction ;
+    obot:hasNaturalLanguage "Pick up the box with child's face."@en .
 
 <ex:pickUpBoxChildFaceAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject7> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject7> .
 
 ###############################
 # Step 3: Place each item in its standard storage location
 ###############################
 
-<ex:PlaceJelloInFridge> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the box of Jello into the fridge."@en .
+<ex:PlaceJelloInFridge> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the box of Jello into the fridge."@en .
 
 <ex:placeJelloAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject1> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject1> .
 
-<ex:PlaceRiceBubblesInCabinet> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the box of rice bubbles in the cabinet."@en .
+<ex:PlaceRiceBubblesInCabinet> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the box of rice bubbles in the cabinet."@en .
 
 <ex:placeRiceBubblesAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject2> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject2> .
 
-<ex:PlaceShortbreadInContainer> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the pack of shortbread in the container."@en .
+<ex:PlaceShortbreadInContainer> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the pack of shortbread in the container."@en .
 
 <ex:placeShortbreadAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject3> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject3> .
 
-<ex:PlaceJugInCabinet> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the jug in the cabinet."@en .
+<ex:PlaceJugInCabinet> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the jug in the cabinet."@en .
 
 <ex:placeJugAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject4> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject4> .
 
-<ex:PlaceGlass1InCabinet> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the first glass in the cabinet."@en .
+<ex:PlaceGlass1InCabinet> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the first glass in the cabinet."@en .
 
 <ex:placeGlass1Action> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject5> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject5> .
 
-<ex:PlaceGlass2InCabinet> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the second glass in the cabinet."@en .
+<ex:PlaceGlass2InCabinet> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the second glass in the cabinet."@en .
 
 <ex:placeGlass2Action> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject5> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject5> .
 
-<ex:PlaceWaterBottleInCabinet> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the bottle of water in the cabinet."@en .
+<ex:PlaceWaterBottleInCabinet> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the bottle of water in the cabinet."@en .
 
 <ex:placeWaterBottleAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject6> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject6> .
 
-<ex:PlaceChildFaceBoxInStorage> a psr:Instruction ;
-    psr:hasNaturalLanguage "Place the box with child's face in storage."@en .
+<ex:PlaceChildFaceBoxInStorage> a obot:Instruction ;
+    obot:hasNaturalLanguage "Place the box with child's face in storage."@en .
 
 <ex:placeChildFaceBoxAction> a dul:Action ;
-    psr:isPerformedBy <ex:RobotAgent1> ;
-    psr:actsOn <ex:SceneObject7> .
+    obot:isPerformedBy <ex:RobotAgent1> ;
+    obot:actsOn <ex:SceneObject7> .
 
 ###############################
 # Step 4: End of task
 ###############################
 
-<ex:EndOrganizingTask> a psr:Instruction ;
-    psr:hasNaturalLanguage "Complete the organization of the kitchen."@en .
+<ex:EndOrganizingTask> a obot:Instruction ;
+    obot:hasNaturalLanguage "Complete the organization of the kitchen."@en .
 
 ###############################
 # Additional metadata
 ###############################
 
-<ex:RobotAgent1> a psr:Agent ;
+<ex:RobotAgent1> a obot:Agent ;
     rdfs:label "Robot Agent"@en .

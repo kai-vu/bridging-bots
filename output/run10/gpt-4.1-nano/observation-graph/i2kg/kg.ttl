@@ -3,48 +3,48 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.psr-action#> .
+@prefix obot:    <http://www.psr-action#> .
 
-<http://example.org/environment> a psr:Environment ;
+<http://example.org/environment> a obot:Environment ;
     rdfs:label "Living Space"@en ;
     dul:hasComponent <http://example.org/refrigerator> , <http://example.org/kitchenTable> , <http://example.org/diningTable> .
 
-<http://example.org/refrigerator> a psr:Appliance ;
+<http://example.org/refrigerator> a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation <http://example.org/refrigerator_current_location> , <http://example.org/refrigerator_standard_location> .
 
-<http://example.org/refrigerator_current_location> a psr:CurrentLocation ;
+<http://example.org/refrigerator_current_location> a obot:CurrentLocation ;
     geo:sfWithin <http://example.org/kitchen> .
 
-<http://example.org/refrigerator_standard_location> a psr:StandardLocation ;
+<http://example.org/refrigerator_standard_location> a obot:StandardLocation ;
     geo:sfWithin <http://example.org/kitchen> .
 
-<http://example.org/kitchenTable> a psr:Furniture ;
+<http://example.org/kitchenTable> a obot:Furniture ;
     rdfs:label "Kitchen Table"@en ;
     dul:hasLocation <http://example.org/kitchenTable_current_location> , <http://example.org/kitchenTable_standard_location> .
 
-<http://example.org/kitchenTable_current_location> a psr:CurrentLocation ;
+<http://example.org/kitchenTable_current_location> a obot:CurrentLocation ;
     geo:sfWithin <http://example.org/kitchen> .
 
-<http://example.org/kitchenTable_standard_location> a psr:StandardLocation ;
+<http://example.org/kitchenTable_standard_location> a obot:StandardLocation ;
     geo:sfWithin <http://example.org/kitchen> .
 
-<http://example.org/diningTable> a psr:Furniture ;
+<http://example.org/diningTable> a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation <http://example.org/diningTable_current_location> , <http://example.org/diningTable_standard_location> .
 
-<http://example.org/diningTable_current_location> a psr:CurrentLocation ;
+<http://example.org/diningTable_current_location> a obot:CurrentLocation ;
     geo:sfWithin <http://example.org/diningRoom> .
 
-<http://example.org/diningTable_standard_location> a psr:StandardLocation ;
+<http://example.org/diningTable_standard_location> a obot:StandardLocation ;
     geo:sfWithin <http://example.org/diningRoom> .
 
-<http://example.org/kitchen> a psr:Environment .
+<http://example.org/kitchen> a obot:Environment .
 
-<http://example.org/diningRoom> a psr:Environment .
+<http://example.org/diningRoom> a obot:Environment .
 
-<http://example.org/refrigerator> psr:hasAffordance soma:Closing , soma:Delivering .
+<http://example.org/refrigerator> obot:hasAffordance soma:Closing , soma:Delivering .
 
-<http://example.org/kitchenTable> psr:hasAffordance soma:Pushing , soma:Pulling .
+<http://example.org/kitchenTable> obot:hasAffordance soma:Pushing , soma:Pulling .
 
-<http://example.org/diningTable> psr:hasAffordance soma:PuttingDown , soma:PickingUp .
+<http://example.org/diningTable> obot:hasAffordance soma:PuttingDown , soma:PickingUp .

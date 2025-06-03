@@ -1,73 +1,73 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Countertops, ex:Refrigerator, ex:Sink, ex:RangeHood, ex:DiningTable, ex:Chairs .
 
-ex:Cabinets a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Cabinets a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Countertops a psr:Furniture ;
+ex:Countertops a obot:Furniture ;
     dul:hasLocation ex:Sink, ex:JarOfJam, ex:BoxOfJellO, ex:AlpenSalt, ex:StackOfPlates, ex:RedCanister, ex:SilverFaucet ;
-    psr:hasAffordance soma:PuttingDown, soma:PickingUp .
+    obot:hasAffordance soma:PuttingDown, soma:PickingUp .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     dul:hasLocation ex:Kitchen ;
     geo:sfWithin ex:Kitchen .
 
-ex:Sink a psr:Furniture ;
+ex:Sink a obot:Furniture ;
     dul:hasComponent ex:SilverFaucet ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:Kitchen .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasComponent ex:BottleOfWater, ex:BoxOfCrackers, ex:Mug, ex:Glass, ex:Knife, ex:Lemons ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:Chairs a psr:Furniture ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:Chairs a obot:Furniture ;
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:JarOfJam a psr:Object ;
+ex:JarOfJam a obot:Object ;
     dul:hasLocation ex:Countertops .
 
-ex:BoxOfJellO a psr:Object ;
+ex:BoxOfJellO a obot:Object ;
     dul:hasLocation ex:Countertops .
 
-ex:AlpenSalt a psr:Object ;
+ex:AlpenSalt a obot:Object ;
     dul:hasLocation ex:Countertops .
 
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     dul:hasLocation ex:Countertops .
 
-ex:RedCanister a psr:Object ;
+ex:RedCanister a obot:Object ;
     dul:hasLocation ex:Countertops .
 
-ex:SilverFaucet a psr:Object ;
+ex:SilverFaucet a obot:Object ;
     dul:hasLocation ex:Sink .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:BoxOfCrackers a psr:Object ;
+ex:BoxOfCrackers a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Glass a psr:Object ;
+ex:Glass a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Knife a psr:Object ;
+ex:Knife a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
 ex:Countertops dul:hasLocation ex:Sink .

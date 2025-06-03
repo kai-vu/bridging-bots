@@ -5,11 +5,11 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Action 1: Identify misplaced items
-ex:IdentifyMisplacedItems a psr:Action ;
+ex:IdentifyMisplacedItems a obot:Action ;
     rdfs:label "Identify misplaced items"@en ;
     rdfs:comment "The robot identifies all misplaced items on the countertop."@en .
 
@@ -17,7 +17,7 @@ ex:IdentifyMisplacedItems actsOn ex:FoodItemsOnCounter ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 2: Pick up each misplaced item (example: jar)
-ex:PickUpJar a psr:Action ;
+ex:PickUpJar a obot:Action ;
     rdfs:label "Pick up jar"@en ;
     rdfs:comment "Robot picks up the jar from the countertop."@en .
 
@@ -25,7 +25,7 @@ ex:PickUpJar actsOn ex:Jar ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 3: Move the jar to its standard storage location (e.g., cabinet or pantry)
-ex:StoreJar a psr:Action ;
+ex:StoreJar a obot:Action ;
     rdfs:label "Store jar in pantry"@en ;
     rdfs:comment "Robot places the jar into its standard storage location."@en .
 
@@ -33,56 +33,56 @@ ex:StoreJar actsOn ex:Jar ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 4: Repeat pick up and store actions for other misplaced items (e.g., Jell-O box, salt packet, cereal box, water bottle, etc.)
-ex:PickUpJellOBox a psr:Action ;
+ex:PickUpJellOBox a obot:Action ;
     rdfs:label "Pick up Jell-O box"@en .
 
 ex:PickUpJellOBox actsOn ex:JellOBox ;
     rdfs:isPerformedBy ex:Robot .
 
-ex:StoreJellOBox a psr:Action ;
+ex:StoreJellOBox a obot:Action ;
     rdfs:label "Store Jell-O box in pantry"@en .
 
 ex:StoreJellOBox actsOn ex:JellOBox ;
     rdfs:isPerformedBy ex:Robot .
 
-ex:PickUpSaltPacket a psr:Action ;
+ex:PickUpSaltPacket a obot:Action ;
     rdfs:label "Pick up salt packet"@en .
 
 ex:PickUpSaltPacket actsOn ex:SaltPacket ;
     rdfs:colors:performedBy ex:Robot .
 
-ex:StoreSaltPacket a psr:Action ;
+ex:StoreSaltPacket a obot:Action ;
     rdfs:label "Store salt packet in pantry"@en .
 
 ex:StoreSaltPacket actsOn ex:SaltPacket ;
     rdfs:isPerformedBy ex:Robot .
 
-ex:PickUpCerealBox a psr:Action ;
+ex:PickUpCerealBox a obot:Action ;
     rdfs:label "Pick up cereal box"@en .
 
 ex:PickUpCerealBox actsOn ex:CerealBox ;
     rdfs:isPerformedBy ex:Robot .
 
-ex:StoreCerealBox a psr:Action ;
+ex:StoreCerealBox a obot:Action ;
     rdfs:label "Store cereal box in pantry"@en .
 
 ex:StoreCerealBox actsOn ex:CerealBox ;
     rdfs:requires ex:Pantry .
 
-ex:PickUpWaterBottle a psr:Action ;
+ex:PickUpWaterBottle a obot:Action ;
     rdfs:label "Pick up water bottle"@en .
 
 ex:PickUpWaterBottle actsOn ex:WaterBottle ;
     rdfs:isPerformedBy ex:Robot .
 
-ex:StoreWaterBottle a psr:Action ;
+ex:StoreWaterBottle a obot:Action ;
     rdfs:label "Store water bottle in pantry"@en .
 
 ex:StoreWaterBottle actsOn ex:WaterBottle ;
     rdfs:requires ex:Pantry .
 
 # Action 5: Confirm all items are placed correctly; if not, repeat steps
-ex:VerifyRestoration a psr:Action ;
+ex:VerifyRestoration a obot:Action ;
     rdfs:label "Verify environment organization"@en ;
     rdfs:comment "Robot verifies if all items are correctly stored."@en .
 
@@ -90,7 +90,7 @@ ex:VerifyRestoration actsOn ex:AllItems ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 6: Finalize the process
-ex:CompleteRestoration a psr:Action ;
+ex:CompleteRestoration a obot:Action ;
     rdfs:label "Complete restoration"@en ;
     rdfs:comment "Robot completes the task after verifying all items are in place."@en .
 
@@ -98,27 +98,27 @@ ex:CompleteRestoration actsOn ex:AllItems ;
     rdfs:isPerformedBy ex:Robot .
 
 # Summary: Sequence of actions
-<ex:IdentifyMisplacedItems> psr:precedes <ex:PickUpJar> .
-<ex:PickUpJar> psr:precedes <ex:StoreJar> .
+<ex:IdentifyMisplacedItems> obot:precedes <ex:PickUpJar> .
+<ex:PickUpJar> obot:precedes <ex:StoreJar> .
 
-<ex:IdentifyMisplacedItems> psr:precedes <ex:PickUpJellOBox> .
-<ex:PickUpJellOBox> psr:precedes <ex:StoreJellOBox> .
+<ex:IdentifyMisplacedItems> obot:precedes <ex:PickUpJellOBox> .
+<ex:PickUpJellOBox> obot:precedes <ex:StoreJellOBox> .
 
-<ex:IdentifyMisplacedItems> psr:precedes <ex:PickUpSaltPacket> .
-<ex:PickUpSaltPacket> psr:precedes <ex:StoreSaltPacket> .
+<ex:IdentifyMisplacedItems> obot:precedes <ex:PickUpSaltPacket> .
+<ex:PickUpSaltPacket> obot:precedes <ex:StoreSaltPacket> .
 
-<ex:IdentifyMisplacedItems> psr:precedes <ex:PickUpCerealBox> .
-<ex:PickUpCerealBox> psr:precedes <ex:StoreCerealBox> .
+<ex:IdentifyMisplacedItems> obot:precedes <ex:PickUpCerealBox> .
+<ex:PickUpCerealBox> obot:precedes <ex:StoreCerealBox> .
 
-<ex:IdentifyMisplacedItems> psr:precedes <ex:PickUpWaterBottle> .
-<ex:PickUpWaterBottle> psr:precedes <ex:StoreWaterBottle> .
+<ex:IdentifyMisplacedItems> obot:precedes <ex:PickUpWaterBottle> .
+<ex:PickUpWaterBottle> obot:precedes <ex:StoreWaterBottle> .
 
-<ex:StoreWaterBottle> psr:precedes <ex:VerifyRestoration> .
-<ex:StoreCerealBox> psr:precedes <ex:VerifyRestoration> .
-<ex:StoreSaltPacket> psr:precedes <ex:VerifyRestoration> .
-<ex:StoreJellOBox> psr:precedes <ex:VerifyRestoration> .
-<ex:StoreJar> psr:precedes <ex:VerifyRestoration> .
+<ex:StoreWaterBottle> obot:precedes <ex:VerifyRestoration> .
+<ex:StoreCerealBox> obot:precedes <ex:VerifyRestoration> .
+<ex:StoreSaltPacket> obot:precedes <ex:VerifyRestoration> .
+<ex:StoreJellOBox> obot:precedes <ex:VerifyRestoration> .
+<ex:StoreJar> obot:precedes <ex:VerifyRestoration> .
 
-<ex:VerifyRestoration> psr:precedes <ex:CompleteRestoration> .
+<ex:VerifyRestoration> obot:precedes <ex:CompleteRestoration> .
 
 # Note: Entities like ex:FoodItemsOnCounter, ex:Jar, ex:JellOBox, ex:SaltPacket, ex:CerealBox, ex:WaterBottle, ex:AllItems, ex:Robot, ex:Pantry are assumed to exist or are placeholders for specific environment objects.

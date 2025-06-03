@@ -5,169 +5,169 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
 ### Knowledge Graph of Actions
 ```turtle
-psr:restore_kitchen a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+obot:restore_kitchen a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-psr:workflow_1 a psr:Workflow ;
-    psr:hasAction psr:pick_up_item_1 .
+obot:workflow_1 a obot:Workflow ;
+    obot:hasAction obot:pick_up_item_1 .
 
-psr:pick_up_item_1 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:Evian_bottle_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_1 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:Evian_bottle_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_2 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:shortbread_box_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_2 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:shortbread_box_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_3 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:chucky_puzzle_box_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_3 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:chucky_puzzle_box_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_4 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:rice_bubbles_box_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_4 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:rice_bubbles_box_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_5 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:jello_box_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_5 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:jello_box_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_6 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:alpen_salt_box_1 ;
-    psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_6 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:alpen_salt_box_1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:put_away_item_1 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:Evian_bottle_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_1 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:Evian_bottle_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_2 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:shortbread_box_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_2 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:shortbread_box_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_3 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:chucky_puzzle_box_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_3 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:chucky_puzzle_box_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_4 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:rice_bubbles_box_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_4 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:rice_bubbles_box_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_5 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:jello_box_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_5 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:jello_box_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_6 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:alpen_salt_box_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_6 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:alpen_salt_box_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_7 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:jar_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_7 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:jar_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_8 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:plate_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_8 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:plate_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_9 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:cup_1 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_9 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:cup_1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_10 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:cup_2 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_10 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:cup_2 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:put_away_item_11 a dul:Action ;
-    soma:isPerformedBy psr:robot ;
-    psr:actsOn psr:cup_3 ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:put_away_item_11 a dul:Action ;
+    soma:isPerformedBy obot:robot ;
+    obot:actsOn obot:cup_3 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:placing_items a psr:Workflow ;
-    psr:hasAction psr:put_away_item_1, psr:put_away_item_2, psr:put_away_item_3, psr:put_away_item_4, psr:put_away_item_5, 
-                  psr:put_away_item_6, psr:put_away_item_7, psr:put_away_item_8, psr:put_away_item_9, psr:put_away_item_10, psr:put_away_item_11 .
+obot:placing_items a obot:Workflow ;
+    obot:hasAction obot:put_away_item_1, obot:put_away_item_2, obot:put_away_item_3, obot:put_away_item_4, obot:put_away_item_5, 
+                  obot:put_away_item_6, obot:put_away_item_7, obot:put_away_item_8, obot:put_away_item_9, obot:put_away_item_10, obot:put_away_item_11 .
 
-psr:robot a dul:Agent .
+obot:robot a dul:Agent .
 
-psr:Evian_bottle_1 a psr:Object .
-psr:shortbread_box_1 a psr:Object .
-psr:chucky_puzzle_box_1 a psr:Object .
-psr:rice_bubbles_box_1 a psr:Object .
-psr:jello_box_1 a psr:Object .
-psr:alpen_salt_box_1 a psr:Object .
-psr:jar_1 a psr:Object .
-psr:plate_1 a psr:Object .
-psr:cup_1 a psr:Object .
-psr:cup_2 a psr:Object .
-psr:cup_3 a psr:Object .
+obot:Evian_bottle_1 a obot:Object .
+obot:shortbread_box_1 a obot:Object .
+obot:chucky_puzzle_box_1 a obot:Object .
+obot:rice_bubbles_box_1 a obot:Object .
+obot:jello_box_1 a obot:Object .
+obot:alpen_salt_box_1 a obot:Object .
+obot:jar_1 a obot:Object .
+obot:plate_1 a obot:Object .
+obot:cup_1 a obot:Object .
+obot:cup_2 a obot:Object .
+obot:cup_3 a obot:Object .
 
-psr:Evian_bottle_1 psr:actsOn psr:cabinet_1 .
+obot:Evian_bottle_1 obot:actsOn obot:cabinet_1 .
 
-psr:shortbread_box_1 psr:actsOn psr:cabinet_2 .
+obot:shortbread_box_1 obot:actsOn obot:cabinet_2 .
 
-psr:chucky_puzzle_box_1 psr:actsOn psr:cabinet_3 .
+obot:chucky_puzzle_box_1 obot:actsOn obot:cabinet_3 .
 
-psr:rice_bubbles_box_1 psr:actsOn psr:cabinet_4 .
+obot:rice_bubbles_box_1 obot:actsOn obot:cabinet_4 .
 
-psr:jello_box_1 psr:actsOn psr:cabinet_5 .
+obot:jello_box_1 obot:actsOn obot:cabinet_5 .
 
-psr:alpen_salt_box_1 psr:actsOn psr:cabinet_6 .
+obot:alpen_salt_box_1 obot:actsOn obot:cabinet_6 .
 
-psr:jar_1 psr:actsOn psr:cabinet_7 .
+obot:jar_1 obot:actsOn obot:cabinet_7 .
 
-psr:plate_1 psr:actsOn psr:cabinet_8 .
+obot:plate_1 obot:actsOn obot:cabinet_8 .
 
-psr:cup_1 psr:actsOn psr:cabinet_9 .
+obot:cup_1 obot:actsOn obot:cabinet_9 .
 
-psr:cup_2 psr:actsOn psr:cabinet_10 .
+obot:cup_2 obot:actsOn obot:cabinet_10 .
 
-psr:cup_3 psr:actsOn psr:cabinet_11 .
+obot:cup_3 obot:actsOn obot:cabinet_11 .
 
-psr:cabinet_1 a psr:Component .
-psr:cabinet_2 a psr:Component .
-psr:cabinet_3 a psr:Component .
-psr:cabinet_4 a psr:Component .
-psr:cabinet_5 a psr:Component .
-psr:cabinet_6 a psr:Component .
-psr:cabinet_7 a psr:Component .
-psr:cabinet_8 a psr:Component .
-psr:cabinet_9 a psr:Component .
-psr:cabinet_10 a psr:Component .
-psr:cabinet_11 a psr:Component .
+obot:cabinet_1 a obot:Component .
+obot:cabinet_2 a obot:Component .
+obot:cabinet_3 a obot:Component .
+obot:cabinet_4 a obot:Component .
+obot:cabinet_5 a obot:Component .
+obot:cabinet_6 a obot:Component .
+obot:cabinet_7 a obot:Component .
+obot:cabinet_8 a obot:Component .
+obot:cabinet_9 a obot:Component .
+obot:cabinet_10 a obot:Component .
+obot:cabinet_11 a obot:Component .
 
-psr:PickingUp a soma:Affordance .
-psr:PuttingDown a soma:Affordance .
+obot:PickingUp a soma:Affordance .
+obot:PuttingDown a soma:Affordance .
 
-psr:precedes(psr:pick_up_item_1, psr:pick_up_item_2) .
-psr:precedes(psr:pick_up_item_2, psr:pick_up_item_3) .
-psr:precedes(psr:pick_up_item_3, psr:pick_up_item_4) .
-psr:precedes(psr:pick_up_item_4, psr:pick_up_item_5) .
-psr:precedes(psr:pick_up_item_5, psr:pick_up_item_6) .
-psr:precedes(psr:pick_up_item_6, psr:put_away_item_1) .
-psr:precedes(psr:put_away_item_1, psr:put_away_item_2) .
-psr:precedes(psr:put_away_item_2, psr:put_away_item_3) .
-psr:precedes(psr:put_away_item_3, psr:put_away_item_4) .
-psr:precedes(psr:put_away_item_4, psr:put_away_item_5) .
-psr:precedes(psr:put_away_item_5, psr:put_away_item_6) .
-psr:precedes(psr:put_away_item_6, psr:put_away_item_7) .
-psr:precedes(psr:put_away_item_7, psr:put_away_item_8) .
-psr:precedes(psr:put_away_item_8, psr:put_away_item_9) .
-psr:precedes(psr:put_away_item_9, psr:put_away_item_10) .
-psr:precedes(psr:put_away_item_10, psr:put_away_item_11) .
+obot:precedes(obot:pick_up_item_1, obot:pick_up_item_2) .
+obot:precedes(obot:pick_up_item_2, obot:pick_up_item_3) .
+obot:precedes(obot:pick_up_item_3, obot:pick_up_item_4) .
+obot:precedes(obot:pick_up_item_4, obot:pick_up_item_5) .
+obot:precedes(obot:pick_up_item_5, obot:pick_up_item_6) .
+obot:precedes(obot:pick_up_item_6, obot:put_away_item_1) .
+obot:precedes(obot:put_away_item_1, obot:put_away_item_2) .
+obot:precedes(obot:put_away_item_2, obot:put_away_item_3) .
+obot:precedes(obot:put_away_item_3, obot:put_away_item_4) .
+obot:precedes(obot:put_away_item_4, obot:put_away_item_5) .
+obot:precedes(obot:put_away_item_5, obot:put_away_item_6) .
+obot:precedes(obot:put_away_item_6, obot:put_away_item_7) .
+obot:precedes(obot:put_away_item_7, obot:put_away_item_8) .
+obot:precedes(obot:put_away_item_8, obot:put_away_item_9) .
+obot:precedes(obot:put_away_item_9, obot:put_away_item_10) .
+obot:precedes(obot:put_away_item_10, obot:put_away_item_11) .

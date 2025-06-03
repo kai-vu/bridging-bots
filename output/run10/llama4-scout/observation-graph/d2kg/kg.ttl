@@ -3,175 +3,175 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
   rdfs:label "Kitchen"@en ;
   dul:hasComponent ex:DarkBrownCupboards, ex:Countertop, ex:VentCover, ex:WhiteFridge, ex:Stovetop .
 
-ex:DiningArea a psr:Environment ;
+ex:DiningArea a obot:Environment ;
   rdfs:label "Dining Area"@en ;
   dul:hasComponent ex:WoodenTable, ex:WhiteChairs, ex:TableItems .
 
-ex:KitchenAndDiningArea a psr:Environment ;
+ex:KitchenAndDiningArea a obot:Environment ;
   rdfs:label "Kitchen and Dining Area"@en ;
   dul:hasComponent ex:Kitchen, ex:DiningArea .
 
-ex:DarkBrownCupboards a psr:Component ;
+ex:DarkBrownCupboards a obot:Component ;
   rdfs:label "Dark Brown Cupboards"@en ;
   dul:hasLocation ex:Kitchen .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Countertop"@en ;
   dul:hasLocation ex:Kitchen ;
-  psr:hasComponent ex:Sink, ex:WhitePlates, ex:RedLidJar, ex:RedAndWhiteLidJar, ex:AlpenSaltBox, ex:RiceBubblesBox, ex:JelloBox1, ex:JelloBox2, ex:YellowMug, ex:ChuckyPuzzleBox .
+  obot:hasComponent ex:Sink, ex:WhitePlates, ex:RedLidJar, ex:RedAndWhiteLidJar, ex:AlpenSaltBox, ex:RiceBubblesBox, ex:JelloBox1, ex:JelloBox2, ex:YellowMug, ex:ChuckyPuzzleBox .
 
-ex:VentCover a psr:Component ;
+ex:VentCover a obot:Component ;
   rdfs:label "Brown Vent Cover"@en ;
   dul:hasLocation ex:Kitchen ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:WhiteFridge a psr:Component ;
+ex:WhiteFridge a obot:Component ;
   rdfs:label "White Fridge"@en ;
   dul:hasLocation ex:Kitchen .
 
-ex:Stovetop a psr:Component ;
+ex:Stovetop a obot:Component ;
   rdfs:label "Stovetop"@en ;
   dul:hasLocation ex:Kitchen .
 
-ex:WoodenTable a psr:Component ;
+ex:WoodenTable a obot:Component ;
   rdfs:label "Rectangular Wooden Table"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:WhiteChairs a psr:Component ;
+ex:WhiteChairs a obot:Component ;
   rdfs:label "White Chairs"@en ;
   dul:hasLocation ex:DiningArea .
 
-ex:TableItems a psr:Component ;
+ex:TableItems a obot:Component ;
   rdfs:label "Table Items"@en ;
   dul:hasLocation ex:DiningArea ;
-  psr:hasComponent ex:ChuckyPuzzleBox2, ex:WaterBottle, ex:WhitePlate2, ex:Mug, ex:WhiteCups .
+  obot:hasComponent ex:ChuckyPuzzleBox2, ex:WaterBottle, ex:WhitePlate2, ex:Mug, ex:WhiteCups .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
   rdfs:label "Sink"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:WhitePlates a psr:Component ;
+ex:WhitePlates a obot:Component ;
   rdfs:label "Stack of White Plates"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:RedLidJar a psr:Component ;
+ex:RedLidJar a obot:Component ;
   rdfs:label "Jar with Red Lid"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:RedAndWhiteLidJar a psr:Component ;
+ex:RedAndWhiteLidJar a obot:Component ;
   rdfs:label "Jar with Red and White Lid"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:AlpenSaltBox a psr:Component ;
+ex:AlpenSaltBox a obot:Component ;
   rdfs:label "Box of Alpen Salt"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:RiceBubblesBox a psr:Component ;
+ex:RiceBubblesBox a obot:Component ;
   rdfs:label "Box of Rice Bubbles"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:JelloBox1 a psr:Component ;
+ex:JelloBox1 a obot:Component ;
   rdfs:label "Box of Jello"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:JelloBox2 a psr:Component ;
+ex:JelloBox2 a obot:Component ;
   rdfs:label "Box of Jello"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:YellowMug a psr:Component ;
+ex:YellowMug a obot:Component ;
   rdfs:label "Yellow Mug"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:ChuckyPuzzleBox a psr:Component ;
+ex:ChuckyPuzzleBox a obot:Component ;
   rdfs:label "Puzzle Box with Chucky"@en ;
   dul:hasLocation ex:Countertop .
 
-ex:ChuckyPuzzleBox2 a psr:Component ;
+ex:ChuckyPuzzleBox2 a obot:Component ;
   rdfs:label "Puzzle Box with Chucky"@en ;
   dul:hasLocation ex:TableItems .
 
-ex:WaterBottle a psr:Component ;
+ex:WaterBottle a obot:Component ;
   rdfs:label "Bottle of Water"@en ;
   dul:hasLocation ex:TableItems .
 
-ex:WhitePlate2 a psr:Component ;
+ex:WhitePlate2 a obot:Component ;
   rdfs:label "White Plate"@en ;
   dul:hasLocation ex:TableItems .
 
-ex:Mug a psr:Component ;
+ex:Mug a obot:Component ;
   rdfs:label "Mug"@en ;
   dul:hasLocation ex:TableItems .
 
-ex:WhiteCups a psr:Component ;
+ex:WhiteCups a obot:Component ;
   rdfs:label "Stacked White Cups"@en ;
   dul:hasLocation ex:TableItems .
 
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
   rdfs:label "Door"@en ;
   dul:hasLocation ex:KitchenAndDiningArea .
 
-ex:BrownParquetFloor a psr:Component ;
+ex:BrownParquetFloor a obot:Component ;
   rdfs:label "Brown Parquet Floor"@en ;
   dul:hasLocation ex:KitchenAndDiningArea .
 
-ex:WhiteWalls a psr:Component ;
+ex:WhiteWalls a obot:Component ;
   rdfs:label "White Walls"@en ;
   dul:hasLocation ex:KitchenAndDiningArea .
 
-ex:KitchenLocation a psr:CurrentLocation ;
+ex:KitchenLocation a obot:CurrentLocation ;
   dul:hasLocation ex:Kitchen .
 
-ex:Kitchen affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:Kitchen affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:Countertop affords psr:PuttingDown ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Countertop affords obot:PuttingDown ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:WhitePlates affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:WhitePlates affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:RedLidJar affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:RedLidJar affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:RedAndWhiteLidJar affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:RedAndWhiteLidJar affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:AlpenSaltBox affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:AlpenSaltBox affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:RiceBubblesBox affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:RiceBubblesBox affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:JelloBox1 affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:JelloBox1 affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:JelloBox2 affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:JelloBox2 affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:YellowMug affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:YellowMug affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:ChuckyPuzzleBox affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:ChuckyPuzzleBox affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:ChuckyPuzzleBox2 affords psr:Opening ;
-  psr:hasAffordance soma:Opening .
+ex:ChuckyPuzzleBox2 affords obot:Opening ;
+  obot:hasAffordance soma:Opening .
 
-ex:WaterBottle affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:WaterBottle affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:WhitePlate2 affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:WhitePlate2 affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:Mug affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:Mug affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:WhiteCups affords psr:PickingUp ;
-  psr:hasAffordance soma:PickingUp .
+ex:WhiteCups affords obot:PickingUp ;
+  obot:hasAffordance soma:PickingUp .

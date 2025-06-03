@@ -1,55 +1,55 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PickUpMisplacedItemAction ;
-    psr:hasAction ex:PutAwayMisplacedItemAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PickUpMisplacedItemAction ;
+    obot:hasAction ex:PutAwayMisplacedItemAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems .
+    obot:actsOn ex:MisplacedItems .
 
 ex:PickUpMisplacedItemAction a soma:PickingUp ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItem .
+    obot:actsOn ex:MisplacedItem .
 
 ex:PutAwayMisplacedItemAction a soma:PuttingDown ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItem ;
-    psr:follows ex:PickUpMisplacedItemAction .
+    obot:actsOn ex:MisplacedItem ;
+    obot:follows ex:PickUpMisplacedItemAction .
 
-ex:MisplacedItems a psr:Component ;
+ex:MisplacedItems a obot:Component ;
     rdfs:label "Misplaced items in the kitchen"@en .
 
-ex:MisplacedItem a psr:Object ;
+ex:MisplacedItem a obot:Object ;
     rdfs:label "A misplaced item in the kitchen"@en .
 
 ex:RobotAgent a dul:Agent ;
     rdfs:label "Robot agent performing the task"@en .
 
-ex:KitchenCabinets a psr:Furniture ;
+ex:KitchenCabinets a obot:Furniture ;
     rdfs:label "Dark grey kitchen cabinets"@en .
 
-ex:MarbleCountertop a psr:Furniture ;
+ex:MarbleCountertop a obot:Furniture ;
     rdfs:label "Light marble kitchen countertop"@en .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     rdfs:label "Brown wooden dining table"@en .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "White refrigerator"@en .
 
-ex:IdentifyMisplacedItemsAction psr:precedes ex:PickUpMisplacedItemAction .
-ex:PickUpMisplacedItemAction psr:precedes ex:PutAwayMisplacedItemAction .
+ex:IdentifyMisplacedItemsAction obot:precedes ex:PickUpMisplacedItemAction .
+ex:PickUpMisplacedItemAction obot:precedes ex:PutAwayMisplacedItemAction .
 
-ex:PutAwayMisplacedItemAction psr:isAffordedBy soma:PuttingDown .
-ex:PickUpMisplacedItemAction psr:isAffordedBy soma:PickingUp .
+ex:PutAwayMisplacedItemAction obot:isAffordedBy soma:PuttingDown .
+ex:PickUpMisplacedItemAction obot:isAffordedBy soma:PickingUp .

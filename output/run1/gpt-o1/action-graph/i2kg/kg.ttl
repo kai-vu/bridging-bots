@@ -1,15 +1,15 @@
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix :       <http://example.org/kitchen#> .
 
-:KitchenInstruction a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
-    psr:hasWorkflow :KitchenWorkflow .
+:KitchenInstruction a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    obot:hasWorkflow :KitchenWorkflow .
 
-:KitchenWorkflow a psr:Workflow ;
-    psr:hasAction :OpenOverheadCabinet,
+:KitchenWorkflow a obot:Workflow ;
+    obot:hasAction :OpenOverheadCabinet,
                    :PickUpJam,
                    :PutDownJam,
                    :PickUpJello,
@@ -26,94 +26,94 @@
 
 :Robot a dul:Agent .
 
-:OverheadCabinet a psr:Furniture .
-:Fridge a psr:Appliance .
+:OverheadCabinet a obot:Furniture .
+:Fridge a obot:Appliance .
 
-:JamJar a psr:Object .
-:JelloBox a psr:Object .
-:CerealBox a psr:Object .
-:SaltTube a psr:Object .
-:WaterBottle a psr:Object .
+:JamJar a obot:Object .
+:JelloBox a obot:Object .
+:CerealBox a obot:Object .
+:SaltTube a obot:Object .
+:WaterBottle a obot:Object .
 
 :OpenOverheadCabinet a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :OverheadCabinet ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes :PickUpJam .
+    obot:actsOn :OverheadCabinet ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes :PickUpJam .
 
 :PickUpJam a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :JamJar ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes :PutDownJam .
+    obot:actsOn :JamJar ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes :PutDownJam .
 
 :PutDownJam a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :JamJar ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes :PickUpJello .
+    obot:actsOn :JamJar ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes :PickUpJello .
 
 :PickUpJello a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :JelloBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes :PutDownJello .
+    obot:actsOn :JelloBox ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes :PutDownJello .
 
 :PutDownJello a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :JelloBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes :PickUpCereal .
+    obot:actsOn :JelloBox ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes :PickUpCereal .
 
 :PickUpCereal a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :CerealBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes :PutDownCereal .
+    obot:actsOn :CerealBox ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes :PutDownCereal .
 
 :PutDownCereal a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :CerealBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes :PickUpSalt .
+    obot:actsOn :CerealBox ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes :PickUpSalt .
 
 :PickUpSalt a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :SaltTube ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes :PutDownSalt .
+    obot:actsOn :SaltTube ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes :PutDownSalt .
 
 :PutDownSalt a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :SaltTube ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes :CloseOverheadCabinet .
+    obot:actsOn :SaltTube ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes :CloseOverheadCabinet .
 
 :CloseOverheadCabinet a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :OverheadCabinet ;
-    psr:isAffordedBy soma:Closing ;
-    psr:precedes :OpenFridge .
+    obot:actsOn :OverheadCabinet ;
+    obot:isAffordedBy soma:Closing ;
+    obot:precedes :OpenFridge .
 
 :OpenFridge a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :Fridge ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes :PickUpWaterBottle .
+    obot:actsOn :Fridge ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes :PickUpWaterBottle .
 
 :PickUpWaterBottle a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :WaterBottle ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes :PutDownWaterBottle .
+    obot:actsOn :WaterBottle ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes :PutDownWaterBottle .
 
 :PutDownWaterBottle a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :WaterBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes :CloseFridge .
+    obot:actsOn :WaterBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes :CloseFridge .
 
 :CloseFridge a dul:Action ;
     soma:isPerformedBy :Robot ;
-    psr:actsOn :Fridge ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn :Fridge ;
+    obot:isAffordedBy soma:Closing .

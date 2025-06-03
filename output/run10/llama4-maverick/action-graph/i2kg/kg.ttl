@@ -5,77 +5,77 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
-psr:Instruction_1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow_1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+obot:Instruction_1 a obot:Instruction ;
+    obot:hasWorkflow obot:Workflow_1 ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
 
-psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .
+obot:Workflow_1 a obot:Workflow ;
+    obot:hasAction obot:Action_1, obot:Action_2, obot:Action_3, obot:Action_4, obot:Action_5, obot:Action_6, obot:Action_7, obot:Action_8 .
 
-psr:Action_1 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:KitchenTable ;
-    psr:isAffordedBy soma:PickingUp ;
+obot:Action_1 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:KitchenTable ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up Evian bottle"@en .
 
-psr:Action_2 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:EvianBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
+obot:Action_2 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:EvianBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down Evian bottle on counter"@en ;
-    dul:follows psr:Action_1 .
+    dul:follows obot:Action_1 .
 
-psr:Action_3 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:ChuckyBox, psr:RiceBubblesBox, psr:JelloBox, psr:AlpenSaltBox ;
-    psr:isAffordedBy soma:PickingUp ;
+obot:Action_3 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:ChuckyBox, obot:RiceBubblesBox, obot:JelloBox, obot:AlpenSaltBox ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up boxes"@en ;
-    dul:follows psr:Action_2 .
+    dul:follows obot:Action_2 .
 
-psr:Action_4 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:ChuckyBox, psr:RiceBubblesBox, psr:JelloBox, psr:AlpenSaltBox ;
-    psr:isAffordedBy soma:PuttingDown ;
+obot:Action_4 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:ChuckyBox, obot:RiceBubblesBox, obot:JelloBox, obot:AlpenSaltBox ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down boxes on counter"@en ;
-    dul:follows psr:Action_3 .
+    dul:follows obot:Action_3 .
 
-psr:Action_5 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Crockery ;
-    psr:isAffordedBy soma:PickingUp ;
+obot:Action_5 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:Crockery ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up crockery"@en ;
-    dul:follows psr:Action_4 .
+    dul:follows obot:Action_4 .
 
-psr:Action_6 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Crockery ;
-    psr:isAffordedBy soma:PuttingDown ;
+obot:Action_6 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:Crockery ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down crockery in cabinet"@en ;
-    dul:follows psr:Action_5 .
+    dul:follows obot:Action_5 .
 
-psr:Action_7 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Cups ;
-    psr:isAffordedBy soma:PickingUp ;
+obot:Action_7 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:Cups ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up cups"@en ;
-    dul:follows psr:Action_6 .
+    dul:follows obot:Action_6 .
 
-psr:Action_8 a dul:Action ;
-    soma:isPerformedBy psr:Robot_1 ;
-    psr:actsOn psr:Cups ;
-    psr:isAffordedBy soma:PuttingDown ;
+obot:Action_8 a dul:Action ;
+    soma:isPerformedBy obot:Robot_1 ;
+    obot:actsOn obot:Cups ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down cups in cabinet"@en ;
-    dul:follows psr:Action_7 .
+    dul:follows obot:Action_7 .
 
-psr:Robot_1 a dul:Agent .
+obot:Robot_1 a dul:Agent .
 
-psr:KitchenTable a psr:Furniture .
-psr:EvianBottle a psr:Object .
-psr:ChuckyBox a psr:Object .
-psr:RiceBubblesBox a psr:Object .
-psr:JelloBox a psr:Object .
-psr:AlpenSaltBox a psr:Object .
-psr:Crockery a psr:Object .
-psr:Cups a psr:Object .
+obot:KitchenTable a obot:Furniture .
+obot:EvianBottle a obot:Object .
+obot:ChuckyBox a obot:Object .
+obot:RiceBubblesBox a obot:Object .
+obot:JelloBox a obot:Object .
+obot:AlpenSaltBox a obot:Object .
+obot:Crockery a obot:Object .
+obot:Cups a obot:Object .

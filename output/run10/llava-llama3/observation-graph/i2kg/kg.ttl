@@ -1,6 +1,6 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:  <https://example.org/data/> .
+@prefix obot:  <https://example.org/data/> .
 @prefix ex:    <http://example.org/data/> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_1-1998-07-15.html#> .
 @prefix soma:   <https://example.org/data/soma/> .
@@ -13,46 +13,46 @@
 <ex:Component a owl:Class ;
   rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-<ex:Appliance a psr:Component ;
+<ex:Appliance a obot:Component ;
   rdfs:label "An appliance is a type of component."@en .
 
-<ex:Furniture a psr:Component ;
+<ex:Furniture a obot:Component ;
   rdfs:label "A furniture is a type of component."@en .
 
-<ex:Object a psr:Component ;
+<ex:Object a obot:Component ;
   rdfs:label "An object is a type of component."@en .
 
 <ex:Location a owl:Class ;
   rdfs:comment "A location is a specific component within the environment"@en .
 
-<ex:CurrentLocation a psr:Location ;
+<ex:CurrentLocation a obot:Location ;
   rdfs:label "The current location of a component within the environment."@en .
 
-<ex:StandardLocation a psr:Location ;
+<ex:StandardLocation a obot:Location ;
   rdfs:label "The location where a component is intended or supposed to be located, which can be different to its current location."@en .
 
-<ex:Closing a psr:Affordance ;
+<ex:Closing a obot:Affordance ;
   rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-<ex:Opening a psr:Affordance ;
+<ex:Opening a obot:Affordance ;
   rdfs:label "Opening is an affordance that enables a component to be opened."@en .
 
-<ex:Delivering a psr:Affordance ;
+<ex:Delivering a obot:Affordance ;
   rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-<ex:Holding a psr:Affordance ;
+<ex:Holding a obot:Affordance ;
   rdfs:label "Holding is an affordance that enables a component to be held."@en .
 
-<ex:PickingUp a psr:Affordance ;
+<ex:PickingUp a obot:Affordance ;
   rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-<ex:PuttingDown a psr:Affordance ;
+<ex:PuttingDown a obot:Affordance ;
   rdfs:label "Putting down is an affordance that enables a component to be put down."@en .
 
-<ex:Pushing a psr:Affordance ;
+<ex:Pushing a obot:Affordance ;
   rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-<ex:Grasping a psr:Affordance ;
+<ex:Grasping a obot:Affordance ;
   rdfs:label "Grasping is an affordance that enables a component to be grasped."@en .
 
 <ex:Inside a geo:Property ;
@@ -82,29 +82,29 @@
 <ex:OnBottomOf a geo:Property ;
   rdfs:comment "On bottom of indicates whether the current location of a component is on bottom of another component or not."@en .
 
-<ex:Inside a psr:Location a psr:Component ;
+<ex:Inside a obot:Location a obot:Component ;
   ex:inside <http://example.org/data/soma/Environment> a owl:Class .
 
-<ex:Below a psr:Component a psr:Furniture ;
+<ex:Below a obot:Component a obot:Furniture ;
   rdfs:label "A piece of furniture, such as a table."@en .
 
-<ex:Above a psr:Component a psr:Furniture ;
+<ex:Above a obot:Component a obot:Furniture ;
   rdfs:comment "A piece of furniture, such as a chair."@en .
 
-<ex:ToLeftOf a psr:Component a psr:Furniture ;
+<ex:ToLeftOf a obot:Component a obot:Furniture ;
   rdfs:label "A piece of furniture, such as a cabinet."@en .
 
-<ex:ToRightOf a psr:Component a psr:Furniture ;
+<ex:ToRightOf a obot:Component a obot:Furniture ;
   rdfs:comment "A piece of furniture, such as a dresser."@en .
 
-<ex:InFrontOf a psr:Component a psr:Appliance ;
+<ex:InFrontOf a obot:Component a obot:Appliance ;
   rdfs:label "An appliance, such as an oven or refrigerator."@en .
 
-<ex:Behind a psr:Component a psr:Furniture ;
+<ex:Behind a obot:Component a obot:Furniture ;
   rdfs:comment "A piece of furniture, such as a couch."@en .
 
-<ex:OnTopOf a psr:Component a psr:Furniture ;
+<ex:OnTopOf a obot:Component a obot:Furniture ;
   rdfs:label "A piece of furniture, such as a bed or desk."@en .
 
-<ex:OnBottomOf a psr:Component a psr:Appliance ;
+<ex:OnBottomOf a obot:Component a obot:Appliance ;
   rdfs:comment "An appliance, such as a washing machine or dishwasher."@en .

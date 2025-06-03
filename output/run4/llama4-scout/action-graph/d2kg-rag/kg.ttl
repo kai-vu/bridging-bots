@@ -1,194 +1,194 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Restore_Kitchen_Task a psr:Workflow .
+ex:Restore_Kitchen_Task a obot:Workflow .
 
 ex:Identify_Misplaced_Items a dul:Action ;
   rdfs:label "Identify Misplaced Items"@en ;
-  psr:isAffordedBy soma:Grasping ;
-  psr:actsOn ex:Kitchen_Area ;
+  obot:isAffordedBy soma:Grasping ;
+  obot:actsOn ex:Kitchen_Area ;
   ex:partOf ex:Restore_Kitchen_Task .
 
-ex:Kitchen_Area a psr:Component ;
+ex:Kitchen_Area a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:Dining_Room_Area a psr:Component ;
+ex:Dining_Room_Area a obot:Component ;
   rdfs:label "Dining Room Area"@en .
 
-ex:jar_of_jam a psr:Object ;
+ex:jar_of_jam a obot:Object ;
   rdfs:label "Jar of Jam"@en ;
   ex:locatedIn ex:Kitchen_Area .
 
-ex:yellow_cup a psr:Object ;
+ex:yellow_cup a obot:Object ;
   rdfs:label "Yellow Cup"@en ;
   ex:locatedIn ex:Kitchen_Area .
 
-ex:puzzle_boxes a psr:Object ;
+ex:puzzle_boxes a obot:Object ;
   rdfs:label "Puzzle Boxes"@en ;
   ex:locatedIn ex:Kitchen_Area .
 
-ex:plates a psr:Object ;
+ex:plates a obot:Object ;
   rdfs:label "Plates"@en ;
   ex:locatedIn ex:Kitchen_Area .
 
-ex:bottle_of_water a psr:Object ;
+ex:bottle_of_water a obot:Object ;
   rdfs:label "Bottle of Water"@en ;
   ex:locatedIn ex:Dining_Room_Area .
 
-ex:plastic_cups a psr:Object ;
+ex:plastic_cups a obot:Object ;
   rdfs:label "Plastic Cups"@en ;
   ex:locatedIn ex:Dining_Room_Area .
 
-ex:fruit a psr:Object ;
+ex:fruit a obot:Object ;
   rdfs:label "Fruit"@en ;
   ex:locatedIn ex:Dining_Room_Area .
 
 ex:Pick_Up_Jar_Of_Jam a dul:Action ;
   rdfs:label "Pick Up Jar of Jam"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:jar_of_jam ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:jar_of_jam ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Jar_Of_Jam .
+  obot:precedes ex:Put_Down_Jar_Of_Jam .
 
 ex:Pick_Up_Yellow_Cup a dul:Action ;
   rdfs:label "Pick Up Yellow Cup"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:yellow_cup ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:yellow_cup ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Yellow_Cup .
+  obot:precedes ex:Put_Down_Yellow_Cup .
 
 ex:Pick_Up_Puzzle_Boxes a dul:Action ;
   rdfs:label "Pick Up Puzzle Boxes"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:puzzle_boxes ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:puzzle_boxes ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Puzzle_Boxes .
+  obot:precedes ex:Put_Down_Puzzle_Boxes .
 
 ex:Pick_Up_Plates a dul:Action ;
   rdfs:label "Pick Up Plates"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:plates ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:plates ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Plates .
+  obot:precedes ex:Put_Down_Plates .
 
 ex:Pick_Up_Bottle_Of_Water a dul:Action ;
   rdfs:label "Pick Up Bottle of Water"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:bottle_of_water ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:bottle_of_water ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Bottle_Of_Water .
+  obot:precedes ex:Put_Down_Bottle_Of_Water .
 
 ex:Pick_Up_Plastic_Cups a dul:Action ;
   rdfs:label "Pick Up Plastic Cups"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:plastic_cups ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:plastic_cups ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Plastic_Cups .
+  obot:precedes ex:Put_Down_Plastic_Cups .
 
 ex:Pick_Up_Fruit a dul:Action ;
   rdfs:label "Pick Up Fruit"@en ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:fruit ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:fruit ;
   ex:partOf ex:Restore_Kitchen_Task ;
-  psr:precedes ex:Put_Down_Fruit .
+  obot:precedes ex:Put_Down_Fruit .
 
 ex:Put_Down_Jar_Of_Jam a dul:Action ;
   rdfs:label "Put Down Jar of Jam"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:jar_of_jam ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:jar_of_jam ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Yellow_Cup a dul:Action ;
   rdfs:label "Put Down Yellow Cup"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:yellow_cup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:yellow_cup ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Puzzle_Boxes a dul:Action ;
   rdfs:label "Put Down Puzzle Boxes"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:puzzle_boxes ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:puzzle_boxes ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Plates a dul:Action ;
   rdfs:label "Put Down Plates"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:plates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:plates ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Bottle_Of_Water a dul:Action ;
   rdfs:label "Put Down Bottle of Water"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:bottle_of_water ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:bottle_of_water ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Plastic_Cups a dul:Action ;
   rdfs:label "Put Down Plastic Cups"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:plastic_cups ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:plastic_cups ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Put_Down_Fruit a dul:Action ;
   rdfs:label "Put Down Fruit"@en ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:fruit ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:fruit ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Move_To_Kitchen a dul:Action ;
   rdfs:label "Move To Kitchen"@en ;
-  psr:isAffordedBy soma:Moving ;
-  psr:actsOn ex:Kitchen_Area ;
+  obot:isAffordedBy soma:Moving ;
+  obot:actsOn ex:Kitchen_Area ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Move_To_Dining_Room a dul:Action ;
   rdfs:label "Move To Dining Room"@en ;
-  psr:isAffordedBy soma:Moving ;
-  psr:actsOn ex:Dining_Room_Area ;
+  obot:isAffordedBy soma:Moving ;
+  obot:actsOn ex:Dining_Room_Area ;
   ex:partOf ex:Restore_Kitchen_Task .
 
 ex:Robot a dul:Agent ;
   rdfs:label "Robot"@en ;
-  psr:performs ex:Move_To_Kitchen .
+  obot:performs ex:Move_To_Kitchen .
 
-ex:Move_To_Kitchen psr:follows ex:Identify_Misplaced_Items .
+ex:Move_To_Kitchen obot:follows ex:Identify_Misplaced_Items .
 
-ex:Pick_Up_Jar_Of_Jam psr:follows ex:Move_To_Kitchen .
-ex:Pick_Up_Yellow_Cup psr:follows ex:Move_To_Kitchen .
-ex:Pick_Up_Puzzle_Boxes psr:follows ex:Move_To_Kitchen .
-ex:Pick_Up_Plates psr:follows ex:Move_To_Kitchen .
+ex:Pick_Up_Jar_Of_Jam obot:follows ex:Move_To_Kitchen .
+ex:Pick_Up_Yellow_Cup obot:follows ex:Move_To_Kitchen .
+ex:Pick_Up_Puzzle_Boxes obot:follows ex:Move_To_Kitchen .
+ex:Pick_Up_Plates obot:follows ex:Move_To_Kitchen .
 
-ex:Put_Down_Jar_Of_Jam psr:follows ex:Pick_Up_Jar_Of_Jam .
-ex:Put_Down_Yellow_Cup psr:follows ex:Pick_Up_Yellow_Cup .
-ex:Put_Down_Puzzle_Boxes psr:follows ex:Pick_Up_Puzzle_Boxes .
-ex:Put_Down_Plates psr:follows ex:Pick_Up_Plates .
+ex:Put_Down_Jar_Of_Jam obot:follows ex:Pick_Up_Jar_Of_Jam .
+ex:Put_Down_Yellow_Cup obot:follows ex:Pick_Up_Yellow_Cup .
+ex:Put_Down_Puzzle_Boxes obot:follows ex:Pick_Up_Puzzle_Boxes .
+ex:Put_Down_Plates obot:follows ex:Pick_Up_Plates .
 
-ex:Move_To_Dining_Room psr:follows ex:Put_Down_Plates .
+ex:Move_To_Dining_Room obot:follows ex:Put_Down_Plates .
 
-ex:Pick_Up_Bottle_Of_Water psr:follows ex:Move_To_Dining_Room .
-ex:Pick_Up_Plastic_Cups psr:follows ex:Move_To_Dining_Room .
-ex:Pick_Up_Fruit psr:follows ex:Move_To_Dining_Room .
+ex:Pick_Up_Bottle_Of_Water obot:follows ex:Move_To_Dining_Room .
+ex:Pick_Up_Plastic_Cups obot:follows ex:Move_To_Dining_Room .
+ex:Pick_Up_Fruit obot:follows ex:Move_To_Dining_Room .
 
-ex:Put_Down_Bottle_Of_Water psr:follows ex:Pick_Up_Bottle_Of_Water .
-ex:Put_Down_Plastic_Cups psr:follows ex:Pick_Up_Plastic_Cups .
-ex:Put_Down_Fruit psr:follows ex:Pick_Up_Fruit .
+ex:Put_Down_Bottle_Of_Water obot:follows ex:Pick_Up_Bottle_Of_Water .
+ex:Put_Down_Plastic_Cups obot:follows ex:Pick_Up_Plastic_Cups .
+ex:Put_Down_Fruit obot:follows ex:Pick_Up_Fruit .
 
-ex:Robot psr:performs ex:Pick_Up_Jar_Of_Jam .
-ex:Robot psr:performs ex:Pick_Up_Yellow_Cup .
-ex:Robot psr:performs ex:Pick_Up_Puzzle_Boxes .
-ex:Robot psr:performs ex:Pick_Up_Plates .
-ex:Robot psr:performs ex:Put_Down_Jar_Of_Jam .
-ex:Robot psr:performs ex:Put_Down_Yellow_Cup .
-ex:Robot psr:performs ex:Put_Down_Puzzle_Boxes .
-ex:Robot psr:performs ex:Put_Down_Plates .
-ex:Robot psr:performs ex:Move_To_Dining_Room .
-ex:Robot psr:performs ex:Pick_Up_Bottle_Of_Water .
-ex:Robot psr:performs ex:Pick_Up_Plastic_Cups .
-ex:Robot psr:performs ex:Pick_Up_Fruit .
-ex:Robot psr:performs ex:Put_Down_Bottle_Of_Water .
-ex:Robot psr:performs ex:Put_Down_Plastic_Cups .
-ex:Robot psr:performs ex:Put_Down_Fruit .
+ex:Robot obot:performs ex:Pick_Up_Jar_Of_Jam .
+ex:Robot obot:performs ex:Pick_Up_Yellow_Cup .
+ex:Robot obot:performs ex:Pick_Up_Puzzle_Boxes .
+ex:Robot obot:performs ex:Pick_Up_Plates .
+ex:Robot obot:performs ex:Put_Down_Jar_Of_Jam .
+ex:Robot obot:performs ex:Put_Down_Yellow_Cup .
+ex:Robot obot:performs ex:Put_Down_Puzzle_Boxes .
+ex:Robot obot:performs ex:Put_Down_Plates .
+ex:Robot obot:performs ex:Move_To_Dining_Room .
+ex:Robot obot:performs ex:Pick_Up_Bottle_Of_Water .
+ex:Robot obot:performs ex:Pick_Up_Plastic_Cups .
+ex:Robot obot:performs ex:Pick_Up_Fruit .
+ex:Robot obot:performs ex:Put_Down_Bottle_Of_Water .
+ex:Robot obot:performs ex:Put_Down_Plastic_Cups .
+ex:Robot obot:performs ex:Put_Down_Fruit .

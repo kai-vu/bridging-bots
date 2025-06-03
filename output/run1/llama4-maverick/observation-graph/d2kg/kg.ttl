@@ -3,79 +3,79 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     dul:hasComponent ex:KitchenCabinets, ex:Countertop, ex:Sink, ex:Stove, ex:Pot, ex:Refrigerator, ex:JelloBox, ex:AlpenSaltBox, ex:StrawberryShortcakeBox, ex:TwoJars, ex:Backsplash, ex:Floor, ex:Walls, ex:Ceiling, ex:Mirror, ex:Hood, ex:DiningTable, ex:WhiteChairs, ex:Bottle, ex:Boxes, ex:LightFixture .
 
-ex:KitchenCabinets a psr:Appliance ;
+ex:KitchenCabinets a obot:Appliance ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:Countertop a psr:Furniture ;
+ex:Countertop a obot:Furniture ;
     dul:hasLocation ex:KitchenCabinets .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:Countertop ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Stove a psr:Appliance ;
+ex:Stove a obot:Appliance ;
     dul:hasLocation ex:KitchenCabinets .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:Stove ;
-    psr:hasAffordance soma:Holding, soma:PickingUp .
+    obot:hasAffordance soma:Holding, soma:PickingUp .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:AlpenSaltBox a psr:Object ;
+ex:AlpenSaltBox a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:StrawberryShortcakeBox a psr:Object ;
+ex:StrawberryShortcakeBox a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:TwoJars a psr:Object ;
+ex:TwoJars a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:Backsplash a psr:Furniture ;
+ex:Backsplash a obot:Furniture ;
     dul:hasLocation ex:KitchenCabinets .
 
-ex:Floor a psr:Furniture ;
+ex:Floor a obot:Furniture ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:Walls a psr:Furniture ;
+ex:Walls a obot:Furniture ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:Ceiling a psr:Furniture ;
+ex:Ceiling a obot:Furniture ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:Mirror a psr:Object ;
+ex:Mirror a obot:Object ;
     dul:hasLocation ex:Walls .
 
-ex:Hood a psr:Appliance ;
+ex:Hood a obot:Appliance ;
     dul:hasLocation ex:Stove .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasLocation ex:KitchenEnvironment .
 
-ex:WhiteChairs a psr:Furniture ;
+ex:WhiteChairs a obot:Furniture ;
     dul:hasLocation ex:DiningTable .
 
-ex:Bottle a psr:Object ;
+ex:Bottle a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Boxes a psr:Object ;
+ex:Boxes a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:LightFixture a psr:Object ;
+ex:LightFixture a obot:Object ;
     dul:hasLocation ex:Ceiling .
 
 ex:Countertop dul:hasLocation ex:KitchenCabinets .
-ex:Countertop psr:onTopOf ex:KitchenCabinets .
+ex:Countertop obot:onTopOf ex:KitchenCabinets .
 
 ex:Sink geo:sfWithin ex:Countertop .
 

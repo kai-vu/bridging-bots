@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,77 +8,77 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "PickUpCerealBox1"@en ;
-    psr:actsOn ex:cerealBox1 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:cerealBox1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:cerealBox1 a psr:Component ;
+ex:cerealBox1 a obot:Component ;
     rdfs:label "CerealBox1"@en .
 
 ex:action2 a dul:Action ;
     rdfs:label "PutDownCerealBox1"@en ;
-    psr:actsOn ex:cerealBox1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action1 .
+    obot:actsOn ex:cerealBox1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action1 .
 
 ex:action3 a dul:Action ;
     rdfs:label "PickUpCerealBox2"@en ;
-    psr:actsOn ex:cerealBox2 ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action2 .
+    obot:actsOn ex:cerealBox2 ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action2 .
 
-ex:cerealBox2 a psr:Component ;
+ex:cerealBox2 a obot:Component ;
     rdfs:label "CerealBox2"@en .
 
 ex:action4 a dul:Action ;
     rdfs:label "PutDownCerealBox2"@en ;
-    psr:actsOn ex:cerealBox2 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action3 .
+    obot:actsOn ex:cerealBox2 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action3 .
 
 ex:action5 a dul:Action ;
     rdfs:label "PickUpGroceryBag"@en ;
-    psr:actsOn ex:groceryBag ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action4 .
+    obot:actsOn ex:groceryBag ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action4 .
 
-ex:groceryBag a psr:Component ;
+ex:groceryBag a obot:Component ;
     rdfs:label "GroceryBag"@en .
 
 ex:action6 a dul:Action ;
     rdfs:label "PutDownGroceryBag"@en ;
-    psr:actsOn ex:groceryBag ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action5 .
+    obot:actsOn ex:groceryBag ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action5 .
 
 ex:action7 a dul:Action ;
     rdfs:label "OpenCabinet"@en ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action6 .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action6 .
 
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
     rdfs:label "Cabinet"@en .
 
 ex:action8 a dul:Action ;
     rdfs:label "PlaceCerealBox1InCabinet"@en ;
-    psr:actsOn ex:cerealBox1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action7 .
+    obot:actsOn ex:cerealBox1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action7 .
 
 ex:action9 a dul:Action ;
     rdfs:label "PlaceCerealBox2InCabinet"@en ;
-    psr:actsOn ex:cerealBox2 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action8 .
+    obot:actsOn ex:cerealBox2 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action8 .
 
 ex:action10 a dul:Action ;
     rdfs:label "PlaceGroceryBagInCabinet"@en ;
-    psr:actsOn ex:groceryBag ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action9 .
+    obot:actsOn ex:groceryBag ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action9 .
 
 ex:action11 a dul:Action ;
     rdfs:label "CloseCabinet"@en ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action10 .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action10 .

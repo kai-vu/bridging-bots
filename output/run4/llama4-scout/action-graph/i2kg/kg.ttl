@@ -5,15 +5,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
 ### Knowledge Graph of Actions
 
 ## Classes and Object Properties
-psr:Instruction a owl:Class, dul:Entity ;
+obot:Instruction a owl:Class, dul:Entity ;
  rdfs:label "Instruction"@en .
 
-psr:Workflow a owl:Class, dul:Entity ;
+obot:Workflow a owl:Class, dul:Entity ;
  rdfs:subClassOf dul:Workflow ;
  rdfs:label "Workflow"@en .
 
@@ -23,30 +23,30 @@ dul:Action a owl:Class, dul:Entity ;
 dul:Agent a owl:Class, dul:Entity ;
  rdfs:label "Agent"@en .
 
-psr:Component a owl:Class, dul:Entity ;
+obot:Component a owl:Class, dul:Entity ;
  rdfs:label "Component"@en .
 
-psr:Appliance a psr:Component ;
+obot:Appliance a obot:Component ;
  rdfs:label "Appliance"@en .
 
-psr:Furniture a psr:Component ;
+obot:Furniture a obot:Component ;
  rdfs:label "Furniture"@en .
 
-psr:Object a psr:Component ;
+obot:Object a obot:Component ;
  rdfs:label "Object"@en .
 
-psr:Affordance a owl:Class, dul:Entity ;
+obot:Affordance a owl:Class, dul:Entity ;
  rdfs:label "Affordance"@en .
 
-psr:hasWorkflow a owl:ObjectProperty ;
- rdfs:domain psr:Instruction ;
- rdfs:range psr:Workflow .
+obot:hasWorkflow a owl:ObjectProperty ;
+ rdfs:domain obot:Instruction ;
+ rdfs:range obot:Workflow .
 
-psr:hasAction a owl:ObjectProperty ;
- rdfs:domain psr:Workflow ;
+obot:hasAction a owl:ObjectProperty ;
+ rdfs:domain obot:Workflow ;
  rdfs:range dul:Action .
 
-psr:precedes a owl:ObjectProperty ;
+obot:precedes a owl:ObjectProperty ;
  rdfs:subPropertyOf dul:precedes ;
  rdfs:domain dul:Action ;
  rdfs:range dul:Action .
@@ -55,163 +55,163 @@ soma:isPerformedBy a owl:ObjectProperty ;
  rdfs:domain dul:Action ;
  rdfs:range dul:Agent .
 
-psr:actsOn a owl:ObjectProperty ;
+obot:actsOn a owl:ObjectProperty ;
  rdfs:domain dul:Action ;
- rdfs:range psr:Component .
+ rdfs:range obot:Component .
 
-psr:isAffordedBy a owl:ObjectProperty ;
+obot:isAffordedBy a owl:ObjectProperty ;
  rdfs:domain dul:Action ;
- rdfs:range psr:Affordance .
+ rdfs:range obot:Affordance .
 
 ## Individuals and Actions
 
 ### Instruction
-psr:restore_kitchen a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+obot:restore_kitchen a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
 ### Workflow
-psr:organize_kitchen a psr:Workflow .
+obot:organize_kitchen a obot:Workflow .
 
 ### Actions
 dul:action_1 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/table_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/table_1> .
 
 dul:action_2 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/water_bottle_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/water_bottle_1> .
 
 dul:action_3 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/water_bottle_2> .
+  obot:actsOn <http://www.ease-crc.org/ont/water_bottle_2> .
 
 dul:action_4 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/plate_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/plate_1> .
 
 dul:action_5 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/plate_2> .
+  obot:actsOn <http://www.ease-crc.org/ont/plate_2> .
 
 dul:action_6 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/cup_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/cup_1> .
 
 dul:action_7 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/cup_2> .
+  obot:actsOn <http://www.ease-crc.org/ont/cup_2> .
 
 dul:action_8 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/jar_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/jar_1> .
 
 dul:action_9 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/jar_2> .
+  obot:actsOn <http://www.ease-crc.org/ont/jar_2> .
 
 dul:action_10 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/box_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/box_1> .
 
 dul:action_11 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/box_2> .
+  obot:actsOn <http://www.ease-crc.org/ont/box_2> .
 
 dul:action_12 a dul:Action ;
-  psr:actsOn <http://www.ease-crc.org/ont/book_1> .
+  obot:actsOn <http://www.ease-crc.org/ont/book_1> .
 
 ### Relations
-psr:restore_kitchen psr:hasWorkflow psr:organize_kitchen .
+obot:restore_kitchen obot:hasWorkflow obot:organize_kitchen .
 
-psr:organize_kitchen psr:hasAction dul:action_1 ;
-  psr:hasAction dul:action_2 ;
-  psr:hasAction dul:action_3 ;
-  psr:hasAction dul:action_4 ;
-  psr:hasAction dul:action_5 ;
-  psr:hasAction dul:action_6 ;
-  psr:hasAction dul:action_7 ;
-  psr:hasAction dul:action_8 ;
-  psr:hasAction dul:action_9 ;
-  psr:hasAction dul:action_10 ;
-  psr:hasAction dul:action_11 ;
-  psr:hasAction dul:action_12 .
+obot:organize_kitchen obot:hasAction dul:action_1 ;
+  obot:hasAction dul:action_2 ;
+  obot:hasAction dul:action_3 ;
+  obot:hasAction dul:action_4 ;
+  obot:hasAction dul:action_5 ;
+  obot:hasAction dul:action_6 ;
+  obot:hasAction dul:action_7 ;
+  obot:hasAction dul:action_8 ;
+  obot:hasAction dul:action_9 ;
+  obot:hasAction dul:action_10 ;
+  obot:hasAction dul:action_11 ;
+  obot:hasAction dul:action_12 .
 
-dul:action_1 psr:precedes dul:action_2 .
+dul:action_1 obot:precedes dul:action_2 .
 
-dul:action_2 psr:precedes dul:action_3 .
+dul:action_2 obot:precedes dul:action_3 .
 
-dul:action_3 psr:precedes dul:action_4 .
+dul:action_3 obot:precedes dul:action_4 .
 
-dul:action_4 psr:precedes dul:action_5 .
+dul:action_4 obot:precedes dul:action_5 .
 
-dul:action_5 psr:precedes dul:action_6 .
+dul:action_5 obot:precedes dul:action_6 .
 
-dul:action_6 psr:precedes dul:action_7 .
+dul:action_6 obot:precedes dul:action_7 .
 
-dul:action_7 psr:precedes dul:action_8 .
+dul:action_7 obot:precedes dul:action_8 .
 
-dul:action_8 psr:precedes dul:action_9 .
+dul:action_8 obot:precedes dul:action_9 .
 
-dul:action_9 psr:precedes dul:action_10 .
+dul:action_9 obot:precedes dul:action_10 .
 
-dul:action_10 psr:precedes dul:action_11 .
+dul:action_10 obot:precedes dul:action_11 .
 
-dul:action_11 psr:precedes dul:action_12 .
+dul:action_11 obot:precedes dul:action_12 .
 
 ### Object and Affordance Relations
-<http://www.ease-crc.org/ont/table_1> a psr:Furniture .
+<http://www.ease-crc.org/ont/table_1> a obot:Furniture .
 
-<http://www.ease-crc.org/ont/refrigerator_1> a psr:Appliance .
+<http://www.ease-crc.org/ont/refrigerator_1> a obot:Appliance .
 
-<http://www.ease-crc.org/ont/water_bottle_1> a psr:Object .
+<http://www.ease-crc.org/ont/water_bottle_1> a obot:Object .
 
-<http://www.ease-crc.org/ont/water_bottle_2> a psr:Object .
+<http://www.ease-crc.org/ont/water_bottle_2> a obot:Object .
 
-<http://www.ease-crc.org/ont/plate_1> a psr:Object .
+<http://www.ease-crc.org/ont/plate_1> a obot:Object .
 
-<http://www.ease-crc.org/ont/plate_2> a psr:Object .
+<http://www.ease-crc.org/ont/plate_2> a obot:Object .
 
-<http://www.ease-crc.org/ont/cup_1> a psr:Object .
+<http://www.ease-crc.org/ont/cup_1> a obot:Object .
 
-<http://www.ease-crc.org/ont/cup_2> a psr:Object .
+<http://www.ease-crc.org/ont/cup_2> a obot:Object .
 
-<http://www.ease-crc.org/ont/jar_1> a psr:Object .
+<http://www.ease-crc.org/ont/jar_1> a obot:Object .
 
-<http://www.ease-crc.org/ont/jar_2> a psr:Object .
+<http://www.ease-crc.org/ont/jar_2> a obot:Object .
 
-<http://www.ease-crc.org/ont/box_1> a psr:Object .
+<http://www.ease-crc.org/ont/box_1> a obot:Object .
 
-<http://www.ease-crc.org/ont/box_2> a psr:Object .
+<http://www.ease-crc.org/ont/box_2> a obot:Object .
 
-<http://www.ease-crc.org/ont/book_1> a psr:Object .
+<http://www.ease-crc.org/ont/book_1> a obot:Object .
 
-dul:action_1 psr:actsOn <http://www.ease-crc.org/ont/table_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_1 obot:actsOn <http://www.ease-crc.org/ont/table_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_2 psr:actsOn <http://www.ease-crc.org/ont/water_bottle_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_2 obot:actsOn <http://www.ease-crc.org/ont/water_bottle_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_3 psr:actsOn <http://www.ease-crc.org/ont/water_bottle_2> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_3 obot:actsOn <http://www.ease-crc.org/ont/water_bottle_2> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_4 psr:actsOn <http://www.ease-crc.org/ont/plate_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_4 obot:actsOn <http://www.ease-crc.org/ont/plate_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_5 psr:actsOn <http://www.ease-crc.org/ont/plate_2> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_5 obot:actsOn <http://www.ease-crc.org/ont/plate_2> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_6 psr:actsOn <http://www.ease-crc.org/ont/cup_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_6 obot:actsOn <http://www.ease-crc.org/ont/cup_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_7 psr:actsOn <http://www.ease-crc.org/ont/cup_2> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_7 obot:actsOn <http://www.ease-crc.org/ont/cup_2> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_8 psr:actsOn <http://www.ease-crc.org/ont/jar_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_8 obot:actsOn <http://www.ease-crc.org/ont/jar_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_9 psr:actsOn <http://www.ease-crc.org/ont/jar_2> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_9 obot:actsOn <http://www.ease-crc.org/ont/jar_2> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_10 psr:actsOn <http://www.ease-crc.org/ont/box_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_10 obot:actsOn <http://www.ease-crc.org/ont/box_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_11 psr:actsOn <http://www.ease-crc.org/ont/box_2> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_11 obot:actsOn <http://www.ease-crc.org/ont/box_2> ;
+  obot:isAffordedBy soma:PickingUp .
 
-dul:action_12 psr:actsOn <http://www.ease-crc.org/ont/book_1> ;
-  psr:isAffordedBy soma:PickingUp .
+dul:action_12 obot:actsOn <http://www.ease-crc.org/ont/book_1> ;
+  obot:isAffordedBy soma:PickingUp .
 
-<http://www.ease-crc.org/ont/table_1> psr:isAffordedBy soma:PuttingDown .
+<http://www.ease-crc.org/ont/table_1> obot:isAffordedBy soma:PuttingDown .
 
-<http://www.ease-crc.org/ont/refrigerator_1> psr:isAffordedBy soma:Pushing .
+<http://www.ease-crc.org/ont/refrigerator_1> obot:isAffordedBy soma:Pushing .
 
-<http://www.ease-crc.org/ont/cupboard_1> psr:isAffordedBy soma:Opening .
+<http://www.ease-crc.org/ont/cupboard_1> obot:isAffordedBy soma:Opening .

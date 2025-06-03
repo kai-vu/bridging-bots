@@ -1,101 +1,101 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PickUpMisplacedItemAction ;
-    psr:hasAction ex:PutAwayMisplacedItemAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PickUpMisplacedItemAction ;
+    obot:hasAction ex:PutAwayMisplacedItemAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:precedes ex:PickUpMisplacedItemAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:precedes ex:PickUpMisplacedItemAction .
 
 ex:PickUpMisplacedItemAction a soma:PickingUp ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItem ;
-    psr:precedes ex:PutAwayMisplacedItemAction ;
-    psr:follows ex:IdentifyMisplacedItemsAction .
+    obot:actsOn ex:MisplacedItem ;
+    obot:precedes ex:PutAwayMisplacedItemAction ;
+    obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:PutAwayMisplacedItemAction a soma:PuttingDown ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItem ;
-    psr:follows ex:PickUpMisplacedItemAction .
+    obot:actsOn ex:MisplacedItem ;
+    obot:follows ex:PickUpMisplacedItemAction .
 
-ex:MisplacedItems a psr:Component ;
+ex:MisplacedItems a obot:Component ;
     rdfs:label "Misplaced items on countertop and table"@en .
 
-ex:MisplacedItem a psr:Component ;
+ex:MisplacedItem a obot:Component ;
     rdfs:label "A misplaced item"@en .
 
 ex:RobotAgent a dul:Agent ;
     rdfs:label "Robot"@en .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
     rdfs:label "Light brown marble countertop"@en .
 
-ex:DiningTable a psr:Component ;
+ex:DiningTable a obot:Component ;
     rdfs:label "Dining table with brown surface"@en .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
     rdfs:label "Jello box on countertop"@en .
 
-ex:AlpenSaltBox a psr:Object ;
+ex:AlpenSaltBox a obot:Object ;
     rdfs:label "Alpen salt box on countertop"@en .
 
-ex:StrawberryShortcakeBox a psr:Object ;
+ex:StrawberryShortcakeBox a obot:Object ;
     rdfs:label "Strawberry shortcake box on countertop"@en .
 
-ex:TwoJars a psr:Object ;
+ex:TwoJars a obot:Object ;
     rdfs:label "Two jars on countertop"@en .
 
-ex:Bottle a psr:Object ;
+ex:Bottle a obot:Object ;
     rdfs:label "Bottle on dining table"@en .
 
-ex:BoxesOnTable a psr:Object ;
+ex:BoxesOnTable a obot:Object ;
     rdfs:label "Boxes on dining table"@en .
 
-ex:SilverPot a psr:Object ;
+ex:SilverPot a obot:Object ;
     rdfs:label "Silver pot on stove"@en .
 
-ex:SilverSink a psr:Object ;
+ex:SilverSink a obot:Object ;
     rdfs:label "Silver sink on countertop"@en .
 
-ex:KitchenCabinets a psr:Furniture ;
+ex:KitchenCabinets a obot:Furniture ;
     rdfs:label "Dark gray kitchen cabinets"@en .
 
-ex:WhiteRefrigerator a psr:Appliance ;
+ex:WhiteRefrigerator a obot:Appliance ;
     rdfs:label "White refrigerator"@en .
 
-ex:StandardStorageLocation a psr:Component ;
+ex:StandardStorageLocation a obot:Component ;
     rdfs:label "Standard storage location for items"@en .
 
-ex:JelloBoxStorage a psr:Component ;
+ex:JelloBoxStorage a obot:Component ;
     rdfs:label "Storage location for jello box"@en .
 
-ex:AlpenSaltBoxStorage a psr:Component ;
+ex:AlpenSaltBoxStorage a obot:Component ;
     rdfs:label "Storage location for alpen salt box"@en .
 
-ex:StrawberryShortcakeBoxStorage a psr:Component ;
+ex:StrawberryShortcakeBoxStorage a obot:Component ;
     rdfs:label "Storage location for strawberry shortcake box"@en .
 
-ex:TwoJarsStorage a psr:Component ;
+ex:TwoJarsStorage a obot:Component ;
     rdfs:label "Storage location for two jars"@en .
 
-ex:BottleStorage a psr:Component ;
+ex:BottleStorage a obot:Component ;
     rdfs:label "Storage location for bottle"@en .
 
-ex:BoxesOnTableStorage a psr:Component ;
+ex:BoxesOnTableStorage a obot:Component ;
     rdfs:label "Storage location for boxes on table"@en .
 
-ex:SilverPotStorage a psr:Component ;
+ex:SilverPotStorage a obot:Component ;
     rdfs:label "Storage location for silver pot"@en .

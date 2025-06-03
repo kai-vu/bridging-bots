@@ -1,15 +1,15 @@
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:instructionRestore a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
-    psr:hasWorkflow ex:workflowRestoreKitchen .
+ex:instructionRestore a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    obot:hasWorkflow ex:workflowRestoreKitchen .
 
-ex:workflowRestoreKitchen a psr:Workflow ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4,
+ex:workflowRestoreKitchen a obot:Workflow ;
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4,
                   ex:action5, ex:action6, ex:action7, ex:action8,
                   ex:action9, ex:action10, ex:action11, ex:action12,
                   ex:action13, ex:action14, ex:action15, ex:action16,
@@ -25,305 +25,305 @@ ex:workflowRestoreKitchen a psr:Workflow ;
 
 ex:robot a dul:Agent .
 
-ex:cabinetUpper a psr:Furniture .
-ex:cabinetLower a psr:Furniture .
-ex:fridge a psr:Appliance .
+ex:cabinetUpper a obot:Furniture .
+ex:cabinetLower a obot:Furniture .
+ex:fridge a obot:Appliance .
 
-ex:plates a psr:Object .
-ex:jam a psr:Object .
-ex:jamPreserve a psr:Object .
-ex:jelloBox a psr:Object .
-ex:riceBubbles a psr:Object .
-ex:chuckyCereal a psr:Object .
-ex:alpenSalt a psr:Object .
-ex:orangeMug a psr:Object .
-ex:silverPot a psr:Object .
-ex:transparentPitcher a psr:Object .
-ex:wineGlass a psr:Object .
-ex:evianBottle a psr:Object .
-ex:shortbreadCookies a psr:Object .
+ex:plates a obot:Object .
+ex:jam a obot:Object .
+ex:jamPreserve a obot:Object .
+ex:jelloBox a obot:Object .
+ex:riceBubbles a obot:Object .
+ex:chuckyCereal a obot:Object .
+ex:alpenSalt a obot:Object .
+ex:orangeMug a obot:Object .
+ex:silverPot a obot:Object .
+ex:transparentPitcher a obot:Object .
+ex:wineGlass a obot:Object .
+ex:evianBottle a obot:Object .
+ex:shortbreadCookies a obot:Object .
 
 # Plates -> Upper Cabinet
 ex:action1 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:plates ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:plates ;
+    obot:isAffordedBy soma:PickingUp .
 ex:action2 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action1 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action1 .
 ex:action3 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:plates ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action2 .
+    obot:actsOn ex:plates ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action2 .
 ex:action4 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action3 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action3 .
 
 # Jam -> Fridge
 ex:action5 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jam ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action4 .
+    obot:actsOn ex:jam ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action4 .
 ex:action6 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action5 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action5 .
 ex:action7 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jam ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action6 .
+    obot:actsOn ex:jam ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action6 .
 ex:action8 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action7 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action7 .
 
 # Jell-O Box -> Upper Cabinet
 ex:action9 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jelloBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action8 .
+    obot:actsOn ex:jelloBox ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action8 .
 ex:action10 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action9 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action9 .
 ex:action11 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jelloBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action10 .
+    obot:actsOn ex:jelloBox ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action10 .
 ex:action12 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action11 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action11 .
 
 # Rice Bubbles -> Upper Cabinet
 ex:action13 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:riceBubbles ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action12 .
+    obot:actsOn ex:riceBubbles ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action12 .
 ex:action14 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action13 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action13 .
 ex:action15 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:riceBubbles ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action14 .
+    obot:actsOn ex:riceBubbles ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action14 .
 ex:action16 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action15 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action15 .
 
 # Chucky Cereal Box -> Upper Cabinet
 ex:action17 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:chuckyCereal ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action16 .
+    obot:actsOn ex:chuckyCereal ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action16 .
 ex:action18 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action17 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action17 .
 ex:action19 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:chuckyCereal ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action18 .
+    obot:actsOn ex:chuckyCereal ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action18 .
 ex:action20 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action19 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action19 .
 
 # Alpen Salt -> Upper Cabinet
 ex:action21 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:alpenSalt ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action20 .
+    obot:actsOn ex:alpenSalt ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action20 .
 ex:action22 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action21 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action21 .
 ex:action23 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:alpenSalt ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action22 .
+    obot:actsOn ex:alpenSalt ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action22 .
 ex:action24 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action23 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action23 .
 
 # Strawberry Preserve -> Fridge
 ex:action25 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jamPreserve ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action24 .
+    obot:actsOn ex:jamPreserve ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action24 .
 ex:action26 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action25 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action25 .
 ex:action27 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:jamPreserve ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action26 .
+    obot:actsOn ex:jamPreserve ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action26 .
 ex:action28 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action27 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action27 .
 
 # Orange Mug -> Upper Cabinet
 ex:action29 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:orangeMug ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action28 .
+    obot:actsOn ex:orangeMug ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action28 .
 ex:action30 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action29 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action29 .
 ex:action31 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:orangeMug ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action30 .
+    obot:actsOn ex:orangeMug ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action30 .
 ex:action32 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action31 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action31 .
 
 # Silver Pot -> Lower Cabinet
 ex:action33 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:silverPot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action32 .
+    obot:actsOn ex:silverPot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action32 .
 ex:action34 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetLower ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action33 .
+    obot:actsOn ex:cabinetLower ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action33 .
 ex:action35 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:silverPot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action34 .
+    obot:actsOn ex:silverPot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action34 .
 ex:action36 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetLower ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action35 .
+    obot:actsOn ex:cabinetLower ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action35 .
 
 # Transparent Pitcher -> Upper Cabinet
 ex:action37 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:transparentPitcher ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action36 .
+    obot:actsOn ex:transparentPitcher ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action36 .
 ex:action38 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action37 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action37 .
 ex:action39 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:transparentPitcher ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action38 .
+    obot:actsOn ex:transparentPitcher ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action38 .
 ex:action40 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action39 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action39 .
 
 # Wine Glass -> Upper Cabinet
 ex:action41 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:wineGlass ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action40 .
+    obot:actsOn ex:wineGlass ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action40 .
 ex:action42 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action41 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action41 .
 ex:action43 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:wineGlass ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action42 .
+    obot:actsOn ex:wineGlass ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action42 .
 ex:action44 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetUpper ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action43 .
+    obot:actsOn ex:cabinetUpper ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action43 .
 
 # Evian Bottle -> Fridge
 ex:action45 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:evianBottle ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action44 .
+    obot:actsOn ex:evianBottle ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action44 .
 ex:action46 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action45 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action45 .
 ex:action47 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:evianBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action46 .
+    obot:actsOn ex:evianBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action46 .
 ex:action48 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action47 .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action47 .
 
 # Shortbread Cookies -> Lower Cabinet
 ex:action49 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:shortbreadCookies ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows ex:action48 .
+    obot:actsOn ex:shortbreadCookies ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows ex:action48 .
 ex:action50 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetLower ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows ex:action49 .
+    obot:actsOn ex:cabinetLower ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows ex:action49 .
 ex:action51 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:shortbreadCookies ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action50 .
+    obot:actsOn ex:shortbreadCookies ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action50 .
 ex:action52 a dul:Action ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinetLower ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action51 .
+    obot:actsOn ex:cabinetLower ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action51 .

@@ -5,7 +5,7 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem2Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -20,7 +20,7 @@
             sh:value <http://example.org/data/PickUpMisplacedItem1Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem2Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -49,7 +49,7 @@
             sh:value <http://example.org/data/PutAwayMisplacedItem2Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem2Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -57,7 +57,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem1Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -65,7 +65,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem1Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -73,7 +73,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem1Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -81,7 +81,7 @@
             sh:value <http://example.org/data/CartonOfMilk1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem2Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -89,7 +89,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem1Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -104,7 +104,7 @@
             sh:value <http://example.org/data/IdentifyMisplacedItemsAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/None> ;
-            sh:resultMessage "Less than 1 values on ex:None->psr:actsOn" ;
+            sh:resultMessage "Less than 1 values on ex:None->obot:actsOn" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -134,7 +134,7 @@
             sh:value <http://example.org/data/PickUpBoxJello2Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/EnterKitchenAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -142,7 +142,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpRiceBubblesAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -150,7 +150,7 @@
             sh:value <http://example.org/data/RiceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarRedWhiteLidAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -158,7 +158,7 @@
             sh:value <http://example.org/data/JarRedWhiteLid> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBottleWaterAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -166,7 +166,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownChuckyPuzzleBoxAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -181,7 +181,7 @@
             sh:value <http://example.org/data/PutDownPuzzleBoxOnTableAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMugOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -189,7 +189,7 @@
             sh:value <http://example.org/data/MugOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarRedWhiteLidAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -204,7 +204,7 @@
             sh:value <http://example.org/data/PutDownYellowMugAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownYellowMugAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -219,7 +219,7 @@
             sh:value <http://example.org/data/PickUpBoxJello1Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpWhitePlateOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -227,7 +227,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxJello2Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -242,7 +242,7 @@
             sh:value <http://example.org/data/PickUpPlateStackAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpYellowMugAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -250,7 +250,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownRiceBubblesAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -258,7 +258,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBottleWaterAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -280,7 +280,7 @@
             sh:value <http://example.org/data/PutDownAlpenSaltAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPuzzleBoxOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -288,7 +288,7 @@
             sh:value <http://example.org/data/PuzzleBoxOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownWhitePlateOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -296,7 +296,7 @@
             sh:value <http://example.org/data/WhitePlateOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpChuckyPuzzleBoxAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -304,7 +304,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPuzzleBoxOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -312,7 +312,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBottleWaterAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -320,7 +320,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownWhitePlateOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -335,7 +335,7 @@
             sh:value <http://example.org/data/PickUpChuckyPuzzleBoxAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarRedLidAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -350,7 +350,7 @@
             sh:value <http://example.org/data/PickUpJarRedLidAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownMugOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -358,7 +358,7 @@
             sh:value <http://example.org/data/MugOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPuzzleBoxOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -366,7 +366,7 @@
             sh:value <http://example.org/data/PuzzleBoxOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxJello1Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -381,7 +381,7 @@
             sh:value <http://example.org/data/PutDownBoxJello1Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMugOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -389,7 +389,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpWhitePlateOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -397,7 +397,7 @@
             sh:value <http://example.org/data/WhitePlateOnTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarRedLidAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -412,7 +412,7 @@
             sh:value <http://example.org/data/PutDownBottleWaterAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPlateStackAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -427,7 +427,7 @@
             sh:value <http://example.org/data/PutDownTwoWhiteCupsAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxJello1Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -456,7 +456,7 @@
             sh:value <http://example.org/data/PickUpJarRedWhiteLidAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxJello1Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -478,7 +478,7 @@
             sh:value <http://example.org/data/MisplacedItemsIdentification> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/MisplacedItemsIdentification> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -486,7 +486,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPlateStackAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -494,7 +494,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPlateStackAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -509,7 +509,7 @@
             sh:value <http://example.org/data/PutDownPlateStackAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownTwoWhiteCupsAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -517,7 +517,7 @@
             sh:value <http://example.org/data/TwoWhiteCups> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpRiceBubblesAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -525,7 +525,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarRedLidAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -533,7 +533,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpAlpenSaltAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -548,7 +548,7 @@
             sh:value <http://example.org/data/PutDownWhitePlateOnTableAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarRedWhiteLidAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -556,7 +556,7 @@
             sh:value <http://example.org/data/JarRedWhiteLid> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxJello2Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -564,7 +564,7 @@
             sh:value <http://example.org/data/BoxJello2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxJello2Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -572,7 +572,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownYellowMugAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -580,7 +580,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownTwoWhiteCupsAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -588,7 +588,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownMugOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -603,7 +603,7 @@
             sh:value <http://example.org/data/PutDownBoxJello2Action> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpAlpenSaltAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -611,7 +611,7 @@
             sh:value <http://example.org/data/AlpenSalt> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBottleWaterAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -619,7 +619,7 @@
             sh:value <http://example.org/data/BottleWater> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxJello1Action> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -634,7 +634,7 @@
             sh:value <http://example.org/data/PutDownJarRedWhiteLidAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownAlpenSaltAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -656,7 +656,7 @@
             sh:value <http://example.org/data/PutDownRiceBubblesAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarRedLidAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -664,7 +664,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownChuckyPuzzleBoxAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -686,7 +686,7 @@
             sh:value <http://example.org/data/PutDownJarRedLidAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxJello2Action> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -701,7 +701,7 @@
             sh:value <http://example.org/data/PickUpWhitePlateOnTableAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpTwoWhiteCupsAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -709,7 +709,7 @@
             sh:value <http://example.org/data/TwoWhiteCups> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownRiceBubblesAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -717,7 +717,7 @@
             sh:value <http://example.org/data/RiceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/IdentifyMisplacedItemsAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -725,7 +725,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPlateStackAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -740,7 +740,7 @@
             sh:value <http://example.org/data/EnterKitchenAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownAlpenSaltAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -748,7 +748,7 @@
             sh:value <http://example.org/data/AlpenSalt> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarRedWhiteLidAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -763,7 +763,7 @@
             sh:value <http://example.org/data/PickUpRiceBubblesAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpYellowMugAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -771,7 +771,7 @@
             sh:value <http://example.org/data/YellowMug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPuzzleBoxOnTableAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -779,7 +779,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpTwoWhiteCupsAction> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -801,7 +801,7 @@
             sh:value <http://example.org/data/PickUpYellowMugAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpChuckyPuzzleBoxAction> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -822,7 +822,7 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -837,7 +837,7 @@
             sh:value <http://example.org/data/action13> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -852,7 +852,7 @@
             sh:value <http://example.org/data/action20> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action28> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -867,7 +867,7 @@
             sh:value <http://example.org/data/action28> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -875,7 +875,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -897,7 +897,7 @@
             sh:value <http://example.org/data/action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action12> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -905,7 +905,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -913,7 +913,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action22> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -921,7 +921,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -936,7 +936,7 @@
             sh:value <http://example.org/data/action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action25> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -965,7 +965,7 @@
             sh:value <http://example.org/data/action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action20> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -973,7 +973,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action25> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -981,7 +981,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -989,7 +989,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action23> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1004,7 +1004,7 @@
             sh:value <http://example.org/data/action11> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1012,7 +1012,7 @@
             sh:value <http://example.org/data/pot> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action21> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1034,7 +1034,7 @@
             sh:value <http://example.org/data/action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action24> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1049,7 +1049,7 @@
             sh:value <http://example.org/data/action12> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1064,7 +1064,7 @@
             sh:value <http://example.org/data/action27> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action24> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1072,7 +1072,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action15> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1080,7 +1080,7 @@
             sh:value <http://example.org/data/plates> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1088,7 +1088,7 @@
             sh:value <http://example.org/data/pot> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action15> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1096,7 +1096,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1104,7 +1104,7 @@
             sh:value <http://example.org/data/riceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1112,7 +1112,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1120,7 +1120,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1142,7 +1142,7 @@
             sh:value <http://example.org/data/action15> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action12> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1157,7 +1157,7 @@
             sh:value <http://example.org/data/action18> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action28> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1172,7 +1172,7 @@
             sh:value <http://example.org/data/action21> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action27> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1180,7 +1180,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action16> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1188,7 +1188,7 @@
             sh:value <http://example.org/data/overheadCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action18> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1196,7 +1196,7 @@
             sh:value <http://example.org/data/fridge> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action17> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1204,7 +1204,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action17> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1212,7 +1212,7 @@
             sh:value <http://example.org/data/jamJar1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1220,7 +1220,7 @@
             sh:value <http://example.org/data/plates> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1242,7 +1242,7 @@
             sh:value <http://example.org/data/action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action27> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1250,7 +1250,7 @@
             sh:value <http://example.org/data/jelloBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action18> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1272,7 +1272,7 @@
             sh:value <http://example.org/data/action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1280,7 +1280,7 @@
             sh:value <http://example.org/data/overheadCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action11> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1288,7 +1288,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1296,7 +1296,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1304,7 +1304,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1312,7 +1312,7 @@
             sh:value <http://example.org/data/chuckyHarps1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1320,7 +1320,7 @@
             sh:value <http://example.org/data/pantry> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action22> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1328,7 +1328,7 @@
             sh:value <http://example.org/data/pantry> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action20> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1336,7 +1336,7 @@
             sh:value <http://example.org/data/fridge> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action19> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1344,7 +1344,7 @@
             sh:value <http://example.org/data/jamJar1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action16> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1352,7 +1352,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action26> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1374,7 +1374,7 @@
             sh:value <http://example.org/data/action14> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action19> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1382,7 +1382,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action21> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1390,7 +1390,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1398,7 +1398,7 @@
             sh:value <http://example.org/data/lowerCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action26> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1413,7 +1413,7 @@
             sh:value <http://example.org/data/action19> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1421,7 +1421,7 @@
             sh:value <http://example.org/data/pantry> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1429,7 +1429,7 @@
             sh:value <http://example.org/data/chuckyHarps1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action11> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1458,7 +1458,7 @@
             sh:value <http://example.org/data/action9> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action23> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1476,7 +1476,7 @@
             sh:value <http://example.org/data/action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1484,7 +1484,7 @@
             sh:value <http://example.org/data/foodItemsAndUtensils> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1499,7 +1499,7 @@
             sh:value <http://example.org/data/action1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1507,7 +1507,7 @@
             sh:value <http://example.org/data/foodItemsAndUtensils> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1515,7 +1515,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1523,7 +1523,7 @@
             sh:value <http://example.org/data/clearBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1531,7 +1531,7 @@
             sh:value <http://example.org/data/redMug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1546,7 +1546,7 @@
             sh:value <http://example.org/data/action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1554,7 +1554,7 @@
             sh:value <http://example.org/data/brownBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1562,7 +1562,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1584,7 +1584,7 @@
             sh:value <http://example.org/data/action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1599,7 +1599,7 @@
             sh:value <http://example.org/data/action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1614,7 +1614,7 @@
             sh:value <http://example.org/data/action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1629,7 +1629,7 @@
             sh:value <http://example.org/data/action10> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1644,7 +1644,7 @@
             sh:value <http://example.org/data/action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1652,7 +1652,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1667,7 +1667,7 @@
             sh:value <http://example.org/data/action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1675,7 +1675,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1686,7 +1686,7 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1701,7 +1701,7 @@
             sh:value <http://example.org/data/action1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1709,7 +1709,7 @@
             sh:value <http://example.org/data/food_items> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1717,7 +1717,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1725,7 +1725,7 @@
             sh:value <http://example.org/data/food_items> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1733,7 +1733,7 @@
             sh:value <http://example.org/data/mug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1741,7 +1741,7 @@
             sh:value <http://example.org/data/food_items> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1749,7 +1749,7 @@
             sh:value <http://example.org/data/bottles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1757,7 +1757,7 @@
             sh:value <http://example.org/data/bottles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1772,7 +1772,7 @@
             sh:value <http://example.org/data/action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/instruction> ;
-            sh:resultMessage "Less than 1 values on ex:instruction->psr:hasNaturalLanguage" ;
+            sh:resultMessage "Less than 1 values on ex:instruction->obot:hasNaturalLanguage" ;
             sh:resultPath <https://w3id.org/onto-bot#hasNaturalLanguage> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -1780,7 +1780,7 @@
                     sh:path <https://w3id.org/onto-bot#hasNaturalLanguage> ] ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1795,7 +1795,7 @@
             sh:value <http://example.org/data/action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1803,7 +1803,7 @@
             sh:value <http://example.org/data/utensils> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1811,7 +1811,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1826,7 +1826,7 @@
             sh:value <http://example.org/data/action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1834,7 +1834,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1842,7 +1842,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1857,7 +1857,7 @@
             sh:value <http://example.org/data/action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1865,7 +1865,7 @@
             sh:value <http://example.org/data/mug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1880,7 +1880,7 @@
             sh:value <http://example.org/data/action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1888,7 +1888,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1910,7 +1910,7 @@
             sh:value <http://example.org/data/action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1918,7 +1918,7 @@
             sh:value <http://example.org/data/pantry> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1926,7 +1926,7 @@
             sh:value <http://example.org/data/drawer> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1934,7 +1934,7 @@
             sh:value <http://example.org/data/utensils> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1942,7 +1942,7 @@
             sh:value <http://example.org/data/cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1963,7 +1963,7 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#place_item_1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1971,7 +1971,7 @@
             sh:value <http://example.org/object1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#pick_up_item_2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1979,14 +1979,14 @@
             sh:value <http://example.org/object2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#pick_up_item_1> ;
-            sh:resultMessage "Node psr:pick_up_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:resultMessage "Node obot:pick_up_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
             sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
             sh:value <https://w3id.org/onto-bot#pick_up_item_1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#pick_up_item_1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -1994,28 +1994,28 @@
             sh:value <http://example.org/object1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#place_item_1> ;
-            sh:resultMessage "Node psr:place_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:resultMessage "Node obot:place_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
             sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
             sh:value <https://w3id.org/onto-bot#place_item_1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#place_item_2> ;
-            sh:resultMessage "Node psr:place_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:resultMessage "Node obot:place_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
             sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
             sh:value <https://w3id.org/onto-bot#place_item_2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#pick_up_item_2> ;
-            sh:resultMessage "Node psr:pick_up_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:resultMessage "Node obot:pick_up_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
             sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
             sh:value <https://w3id.org/onto-bot#pick_up_item_2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#place_item_2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2033,7 +2033,7 @@
             sh:value <http://example.com/ns#Action17> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action18> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2041,7 +2041,7 @@
             sh:value <http://example.com/ns#Fridge> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2049,7 +2049,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action30> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2064,7 +2064,7 @@
             sh:value <http://example.com/ns#Action29> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action11> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2072,7 +2072,7 @@
             sh:value <http://example.com/ns#Salt> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action20> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2080,7 +2080,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action25> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2088,7 +2088,7 @@
             sh:value <http://example.com/ns#PlateSet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2103,7 +2103,7 @@
             sh:value <http://example.com/ns#Action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2139,7 +2139,7 @@
             sh:value <http://example.com/ns#Action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action24> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2147,7 +2147,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2155,7 +2155,7 @@
             sh:value <http://example.com/ns#Jello> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2163,7 +2163,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action21> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2171,7 +2171,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action13> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2186,7 +2186,7 @@
             sh:value <http://example.com/ns#Action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action25> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2201,7 +2201,7 @@
             sh:value <http://example.com/ns#Action19> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action20> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2209,7 +2209,7 @@
             sh:value <http://example.com/ns#Fridge> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action12> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2217,7 +2217,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action26> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2225,7 +2225,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2247,7 +2247,7 @@
             sh:value <http://example.com/ns#Action16> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action17> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2255,7 +2255,7 @@
             sh:value <http://example.com/ns#WaterBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action16> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2263,7 +2263,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2278,7 +2278,7 @@
             sh:value <http://example.com/ns#Action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action12> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2293,7 +2293,7 @@
             sh:value <http://example.com/ns#Action1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2308,7 +2308,7 @@
             sh:value <http://example.com/ns#Action27> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action27> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2316,7 +2316,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action29> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2324,7 +2324,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action24> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2339,7 +2339,7 @@
             sh:value <http://example.com/ns#Action10> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action14> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2347,7 +2347,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2355,7 +2355,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2363,7 +2363,7 @@
             sh:value <http://example.com/ns#Jam> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action18> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2371,7 +2371,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action32> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2386,7 +2386,7 @@
             sh:value <http://example.com/ns#Action21> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2401,7 +2401,7 @@
             sh:value <http://example.com/ns#Action13> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action31> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2423,7 +2423,7 @@
             sh:value <http://example.com/ns#Action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action19> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2438,7 +2438,7 @@
             sh:value <http://example.com/ns#Action11> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2446,7 +2446,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action22> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2454,7 +2454,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action22> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2483,7 +2483,7 @@
             sh:value <http://example.com/ns#Action31> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action10> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2491,7 +2491,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action21> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2499,7 +2499,7 @@
             sh:value <http://example.com/ns#Pot> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action28> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2507,7 +2507,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action13> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2522,7 +2522,7 @@
             sh:value <http://example.com/ns#Action14> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action30> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2537,7 +2537,7 @@
             sh:value <http://example.com/ns#Action24> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action19> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2545,7 +2545,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action28> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2553,7 +2553,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action23> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2561,7 +2561,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action14> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2569,7 +2569,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action15> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2577,7 +2577,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2592,7 +2592,7 @@
             sh:value <http://example.com/ns#Action15> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action31> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2600,7 +2600,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action23> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2615,7 +2615,7 @@
             sh:value <http://example.com/ns#Action28> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2623,7 +2623,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2631,7 +2631,7 @@
             sh:value <http://example.com/ns#Salt> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action26> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2639,7 +2639,7 @@
             sh:value <http://example.com/ns#Cabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action17> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2654,7 +2654,7 @@
             sh:value <http://example.com/ns#Action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action32> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2662,7 +2662,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action16> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2670,7 +2670,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action29> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2678,7 +2678,7 @@
             sh:value <http://example.com/ns#Mug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action11> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2686,7 +2686,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2694,7 +2694,7 @@
             sh:value <http://example.com/ns#Jello> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2702,7 +2702,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2710,7 +2710,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action27> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2718,7 +2718,7 @@
             sh:value <http://example.com/ns#PlateSet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action15> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2754,7 +2754,7 @@
             sh:value <http://example.com/ns#Action12> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.com/ns#Action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2765,7 +2765,7 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2773,7 +2773,7 @@
             sh:value <https://w3id.org/onto-bot#Crockery> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2781,7 +2781,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2789,7 +2789,7 @@
             sh:value <https://w3id.org/onto-bot#RiceBubblesBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2797,7 +2797,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2805,7 +2805,7 @@
             sh:value <https://w3id.org/onto-bot#ChuckyBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2813,7 +2813,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2821,7 +2821,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2829,14 +2829,14 @@
             sh:value <https://w3id.org/onto-bot#AlpenSaltBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_1> ;
-            sh:resultMessage "Node psr:Action_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:resultMessage "Node obot:Action_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
             sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
             sh:value <https://w3id.org/onto-bot#Action_1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2844,7 +2844,7 @@
             sh:value <https://w3id.org/onto-bot#KitchenTable> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2852,7 +2852,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2860,7 +2860,7 @@
             sh:value <https://w3id.org/onto-bot#AlpenSaltBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2868,7 +2868,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2876,7 +2876,7 @@
             sh:value <https://w3id.org/onto-bot#JelloBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2884,7 +2884,7 @@
             sh:value <https://w3id.org/onto-bot#JelloBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2892,7 +2892,7 @@
             sh:value <https://w3id.org/onto-bot#RiceBubblesBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2900,7 +2900,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2908,7 +2908,7 @@
             sh:value <https://w3id.org/onto-bot#Cups> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2916,7 +2916,7 @@
             sh:value <https://w3id.org/onto-bot#Crockery> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2924,7 +2924,7 @@
             sh:value <https://w3id.org/onto-bot#EvianBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2932,7 +2932,7 @@
             sh:value <https://w3id.org/onto-bot#ChuckyBox> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2940,7 +2940,7 @@
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <https://w3id.org/onto-bot#Action_8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
+            sh:resultMessage "Value does not have class obot:Component" ;
             sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
@@ -2958,7 +2958,7 @@
             sh:value <http://example.org/data/IdentifyMisplacedItemsAction> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenTask> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenTask->psr:hasNaturalLanguage" ;
+            sh:resultMessage "Less than 1 values on ex:RestoreKitchenTask->obot:hasNaturalLanguage" ;
             sh:resultPath <https://w3id.org/onto-bot#hasNaturalLanguage> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;

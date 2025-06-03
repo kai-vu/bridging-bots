@@ -3,31 +3,31 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment .
+ex:Kitchen a obot:Environment .
 
 # Components in the environment
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation ex:RefrigeratorLocation ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation ex:TableLocation ;
-    psr:hasAffordance soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Pushing, soma:Pulling .
 
-ex:Object1 a psr:Object ;
+ex:Object1 a obot:Object ;
     rdfs:label "Object on Table"@en ;
     dul:hasLocation ex:Object1Location .
 
 # Locations
-ex:RefrigeratorLocation a psr:StandardLocation .
-ex:TableLocation a psr:StandardLocation .
-ex:Object1Location a psr:CurrentLocation ;
+ex:RefrigeratorLocation a obot:StandardLocation .
+ex:TableLocation a obot:StandardLocation .
+ex:Object1Location a obot:CurrentLocation ;
     geo:sfWithin ex:Table .
 
 # Relations of components
@@ -36,10 +36,10 @@ ex:TableLocation geo:sfContains ex:Table .
 ex:Object1Location geo:sfContains ex:Object1 .
 
 # Additional objects on the environment surface
-ex:Box a psr:Object ;
+ex:Box a obot:Object ;
     rdfs:label "Box"@en ;
     dul:hasLocation ex:BoxLocation .
-ex:BoxLocation a psr:CurrentLocation ;
+ex:BoxLocation a obot:CurrentLocation ;
     geo:sfWithin ex:Object1 .
 
 # Relations of object locations

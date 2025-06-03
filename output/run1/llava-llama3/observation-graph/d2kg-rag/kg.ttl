@@ -1,74 +1,74 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:kitchen a psr:Environment ;
+ex:kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en ;
     dul:hasComponent ex:fridge, ex:table, ex:countertop, ex:sink, ex:cabinetry, ex:coffee_cup, ex:sun_maid_box, ex:bottle_of_water, ex:cereal_box, ex:knife, ex:paper_towels, ex:trash .
 
-ex:fridge a psr:Appliance ;
+ex:fridge a obot:Appliance ;
     rdfs:label "Fridge"@en ;
     dul:hasLocation ex:countertop ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:table a psr:Furniture ;
+ex:table a obot:Furniture ;
     rdfs:label "Table"@en ;
     dul:hasLocation ex:kitchen_floor ;
-    psr:hasAffordance soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Pushing, soma:Pulling .
 
-ex:countertop a psr:Component ;
+ex:countertop a obot:Component ;
     rdfs:label "Countertop"@en ;
     dul:hasLocation ex:kitchen ;
-    psr:hasAffordance soma:PuttingDown, soma:PickingUp .
+    obot:hasAffordance soma:PuttingDown, soma:PickingUp .
 
-ex:sink a psr:Component ;
+ex:sink a obot:Component ;
     rdfs:label "Sink"@en ;
     dul:hasLocation ex:kitchen ;
-    psr:hasAffordance soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Pushing, soma:Pulling .
 
-ex:cabinetry a psr:Component ;
+ex:cabinetry a obot:Component ;
     rdfs:label "Cabinetry"@en ;
     dul:hasLocation ex:kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:coffee_cup a psr:Object ;
+ex:coffee_cup a obot:Object ;
     rdfs:label "Coffee Cup"@en ;
     dul:hasLocation ex:countertop ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:sun_maid_box a psr:Object ;
+ex:sun_maid_box a obot:Object ;
     rdfs:label "Sun-Maid Box"@en ;
     dul:hasLocation ex:countertop ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:bottle_of_water a psr:Object ;
+ex:bottle_of_water a obot:Object ;
     rdfs:label "Bottle of Water"@en ;
     dul:hasLocation ex:countertop ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:cereal_box a psr:Object ;
+ex:cereal_box a obot:Object ;
     rdfs:label "Cereal Box"@en ;
     dul:hasLocation ex:countertop ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:knife a psr:Object ;
+ex:knife a obot:Object ;
     rdfs:label "Knife"@en ;
     dul:hasLocation ex:table ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:paper_towels a psr:Object ;
+ex:paper_towels a obot:Object ;
     rdfs:label "Paper Towels"@en ;
     dul:hasLocation ex:sink ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:trash a psr:Object ;
+ex:trash a obot:Object ;
     rdfs:label "Trash"@en ;
     dul:hasLocation ex:kitchen_floor ;
-    psr:hasAffordance soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Pushing, soma:Pulling .
 
 ex:kitchen_floor a soma:Location ;
     rdfs:label "Kitchen Floor"@en .

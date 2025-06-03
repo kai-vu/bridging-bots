@@ -5,67 +5,67 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PickUpMisplacedItem1Action ;
-    psr:hasAction ex:PutAwayMisplacedItem1Action ;
-    psr:hasAction ex:PickUpMisplacedItem2Action ;
-    psr:hasAction ex:PutAwayMisplacedItem2Action ;
-    psr:hasAction ex:OrganizeCounterAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PickUpMisplacedItem1Action ;
+    obot:hasAction ex:PutAwayMisplacedItem1Action ;
+    obot:hasAction ex:PickUpMisplacedItem2Action ;
+    obot:hasAction ex:PutAwayMisplacedItem2Action ;
+    obot:hasAction ex:OrganizeCounterAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:KitchenEnvironment .
+    obot:actsOn ex:KitchenEnvironment .
 
 ex:PickUpMisplacedItem1Action a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:RedJar ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:RedJar ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayMisplacedItem1Action a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:RedJar ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:RedJar ;
+    obot:isAffordedBy soma:PuttingDown ;
     dul:follows ex:PickUpMisplacedItem1Action .
 
 ex:PickUpMisplacedItem2Action a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BoxOfCrackers ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:BoxOfCrackers ;
+    obot:isAffordedBy soma:PickingUp ;
     dul:follows ex:PutAwayMisplacedItem1Action .
 
 ex:PutAwayMisplacedItem2Action a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BoxOfCrackers ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:BoxOfCrackers ;
+    obot:isAffordedBy soma:PuttingDown ;
     dul:follows ex:PickUpMisplacedItem2Action .
 
 ex:OrganizeCounterAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:KitchenCounter ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:KitchenCounter ;
+    obot:isAffordedBy soma:PuttingDown ;
     dul:follows ex:PutAwayMisplacedItem2Action .
 
-ex:RedJar a psr:Object ;
+ex:RedJar a obot:Object ;
     rdfs:label "Red Jar"@en .
 
-ex:BoxOfCrackers a psr:Object ;
+ex:BoxOfCrackers a obot:Object ;
     rdfs:label "Box of Crackers"@en .
 
-ex:KitchenCounter a psr:Component ;
+ex:KitchenCounter a obot:Component ;
     rdfs:label "Kitchen Counter"@en .
 
 ex:RobotAgent a dul:Agent ;
     rdfs:label "Robot Agent"@en .
 
-ex:KitchenEnvironment a psr:Component ;
+ex:KitchenEnvironment a obot:Component ;
     rdfs:label "Kitchen Environment"@en .
 
 ex:PickUpMisplacedItem1Action dul:precedes ex:PutAwayMisplacedItem1Action .

@@ -1,68 +1,68 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr/action#> .
+@prefix obot: <https://w3id.org/psr/action#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/data/> psr:Environment a owl:Class ;
+<http://example.org/data/> obot:Environment a owl:Class ;
     rdfs:subClassOf owl:Class ;
     rdfs:comment "An environment is an area or context in which components are found.".
 
-<http://example.org/data/> psr:Component a owl:Class ;
+<http://example.org/data/> obot:Component a owl:Class ;
     rdfs:subClassOf owl:Class ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions.".
 
-<http://example.org/data/> psr:Appliance a psr:Component ;
-    rdfs:subClassOf psr:Component ;
+<http://example.org/data/> obot:Appliance a obot:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:comment "An appliance is a type of component.".
 
-<http://example.org/data/> psr:Furniture a psr:Component ;
-    rdfs:subClassOf psr:Component ;
+<http://example.org/data/> obot:Furniture a obot:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:comment "A furniture is a type of component.".
 
-<http://example.org/data/> psr:Object a psr:Component ;
-    rdfs:subClassOf psr:Component ;
+<http://example.org/data/> obot:Object a obot:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:comment "An object is a type of component.".
 
-<http://example.org/data/> psr:Location a owl:Class ;
+<http://example.org/data/> obot:Location a owl:Class ;
     rdfs:subClassOf owl:Class ;
     rdfs:comment "A location is a specific component within the environment" .
 
-<http://example.org/data/> psr:CurrentLocation a psr:Location ;
-    rdfs:subClassOf psr:Location ;
+<http://example.org/data/> obot:CurrentLocation a obot:Location ;
+    rdfs:subClassOf obot:Location ;
     rdfs:comment "The current location of a component within the environment.".
 
-<http://example.org/data/> psr:StandardLocation a psr:Location ;
-    rdfs:subClassOf psr:Location ;
+<http://example.org/data/> obot:StandardLocation a obot:Location ;
+    rdfs:subClassOf obot:Location ;
     rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location.".
 
-<http://example.org/data/> psr:Affordance a owl:Class ;
+<http://example.org/data/> obot:Affordance a owl:Class ;
     rdfs:subClassOf owl:Class ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used.".
 
-<http://example.org/data/> psr:Opening a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:Opening a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Opening is an affordance that enables a component to be opened.".
 
-<http://example.org/data/> psr:Delivering a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:Delivering a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered.".
 
-<http://example.org/data/> psr:Holding a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:Holding a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Holding is an affordance that enables a component to be held.".
 
-<http://example.org/data/> psr:PickingUp a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:PickingUp a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up.".
 
-<http://example.org/data/> psr:PuttingDown a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:PuttingDown a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down.".
 
-<http://example.org/data/> psr:Pulling a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:Pulling a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled.".
 
-<http://example.org/data/> psr:Grabbing a psr:Affordance ;
-    rdfs:subClassOf psr:Affordance ;
+<http://example.org/data/> obot:Grabbing a obot:Affordance ;
+    rdfs:subClassOf obot:Affordance ;
     rdfs:comment "Grabbing is an affordance that enables a component to be grabbed.".

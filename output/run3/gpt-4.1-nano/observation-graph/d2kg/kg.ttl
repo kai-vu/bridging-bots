@@ -3,14 +3,14 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.ease-crc.org/ont/psr#> .
+@prefix obot:    <http://www.ease-crc.org/ont/psr#> .
 @prefix ex:     <http://example.org/data/> .
 
 #################################################
 # Define Environment
 #################################################
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     rdfs:label "Kitchen Environment"@en .
 
 #################################################
@@ -18,30 +18,30 @@ ex:KitchenEnvironment a psr:Environment ;
 #################################################
 
 # Kitchen counter
-ex:Counter a psr:Location ;
+ex:Counter a obot:Location ;
     rdfs:label "Kitchen Counter"@en .
 
 # Refrigerator
-ex:Refrigerator a psr:Component ;
+ex:Refrigerator a obot:Component ;
     rdfs:label "Refrigerator"@en .
 
 # Cabinets
-ex:UpperCabinets a psr:Component ;
+ex:UpperCabinets a obot:Component ;
     rdfs:label "Upper Cabinets"@en .
 
-ex:BaseCabinets a psr:Component ;
+ex:BaseCabinets a obot:Component ;
     rdfs:label "Base Cabinets"@en .
 
 # Dining table
-ex:DiningTable a psr:Component ;
+ex:DiningTable a obot:Component ;
     rdfs:label "Dining Table"@en .
 
 # Chair
-ex:Chair a psr:Component ;
+ex:Chair a obot:Component ;
     rdfs:label "White Cushioned Chair"@en .
 
 # Door
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
     rdfs:label "Door"@en .
 
 #################################################
@@ -49,39 +49,39 @@ ex:Door a psr:Component ;
 #################################################
 
 # Stacked bowls with checkered lid
-ex:StackedBowls a psr:Object ;
+ex:StackedBowls a obot:Object ;
     rdfs:label "Stacked Bowls with Checkered Lid"@en .
 
 # Red jello box
-ex:RedJelloBox a psr:Object ;
+ex:RedJelloBox a obot:Object ;
     rdfs:label "Red Jello Box"@en .
 
 # Rice Bubbles box
-ex:RiceBubblesBox a psr:Object ;
+ex:RiceBubblesBox a obot:Object ;
     rdfs:label "RICE BUBBLES"@en .
 
 # Chucky box
-ex:ChuckyBox a psr:Object ;
+ex:ChuckyBox a obot:Object ;
     rdfs:label "CHUCKY"@en .
 
 # Reusable cup with red/white pattern
-ex:ReusableCup a psr:Object ;
+ex:ReusableCup a obot:Object ;
     rdfs:label "Reusable Cup with Red and White Pattern"@en .
 
 # Water bottle with blue cap
-ex:WaterBottle a psr:Object ;
+ex:WaterBottle a obot:Object ;
     rdfs:label "Large Water Bottle with Blue Cap"@en .
 
 # Yellow ceramic mug
-ex:YellowMug a psr:Object ;
+ex:YellowMug a obot:Object ;
     rdfs:label "Yellow Ceramic Mug"@en .
 
 # Glass of wine
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Glass of Wine"@en .
 
 # Small frying pan
-ex:FryingPan a psr:Object ;
+ex:FryingPan a obot:Object ;
     rdfs:label "Small Frying Pan"@en .
 
 #################################################
@@ -95,14 +95,14 @@ ex:FryingPan a psr:Object ;
 # Reuse ex:WineGlass
 
 # Ceramic pitcher
-ex:CeramicPitcher a psr:Object ;
+ex:CeramicPitcher a obot:Object ;
     rdfs:label "Ceramic Pitcher"@en .
 
 # Large water bottle
 # Reuse ex:WaterBottle
 
 # Bowls/plates
-ex:BowlPlate a psr:Object ;
+ex:BowlPlate a obot:Object ;
     rdfs:label "Bowl or Plate"@en .
 
 #################################################
@@ -173,7 +173,7 @@ ex:ChairNearTable a dul:hasLocation ;
     geo:sfContains ex:DiningTable .
 
 # Place door
-ex:DoorInWall a psr:Object ;
+ex:DoorInWall a obot:Object ;
     rdfs:label "Door"@en .
 
 #################################################
@@ -190,9 +190,9 @@ ex:Counter dul:hasComponent ex:StackedBowls, ex:RedJelloBox, ex:RiceBubblesBox, 
 ex:DiningTable dul:hasComponent ex:RedJelloBox, ex:WineGlass, ex:CeramicPitcher, ex:WaterBottle, ex:BowlPlate, ex:Chair .
 
 # Cabinet and refrigerator details
-ex:UpperCabinets a psr:Component .
-ex:BaseCabinets a psr:Component .
-ex:Refrigerator a psr:Component .
+ex:UpperCabinets a obot:Component .
+ex:BaseCabinets a obot:Component .
+ex:Refrigerator a obot:Component .
 
 # Handle details could be added as components if needed, but are omitted for simplicity
 
@@ -201,14 +201,14 @@ ex:Refrigerator a psr:Component .
 #################################################
 
 # Exemplify some affordances for objects
-ex:Refrigerator psr:hasAffordance soma:Opening, soma:Closing .
+ex:Refrigerator obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:FryingPan psr:hasAffordance soma:Pushing, soma:Pulling .
+ex:FryingPan obot:hasAffordance soma:Pushing, soma:Pulling .
 
-ex:WaterBottle psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
+ex:WaterBottle obot:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
 
-ex:ChuckyBox psr:hasAffordance soma:Grasping .
+ex:ChuckyBox obot:hasAffordance soma:Grasping .
 
-ex:ReusableCup psr:hasAffordance soma:Grasping, soma:Holding .
+ex:ReusableCup obot:hasAffordance soma:Grasping, soma:Holding .
 
 # Additional affordances can be added similarly

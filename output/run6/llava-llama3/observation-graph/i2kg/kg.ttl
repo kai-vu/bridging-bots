@@ -1,6 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-@prefix psr: <http://example.org/data/>
+@prefix obot: <http://example.org/data/>
 
 :environment a owl:Class ;
     rdfs:label "Environment"@en ;
@@ -37,65 +37,65 @@
 :action a owl:Class ;
     rdfs:label "Action"@en .
 
-:closing a psr:Affordance ;
+:closing a obot:Affordance ;
     rdfs:label "Closing"@en .
 
-:opening a psr:Affordance ;
+:opening a obot:Affordance ;
     rdfs:label "Opening"@en .
 
-:holding a psr:Affordance ;
+:holding a obot:Affordance ;
     rdfs:label "Holding"@en .
 
-:picking-up a psr:Affordance ;
+:picking-up a obot:Affordance ;
     rdfs:label "Picking Up"@en .
 
-:putting-down a psr:Affordance ;
+:putting-down a obot:Affordance ;
     rdfs:label "Putting Down"@en .
 
-:pulling a psr:Affordance ;
+:pulling a obot:Affordance ;
     rdfs:label "Pulling"@en .
 
-:grasping a psr:Affordance ;
+:grasping a obot:Affordance ;
     rdfs:label "Grasping"@en .
 
-:on-top-of a psr:Affordance ;
+:on-top-of a obot:Affordance ;
     rdfs:label "On Top Of"@en .
 
-:contains a psr:Affordance ;
+:contains a obot:Affordance ;
     rdfs:label "Contains"@en .
 
-:is-within a psr:Affordance ;
+:is-within a obot:Affordance ;
     rdfs:label "Is Within"@en .
 
-:overlaps a psr:Affordance ;
+:overlaps a obot:Affordance ;
     rdfs:label "Overlaps"@en .
 
 :component1 a :component ;
-    owl:sameAs psr:Environment#component1 .
+    owl:sameAs obot:Environment#component1 .
 
 :component2 a :component ;
-    owl:sameAs psr:Environment#component2 .
+    owl:sameAs obot:Environment#component2 .
 
 :object1 a :object ;
-    owl:sameAs psr:Environment#object1 .
+    owl:sameAs obot:Environment#object1 .
 
 :object2 a :object ;
-    owl:sameAs psr:Environment#object2 .
+    owl:sameAs obot:Environment#object2 .
 
 :furniture1 a :furniture ;
-    owl:sameAs psr:Environment#furniture1 .
+    owl:sameAs obot:Environment#furniture1 .
 
 :appliance1 a :appliance ;
-    owl:sameAs psr:Environment#appliance1 .
+    owl:sameAs obot:Environment#appliance1 .
 
 :location1 a :location ;
-    owl:sameAs psr:Environment#location1 .
+    owl:sameAs obot:Environment#location1 .
 
 :current-location1 a :current-location ;
-    owl:sameAs psr:Environment#current-location1 .
+    owl:sameAs obot:Environment#current-location1 .
 
 :standard-location1 a :standard-location ;
-    owl:sameAs psr:Environment#standard-location1 .
+    owl:sameAs obot:Environment#standard-location1 .
 
 :action1 a :action ;
-    owl:sameAs psr:Environment#action1 .
+    owl:sameAs obot:Environment#action1 .

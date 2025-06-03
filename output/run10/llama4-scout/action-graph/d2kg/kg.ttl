@@ -5,69 +5,69 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:Workflow1 .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:Workflow1 .
 
-ex:Workflow1 a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction ;
-  psr:hasAction ex:ReturnItemsToStorageAction ;
-  psr:precedes ex:IdentifyMisplacedItemsAction ex:ReturnItemsToStorageAction .
+ex:Workflow1 a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction ;
+  obot:hasAction ex:ReturnItemsToStorageAction ;
+  obot:precedes ex:IdentifyMisplacedItemsAction ex:ReturnItemsToStorageAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Kitchen ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:Kitchen ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItems ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:MisplacedItems ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:Robot a dul:Agent .
 
-ex:Kitchen a psr:Component ;
+ex:Kitchen a obot:Component ;
   rdfs:label "Kitchen"@en .
 
-ex:MisplacedItems a psr:Object ;
+ex:MisplacedItems a obot:Object ;
   rdfs:label "Misplaced Items"@en .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Countertop"@en .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
   rdfs:label "Plate"@en ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:WhitePlate a ex:Plate ;
   rdfs:label "White Plate"@en ;
   ex:locatedOn ex:Countertop .
 
-ex:Table a psr:Component ;
+ex:Table a obot:Component ;
   rdfs:label "Table"@en .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
   rdfs:label "Mug"@en ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:YellowMug a ex:Mug ;
   rdfs:label "Yellow Mug"@en ;
   ex:locatedOn ex:Countertop .
 
-ex:PuzzleBox a psr:Object ;
+ex:PuzzleBox a obot:Object ;
   rdfs:label "Puzzle Box"@en ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:ChuckyPuzzleBox a ex:PuzzleBox ;
   rdfs:label "Chucky Puzzle Box"@en ;
   ex:locatedOn ex:Table .
 
-ex:Jar a psr:Object ;
+ex:Jar a obot:Object ;
   rdfs:label "Jar"@en ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:RedLidJar a ex:Jar ;
   rdfs:label "Red Lid Jar"@en ;
@@ -77,9 +77,9 @@ ex:RedAndWhiteLidJar a ex:Jar ;
   rdfs:label "Red and White Lid Jar"@en ;
   ex:locatedOn ex:Countertop .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
   rdfs:label "Jello Box"@en ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:AlpenSaltBox a ex:JelloBox ;
   rdfs:label "Alpen Salt Box"@en ;
@@ -89,7 +89,7 @@ ex:RiceBubblesBox a ex:JelloBox ;
   rdfs:label "Rice Bubbles Box"@en ;
   ex:locatedOn ex:Countertop .
 
-ex:StorageLocation a psr:Component ;
+ex:StorageLocation a obot:Component ;
   rdfs:label "Storage Location"@en .
 
 ex: Cupboard a ex:StorageLocation ;
@@ -97,88 +97,88 @@ ex: Cupboard a ex:StorageLocation ;
 
 ex:IdentifyMisplacedItemsAction1 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:WhitePlate ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:WhitePlate ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnPlateToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:WhitePlate ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction1 .
+  obot:actsOn ex:WhitePlate ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction1 .
 
 ex:IdentifyMisplacedItemsAction2 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowMug ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:YellowMug ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnMugToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowMug ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction2 .
+  obot:actsOn ex:YellowMug ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction2 .
 
 ex:IdentifyMisplacedItemsAction3 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:ChuckyPuzzleBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:ChuckyPuzzleBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnPuzzleBoxToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:ChuckyPuzzleBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction3 .
+  obot:actsOn ex:ChuckyPuzzleBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction3 .
 
 ex:IdentifyMisplacedItemsAction4 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedLidJar ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:RedLidJar ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnJarToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedLidJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction4 .
+  obot:actsOn ex:RedLidJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction4 .
 
 ex:IdentifyMisplacedItemsAction5 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteLidJar ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:RedAndWhiteLidJar ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnRedAndWhiteLidJarToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteLidJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction5 .
+  obot:actsOn ex:RedAndWhiteLidJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction5 .
 
 ex:IdentifyMisplacedItemsAction6 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:AlpenSaltBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:AlpenSaltBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnAlpenSaltBoxToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:AlpenSaltBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction6 .
+  obot:actsOn ex:AlpenSaltBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction6 .
 
 ex:IdentifyMisplacedItemsAction7 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RiceBubblesBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:RiceBubblesBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnRiceBubblesBoxToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RiceBubblesBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction7 .
+  obot:actsOn ex:RiceBubblesBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction7 .
 
 ex:IdentifyMisplacedItemsAction8 a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JelloBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:actsOn ex:JelloBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnJelloBoxToStorageAction a dul:Action ;
   soma:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JelloBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:IdentifyMisplacedItemsAction8 .
+  obot:actsOn ex:JelloBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:IdentifyMisplacedItemsAction8 .

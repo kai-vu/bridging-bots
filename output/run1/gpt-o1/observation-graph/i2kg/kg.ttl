@@ -3,10 +3,10 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     dul:hasComponent ex:Refrigerator,
                      ex:KitchenTable,
                      ex:DiningChair1,
@@ -35,104 +35,104 @@ ex:KitchenEnvironment a psr:Environment ;
 # Furniture, Appliances, and Other Components
 #################################################################
 
-ex:Refrigerator a psr:Appliance ;
-    psr:hasAffordance soma:Opening,
+ex:Refrigerator a obot:Appliance ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing,
                        soma:Holding .
 
-ex:KitchenTable a psr:Furniture ;
-    psr:hasAffordance soma:Holding,
+ex:KitchenTable a obot:Furniture ;
+    obot:hasAffordance soma:Holding,
                        soma:PuttingDown .
 
-ex:DiningChair1 a psr:Furniture ;
-    psr:hasAffordance soma:Holding .
-ex:DiningChair2 a psr:Furniture ;
-    psr:hasAffordance soma:Holding .
-ex:DiningChair3 a psr:Furniture ;
-    psr:hasAffordance soma:Holding .
-ex:DiningChair4 a psr:Furniture ;
-    psr:hasAffordance soma:Holding .
+ex:DiningChair1 a obot:Furniture ;
+    obot:hasAffordance soma:Holding .
+ex:DiningChair2 a obot:Furniture ;
+    obot:hasAffordance soma:Holding .
+ex:DiningChair3 a obot:Furniture ;
+    obot:hasAffordance soma:Holding .
+ex:DiningChair4 a obot:Furniture ;
+    obot:hasAffordance soma:Holding .
 
-ex:Counter a psr:Furniture ;
-    psr:hasAffordance soma:Holding,
+ex:Counter a obot:Furniture ;
+    obot:hasAffordance soma:Holding,
                        soma:PuttingDown .
 
-ex:UpperCabinets a psr:Furniture ;
-    psr:hasAffordance soma:Holding,
+ex:UpperCabinets a obot:Furniture ;
+    obot:hasAffordance soma:Holding,
                        soma:Opening,
                        soma:Closing .
-ex:LowerCabinets a psr:Furniture ;
-    psr:hasAffordance soma:Holding,
+ex:LowerCabinets a obot:Furniture ;
+    obot:hasAffordance soma:Holding,
                        soma:Opening,
                        soma:Closing .
 
-ex:KitchenDoor a psr:Object ;
-    psr:hasAffordance soma:Opening,
+ex:KitchenDoor a obot:Object ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing .
 
-ex:Window a psr:Object ;
-    psr:hasAffordance soma:Opening,
+ex:Window a obot:Object ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing .
 
 #################################################################
 # Current Locations
 #################################################################
 
-ex:CountertopLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Counter .
+ex:CountertopLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Counter .
 
-ex:TabletopLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:KitchenTable .
+ex:TabletopLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:KitchenTable .
 
 #################################################################
 # Objects on the Counter
 #################################################################
 
-ex:StrawberryJam a psr:Object ;
+ex:StrawberryJam a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:AlpenSalt a psr:Object ;
+ex:AlpenSalt a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:RiceBubbles a psr:Object ;
+ex:RiceBubbles a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:ChuckyCereal a psr:Object ;
+ex:ChuckyCereal a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:OrangeMug a psr:Object ;
+ex:OrangeMug a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:CookingPot a psr:Object ;
+ex:CookingPot a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:Plates a psr:Object ;
+ex:Plates a obot:Object ;
     dul:hasLocation ex:CountertopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
@@ -140,26 +140,26 @@ ex:Plates a psr:Object ;
 # Objects on the Table
 #################################################################
 
-ex:EvianBottle a psr:Object ;
+ex:EvianBottle a obot:Object ;
     dul:hasLocation ex:TabletopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:FruitBowl a psr:Object ;
+ex:FruitBowl a obot:Object ;
     dul:hasLocation ex:TabletopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:SnackBox a psr:Object ;
+ex:SnackBox a obot:Object ;
     dul:hasLocation ex:TabletopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     dul:hasLocation ex:TabletopLocation ;
-    psr:hasAffordance soma:PickingUp,
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown,
                        soma:Holding .

@@ -3,139 +3,139 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en .
 
-ex:BlackCabinets a psr:Appliance ;
+ex:BlackCabinets a obot:Appliance ;
     rdfs:label "Black Cabinets"@en ;
     dul:hasLocation ex:AgainstWall ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:WhiteRefrigerator a psr:Appliance ;
+ex:WhiteRefrigerator a obot:Appliance ;
     rdfs:label "White Refrigerator"@en ;
     dul:hasLocation ex:AdjacentToBlackCabinets ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation ex:SeparateArea ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:WhiteChairs a psr:Furniture ;
+ex:WhiteChairs a obot:Furniture ;
     rdfs:label "White Chairs"@en ;
     dul:hasLocation ex:AroundDiningTable ;
-    psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
+    obot:hasAffordance soma:PickingUp ;
+    obot:hasAffordance soma:PuttingDown .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Sink"@en ;
     dul:hasLocation ex:OnCountertop ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:StoveTop a psr:Appliance ;
+ex:StoveTop a obot:Appliance ;
     rdfs:label "Stove Top"@en ;
     dul:hasLocation ex:OnCountertop ;
-    psr:hasAffordance soma:Pushing .
+    obot:hasAffordance soma:Pushing .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     rdfs:label "Range Hood"@en ;
     dul:hasLocation ex:AboveStoveTop ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:BoxesOfFood a psr:Object ;
+ex:BoxesOfFood a obot:Object ;
     rdfs:label "Boxes of Food"@en ;
     dul:hasLocation ex:OnCountertopAndDiningTable .
 
-ex:ChuckyPopcorn a psr:Object ;
+ex:ChuckyPopcorn a obot:Object ;
     rdfs:label "Chucky Popcorn"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:Jello a psr:Object ;
+ex:Jello a obot:Object ;
     rdfs:label "Jello"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:JarsOfJam a psr:Object ;
+ex:JarsOfJam a obot:Object ;
     rdfs:label "Jars of Jam"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     rdfs:label "Pitcher"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
     rdfs:label "Bottle of Water"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     rdfs:label "Lemons"@en ;
     dul:hasLocation ex:OnCountertop .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     rdfs:label "Book"@en ;
     dul:hasLocation ex:OnDiningTable .
 
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     rdfs:label "Stack of Plates"@en ;
     dul:hasLocation ex:OnDiningTable .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Wine Glass"@en ;
     dul:hasLocation ex:OnDiningTable .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     rdfs:label "Mug"@en ;
     dul:hasLocation ex:OnDiningTable .
 
-ex:Door a psr:Object ;
+ex:Door a obot:Object ;
     rdfs:label "Door"@en ;
     dul:hasLocation ex:LeadingOutOfRoom ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:AgainstWall a psr:Location ;
-    psr:onTopOf ex:Wall .
+ex:AgainstWall a obot:Location ;
+    obot:onTopOf ex:Wall .
 
-ex:AdjacentToBlackCabinets a psr:Location ;
+ex:AdjacentToBlackCabinets a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:SeparateArea a psr:Location ;
+ex:SeparateArea a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:AroundDiningTable a psr:Location ;
+ex:AroundDiningTable a obot:Location ;
     geo:sfWithin ex:SeparateArea .
 
-ex:OnCountertop a psr:Location ;
-    psr:onTopOf ex:Countertop .
+ex:OnCountertop a obot:Location ;
+    obot:onTopOf ex:Countertop .
 
-ex:AboveStoveTop a psr:Location ;
+ex:AboveStoveTop a obot:Location ;
     geo:sfOverlaps ex:StoveTop .
 
-ex:OnDiningTable a psr:Location ;
-    psr:onTopOf ex:DiningTable .
+ex:OnDiningTable a obot:Location ;
+    obot:onTopOf ex:DiningTable .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
     rdfs:label "Countertop"@en .
 
-ex:Wall a psr:Component ;
+ex:Wall a obot:Component ;
     rdfs:label "Wall"@en .
 
-ex:ParquetFloor a psr:Component ;
+ex:ParquetFloor a obot:Component ;
     rdfs:label "Parquet Floor"@en .
 
-ex:HangingLightFixture a psr:Object ;
+ex:HangingLightFixture a obot:Object ;
     rdfs:label "Hanging Light Fixture"@en ;
     dul:hasLocation ex:OnCeiling .
 
-ex:OnCeiling a psr:Location ;
-    psr:onTopOf ex:Ceiling .
+ex:OnCeiling a obot:Location ;
+    obot:onTopOf ex:Ceiling .
 
-ex:Ceiling a psr:Component ;
+ex:Ceiling a obot:Component ;
     rdfs:label "Ceiling"@en .
 
 ex:Kitchen dul:hasComponent ex:BlackCabinets ;

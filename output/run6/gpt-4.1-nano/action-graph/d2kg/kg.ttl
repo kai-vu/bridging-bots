@@ -5,77 +5,77 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 
 @prefix ex: <http://example.org/data/> .
 
 # Define actions for locating, grasping, and returning misplaced items to storage locations in sequence
 
 # Action 1: Identify misplaced items on the countertop
-ex:IdentifyMisplacedItems a psr:Instruction ;
+ex:IdentifyMisplacedItems a obot:Instruction ;
     rdfs:hasNaturalLanguage "Identify all misplaced items on the countertops."@en ;
-    psr:hasWorkflow ex:Workflow1 .
+    obot:hasWorkflow ex:Workflow1 .
 
-ex:Workflow1 a psr:Workflow ;
-    psr:hasAction ex:LocateItemsOnCountertop .
+ex:Workflow1 a obot:Workflow ;
+    obot:hasAction ex:LocateItemsOnCountertop .
 
 ex:LocateItemsOnCountertop a dul:Action ;
     rdfs:label "Locate misplaced items on countertop"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Countertop .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:Countertop .
 
 # Action 2: For each misplaced item, grasp the item
 # Example for a specific item, e.g., the "JELLO" box
 ex:GraspJELLO a dul:Action ;
     rdfs:label "Grasp the JELLO box"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:JELLO .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:JELLO .
 
 # Action 3: Move to storage location based on item type
 ex:MoveToStorageForJELLO a dul:Action ;
     rdfs:label "Move to storage location for JELLO"@en ;
-    psr:isPerformedBy ex:RobotAgent .
+    obot:isPerformedBy ex:RobotAgent .
 
 # Action 4: Return the item to its storage location, e.g., pantry or shelf
 ex:ReturnJELLOtoStorage a dul:Action ;
     rdfs:label "Return JELLO to its storage location"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:JELLO ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:JELLO ;
+    obot:isAffordedBy soma:PuttingDown .
 
 # Repeat similar sequence for other misplaced items: jars, plates, etc.
 # E.g., for the small carton of Alpine salt
 ex:LocateSalt a dul:Action ;
     rdfs:label "Locate small carton of Alpine salt"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:SaltCarton .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:SaltCarton .
 
 ex:GraspSalt a dul:Action ;
     rdfs:label "Grasp the Alpine salt carton"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:SaltCarton .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:SaltCarton .
 
 ex:MoveToSaltStorage a dul:Action ;
     rdfs:label "Move to salt storage"@en ;
-    psr:isPerformedBy ex:RobotAgent .
+    obot:isPerformedBy ex:RobotAgent .
 
 ex:ReturnSaltToStorage a dul:Action ;
     rdfs:label "Return Alpine salt to storage"@en ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:SaltCarton ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:actsOn ex:SaltCarton ;
+    obot:isAffordedBy soma:PuttingDown .
 
 # Repeat for all identified misplaced items (not exhaustively listed here for brevity)
 
 # Finalize workflow with all actions sequenced
 # Example sequence links
-ex:Workflow1 psr:hasAction ex:LocateItemsOnCountertop ;
-    psr:hasAction ex:LocateSalt ;
-    psr:hasAction ex:GraspJELLO ;
-    psr:hasAction ex:MoveToStorageForJELLO ;
-    psr:hasAction ex:ReturnJELLOtoStorage ;
-    psr:hasAction ex:GraspSalt ;
-    psr:hasAction ex:MoveToSaltStorage ;
-    psr:hasAction ex:ReturnSaltToStorage .
+ex:Workflow1 obot:hasAction ex:LocateItemsOnCountertop ;
+    obot:hasAction ex:LocateSalt ;
+    obot:hasAction ex:GraspJELLO ;
+    obot:hasAction ex:MoveToStorageForJELLO ;
+    obot:hasAction ex:ReturnJELLOtoStorage ;
+    obot:hasAction ex:GraspSalt ;
+    obot:hasAction ex:MoveToSaltStorage ;
+    obot:hasAction ex:ReturnSaltToStorage .
 
 # Note: Additional actions for other objects (plates, bottles, etc.) follow similar pattern, ensuring all misplaced items are identified, grasped, moved, and returned in proper order, respecting the object properties and affordances.

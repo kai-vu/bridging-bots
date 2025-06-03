@@ -5,103 +5,103 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:instruction1 a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
-    psr:hasWorkflow ex:workflow1 .
+ex:instruction1 a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    obot:hasWorkflow ex:workflow1 .
 
-ex:workflow1 a psr:Workflow ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10 .
+ex:workflow1 a obot:Workflow ;
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10 .
 
 ex:action1 a dul:Action ;
-    psr:precedes ex:action2 ;
+    obot:precedes ex:action2 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:object1 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:object1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:object1 a psr:Object ;
+ex:object1 a obot:Object ;
     rdfs:label "coffee pot" .
 
 ex:action2 a dul:Action ;
-    psr:precedes ex:action3 ;
+    obot:precedes ex:action3 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:component1 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:component1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:component1 a psr:Component ;
+ex:component1 a obot:Component ;
     rdfs:label "cabinet" .
 
 ex:action3 a dul:Action ;
-    psr:precedes ex:action4 ;
+    obot:precedes ex:action4 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:object2 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:object2 ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:object2 a psr:Object ;
+ex:object2 a obot:Object ;
     rdfs:label "cups" .
 
 ex:action4 a dul:Action ;
-    psr:precedes ex:action5 ;
+    obot:precedes ex:action5 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:component2 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:component2 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:component2 a psr:Component ;
+ex:component2 a obot:Component ;
     rdfs:label "dishwasher" .
 
 ex:action5 a dul:Action ;
-    psr:precedes ex:action6 ;
+    obot:precedes ex:action6 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:object3 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:object3 ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:object3 a psr:Object ;
+ex:object3 a obot:Object ;
     rdfs:label "cereal box" .
 
 ex:action6 a dul:Action ;
-    psr:precedes ex:action7 ;
+    obot:precedes ex:action7 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:component3 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:component3 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:component3 a psr:Component ;
+ex:component3 a obot:Component ;
     rdfs:label "pantry" .
 
 ex:action7 a dul:Action ;
-    psr:precedes ex:action8 ;
+    obot:precedes ex:action8 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:object4 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:object4 ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:object4 a psr:Object ;
+ex:object4 a obot:Object ;
     rdfs:label "tin can" .
 
 ex:action8 a dul:Action ;
-    psr:precedes ex:action9 ;
+    obot:precedes ex:action9 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:component4 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:component4 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:component4 a psr:Component ;
+ex:component4 a obot:Component ;
     rdfs:label "storage shelf" .
 
 ex:action9 a dul:Action ;
-    psr:precedes ex:action10 ;
+    obot:precedes ex:action10 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:object5 ;
-    psr:isAffordedBy soma:Grasping .
+    obot:actsOn ex:object5 ;
+    obot:isAffordedBy soma:Grasping .
 
-ex:object5 a psr:Object ;
+ex:object5 a obot:Object ;
     rdfs:label "microwave" .
 
 ex:action10 a dul:Action ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:component5 ;
-    psr:isAffordedBy soma:Pushing .
+    obot:actsOn ex:component5 ;
+    obot:isAffordedBy soma:Pushing .
 
-ex:component5 a psr:Component ;
+ex:component5 a obot:Component ;
     rdfs:label "refrigerator" .
 
 ex:agent1 a dul:Agent ;

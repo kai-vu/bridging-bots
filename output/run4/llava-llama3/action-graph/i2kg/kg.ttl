@@ -1,29 +1,29 @@
-@prefix psr: <https://w3id.org/psr/> .
+@prefix obot: <https://w3id.org/psr/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dul: <https://w3id.org/psr/actions/> .
 
-@namespace a psr:ActionProperty ;
+@namespace a obot:ActionProperty ;
 
-:Instruction1 a psr:Instruction ;
+:Instruction1 a obot:Instruction ;
    :hasWorkflow :Workflow1 ;
    :isPerformedBy :RobotAgent ;
 
-:Instruction2 a psr:Instruction ;
+:Instruction2 a obot:Instruction ;
    :hasWorkflow :Workflow2 ;
    :isPerformedBy :RobotAgent ;
 
-:Instruction3 a psr:Instruction ;
+:Instruction3 a obot:Instruction ;
    :hasWorkflow :Workflow3 ;
    :isPerformedBy :RobotAgent ;
 
-:Workflow1 a psr:Workflow ;
+:Workflow1 a obot:Workflow ;
    :precedes :Action2 ;
 
-:Workflow2 a psr:Workflow ;
+:Workflow2 a obot:Workflow ;
    :precedes :Action4 ;
 
-:Workflow3 a psr:Workflow ;
+:Workflow3 a obot:Workflow ;
    :precedes :Action6 ;
 
 :RobotAgent a dul:Agent ;

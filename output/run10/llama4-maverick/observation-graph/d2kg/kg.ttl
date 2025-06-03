@@ -3,110 +3,110 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     dul:hasComponent ex:KitchenCabinets, ex:Refrigerator, ex:MarbleCountertop, ex:WoodenFloor .
 
-ex:KitchenCabinets a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:KitchenCabinets a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:CurrentKitchenCabinetsLocation .
 
-ex:CurrentKitchenCabinetsLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:WoodenFloor ;
+ex:CurrentKitchenCabinetsLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:WoodenFloor ;
     geo:sfWithin ex:KitchenEnvironment ;
     geo:sfAdjacentTo ex:Refrigerator .
 
-ex:Refrigerator a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Refrigerator a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:CurrentRefrigeratorLocation .
 
-ex:CurrentRefrigeratorLocation a psr:CurrentLocation ;
+ex:CurrentRefrigeratorLocation a obot:CurrentLocation ;
     geo:sfWithin ex:KitchenEnvironment .
 
-ex:MarbleCountertop a psr:Furniture ;
-    psr:hasAffordance soma:Holding, soma:PuttingDown ;
+ex:MarbleCountertop a obot:Furniture ;
+    obot:hasAffordance soma:Holding, soma:PuttingDown ;
     dul:hasLocation ex:CurrentMarbleCountertopLocation .
 
-ex:CurrentMarbleCountertopLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:KitchenCabinets ;
+ex:CurrentMarbleCountertopLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:KitchenCabinets ;
     geo:sfWithin ex:KitchenEnvironment .
 
-ex:WoodenFloor a psr:Object ;
+ex:WoodenFloor a obot:Object ;
     dul:hasLocation ex:CurrentWoodenFloorLocation .
 
-ex:CurrentWoodenFloorLocation a psr:CurrentLocation ;
+ex:CurrentWoodenFloorLocation a obot:CurrentLocation ;
     geo:sfWithin ex:KitchenEnvironment .
 
-ex:DiningRoomEnvironment a psr:Environment ;
+ex:DiningRoomEnvironment a obot:Environment ;
     dul:hasComponent ex:DiningTable, ex:DiningChairs, ex:Lemons, ex:Laptop, ex:Book, ex:LightFixture .
 
-ex:DiningTable a psr:Furniture ;
-    psr:hasAffordance soma:Holding, soma:PuttingDown ;
+ex:DiningTable a obot:Furniture ;
+    obot:hasAffordance soma:Holding, soma:PuttingDown ;
     dul:hasLocation ex:CurrentDiningTableLocation .
 
-ex:CurrentDiningTableLocation a psr:CurrentLocation ;
+ex:CurrentDiningTableLocation a obot:CurrentLocation ;
     geo:sfWithin ex:DiningRoomEnvironment .
 
-ex:DiningChairs a psr:Furniture ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown ;
+ex:DiningChairs a obot:Furniture ;
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown ;
     dul:hasLocation ex:CurrentDiningChairsLocation .
 
-ex:CurrentDiningChairsLocation a psr:CurrentLocation ;
+ex:CurrentDiningChairsLocation a obot:CurrentLocation ;
     geo:sfWithin ex:DiningRoomEnvironment .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     dul:hasLocation ex:CurrentLemonsLocation .
 
-ex:CurrentLemonsLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:CurrentLemonsLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
-ex:Laptop a psr:Object ;
+ex:Laptop a obot:Object ;
     dul:hasLocation ex:CurrentLaptopLocation .
 
-ex:CurrentLaptopLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:CurrentLaptopLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     dul:hasLocation ex:CurrentBookLocation .
 
-ex:CurrentBookLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:CurrentBookLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
-ex:LightFixture a psr:Object ;
+ex:LightFixture a obot:Object ;
     dul:hasLocation ex:CurrentLightFixtureLocation .
 
-ex:CurrentLightFixtureLocation a psr:CurrentLocation ;
+ex:CurrentLightFixtureLocation a obot:CurrentLocation ;
     geo:sfWithin ex:DiningRoomEnvironment .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:CurrentSinkLocation .
 
-ex:CurrentSinkLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:MarbleCountertop .
+ex:CurrentSinkLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:MarbleCountertop .
 
-ex:Stove a psr:Appliance ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff ;
+ex:Stove a obot:Appliance ;
+    obot:hasAffordance soma:TurningOn, soma:TurningOff ;
     dul:hasLocation ex:CurrentStoveLocation .
 
-ex:CurrentStoveLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:MarbleCountertop .
+ex:CurrentStoveLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:MarbleCountertop .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:CurrentPotLocation .
 
-ex:CurrentPotLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Stove .
+ex:CurrentPotLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Stove .
 
-ex:Mirror a psr:Object ;
+ex:Mirror a obot:Object ;
     dul:hasLocation ex:CurrentMirrorLocation .
 
-ex:CurrentMirrorLocation a psr:CurrentLocation ;
+ex:CurrentMirrorLocation a obot:CurrentLocation ;
     geo:sfWithin ex:KitchenEnvironment .
 
-ex:KitchenExhaustHood a psr:Appliance ;
+ex:KitchenExhaustHood a obot:Appliance ;
     dul:hasLocation ex:CurrentKitchenExhaustHoodLocation .
 
-ex:CurrentKitchenExhaustHoodLocation a psr:CurrentLocation ;
+ex:CurrentKitchenExhaustHoodLocation a obot:CurrentLocation ;
     geo:sfWithin ex:KitchenEnvironment .

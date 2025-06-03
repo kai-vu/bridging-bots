@@ -5,113 +5,113 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
-psr:Instruction_1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow_1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+obot:Instruction_1 a obot:Instruction ;
+    obot:hasWorkflow obot:Workflow_1 ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
 
-psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8, psr:Action_9, psr:Action_10, psr:Action_11, psr:Action_12 .
+obot:Workflow_1 a obot:Workflow ;
+    obot:hasAction obot:Action_1, obot:Action_2, obot:Action_3, obot:Action_4, obot:Action_5, obot:Action_6, obot:Action_7, obot:Action_8, obot:Action_9, obot:Action_10, obot:Action_11, obot:Action_12 .
 
-psr:Action_1 a dul:Action ;
+obot:Action_1 a dul:Action ;
     rdfs:label "Pick up bottle"@en ;
-    psr:actsOn psr:Object_Bottle ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes psr:Action_2 .
+    obot:actsOn obot:Object_Bottle ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes obot:Action_2 .
 
-psr:Action_2 a dul:Action ;
+obot:Action_2 a dul:Action ;
     rdfs:label "Put down bottle"@en ;
-    psr:actsOn psr:Object_Bottle ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_1 ;
-    psr:precedes psr:Action_3 .
+    obot:actsOn obot:Object_Bottle ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_1 ;
+    obot:precedes obot:Action_3 .
 
-psr:Action_3 a dul:Action ;
+obot:Action_3 a dul:Action ;
     rdfs:label "Open fridge"@en ;
-    psr:actsOn psr:Component_Fridge ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:Opening ;
-    psr:follows psr:Action_2 ;
-    psr:precedes psr:Action_4 .
+    obot:actsOn obot:Component_Fridge ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:Opening ;
+    obot:follows obot:Action_2 ;
+    obot:precedes obot:Action_4 .
 
-psr:Action_4 a dul:Action ;
+obot:Action_4 a dul:Action ;
     rdfs:label "Put bottle in fridge"@en ;
-    psr:actsOn psr:Object_Bottle ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_3 ;
-    psr:precedes psr:Action_5 .
+    obot:actsOn obot:Object_Bottle ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_3 ;
+    obot:precedes obot:Action_5 .
 
-psr:Action_5 a dul:Action ;
+obot:Action_5 a dul:Action ;
     rdfs:label "Close fridge"@en ;
-    psr:actsOn psr:Component_Fridge ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows psr:Action_4 ;
-    psr:precedes psr:Action_6 .
+    obot:actsOn obot:Component_Fridge ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows obot:Action_4 ;
+    obot:precedes obot:Action_6 .
 
-psr:Action_6 a dul:Action ;
+obot:Action_6 a dul:Action ;
     rdfs:label "Pick up Jell-O"@en ;
-    psr:actsOn psr:Object_JellO ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:Action_5 ;
-    psr:precedes psr:Action_7 .
+    obot:actsOn obot:Object_JellO ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows obot:Action_5 ;
+    obot:precedes obot:Action_7 .
 
-psr:Action_7 a dul:Action ;
+obot:Action_7 a dul:Action ;
     rdfs:label "Put Jell-O away"@en ;
-    psr:actsOn psr:Object_JellO ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_6 ;
-    psr:precedes psr:Action_8 .
+    obot:actsOn obot:Object_JellO ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_6 ;
+    obot:precedes obot:Action_8 .
 
-psr:Action_8 a dul:Action ;
+obot:Action_8 a dul:Action ;
     rdfs:label "Pick up Alpen Salt"@en ;
-    psr:actsOn psr:Object_AlpenSalt ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:Action_7 ;
-    psr:precedes psr:Action_9 .
+    obot:actsOn obot:Object_AlpenSalt ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows obot:Action_7 ;
+    obot:precedes obot:Action_9 .
 
-psr:Action_9 a dul:Action ;
+obot:Action_9 a dul:Action ;
     rdfs:label "Put Alpen Salt away"@en ;
-    psr:actsOn psr:Object_AlpenSalt ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_8 ;
-    psr:precedes psr:Action_10 .
+    obot:actsOn obot:Object_AlpenSalt ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_8 ;
+    obot:precedes obot:Action_10 .
 
-psr:Action_10 a dul:Action ;
+obot:Action_10 a dul:Action ;
     rdfs:label "Pick up cookie box"@en ;
-    psr:actsOn psr:Object_CookieBox ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:follows psr:Action_9 ;
-    psr:precedes psr:Action_11 .
+    obot:actsOn obot:Object_CookieBox ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:follows obot:Action_9 ;
+    obot:precedes obot:Action_11 .
 
-psr:Action_11 a dul:Action ;
+obot:Action_11 a dul:Action ;
     rdfs:label "Put cookie box away"@en ;
-    psr:actsOn psr:Object_CookieBox ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_10 ;
-    psr:precedes psr:Action_12 .
+    obot:actsOn obot:Object_CookieBox ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_10 ;
+    obot:precedes obot:Action_12 .
 
-psr:Action_12 a dul:Action ;
+obot:Action_12 a dul:Action ;
     rdfs:label "Organize remaining items"@en ;
-    psr:actsOn psr:Component_KitchenCounter ;
-    soma:isPerformedBy psr:Agent_Robot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:Action_11 .
+    obot:actsOn obot:Component_KitchenCounter ;
+    soma:isPerformedBy obot:Agent_Robot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:Action_11 .
 
-psr:Object_Bottle a psr:Object .
-psr:Object_JellO a psr:Object .
-psr:Object_AlpenSalt a psr:Object .
-psr:Object_CookieBox a psr:Object .
-psr:Component_Fridge a psr:Component .
-psr:Component_KitchenCounter a psr:Component .
-psr:Agent_Robot a dul:Agent .
+obot:Object_Bottle a obot:Object .
+obot:Object_JellO a obot:Object .
+obot:Object_AlpenSalt a obot:Object .
+obot:Object_CookieBox a obot:Object .
+obot:Component_Fridge a obot:Component .
+obot:Component_KitchenCounter a obot:Component .
+obot:Agent_Robot a dul:Agent .

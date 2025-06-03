@@ -3,94 +3,94 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.ease-crc.org/ont/SOMA.owl#> .
+@prefix obot:    <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Define Environment: Kitchen
-ex:kitchen a psr:Environment ;
+ex:kitchen a obot:Environment ;
     rdfs:label "Kitchen Environment"@en .
 
 # Define main environment and components
-ex:countertop a psr:Location ;
+ex:countertop a obot:Location ;
     rdfs:label "Countertop"@en ;
     dul:hasComponent ex:foodItems, ex:objects, ex:containers, ex:countertopSurface .
 
-ex:foodItems a psr:Object ;
+ex:foodItems a obot:Object ;
     rdfs:label "Food Items on Countertop"@en .
 
-ex:boxJello a psr:Object ;
+ex:boxJello a obot:Object ;
     rdfs:label "Box of Jello"@en ;
     dul:hasLocation ex:countertop .
 
-ex:riceBubblesBox a psr:Object ;
+ex:riceBubblesBox a obot:Object ;
     rdfs:label "Box of Rice Bubbles"@en ;
     dul:hasLocation ex:countertop .
 
-ex:shortbreadPack a psr:Object ;
+ex:shortbreadPack a obot:Object ;
     rdfs:label "Pack of Shortbread"@en ;
     dul:hasLocation ex:countertop .
 
-ex:jug a psr:Object ;
+ex:jug a obot:Object ;
     rdfs:label "Jug"@en ;
     dul:hasLocation ex:countertop .
 
-ex:glass1 a psr:Object ;
+ex:glass1 a obot:Object ;
     rdfs:label "Glass 1"@en ;
     dul:hasLocation ex:countertop .
 
-ex:glass2 a psr:Object ;
+ex:glass2 a obot:Object ;
     rdfs:label "Glass 2"@en ;
     dul:hasLocation ex:countertop .
 
-ex:bottleWater a psr:Object ;
+ex:bottleWater a obot:Object ;
     rdfs:label "Bottle of Water"@en ;
     dul:hasLocation ex:countertop .
 
-ex:childFaceBox a psr:Object ;
+ex:childFaceBox a obot:Object ;
     rdfs:label "Box with Child's Face"@en ;
     dul:hasLocation ex:countertop .
 
 # Define objects stacked or nested on the counter
-ex:plates a psr:Object ;
+ex:plates a obot:Object ;
     rdfs:label "Plates with Food Items"@en ;
     dul:hasLocation ex:countertop .
 
 # Define Wall Above Counter
-ex:wallAboveCounter a psr:Object ;
+ex:wallAboveCounter a obot:Object ;
     rdfs:label "Wall above Counter"@en .
 
-ex:smallSquareFrame a psr:Object ;
+ex:smallSquareFrame a obot:Object ;
     rdfs:label "Small Square Wooden Frame or Window"@en ;
     dul:hasLocation ex:wallAboveCounter .
 
 # Define Wall with Door
-ex:wallWithDoor a psr:Object ;
+ex:wallWithDoor a obot:Object ;
     rdfs:label "Wall with Door"@en .
 
-ex:door a psr:Object ;
+ex:door a obot:Object ;
     rdfs:label "White Door with Black Handle"@en ;
     dul:hasLocation ex:wallWithDoor .
 
 # Position of door (slightly open)
-ex:doorPosition a psr:Location ;
+ex:doorPosition a obot:Location ;
     rdfs:label "Door Slightly Open"@en ;
     geo:sfWithin ex:door .
 
 # Define Cabinet above Counter
-ex:blackCabinets a psr:Object ;
+ex:blackCabinets a obot:Object ;
     rdfs:label "Black Cabinets with Blue Handles"@en ;
     dul:hasLocation ex:countertop .
 
-ex:rangeHood a psr:Object ;
+ex:rangeHood a obot:Object ;
     rdfs:label "Wooden Range Hood"@en ;
     dul:hasLocation ex:blackCabinets .
 
 # Define Floor
-ex:floor a psr:Object ;
+ex:floor a obot:Object ;
     rdfs:label "Wooden Floor with Parquet Pattern"@en .
 
 # Define Ceiling Light
-ex:ceilingLight a psr:Object ;
+ex:ceilingLight a obot:Object ;
     rdfs:label "Round Ceiling Light"@en .
 
 # Define environment layout relations
@@ -103,12 +103,12 @@ ex:countertop dul:hasComponent ex:bottleWater ;
 ex:countertop dul:hasComponent ex:childFaceBox ;
 ex:countertop dul:hasComponent ex:containers .
 
-ex:foodItems a psr:Object ;
+ex:foodItems a obot:Object ;
     rdfs:label "Food Items"@en .
 
 # Relations to specify positions and containment
 ex:foodItems geo:sfContains ex:boxJello, ex:riceBubblesBox, ex:shortbreadPack, ex:childFaceBox .
-ex:containers a psr:Object ;
+ex:containers a obot:Object ;
     rdfs:label "Containers and dishes"@en .
 
 # Location relations
@@ -126,7 +126,7 @@ ex:wallAboveCounter dul:hasComponent ex:smallSquareFrame .
 
 # The wall with the door
 ex:wallWithDoor dul:hasComponent ex:door .
-ex:door a psr:Object ;
+ex:door a obot:Object ;
     rdfs:label "Door"@en .
 
 # The door position

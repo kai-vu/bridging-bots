@@ -5,97 +5,97 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PutAwayItemsAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PutAwayItemsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-    psr:precedes ex:PutAwayItemsAction ;
+    obot:precedes ex:PutAwayItemsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems .
+    obot:actsOn ex:MisplacedItems .
 
 ex:PutAwayItemsAction a dul:Action ;
-    psr:follows ex:IdentifyMisplacedItemsAction ;
+    obot:follows ex:IdentifyMisplacedItemsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:MisplacedItems ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:MisplacedItems a psr:Object .
+ex:MisplacedItems a obot:Object .
 
 ex:RobotAgent a dul:Agent .
 
-ex:DiningTable a psr:Furniture .
-ex:KitchenCounter a psr:Furniture .
-ex:Refrigerator a psr:Appliance .
-ex:Stove a psr:Appliance .
-ex:Sink a psr:Object .
-ex:Bottle a psr:Object .
-ex:StackOfPlates a psr:Object .
-ex:BoxOnTable a psr:Object .
-ex:JarOnCounter a psr:Object .
-ex:BoxOnCounter a psr:Object .
-ex:ChickyBox a psr:Object .
-ex:JelloBox a psr:Object .
-ex:JamJar a psr:Object .
-ex:PlatesOnCounter a psr:Object .
-ex:CupsOnCounter a psr:Object .
+ex:DiningTable a obot:Furniture .
+ex:KitchenCounter a obot:Furniture .
+ex:Refrigerator a obot:Appliance .
+ex:Stove a obot:Appliance .
+ex:Sink a obot:Object .
+ex:Bottle a obot:Object .
+ex:StackOfPlates a obot:Object .
+ex:BoxOnTable a obot:Object .
+ex:JarOnCounter a obot:Object .
+ex:BoxOnCounter a obot:Object .
+ex:ChickyBox a obot:Object .
+ex:JelloBox a obot:Object .
+ex:JamJar a obot:Object .
+ex:PlatesOnCounter a obot:Object .
+ex:CupsOnCounter a obot:Object .
 
-ex:IdentifyMisplacedItemsAction psr:isAffordedBy soma:PickingUp .
-ex:PutAwayItemsAction psr:precedes ex:OpenStorageAction .
+ex:IdentifyMisplacedItemsAction obot:isAffordedBy soma:PickingUp .
+ex:PutAwayItemsAction obot:precedes ex:OpenStorageAction .
 ex:OpenStorageAction a dul:Action ;
-    psr:follows ex:PutAwayItemsAction ;
+    obot:follows ex:PutAwayItemsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Storage ;
-    psr:isAffordedBy soma:Opening .
+    obot:actsOn ex:Storage ;
+    obot:isAffordedBy soma:Opening .
 
 ex:PutItemsInStorageAction a dul:Action ;
-    psr:follows ex:OpenStorageAction ;
+    obot:follows ex:OpenStorageAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:MisplacedItems ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:CloseStorageAction a dul:Action ;
-    psr:follows ex:PutItemsInStorageAction ;
+    obot:follows ex:PutItemsInStorageAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Storage ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:Storage ;
+    obot:isAffordedBy soma:Closing .
 
-ex:Storage a psr:Component .
+ex:Storage a obot:Component .
 
-ex:RestoreKitchenWorkflow psr:hasAction ex:OpenStorageAction .
-ex:RestoreKitchenWorkflow psr:hasAction ex:PutItemsInStorageAction .
-ex:RestoreKitchenWorkflow psr:hasAction ex:CloseStorageAction .
+ex:RestoreKitchenWorkflow obot:hasAction ex:OpenStorageAction .
+ex:RestoreKitchenWorkflow obot:hasAction ex:PutItemsInStorageAction .
+ex:RestoreKitchenWorkflow obot:hasAction ex:CloseStorageAction .
 
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:Bottle .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:StackOfPlates .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:BoxOnTable .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:JarOnCounter .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:BoxOnCounter .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:ChickyBox .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:JelloBox .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:JamJar .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:PlatesOnCounter .
-ex:IdentifyMisplacedItemsAction psr:actsOn ex:CupsOnCounter .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:Bottle .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:StackOfPlates .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:BoxOnTable .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:JarOnCounter .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:BoxOnCounter .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:ChickyBox .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:JelloBox .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:JamJar .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:PlatesOnCounter .
+ex:IdentifyMisplacedItemsAction obot:actsOn ex:CupsOnCounter .
 
-ex:OpenStorageAction psr:actsOn ex:Cabinet .
-ex:Cabinet a psr:Furniture .
+ex:OpenStorageAction obot:actsOn ex:Cabinet .
+ex:Cabinet a obot:Furniture .
 
-ex:PutItemsInStorageAction psr:actsOn ex:Bottle .
-ex:PutItemsInStorageAction psr:actsOn ex:StackOfPlates .
-ex:PutItemsInStorageAction psr:actsOn ex:BoxOnTable .
-ex:PutItemsInStorageAction psr:actsOn ex:JarOnCounter .
-ex:PutItemsInStorageAction psr:actsOn ex:BoxOnCounter .
-ex:PutItemsInStorageAction psr:actsOn ex:ChickyBox .
-ex:PutItemsInStorageAction psr:actsOn ex:JelloBox .
-ex:PutItemsInStorageAction psr:actsOn ex:JamJar .
-ex:PutItemsInStorageAction psr:actsOn ex:PlatesOnCounter .
-ex:PutItemsInStorageAction psr:actsOn ex:CupsOnCounter .
+ex:PutItemsInStorageAction obot:actsOn ex:Bottle .
+ex:PutItemsInStorageAction obot:actsOn ex:StackOfPlates .
+ex:PutItemsInStorageAction obot:actsOn ex:BoxOnTable .
+ex:PutItemsInStorageAction obot:actsOn ex:JarOnCounter .
+ex:PutItemsInStorageAction obot:actsOn ex:BoxOnCounter .
+ex:PutItemsInStorageAction obot:actsOn ex:ChickyBox .
+ex:PutItemsInStorageAction obot:actsOn ex:JelloBox .
+ex:PutItemsInStorageAction obot:actsOn ex:JamJar .
+ex:PutItemsInStorageAction obot:actsOn ex:PlatesOnCounter .
+ex:PutItemsInStorageAction obot:actsOn ex:CupsOnCounter .
 
-ex:CloseStorageAction psr:actsOn ex:Cabinet .
+ex:CloseStorageAction obot:actsOn ex:Cabinet .

@@ -1,98 +1,98 @@
 @prefix owl: <http://www.w3.org/2002/owl/>
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-@prefix psr: <http://example.com/psr/>
+@prefix obot: <http://example.com/psr/>
 
 [a, b, c] a owl:Class ;
     rdfs:subClassOf owl:Thing ;
     rdfs:label "Action"@en .
 
 [a1, a2] a owl:Class ;
-    rdfs:subClassOf psr:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:label "Appliance"@en .
 
 [f1, f2] a owl:Class ;
-    rdfs:subClassOf psr:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:label "Furniture"@en .
 
 [o1, o2] a owl:Class ;
-    rdfs:subClassOf psr:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:label "Object"@en .
 
 [w1, w2] a owl:Class ;
-    rdfs:subClassOf psr:Workflow ;
+    rdfs:subClassOf obot:Workflow ;
     rdfs:label "Workflow"@en .
 
 [a3, a4] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Action"@en .
 
-[w1, w2] psr:hasWorkflow [a1, a2, a3] ;
+[w1, w2] obot:hasWorkflow [a1, a2, a3] ;
     rdfs:label "Instruction"@en .
 
 [a4, a5] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Delivering"@en .
 
 [a6, a7] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Closing"@en .
 
 [a8, a9] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Putting Down"@en .
 
 [a10, a11] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Holding"@en .
 
 [a12, a13] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Picking Up"@en .
 
 [a14, a15] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Opening"@en .
 
 [a16, a17] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Pushing"@en .
 
 [a18, a19] a owl:Class ;
-    rdfs:subClassOf psr:Action ;
+    rdfs:subClassOf obot:Action ;
     rdfs:label "Grasping"@en .
 
-[a1, a2] psr:isPerformedBy [agent] ;
+[a1, a2] obot:isPerformedBy [agent] ;
     rdfs:label "Instruction"@en .
 
 [o1, o2] a owl:Class ;
-    rdfs:subClassOf psr:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:label "Object"@en .
 
 [f1, f2] a owl:Class ;
-    rdfs:subClassOf psr:Component ;
+    rdfs:subClassOf obot:Component ;
     rdfs:label "Furniture"@en .
 
-[a3, a4] psr:actsOn [o1] ;
+[a3, a4] obot:actsOn [o1] ;
     rdfs:label "Delivering"@en .
 
-[a6, a7] psr:actsOn [f1] ;
+[a6, a7] obot:actsOn [f1] ;
     rdfs:label "Closing"@en .
 
-[a8, a9] psr:actsOn [o2] ;
+[a8, a9] obot:actsOn [o2] ;
     rdfs:label "Putting Down"@en .
 
-[a10, a11] psr:actsOn [o3] ;
+[a10, a11] obot:actsOn [o3] ;
     rdfs:label "Holding"@en .
 
-[a12, a13] psr:actsOn [o4] ;
+[a12, a13] obot:actsOn [o4] ;
     rdfs:label "Picking Up"@en .
 
-[a14, a15] psr:actsOn [f2] ;
+[a14, a15] obot:actsOn [f2] ;
     rdfs:label "Opening"@en .
 
-[a16, a17] psr:actsOn [o5] ;
+[a16, a17] obot:actsOn [o5] ;
     rdfs:label "Pushing"@en .
 
-[a18, a19] psr:actsOn [f3] ;
+[a18, a19] obot:actsOn [f3] ;
     rdfs:label "Grasping"@en .

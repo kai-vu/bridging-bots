@@ -3,10 +3,10 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenDiningEnvironment a psr:Environment ;
+ex:KitchenDiningEnvironment a obot:Environment ;
     dul:hasComponent ex:KitchenCounter,
                      ex:BlackCabinets,
                      ex:BeigeMarbleCountertop,
@@ -37,58 +37,58 @@ ex:KitchenDiningEnvironment a psr:Environment ;
                      ex:WhiteFruitBowl,
                      ex:BlackBoxOfCookies .
 
-ex:KitchenCounter a psr:Furniture .
-ex:BlackCabinets a psr:Furniture .
-ex:BeigeMarbleCountertop a psr:Furniture .
-ex:Refrigerator a psr:Appliance .
-ex:Stove a psr:Appliance .
-ex:RangeHood a psr:Appliance .
-ex:Window a psr:Object .
-ex:Sink a psr:Appliance .
-ex:DiningTable a psr:Furniture .
-ex:CushionedWhiteChair1 a psr:Furniture .
-ex:CushionedWhiteChair2 a psr:Furniture .
-ex:CushionedWhiteChair3 a psr:Furniture .
-ex:CushionedWhiteChair4 a psr:Furniture .
-ex:WhiteDoor a psr:Object .
-ex:WoodenParquetFloor a psr:Object .
+ex:KitchenCounter a obot:Furniture .
+ex:BlackCabinets a obot:Furniture .
+ex:BeigeMarbleCountertop a obot:Furniture .
+ex:Refrigerator a obot:Appliance .
+ex:Stove a obot:Appliance .
+ex:RangeHood a obot:Appliance .
+ex:Window a obot:Object .
+ex:Sink a obot:Appliance .
+ex:DiningTable a obot:Furniture .
+ex:CushionedWhiteChair1 a obot:Furniture .
+ex:CushionedWhiteChair2 a obot:Furniture .
+ex:CushionedWhiteChair3 a obot:Furniture .
+ex:CushionedWhiteChair4 a obot:Furniture .
+ex:WhiteDoor a obot:Object .
+ex:WoodenParquetFloor a obot:Object .
 
-ex:CounterSurfaceLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:BeigeMarbleCountertop .
+ex:CounterSurfaceLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:BeigeMarbleCountertop .
 
-ex:WhitePlates a psr:Object ;
+ex:WhitePlates a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:StrawberryJamJar a psr:Object ;
+ex:StrawberryJamJar a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:StrawberryJelloBox a psr:Object ;
+ex:StrawberryJelloBox a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:AlpenSaltContainer a psr:Object ;
+ex:AlpenSaltContainer a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:RiceBubblesBox a psr:Object ;
+ex:RiceBubblesBox a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:ChuckyCerealBox a psr:Object ;
+ex:ChuckyCerealBox a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:StrawberryPreserveJar a psr:Object ;
+ex:StrawberryPreserveJar a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
-ex:OrangeMug a psr:Object ;
+ex:OrangeMug a obot:Object ;
     dul:hasLocation ex:CounterSurfaceLocation .
 
-ex:StoveSurfaceLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Stove .
+ex:StoveSurfaceLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Stove .
 
-ex:SilverPot a psr:Object ;
+ex:SilverPot a obot:Object ;
     dul:hasLocation ex:StoveSurfaceLocation .
 
-ex:DiningTableSurfaceLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:DiningTableSurfaceLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
-ex:TransparentPitcher a psr:Object ;
+ex:TransparentPitcher a obot:Object ;
     dul:hasLocation ex:DiningTableSurfaceLocation .
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     dul:hasLocation ex:DiningTableSurfaceLocation .
-ex:EvianBottle a psr:Object ;
+ex:EvianBottle a obot:Object ;
     dul:hasLocation ex:DiningTableSurfaceLocation .
-ex:WhiteFruitBowl a psr:Object ;
+ex:WhiteFruitBowl a obot:Object ;
     dul:hasLocation ex:DiningTableSurfaceLocation .
-ex:BlackBoxOfCookies a psr:Object ;
+ex:BlackBoxOfCookies a obot:Object ;
     dul:hasLocation ex:DiningTableSurfaceLocation .

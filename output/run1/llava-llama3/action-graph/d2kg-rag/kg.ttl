@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,107 +8,107 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "PickUpCoffeeCup"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:coffeeCup .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:coffeeCup .
 
-ex:coffeeCup a psr:Component ;
+ex:coffeeCup a obot:Component ;
     rdfs:label "CoffeeCup"@en .
 
 ex:action2 a dul:Action ;
     rdfs:label "PutDownCoffeeCup"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:coffeeCup ;
-    psr:follows ex:action1 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:coffeeCup ;
+    obot:follows ex:action1 .
 
 ex:action3 a dul:Action ;
     rdfs:label "PickUpSUNMAIDBox"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:sunMaidBox .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:sunMaidBox .
 
-ex:sunMaidBox a psr:Component ;
+ex:sunMaidBox a obot:Component ;
     rdfs:label "SUNMAIDBox"@en .
 
 ex:action4 a dul:Action ;
     rdfs:label "PutDownSUNMAIDBox"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:sunMaidBox ;
-    psr:follows ex:action3 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:sunMaidBox ;
+    obot:follows ex:action3 .
 
 ex:action5 a dul:Action ;
     rdfs:label "PickUpKnife"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:knife .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:knife .
 
-ex:knife a psr:Component ;
+ex:knife a obot:Component ;
     rdfs:label "Knife"@en .
 
 ex:action6 a dul:Action ;
     rdfs:label "PutDownKnife"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:knife ;
-    psr:follows ex:action5 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:knife ;
+    obot:follows ex:action5 .
 
 ex:action7 a dul:Action ;
     rdfs:label "PickUpBottleOfWater"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:bottleOfWater .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:bottleOfWater .
 
-ex:bottleOfWater a psr:Component ;
+ex:bottleOfWater a obot:Component ;
     rdfs:label "BottleOfWater"@en .
 
 ex:action8 a dul:Action ;
     rdfs:label "PutDownBottleOfWater"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:bottleOfWater ;
-    psr:follows ex:action7 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:bottleOfWater ;
+    obot:follows ex:action7 .
 
 ex:action9 a dul:Action ;
     rdfs:label "PickUpCerealBox"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:cerealBox .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:cerealBox .
 
-ex:cerealBox a psr:Component ;
+ex:cerealBox a obot:Component ;
     rdfs:label "CerealBox"@en .
 
 ex:action10 a dul:Action ;
     rdfs:label "PutDownCerealBox"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cerealBox ;
-    psr:follows ex:action9 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cerealBox ;
+    obot:follows ex:action9 .
 
 ex:action11 a dul:Action ;
     rdfs:label "PickUpTrash"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:trash .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:trash .
 
-ex:trash a psr:Component ;
+ex:trash a obot:Component ;
     rdfs:label "Trash"@en .
 
 ex:action12 a dul:Action ;
     rdfs:label "ThrowAwayTrash"@en ;
-    psr:isAffordedBy soma:Pushing ;
-    psr:actsOn ex:trash ;
-    psr:follows ex:action11 .
+    obot:isAffordedBy soma:Pushing ;
+    obot:actsOn ex:trash ;
+    obot:follows ex:action11 .
 
 ex:action1 a dul:Action ;
-    psr:isPerformedBy ex:robot .
+    obot:isPerformedBy ex:robot .
 
 ex:robot a dul:Agent ;
     rdfs:label "Robot"@en .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1 ;
-    psr:hasAction ex:action2 ;
-    psr:hasAction ex:action3 ;
-    psr:hasAction ex:action4 ;
-    psr:hasAction ex:action5 ;
-    psr:hasAction ex:action6 ;
-    psr:hasAction ex:action7 ;
-    psr:hasAction ex:action8 ;
-    psr:hasAction ex:action9 ;
-    psr:hasAction ex:action10 ;
-    psr:hasAction ex:action11 ;
-    psr:hasAction ex:action12 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1 ;
+    obot:hasAction ex:action2 ;
+    obot:hasAction ex:action3 ;
+    obot:hasAction ex:action4 ;
+    obot:hasAction ex:action5 ;
+    obot:hasAction ex:action6 ;
+    obot:hasAction ex:action7 ;
+    obot:hasAction ex:action8 ;
+    obot:hasAction ex:action9 ;
+    obot:hasAction ex:action10 ;
+    obot:hasAction ex:action11 ;
+    obot:hasAction ex:action12 .
 
-ex:instruction a psr:Instruction ;
-    psr:hasWorkflow ex:workflow .
+ex:instruction a obot:Instruction ;
+    obot:hasWorkflow ex:workflow .

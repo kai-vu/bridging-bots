@@ -5,14 +5,14 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix :       <http://example.org/data/> .
 
-psr:Instruction a owl:Class, dul:Entity ;
+obot:Instruction a owl:Class, dul:Entity ;
     rdfs:label "Instruction"@en ;
     rdfs:comment "An instruction is a command or directive given to a robot."@en .
 
-psr:Workflow a owl:Class, dul:Entity ;
+obot:Workflow a owl:Class, dul:Entity ;
     rdfs:subClassOf dul:Workflow ;
     rdfs:label "Workflow"@en ;
     rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
@@ -25,59 +25,59 @@ dul:Agent a owl:Class, dul:Entity ;
     rdfs:label "Agent"@en ;
     rdfs:comment "An agent performing an action."@en .
 
-psr:Component a owl:Class, dul:Entity ;
+obot:Component a owl:Class, dul:Entity ;
     rdfs:label "Component"@en ;
     rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-psr:Appliance a psr:Component ;
+obot:Appliance a obot:Component ;
     rdfs:label "Appliance"@en ;
     rdfs:comment "An appliance is a type of component."@en .
 
-psr:Furniture a psr:Component ;
+obot:Furniture a obot:Component ;
     rdfs:label "Furniture"@en ;
     rdfs:comment "A furniture is a type of component."@en .
 
-psr:Object a psr:Component ;
+obot:Object a obot:Component ;
     rdfs:label "Object"@en ;
     rdfs:comment "An object is a type of component."@en .
 
-psr:Affordance a owl:Class, dul:Entity ;
+obot:Affordance a owl:Class, dul:Entity ;
     rdfs:label "Affordance"@en ;
     rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a psr:Affordance ;
+soma:Closing a obot:Affordance ;
     rdfs:label "Closing"@en ;
     rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a psr:Affordance ;
+soma:Opening a obot:Affordance ;
     rdfs:label "Opening"@en ;
     rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a psr:Affordance ;
+soma:Delivering a obot:Affordance ;
     rdfs:label "Delivering"@en ;
     rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a psr:Affordance ;
+soma:Holding a obot:Affordance ;
     rdfs:label "Holding"@en ;
     rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a psr:Affordance ;
+soma:PickingUp a obot:Affordance ;
     rdfs:label "PickingUp"@en ;
     rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a psr:Affordance ;
+soma:PuttingDown a obot:Affordance ;
     rdfs:label "PuttingDown"@en ;
     rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a psr:Affordance ;
+soma:Pulling a obot:Affordance ;
     rdfs:label "Pulling"@en ;
     rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a psr:Affordance ;
+soma:Pushing a obot:Affordance ;
     rdfs:label "Pushing"@en ;
     rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a psr:Affordance ;
+soma:Grasping a obot:Affordance ;
     rdfs:label "Grasping"@en ;
     rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 
@@ -85,26 +85,26 @@ soma:Grasping a psr:Affordance ;
 # OBJECT PROPERTIES
 ###################################
 
-psr:hasWorkflow a owl:ObjectProperty ;
-    rdfs:domain psr:Instruction ;
-    rdfs:range psr:Workflow ;
+obot:hasWorkflow a owl:ObjectProperty ;
+    rdfs:domain obot:Instruction ;
+    rdfs:range obot:Workflow ;
     rdfs:label "has workflow"@en ;
     rdfs:comment "An instruction has a workflow that needs to be executed."@en .
 
-psr:hasAction a owl:ObjectProperty ;
-    rdfs:domain psr:Workflow ;
+obot:hasAction a owl:ObjectProperty ;
+    rdfs:domain obot:Workflow ;
     rdfs:range dul:Action ;
     rdfs:label "has action"@en ;
     rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
 
-psr:precedes a owl:ObjectProperty ;
+obot:precedes a owl:ObjectProperty ;
     rdfs:subPropertyOf  dul:precedes ;
     rdfs:domain dul:Action ;
     rdfs:range dul:Action ;
     rdfs:label "precedes" ;
     rdfs:comment "An action can precede another action."@en .
 
-psr:follows a owl:ObjectProperty ;
+obot:follows a owl:ObjectProperty ;
     rdfs:subPropertyOf dul:follows ;
     rdfs:domain dul:Action ;
     rdfs:range dul:Action ;
@@ -117,15 +117,15 @@ soma:isPerformedBy a owl:ObjectProperty ;
     rdfs:label "is performed by"@en ;
     rdfs:comment "An action is performed by an agent."@en .
 
-psr:actsOn a owl:ObjectProperty ;
+obot:actsOn a owl:ObjectProperty ;
     rdfs:domain dul:Action ;
-    rdfs:range psr:Component ;
+    rdfs:range obot:Component ;
     rdfs:label "acts on"@en ;
     rdfs:comment "An action acts on a component."@en .
 
-psr:isAffordedBy a owl:ObjectProperty ;
+obot:isAffordedBy a owl:ObjectProperty ;
     rdfs:domain dul:Action ;
-    rdfs:range psr:Affordance ;
+    rdfs:range obot:Affordance ;
     rdfs:label "is afforded by"@en ;
     rdfs:comment "An action is afforded by an affordance."@en .
 
@@ -133,8 +133,8 @@ psr:isAffordedBy a owl:ObjectProperty ;
 # DATA PROPERTIES
 ###################################
 
-psr:hasNaturalLanguage a owl:DatatypeProperty ;
-    rdfs:domain psr:Instruction ;
+obot:hasNaturalLanguage a owl:DatatypeProperty ;
+    rdfs:domain obot:Instruction ;
     rdfs:range xsd:string ;
     rdfs:label "has natural language"@en ;
     rdfs:comment "The instruction is expressed in a natural language."@en .
@@ -143,54 +143,54 @@ psr:hasNaturalLanguage a owl:DatatypeProperty ;
 
 :Step1 a dul:Action ;
     rdfs:label "Identify all misplaced items" ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedItems .
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :MisplacedItems .
 
 :Step2 a dul:Action ;
     rdfs:label "Pick up each identified misplaced item" ;
-    psr:precedes :Step3 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedItems .
+    obot:precedes :Step3 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :MisplacedItems .
 
 :Step3 a dul:Action ;
     rdfs:label "Return each item to its standard storage location" ;
-    psr:follows :Step2 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :ItemsAndStorageLocations .
+    obot:follows :Step2 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :ItemsAndStorageLocations .
 
 :IdentifyMisplacedItems a dul:Action ;
     rdfs:label "Identify all misplaced items" ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :Environment .
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :Environment .
 
 :PickUpItem1 a dul:Action ;
     rdfs:label "Pick up misplaced item 1" ;
-    psr:precedes :ReturnItem1 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedItem1 .
+    obot:precedes :ReturnItem1 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :MisplacedItem1 .
 
 :ReturnItem1 a dul:Action ;
     rdfs:label "Return item 1 to designated storage" ;
-    psr:follows :PickUpItem1 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :StorageLocation1 .
+    obot:follows :PickUpItem1 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :StorageLocation1 .
 
 :PickUpItem2 a dul:Action ;
     rdfs:label "Pick up misplaced item 2" ;
-    psr:precedes :ReturnItem2 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :MisplacedItem2 .
+    obot:precedes :ReturnItem2 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :MisplacedItem2 .
 
 :ReturnItem2 a dul:Action ;
     rdfs:label "Return item 2 to designated storage" ;
-    psr:follows :PickUpItem2 ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :StorageLocation2 .
+    obot:follows :PickUpItem2 ;
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :StorageLocation2 .
 
 :ItemsAndStorageLocations a dul:Action ;
     rdfs:label "Items and their designated storage locations" ;
-    psr:isPerformedBy :Robot ;
-    psr:actsOn :Items .
+    obot:isPerformedBy :Robot ;
+    obot:actsOn :Items .
 
 :Items a dul:Entity ;
     rdfs:label "All items" .
@@ -217,7 +217,7 @@ psr:hasNaturalLanguage a owl:DatatypeProperty ;
     rdfs:label "Robot" .
 
 # Linking actions in sequence
-:IdentifyMisplacedItems psr:precedes :PickUpItem1 .
-:PickUpItem1 psr:precedes :ReturnItem1 .
-:ReturnItem1 psr:precedes :PickUpItem2 .
-:PickUpItem2 psr:precedes :ReturnItem2 .
+:IdentifyMisplacedItems obot:precedes :PickUpItem1 .
+:PickUpItem1 obot:precedes :ReturnItem1 .
+:ReturnItem1 obot:precedes :PickUpItem2 .
+:PickUpItem2 obot:precedes :ReturnItem2 .

@@ -3,46 +3,46 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:kitchen a psr:Environment .
-ex:cabinet a psr:Furniture ;
+ex:kitchen a obot:Environment .
+ex:cabinet a obot:Furniture ;
     dul:hasComponent ex:cabinet_door .
-ex:cabinet_door a psr:Component ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
-ex:countertop a psr:Component ;
+ex:cabinet_door a obot:Component ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
+ex:countertop a obot:Component ;
     dul:hasComponent ex:box_of_cereal ;
     dul:hasComponent ex:bag_of_groceries .
-ex:box_of_cereal a psr:Object ;
-    psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
-ex:bag_of_groceries a psr:Object ;
-    psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
-ex:window a psr:Component .
-ex:oven a psr:Appliance ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
-ex:refrigerator a psr:Appliance ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
-ex:sink a psr:Component .
-ex:floor a psr:Component ;
+ex:box_of_cereal a obot:Object ;
+    obot:hasAffordance soma:PickingUp ;
+    obot:hasAffordance soma:PuttingDown .
+ex:bag_of_groceries a obot:Object ;
+    obot:hasAffordance soma:PickingUp ;
+    obot:hasAffordance soma:PuttingDown .
+ex:window a obot:Component .
+ex:oven a obot:Appliance ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
+ex:refrigerator a obot:Appliance ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
+ex:sink a obot:Component .
+ex:floor a obot:Component ;
     dul:hasComponent ex:box_of_cereal_on_floor ;
     dul:hasComponent ex:box_of_cereal_on_floor2 .
-ex:box_of_cereal_on_floor a psr:Object ;
-    psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
-ex:box_of_cereal_on_floor2 a psr:Object ;
-    psr:hasAffordance soma:PickingUp ;
-    psr:hasAffordance soma:PuttingDown .
-ex:dining_area a psr:Environment ;
+ex:box_of_cereal_on_floor a obot:Object ;
+    obot:hasAffordance soma:PickingUp ;
+    obot:hasAffordance soma:PuttingDown .
+ex:box_of_cereal_on_floor2 a obot:Object ;
+    obot:hasAffordance soma:PickingUp ;
+    obot:hasAffordance soma:PuttingDown .
+ex:dining_area a obot:Environment ;
     geo:sfWithin ex:kitchen .
-ex:wall a psr:Component ;
+ex:wall a obot:Component ;
     geo:sfContains ex:lamp .
-ex:lamp a psr:Component .
+ex:lamp a obot:Component .
 ex:kitchen dul:hasComponent ex:cabinet ;
     dul:hasComponent ex:countertop ;
     dul:hasComponent ex:window ;
@@ -53,23 +53,23 @@ ex:kitchen dul:hasComponent ex:cabinet ;
     dul:hasComponent ex:dining_area ;
     dul:hasComponent ex:wall .
 ex:cabinet dul:hasLocation ex:cabinet_location .
-ex:cabinet_location a psr:CurrentLocation ;
-    psr:onTopOf ex:countertop .
+ex:cabinet_location a obot:CurrentLocation ;
+    obot:onTopOf ex:countertop .
 ex:countertop dul:hasLocation ex:countertop_location .
-ex:countertop_location a psr:CurrentLocation ;
-    psr:onTopOf ex:cabinet .
+ex:countertop_location a obot:CurrentLocation ;
+    obot:onTopOf ex:cabinet .
 ex:window dul:hasLocation ex:window_location .
-ex:window_location a psr:CurrentLocation ;
+ex:window_location a obot:CurrentLocation ;
     geo:sfOverlaps ex:kitchen .
 ex:oven dul:hasLocation ex:oven_location .
-ex:oven_location a psr:CurrentLocation ;
-    psr:onTopOf ex:refrigerator .
+ex:oven_location a obot:CurrentLocation ;
+    obot:onTopOf ex:refrigerator .
 ex:refrigerator dul:hasLocation ex:refrigerator_location .
-ex:refrigerator_location a psr:CurrentLocation ;
+ex:refrigerator_location a obot:CurrentLocation ;
     geo:sfContains ex:oven .
 ex:sink dul:hasLocation ex:sink_location .
-ex:sink_location a psr:CurrentLocation ;
-    psr:onTopOf ex:window .
+ex:sink_location a obot:CurrentLocation ;
+    obot:onTopOf ex:window .
 ex:floor dul:hasLocation ex:floor_location .
-ex:floor_location a psr:CurrentLocation ;
+ex:floor_location a obot:CurrentLocation ;
     geo:sfContains ex:kitchen .

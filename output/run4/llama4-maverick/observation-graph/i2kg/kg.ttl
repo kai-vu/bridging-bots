@@ -3,76 +3,76 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Environment1 a psr:Environment ;
+ex:Environment1 a obot:Environment ;
     dul:hasComponent ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:DiningTable1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Hood1, ex:Sink1, ex:Stove1 .
 
-ex:Cabinet1 a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet1 a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:Cabinet2 a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet2 a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:Refrigerator1 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Refrigerator1 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:DiningTable1 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:DiningTable1 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Chair1 a psr:Furniture ;
-    psr:hasAffordance soma:Sitting ;
+ex:Chair1 a obot:Furniture ;
+    obot:hasAffordance soma:Sitting ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Chair2 a psr:Furniture ;
-    psr:hasAffordance soma:Sitting ;
+ex:Chair2 a obot:Furniture ;
+    obot:hasAffordance soma:Sitting ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Chair3 a psr:Furniture ;
-    psr:hasAffordance soma:Sitting ;
+ex:Chair3 a obot:Furniture ;
+    obot:hasAffordance soma:Sitting ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Hood1 a psr:Appliance ;
-    psr:hasAffordance soma:Operating ;
+ex:Hood1 a obot:Appliance ;
+    obot:hasAffordance soma:Operating ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:Sink1 a psr:Appliance ;
-    psr:hasAffordance soma:Containing ;
+ex:Sink1 a obot:Appliance ;
+    obot:hasAffordance soma:Containing ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:Stove1 a psr:Appliance ;
-    psr:hasAffordance soma:Heating ;
+ex:Stove1 a obot:Appliance ;
+    obot:hasAffordance soma:Heating ;
     dul:hasLocation ex:Kitchen1 .
 
-ex:Jar1 a psr:Object ;
+ex:Jar1 a obot:Object ;
     dul:hasLocation ex:Countertop1 .
 
-ex:Jar2 a psr:Object ;
+ex:Jar2 a obot:Object ;
     dul:hasLocation ex:Countertop1 .
 
-ex:Box1 a psr:Object ;
+ex:Box1 a obot:Object ;
     dul:hasLocation ex:Countertop1 .
 
-ex:Bottle1 a psr:Object ;
+ex:Bottle1 a obot:Object ;
     dul:hasLocation ex:DiningTable1 .
 
-ex:Book1 a psr:Object ;
+ex:Book1 a obot:Object ;
     dul:hasLocation ex:DiningTable1 .
 
-ex:Countertop1 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:Countertop1 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:Kitchen1 ;
     geo:sfContains ex:Jar1, ex:Jar2, ex:Box1 .
 
-ex:DiningRoom1 a psr:Environment ;
+ex:DiningRoom1 a obot:Environment ;
     dul:hasComponent ex:DiningTable1, ex:Chair1, ex:Chair2, ex:Chair3 .
 
-ex:Kitchen1 a psr:Environment ;
+ex:Kitchen1 a obot:Environment ;
     dul:hasComponent ex:Cabinet1, ex:Cabinet2, ex:Refrigerator1, ex:Hood1, ex:Sink1, ex:Stove1, ex:Countertop1 .
 
 ex:DiningTable1 geo:sfContains ex:Bottle1, ex:Book1 .

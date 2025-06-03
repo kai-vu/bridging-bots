@@ -3,123 +3,123 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.justice.nc/public/psr#> .
+@prefix obot:    <http://www.justice.nc/public/psr#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Instantiate Environment
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     rdfs:label "Kitchen Setup"@en .
 
 # Instantiate Main Areas
-ex:LeftSide a psr:Location ;
+ex:LeftSide a obot:Location ;
     rdfs:label "Left Side of Kitchen"@en .
 
-ex:RightSide a psr:Location ;
+ex:RightSide a obot:Location ;
     rdfs:label "Right Side of Kitchen"@en .
 
-ex:CountertopLeft a psr:Location ;
+ex:CountertopLeft a obot:Location ;
     rdfs:label "Left Countertop"@en .
 
-ex:CountertopRight a psr:Location ;
+ex:CountertopRight a obot:Location ;
     rdfs:label "Right Countertop"@en .
 
-ex:Corner a psr:Location ;
+ex:Corner a obot:Location ;
     rdfs:label "Corner"@en .
 
 # Instantiate Furniture and Appliances
-ex:KitchenCabinet a psr:Furniture ;
+ex:KitchenCabinet a obot:Furniture ;
     rdfs:label "Kitchen Cabinet"@en ;
     dul:hasLocation ex:CountertopLeft .
 
-ex:Countertop a psr:Furniture ;
+ex:Countertop a obot:Furniture ;
     rdfs:label "Countertop"@en ;
     dul:hasLocation ex:CountertopLeft .
 
-ex:BeigeCountertop a psr:Furniture ;
+ex:BeigeCountertop a obot:Furniture ;
     rdfs:label "Beige Countertop"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "White Refrigerator"@en ;
     dul:hasLocation ex:CountertopRight ;
-    psr:hasAffordance soma:Opening .
+    obot:hasAffordance soma:Opening .
 
-ex:DarkGrayCabinets a psr:Furniture ;
+ex:DarkGrayCabinets a obot:Furniture ;
     rdfs:label "Dark Gray Cabinets"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:CeilingLight a psr:Appliance ;
+ex:CeilingLight a obot:Appliance ;
     rdfs:label "Ceiling Light"@en .
 
-ex:Window a psr:Object ;
+ex:Window a obot:Object ;
     rdfs:label "Window"@en ;
     dul:hasLocation ex:WallBehindCountertop .
 
 # Instantiate Objects on Left Countertop
-ex:RedWhiteJar_Left a psr:Object ;
+ex:RedWhiteJar_Left a obot:Object ;
     rdfs:label "Red and White Jar (Left)"@en ;
     dul:hasLocation ex:CountertopLeft .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
     rdfs:label "JELLO Box"@en ;
     dul:hasLocation ex:CountertopLeft .
 
-ex:AlpineSaltCarton a psr:Object ;
+ex:AlpineSaltCarton a obot:Object ;
     rdfs:label "Small Carton of Alpine Salt"@en ;
     dul:hasLocation ex:CountertopLeft .
 
-ex:StackedPlates_Left a psr:Object ;
+ex:StackedPlates_Left a obot:Object ;
     rdfs:label "Stacked Plates"@en ;
     dul:hasLocation ex:CountertopLeft .
 
 # Objects on Right Countertop
-ex:ChuckyBox a psr:Object ;
+ex:ChuckyBox a obot:Object ;
     rdfs:label "Chucky Box"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:RedWhiteJar_Right a psr:Object ;
+ex:RedWhiteJar_Right a obot:Object ;
     rdfs:label "Small Red and White Jar"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:Plate_Right a psr:Object ;
+ex:Plate_Right a obot:Object ;
     rdfs:label "Plate"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:TransparentPitcher a psr:Object ;
+ex:TransparentPitcher a obot:Object ;
     rdfs:label "Transparent Pitcher with Handle"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:EvianBottle a psr:Object ;
+ex:EvianBottle a obot:Object ;
     rdfs:label "Large Bottle of Evian Water"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Small Wine Glass"@en ;
     dul:hasLocation ex:CountertopRight .
 
-ex:CakeSlice a psr:Object ;
+ex:CakeSlice a obot:Object ;
     rdfs:label "Slice of Cake"@en ;
     dul:hasLocation ex:CountertopRight .
 
 # Mounting dark gray cabinets
-ex:DarksGrayWallCabinets a psr:Furniture ;
+ex:DarksGrayWallCabinets a obot:Furniture ;
     rdfs:label "Dark Gray Cabinets"@en ;
     dul:hasLocation ex:WallAboveCountertop .
 
 # Objects in Environment (not specifically located but associated)
-ex:WallBehindCountertop a psr:Location ;
+ex:WallBehindCountertop a obot:Location ;
     rdfs:label "Wall Behind Countertop"@en .
 
 # Wall and Floor
-ex:Wall a psr:Object ;
+ex:Wall a obot:Object ;
     rdfs:label "White Wall"@en ;
     dul:hasLocation ex:WallBehindCountertop .
 
-ex:Floor a psr:Object ;
+ex:Floor a obot:Object ;
     rdfs:label "Wooden Parquet Floor"@en .
 
 # Objects associated with floor and environment
-ex:Floor a psr:Location ;
+ex:Floor a obot:Location ;
     rdfs:label "Floor"@en .
 
 # Relationships

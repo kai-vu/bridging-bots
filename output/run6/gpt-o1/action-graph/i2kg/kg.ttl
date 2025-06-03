@@ -1,145 +1,145 @@
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix : <http://example.org/kb#> .
 
-:instruction1 a psr:Instruction ;
-   psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
-   psr:hasWorkflow :workflow1 .
+:instruction1 a obot:Instruction ;
+   obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
+   obot:hasWorkflow :workflow1 .
 
-:workflow1 a psr:Workflow ;
-   psr:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10,
+:workflow1 a obot:Workflow ;
+   obot:hasAction :action1, :action2, :action3, :action4, :action5, :action6, :action7, :action8, :action9, :action10,
                  :action11, :action12, :action13, :action14, :action15, :action16, :action17, :action18, :action19, :action20 .
 
 :robot a dul:Agent .
 
-:cupboard1 a psr:Furniture .
-:fridge1 a psr:Appliance .
+:cupboard1 a obot:Furniture .
+:fridge1 a obot:Appliance .
 
-:jamJar a psr:Object .
-:jelloBox a psr:Object .
-:saltContainer a psr:Object .
-:cerealBox1 a psr:Object .
-:cerealBox2 a psr:Object .
-:plates a psr:Object .
-:coffeeMug a psr:Object .
-:waterBottle a psr:Object .
+:jamJar a obot:Object .
+:jelloBox a obot:Object .
+:saltContainer a obot:Object .
+:cerealBox1 a obot:Object .
+:cerealBox2 a obot:Object .
+:plates a obot:Object .
+:coffeeMug a obot:Object .
+:waterBottle a obot:Object .
 
 :action1 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cupboard1 ;
-   psr:isAffordedBy soma:Opening ;
-   psr:precedes :action2 .
+   obot:actsOn :cupboard1 ;
+   obot:isAffordedBy soma:Opening ;
+   obot:precedes :action2 .
 
 :action2 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :jelloBox ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action3 .
+   obot:actsOn :jelloBox ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action3 .
 
 :action3 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :jelloBox ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action4 .
+   obot:actsOn :jelloBox ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action4 .
 
 :action4 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :saltContainer ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action5 .
+   obot:actsOn :saltContainer ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action5 .
 
 :action5 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :saltContainer ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action6 .
+   obot:actsOn :saltContainer ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action6 .
 
 :action6 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cerealBox1 ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action7 .
+   obot:actsOn :cerealBox1 ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action7 .
 
 :action7 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cerealBox1 ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action8 .
+   obot:actsOn :cerealBox1 ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action8 .
 
 :action8 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cerealBox2 ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action9 .
+   obot:actsOn :cerealBox2 ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action9 .
 
 :action9 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cerealBox2 ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action10 .
+   obot:actsOn :cerealBox2 ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action10 .
 
 :action10 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :plates ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action11 .
+   obot:actsOn :plates ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action11 .
 
 :action11 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :plates ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action12 .
+   obot:actsOn :plates ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action12 .
 
 :action12 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :coffeeMug ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action13 .
+   obot:actsOn :coffeeMug ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action13 .
 
 :action13 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :coffeeMug ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action14 .
+   obot:actsOn :coffeeMug ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action14 .
 
 :action14 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :cupboard1 ;
-   psr:isAffordedBy soma:Closing ;
-   psr:precedes :action15 .
+   obot:actsOn :cupboard1 ;
+   obot:isAffordedBy soma:Closing ;
+   obot:precedes :action15 .
 
 :action15 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :fridge1 ;
-   psr:isAffordedBy soma:Opening ;
-   psr:precedes :action16 .
+   obot:actsOn :fridge1 ;
+   obot:isAffordedBy soma:Opening ;
+   obot:precedes :action16 .
 
 :action16 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :jamJar ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action17 .
+   obot:actsOn :jamJar ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action17 .
 
 :action17 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :jamJar ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action18 .
+   obot:actsOn :jamJar ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action18 .
 
 :action18 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :waterBottle ;
-   psr:isAffordedBy soma:PickingUp ;
-   psr:precedes :action19 .
+   obot:actsOn :waterBottle ;
+   obot:isAffordedBy soma:PickingUp ;
+   obot:precedes :action19 .
 
 :action19 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :waterBottle ;
-   psr:isAffordedBy soma:PuttingDown ;
-   psr:precedes :action20 .
+   obot:actsOn :waterBottle ;
+   obot:isAffordedBy soma:PuttingDown ;
+   obot:precedes :action20 .
 
 :action20 a dul:Action ;
    soma:isPerformedBy :robot ;
-   psr:actsOn :fridge1 ;
-   psr:isAffordedBy soma:Closing .
+   obot:actsOn :fridge1 ;
+   obot:isAffordedBy soma:Closing .

@@ -5,223 +5,223 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:Workflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:Workflow .
 
-ex:Workflow a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItems .
+ex:Workflow a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItems .
 
 ex:IdentifyMisplacedItems a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Identifying .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Identifying .
 
 ex:Robot a dul:Agent .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:IdentifyMisplacedItems psr:follows ex:EnterKitchen .
+ex:IdentifyMisplacedItems obot:follows ex:EnterKitchen .
 
 ex:EnterKitchen a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Entering .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Entering .
 
-ex:Workflow psr:hasAction ex:PickUpItem .
+ex:Workflow obot:hasAction ex:PickUpItem .
 
 ex:PickUpItem a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pot ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
   rdfs:label "Pot"@en .
 
-ex:PickUpItem psr:follows ex:IdentifyMisplacedItems .
+ex:PickUpItem obot:follows ex:IdentifyMisplacedItems .
 
-ex:Workflow psr:hasAction ex:PutAwayItem .
+ex:Workflow obot:hasAction ex:PutAwayItem .
 
 ex:PutAwayItem a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pot ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayItem psr:follows ex:PickUpItem .
+ex:PutAwayItem obot:follows ex:PickUpItem .
 
-ex:Workflow psr:hasAction ex:IdentifyStorageLocation .
+ex:Workflow obot:hasAction ex:IdentifyStorageLocation .
 
 ex:IdentifyStorageLocation a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pot ;
-  psr:isAffordedBy soma:Identifying .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pot ;
+  obot:isAffordedBy soma:Identifying .
 
-ex:Workflow psr:hasAction ex:StoreItem .
+ex:Workflow obot:hasAction ex:StoreItem .
 
 ex:StoreItem a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pot ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:StoreItem psr:follows ex:IdentifyStorageLocation .
+ex:StoreItem obot:follows ex:IdentifyStorageLocation .
 
-ex:Pot psr:isLocatedIn ex:KitchenArea .
+ex:Pot obot:isLocatedIn ex:KitchenArea .
 
-ex:RiceBubblesBox a psr:Object ;
+ex:RiceBubblesBox a obot:Object ;
   rdfs:label "Rice Bubbles Box"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
   rdfs:label "Jello Box"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:JarOfJam a psr:Object ;
+ex:JarOfJam a obot:Object ;
   rdfs:label "Jar of Jam"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:PuzzleBox a psr:Object ;
+ex:PuzzleBox a obot:Object ;
   rdfs:label "Puzzle Box"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
   rdfs:label "Plate"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:cup a psr:Object ;
+ex:cup a obot:Object ;
   rdfs:label "Cup"@en ;
-  psr:isLocatedIn ex:KitchenArea .
+  obot:isLocatedIn ex:KitchenArea .
 
-ex:Workflow psr:hasAction ex:PickUpRiceBubblesBox .
+ex:Workflow obot:hasAction ex:PickUpRiceBubblesBox .
 
 ex:PickUpRiceBubblesBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RiceBubblesBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RiceBubblesBox ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpRiceBubblesBox psr:follows ex:PickUpItem .
+ex:PickUpRiceBubblesBox obot:follows ex:PickUpItem .
 
-ex:Workflow psr:hasAction ex:PutAwayRiceBubblesBox .
+ex:Workflow obot:hasAction ex:PutAwayRiceBubblesBox .
 
 ex:PutAwayRiceBubblesBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RiceBubblesBox ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RiceBubblesBox ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayRiceBubblesBox psr:follows ex:PickUpRiceBubblesBox .
+ex:PutAwayRiceBubblesBox obot:follows ex:PickUpRiceBubblesBox .
 
-ex:RiceBubblesBox psr:hasType "Food"@en .
+ex:RiceBubblesBox obot:hasType "Food"@en .
 
-ex:Workflow psr:hasAction ex:StoreRiceBubblesBox .
+ex:Workflow obot:hasAction ex:StoreRiceBubblesBox .
 
 ex:StoreRiceBubblesBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RiceBubblesBox ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RiceBubblesBox ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:StoreRiceBubblesBox psr:follows ex:IdentifyStorageLocation .
+ex:StoreRiceBubblesBox obot:follows ex:IdentifyStorageLocation .
 
-ex:JelloBox psr:hasType "Food"@en .
+ex:JelloBox obot:hasType "Food"@en .
 
-ex:JarOfJam psr:hasType "Food"@en .
+ex:JarOfJam obot:hasType "Food"@en .
 
-ex:PuzzleBox psr:hasType "Toy"@en .
+ex:PuzzleBox obot:hasType "Toy"@en .
 
-ex:Plate psr:hasType "Dish"@en .
+ex:Plate obot:hasType "Dish"@en .
 
-ex:cup psr:hasType "Dish"@en .
+ex:cup obot:hasType "Dish"@en .
 
-ex:Pot psr:hasType "Cookware"@en .
+ex:Pot obot:hasType "Cookware"@en .
 
-ex:Workflow psr:hasAction ex:PickUpJelloBox .
+ex:Workflow obot:hasAction ex:PickUpJelloBox .
 
 ex:PickUpJelloBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JelloBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:JelloBox ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpJelloBox psr:follows ex:PickUpRiceBubblesBox .
+ex:PickUpJelloBox obot:follows ex:PickUpRiceBubblesBox .
 
-ex:Workflow psr:hasAction ex:PutAwayJelloBox .
+ex:Workflow obot:hasAction ex:PutAwayJelloBox .
 
 ex:PutAwayJelloBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JelloBox ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:JelloBox ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayJelloBox psr:follows ex:PickUpJelloBox .
+ex:PutAwayJelloBox obot:follows ex:PickUpJelloBox .
 
-ex:Workflow psr:hasAction ex:PickUpJarOfJam .
+ex:Workflow obot:hasAction ex:PickUpJarOfJam .
 
 ex:PickUpJarOfJam a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JarOfJam ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:JarOfJam ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpJarOfJam psr:follows ex:PutAwayJelloBox .
+ex:PickUpJarOfJam obot:follows ex:PutAwayJelloBox .
 
-ex:Workflow psr:hasAction ex:PutAwayJarOfJam .
+ex:Workflow obot:hasAction ex:PutAwayJarOfJam .
 
 ex:PutAwayJarOfJam a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:JarOfJam ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:JarOfJam ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayJarOfJam psr:follows ex:PickUpJarOfJam .
+ex:PutAwayJarOfJam obot:follows ex:PickUpJarOfJam .
 
-ex:Workflow psr:hasAction ex:PickUpPuzzleBox .
+ex:Workflow obot:hasAction ex:PickUpPuzzleBox .
 
 ex:PickUpPuzzleBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PuzzleBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PuzzleBox ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpPuzzleBox psr:follows ex:PutAwayJarOfJam .
+ex:PickUpPuzzleBox obot:follows ex:PutAwayJarOfJam .
 
-ex:Workflow psr:hasAction ex:PutAwayPuzzleBox .
+ex:Workflow obot:hasAction ex:PutAwayPuzzleBox .
 
 ex:PutAwayPuzzleBox a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PuzzleBox ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PuzzleBox ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayPuzzleBox psr:follows ex:PickUpPuzzleBox .
+ex:PutAwayPuzzleBox obot:follows ex:PickUpPuzzleBox .
 
-ex:Workflow psr:hasAction ex:PickUpPlate .
+ex:Workflow obot:hasAction ex:PickUpPlate .
 
 ex:PickUpPlate a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Plate ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Plate ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpPlate psr:follows ex:PutAwayPuzzleBox .
+ex:PickUpPlate obot:follows ex:PutAwayPuzzleBox .
 
-ex:Workflow psr:hasAction ex:PutAwayPlate .
+ex:Workflow obot:hasAction ex:PutAwayPlate .
 
 ex:PutAwayPlate a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Plate ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Plate ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayPlate psr:follows ex:PickUpPlate .
+ex:PutAwayPlate obot:follows ex:PickUpPlate .
 
-ex:Workflow psr:hasAction ex:PickUpCup .
+ex:Workflow obot:hasAction ex:PickUpCup .
 
 ex:PickUpCup a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:cup ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:cup ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpCup psr:follows ex:PutAwayPlate .
+ex:PickUpCup obot:follows ex:PutAwayPlate .
 
-ex:Workflow psr:hasAction ex:PutAwayCup .
+ex:Workflow obot:hasAction ex:PutAwayCup .
 
 ex:PutAwayCup a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:cup ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:cup ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:PutAwayCup psr:follows ex:PickUpCup .
+ex:PutAwayCup obot:follows ex:PickUpCup .

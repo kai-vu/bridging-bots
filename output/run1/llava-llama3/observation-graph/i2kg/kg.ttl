@@ -1,42 +1,42 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.opengis.net/ont/> .
-@prefix psr: <https://example.org/data/> .
+@prefix obot: <https://example.org/data/> .
 @prefix :       <http://example.org/data/> .
 
 <http://www.w3.org/2002/07/owl-features#ObjectProperty> rdfs:subPropertyOf rdfs:Property .
 
 :Environment a owl:Class ;
-    psr:hasComponent :Robot .
+    obot:hasComponent :Robot .
 
-:Environment a psr:Entity ;
-    psr:label "Environment"@en ;
-    psr:comment "An environment is an area or context in which components are found."@en .
+:Environment a obot:Entity ;
+    obot:label "Environment"@en ;
+    obot:comment "An environment is an area or context in which components are found."@en .
 
 :Robot a owl:Class ;
-    psr:hasComponent :Table .
+    obot:hasComponent :Table .
 
 :Table a owl:Class ;
-    psr:hasAffordance psr:Closing ;
-    psr:hasLocation psr:OnTopOf .
+    obot:hasAffordance obot:Closing ;
+    obot:hasLocation obot:OnTopOf .
 
 :Object a owl:Class ;
-    psr:hasComponent psr:Appliance.
+    obot:hasComponent obot:Appliance.
 
 :Appliance a owl:Class ;
-    psr:hasAffordance psr:Opening .
+    obot:hasAffordance obot:Opening .
 
 :Furniture a owl:Class ;
-    psr:hasLocation psr:OnTopOf .
+    obot:hasLocation obot:OnTopOf .
 
 :Location a owl:Class ;
-    psr:hasComponent psr:Table.
+    obot:hasComponent obot:Table.
 
-psr:CurrentLocation a psr:Location ;
+obot:CurrentLocation a obot:Location ;
     rdfs:label "Current Location"@en ;
     rdfs:comment "The current location of a component within the environment."@en .
 
-psr:StandardLocation a psr:Location ;
+obot:StandardLocation a obot:Location ;
     rdfs:label "Standard Location"@en ;
     rdfs:comment "The location where a component is intended or supposed to be located, which can differ from its current location."@en .
 
@@ -44,6 +44,6 @@ psr:StandardLocation a psr:Location ;
     rdfs:label "Robot"@en ;
     rdfs:comment "A robot in the environment."@en .
 
-psr:OnTopOf a geo:RelatedLink ;
+obot:OnTopOf a geo:RelatedLink ;
     rdfs:label "On Top Of"@en ;
     rdfs:comment "The location of a component can be on top of another component."@en .

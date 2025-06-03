@@ -5,153 +5,153 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Instantiate actions
 ex:Action1 a dul:Action ;
     rdfs:label "Pick up misplaced bowl with red checkered lid"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:MisplacedBowl1 .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:MisplacedBowl1 .
 
 ex:Action2 a dul:Action ;
     rdfs:label "Return bowl with red checkered lid to cupboard"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:StoredBowl1 .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:StoredBowl1 .
 
 ex:Action3 a dul:Action ;
     rdfs:label "Pick up red jello box"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:RedJelloBox .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:RedJelloBox .
 
 ex:Action4 a dul:Action ;
     rdfs:label "Place red jello box in its standard storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:JelloStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:JelloStorage .
 
 ex:Action5 a dul:Action ;
     rdfs:label "Pick up blue box labeled 'RICE BUBBLES'"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:RICEBubblesBox .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:RICEBubblesBox .
 
 ex:Action6 a dul:Action ;
     rdfs:label "Return 'RICE BUBBLES' box to its designated storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:RICEBubblesStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:RICEBubblesStorage .
 
 ex:Action7 a dul:Action ;
     rdfs:label "Pick up red box labeled 'CHUCKY'"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:ChuckyBox .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:ChuckyBox .
 
 ex:Action8 a dul:Action ;
     rdfs:label "Place 'CHUCKY' box in its storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:ChuckyStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:ChuckyStorage .
 
 ex:Action9 a dul:Action ;
     rdfs:label "Pick up small reusable cup with red and white pattern"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:ReusableCup .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:ReusableCup .
 
 ex:Action10 a dul:Action ;
     rdfs:label "Return reusable cup to its storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:CupStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:CupStorage .
 
 ex:Action11 a dul:Action ;
     rdfs:label "Pick up large water bottle with blue cap"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:WaterBottle .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:WaterBottle .
 
 ex:Action12 a dul:Action ;
     rdfs:label "Place water bottle in its storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:WaterBottleStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:WaterBottleStorage .
 
 ex:Action13 a dul:Action ;
     rdfs:label "Pick up yellow ceramic mug"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:YellowMug .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:YellowMug .
 
 ex:Action14 a dul:Action ;
     rdfs:label "Store yellow mug in kitchen cabinet"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:MugStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:MugStorage .
 
 ex:Action15 a dul:Action ;
     rdfs:label "Pick up glass of wine"@en ;
-    psr:isAffordedBy ex:PickingUp ;
-    psr:actsOn ex:WineGlass .
+    obot:isAffordedBy ex:PickingUp ;
+    obot:actsOn ex:WineGlass .
 
 ex:Action16 a dul:Action ;
     rdfs:label "Return glass of wine to storage"@en ;
-    psr:isAffordedBy ex:PuttingDown ;
-    psr:actsOn ex:GlassStorage .
+    obot:isAffordedBy ex:PuttingDown ;
+    obot:actsOn ex:GlassStorage .
 
 # Define workflow sequence
-ex:Workflow1 a psr:Workflow ;
+ex:Workflow1 a obot:Workflow ;
     rdfs:label "Restore kitchen to organized state"@en ;
-    psr:hasAction ex:Action1 ;
-    psr:hasAction ex:Action2 ;
-    psr:hasAction ex:Action3 ;
-    psr:hasAction ex:Action4 ;
-    psr:hasAction ex:Action5 ;
-    psr:hasAction ex:Action6 ;
-    psr:hasAction ex:Action7 ;
-    psr:hasAction ex:Action8 ;
-    psr:hasAction ex:Action9 ;
-    psr:hasAction ex:Action10 ;
-    psr:hasAction ex:Action11 ;
-    psr:hasAction ex:Action12 ;
-    psr:hasAction ex:Action13 ;
-    psr:hasAction ex:Action14 ;
-    psr:hasAction ex:Action15 ;
-    psr:hasAction ex:Action16 .
+    obot:hasAction ex:Action1 ;
+    obot:hasAction ex:Action2 ;
+    obot:hasAction ex:Action3 ;
+    obot:hasAction ex:Action4 ;
+    obot:hasAction ex:Action5 ;
+    obot:hasAction ex:Action6 ;
+    obot:hasAction ex:Action7 ;
+    obot:hasAction ex:Action8 ;
+    obot:hasAction ex:Action9 ;
+    obot:hasAction ex:Action10 ;
+    obot:hasAction ex:Action11 ;
+    obot:hasAction ex:Action12 ;
+    obot:hasAction ex:Action13 ;
+    obot:hasAction ex:Action14 ;
+    obot:hasAction ex:Action15 ;
+    obot:hasAction ex:Action16 .
 
 # Relationships indicating sequence
-ex:Action1 psr:precedes ex:Action2 ;
-ex:Action3 psr:precedes ex:Action4 ;
-ex:Action5 psr:precedes ex:Action6 ;
-ex:Action7 psr:precedes ex:Action8 ;
-ex:Action9 psr:precedes ex:Action10 ;
-ex:Action11 psr:precedes ex:Action12 ;
-ex:Action13 psr:precedes ex:Action14 ;
-ex:Action15 psr:precedes ex:Action16 .
+ex:Action1 obot:precedes ex:Action2 ;
+ex:Action3 obot:precedes ex:Action4 ;
+ex:Action5 obot:precedes ex:Action6 ;
+ex:Action7 obot:precedes ex:Action8 ;
+ex:Action9 obot:precedes ex:Action10 ;
+ex:Action11 obot:precedes ex:Action12 ;
+ex:Action13 obot:precedes ex:Action14 ;
+ex:Action15 obot:precedes ex:Action16 .
 
 # Entities representing misplaced items
-ex:MisplacedBowl1 a psr:Object ;
+ex:MisplacedBowl1 a obot:Object ;
     rdfs:label "Misplaced bowl with red checkered lid"@en .
 
-ex:StoredBowl1 a psr:Object ;
+ex:StoredBowl1 a obot:Object ;
     rdfs:label "Stored bowl with red checkered lid"@en .
 
-ex:JelloStorage a psr:Component ;
+ex:JelloStorage a obot:Component ;
     rdfs:label "Jello storage"@en .
 
-ex:RedJelloBox a psr:Object ;
+ex:RedJelloBox a obot:Object ;
     rdfs:label "Red jello box"@en .
 
-ex:RICEBubblesStorage a psr:Component ;
+ex:RICEBubblesStorage a obot:Component ;
     rdfs:label "RICE BUBBLES storage"@en .
 
-ex:RICEBubblesBox a psr:Object ;
+ex:RICEBubblesBox a obot:Object ;
     rdfs:label "RICE BUBBLES box"@en .
 
-ex:ChuckyStorage a psr:Component ;
+ex:ChuckyStorage a obot:Component ;
     rdfs:label "Chucky storage"@en .
 
-ex:ChuckyBox a psr:Object ;
+ex:ChuckyBox a obot:Object ;
     rdfs:label "CHUCKY box"@en .
 
-ex:CupStorage a psr:Component ;
+ex:CupStorage a obot:Component ;
     rdfs:label "Reusable cup storage"@en .
 
-ex:WaterBottleStorage a psr:Component ;
+ex:WaterBottleStorage a obot:Component ;
     rdfs:label "Water bottle storage"@en .
 
-ex:MugStorage a psr:Component ;
+ex:MugStorage a obot:Component ;
     rdfs:label "Mug storage"@en .
 
-ex:GlassStorage a psr:Component ;
+ex:GlassStorage a obot:Component ;
     rdfs:label "Glass storage"@en .

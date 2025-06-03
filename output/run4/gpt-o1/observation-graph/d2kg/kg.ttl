@@ -3,10 +3,10 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:MainEnvironment a psr:Environment ;
+ex:MainEnvironment a obot:Environment ;
     dul:hasComponent ex:Kitchen,
                      ex:DiningArea,
                      ex:Floor,
@@ -14,7 +14,7 @@ ex:MainEnvironment a psr:Environment ;
                      ex:CeilingLightFixture,
                      ex:Door .
 
-ex:Kitchen a psr:Component ;
+ex:Kitchen a obot:Component ;
     dul:hasComponent ex:Countertop,
                      ex:Cabinets,
                      ex:Sink,
@@ -33,7 +33,7 @@ ex:Kitchen a psr:Component ;
                      ex:WhitePlatesStack2,
                      ex:Refrigerator .
 
-ex:DiningArea a psr:Component ;
+ex:DiningArea a obot:Component ;
     dul:hasComponent ex:DiningTable,
                      ex:Chairs,
                      ex:Container,
@@ -44,94 +44,94 @@ ex:DiningArea a psr:Component ;
                      ex:Pitcher,
                      ex:WineGlass .
 
-ex:Floor a psr:Component .
-ex:Walls a psr:Component .
-ex:CeilingLightFixture a psr:Appliance .
-ex:Door a psr:Component .
+ex:Floor a obot:Component .
+ex:Walls a obot:Component .
+ex:CeilingLightFixture a obot:Appliance .
+ex:Door a obot:Component .
 
-ex:Countertop a psr:Furniture .
-ex:Cabinets a psr:Furniture .
-ex:Sink a psr:Appliance .
-ex:Window a psr:Object .
-ex:Stovetop a psr:Appliance .
-ex:RangeHood a psr:Appliance .
-ex:Pot a psr:Object .
-ex:BoxChucky a psr:Object .
-ex:BoxRiceBubbles a psr:Object .
-ex:JamJar1 a psr:Object .
-ex:OrangeMug a psr:Object .
-ex:WhitePlatesStack1 a psr:Object .
-ex:JamJar2 a psr:Object .
-ex:BoxJello a psr:Object .
-ex:AlpenSalt a psr:Object .
-ex:WhitePlatesStack2 a psr:Object .
-ex:Refrigerator a psr:Appliance .
+ex:Countertop a obot:Furniture .
+ex:Cabinets a obot:Furniture .
+ex:Sink a obot:Appliance .
+ex:Window a obot:Object .
+ex:Stovetop a obot:Appliance .
+ex:RangeHood a obot:Appliance .
+ex:Pot a obot:Object .
+ex:BoxChucky a obot:Object .
+ex:BoxRiceBubbles a obot:Object .
+ex:JamJar1 a obot:Object .
+ex:OrangeMug a obot:Object .
+ex:WhitePlatesStack1 a obot:Object .
+ex:JamJar2 a obot:Object .
+ex:BoxJello a obot:Object .
+ex:AlpenSalt a obot:Object .
+ex:WhitePlatesStack2 a obot:Object .
+ex:Refrigerator a obot:Appliance .
 
-ex:DiningTable a psr:Furniture .
-ex:Chairs a psr:Furniture .
-ex:Container a psr:Object .
-ex:LargeWaterBottle a psr:Object .
-ex:FruitOrange1 a psr:Object .
-ex:FruitCitrus1 a psr:Object .
-ex:CardboardBox a psr:Object .
-ex:Pitcher a psr:Object .
-ex:WineGlass a psr:Object .
+ex:DiningTable a obot:Furniture .
+ex:Chairs a obot:Furniture .
+ex:Container a obot:Object .
+ex:LargeWaterBottle a obot:Object .
+ex:FruitOrange1 a obot:Object .
+ex:FruitCitrus1 a obot:Object .
+ex:CardboardBox a obot:Object .
+ex:Pitcher a obot:Object .
+ex:WineGlass a obot:Object .
 
 ex:Pot dul:hasLocation ex:PotLocation .
-ex:PotLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Stovetop .
+ex:PotLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Stovetop .
 
 ex:BoxChucky dul:hasLocation ex:BoxChuckyLocation .
-ex:BoxChuckyLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:BoxChuckyLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:BoxRiceBubbles dul:hasLocation ex:BoxRiceBubblesLocation .
-ex:BoxRiceBubblesLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:BoxRiceBubblesLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:JamJar1 dul:hasLocation ex:JamJar1Location .
-ex:JamJar1Location a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:JamJar1Location a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:OrangeMug dul:hasLocation ex:OrangeMugLocation .
-ex:OrangeMugLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:OrangeMugLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:WhitePlatesStack1 dul:hasLocation ex:WhitePlatesStack1Location .
-ex:WhitePlatesStack1Location a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:WhitePlatesStack1Location a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:JamJar2 dul:hasLocation ex:JamJar2Location .
-ex:JamJar2Location a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:JamJar2Location a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:BoxJello dul:hasLocation ex:BoxJelloLocation .
-ex:BoxJelloLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:BoxJelloLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:AlpenSalt dul:hasLocation ex:AlpenSaltLocation .
-ex:AlpenSaltLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:AlpenSaltLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:WhitePlatesStack2 dul:hasLocation ex:WhitePlatesStack2Location .
-ex:WhitePlatesStack2Location a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:WhitePlatesStack2Location a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:Container dul:hasLocation ex:ContainerLocation .
-ex:ContainerLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable ;
+ex:ContainerLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable ;
     geo:sfContains ex:LargeWaterBottle,
                    ex:FruitOrange1,
                    ex:FruitCitrus1 .
 
 ex:CardboardBox dul:hasLocation ex:CardboardBoxLocation .
-ex:CardboardBoxLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:CardboardBoxLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:Pitcher dul:hasLocation ex:PitcherLocation .
-ex:PitcherLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:PitcherLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:WineGlass dul:hasLocation ex:WineGlassLocation .
-ex:WineGlassLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:WineGlassLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .

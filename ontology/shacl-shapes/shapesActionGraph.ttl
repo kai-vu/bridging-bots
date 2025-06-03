@@ -1,34 +1,34 @@
 @prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo:    <http://www.opengis.net/ont/geosparql#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 
 # INSTRUCTION SHAPE
-psr:InstructionShape a sh:NodeShape ;
-    sh:targetClass psr:Instruction ;
+obot:InstructionShape a sh:NodeShape ;
+    sh:targetClass obot:Instruction ;
     sh:property [
-        sh:path psr:hasWorkflow ;
-        sh:class psr:Workflow ;
+        sh:path obot:hasWorkflow ;
+        sh:class obot:Workflow ;
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path psr:hasNaturalLanguage ;
+        sh:path obot:hasNaturalLanguage ;
         sh:minCount 1 ;
     ] .
 
 # WORKFLOW SHAPE
-psr:WorkflowShape a sh:NodeShape ;
-    sh:targetClass psr:Workflow ;
+obot:WorkflowShape a sh:NodeShape ;
+    sh:targetClass obot:Workflow ;
     sh:property [
-        sh:path psr:hasAction ;
+        sh:path obot:hasAction ;
         sh:class dul:Action ;
         sh:minCount 1 ;
     ] .
 
 # ACTION SHAPE
-psr:ActionShape a sh:NodeShape ;
+obot:ActionShape a sh:NodeShape ;
     sh:targetClass dul:Action ;
     sh:or (
         [ sh:property [
@@ -45,12 +45,12 @@ psr:ActionShape a sh:NodeShape ;
         sh:class dul:Agent ;
     ] ;
     sh:property [
-        sh:path psr:isAffordedBy ;
-        sh:class psr:Affordance ;
+        sh:path obot:isAffordedBy ;
+        sh:class obot:Affordance ;
     ] ;
     sh:property [
-        sh:path psr:actsOn ;
-        sh:class psr:Component ;
+        sh:path obot:actsOn ;
+        sh:class obot:Component ;
         sh:minCount 1 ;
     ] .
 

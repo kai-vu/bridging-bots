@@ -1,91 +1,91 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en .
 
-ex:BlackCabinets a psr:Furniture ;
+ex:BlackCabinets a obot:Furniture ;
     dul:hasLocation ex:Wall1 ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:MarbleCountertops a psr:Furniture ;
+ex:MarbleCountertops a obot:Furniture ;
     dul:hasLocation ex:Wall1 .
 
-ex:WhiteRefrigerator a psr:Appliance ;
+ex:WhiteRefrigerator a obot:Appliance ;
     dul:hasLocation ex:Wall1 ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasLocation ex:KitchenArea ;
-    psr:hasAffordance soma:Supporting .
+    obot:hasAffordance soma:Supporting .
 
-ex:WhiteChairs a psr:Furniture ;
+ex:WhiteChairs a obot:Furniture ;
     dul:hasLocation ex:KitchenArea ;
-    psr:hasAffordance soma:Supporting .
+    obot:hasAffordance soma:Supporting .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:MarbleCountertops .
 
-ex:StoveTop a psr:Appliance ;
+ex:StoveTop a obot:Appliance ;
     dul:hasLocation ex:MarbleCountertops ;
-    psr:hasAffordance soma:TurningOn ;
-    psr:hasAffordance soma:TurningOff .
+    obot:hasAffordance soma:TurningOn ;
+    obot:hasAffordance soma:TurningOff .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:AboveStoveTop .
 
-ex:BoxesOfFood a psr:Object ;
+ex:BoxesOfFood a obot:Object ;
     dul:hasLocation ex:MarbleCountertops, ex:DiningTable .
 
-ex:JarsOfJam a psr:Object ;
+ex:JarsOfJam a obot:Object ;
     dul:hasLocation ex:MarbleCountertops .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     dul:hasLocation ex:MarbleCountertops .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
     dul:hasLocation ex:MarbleCountertops .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     dul:hasLocation ex:MarbleCountertops .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Door a psr:Object ;
+ex:Door a obot:Object ;
     dul:hasLocation ex:Wall2 ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:WhiteWalls a psr:Component ;
+ex:WhiteWalls a obot:Component ;
     rdfs:label "White Walls"@en .
 
-ex:BrownParquetFloor a psr:Component ;
+ex:BrownParquetFloor a obot:Component ;
     rdfs:label "Brown Parquet Floor"@en .
 
-ex:HangingLightFixture a psr:Object ;
+ex:HangingLightFixture a obot:Object ;
     dul:hasLocation ex:KitchenArea .
 
-ex:Wall1 a psr:Location .
-ex:Wall2 a psr:Location .
-ex:KitchenArea a psr:Location .
-ex:AboveStoveTop a psr:Location .
+ex:Wall1 a obot:Location .
+ex:Wall2 a obot:Location .
+ex:KitchenArea a obot:Location .
+ex:AboveStoveTop a obot:Location .
 
 ex:Kitchen dul:hasComponent ex:BlackCabinets ;
     dul:hasComponent ex:MarbleCountertops ;

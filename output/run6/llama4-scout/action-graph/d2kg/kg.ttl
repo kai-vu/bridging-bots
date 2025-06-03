@@ -5,196 +5,196 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Restore_Kitchen a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:Workflow_1 .
+ex:Restore_Kitchen a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:Workflow_1 .
 
-ex:Workflow_1 a psr:Workflow ;
-  psr:hasAction ex:Identify_Misplaced_Items .
+ex:Workflow_1 a obot:Workflow ;
+  obot:hasAction ex:Identify_Misplaced_Items .
 
 ex:Identify_Misplaced_Items a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Kitchen_Countertop ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Kitchen_Countertop ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:Kitchen_Countertop a psr:Component ;
+ex:Kitchen_Countertop a obot:Component ;
   rdfs:label "Kitchen Countertop"@en .
 
 ex:Robot a dul:Agent ;
   rdfs:label "Robot"@en .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_1 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_1 .
 
 ex:Pick_Up_Item_1 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Jar_Of_Jam_1 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Identify_Misplaced_Items .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Jar_Of_Jam_1 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Identify_Misplaced_Items .
 
-ex:Jar_Of_Jam_1 a psr:Object ;
+ex:Jar_Of_Jam_1 a obot:Object ;
   rdfs:label "Jar of Jam 1"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_1 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_1 .
 
 ex:Put_Down_Item_1 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Jar_Of_Jam_1 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_1 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Jar_Of_Jam_1 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_1 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_2 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_2 .
 
 ex:Pick_Up_Item_2 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Jell-O ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_1 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Jell-O ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_1 .
 
-ex:Box_Of_Jell-O a psr:Object ;
+ex:Box_Of_Jell-O a obot:Object ;
   rdfs:label "Box of Jell-O"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_2 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_2 .
 
 ex:Put_Down_Item_2 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Jell-O ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_2 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Jell-O ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_2 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_3 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_3 .
 
 ex:Pick_Up_Item_3 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pack_Of_Alpen_Salt ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_2 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pack_Of_Alpen_Salt ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_2 .
 
-ex:Pack_Of_Alpen_Salt a psr:Object ;
+ex:Pack_Of_Alpen_Salt a obot:Object ;
   rdfs:label "Pack of Alpen Salt"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_3 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_3 .
 
 ex:Put_Down_Item_3 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Pack_Of_Alpen_Salt ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_3 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Pack_Of_Alpen_Salt ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_3 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_4 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_4 .
 
 ex:Pick_Up_Item_4 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Rice_Bubbles ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_3 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Rice_Bubbles ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_3 .
 
-ex:Box_Of_Rice_Bubbles a psr:Object ;
+ex:Box_Of_Rice_Bubbles a obot:Object ;
   rdfs:label "Box of Rice Bubbles"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_4 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_4 .
 
 ex:Put_Down_Item_4 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Rice_Bubbles ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_4 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Rice_Bubbles ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_4 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_5 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_5 .
 
 ex:Pick_Up_Item_5 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Shortbread ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_4 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Shortbread ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_4 .
 
-ex:Box_Of_Shortbread a psr:Object ;
+ex:Box_Of_Shortbread a obot:Object ;
   rdfs:label "Box of Shortbread"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_5 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_5 .
 
 ex:Put_Down_Item_5 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Box_Of_Shortbread ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_5 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Box_Of_Shortbread ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_5 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_6 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_6 .
 
 ex:Pick_Up_Item_6 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Jar_Of_Jam_2 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_5 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Jar_Of_Jam_2 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_5 .
 
-ex:Jar_Of_Jam_2 a psr:Object ;
+ex:Jar_Of_Jam_2 a obot:Object ;
   rdfs:label "Jar of Jam 2"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_6 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_6 .
 
 ex:Put_Down_Item_6 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Jar_Of_Jam_2 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_6 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Jar_Of_Jam_2 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_6 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_7 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_7 .
 
 ex:Pick_Up_Item_7 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Stack_Of_Paper_Plates ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Put_Down_Item_6 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Stack_Of_Paper_Plates ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Put_Down_Item_6 .
 
-ex:Stack_Of_Paper_Plates a psr:Object ;
+ex:Stack_Of_Paper_Plates a obot:Object ;
   rdfs:label "Stack of Paper Plates"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_7 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_7 .
 
 ex:Put_Down_Item_7 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Stack_Of_Paper_Plates ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_7 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Stack_Of_Paper_Plates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_7 .
 
-ex:Workflow_1 psr:hasAction ex:Move_To_Dining_Room .
+ex:Workflow_1 obot:hasAction ex:Move_To_Dining_Room .
 
 ex:Move_To_Dining_Room a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:Moving ;
-  psr:follows ex:Put_Down_Item_7 .
+  obot:isPerformedBy ex:Robot ;
+  obot:isAffordedBy soma:Moving ;
+  obot:follows ex:Put_Down_Item_7 .
 
-ex:Workflow_1 psr:hasAction ex:Pick_Up_Item_8 .
+ex:Workflow_1 obot:hasAction ex:Pick_Up_Item_8 .
 
 ex:Pick_Up_Item_8 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Bottle_Of_Water_1 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:Move_To_Dining_Room .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Bottle_Of_Water_1 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:Move_To_Dining_Room .
 
-ex:Bottle_Of_Water_1 a psr:Object ;
+ex:Bottle_Of_Water_1 a obot:Object ;
   rdfs:label "Bottle of Water 1"@en .
 
-ex:Workflow_1 psr:hasAction ex:Put_Down_Item_8 .
+ex:Workflow_1 obot:hasAction ex:Put_Down_Item_8 .
 
 ex:Put_Down_Item_8 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Bottle_Of_Water_1 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:Pick_Up_Item_8 .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Bottle_Of_Water_1 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:Pick_Up_Item_8 .
 
-ex:Workflow_1 psr:hasAction ex:Move_Back_To_Kitchen .
+ex:Workflow_1 obot:hasAction ex:Move_Back_To_Kitchen .
 
 ex:Move_Back_To_Kitchen a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:Moving ;
-  psr:follows ex:Put_Down_Item_8 .
+  obot:isPerformedBy ex:Robot ;
+  obot:isAffordedBy soma:Moving ;
+  obot:follows ex:Put_Down_Item_8 .
 
-ex:Workflow_1 psr:hasAction ex:Organize_Remaining_Items .
+ex:Workflow_1 obot:hasAction ex:Organize_Remaining_Items .
 
 ex:Organize_Remaining_Items a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:Organizing ;
-  psr:follows ex:Move_Back_To_Kitchen .
+  obot:isPerformedBy ex:Robot ;
+  obot:isAffordedBy soma:Organizing ;
+  obot:follows ex:Move_Back_To_Kitchen .

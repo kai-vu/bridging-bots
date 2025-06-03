@@ -5,105 +5,105 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:      <http://example.org/data/> .
 
-ex:instruction a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
-    psr:hasWorkflow ex:workflow .
+ex:instruction a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    obot:hasWorkflow ex:workflow .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10 .
 
 ex:action1 a dul:Action ;
-    psr:precedes ex:action2 ;
+    obot:precedes ex:action2 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cerealBox1 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:cerealBox1 ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action2 a dul:Action ;
-    psr:precedes ex:action3 ;
-    psr:follows ex:action1 ;
+    obot:precedes ex:action3 ;
+    obot:follows ex:action1 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cerealBox1 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:cerealBox1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:action3 a dul:Action ;
-    psr:precedes ex:action4 ;
-    psr:follows ex:action2 ;
+    obot:precedes ex:action4 ;
+    obot:follows ex:action2 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cerealBox2 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:cerealBox2 ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action4 a dul:Action ;
-    psr:precedes ex:action5 ;
-    psr:follows ex:action3 ;
+    obot:precedes ex:action5 ;
+    obot:follows ex:action3 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cerealBox2 ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:cerealBox2 ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:action5 a dul:Action ;
-    psr:precedes ex:action6 ;
-    psr:follows ex:action4 ;
+    obot:precedes ex:action6 ;
+    obot:follows ex:action4 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:groceryBag ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:groceryBag ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action6 a dul:Action ;
-    psr:precedes ex:action7 ;
-    psr:follows ex:action5 ;
+    obot:precedes ex:action7 ;
+    obot:follows ex:action5 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:groceryBag ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:groceryBag ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:action7 a dul:Action ;
-    psr:precedes ex:action8 ;
-    psr:follows ex:action6 ;
+    obot:precedes ex:action8 ;
+    obot:follows ex:action6 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:refrigerator ;
-    psr:isAffordedBy soma:Opening .
+    obot:actsOn ex:refrigerator ;
+    obot:isAffordedBy soma:Opening .
 
 ex:action8 a dul:Action ;
-    psr:precedes ex:action9 ;
-    psr:follows ex:action7 ;
+    obot:precedes ex:action9 ;
+    obot:follows ex:action7 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:refrigerator ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:refrigerator ;
+    obot:isAffordedBy soma:Closing .
 
 ex:action9 a dul:Action ;
-    psr:precedes ex:action10 ;
-    psr:follows ex:action8 ;
+    obot:precedes ex:action10 ;
+    obot:follows ex:action8 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Opening .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Opening .
 
 ex:action10 a dul:Action ;
-    psr:follows ex:action9 ;
+    obot:follows ex:action9 ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Closing .
 
 ex:robot a dul:Agent .
 
-ex:cerealBox1 a psr:Object ;
-    psr:actsOn ex:countertop .
+ex:cerealBox1 a obot:Object ;
+    obot:actsOn ex:countertop .
 
-ex:cerealBox2 a psr:Object ;
-    psr:actsOn ex:floor .
+ex:cerealBox2 a obot:Object ;
+    obot:actsOn ex:floor .
 
-ex:groceryBag a psr:Object ;
-    psr:actsOn ex:countertop .
+ex:groceryBag a obot:Object ;
+    obot:actsOn ex:countertop .
 
-ex:refrigerator a psr:Appliance ;
-    psr:actsOn ex:kitchen .
+ex:refrigerator a obot:Appliance ;
+    obot:actsOn ex:kitchen .
 
-ex:cabinet a psr:Furniture ;
-    psr:actsOn ex:kitchen .
+ex:cabinet a obot:Furniture ;
+    obot:actsOn ex:kitchen .
 
-ex:countertop a psr:Component ;
-    psr:actsOn ex:kitchen .
+ex:countertop a obot:Component ;
+    obot:actsOn ex:kitchen .
 
-ex:floor a psr:Component ;
-    psr:actsOn ex:kitchen .
+ex:floor a obot:Component ;
+    obot:actsOn ex:kitchen .
 
-ex:kitchen a psr:Component .
+ex:kitchen a obot:Component .

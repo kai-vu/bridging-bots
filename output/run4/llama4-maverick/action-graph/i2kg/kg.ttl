@@ -5,71 +5,71 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
-psr:Instruction1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state."@en .
+obot:Instruction1 a obot:Instruction ;
+    obot:hasWorkflow obot:Workflow1 ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state."@en .
 
-psr:Workflow1 a psr:Workflow ;
-    psr:hasAction psr:Action1, psr:Action2, psr:Action3, psr:Action4, psr:Action5, psr:Action6, psr:Action7, psr:Action8 .
+obot:Workflow1 a obot:Workflow ;
+    obot:hasAction obot:Action1, obot:Action2, obot:Action3, obot:Action4, obot:Action5, obot:Action6, obot:Action7, obot:Action8 .
 
-psr:Action1 a dul:Action ;
+obot:Action1 a dul:Action ;
     rdfs:label "Pick up bottle"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Bottle1 ;
-    psr:isAffordedBy soma:PickingUp .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Bottle1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:Action2 a dul:Action ;
+obot:Action2 a dul:Action ;
     rdfs:label "Put bottle in fridge"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Bottle1 ;
-    psr:isAffordedBy soma:PuttingDown .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Bottle1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:Action3 a dul:Action ;
+obot:Action3 a dul:Action ;
     rdfs:label "Pick up box"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Box1 ;
-    psr:isAffordedBy soma:PickingUp .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Box1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:Action4 a dul:Action ;
+obot:Action4 a dul:Action ;
     rdfs:label "Put box in cabinet"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Box1 ;
-    psr:isAffordedBy soma:PuttingDown .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Box1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:Action5 a dul:Action ;
+obot:Action5 a dul:Action ;
     rdfs:label "Pick up jar"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Jar1 ;
-    psr:isAffordedBy soma:PickingUp .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Jar1 ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:Action6 a dul:Action ;
+obot:Action6 a dul:Action ;
     rdfs:label "Put jar in cabinet"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Jar1 ;
-    psr:isAffordedBy soma:PuttingDown .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Jar1 ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:Action7 a dul:Action ;
+obot:Action7 a dul:Action ;
     rdfs:label "Open cabinet"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Cabinet1 ;
-    psr:isAffordedBy soma:Opening .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Cabinet1 ;
+    obot:isAffordedBy soma:Opening .
 
-psr:Action8 a dul:Action ;
+obot:Action8 a dul:Action ;
     rdfs:label "Close cabinet"@en ;
-    soma:isPerformedBy psr:Robot1 ;
-    psr:actsOn psr:Cabinet1 ;
-    psr:isAffordedBy soma:Closing .
+    soma:isPerformedBy obot:Robot1 ;
+    obot:actsOn obot:Cabinet1 ;
+    obot:isAffordedBy soma:Closing .
 
-psr:Action1 psr:precedes psr:Action2 .
-psr:Action3 psr:precedes psr:Action4 .
-psr:Action5 psr:precedes psr:Action6 .
-psr:Action7 psr:precedes psr:Action8 .
+obot:Action1 obot:precedes obot:Action2 .
+obot:Action3 obot:precedes obot:Action4 .
+obot:Action5 obot:precedes obot:Action6 .
+obot:Action7 obot:precedes obot:Action8 .
 
-psr:Robot1 a dul:Agent .
+obot:Robot1 a dul:Agent .
 
-psr:Bottle1 a psr:Object .
-psr:Box1 a psr:Object .
-psr:Jar1 a psr:Object .
-psr:Cabinet1 a psr:Furniture .
+obot:Bottle1 a obot:Object .
+obot:Box1 a obot:Object .
+obot:Jar1 a obot:Object .
+obot:Cabinet1 a obot:Furniture .

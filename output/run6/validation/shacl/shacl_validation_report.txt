@@ -3684,179 +3684,179 @@ Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#Cla
 	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action2
 	Value Node: ex:JarOfJam1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action2
 	Value Node: ex:Fridge1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action18
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action18
 	Value Node: ex:CookiesBox1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action7
 	Value Node: ex:WhitePlatesStack1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action8
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action8
 	Value Node: ex:WhitePlatesStack1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action6
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action6
 	Value Node: ex:SaltContainer1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action4
 	Value Node: ex:BoxOfJello1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action4
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action13
 	Value Node: ex:RiceBubblesCerealBox1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action15
 	Value Node: ex:OrangeMug1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action21
 	Value Node: ex:GlassPitcher1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action14
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action14
 	Value Node: ex:RiceBubblesCerealBox1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action10
 	Value Node: ex:JarOfJam2
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action10
 	Value Node: ex:Fridge1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action19
 	Value Node: ex:TallPlasticWaterBottle1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action24
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action24
 	Value Node: ex:WineGlass1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action22
 	Value Node: ex:UpperCabinet1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action22
 	Value Node: ex:GlassPitcher1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action20
 	Value Node: ex:TallPlasticWaterBottle1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:Action20
 	Value Node: ex:Fridge1
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 
 
 === Validation Report for: ../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl ===
@@ -3875,126 +3875,126 @@ Conforms: False
 Results (19):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:hasNaturalLanguage ]
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasNaturalLanguage ]
 	Focus Node: ex:IdentifyMisplacedItems
-	Result Path: psr:hasNaturalLanguage
-	Message: Less than 1 values on ex:IdentifyMisplacedItems->psr:hasNaturalLanguage
+	Result Path: obot:hasNaturalLanguage
+	Message: Less than 1 values on ex:IdentifyMisplacedItems->obot:hasNaturalLanguage
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:ReturnSaltToStorage
 	Value Node: ex:ReturnSaltToStorage
 	Message: Node ex:ReturnSaltToStorage must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:LocateItemsOnCountertop
 	Value Node: ex:LocateItemsOnCountertop
 	Message: Node ex:LocateItemsOnCountertop must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:MoveToStorageForJELLO
 	Value Node: ex:MoveToStorageForJELLO
 	Message: Node ex:MoveToStorageForJELLO must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:GraspJELLO
 	Value Node: ex:GraspJELLO
 	Message: Node ex:GraspJELLO must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:GraspSalt
 	Value Node: ex:GraspSalt
 	Message: Node ex:GraspSalt must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:ReturnJELLOtoStorage
 	Value Node: ex:ReturnJELLOtoStorage
 	Message: Node ex:ReturnJELLOtoStorage must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:LocateSalt
 	Value Node: ex:LocateSalt
 	Message: Node ex:LocateSalt must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: psr:ActionShape
+	Source Shape: obot:ActionShape
 	Focus Node: ex:MoveToSaltStorage
 	Value Node: ex:MoveToSaltStorage
 	Message: Node ex:MoveToSaltStorage must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Affordance ; sh:path psr:isAffordedBy ]
+	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
 	Focus Node: ex:ReturnSaltToStorage
 	Value Node: soma:PuttingDown
-	Result Path: psr:isAffordedBy
-	Message: Value does not have class psr:Affordance
+	Result Path: obot:isAffordedBy
+	Message: Value does not have class obot:Affordance
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Affordance ; sh:path psr:isAffordedBy ]
+	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
 	Focus Node: ex:ReturnJELLOtoStorage
 	Value Node: soma:PuttingDown
-	Result Path: psr:isAffordedBy
-	Message: Value does not have class psr:Affordance
+	Result Path: obot:isAffordedBy
+	Message: Value does not have class obot:Affordance
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:ReturnSaltToStorage
 	Value Node: ex:SaltCarton
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:LocateItemsOnCountertop
 	Value Node: ex:Countertop
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:MoveToStorageForJELLO
-	Result Path: psr:actsOn
-	Message: Less than 1 values on ex:MoveToStorageForJELLO->psr:actsOn
+	Result Path: obot:actsOn
+	Message: Less than 1 values on ex:MoveToStorageForJELLO->obot:actsOn
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:GraspJELLO
 	Value Node: ex:JELLO
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:GraspSalt
 	Value Node: ex:SaltCarton
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:ReturnJELLOtoStorage
 	Value Node: ex:JELLO
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:LocateSalt
 	Value Node: ex:SaltCarton
-	Result Path: psr:actsOn
-	Message: Value does not have class psr:Component
+	Result Path: obot:actsOn
+	Message: Value does not have class obot:Component
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class psr:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path psr:actsOn ]
+	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
 	Focus Node: ex:MoveToSaltStorage
-	Result Path: psr:actsOn
-	Message: Less than 1 values on ex:MoveToSaltStorage->psr:actsOn
+	Result Path: obot:actsOn
+	Message: Less than 1 values on ex:MoveToSaltStorage->obot:actsOn
 
 
 === Validation Report for: ../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl ===

@@ -3,26 +3,26 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-psr:Environment a owl:Class, dul:Entity ;
+obot:Environment a owl:Class, dul:Entity ;
  rdfs:label "Environment"@en ;
  rdfs:comment "An environment is an area or context in which components are found."@en .
 
-psr:Component a owl:Class, dul:Entity ;
+obot:Component a owl:Class, dul:Entity ;
  rdfs:label "Component"@en ;
  rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-psr:Appliance a psr:Component ;
+obot:Appliance a obot:Component ;
  rdfs:label "Appliance"@en ;
  rdfs:comment "An appliance is a type of component."@en .
 
-psr:Furniture a psr:Component ;
+obot:Furniture a obot:Component ;
  rdfs:label "Furniture"@en ;
  rdfs:comment "A furniture is a type of component."@en .
 
-psr:Object a psr:Component ;
+obot:Object a obot:Component ;
  rdfs:label "Object"@en ;
  rdfs:comment "An object is a type of component."@en .
 
@@ -30,175 +30,175 @@ soma:Location a owl:Class, dul:Entity ;
  rdfs:label "Location"@en ;
  rdfs:comment "A location is a specific component within the environment"@en .
 
-psr:CurrentLocation a soma:Location ;
+obot:CurrentLocation a soma:Location ;
  rdfs:label "Current Location"@en ;
  rdfs:comment "The current location of a component within the environment."@en .
 
-psr:StandardLocation a soma:Location ;
+obot:StandardLocation a soma:Location ;
  rdfs:label "Standard Location"@en ;
  rdfs:comment "The location where a component is intended or supposed to be located, which can be different to its current location."@en .
 
-psr:Affordance a owl:Class, dul:Entity ;
+obot:Affordance a owl:Class, dul:Entity ;
  rdfs:label "Affordance"@en ;
  rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a psr:Affordance ;
+soma:Closing a obot:Affordance ;
  rdfs:label "Closing"@en ;
  rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a psr:Affordance ;
+soma:Opening a obot:Affordance ;
  rdfs:label "Opening"@en ;
  rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-soma:Delivering a psr:Affordance ;
+soma:Delivering a obot:Affordance ;
  rdfs:label "Delivering"@en ;
  rdfs:comment "Delivering is an affordance that enables a component to be delivered."@en .
 
-soma:Holding a psr:Affordance ;
+soma:Holding a obot:Affordance ;
  rdfs:label "Holding"@en ;
  rdfs:comment "Holding is an affordance that enables a component to be held."@en .
 
-soma:PickingUp a psr:Affordance ;
+soma:PickingUp a obot:Affordance ;
  rdfs:label "PickingUp"@en ;
  rdfs:comment "Picking up is an affordance that enables a component to be picked up."@en .
 
-soma:PuttingDown a psr:Affordance ;
+soma:PuttingDown a obot:Affordance ;
  rdfs:label "PuttingDown"@en ;
  rdfs:comment "Putting down is an affordance that enables a component to be put down."@en .
 
-soma:Pulling a psr:Affordance ;
+soma:Pulling a obot:Affordance ;
  rdfs:label "Pulling"@en ;
  rdfs:comment "Pulling is an affordance that enables a component to be pulled."@en .
 
-soma:Pushing a psr:Affordance ;
+soma:Pushing a obot:Affordance ;
  rdfs:label "Pushing"@en ;
  rdfs:comment "Pushing is an affordance that enables a component to be pushed."@en .
 
-soma:Grasping a psr:Affordance ;
+soma:Grasping a obot:Affordance ;
  rdfs:label "Grasping"@en ;
  rdfs:comment "Grasping is an affordance that enables a component to be grasped."@en .
 
 dul:hasComponent a owl:ObjectProperty ;
- rdfs:domain psr:Environment ;
- rdfs:range psr:Component ;
+ rdfs:domain obot:Environment ;
+ rdfs:range obot:Component ;
  rdfs:label "has component"@en ;
  rdfs:comment "An environment has one or more components."@en .
 
-psr:hasAffordance a owl:ObjectProperty ;
- rdfs:domain psr:Component ;
- rdfs:range psr:Affordance ;
+obot:hasAffordance a owl:ObjectProperty ;
+ rdfs:domain obot:Component ;
+ rdfs:range obot:Affordance ;
  rdfs:label "has affordance"@en ;
  rdfs:comment "A component has one or more affordances that indicate how it can be used."@en .
 
 dul:hasLocation a owl:ObjectProperty ;
- rdfs:domain psr:Component ;
- rdfs:range psr:Location ;
+ rdfs:domain obot:Component ;
+ rdfs:range obot:Location ;
  rdfs:label "has location"@en ;
  rdfs:comment "A component has a location within the environment, which can refer to another component."@en .
 
-psr:onTopOf a owl:ObjectProperty ;
- rdfs:domain psr:Location ;
- rdfs:range psr:Component ;
+obot:onTopOf a owl:ObjectProperty ;
+ rdfs:domain obot:Location ;
+ rdfs:range obot:Component ;
  rdfs:label "on top of"@en ;
  rdfs:comment "The location of component can be on top of another component."@en .
 
 geo:sfContains a owl:Property ;
- rdfs:domain psr:Location ;
- rdfs:range psr:Component ;
+ rdfs:domain obot:Location ;
+ rdfs:range obot:Component ;
  rdfs:label "contains"@en ;
  rdfs:comment "The location of a component can be contained in another component."@en .
 
 geo:sfWithin a owl:Property ;
- rdfs:domain psr:Location ;
- rdfs:range psr:Component ;
+ rdfs:domain obot:Location ;
+ rdfs:range obot:Component ;
  rdfs:label "is within"@en ;
  rdfs:comment "The location of a component can be within another component."@en .
 
 geo:sfOverlaps a owl:Property ;
- rdfs:domain psr:Location ;
- rdfs:range psr:Component ;
+ rdfs:domain obot:Location ;
+ rdfs:range obot:Component ;
  rdfs:label "overlaps"@en ;
  rdfs:comment "The location of a component can overlaps with another component."@en .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
  rdfs:label "Kitchen"@en .
 
-ex:Table a psr:Furniture, ex:Component ;
+ex:Table a obot:Furniture, ex:Component ;
  rdfs:label "Table"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:Refrigerator a psr:Appliance, ex:Component ;
+ex:Refrigerator a obot:Appliance, ex:Component ;
  rdfs:label "Refrigerator"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:CookingCounter a psr:Component ;
+ex:CookingCounter a obot:Component ;
  rdfs:label "Cooking Counter"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
  rdfs:label "Sink"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:Stove a psr:Component ;
+ex:Stove a obot:Component ;
  rdfs:label "Stove"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:UpperCabinet a psr:Component ;
+ex:UpperCabinet a obot:Component ;
  rdfs:label "Upper Cabinet"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:LowerCabinet a psr:Component ;
+ex:LowerCabinet a obot:Component ;
  rdfs:label "Lower Cabinet"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:PotsAndPans a psr:Object, ex:Component ;
+ex:PotsAndPans a obot:Object, ex:Component ;
  rdfs:label "Pots and Pans"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:Ex:Glass a psr:Object, ex:Component ;
+ex:Ex:Glass a obot:Object, ex:Component ;
  rdfs:label "Glass"@en ;
  dul:hasLocation ex:Kitchen .
 
-ex:Fridge a psr:Appliance ;
+ex:Fridge a obot:Appliance ;
  rdfs:label "Fridge"@en .
 
-ex:Ex:WaterBottle a psr:Object ;
+ex:Ex:WaterBottle a obot:Object ;
  rdfs:label "Water Bottle"@en .
 
-ex:Ex:Shortbread a psr:Object ;
+ex:Ex:Shortbread a obot:Object ;
  rdfs:label "Shortbread"@en .
 
-ex:Ex:ChocolateCake a psr:Object ;
+ex:Ex:ChocolateCake a obot:Object ;
  rdfs:label "Chocolate Cake"@en .
 
-ex:Ex:Jello a psr:Object ;
+ex:Ex:Jello a obot:Object ;
  rdfs:label "Jello"@en .
 
-ex:Ex:AlpenSalt a psr:Object ;
+ex:Ex:AlpenSalt a obot:Object ;
  rdfs:label "Alpen Salt"@en .
 
-ex:Ex:Evian a psr:Object ;
+ex:Ex:Evian a obot:Object ;
  rdfs:label "Evian"@en .
 
-ex:Ex:Plate a psr:Object ;
+ex:Ex:Plate a obot:Object ;
  rdfs:label "Plate"@en .
 
-ex:Ex:GlassJar a psr:Object ;
+ex:Ex:GlassJar a obot:Object ;
  rdfs:label "Glass Jar"@en .
 
-ex:Ex:Mug a psr:Object ;
+ex:Ex:Mug a obot:Object ;
  rdfs:label "Mug"@en .
 
-ex:Ex:Book a psr:Object ;
+ex:Ex:Book a obot:Object ;
  rdfs:label "Book"@en .
 
-ex:Ex:Chair a psr:Furniture ;
+ex:Ex:Chair a obot:Furniture ;
  rdfs:label "Chair"@en .
 
-dul:hasComponent psr:Environment ;
+dul:hasComponent obot:Environment ;
  rdfs:label "has component"@en .
 
-psr:hasLocation soma:Location ;
+obot:hasLocation soma:Location ;
  rdfs:label "has location"@en .
 
 ex:Kitchen dul:hasComponent ex:Refrigerator .
@@ -229,14 +229,14 @@ ex:Ex:AlpenSalt dul:hasLocation ex:CookingCounter .
 ex:Ex:Evian dul:hasLocation ex:CookingCounter .
 
 ex:Ex:GlassJar dul:hasLocation ex:CookingCounter .
-ex:Ex:Glass a psr:Object .
+ex:Ex:Glass a obot:Object .
 
-ex:Ex:Mug a psr:Object .
+ex:Ex:Mug a obot:Object .
 
-ex:Ex:Book a psr:Object .
+ex:Ex:Book a obot:Object .
 
-ex:Ex:Chair a psr:Furniture .
+ex:Ex:Chair a obot:Furniture .
 
-ex:Ex:Fridge a psr:Appliance .
+ex:Ex:Fridge a obot:Appliance .
 
 geo:sfWithin ex:Kitchen .

@@ -5,70 +5,70 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Instruction1 a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+ex:Instruction1 a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-ex:Workflow1 a psr:Workflow ;
-  psr:hasAction ex:Action1 ;
-  psr:hasAction ex:Action2 ;
-  psr:hasAction ex:Action3 ;
-  psr:hasAction ex:Action4 ;
-  psr:hasAction ex:Action5 .
+ex:Workflow1 a obot:Workflow ;
+  obot:hasAction ex:Action1 ;
+  obot:hasAction ex:Action2 ;
+  obot:hasAction ex:Action3 ;
+  obot:hasAction ex:Action4 ;
+  obot:hasAction ex:Action5 .
 
 ex:Action1 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:Action2 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItem1 ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItem1 ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:Action3 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItem1 ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItem1 ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:Action4 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItem2 ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItem2 ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:Action5 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItem2 ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItem2 ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:Robot a dul:Agent .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:MisplacedItem1 a psr:Object ;
+ex:MisplacedItem1 a obot:Object ;
   rdfs:label "Jar of Jam"@en .
 
-ex:MisplacedItem2 a psr:Object ;
+ex:MisplacedItem2 a obot:Object ;
   rdfs:label "Yellow Cup"@en .
 
-ex:StandardStorageLocation1 a psr:Component ;
+ex:StandardStorageLocation1 a obot:Component ;
   rdfs:label "Cabinet"@en .
 
-ex:StandardStorageLocation2 a psr:Component ;
+ex:StandardStorageLocation2 a obot:Component ;
   rdfs:label "Countertop"@en .
 
-ex:Action1 psr:follows ex:Action0 .
-ex:Action2 psr:follows ex:Action1 .
-ex:Action3 psr:follows ex:Action2 .
-ex:Action4 psr:follows ex:Action3 .
-ex:Action5 psr:follows ex:Action4 .
+ex:Action1 obot:follows ex:Action0 .
+ex:Action2 obot:follows ex:Action1 .
+ex:Action3 obot:follows ex:Action2 .
+ex:Action4 obot:follows ex:Action3 .
+ex:Action5 obot:follows ex:Action4 .
 
 ex:Action0 a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Opening .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Opening .
 
-ex:Instruction1 psr:hasWorkflow ex:Workflow1 .
+ex:Instruction1 obot:hasWorkflow ex:Workflow1 .

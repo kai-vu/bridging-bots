@@ -1,4 +1,4 @@
-@prefix psr: <http://psr-action.com/> .
+@prefix obot: <http://psr-action.com/> .
 @prefix dul: <http://dul.kr.org.architecture/architecture#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,49 +7,49 @@
 
 :kitchen a dul:Workflow ;
   dul:hasAction :organizeKitchen ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :openFridge ] ;
-        psr:precededBy [ dul:Action :inspectFridge ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :openFridge ] ;
+        obot:precededBy [ dul:Action :inspectFridge ] ;
+          obot:isPerformedBy :robot.
 
 :organizeKitchen a dul:Workflow ;
   dul:hasAction :sortFridgeContent ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :openRefrigerator ] ;
-        psr:precededBy [ dul:Action :inspectRefrigerator ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :openRefrigerator ] ;
+        obot:precededBy [ dul:Action :inspectRefrigerator ] ;
+          obot:isPerformedBy :robot.
 
 :sortFridgeContent a dul:Workflow ;
   dul:hasAction :identifyMisplacedItems ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :openRefrigerator ] ;
-        psr:precededBy [ dul:Action :inspectRefrigerator ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :openRefrigerator ] ;
+        obot:precededBy [ dul:Action :inspectRefrigerator ] ;
+          obot:isPerformedBy :robot.
 
 :identifyMisplacedItems a dul:Workflow ;
   dul:hasAction :sortFridgeContent ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :openRefrigerator ] ;
-        psr:precededBy [ dul:Action :inspectRefrigerator ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :openRefrigerator ] ;
+        obot:precededBy [ dul:Action :inspectRefrigerator ] ;
+          obot:isPerformedBy :robot.
 
 :openRefrigerator a dul:Workflow ;
   dul:hasAction :openFridge ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :inspectFridge ] ;
-        psr:precededBy [ dul:Action :identifyMisplacedItems ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :inspectFridge ] ;
+        obot:precededBy [ dul:Action :identifyMisplacedItems ] ;
+          obot:isPerformedBy :robot.
 
 :openFridge a dul:Workflow ;
   dul:hasAction :closeRefrigerator ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :inspectFridge ] ;
-        psr:precededBy [ dul:Action :sortFridgeContent ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :inspectFridge ] ;
+        obot:precededBy [ dul:Action :sortFridgeContent ] ;
+          obot:isPerformedBy :robot.
 
 :closeRefrigerator a dul:Workflow ;
   dul:hasAction :openRefrigerator ;
-    psr:actsOn [ dul:Component :fridge ] ;
-      psr:precedes [ dul:Action :sortFridgeContent ] ;
-        psr:precededBy [ dul:Action :organizeKitchen ] ;
-          psr:isPerformedBy :robot.
+    obot:actsOn [ dul:Component :fridge ] ;
+      obot:precedes [ dul:Action :sortFridgeContent ] ;
+        obot:precededBy [ dul:Action :organizeKitchen ] ;
+          obot:isPerformedBy :robot.

@@ -3,127 +3,127 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 
 @prefix : <http://example.org/data/> .
 
-:Kitchen a psr:Environment .
+:Kitchen a obot:Environment .
 
-:Countertop a psr:Object ;
+:Countertop a obot:Object ;
     dul:hasLocation :CountertopLocation .
 
-:Refrigerator a psr:Appliance ;
+:Refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation :RefrigeratorLocation .
 
-:Table a psr:Furniture ;
+:Table a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation :TableLocation .
 
-:Door a psr:Object ;
+:Door a obot:Object ;
     rdfs:label "Door"@en ;
     dul:hasLocation :DoorLocation .
 
-:Plate a psr:Object ;
+:Plate a obot:Object ;
     rdfs:label "Plate"@en ;
     dul:hasLocation :PlateLocation .
 
-:Box of Rice Bubbles a psr:Object ;
+:Box of Rice Bubbles a obot:Object ;
     rdfs:label "Rice Bubbles"@en ;
     dul:hasLocation :CounterLocation .
 
-:Box of Jello a psr:Object ;
+:Box of Jello a obot:Object ;
     rdfs:label "Jello"@en ;
     dul:hasLocation :CounterLocation .
 
-:Box of Shortbread a psr:Object ;
+:Box of Shortbread a obot:Object ;
     rdfs:label "Shortbread"@en ;
     dul:hasLocation :CounterLocation .
 
-:WaterBottle a psr:Object ;
+:WaterBottle a obot:Object ;
     rdfs:label "Water Bottle"@en ;
     dul:hasLocation :CounterLocation .
 
-:Glass a psr:Object ;
+:Glass a obot:Object ;
     rdfs:label "Glass"@en ;
     dul:hasLocation :TableLocation .
 
-:Pat a psr:Object ;
+:Pat a obot:Object ;
     rdfs:label "Pat"@en ;
     dul:hasLocation :CounterLocation .
 
-:Pan a psr:Object ;
+:Pan a obot:Object ;
     rdfs:label "Pan"@en ;
     dul:hasLocation :StoveLocation .
 
-:Oven a psr:Appliance ;
+:Oven a obot:Appliance ;
     rdfs:label "Oven"@en ;
     dul:hasLocation :StoveLocation .
 
-:Cooktop a psr:Appliance ;
+:Cooktop a obot:Appliance ;
     rdfs:label "Cooktop"@en ;
     dul:hasLocation :StoveLocation .
 
-:Stove a psr:Component ;
+:Stove a obot:Component ;
     rdfs:label "Stove"@en ;
     dul:hasComponent :Oven, :Cooktop .
 
-:CounterLocation a psr:Location ;
+:CounterLocation a obot:Location ;
     geo:sfContains :Countertop, :Box_of_Rice_Bubbles, :Box_of_Jello, :Box_of_Shortbread, :Water_Bottle, :Pat, :Pan, :Oven, :Cooktop .
 
-:RefrigeratorLocation a psr:Location ;
+:RefrigeratorLocation a obot:Location ;
     geo:sfContains :Refrigerator .
 
-:TableLocation a psr:Location ;
+:TableLocation a obot:Location ;
     geo:sfContains :Table, :Glass .
 
-:DoorLocation a psr:Location ;
+:DoorLocation a obot:Location ;
     geo:sfContains :Door .
 
-:CountertopLocation a psr:Location ;
+:CountertopLocation a obot:Location ;
     geo:sfContains :Countertop .
 
-:PlateLocation a psr:Location ;
+:PlateLocation a obot:Location ;
     geo:sfContains :Plate .
 
-:StoveLocation a psr:Location ;
+:StoveLocation a obot:Location ;
     geo:sfContains :Stove .
 
-:Box_of_Rice_Bubbles a psr:Object ;
+:Box_of_Rice_Bubbles a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Box_of_Jello a psr:Object ;
+:Box_of_Jello a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Box_of_Shortbread a psr:Object ;
+:Box_of_Shortbread a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Water_Bottle a psr:Object ;
+:Water_Bottle a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Pat a psr:Object ;
+:Pat a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Pan a psr:Object ;
+:Pan a obot:Object ;
     dul:hasLocation :Countertop .
 
-:Oven a psr:Appliance ;
+:Oven a obot:Appliance ;
     dul:hasLocation :Stove .
 
-:Cooktop a psr:Appliance ;
+:Cooktop a obot:Appliance ;
     dul:hasLocation :Stove .
 
-:Refrigerator a psr:Appliance ;
+:Refrigerator a obot:Appliance ;
     dul:hasLocation :Refrigerator .
 
-:Table a psr:Furniture ;
+:Table a obot:Furniture ;
     dul:hasLocation :Table .
 
-:Door a psr:Object ;
+:Door a obot:Object ;
     dul:hasLocation :Door .
 
-:Glass a psr:Object ;
+:Glass a obot:Object ;
     dul:hasLocation :Table .
 
-:Past a psr:Object ;
+:Past a obot:Object ;
     dul:hasLocation :Countertop .

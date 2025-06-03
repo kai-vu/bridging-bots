@@ -3,56 +3,56 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
 @prefix : <http://example.org/data/> .
 
 # Define the environment
-<http://example.org/data/Room> a psr:Environment ;
+<http://example.org/data/Room> a obot:Environment ;
     rdfs:label "Room"@en ;
     dul:hasComponent :KitchenCounter, :Refrigerator, :Table, :Chair, :Cupboard, :Wall1, :Wall2, :Wall3, :Wall4 .
 
 # Components in the environment
-<http://example.org/data/Refrigerator> a psr:Appliance ;
+<http://example.org/data/Refrigerator> a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Refrigerator> .
 
-<http://example.org/data/CurrentLocation_Refrigerator> a psr:CurrentLocation .
+<http://example.org/data/CurrentLocation_Refrigerator> a obot:CurrentLocation .
 
-<http://example.org/data/KitchenCounter> a psr:Furniture ;
+<http://example.org/data/KitchenCounter> a obot:Furniture ;
     rdfs:label "Kitchen Counter"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_KitchenCounter> .
 
-<http://example.org/data/CurrentLocation_KitchenCounter> a psr:CurrentLocation .
+<http://example.org/data/CurrentLocation_KitchenCounter> a obot:CurrentLocation .
 
-<http://example.org/data/Table> a psr:Furniture ;
+<http://example.org/data/Table> a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Table> .
 
-<http://example.org/data/CurrentLocation_Table> a psr:CurrentLocation .
+<http://example.org/data/CurrentLocation_Table> a obot:CurrentLocation .
 
-<http://example.org/data/Chair> a psr:Furniture ;
+<http://example.org/data/Chair> a obot:Furniture ;
     rdfs:label "Chair"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Chair> .
 
-<http://example.org/data/CurrentLocation_Chair> a psr:CurrentLocation .
+<http://example.org/data/CurrentLocation_Chair> a obot:CurrentLocation .
 
-<http://example.org/data/Cupboard> a psr:Furniture ;
+<http://example.org/data/Cupboard> a obot:Furniture ;
     rdfs:label "Cupboard"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Cupboard> .
 
-<http://example.org/data/CurrentLocation_Cupboard> a psr:CurrentLocation .
+<http://example.org/data/CurrentLocation_Cupboard> a obot:CurrentLocation .
 
-<http://example.org/data/Wall1> a psr:Object ;
+<http://example.org/data/Wall1> a obot:Object ;
     rdfs:label "Wall 1"@en .
 
-<http://example.org/data/Wall2> a psr:Object ;
+<http://example.org/data/Wall2> a obot:Object ;
     rdfs:label "Wall 2"@en .
 
-<http://example.org/data/Wall3> a psr:Object ;
+<http://example.org/data/Wall3> a obot:Object ;
     rdfs:label "Wall 3"@en .
 
-<http://example.org/data/Wall4> a psr:Object ;
+<http://example.org/data/Wall4> a obot:Object ;
     rdfs:label "Wall 4"@en .
 
 # Floor plan components, relations are implied by the room layout
@@ -75,19 +75,19 @@
 <http://example.org/data/Wall4> geo:sfContains <http://example.org/data/Room> .
 
 # Items on the table
-<http://example.org/data/Item1> a psr:Object ;
+<http://example.org/data/Item1> a obot:Object ;
     rdfs:label "Box of Rice Bubbles"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Table> .
 
-<http://example.org/data/Item2> a psr:Object ;
+<http://example.org/data/Item2> a obot:Object ;
     rdfs:label "Jug"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Table> .
 
-<http://example.org/data/Item3> a psr:Object ;
+<http://example.org/data/Item3> a obot:Object ;
     rdfs:label "Chocolate Shortbread"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Table> .
 
-<http://example.org/data/Item4> a psr:Object ;
+<http://example.org/data/Item4> a obot:Object ;
     rdfs:label "Bottle of Water"@en ;
     dul:hasLocation <http://example.org/data/CurrentLocation_Table> .
 

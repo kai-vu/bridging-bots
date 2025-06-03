@@ -3,69 +3,69 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Environment1 a psr:Environment ;
+ex:Environment1 a obot:Environment ;
     dul:hasComponent ex:KitchenCabinet1, ex:Refrigerator1, ex:DiningTable1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Sink1, ex:CookingAppliance1 .
 
-ex:KitchenCabinet1 a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:KitchenCabinet1 a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:KitchenCounter1 a psr:Location ;
+ex:KitchenCounter1 a obot:Location ;
     geo:sfContains ex:Jar1, ex:Jello1, ex:Salt1, ex:Box1, ex:Glass1, ex:Pot1, ex:Book1 .
 
-ex:Jar1 a psr:Object ;
+ex:Jar1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Jello1 a psr:Object ;
+ex:Jello1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Salt1 a psr:Object ;
+ex:Salt1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Refrigerator1 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Refrigerator1 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:DiningTable1 a psr:Furniture ;
+ex:DiningTable1 a obot:Furniture ;
     dul:hasLocation ex:DiningRoom1 ;
     geo:sfContains ex:WaterBottle1, ex:Mug1, ex:Book2 .
 
-ex:DiningRoom1 a psr:Location .
+ex:DiningRoom1 a obot:Location .
 
-ex:Chair1 a psr:Furniture ;
+ex:Chair1 a obot:Furniture ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Chair2 a psr:Furniture ;
+ex:Chair2 a obot:Furniture ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Chair3 a psr:Furniture ;
+ex:Chair3 a obot:Furniture ;
     dul:hasLocation ex:DiningRoom1 .
 
-ex:Sink1 a psr:Furniture ;
+ex:Sink1 a obot:Furniture ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:CookingAppliance1 a psr:Appliance ;
+ex:CookingAppliance1 a obot:Appliance ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:WaterBottle1 a psr:Object ;
+ex:WaterBottle1 a obot:Object ;
     dul:hasLocation ex:DiningTable1 .
 
-ex:Mug1 a psr:Object ;
+ex:Mug1 a obot:Object ;
     dul:hasLocation ex:DiningTable1 .
 
-ex:Book1 a psr:Object ;
+ex:Book1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Book2 a psr:Object ;
+ex:Book2 a obot:Object ;
     dul:hasLocation ex:DiningTable1 .
 
-ex:Pot1 a psr:Object ;
+ex:Pot1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Glass1 a psr:Object ;
+ex:Glass1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .
 
-ex:Box1 a psr:Object ;
+ex:Box1 a obot:Object ;
     dul:hasLocation ex:KitchenCounter1 .

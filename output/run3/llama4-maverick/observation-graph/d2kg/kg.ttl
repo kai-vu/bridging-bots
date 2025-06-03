@@ -3,92 +3,92 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Countertops, ex:Refrigerator, ex:Sink, ex:RangeHood, ex:DiningTable, ex:Chairs, ex:JamJar, ex:JellOBox, ex:AlpenSalt, ex:Plates, ex:Canister, ex:Faucet, ex:WaterBottle, ex:CrackersBox, ex:Mug, ex:Glass, ex:Knife, ex:Lemons .
 
-ex:Cabinets a psr:Furniture ;
+ex:Cabinets a obot:Furniture ;
     rdfs:label "Dark Grey Cabinets"@en .
 
-ex:Countertops a psr:Furniture ;
+ex:Countertops a obot:Furniture ;
     rdfs:label "Beige Marble Countertops"@en ;
     dul:hasLocation ex:Sink .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "White Refrigerator"@en ;
     dul:hasLocation ex:RightOfCounter .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Sink"@en ;
     dul:hasLocation ex:Countertops ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     rdfs:label "Range Hood"@en ;
     dul:hasLocation ex:AboveSink .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     rdfs:label "Wooden Dining Table"@en ;
     dul:hasComponent ex:WaterBottle, ex:CrackersBox, ex:Mug, ex:Glass, ex:Knife, ex:Lemons .
 
-ex:Chairs a psr:Furniture ;
+ex:Chairs a obot:Furniture ;
     rdfs:label "White Chairs"@en .
 
-ex:JamJar a psr:Object ;
+ex:JamJar a obot:Object ;
     rdfs:label "Red Jar of Jam"@en ;
     dul:hasLocation ex:Countertops .
 
-ex:JellOBox a psr:Object ;
+ex:JellOBox a obot:Object ;
     rdfs:label "Box of Jell-O"@en ;
     dul:hasLocation ex:Countertops .
 
-ex:AlpenSalt a psr:Object ;
+ex:AlpenSalt a obot:Object ;
     rdfs:label "Alpen Salt"@en ;
     dul:hasLocation ex:Countertops .
 
-ex:Plates a psr:Object ;
+ex:Plates a obot:Object ;
     rdfs:label "Stack of Plates"@en ;
     dul:hasLocation ex:Countertops .
 
-ex:Canister a psr:Object ;
+ex:Canister a obot:Object ;
     rdfs:label "Red Canister"@en ;
     dul:hasLocation ex:Countertops .
 
-ex:Faucet a psr:Object ;
+ex:Faucet a obot:Object ;
     rdfs:label "Silver Faucet"@en ;
     dul:hasLocation ex:Sink .
 
-ex:WaterBottle a psr:Object ;
+ex:WaterBottle a obot:Object ;
     rdfs:label "Bottle of Water"@en ;
     dul:hasLocation ex:DiningTable .
 
-ex:CrackersBox a psr:Object ;
+ex:CrackersBox a obot:Object ;
     rdfs:label "Box of Crackers"@en ;
     dul:hasLocation ex:DiningTable .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     rdfs:label "Mug"@en ;
     dul:hasLocation ex:DiningTable .
 
-ex:Glass a psr:Object ;
+ex:Glass a obot:Object ;
     rdfs:label "Glass"@en ;
     dul:hasLocation ex:DiningTable .
 
-ex:Knife a psr:Object ;
+ex:Knife a obot:Object ;
     rdfs:label "Knife"@en ;
     dul:hasLocation ex:DiningTable ;
-    psr:hasAffordance soma:Cutting .
+    obot:hasAffordance soma:Cutting .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     rdfs:label "Lemons"@en ;
     dul:hasLocation ex:DiningTable .
 
-ex:RightOfCounter a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertops .
+ex:RightOfCounter a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertops .
 
-ex:AboveSink a psr:CurrentLocation ;
+ex:AboveSink a obot:CurrentLocation ;
     geo:sfWithin ex:Sink .
 
 ex:Countertops dul:hasLocation ex:Kitchen .

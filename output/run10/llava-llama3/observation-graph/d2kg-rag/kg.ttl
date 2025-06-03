@@ -1,81 +1,81 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en ;
     dul:hasComponent ex:Countertop1, ex:Countertop2, ex:Refrigerator, ex:VentHood, ex:Cabinets, ex:Window, ex:Door .
 
-ex:Countertop1 a psr:Component ;
+ex:Countertop1 a obot:Component ;
     rdfs:label "Countertop 1"@en ;
     dul:hasLocation ex:Kitchen ;
-    psr:hasAffordance soma:Grasping, soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Grasping, soma:Pushing, soma:Pulling .
 
-ex:Countertop2 a psr:Component ;
+ex:Countertop2 a obot:Component ;
     rdfs:label "Countertop 2"@en ;
     dul:hasLocation ex:Kitchen ;
-    psr:hasAffordance soma:Grasping, soma:Pushing, soma:Pulling .
+    obot:hasAffordance soma:Grasping, soma:Pushing, soma:Pulling .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation ex:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:VentHood a psr:Component ;
+ex:VentHood a obot:Component ;
     rdfs:label "Vent Hood"@en ;
     dul:hasLocation ex:Kitchen .
 
-ex:Cabinets a psr:Component ;
+ex:Cabinets a obot:Component ;
     rdfs:label "Cabinets"@en ;
     dul:hasLocation ex:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Window a psr:Component ;
+ex:Window a obot:Component ;
     rdfs:label "Window"@en ;
     dul:hasLocation ex:Kitchen .
 
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
     rdfs:label "Door"@en ;
     dul:hasLocation ex:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:OtherRoom a psr:Environment ;
+ex:OtherRoom a obot:Environment ;
     rdfs:label "Other Room"@en ;
     dul:hasComponent ex:Table, ex:Chairs, ex:Microwave, ex:Oven .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
     rdfs:label "Table"@en ;
     dul:hasLocation ex:OtherRoom .
 
-ex:Chairs a psr:Furniture ;
+ex:Chairs a obot:Furniture ;
     rdfs:label "Chairs"@en ;
     dul:hasLocation ex:OtherRoom .
 
-ex:Microwave a psr:Appliance ;
+ex:Microwave a obot:Appliance ;
     rdfs:label "Microwave"@en ;
     dul:hasLocation ex:OtherRoom ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Oven a psr:Appliance ;
+ex:Oven a obot:Appliance ;
     rdfs:label "Oven"@en ;
     dul:hasLocation ex:OtherRoom ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:RedMug a psr:Object ;
+ex:RedMug a obot:Object ;
     rdfs:label "Red Mug"@en ;
     dul:hasLocation ex:Countertop1 ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:ClearBottle a psr:Object ;
+ex:ClearBottle a obot:Object ;
     rdfs:label "Clear Bottle"@en ;
     dul:hasLocation ex:Countertop1 ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .
 
-ex:BrownBottle a psr:Object ;
+ex:BrownBottle a obot:Object ;
     rdfs:label "Brown Bottle"@en ;
     dul:hasLocation ex:Countertop1 ;
-    psr:hasAffordance soma:Grasping, soma:Holding .
+    obot:hasAffordance soma:Grasping, soma:Holding .

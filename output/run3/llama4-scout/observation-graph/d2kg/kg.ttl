@@ -3,66 +3,66 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenDiningEnvironment a psr:Environment ;
+ex:KitchenDiningEnvironment a obot:Environment ;
   dul:hasComponent ex:KitchenArea, ex:DiningArea, ex:PartialWall .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   dul:hasComponent ex:Countertop, ex:Sink, ex:BlackCabinets, ex:Mirror, ex:VentHood, ex:Refrigerator .
 
-ex:DiningArea a psr:Component ;
+ex:DiningArea a obot:Component ;
   dul:hasComponent ex:Table, ex:Chairs, ex:BottlesOfWater .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   dul:hasComponent ex:Pot, ex:JarOfJam, ex:PuzzleBox, ex:RiceBubblesBox, ex:JelloBox, ex:Plate, ex:Cup .
 
-ex:BlackCabinets a psr:Component .
+ex:BlackCabinets a obot:Component .
 
-ex:Sink a psr:Component .
+ex:Sink a obot:Component .
 
-ex:Mirror a psr:Component .
+ex:Mirror a obot:Component .
 
-ex:VentHood a psr:Component .
+ex:VentHood a obot:Component .
 
-ex:Refrigerator a psr:Appliance .
+ex:Refrigerator a obot:Appliance .
 
-ex:Table a psr:Furniture .
+ex:Table a obot:Furniture .
 
-ex:Chairs a psr:Furniture ;
+ex:Chairs a obot:Furniture ;
   rdfs:comment "There are four chairs."@en .
 
-ex:BottlesOfWater a psr:Object ;
+ex:BottlesOfWater a obot:Object ;
   rdfs:comment "There are two bottles of water."@en .
 
-ex:Pot a psr:Object .
+ex:Pot a obot:Object .
 
-ex:JarOfJam a psr:Object .
+ex:JarOfJam a obot:Object .
 
-ex:PuzzleBox a psr:Object .
+ex:PuzzleBox a obot:Object .
 
-ex:RiceBubblesBox a psr:Object .
+ex:RiceBubblesBox a obot:Object .
 
-ex:JelloBox a psr:Object .
+ex:JelloBox a obot:Object .
 
-ex:Plate a psr:Object .
+ex:Plate a obot:Object .
 
-ex:Cup a psr:Object .
+ex:Cup a obot:Object .
 
-ex:KitchenArea psr:hasAffordance soma:Opening, soma:Closing .
+ex:KitchenArea obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Refrigerator psr:hasAffordance soma:Opening .
+ex:Refrigerator obot:hasAffordance soma:Opening .
 
-ex:Table psr:hasAffordance soma:PuttingDown, soma:PickingUp .
+ex:Table obot:hasAffordance soma:PuttingDown, soma:PickingUp .
 
-ex:Chairs psr:hasAffordance soma:Sitting .
+ex:Chairs obot:hasAffordance soma:Sitting .
 
-ex:Pot psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:Pot obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:Plate psr:hasAffordance soma:PuttingDown .
+ex:Plate obot:hasAffordance soma:PuttingDown .
 
-ex:Cup psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:Cup obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
 ex:KitchenArea dul:hasLocation ex:KitchenAreaLocation .
 
@@ -78,25 +78,25 @@ ex:Chairs dul:hasLocation ex:ChairsLocation .
 
 ex:PartialWall dul:hasLocation ex:PartialWallLocation .
 
-ex:KitchenAreaLocation psr:onTopOf ex:KitchenAreaFloor .
+ex:KitchenAreaLocation obot:onTopOf ex:KitchenAreaFloor .
 
-ex:KitchenAreaFloor a psr:Component .
+ex:KitchenAreaFloor a obot:Component .
 
-ex:CountertopLocation psr:onTopOf ex:CountertopSupport .
+ex:CountertopLocation obot:onTopOf ex:CountertopSupport .
 
-ex:CountertopSupport a psr:Component .
+ex:CountertopSupport a obot:Component .
 
-ex:RefrigeratorLocation psr:onTopOf ex:KitchenAreaFloor .
+ex:RefrigeratorLocation obot:onTopOf ex:KitchenAreaFloor .
 
-ex:TableLocation psr:onTopOf ex:DiningAreaFloor .
+ex:TableLocation obot:onTopOf ex:DiningAreaFloor .
 
-ex:DiningAreaFloor a psr:Component .
+ex:DiningAreaFloor a obot:Component .
 
-ex:ChairsLocation psr:onTopOf ex:DiningAreaFloor .
+ex:ChairsLocation obot:onTopOf ex:DiningAreaFloor .
 
-ex:Mirror psr:onTopOf ex:KitchenArea .
+ex:Mirror obot:onTopOf ex:KitchenArea .
 
-ex:VentHood psr:onTopOf ex:KitchenArea .
+ex:VentHood obot:onTopOf ex:KitchenArea .
 
 ex:KitchenArea geo:sfContains ex:CountertopLocation .
 

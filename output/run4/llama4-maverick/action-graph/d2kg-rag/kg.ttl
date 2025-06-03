@@ -1,38 +1,38 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
-    psr:hasWorkflow ex:KitchenRestoreWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    obot:hasWorkflow ex:KitchenRestoreWorkflow .
 
-ex:KitchenRestoreWorkflow a psr:Workflow ;
-    psr:hasAction ex:PickUpMisplacedItemsAction ;
-    psr:hasAction ex:PutAwayItemsAction .
+ex:KitchenRestoreWorkflow a obot:Workflow ;
+    obot:hasAction ex:PickUpMisplacedItemsAction ;
+    obot:hasAction ex:PutAwayItemsAction .
 
 ex:PickUpMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:follows ex:IdentifyMisplacedItemsAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:KitchenObjects ;
-    psr:isAffordedBy soma:Perceiving .
+    obot:actsOn ex:KitchenObjects ;
+    obot:isAffordedBy soma:Perceiving .
 
 ex:PutAwayItemsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:follows ex:PickUpMisplacedItemsAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:follows ex:PickUpMisplacedItemsAction .
 
-ex:MisplacedItems a psr:Component ;
+ex:MisplacedItems a obot:Component ;
     rdfs:label "Misplaced kitchen items"@en .
 
-ex:KitchenObjects a psr:Component ;
+ex:KitchenObjects a obot:Component ;
     rdfs:label "Objects in the kitchen"@en .
 
 ex:Robot a dul:Agent ;
@@ -40,150 +40,150 @@ ex:Robot a dul:Agent ;
 
 ex:PickUpChuckyPopcornAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ChuckyPopcorn ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayChuckyPopcornAction .
+    obot:actsOn ex:ChuckyPopcorn ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayChuckyPopcornAction .
 
 ex:PutAwayChuckyPopcornAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ChuckyPopcorn ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpChuckyPopcornAction .
+    obot:actsOn ex:ChuckyPopcorn ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpChuckyPopcornAction .
 
-ex:ChuckyPopcorn a psr:Object ;
+ex:ChuckyPopcorn a obot:Object ;
     rdfs:label "Chucky Popcorn"@en .
 
 ex:PickUpJelloAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jello ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayJelloAction .
+    obot:actsOn ex:Jello ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayJelloAction .
 
 ex:PutAwayJelloAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jello ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpJelloAction .
+    obot:actsOn ex:Jello ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpJelloAction .
 
-ex:Jello a psr:Object ;
+ex:Jello a obot:Object ;
     rdfs:label "Jello"@en .
 
 ex:PickUpJarsOfJamAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JarsOfJam ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayJarsOfJamAction .
+    obot:actsOn ex:JarsOfJam ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayJarsOfJamAction .
 
 ex:PutAwayJarsOfJamAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JarsOfJam ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpJarsOfJamAction .
+    obot:actsOn ex:JarsOfJam ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpJarsOfJamAction .
 
-ex:JarsOfJam a psr:Object ;
+ex:JarsOfJam a obot:Object ;
     rdfs:label "Jars of Jam"@en .
 
 ex:PickUpPitcherAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayPitcherAction .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayPitcherAction .
 
 ex:PutAwayPitcherAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpPitcherAction .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpPitcherAction .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     rdfs:label "Pitcher"@en .
 
 ex:PickUpBottleOfWaterAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:BottleOfWater ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayBottleOfWaterAction .
+    obot:actsOn ex:BottleOfWater ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayBottleOfWaterAction .
 
 ex:PutAwayBottleOfWaterAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:BottleOfWater ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpBottleOfWaterAction .
+    obot:actsOn ex:BottleOfWater ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpBottleOfWaterAction .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
     rdfs:label "Bottle of Water"@en .
 
 ex:PickUpLemonsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Lemons ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayLemonsAction .
+    obot:actsOn ex:Lemons ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayLemonsAction .
 
 ex:PutAwayLemonsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Lemons ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpLemonsAction .
+    obot:actsOn ex:Lemons ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpLemonsAction .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     rdfs:label "Lemons"@en .
 
 ex:PickUpBookAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Book ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayBookAction .
+    obot:actsOn ex:Book ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayBookAction .
 
 ex:PutAwayBookAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Book ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpBookAction .
+    obot:actsOn ex:Book ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpBookAction .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     rdfs:label "Book"@en .
 
 ex:PickUpStackOfPlatesAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:StackOfPlates ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayStackOfPlatesAction .
+    obot:actsOn ex:StackOfPlates ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayStackOfPlatesAction .
 
 ex:PutAwayStackOfPlatesAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:StackOfPlates ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpStackOfPlatesAction .
+    obot:actsOn ex:StackOfPlates ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpStackOfPlatesAction .
 
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     rdfs:label "Stack of Plates"@en .
 
 ex:PickUpWineGlassAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayWineGlassAction .
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayWineGlassAction .
 
 ex:PutAwayWineGlassAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpWineGlassAction .
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpWineGlassAction .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Wine Glass"@en .
 
 ex:PickUpMugAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayMugAction .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayMugAction .
 
 ex:PutAwayMugAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:PickUpMugAction .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:PickUpMugAction .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     rdfs:label "Mug"@en .

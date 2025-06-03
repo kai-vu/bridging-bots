@@ -5,30 +5,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PutAwayItemsAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PutAwayItemsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayItemsAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayItemsAction .
 
 ex:PutAwayItemsAction a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItemsAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItemsAction .
 
-ex:MisplacedItems a psr:Object ;
+ex:MisplacedItems a obot:Object ;
     rdfs:label "Misplaced items in the kitchen"@en .
 
 ex:RobotAgent a dul:Agent ;
@@ -36,135 +36,135 @@ ex:RobotAgent a dul:Agent ;
 
 ex:IdentifyMisplacedItems_Action1 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BoxesOfFood ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayBoxesOfFood .
+    obot:actsOn ex:BoxesOfFood ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayBoxesOfFood .
 
 ex:PutAwayBoxesOfFood a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BoxesOfFood ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action1 .
+    obot:actsOn ex:BoxesOfFood ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action1 .
 
-ex:BoxesOfFood a psr:Object ;
+ex:BoxesOfFood a obot:Object ;
     rdfs:label "Boxes of food"@en .
 
 ex:IdentifyMisplacedItems_Action2 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:JarsOfJam ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayJarsOfJam .
+    obot:actsOn ex:JarsOfJam ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayJarsOfJam .
 
 ex:PutAwayJarsOfJam a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:JarsOfJam ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action2 .
+    obot:actsOn ex:JarsOfJam ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action2 .
 
-ex:JarsOfJam a psr:Object ;
+ex:JarsOfJam a obot:Object ;
     rdfs:label "Jars of jam"@en .
 
 ex:IdentifyMisplacedItems_Action3 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayPitcher .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayPitcher .
 
 ex:PutAwayPitcher a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action3 .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action3 .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     rdfs:label "Pitcher"@en .
 
 ex:IdentifyMisplacedItems_Action4 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BottleOfWater ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayBottleOfWater .
+    obot:actsOn ex:BottleOfWater ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayBottleOfWater .
 
 ex:PutAwayBottleOfWater a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:BottleOfWater ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action4 .
+    obot:actsOn ex:BottleOfWater ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action4 .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
     rdfs:label "Bottle of water"@en .
 
 ex:IdentifyMisplacedItems_Action5 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Lemons ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayLemons .
+    obot:actsOn ex:Lemons ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayLemons .
 
 ex:PutAwayLemons a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Lemons ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action5 .
+    obot:actsOn ex:Lemons ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action5 .
 
-ex:Lemons a psr:Object ;
+ex:Lemons a obot:Object ;
     rdfs:label "Lemons"@en .
 
 ex:IdentifyMisplacedItems_Action6 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Book ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayBook .
+    obot:actsOn ex:Book ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayBook .
 
 ex:PutAwayBook a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Book ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action6 .
+    obot:actsOn ex:Book ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action6 .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     rdfs:label "Book"@en .
 
 ex:IdentifyMisplacedItems_Action7 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:StackOfPlates ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayStackOfPlates .
+    obot:actsOn ex:StackOfPlates ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayStackOfPlates .
 
 ex:PutAwayStackOfPlates a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:StackOfPlates ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action7 .
+    obot:actsOn ex:StackOfPlates ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action7 .
 
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     rdfs:label "Stack of plates"@en .
 
 ex:IdentifyMisplacedItems_Action8 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayWineGlass .
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayWineGlass .
 
 ex:PutAwayWineGlass a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action8 .
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action8 .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Wine glass"@en .
 
 ex:IdentifyMisplacedItems_Action9 a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:PutAwayMug .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:PutAwayMug .
 
 ex:PutAwayMug a dul:Action ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:IdentifyMisplacedItems_Action9 .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:IdentifyMisplacedItems_Action9 .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     rdfs:label "Mug"@en .

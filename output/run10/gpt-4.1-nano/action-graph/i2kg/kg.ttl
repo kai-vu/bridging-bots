@@ -5,100 +5,100 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 
-psr:PickUpJello a dul:Action ;
+obot:PickUpJello a dul:Action ;
     rdfs:label "Pick up Jello"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Jello> ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Jello> ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutDownJello in psr:Action ;
+obot:PutDownJello in obot:Action ;
     rdfs:label "Put down Jello"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Jello> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Jello> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpShortbread a dul:Action ;
+obot:PickUpShortbread a dul:Action ;
     rdfs:label "Pick up Shortbread"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Shortbread> ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Shortbread> ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutDownShortbread in psr:Action ;
+obot:PutDownShortbread in obot:Action ;
     rdfs:label "Put down Shortbread"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Shortbread> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Shortbread> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpRiceBubbles a dul:Action ;
+obot:PickUpRiceBubbles a dul:Action ;
     rdfs:label "Pick up Rice Bubbles"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#RiceBubbles> ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#RiceBubbles> ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutDownRiceBubbles in psr:Action ;
+obot:PutDownRiceBubbles in obot:Action ;
     rdfs:label "Put down Rice Bubbles"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#RiceBubbles> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#RiceBubbles> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpEvianBottle a dul:Action ;
+obot:PickUpEvianBottle a dul:Action ;
     rdfs:label "Pick up Evian Bottle"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#EvianBottle> ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#EvianBottle> ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutDownEvianBottle in psr:Action ;
+obot:PutDownEvianBottle in obot:Action ;
     rdfs:label "Put down Evian Bottle"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#EvianBottle> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#EvianBottle> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PullRefrigeratorDoor a dul:Action ;
+obot:PullRefrigeratorDoor a dul:Action ;
     rdfs:label "Pull Refrigerator Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#RefrigeratorDoor> ;
-    psr:isAffordedBy soma:Pulling .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#RefrigeratorDoor> ;
+    obot:isAffordedBy soma:Pulling .
 
-psr:OpenRefrigeratorDoor a dul:Action ;
+obot:OpenRefrigeratorDoor a dul:Action ;
     rdfs:label "Open Refrigerator Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#RefrigeratorDoor> ;
-    psr:isAffordedBy soma:Opening .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#RefrigeratorDoor> ;
+    obot:isAffordedBy soma:Opening .
 
-psr:PlaceItemsInFridge a dul:Action ;
+obot:PlaceItemsInFridge a dul:Action ;
     rdfs:label "Place Items in Fridge"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Items> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Items> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:CloseRefrigeratorDoor a dul:Action ;
+obot:CloseRefrigeratorDoor a dul:Action ;
     rdfs:label "Close Refrigerator Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#RefrigeratorDoor> ;
-    psr:isAffordedBy soma:Closing .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#RefrigeratorDoor> ;
+    obot:isAffordedBy soma:Closing .
 
-psr:PullCabinetDoor a dul:Action ;
+obot:PullCabinetDoor a dul:Action ;
     rdfs:label "Pull Cabinet Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#CabinetDoor> ;
-    psr:isAffordedBy soma:Pulling .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#CabinetDoor> ;
+    obot:isAffordedBy soma:Pulling .
 
-psr:OpenCabinetDoor a dul:Action ;
+obot:OpenCabinetDoor a dul:Action ;
     rdfs:label "Open Cabinet Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#CabinetDoor> ;
-    psr:isAffordedBy soma:Opening .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#CabinetDoor> ;
+    obot:isAffordedBy soma:Opening .
 
-psr:PlaceItemsInCabinet a dul:Action ;
+obot:PlaceItemsInCabinet a dul:Action ;
     rdfs:label "Place Items in Cabinet"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#Items> ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#Items> ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:CloseCabinetDoor a dul:Action ;
+obot:CloseCabinetDoor a dul:Action ;
     rdfs:label "Close Cabinet Door"@en ;
-    psr:isPerformedBy <#Robot> ;
-    psr:actsOn <#CabinetDoor> ;
-    psr:isAffordedBy soma:Closing .
+    obot:isPerformedBy <#Robot> ;
+    obot:actsOn <#CabinetDoor> ;
+    obot:isAffordedBy soma:Closing .

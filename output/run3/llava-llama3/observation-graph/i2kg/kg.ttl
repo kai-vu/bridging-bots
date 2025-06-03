@@ -3,50 +3,50 @@ The output format is Turtle. Here's the generated Knowledge Graph:
 ```turtle
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://example.org/data/> .
+@prefix obot: <https://example.org/data/> .
 
-psr:Environment a owl:Class ;
-    psr:hasComponent psr:DiningTable ;
-    psr:hasComponent psr:Refrigerator .
+obot:Environment a owl:Class ;
+    obot:hasComponent obot:DiningTable ;
+    obot:hasComponent obot:Refrigerator .
 
-psr:Component a owl:Class ;
-    rdfs:subClassOf psr:Environment.
+obot:Component a owl:Class ;
+    rdfs:subClassOf obot:Environment.
 
-psr:DiningTable a owl:Class ;
-    psr:onTopOf psr:DiningTable ;
-    psr:hasLocation psr:TableLocation .
+obot:DiningTable a owl:Class ;
+    obot:onTopOf obot:DiningTable ;
+    obot:hasLocation obot:TableLocation .
 
-psr:Refrigerator a owl:Class ;
-    psr:onTopOf psr:Refrigerator.
+obot:Refrigerator a owl:Class ;
+    obot:onTopOf obot:Refrigerator.
 
-psr:Furniture a owl:Class ;
-    rdfs:subClassOf psr:Component.
+obot:Furniture a owl:Class ;
+    rdfs:subClassOf obot:Component.
 
-psr:TableLocation a owl:Class ;
-    rdfs:subClassOf psr:Location.
+obot:TableLocation a owl:Class ;
+    rdfs:subClassOf obot:Location.
 
-psr:Location a owl:Class ;
-    rdfs:subClassOf psr:Environment.
+obot:Location a owl:Class ;
+    rdfs:subClassOf obot:Environment.
 
-psr:Object a owl:Class ;
-    rdfs:subClassOf psr:Component.
+obot:Object a owl:Class ;
+    rdfs:subClassOf obot:Component.
 
-psr:DiningTable a psr:Entity ;
-    psr:onTopOf psr:Refrigerator ;
-    psr:hasLocation psr:TableLocation.
+obot:DiningTable a obot:Entity ;
+    obot:onTopOf obot:Refrigerator ;
+    obot:hasLocation obot:TableLocation.
 
-psr:Refrigerator a psr:Entity ;
-    psr:hasLocation psr:RefrigeratorLocation.
+obot:Refrigerator a obot:Entity ;
+    obot:hasLocation obot:RefrigeratorLocation.
 
-psr:Object a psr:Entity ;
-    psr:onTopOf psr:DiningTable ;
-    psr:hasLocation psr:ObjectLocation.
+obot:Object a obot:Entity ;
+    obot:onTopOf obot:DiningTable ;
+    obot:hasLocation obot:ObjectLocation.
 
-psr:TableLocation a psr:Entity ;
-    psr:label "TableLocation"@en.
+obot:TableLocation a obot:Entity ;
+    obot:label "TableLocation"@en.
 
-psr:RefrigeratorLocation a psr:Entity ;
-    psr:label "RefrigeratorLocation"@en.
+obot:RefrigeratorLocation a obot:Entity ;
+    obot:label "RefrigeratorLocation"@en.
 
-psr:ObjectLocation a psr:Entity ;
-    psr:label "ObjectLocation"@en.
+obot:ObjectLocation a obot:Entity ;
+    obot:label "ObjectLocation"@en.

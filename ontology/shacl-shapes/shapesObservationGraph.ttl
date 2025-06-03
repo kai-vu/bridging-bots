@@ -1,5 +1,5 @@
 @prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo:    <http://www.opengis.net/ont/geosparql#> .
@@ -7,21 +7,21 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 
 # ENVIRONMENT SHAPE
-psr:EnvironmentShape a sh:NodeShape ;
-    sh:targetClass psr:Environment ;
+obot:EnvironmentShape a sh:NodeShape ;
+    sh:targetClass obot:Environment ;
     sh:property [
         sh:path dul:hasComponent ;
-        sh:in (psr:Component psr:Appliance
-                psr:Furniture psr:Object) ;
+        sh:in (obot:Component obot:Appliance
+                obot:Furniture obot:Object) ;
         sh:minCount 1 ;
     ] .
 
 # COMPONENT SHAPE
-psr:ComponentShape a sh:NodeShape ;
-    sh:targetClass psr:Component ;
+obot:ComponentShape a sh:NodeShape ;
+    sh:targetClass obot:Component ;
     sh:property [
-        sh:path psr:hasAffordance ;
-        sh:in (psr:Affordamce soma:Closing soma:Opening 
+        sh:path obot:hasAffordance ;
+        sh:in (obot:Affordance soma:Closing soma:Opening 
                 soma:Delivering soma:Holding soma:PickingUp
                 soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping) ;
         sh:minCount 1 ;
@@ -33,22 +33,22 @@ psr:ComponentShape a sh:NodeShape ;
     ] .
 
 # LOCATION SHAPE
-psr:LocationShape a sh:NodeShape ;
-    sh:targetClass psr:Location ;
+obot:LocationShape a sh:NodeShape ;
+    sh:targetClass obot:Location ;
     sh:property [
-        sh:path psr:onTopOf ;
-        sh:class psr:Component ;
+        sh:path obot:onTopOf ;
+        sh:class obot:Component ;
     ] ;
     sh:property [
         sh:path geo:sfContains ;
-        sh:class psr:Component ;
+        sh:class obot:Component ;
     ] ;
     sh:property [
         sh:path geo:sfWithin ;
-        sh:class psr:Component ;
+        sh:class obot:Component ;
     ] ;
     sh:property [
         sh:path geo:sfOverlaps ;
-        sh:class psr:Component ;
+        sh:class obot:Component ;
     ] .
 

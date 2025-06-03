@@ -1,63 +1,63 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:PickUpMisplacedItemAction ;
-    psr:hasAction ex:PutAwayMisplacedItemAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:PickUpMisplacedItemAction ;
+    obot:hasAction ex:PutAwayMisplacedItemAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:MisplacedItems ;
-    psr:follows ex:None ;
-    psr:precedes ex:PickUpMisplacedItemAction .
+    obot:actsOn ex:MisplacedItems ;
+    obot:follows ex:None ;
+    obot:precedes ex:PickUpMisplacedItemAction .
 
 ex:PickUpMisplacedItemAction a soma:PickingUp ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:MisplacedItem1 ;
-    psr:follows ex:IdentifyMisplacedItemsAction ;
-    psr:precedes ex:PutAwayMisplacedItemAction .
+    obot:actsOn ex:MisplacedItem1 ;
+    obot:follows ex:IdentifyMisplacedItemsAction ;
+    obot:precedes ex:PutAwayMisplacedItemAction .
 
 ex:PutAwayMisplacedItemAction a soma:PuttingDown ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:MisplacedItem1 ;
-    psr:follows ex:PickUpMisplacedItemAction .
+    obot:actsOn ex:MisplacedItem1 ;
+    obot:follows ex:PickUpMisplacedItemAction .
 
-ex:MisplacedItem1 a psr:Object ;
+ex:MisplacedItem1 a obot:Object ;
     rdfs:label "Chicky box"@en .
 
 ex:Robot a dul:Agent ;
     rdfs:label "Robot"@en .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     rdfs:label "Dining Table"@en .
 
-ex:Countertop a psr:Furniture ;
+ex:Countertop a obot:Furniture ;
     rdfs:label "Countertop"@en .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en .
 
-ex:Stove a psr:Appliance ;
+ex:Stove a obot:Appliance ;
     rdfs:label "Stove"@en .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Sink"@en .
 
 ex:None a dul:Action .
 
-ex:MisplacedItems a psr:Component ;
+ex:MisplacedItems a obot:Component ;
     rdfs:label "Misplaced Items"@en .
 
-ex:IdentifyMisplacedItemsAction psr:isAffordedBy soma:PickingUp .
-ex:PickUpMisplacedItemAction psr:isAffordedBy soma:PickingUp .
-ex:PutAwayMisplacedItemAction psr:isAffordedBy soma:PuttingDown .
+ex:IdentifyMisplacedItemsAction obot:isAffordedBy soma:PickingUp .
+ex:PickUpMisplacedItemAction obot:isAffordedBy soma:PickingUp .
+ex:PutAwayMisplacedItemAction obot:isAffordedBy soma:PuttingDown .

@@ -3,72 +3,72 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:environment a psr:Environment .
-ex:kitchen a psr:Component ;
+ex:environment a obot:Environment .
+ex:kitchen a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:kitchen_location a psr:Location .
-ex:counter a psr:Component ;
+ex:kitchen_location a obot:Location .
+ex:counter a obot:Component ;
     dul:hasLocation ex:counter_location .
-ex:counter_location a psr:Location ;
-    psr:onTopOf ex:kitchen .
-ex:refrigerator a psr:Appliance ;
+ex:counter_location a obot:Location ;
+    obot:onTopOf ex:kitchen .
+ex:refrigerator a obot:Appliance ;
     dul:hasLocation ex:refrigerator_location .
-ex:refrigerator_location a psr:Location ;
+ex:refrigerator_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:paper_towel_dispenser a psr:Object ;
+ex:paper_towel_dispenser a obot:Object ;
     dul:hasLocation ex:paper_towel_dispenser_location .
-ex:paper_towel_dispenser_location a psr:Location ;
+ex:paper_towel_dispenser_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:cabinets a psr:Furniture ;
+ex:cabinets a obot:Furniture ;
     dul:hasLocation ex:cabinets_location .
-ex:cabinets_location a psr:Location ;
+ex:cabinets_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:clock a psr:Object ;
+ex:clock a obot:Object ;
     dul:hasLocation ex:clock_location .
-ex:clock_location a psr:Location ;
+ex:clock_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:light_fixture a psr:Object ;
+ex:light_fixture a obot:Object ;
     dul:hasLocation ex:light_fixture_location .
-ex:light_fixture_location a psr:Location ;
+ex:light_fixture_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:dining_table a psr:Furniture ;
+ex:dining_table a obot:Furniture ;
     dul:hasLocation ex:dining_table_location .
-ex:dining_table_location a psr:Location ;
+ex:dining_table_location a obot:Location ;
     geo:sfWithin ex:dining_area .
-ex:dining_area a psr:Component ;
+ex:dining_area a obot:Component ;
     dul:hasLocation ex:dining_area_location .
-ex:dining_area_location a psr:Location .
-ex:chair a psr:Object ;
+ex:dining_area_location a obot:Location .
+ex:chair a obot:Object ;
     dul:hasLocation ex:chair_location .
-ex:chair_location a psr:Location ;
+ex:chair_location a obot:Location ;
     geo:sfWithin ex:dining_area .
-ex:stove a psr:Appliance ;
+ex:stove a obot:Appliance ;
     dul:hasLocation ex:stove_location .
-ex:stove_location a psr:Location ;
+ex:stove_location a obot:Location ;
     geo:sfWithin ex:kitchen .
-ex:box_of_cereal a psr:Object ;
+ex:box_of_cereal a obot:Object ;
     dul:hasLocation ex:box_of_cereal_location .
-ex:box_of_cereal_location a psr:Location ;
-    psr:onTopOf ex:counter .
-ex:cup a psr:Object ;
+ex:box_of_cereal_location a obot:Location ;
+    obot:onTopOf ex:counter .
+ex:cup a obot:Object ;
     dul:hasLocation ex:cup_location .
-ex:cup_location a psr:Location ;
-    psr:onTopOf ex:counter .
-ex:food_packaging a psr:Object ;
+ex:cup_location a obot:Location ;
+    obot:onTopOf ex:counter .
+ex:food_packaging a obot:Object ;
     dul:hasLocation ex:food_packaging_location .
-ex:food_packaging_location a psr:Location ;
-    psr:onTopOf ex:counter .
-ex:bowl a psr:Object ;
+ex:food_packaging_location a obot:Location ;
+    obot:onTopOf ex:counter .
+ex:bowl a obot:Object ;
     dul:hasLocation ex:bowl_location .
-ex:bowl_location a psr:Location ;
-    psr:onTopOf ex:dining_table .
-ex:spoon a psr:Object ;
+ex:bowl_location a obot:Location ;
+    obot:onTopOf ex:dining_table .
+ex:spoon a obot:Object ;
     dul:hasLocation ex:spoon_location .
-ex:spoon_location a psr:Location ;
-    psr:onTopOf ex:dining_table .
+ex:spoon_location a obot:Location ;
+    obot:onTopOf ex:dining_table .
 ex:environment dul:hasComponent ex:kitchen .
 ex:environment dul:hasComponent ex:dining_area .
 ex:kitchen dul:hasComponent ex:counter .
@@ -85,17 +85,17 @@ ex:counter dul:hasComponent ex:cup .
 ex:counter dul:hasComponent ex:food_packaging .
 ex:dining_table dul:hasComponent ex:bowl .
 ex:dining_table dul:hasComponent ex:spoon .
-ex:box_of_cereal psr:hasAffordance soma:PickingUp .
-ex:box_of_cereal psr:hasAffordance soma:PuttingDown .
-ex:cup psr:hasAffordance soma:PickingUp .
-ex:cup psr:hasAffordance soma:PuttingDown .
-ex:food_packaging psr:hasAffordance soma:PickingUp .
-ex:food_packaging psr:hasAffordance soma:PuttingDown .
-ex:bowl psr:hasAffordance soma:PickingUp .
-ex:bowl psr:hasAffordance soma:PuttingDown .
-ex:spoon psr:hasAffordance soma:PickingUp .
-ex:spoon psr:hasAffordance soma:PuttingDown .
-ex:refrigerator psr:hasAffordance soma:Opening .
-ex:refrigerator psr:hasAffordance soma:Closing .
-ex:stove psr:hasAffordance soma:Opening .
-ex:stove psr:hasAffordance soma:Closing .
+ex:box_of_cereal obot:hasAffordance soma:PickingUp .
+ex:box_of_cereal obot:hasAffordance soma:PuttingDown .
+ex:cup obot:hasAffordance soma:PickingUp .
+ex:cup obot:hasAffordance soma:PuttingDown .
+ex:food_packaging obot:hasAffordance soma:PickingUp .
+ex:food_packaging obot:hasAffordance soma:PuttingDown .
+ex:bowl obot:hasAffordance soma:PickingUp .
+ex:bowl obot:hasAffordance soma:PuttingDown .
+ex:spoon obot:hasAffordance soma:PickingUp .
+ex:spoon obot:hasAffordance soma:PuttingDown .
+ex:refrigerator obot:hasAffordance soma:Opening .
+ex:refrigerator obot:hasAffordance soma:Closing .
+ex:stove obot:hasAffordance soma:Opening .
+ex:stove obot:hasAffordance soma:Closing .

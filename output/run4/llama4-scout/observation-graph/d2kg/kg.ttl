@@ -3,156 +3,156 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-psr:KitchenEnvironment a psr:Environment ;
+obot:KitchenEnvironment a obot:Environment ;
   rdfs:label "Kitchen Environment"@en .
 
-psr:DiningRoomEnvironment a psr:Environment ;
+obot:DiningRoomEnvironment a obot:Environment ;
   rdfs:label "Dining Room Environment"@en .
 
-ex:KitchenArea a psr:Location ;
+ex:KitchenArea a obot:Location ;
   rdfs:label "Kitchen Area"@en ;
-  dul:hasLocation psr:KitchenEnvironment .
+  dul:hasLocation obot:KitchenEnvironment .
 
-ex:DiningRoomArea a psr:Location ;
+ex:DiningRoomArea a obot:Location ;
   rdfs:label "Dining Room Area"@en ;
-  dul:hasLocation psr:DiningRoomEnvironment .
+  dul:hasLocation obot:DiningRoomEnvironment .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Taupe-colored Marble Countertop"@en ;
   dul:hasLocation ex:KitchenArea ;
   rdfs:comment "Taupe-colored marble countertop in the kitchen area"@en .
 
-ex:Cabinets a psr:Component ;
+ex:Cabinets a obot:Component ;
   rdfs:label "Dark-brown Cabinets"@en ;
   dul:hasLocation ex:KitchenArea ;
   rdfs:comment "Dark-brown cabinets in the kitchen area"@en .
 
-ex:PuzzleBox1 a psr:Object ;
+ex:PuzzleBox1 a obot:Object ;
   rdfs:label "Puzzle Box 1"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:PuzzleBox2 a psr:Object ;
+ex:PuzzleBox2 a obot:Object ;
   rdfs:label "Puzzle Box 2"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:JamJar a psr:Object ;
+ex:JamJar a obot:Object ;
   rdfs:label "Jar of Jam"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:YellowCup a psr:Object ;
+ex:YellowCup a obot:Object ;
   rdfs:label "Yellow Cup"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:Pot a psr:Appliance ;
+ex:Pot a obot:Appliance ;
   rdfs:label "Pot"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:Plates a psr:Object ;
+ex:Plates a obot:Object ;
   rdfs:label "Plates"@en ;
   dul:hasLocation ex:Countertop ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
   rdfs:label "Sink"@en ;
   dul:hasLocation ex:Countertop ;
   rdfs:comment "Sink built into the left side of the countertop"@en .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
   rdfs:label "White Refrigerator"@en ;
   dul:hasLocation ex:KitchenArea ;
   rdfs:comment "White refrigerator along the wall to the right of the countertop"@en .
 
-ex:DarkBrownCabinetAbove a psr:Furniture ;
+ex:DarkBrownCabinetAbove a obot:Furniture ;
   rdfs:label "Dark-brown Cabinet Above"@en ;
   dul:hasLocation ex:KitchenArea ;
   rdfs:comment "Dark-brown cabinet above the countertop"@en .
 
-ex:DarkBrownDrawers a psr:Furniture ;
+ex:DarkBrownDrawers a obot:Furniture ;
   rdfs:label "Dark-brown Drawers"@en ;
   dul:hasLocation ex:KitchenArea ;
   rdfs:comment "Dark-brown drawers below the countertop"@en .
 
-ex:VentHood a psr:Component ;
+ex:VentHood a obot:Component ;
   rdfs:label "Vent Hood"@en ;
-  dul:hasLocation psr:KitchenEnvironment ;
+  dul:hasLocation obot:KitchenEnvironment ;
   rdfs:comment "Vent hood on the ceiling"@en .
 
-ex:DoorwayToDiningRoom a psr:Component ;
+ex:DoorwayToDiningRoom a obot:Component ;
   rdfs:label "Doorway to Dining Room"@en ;
-  dul:hasLocation psr:KitchenEnvironment ;
+  dul:hasLocation obot:KitchenEnvironment ;
   rdfs:comment "Doorway leading to the dining room"@en .
 
-ex:WoodenTable a psr:Furniture ;
+ex:WoodenTable a obot:Furniture ;
   rdfs:label "Rectangular Wooden Table"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "Rectangular wooden table in the dining room area"@en .
 
-ex:WhiteUpholsteredChair1 a psr:Furniture ;
+ex:WhiteUpholsteredChair1 a obot:Furniture ;
   rdfs:label "White Upholstered Chair 1"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "White upholstered chair in the dining room area"@en .
 
-ex:WhiteUpholsteredChair2 a psr:Furniture ;
+ex:WhiteUpholsteredChair2 a obot:Furniture ;
   rdfs:label "White Upholstered Chair 2"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "White upholstered chair in the dining room area"@en .
 
-ex:WhiteUpholsteredChair3 a psr:Furniture ;
+ex:WhiteUpholsteredChair3 a obot:Furniture ;
   rdfs:label "White Upholstered Chair 3"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "White upholstered chair in the dining room area"@en .
 
-ex:WhiteUpholsteredChair4 a psr:Furniture ;
+ex:WhiteUpholsteredChair4 a obot:Furniture ;
   rdfs:label "White Upholstered Chair 4"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "White upholstered chair in the dining room area"@en .
 
-ex:BottleOfWater a psr:Object ;
+ex:BottleOfWater a obot:Object ;
   rdfs:label "Bottle of Water"@en ;
   dul:hasLocation ex:WoodenTable ;
-  psr:onTopOf ex:WoodenTable .
+  obot:onTopOf ex:WoodenTable .
 
-ex:PyramidOfPlasticCups a psr:Object ;
+ex:PyramidOfPlasticCups a obot:Object ;
   rdfs:label "Pyramid of Plastic Cups"@en ;
   dul:hasLocation ex:WoodenTable ;
-  psr:onTopOf ex:BottleOfWater .
+  obot:onTopOf ex:BottleOfWater .
 
-ex:PlateWithFruit a psr:Object ;
+ex:PlateWithFruit a obot:Object ;
   rdfs:label "Plate with Fruit"@en ;
   dul:hasLocation ex:WoodenTable .
 
-ex:Cookbook a psr:Object ;
+ex:Cookbook a obot:Object ;
   rdfs:label "Cookbook"@en ;
   dul:hasLocation ex:WoodenTable ;
-  psr:onTopOf ex:PlateWithFruit .
+  obot:onTopOf ex:PlateWithFruit .
 
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
   rdfs:label "Door"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "Door in the dining room area"@en .
 
-ex:PictureFrames a psr:Object ;
+ex:PictureFrames a obot:Object ;
   rdfs:label "Empty Picture Frames"@en ;
   dul:hasLocation ex:DiningRoomArea ;
   rdfs:comment "Empty picture frames on the wall"@en .
 
-ex:WoodParquetFloorKitchen a psr:Component ;
+ex:WoodParquetFloorKitchen a obot:Component ;
   rdfs:label "Wood Parquet Floor"@en ;
-  dul:hasLocation psr:KitchenEnvironment .
+  dul:hasLocation obot:KitchenEnvironment .
 
-ex:WoodParquetFloorDiningRoom a psr:Component ;
+ex:WoodParquetFloorDiningRoom a obot:Component ;
   rdfs:label "Wood Parquet Floor"@en ;
-  dul:hasLocation psr:DiningRoomEnvironment .
+  dul:hasLocation obot:DiningRoomEnvironment .
 
-psr:KitchenEnvironment dul:hasComponent ex:Countertop ;
+obot:KitchenEnvironment dul:hasComponent ex:Countertop ;
   dul:hasComponent ex:Cabinets ;
   dul:hasComponent ex:Sink ;
   dul:hasComponent ex:Refrigerator ;
@@ -161,23 +161,23 @@ psr:KitchenEnvironment dul:hasComponent ex:Countertop ;
   dul:hasComponent ex:VentHood ;
   dul:hasComponent ex:DoorwayToDiningRoom .
 
-psr:KitchenEnvironment geo:sfContains ex:KitchenArea .
+obot:KitchenEnvironment geo:sfContains ex:KitchenArea .
 
-ex:Countertop psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+ex:Countertop obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Closing .
 
-ex:PuzzleBox1 psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+ex:PuzzleBox1 obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Closing .
 
-ex:PuzzleBox2 psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+ex:PuzzleBox2 obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Closing .
 
-ex:Refrigerator psr:hasAffordance soma:Opening .
+ex:Refrigerator obot:hasAffordance soma:Opening .
 
-ex:Door psr:hasAffordance soma:Opening ;
-  psr:hasAffordance soma:Closing .
+ex:Door obot:hasAffordance soma:Opening ;
+  obot:hasAffordance soma:Closing .
 
-psr:DiningRoomEnvironment dul:hasComponent ex:WoodenTable ;
+obot:DiningRoomEnvironment dul:hasComponent ex:WoodenTable ;
   dul:hasComponent ex:WhiteUpholsteredChair1 ;
   dul:hasComponent ex:WhiteUpholsteredChair2 ;
   dul:hasComponent ex:WhiteUpholsteredChair3 ;
@@ -185,19 +185,19 @@ psr:DiningRoomEnvironment dul:hasComponent ex:WoodenTable ;
   dul:hasComponent ex:Door ;
   dul:hasComponent ex:PictureFrames .
 
-psr:DiningRoomEnvironment geo:sfContains ex:DiningRoomArea .
+obot:DiningRoomEnvironment geo:sfContains ex:DiningRoomArea .
 
-ex:WoodenTable psr:hasAffordance soma:Pushing ;
-  psr:hasAffordance soma:Pulling .
+ex:WoodenTable obot:hasAffordance soma:Pushing ;
+  obot:hasAffordance soma:Pulling .
 
-ex:BottleOfWater psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:BottleOfWater obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:PyramidOfPlasticCups psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:PyramidOfPlasticCups obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:PlateWithFruit psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:PlateWithFruit obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:Cookbook psr:hasAffordance soma:PickingUp ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Cookbook obot:hasAffordance soma:PickingUp ;
+  obot:hasAffordance soma:PuttingDown .

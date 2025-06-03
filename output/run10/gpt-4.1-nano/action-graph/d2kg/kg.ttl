@@ -5,14 +5,14 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
 ##############################
 # Action 1: Identify all misplaced items
 ##############################
 
-ex:IdentifyMisplacedItems a psr:Action ;
+ex:IdentifyMisplacedItems a obot:Action ;
     rdfs:label "Identify all misplaced items"@en ;
     rdfs:comment "Robot identifies all items that are not in their standard storage locations."@en .
 
@@ -26,29 +26,29 @@ ex:IdentifyMisplacedItemsPerformedBy ex:RobotAgent .
 # Action 2: Pick up jars of jam and Jello from countertop
 ##############################
 
-ex:PickUpJamsAndJello a psr:Action ;
+ex:PickUpJamsAndJello a obot:Action ;
     rdfs:label "Pick up jars of jam and Jello from countertop"@en ;
     rdfs:comment "Robot picks up the jars of jam and Jello from the countertop."@en .
 
-ex:PickUpJamsAndJelloActsOn a psr:Action ;
+ex:PickUpJamsAndJelloActsOn a obot:Action ;
     rdfs:domain ex:PickUpJamsAndJello ;
-    rdfs:range psr:Object .
+    rdfs:range obot:Object .
 
-ex:JamJar a psr:Object ;
+ex:JamJar a obot:Object ;
     rdfs:label "Jam jar"@en .
 
-ex:JelloBox a psr:Object ;
+ex:JelloBox a obot:Object ;
     rdfs:label "Jello box"@en .
 
-ex: PickUpJamsAndJelloActsOn1 a psr:ActsOn ;
+ex: PickUpJamsAndJelloActsOn1 a obot:ActsOn ;
     rdfs:domain ex:PickUpJamsAndJello ;
     rdfs:range ex:JamJar .
 
-ex: PickUpJamsAndJelloActsOn2 a psr:ActsOn ;
+ex: PickUpJamsAndJelloActsOn2 a obot:ActsOn ;
     rdfs:domain ex:PickUpJamsAndJello ;
     rdfs:range ex:JelloBox .
 
-ex:PickUpJamsAndJelloPerformedBy a psr:isPerformedBy ;
+ex:PickUpJamsAndJelloPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:PickUpJamsAndJello ;
     rdfs:range dul:Agent .
 
@@ -56,15 +56,15 @@ ex:PickUpJamsAndJelloPerformedBy a psr:isPerformedBy ;
 # Action 3: Put down jars of jam and Jello into their storage locations
 ##############################
 
-ex:PutDownJamsAndJello a psr:Action ;
+ex:PutDownJamsAndJello a obot:Action ;
     rdfs:label "Put down jars of jam and Jello into storage"@en ;
     rdfs:comment "Robot places the jars of jam and Jello into their standard storage locations."@en .
 
-ex:PutDownJamsAndJelloActsOn a psr:ActsOn ;
+ex:PutDownJamsAndJelloActsOn a obot:ActsOn ;
     rdfs:domain ex:PutDownJamsAndJello ;
     rdfs:range ex:JamJar, ex:JelloBox .
 
-ex:PutDownJamsAndJelloPerformedBy a psr:isPerformedBy ;
+ex:PutDownJamsAndJelloPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:PutDownJamsAndJello ;
     rdfs:range dul:Agent .
 
@@ -72,35 +72,35 @@ ex:PutDownJamsAndJelloPerformedBy a psr:isPerformedBy ;
 # Action 4: Repeat identification and placement for all other misplaced items (implied)
 ##############################
 
-ex:IdentifyOtherMisplacedItems a psr:Action ;
+ex:IdentifyOtherMisplacedItems a obot:Action ;
     rdfs:label "Identify other misplaced items"@en ;
     rdfs:comment "Robot identifies remaining misplaced items."@en .
 
-ex:IdentifyOtherMisplacedItemsPerformedBy a psr:isPerformedBy ;
+ex:IdentifyOtherMisplacedItemsPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:IdentifyOtherMisplacedItems ;
     rdfs:range dul:Agent .
 
-ex:PickUpOtherItems a psr:Action ;
+ex:PickUpOtherItems a obot:Action ;
     rdfs:label "Pick up other misplaced items"@en ;
     rdfs:comment "Robot picks up other misplaced items from their current locations."@en .
 
-ex:PickUpOtherItemsActsOn a psr:ActsOn ;
+ex:PickUpOtherItemsActsOn a obot:ActsOn ;
     rdfs:domain ex:PickUpOtherItems ;
-    rdfs:range psr:Object .
+    rdfs:range obot:Object .
 
-ex:PutDownOtherItems a psr:Action ;
+ex:PutDownOtherItems a obot:Action ;
     rdfs:label "Put down other misplaced items into storage"@en ;
     rdfs:comment "Robot places other misplaced items into their standard storage locations."@en .
 
-ex:PutDownOtherItemsActsOn a psr:ActsOn ;
+ex:PutDownOtherItemsActsOn a obot:ActsOn ;
     rdfs:domain ex:PutDownOtherItems ;
-    rdfs:range psr:Object .
+    rdfs:range obot:Object .
 
-ex:PickUpOtherItemsPerformedBy a psr:isPerformedBy ;
+ex:PickUpOtherItemsPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:PickUpOtherItems ;
     rdfs:range dul:Agent .
 
-ex:PutDownOtherItemsPerformedBy a psr:isPerformedBy ;
+ex:PutDownOtherItemsPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:PutDownOtherItems ;
     rdfs:range dul:Agent .
 
@@ -108,11 +108,11 @@ ex:PutDownOtherItemsPerformedBy a psr:isPerformedBy ;
 # Action 5: Confirm organization completion
 ##############################
 
-ex:ConfirmOrganization a psr:Action ;
+ex:ConfirmOrganization a obot:Action ;
     rdfs:label "Confirm organization completion"@en ;
     rdfs:comment "Robot verifies that the environment is organized."@en .
 
-ex:ConfirmOrganizationPerformedBy a psr:isPerformedBy ;
+ex:ConfirmOrganizationPerformedBy a obot:isPerformedBy ;
     rdfs:domain ex:ConfirmOrganization ;
     rdfs:range dul:Agent .
 
@@ -123,27 +123,27 @@ ex:ConfirmOrganizationPerformedBy a psr:isPerformedBy ;
 ex:ActionSequence1 a dul:Workflow ;
     rdfs:label "Workflow to restore kitchen organization"@en .
 
-ex:hasPart1 a psr:Instruction ;
-    psr:hasWorkflow ex:ActionSequence1 ;
-    psr:hasAction ex:IdentifyMisplacedItems .
+ex:hasPart1 a obot:Instruction ;
+    obot:hasWorkflow ex:ActionSequence1 ;
+    obot:hasAction ex:IdentifyMisplacedItems .
 
 ex:ActionSequence2 a dul:Workflow ;
     rdfs:label "Identify and move jars of jam and Jello"@en ;
-    psr:hasPart ex:PickUpJamsAndJello ;
-    psr:hasPart ex:PutDownJamsAndJello .
+    obot:hasPart ex:PickUpJamsAndJello ;
+    obot:hasPart ex:PutDownJamsAndJello .
 
-ex:hasPart2 a psr:Instruction ;
-    psr:hasWorkflow ex:ActionSequence2 ;
-    psr:hasAction ex:IdentifyOtherMisplacedItems .
+ex:hasPart2 a obot:Instruction ;
+    obot:hasWorkflow ex:ActionSequence2 ;
+    obot:hasAction ex:IdentifyOtherMisplacedItems .
 
-ex:hasPart3 a psr:Instruction ;
-    psr:hasWorkflow ex:ActionSequence2 ;
-    psr:hasAction ex:PickUpOtherItems .
+ex:hasPart3 a obot:Instruction ;
+    obot:hasWorkflow ex:ActionSequence2 ;
+    obot:hasAction ex:PickUpOtherItems .
 
-ex:hasPart4 a psr:Instruction ;
-    psr:hasWorkflow ex:ActionSequence2 ;
-    psr:hasAction ex:PutDownOtherItems .
+ex:hasPart4 a obot:Instruction ;
+    obot:hasWorkflow ex:ActionSequence2 ;
+    obot:hasAction ex:PutDownOtherItems .
 
-ex:hasPart5 a psr:Instruction ;
-    psr:hasWorkflow ex:ActionSequence1 ;
-    psr:hasAction ex:ConfirmOrganization .
+ex:hasPart5 a obot:Instruction ;
+    obot:hasWorkflow ex:ActionSequence1 ;
+    obot:hasAction ex:ConfirmOrganization .

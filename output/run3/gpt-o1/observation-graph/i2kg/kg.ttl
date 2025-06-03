@@ -2,11 +2,11 @@
 @prefix geo:    <http://www.opengis.net/ont/geosparql#> .
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Fridge,
                      ex:RangeHood,
                      ex:Stove,
@@ -35,79 +35,79 @@ ex:Kitchen a psr:Environment ;
                      ex:WineGlass,
                      ex:Pitcher .
 
-ex:Fridge a psr:Appliance ;
-    psr:hasAffordance soma:Opening,
+ex:Fridge a obot:Appliance ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing .
 
-ex:RangeHood a psr:Appliance .
+ex:RangeHood a obot:Appliance .
 
-ex:Stove a psr:Appliance .
+ex:Stove a obot:Appliance .
 
-ex:Cabinets a psr:Furniture .
+ex:Cabinets a obot:Furniture .
 
-ex:Countertop a psr:Furniture .
+ex:Countertop a obot:Furniture .
 
-ex:Sink a psr:Furniture .
+ex:Sink a obot:Furniture .
 
-ex:Table a psr:Furniture .
+ex:Table a obot:Furniture .
 
-ex:Chair1 a psr:Furniture .
-ex:Chair2 a psr:Furniture .
-ex:Chair3 a psr:Furniture .
-ex:Chair4 a psr:Furniture .
-ex:Chair5 a psr:Furniture .
+ex:Chair1 a obot:Furniture .
+ex:Chair2 a obot:Furniture .
+ex:Chair3 a obot:Furniture .
+ex:Chair4 a obot:Furniture .
+ex:Chair5 a obot:Furniture .
 
-ex:Door a psr:Object ;
-    psr:hasAffordance soma:Opening,
+ex:Door a obot:Object ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing .
 
-ex:Window a psr:Object .
+ex:Window a obot:Object .
 
-ex:JamJar a psr:Object ;
-    psr:hasAffordance soma:Opening,
+ex:JamJar a obot:Object ;
+    obot:hasAffordance soma:Opening,
                        soma:Closing,
                        soma:PickingUp,
                        soma:PuttingDown .
 
-ex:JelloBox a psr:Object .
+ex:JelloBox a obot:Object .
 
-ex:SaltContainer a psr:Object .
+ex:SaltContainer a obot:Object .
 
-ex:Pot a psr:Object ;
-    psr:hasAffordance soma:PickingUp,
+ex:Pot a obot:Object ;
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown .
 
-ex:ChuckyCerealBox a psr:Object .
+ex:ChuckyCerealBox a obot:Object .
 
-ex:RiceBubblesBox a psr:Object .
+ex:RiceBubblesBox a obot:Object .
 
-ex:CoffeeMug a psr:Object ;
-    psr:hasAffordance soma:PickingUp,
+ex:CoffeeMug a obot:Object ;
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown .
 
-ex:Plates a psr:Object .
+ex:Plates a obot:Object .
 
-ex:ChocolateBox a psr:Object ;
-    psr:hasAffordance soma:PickingUp,
+ex:ChocolateBox a obot:Object ;
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown .
 
-ex:WaterBottle a psr:Object ;
-    psr:hasAffordance soma:PickingUp,
+ex:WaterBottle a obot:Object ;
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown .
 
-ex:FruitBowl a psr:Object ;
-    psr:hasAffordance soma:PickingUp,
+ex:FruitBowl a obot:Object ;
+    obot:hasAffordance soma:PickingUp,
                        soma:PuttingDown .
 
-ex:WineGlass a psr:Object .
+ex:WineGlass a obot:Object .
 
-ex:Pitcher a psr:Object .
+ex:Pitcher a obot:Object .
 
-ex:CountertopCL a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:CountertopCL a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
-ex:DiningTableCL a psr:CurrentLocation ;
-    psr:onTopOf ex:Table .
+ex:DiningTableCL a obot:CurrentLocation ;
+    obot:onTopOf ex:Table .
 
 ex:JamJar dul:hasLocation ex:CountertopCL .
 ex:JelloBox dul:hasLocation ex:CountertopCL .

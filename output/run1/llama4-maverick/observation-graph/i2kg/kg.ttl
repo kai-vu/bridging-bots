@@ -3,10 +3,10 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinet1 ;
     dul:hasComponent ex:Cabinet2 ;
     dul:hasComponent ex:Refrigerator1 ;
@@ -17,45 +17,45 @@ ex:Kitchen a psr:Environment ;
     dul:hasComponent ex:Sink1 ;
     dul:hasComponent ex:Stove1 .
 
-ex:Cabinet1 a psr:Furniture ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing ;
+ex:Cabinet1 a obot:Furniture ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing ;
     dul:hasLocation ex:CounterTop1 .
 
-ex:Cabinet2 a psr:Furniture ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing ;
+ex:Cabinet2 a obot:Furniture ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing ;
     dul:hasLocation ex:CounterTop2 .
 
-ex:Refrigerator1 a psr:Appliance ;
-    psr:hasAffordance soma:Opening ;
-    psr:hasAffordance soma:Closing .
+ex:Refrigerator1 a obot:Appliance ;
+    obot:hasAffordance soma:Opening ;
+    obot:hasAffordance soma:Closing .
 
-ex:DiningTable1 a psr:Furniture ;
-    psr:hasAffordance soma:PickingUp ;
+ex:DiningTable1 a obot:Furniture ;
+    obot:hasAffordance soma:PickingUp ;
     dul:hasLocation ex:Room1 .
 
-ex:Chair1 a psr:Furniture ;
+ex:Chair1 a obot:Furniture ;
     dul:hasLocation ex:Room1 .
 
-ex:Chair2 a psr:Furniture ;
+ex:Chair2 a obot:Furniture ;
     dul:hasLocation ex:Room1 .
 
-ex:Chair3 a psr:Furniture ;
+ex:Chair3 a obot:Furniture ;
     dul:hasLocation ex:Room1 .
 
-ex:Sink1 a psr:Appliance ;
-    psr:hasAffordance soma:Delivering ;
+ex:Sink1 a obot:Appliance ;
+    obot:hasAffordance soma:Delivering ;
     dul:hasLocation ex:CounterTop2 .
 
-ex:Stove1 a psr:Appliance .
+ex:Stove1 a obot:Appliance .
 
-ex:CounterTop1 a psr:Component ;
+ex:CounterTop1 a obot:Component ;
     geo:sfContains ex:Jar1 ;
     geo:sfContains ex:Jello1 ;
     geo:sfContains ex:AlpenSalt1 .
 
-ex:CounterTop2 a psr:Component ;
+ex:CounterTop2 a obot:Component ;
     geo:sfContains ex:Pot1 ;
     geo:sfContains ex:Chicky1 ;
     geo:sfContains ex:Jar2 ;
@@ -66,28 +66,28 @@ ex:CounterTop2 a psr:Component ;
     geo:sfContains ex:Jello2 ;
     geo:sfContains ex:AlpenSalt2 .
 
-ex:DiningTableTop1 a psr:Component ;
+ex:DiningTableTop1 a obot:Component ;
     geo:sfContains ex:Book1 ;
     geo:sfContains ex:Evian1 ;
     geo:sfContains ex:Evian2 ;
     geo:sfContains ex:Mug1 .
 
-ex:Jar1 a psr:Object .
-ex:Jello1 a psr:Object .
-ex:AlpenSalt1 a psr:Object .
-ex:Pot1 a psr:Object .
-ex:Chicky1 a psr:Object .
-ex:Jar2 a psr:Object .
-ex:RiceBubbles1 a psr:Object .
-ex:Chicky2 a psr:Object .
-ex:PlateStack1 a psr:Object .
-ex:Jar3 a psr:Object .
-ex:Jello2 a psr:Object .
-ex:AlpenSalt2 a psr:Object .
-ex:Book1 a psr:Object .
-ex:Evian1 a psr:Object .
-ex:Evian2 a psr:Object .
-ex:Mug1 a psr:Object .
+ex:Jar1 a obot:Object .
+ex:Jello1 a obot:Object .
+ex:AlpenSalt1 a obot:Object .
+ex:Pot1 a obot:Object .
+ex:Chicky1 a obot:Object .
+ex:Jar2 a obot:Object .
+ex:RiceBubbles1 a obot:Object .
+ex:Chicky2 a obot:Object .
+ex:PlateStack1 a obot:Object .
+ex:Jar3 a obot:Object .
+ex:Jello2 a obot:Object .
+ex:AlpenSalt2 a obot:Object .
+ex:Book1 a obot:Object .
+ex:Evian1 a obot:Object .
+ex:Evian2 a obot:Object .
+ex:Mug1 a obot:Object .
 
 ex:Room1 a soma:Location .
 
@@ -99,9 +99,9 @@ ex:Chair1 dul:hasLocation ex:Room1 .
 ex:Chair2 dul:hasLocation ex:Room1 .
 ex:Chair3 dul:hasLocation ex:Room1 .
 
-ex:CounterTop1 psr:onTopOf ex:Cabinet1 .
-ex:CounterTop2 psr:onTopOf ex:Cabinet2 .
-ex:DiningTableTop1 psr:onTopOf ex:DiningTable1 .
+ex:CounterTop1 obot:onTopOf ex:Cabinet1 .
+ex:CounterTop2 obot:onTopOf ex:Cabinet2 .
+ex:DiningTableTop1 obot:onTopOf ex:DiningTable1 .
 
 ex:Jar1 geo:sfWithin ex:CounterTop1 .
 ex:Jello1 geo:sfWithin ex:CounterTop1 .
