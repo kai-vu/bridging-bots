@@ -3,95 +3,95 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.psr-action#> .
+@prefix obot:    <http://www.psr-action#> .
 
 @prefix : <http://example.org/data/> .
 
 # Environment
-:environment1 a psr:Environment .
+:environment1 a obot:Environment .
 
 # Current locations of components
-:fridgeCurrentLoc a psr:CurrentLocation ;
+:fridgeCurrentLoc a obot:CurrentLocation ;
     rdfs:label "Current Location of Fridge"@en .
 
-:tableCurrentLoc a psr:CurrentLocation ;
+:tableCurrentLoc a obot:CurrentLocation ;
     rdfs:label "Current Location of Table"@en .
 
-:table2CurrentLoc a psr:CurrentLocation ;
+:table2CurrentLoc a obot:CurrentLocation ;
     rdfs:label "Current Location of Table2"@en .
 
 # Standard locations
-:fridgeStandardLoc a psr:StandardLocation ;
+:fridgeStandardLoc a obot:StandardLocation ;
     rdfs:label "Standard Location for Fridge"@en .
 
-:tableStandardLoc a psr:StandardLocation ;
+:tableStandardLoc a obot:StandardLocation ;
     rdfs:label "Standard Location for Table"@en .
 
-:table2StandardLoc a psr:StandardLocation ;
+:table2StandardLoc a obot:StandardLocation ;
     rdfs:label "Standard Location for Table2"@en .
 
 # Components in environment
-:fridge a psr:Object ;
+:fridge a obot:Object ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation :fridgeCurrentLoc, :fridgeStandardLoc ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-:table a psr:Furniture ;
+:table a obot:Furniture ;
     rdfs:label "Table"@en ;
     dul:hasLocation :tableCurrentLoc, :tableStandardLoc ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-:table2 a psr:Furniture ;
+:table2 a obot:Furniture ;
     rdfs:label "Table2"@en ;
     dul:hasLocation :table2CurrentLoc, :table2StandardLoc ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-:box a psr:Object ;
+:box a obot:Object ;
     rdfs:label "Box"@en ;
     dul:hasLocation :tableCurrentLoc ;
-    psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
+    obot:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
 
 # Relations among locations and components
-:location1 a psr:Location ;
+:location1 a obot:Location ;
     rdfs:label "Location1"@en ;
     geo:sfContains :fridge, :table, :table2 ;
     geo:sfWithin :environment1 .
 
-:location2 a psr:Location ;
+:location2 a obot:Location ;
     rdfs:label "Location2"@en ;
     geo:sfContains :box ;
     geo:sfWithin :location1 .
 
 # Accessories and objects
-:apple a psr:Object ;
+:apple a obot:Object ;
     rdfs:label "Apple"@en ;
     dul:hasLocation :table .
 
-:bowl a psr:Object ;
+:bowl a obot:Object ;
     rdfs:label "Bowl"@en ;
     dul:hasLocation :table .
 
-:plate a psr:Object ;
+:plate a obot:Object ;
     rdfs:label "Plate"@en ;
     dul:hasLocation :table .
 
-:jello a psr:Object ;
+:jello a obot:Object ;
     rdfs:label "Jello"@en ;
     dul:hasLocation :table .
 
 # Appliances
-:refrigerator a psr:Appliance ;
+:refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation :environment1 ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
 # Objets sur la table
-:boxOnTable a psr:Object ;
+:boxOnTable a obot:Object ;
     rdfs:label "Box on Table"@en ;
     dul:hasLocation :table .
 
 # Relations
-:table2OnTable a psr:Object ;
+:table2OnTable a obot:Object ;
     rdfs:label "Table2 on Table"@en ;
     geo:sfOverlaps :table, :table2 .
 

@@ -5,124 +5,124 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:task a psr:Instruction ;
+ex:task a obot:Instruction ;
     rdfs:label "Restore kitchen to organized state"@en ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:workflow .
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:workflow .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10, ex:action11, ex:action12, ex:action13, ex:action14, ex:action15 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10, ex:action11, ex:action12, ex:action13, ex:action14, ex:action15 .
 
 ex:action1 a dul:Action ;
     rdfs:label "Identify misplaced items on the dining table"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:diningTable ;
-    psr:isAffordedBy soma:Seeing .
+    obot:actsOn ex:diningTable ;
+    obot:isAffordedBy soma:Seeing .
 
 ex:action2 a dul:Action ;
     rdfs:label "Pick up packaged food product from the dining table"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:packagedFoodProduct ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:precedes ex:action3 .
+    obot:actsOn ex:packagedFoodProduct ;
+    obot:isAffordedBy soma:Grasping ;
+    obot:precedes ex:action3 .
 
 ex:action3 a dul:Action ;
     rdfs:label "Put down packaged food product in the open cabinet above the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:packagedFoodProduct ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action2 .
+    obot:actsOn ex:packagedFoodProduct ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action2 .
 
 ex:action4 a dul:Action ;
     rdfs:label "Pick up plastic bottle from the dining table"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:plasticBottle ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:precedes ex:action5 .
+    obot:actsOn ex:plasticBottle ;
+    obot:isAffordedBy soma:Grasping ;
+    obot:precedes ex:action5 .
 
 ex:action5 a dul:Action ;
     rdfs:label "Put down plastic bottle in the sink"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:plasticBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action4 .
+    obot:actsOn ex:plasticBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action4 .
 
 ex:action6 a dul:Action ;
     rdfs:label "Identify misplaced items on the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:counter ;
-    psr:isAffordedBy soma:Seeing .
+    obot:actsOn ex:counter ;
+    obot:isAffordedBy soma:Seeing .
 
 ex:action7 a dul:Action ;
     rdfs:label "Pick up cup from the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cup ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:precedes ex:action8 .
+    obot:actsOn ex:cup ;
+    obot:isAffordedBy soma:Grasping ;
+    obot:precedes ex:action8 .
 
 ex:action8 a dul:Action ;
     rdfs:label "Put down cup in the opened cabinet or shelf above the sink"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:cup ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action7 .
+    obot:actsOn ex:cup ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action7 .
 
 ex:action9 a dul:Action ;
     rdfs:label "Pick up food item from the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:foodItem ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:precedes ex:action10 .
+    obot:actsOn ex:foodItem ;
+    obot:isAffordedBy soma:Grasping ;
+    obot:precedes ex:action10 .
 
 ex:action10 a dul:Action ;
     rdfs:label "Put down food item in the open cabinet above the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:foodItem ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action9 .
+    obot:actsOn ex:foodItem ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action9 .
 
 ex:action11 a dul:Action ;
     rdfs:label "Close the open cabinet above the counter"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:openCabinet ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:openCabinet ;
+    obot:isAffordedBy soma:Closing .
 
 ex:action12 a dul:Action ;
     rdfs:label "Close the opened cabinet or shelf above the sink"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:openedCabinet ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:openedCabinet ;
+    obot:isAffordedBy soma:Closing .
 
 ex:action13 a dul:Action ;
     rdfs:label "Put away microwave oven in its designated place"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:microWaveOven ;
-    psr:isAffordedBy soma:Pushing .
+    obot:actsOn ex:microWaveOven ;
+    obot:isAffordedBy soma:Pushing .
 
 ex:action14 a dul:Action ;
     rdfs:label "Put away toaster in its designated place"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:toaster ;
-    psr:isAffordedBy soma:Pushing .
+    obot:actsOn ex:toaster ;
+    obot:isAffordedBy soma:Pushing .
 
 ex:action15 a dul:Action ;
     rdfs:label "Verify the kitchen is organized"@en ;
     soma:isPerformedBy ex:robot ;
-    psr:actsOn ex:kitchen ;
-    psr:isAffordedBy soma:Seeing .
+    obot:actsOn ex:kitchen ;
+    obot:isAffordedBy soma:Seeing .
 
-ex:diningTable a psr:Furniture .
-ex:packagedFoodProduct a psr:Object .
-ex:plasticBottle a psr:Object .
-ex:counter a psr:Component .
-ex:cup a psr:Object .
-ex:foodItem a psr:Object .
-ex:openCabinet a psr:Component .
-ex:openedCabinet a psr:Component .
-ex:microWaveOven a psr:Appliance .
-ex:toaster a psr:Appliance .
-ex:kitchen a psr:Component .
+ex:diningTable a obot:Furniture .
+ex:packagedFoodProduct a obot:Object .
+ex:plasticBottle a obot:Object .
+ex:counter a obot:Component .
+ex:cup a obot:Object .
+ex:foodItem a obot:Object .
+ex:openCabinet a obot:Component .
+ex:openedCabinet a obot:Component .
+ex:microWaveOven a obot:Appliance .
+ex:toaster a obot:Appliance .
+ex:kitchen a obot:Component .
 ex:robot a dul:Agent .

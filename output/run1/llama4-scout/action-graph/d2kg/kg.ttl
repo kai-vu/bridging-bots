@@ -5,141 +5,141 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Instruction1 a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:Workflow1 .
+ex:Instruction1 a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:Workflow1 .
 
-ex:Workflow1 a psr:Workflow ;
-  psr:hasAction ex:Action1 ;
-  psr:hasAction ex:Action2 ;
-  psr:hasAction ex:Action3 ;
-  psr:hasAction ex:Action4 .
+ex:Workflow1 a obot:Workflow ;
+  obot:hasAction ex:Action1 ;
+  obot:hasAction ex:Action2 ;
+  obot:hasAction ex:Action3 ;
+  obot:hasAction ex:Action4 .
 
 ex:Action1 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:yellowCup ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:yellowCup ;
   soma:isPerformedBy ex:Robot .
 
-ex:yellowCup a psr:Object ;
+ex:yellowCup a obot:Object ;
   ex:locatedIn ex:kitchenCountertop .
 
 ex:Action2 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:yellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:yellowCup ;
   soma:isPerformedBy ex:Robot .
 
-ex:Workflow1 psr:precedes ex:Action2 .
+ex:Workflow1 obot:precedes ex:Action2 .
 
 ex:Action3 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:ChunkyMonkeyJar ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:ChunkyMonkeyJar ;
   soma:isPerformedBy ex:Robot .
 
-ex:ChunkyMonkeyJar a psr:Object ;
+ex:ChunkyMonkeyJar a obot:Object ;
   ex:locatedIn ex:kitchenCountertop .
 
 ex:Action4 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:ChunkyMonkeyJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:ChunkyMonkeyJar ;
   soma:isPerformedBy ex:Robot .
 
-ex:Action2 psr:follows ex:Action1 .
+ex:Action2 obot:follows ex:Action1 .
 
-ex:Action4 psr:follows ex:Action3 .
+ex:Action4 obot:follows ex:Action3 .
 
 ex:Robot a dul:Agent .
 
-ex:kitchenCountertop a psr:Component ;
+ex:kitchenCountertop a obot:Component ;
   ex:partOf ex:kitchen .
 
-ex:kitchen a psr:Component .
+ex:kitchen a obot:Component .
 
-ex:EvianWater a psr:Object ;
+ex:EvianWater a obot:Object ;
   ex:locatedIn ex:diningTable .
 
 ex:Action5 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:EvianWater ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:EvianWater ;
   soma:isPerformedBy ex:Robot .
 
 ex:Action6 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:EvianWater ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:EvianWater ;
   soma:isPerformedBy ex:Robot .
 
-ex:Workflow1 psr:hasAction ex:Action5 ;
-  psr:hasAction ex:Action6 .
+ex:Workflow1 obot:hasAction ex:Action5 ;
+  obot:hasAction ex:Action6 .
 
-ex:diningTable a psr:Component ;
+ex:diningTable a obot:Component ;
   ex:partOf ex:diningRoom .
 
 ex:Action7 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:boxOfShortbreadCookies ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:boxOfShortbreadCookies ;
   soma:isPerformedBy ex:Robot .
 
-ex:boxOfShortbreadCookies a psr:Object ;
+ex:boxOfShortbreadCookies a obot:Object ;
   ex:locatedIn ex:diningTable .
 
 ex:Action8 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:boxOfShortbreadCookies ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:boxOfShortbreadCookies ;
   soma:isPerformedBy ex:Robot .
 
-ex:Action5 psr:precedes ex:Action6 .
+ex:Action5 obot:precedes ex:Action6 .
 
-ex:Action7 psr:follows ex:Action6 .
+ex:Action7 obot:follows ex:Action6 .
 
-ex:boxOfRiceBubbles a psr:Object ;
+ex:boxOfRiceBubbles a obot:Object ;
   ex:locatedIn ex:kitchenCountertop .
 
 ex:Action9 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:boxOfRiceBubbles ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:boxOfRiceBubbles ;
   soma:isPerformedBy ex:Robot .
 
 ex:Action10 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:boxOfRiceBubbles ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:boxOfRiceBubbles ;
   soma:isPerformedBy ex:Robot .
 
-ex:Action8 psr:follows ex:Action7 .
+ex:Action8 obot:follows ex:Action7 .
 
-ex:Action9 psr:precedes ex:Action10 .
+ex:Action9 obot:precedes ex:Action10 .
 
-ex:boxOfJello a psr:Object ;
+ex:boxOfJello a obot:Object ;
   ex:locatedIn ex:kitchenCountertop .
 
 ex:Action11 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:boxOfJello ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:boxOfJello ;
   soma:isPerformedBy ex:Robot .
 
 ex:Action12 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:boxOfJello ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:boxOfJello ;
   soma:isPerformedBy ex:Robot .
 
-ex:Action10 psr:follows ex:Action9 .
+ex:Action10 obot:follows ex:Action9 .
 
-ex:Action11 psr:precedes ex:Action12 .
+ex:Action11 obot:precedes ex:Action12 .
 
-ex:cartonOfEggs a psr:Object ;
+ex:cartonOfEggs a obot:Object ;
   ex:locatedIn ex:diningTable .
 
 ex:Action13 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:actsOn ex:cartonOfEggs ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:actsOn ex:cartonOfEggs ;
   soma:isPerformedBy ex:Robot .
 
 ex:Action14 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:actsOn ex:cartonOfEggs ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:actsOn ex:cartonOfEggs ;
   soma:isPerformedBy ex:Robot .
 
-ex:Action12 psr:follows ex:Action11 .
+ex:Action12 obot:follows ex:Action11 .
 
-ex:Action13 psr:precedes ex:Action14 .
+ex:Action13 obot:precedes ex:Action14 .

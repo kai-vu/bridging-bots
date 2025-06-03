@@ -5,96 +5,96 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 
 ### Knowledge Graph of Actions
 
 ## Instruction
-psr:restore_kitchen a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+obot:restore_kitchen a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
 ## Workflow
-psr:workflow_1 a psr:Workflow .
+obot:workflow_1 a obot:Workflow .
 
 ## Actions
-psr:pick_up_item_1 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_1 a dul:Action ;
+  obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_2 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_2 a dul:Action ;
+  obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_3 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_3 a dul:Action ;
+  obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_4 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_4 a dul:Action ;
+  obot:isAffordedBy soma:PickingUp .
 
-psr:pick_up_item_5 a dul:Action ;
-  psr:isAffordedBy soma:PickingUp .
+obot:pick_up_item_5 a dul:Action ;
+  obot:isAffordedBy soma:PickingUp .
 
-psr:place_item_1 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown .
+obot:place_item_1 a dul:Action ;
+  obot:isAffordedBy soma:PuttingDown .
 
-psr:place_item_2 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown .
+obot:place_item_2 a dul:Action ;
+  obot:isAffordedBy soma:PuttingDown .
 
-psr:place_item_3 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown .
+obot:place_item_3 a dul:Action ;
+  obot:isAffordedBy soma:PuttingDown .
 
-psr:place_item_4 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown .
+obot:place_item_4 a dul:Action ;
+  obot:isAffordedBy soma:PuttingDown .
 
-psr:place_item_5 a dul:Action ;
-  psr:isAffordedBy soma:PuttingDown .
+obot:place_item_5 a dul:Action ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ## Relationships
-psr:restore_kitchen psr:hasWorkflow psr:workflow_1 .
+obot:restore_kitchen obot:hasWorkflow obot:workflow_1 .
 
-psr:workflow_1 psr:hasAction psr:pick_up_item_1 .
-psr:workflow_1 psr:hasAction psr:pick_up_item_2 .
-psr:workflow_1 psr:hasAction psr:pick_up_item_3 .
-psr:workflow_1 psr:hasAction psr:pick_up_item_4 .
-psr:workflow_1 psr:hasAction psr:pick_up_item_5 .
-psr:workflow_1 psr:hasAction psr:place_item_1 .
-psr:workflow_1 psr:hasAction psr:place_item_2 .
-psr:workflow_1 psr:hasAction psr:place_item_3 .
-psr:workflow_1 psr:hasAction psr:place_item_4 .
-psr:workflow_1 psr:hasAction psr:place_item_5 .
+obot:workflow_1 obot:hasAction obot:pick_up_item_1 .
+obot:workflow_1 obot:hasAction obot:pick_up_item_2 .
+obot:workflow_1 obot:hasAction obot:pick_up_item_3 .
+obot:workflow_1 obot:hasAction obot:pick_up_item_4 .
+obot:workflow_1 obot:hasAction obot:pick_up_item_5 .
+obot:workflow_1 obot:hasAction obot:place_item_1 .
+obot:workflow_1 obot:hasAction obot:place_item_2 .
+obot:workflow_1 obot:hasAction obot:place_item_3 .
+obot:workflow_1 obot:hasAction obot:place_item_4 .
+obot:workflow_1 obot:hasAction obot:place_item_5 .
 
-psr:pick_up_item_1 psr:precedes psr:place_item_1 .
-psr:pick_up_item_2 psr:precedes psr:place_item_2 .
-psr:pick_up_item_3 psr:precedes psr:place_item_3 .
-psr:pick_up_item_4 psr:precedes psr:place_item_4 .
-psr:pick_up_item_5 psr:precedes psr:place_item_5 .
+obot:pick_up_item_1 obot:precedes obot:place_item_1 .
+obot:pick_up_item_2 obot:precedes obot:place_item_2 .
+obot:pick_up_item_3 obot:precedes obot:place_item_3 .
+obot:pick_up_item_4 obot:precedes obot:place_item_4 .
+obot:pick_up_item_5 obot:precedes obot:place_item_5 .
 
 ## Objects and Affordances
-psr:table a psr:Component, psr:Appliance .
+obot:table a obot:Component, obot:Appliance .
 
-psr:refrigerator a psr:Component, psr:Appliance .
+obot:refrigerator a obot:Component, obot:Appliance .
 
-psr:cabinet a psr:Component, psr:Furniture .
+obot:cabinet a obot:Component, obot:Furniture .
 
-psr:cup a psr:Object .
+obot:cup a obot:Object .
 
-psr:plate a psr:Object .
+obot:plate a obot:Object .
 
-psr:book a psr:Object .
+obot:book a obot:Object .
 
-psr:bottle a psr:Object .
+obot:bottle a obot:Object .
 
-psr:box a psr:Object .
+obot:box a obot:Object .
 
-psr:jar a psr:Object .
+obot:jar a obot:Object .
 
 ## Execution
-psr:pick_up_item_1 psr:actsOn psr:cup .
-psr:pick_up_item_2 psr:actsOn psr:bottle .
-psr:pick_up_item_3 psr:actsOn psr:box .
-psr:pick_up_item_4 psr:actsOn psr:plate .
-psr:pick_up_item_5 psr:actsOn psr:jar .
+obot:pick_up_item_1 obot:actsOn obot:cup .
+obot:pick_up_item_2 obot:actsOn obot:bottle .
+obot:pick_up_item_3 obot:actsOn obot:box .
+obot:pick_up_item_4 obot:actsOn obot:plate .
+obot:pick_up_item_5 obot:actsOn obot:jar .
 
-psr:place_item_1 psr:actsOn psr:cabinet .
-psr:place_item_2 psr:actsOn psr:refrigerator .
-psr:place_item_3 psr:actsOn psr:cabinet .
-psr:place_item_4 psr:actsOn psr:cabinet .
-psr:place_item_5 psr:actsOn psr:cabinet .
+obot:place_item_1 obot:actsOn obot:cabinet .
+obot:place_item_2 obot:actsOn obot:refrigerator .
+obot:place_item_3 obot:actsOn obot:cabinet .
+obot:place_item_4 obot:actsOn obot:cabinet .
+obot:place_item_5 obot:actsOn obot:cabinet .

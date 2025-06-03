@@ -3,40 +3,40 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:kitchen a psr:Environment .
-ex:countertop a psr:Component ;
+ex:kitchen a obot:Environment .
+ex:countertop a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:kitchen_location a psr:CurrentLocation ;
-    psr:onTopOf ex:sink .
-ex:sink a psr:Component ;
+ex:kitchen_location a obot:CurrentLocation ;
+    obot:onTopOf ex:sink .
+ex:sink a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:cabinets a psr:Component ;
+ex:cabinets a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:oven a psr:Appliance ;
+ex:oven a obot:Appliance ;
     dul:hasLocation ex:kitchen_location .
-ex:refrigerator a psr:Appliance ;
+ex:refrigerator a obot:Appliance ;
     dul:hasLocation ex:kitchen_location .
-ex:dining_table a psr:Furniture ;
+ex:dining_table a obot:Furniture ;
     dul:hasLocation ex:dining_area_location .
-ex:dining_area_location a psr:CurrentLocation .
-ex:chairs a psr:Furniture ;
+ex:dining_area_location a obot:CurrentLocation .
+ex:chairs a obot:Furniture ;
     dul:hasLocation ex:dining_area_location .
-ex:floor a psr:Component ;
+ex:floor a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:ceiling_light a psr:Component ;
+ex:ceiling_light a obot:Component ;
     dul:hasLocation ex:kitchen_location .
-ex:paper_towels a psr:Object ;
+ex:paper_towels a obot:Object ;
     dul:hasLocation ex:kitchen_location .
-ex:bottle a psr:Object ;
+ex:bottle a obot:Object ;
     dul:hasLocation ex:kitchen_location .
-ex:boxes a psr:Object ;
+ex:boxes a obot:Object ;
     dul:hasLocation ex:kitchen_location .
-ex:books a psr:Object ;
+ex:books a obot:Object ;
     dul:hasLocation ex:dining_area_location .
-ex:red_bottle a psr:Object ;
+ex:red_bottle a obot:Object ;
     dul:hasLocation ex:dining_area_location .
 
 ex:kitchen dul:hasComponent ex:countertop .
@@ -54,26 +54,26 @@ ex:kitchen dul:hasComponent ex:boxes .
 ex:kitchen dul:hasComponent ex:books .
 ex:kitchen dul:hasComponent ex:red_bottle .
 
-ex:sink psr:hasAffordance soma:Closing .
-ex:sink psr:hasAffordance soma:Opening .
-ex:oven psr:hasAffordance soma:Opening .
-ex:oven psr:hasAffordance soma:Closing .
-ex:refrigerator psr:hasAffordance soma:Opening .
-ex:refrigerator psr:hasAffordance soma:Closing .
-ex:dining_table psr:hasAffordance soma:Pulling .
-ex:dining_table psr:hasAffordance soma:Pushing .
-ex:chairs psr:hasAffordance soma:Pulling .
-ex:chairs psr:hasAffordance soma:Pushing .
-ex:boxes psr:hasAffordance soma:PickingUp .
-ex:boxes psr:hasAffordance soma:PuttingDown .
-ex:bottle psr:hasAffordance soma:Grasping .
-ex:bottle psr:hasAffordance soma: Holding .
-ex:paper_towels psr:hasAffordance soma:Grasping .
-ex:paper_towels psr:hasAffordance soma: Holding .
-ex:books psr:hasAffordance soma:PickingUp .
-ex:books psr:hasAffordance soma:PuttingDown .
-ex:red_bottle psr:hasAffordance soma:Grasping .
-ex:red_bottle psr:hasAffordance soma: Holding .
+ex:sink obot:hasAffordance soma:Closing .
+ex:sink obot:hasAffordance soma:Opening .
+ex:oven obot:hasAffordance soma:Opening .
+ex:oven obot:hasAffordance soma:Closing .
+ex:refrigerator obot:hasAffordance soma:Opening .
+ex:refrigerator obot:hasAffordance soma:Closing .
+ex:dining_table obot:hasAffordance soma:Pulling .
+ex:dining_table obot:hasAffordance soma:Pushing .
+ex:chairs obot:hasAffordance soma:Pulling .
+ex:chairs obot:hasAffordance soma:Pushing .
+ex:boxes obot:hasAffordance soma:PickingUp .
+ex:boxes obot:hasAffordance soma:PuttingDown .
+ex:bottle obot:hasAffordance soma:Grasping .
+ex:bottle obot:hasAffordance soma: Holding .
+ex:paper_towels obot:hasAffordance soma:Grasping .
+ex:paper_towels obot:hasAffordance soma: Holding .
+ex:books obot:hasAffordance soma:PickingUp .
+ex:books obot:hasAffordance soma:PuttingDown .
+ex:red_bottle obot:hasAffordance soma:Grasping .
+ex:red_bottle obot:hasAffordance soma: Holding .
 
 ex:kitchen_location geo:sfContains ex:sink .
 ex:kitchen_location geo:sfContains ex:cabinets .

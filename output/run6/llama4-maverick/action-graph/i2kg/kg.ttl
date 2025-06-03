@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix psr: <https://w3id.org/OntoBOT#> .
 
 psr:Instruction_1 a psr:Instruction ;
     psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en ;

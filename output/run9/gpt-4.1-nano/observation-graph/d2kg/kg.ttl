@@ -3,124 +3,124 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.ease-crc.org/ont/PSR.owl#> .
+@prefix obot:    <http://www.ease-crc.org/ont/PSR.owl#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Instantiate Environments: Kitchen and Dining Area
-ex:kitchen a psr:Environment ;
+ex:kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en .
 
-ex:diningArea a psr:Environment ;
+ex:diningArea a obot:Environment ;
     rdfs:label "Dining Area"@en .
 
 # Locations within environments
-ex:countertop_kitchen a psr:Location ;
+ex:countertop_kitchen a obot:Location ;
     rdfs:label "Beige Marble Countertop"@en .
 
-ex:wall_kitchen a psr:Location ;
+ex:wall_kitchen a obot:Location ;
     rdfs:label "Kitchen Wall"@en .
 
-ex:table_dining a psr:Location ;
+ex:table_dining a obot:Location ;
     rdfs:label "Wooden Dining Table"@en .
 
-ex:tabletop_dining a psr:Location ;
+ex:tabletop_dining a obot:Location ;
     rdfs:label "Tabletop Surface"@en .
 
 # Assign components to environments
 # Kitchen components
-ex:countertopComponent a psr:Component ;
+ex:countertopComponent a obot:Component ;
     rdfs:label "Countertop"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
 ex:countertop_kitchen dul:hasComponent ex:countertopComponent .
 
 # Food and household items on countertop
-ex:jellOBox a psr:Object ;
+ex:jellOBox a obot:Object ;
     rdfs:label "Box of Jell-O"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
-ex:riceBubblesBox a psr:Object ;
+ex:riceBubblesBox a obot:Object ;
     rdfs:label "Box of Rice Bubbles"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
-ex:strawberryJam a psr:Object ;
+ex:strawberryJam a obot:Object ;
     rdfs:label "Small Container of Strawberry Jam"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
-ex:alpenSaltBottle a psr:Object ;
+ex:alpenSaltBottle a obot:Object ;
     rdfs:label "Bottle of Alpen Salz"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
-ex:jamContainer2 a psr:Object ;
+ex:jamContainer2 a obot:Object ;
     rdfs:label "Second Container of Jam"@en ;
     dul:hasLocation ex:countertop_kitchen .
 
 # Stove and saucepan
-ex:stoveArea a psr:Object ;
+ex:stoveArea a obot:Object ;
     rdfs:label "Stove Area"@en .
 
-ex:saucepan a psr:Object ;
+ex:saucepan a obot:Object ;
     rdfs:label "Small Saucepan"@en ;
     dul:hasLocation ex:stoveArea .
 
 # Kitchen furniture and fixtures
-ex:blackCabinetUnder a psr:Furniture ;
+ex:blackCabinetUnder a obot:Furniture ;
     rdfs:label "Black Cabinet Under Counter"@en .
 
-ex:verticalSilverHandles a psr:Furniture ;
+ex:verticalSilverHandles a obot:Furniture ;
     rdfs:label "Vertical Silver Handles"@en .
 
-ex:blackCabinetAbove a psr:Furniture ;
+ex:blackCabinetAbove a obot:Furniture ;
     rdfs:label "Black Wall Cabinet"@en .
 
-ex:woodenVentHood a psr:Furniture ;
+ex:woodenVentHood a obot:Furniture ;
     rdfs:label "Wooden Vent Hood"@en .
 
-ex:windowFrame a psr:Object ;
+ex:windowFrame a obot:Object ;
     rdfs:label "Small Wooden Window Frame"@en .
 
 # Dining area components
-ex:table a psr:Component ;
+ex:table a obot:Component ;
     rdfs:label "Wooden Dining Table"@en ;
     dul:hasLocation ex:table_dining .
 
-ex:waterBottle a psr:Object ;
+ex:waterBottle a obot:Object ;
     rdfs:label "Large Water Bottle"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:wineGlass a psr:Object ;
+ex:wineGlass a obot:Object ;
     rdfs:label "Glass of Wine"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:pitcher a psr:Object ;
+ex:pitcher a obot:Object ;
     rdfs:label "Pitcher"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:shortbreadBox a psr:Object ;
+ex:shortbreadBox a obot:Object ;
     rdfs:label "Red Box of Shortbread"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:riceBubblesBox_dining a psr:Object ;
+ex:riceBubblesBox_dining a obot:Object ;
     rdfs:label "Box of Rice Bubbles"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:chuckyAlbum a psr:Object ;
+ex:chuckyAlbum a obot:Object ;
     rdfs:label "Chucky Album Cover"@en ;
     dul:hasLocation ex:tabletop_dining .
 
-ex:jams_dining a psr:Object ;
+ex:jams_dining a obot:Object ;
     rdfs:label "Additional Jams"@en ;
     dul:hasLocation ex:tabletop_dining .
 
 # Surrounding environment features
-ex:whiteWalls a psr:Environment ;
+ex:whiteWalls a obot:Environment ;
     rdfs:label "White Textured Walls"@en .
 
-ex:brownFloor a psr:Environment ;
+ex:brownFloor a obot:Environment ;
     rdfs:label "Brown Hardwood Floor"@en .
 
 # Door separating kitchen and dining
-ex:door a psr:Object ;
+ex:door a obot:Object ;
     rdfs:label "Door with Simple Panel Design"@en .
 
 # Relations to specify locations
@@ -160,9 +160,9 @@ ex:kitchen dul:hasComponent ex:countertopComponent, ex:stoveArea, ex:blackCabine
 ex:diningArea dul:hasComponent ex:table, ex:waterBottle, ex:wineGlass, ex:pitcher, ex:shortbreadBox, ex:riceBubblesBox_dining, ex:chuckyAlbum, ex:jams_dining .
 
 # Locations of environments
-ex:countertop_kitchen a psr:StandardLocation .
-ex:table_dining a psr:StandardLocation .
-ex:wall_kitchen a psr:StandardLocation .
-ex:tabletop_dining a psr:StandardLocation .
+ex:countertop_kitchen a obot:StandardLocation .
+ex:table_dining a obot:StandardLocation .
+ex:wall_kitchen a obot:StandardLocation .
+ex:tabletop_dining a obot:StandardLocation .
 
 # Covering the main spatial and object relationships as per ontology and description.

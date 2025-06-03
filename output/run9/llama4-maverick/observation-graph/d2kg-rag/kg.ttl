@@ -1,85 +1,85 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Countertop, ex:Refrigerator, ex:Sink, ex:StoveTop, ex:RangeHood, ex:DiningTable, ex:Floor .
 
-ex:Cabinets a psr:Furniture ;
+ex:Cabinets a obot:Furniture ;
     rdfs:label "Dark Gray Cabinets"@en .
 
-ex:Countertop a psr:Furniture ;
+ex:Countertop a obot:Furniture ;
     rdfs:label "Light-colored Countertop"@en ;
     dul:hasLocation ex:Sink .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "White Refrigerator"@en ;
     dul:hasLocation ex:CornerLocation ;
     geo:sfWithin ex:Kitchen .
 
-ex:CornerLocation a psr:CurrentLocation ;
+ex:CornerLocation a obot:CurrentLocation ;
     rdfs:label "Corner of the room"@en ;
-    psr:onTopOf ex:Floor .
+    obot:onTopOf ex:Floor .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Sink"@en ;
     dul:hasLocation ex:Countertop .
 
-ex:Faucet a psr:Object ;
+ex:Faucet a obot:Object ;
     rdfs:label "Faucet"@en ;
     dul:hasLocation ex:Sink .
 
-ex:StoveTop a psr:Appliance ;
+ex:StoveTop a obot:Appliance ;
     rdfs:label "Stove Top"@en ;
     dul:hasComponent ex:Pot .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     rdfs:label "Pot"@en ;
     dul:hasLocation ex:StoveTop .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     rdfs:label "Range Hood"@en ;
     dul:hasLocation ex:AboveStoveTop .
 
-ex:AboveStoveTop a psr:StandardLocation ;
+ex:AboveStoveTop a obot:StandardLocation ;
     rdfs:label "Above Stove Top"@en .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasComponent ex:Chairs, ex:Bottles, ex:BoxOfCrackers, ex:Glass .
 
-ex:Chairs a psr:Furniture ;
+ex:Chairs a obot:Furniture ;
     rdfs:label "White Chairs"@en .
 
-ex:Bottles a psr:Object ;
+ex:Bottles a obot:Object ;
     rdfs:label "Bottles"@en .
 
-ex:BoxOfCrackers a psr:Object ;
+ex:BoxOfCrackers a obot:Object ;
     rdfs:label "Box of Crackers"@en .
 
-ex:Glass a psr:Object ;
+ex:Glass a obot:Object ;
     rdfs:label "Glass"@en .
 
-ex:JarOfJam a psr:Object ;
+ex:JarOfJam a obot:Object ;
     rdfs:label "Jar of Jam"@en ;
     dul:hasLocation ex:Countertop .
 
-ex:BoxOfJello a psr:Object ;
+ex:BoxOfJello a obot:Object ;
     rdfs:label "Box of Jello"@en ;
     dul:hasLocation ex:Countertop .
 
-ex:BoxOfSalt a psr:Object ;
+ex:BoxOfSalt a obot:Object ;
     rdfs:label "Box of Salt"@en ;
     dul:hasLocation ex:Countertop .
 
-ex:Floor a psr:Component ;
+ex:Floor a obot:Component ;
     rdfs:label "Dark Wood Parquet Floor"@en .
 
-ex:Walls a psr:Component ;
+ex:Walls a obot:Component ;
     rdfs:label "White Walls"@en .
 
 ex:Cabinets dul:hasLocation ex:Kitchen .
@@ -88,7 +88,7 @@ ex:Refrigerator geo:sfWithin ex:Cabinets .
 
 ex:DiningTable dul:hasLocation ex:DiningArea .
 
-ex:DiningArea a psr:Environment ;
+ex:DiningArea a obot:Environment ;
     dul:hasComponent ex:DiningTable .
 
 ex:Kitchen dul:hasComponent ex:Walls .

@@ -3,7 +3,7 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.ease-crc.org/ont/PSR.owl#> .
+@prefix obot:    <http://www.ease-crc.org/ont/PSR.owl#> .
 
 @prefix ex:     <http://example.org/data/> .
 
@@ -11,7 +11,7 @@
 # Environment
 ###########################
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     rdfs:label "Kitchen Environment"@en ;
     rdfs:comment "A kitchen environment with countertop, appliances, and dining area."@en .
 
@@ -19,43 +19,43 @@ ex:KitchenEnvironment a psr:Environment ;
 # Countertop
 ###########################
 
-ex:Countertop a psr:Object ;
+ex:Countertop a obot:Object ;
     rdfs:label "Kitchen Countertop"@en ;
     rdfs:comment "A beige marbled kitchen countertop."@en ;
     dul:hasLocation ex:KitchenCountertopLocation .
 
-ex:KitchenCountertopLocation a psr:StandardLocation ;
+ex:KitchenCountertopLocation a obot:StandardLocation ;
     rdfs:label "Kitchen Countertop Location"@en .
 
 ###########################
 # Objects on the Countertop
 ###########################
 
-ex:JelloPuddingBox a psr:Object ;
+ex:JelloPuddingBox a obot:Object ;
     rdfs:label "Box of Jello pudding mix"@en ;
     rdfs:comment "A box of Jello pudding mix placed near the center of the countertop."@en .
 
-ex:AlpenSaltCarton a psr:Object ;
+ex:AlpenSaltCarton a obot:Object ;
     rdfs:label "Carton of Alpen Salz"@en ;
     rdfs:comment "A carton of Alpen Salz near the center of the countertop."@en .
 
-ex:RiceBubblesPackage a psr:Object ;
+ex:RiceBubblesPackage a obot:Object ;
     rdfs:label "Packaging of rice bubbles"@en ;
     rdfs:comment "A package of rice bubbles positioned near the Jello and Alpen Salz."@en .
 
-ex:StrawberryJamJar a psr:Object ;
+ex:StrawberryJamJar a obot:Object ;
     rdfs:label "Small jar of strawberry jam"@en ;
     rdfs:comment "A small jar of strawberry jam nearby but spaced apart from other items."@en .
 
-ex:WaterBottle a psr:Object ;
+ex:WaterBottle a obot:Object ;
     rdfs:label "Plastic water bottle"@en ;
     rdfs:comment "A plastic water bottle placed towards the right side of the countertop."@en .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     rdfs:label "Pitcher"@en ;
     rdfs:comment "A pitcher placed close to the water bottle toward the right side."@en .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     rdfs:label "Glass of white wine"@en ;
     rdfs:comment "A wine glass containing white wine, nearby but spaced apart."@en .
 
@@ -64,38 +64,38 @@ ex:WineGlass a psr:Object ;
 ###########################
 
 # Near the center
-ex:JelloPuddingBox psr:hasLocation ex:CountertopCenterLocation .
-ex:AlpenSaltCarton psr:hasLocation ex:CountertopCenterLocation .
+ex:JelloPuddingBox obot:hasLocation ex:CountertopCenterLocation .
+ex:AlpenSaltCarton obot:hasLocation ex:CountertopCenterLocation .
 
 # Near the right side
-ex:WaterBottle psr:hasLocation ex:CountertopRightLocation .
-ex:Pitcher psr:hasLocation ex:CountertopRightLocation .
+ex:WaterBottle obot:hasLocation ex:CountertopRightLocation .
+ex:Pitcher obot:hasLocation ex:CountertopRightLocation .
 
 # Spaced apart but nearby
-ex:StrawberryJamJar psr:hasLocation ex:CountertopSpacedLocation .
-ex:WineGlass psr:hasLocation ex:CountertopSpacedLocation2 .
+ex:StrawberryJamJar obot:hasLocation ex:CountertopSpacedLocation .
+ex:WineGlass obot:hasLocation ex:CountertopSpacedLocation2 .
 
 ###########################
 # Other Fixtures and Appliances
 ###########################
 
-ex:Refrigerator a psr:Object ;
+ex:Refrigerator a obot:Object ;
     rdfs:label "Tall White Refrigerator"@en ;
     rdfs:comment "A tall white refrigerator located at the right end of the counter."@en ;
     dul:hasLocation ex:RefrigeratorLocation .
 
-ex:RefrigeratorLocation a psr:StandardLocation ;
+ex:RefrigeratorLocation a obot:StandardLocation ;
     rdfs:label "Refrigerator Location"@en .
 
-ex:KitchenCabinetUpper a psr:Object ;
+ex:KitchenCabinetUpper a obot:Object ;
     rdfs:label "Dark Kitchen Upper Cabinet"@en ;
     rdfs:comment "An upper dark cabinet above the countertop."@en .
 
-ex:KitchenCabinetLower a psr:Object ;
+ex:KitchenCabinetLower a obot:Object ;
     rdfs:label "Dark Kitchen Lower Cabinet"@en ;
     rdfs:comment "A dark cabinet with handles beneath the countertop, containing storage."@en .
 
-ex:CountertopHandle a psr:Object ;
+ex:CountertopHandle a obot:Object ;
     rdfs:label "Countertop Handle"@en ;
     rdfs:comment "Handle on the dark kitchen cabinet."@en .
 
@@ -103,19 +103,19 @@ ex:CountertopHandle a psr:Object ;
 # Environment Details
 ###########################
 
-ex:WallWindow a psr:Object ;
+ex:WallWindow a obot:Object ;
     rdfs:label "Window Above Sink"@en ;
     rdfs:comment "A window above the sink on the kitchen wall."@en .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Embedded Sink"@en ;
     rdfs:comment "Sink embedded in the beige countertop."@en ;
     dul:hasLocation ex:SinkLocation .
 
-ex:SinkLocation a psr:StandardLocation ;
+ex:SinkLocation a obot:StandardLocation ;
     rdfs:label "Sink Location"@en .
 
-ex:DecorItem1 a psr:Object ;
+ex:DecorItem1 a obot:Object ;
     rdfs:label "Decorative Item"@en ;
     rdfs:comment "Decor items on the wall or upper cabinets."@en .
 
@@ -133,22 +133,22 @@ ex:UpperCabinet dul:hasLocation ex:UpperCabinetLocation .
 ex:LowerCabinet dul:hasLocation ex:LowerCabinetLocation .
 ex:Sink dul:hasLocation ex:SinkLocation .
 
-ex:UpperCabinet a psr:Object ;
+ex:UpperCabinet a obot:Object ;
     rdfs:label "Upper Cabinet"@en ;
     rdfs:comment "Upper kitchen cabinet"@en ;
     dul:hasLocation ex:UpperCabinetLocation .
 
-ex:UpperCabinetLocation a psr:StandardLocation ;
+ex:UpperCabinetLocation a obot:StandardLocation ;
     rdfs:label "Upper Cabinet Location"@en .
 
-ex:LowerCabinet a psr:Object ;
+ex:LowerCabinet a obot:Object ;
     rdfs:label "Lower Cabinet"@en ;
     rdfs:comment "Lower kitchen cabinet with handles."@en ;
 
-ex:LowerCabinetLocation a psr:StandardLocation ;
+ex:LowerCabinetLocation a obot:StandardLocation ;
     rdfs:label "Lower Cabinet Location"@en .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     rdfs:label "Kitchen Sink"@en ;
     rdfs:comment "Embedded sink in the countertop."@en ;
     dul:hasLocation ex:SinkLocation .

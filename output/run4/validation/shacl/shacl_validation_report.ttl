@@ -1,4 +1,4 @@
-@prefix ns1: <https://w3id.org/psr-action#> .
+@prefix ns1: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

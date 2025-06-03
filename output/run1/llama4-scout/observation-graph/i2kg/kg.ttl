@@ -3,63 +3,63 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Environment a psr:Environment ;
+ex:Environment a obot:Environment ;
     dul:hasComponent ex:Kitchen ;
     dul:hasComponent ex:DiningRoom .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Refrigerator ;
     dul:hasComponent ex:Counter ;
     dul:hasComponent ex:Cabinet ;
     dul:hasComponent ex:Stove .
 
-ex:DiningRoom a psr:Environment ;
+ex:DiningRoom a obot:Environment ;
     dul:hasComponent ex:Table ;
     dul:hasComponent ex:Chair .
 
-ex:Refrigerator a psr:Appliance ;
-    psr:hasAffordance soma:Opening ;
+ex:Refrigerator a obot:Appliance ;
+    obot:hasAffordance soma:Opening ;
     dul:hasLocation ex:Kitchen .
 
-ex:Counter a psr:Furniture ;
+ex:Counter a obot:Furniture ;
     dul:hasLocation ex:Kitchen .
 
-ex:Cabinet a psr:Furniture ;
+ex:Cabinet a obot:Furniture ;
     dul:hasLocation ex:Kitchen .
 
-ex:Stove a psr:Appliance ;
-    psr:hasAffordance soma:Opening ;
+ex:Stove a obot:Appliance ;
+    obot:hasAffordance soma:Opening ;
     dul:hasLocation ex:Kitchen .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
     dul:hasLocation ex:DiningRoom .
 
-ex:Chair a psr:Furniture ;
+ex:Chair a obot:Furniture ;
     dul:hasLocation ex:DiningRoom .
 
-ex:Alpen a psr:Object ;
+ex:Alpen a obot:Object ;
     dul:hasLocation ex:Counter .
 
-ex:Jello a psr:Object ;
+ex:Jello a obot:Object ;
     dul:hasLocation ex:Counter .
 
-ex:Evian a psr:Object ;
+ex:Evian a obot:Object ;
     dul:hasLocation ex:Counter .
 
-ex:Orange a psr:Object ;
+ex:Orange a obot:Object ;
     dul:hasLocation ex:Table .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
     dul:hasLocation ex:Table .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     dul:hasLocation ex:Table .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
     dul:hasLocation ex:Counter .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:Stove .

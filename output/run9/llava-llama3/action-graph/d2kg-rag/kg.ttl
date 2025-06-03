@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,95 +8,95 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "Identify misplaced items"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:table .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:table .
 
-ex:table a psr:Component ;
+ex:table a obot:Component ;
     rdfs:label "Dining table"@en .
 
 ex:action2 a dul:Action ;
     rdfs:label "Pick up packaged food product"@en ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:actsOn ex:packagedFood ;
-    psr:precedes ex:action3 .
+    obot:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:packagedFood ;
+    obot:precedes ex:action3 .
 
-ex:packagedFood a psr:Component ;
+ex:packagedFood a obot:Component ;
     rdfs:label "Packaged food product"@en .
 
 ex:action3 a dul:Action ;
     rdfs:label "Put down packaged food product in cabinet"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cabinet ;
-    psr:follows ex:action2 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cabinet ;
+    obot:follows ex:action2 .
 
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
     rdfs:label "Cabinet"@en .
 
 ex:action4 a dul:Action ;
     rdfs:label "Pick up plastic bottle"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:plasticBottle ;
-    psr:precedes ex:action5 .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:plasticBottle ;
+    obot:precedes ex:action5 .
 
-ex:plasticBottle a psr:Component ;
+ex:plasticBottle a obot:Component ;
     rdfs:label "Plastic bottle"@en .
 
 ex:action5 a dul:Action ;
     rdfs:label "Put down plastic bottle in cabinet"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cabinet ;
-    psr:follows ex:action4 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cabinet ;
+    obot:follows ex:action4 .
 
 ex:action6 a dul:Action ;
     rdfs:label "Identify items on counter"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:counter .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:counter .
 
-ex:counter a psr:Component ;
+ex:counter a obot:Component ;
     rdfs:label "Kitchen counter"@en .
 
 ex:action7 a dul:Action ;
     rdfs:label "Pick up cup"@en ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:actsOn ex:cup ;
-    psr:precedes ex:action8 .
+    obot:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:cup ;
+    obot:precedes ex:action8 .
 
-ex:cup a psr:Component ;
+ex:cup a obot:Component ;
     rdfs:label "Cup"@en .
 
 ex:action8 a dul:Action ;
     rdfs:label "Put down cup in cabinet"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cabinet ;
-    psr:follows ex:action7 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cabinet ;
+    obot:follows ex:action7 .
 
 ex:action9 a dul:Action ;
     rdfs:label "Pick up food item"@en ;
-    psr:isAffordedBy soma:Grasping ;
-    psr:actsOn ex:foodItem ;
-    psr:precedes ex:action10 .
+    obot:isAffordedBy soma:Grasping ;
+    obot:actsOn ex:foodItem ;
+    obot:precedes ex:action10 .
 
-ex:foodItem a psr:Component ;
+ex:foodItem a obot:Component ;
     rdfs:label "Food item"@en .
 
 ex:action10 a dul:Action ;
     rdfs:label "Put down food item in cabinet"@en ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cabinet ;
-    psr:follows ex:action9 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cabinet ;
+    obot:follows ex:action9 .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1 ;
-    psr:hasAction ex:action2 ;
-    psr:hasAction ex:action3 ;
-    psr:hasAction ex:action4 ;
-    psr:hasAction ex:action5 ;
-    psr:hasAction ex:action6 ;
-    psr:hasAction ex:action7 ;
-    psr:hasAction ex:action8 ;
-    psr:hasAction ex:action9 ;
-    psr:hasAction ex:action10 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1 ;
+    obot:hasAction ex:action2 ;
+    obot:hasAction ex:action3 ;
+    obot:hasAction ex:action4 ;
+    obot:hasAction ex:action5 ;
+    obot:hasAction ex:action6 ;
+    obot:hasAction ex:action7 ;
+    obot:hasAction ex:action8 ;
+    obot:hasAction ex:action9 ;
+    obot:hasAction ex:action10 .
 
-ex:instruction a psr:Instruction ;
-    psr:hasWorkflow ex:workflow ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en .
+ex:instruction a obot:Instruction ;
+    obot:hasWorkflow ex:workflow ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en .

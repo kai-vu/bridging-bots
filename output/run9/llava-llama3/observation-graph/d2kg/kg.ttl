@@ -3,76 +3,76 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:kitchen a psr:Environment .
-ex:diningTable a psr:Furniture ;
+ex:kitchen a obot:Environment .
+ex:diningTable a obot:Furniture ;
     dul:hasLocation ex:diningTableLocation .
-ex:diningTableLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:floor .
-ex:floor a psr:Component .
+ex:diningTableLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:floor .
+ex:floor a obot:Component .
 
-ex:fridge a psr:Appliance ;
+ex:fridge a obot:Appliance ;
     dul:hasLocation ex:fridgeLocation .
-ex:fridgeLocation a psr:CurrentLocation ;
+ex:fridgeLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:kitchenCounter a psr:Component ;
+ex:kitchenCounter a obot:Component ;
     dul:hasLocation ex:kitchenCounterLocation .
-ex:kitchenCounterLocation a psr:CurrentLocation ;
+ex:kitchenCounterLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
-ex:microWave a psr:Appliance ;
+ex:microWave a obot:Appliance ;
     dul:hasLocation ex:microWaveLocation .
-ex:microWaveLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:kitchenCounter .
+ex:microWaveLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:kitchenCounter .
 
-ex:sink a psr:Component ;
+ex:sink a obot:Component ;
     dul:hasLocation ex:sinkLocation .
-ex:sinkLocation a psr:CurrentLocation ;
+ex:sinkLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
     dul:hasLocation ex:cabinetLocation .
-ex:cabinetLocation a psr:CurrentLocation ;
+ex:cabinetLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:window a psr:Component ;
+ex:window a obot:Component ;
     dul:hasLocation ex:windowLocation .
-ex:windowLocation a psr:CurrentLocation ;
+ex:windowLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:packagedFood a psr:Object ;
+ex:packagedFood a obot:Object ;
     dul:hasLocation ex:foodLocation .
-ex:foodLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:diningTable .
+ex:foodLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:diningTable .
 
-ex:plasticBottle a psr:Object ;
+ex:plasticBottle a obot:Object ;
     dul:hasLocation ex:bottleLocation .
-ex:bottleLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:diningTable .
+ex:bottleLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:diningTable .
 
-ex:cup a psr:Object ;
+ex:cup a obot:Object ;
     dul:hasLocation ex:cupLocation .
-ex:cupLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:kitchenCounter .
+ex:cupLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:kitchenCounter .
 
-ex:diningTable a psr:Component ;
-    psr:hasAffordance soma:Grasping .
-ex:fridge a psr:Component ;
-    psr:hasAffordance soma:Opening .
-ex:fridge a psr:Component ;
-    psr:hasAffordance soma:Closing .
-ex:kitchenCounter a psr:Component ;
-    psr:hasAffordance soma:Pulling .
-ex:microWave a psr:Component ;
-    psr:hasAffordance soma:Pushing .
-ex:sink a psr:Component ;
-    psr:hasAffordance soma:Holding .
-ex:window a psr:Component ;
-    psr:hasAffordance soma:Opening .
-ex:window a psr:Component ;
-    psr:hasAffordance soma:Closing .
+ex:diningTable a obot:Component ;
+    obot:hasAffordance soma:Grasping .
+ex:fridge a obot:Component ;
+    obot:hasAffordance soma:Opening .
+ex:fridge a obot:Component ;
+    obot:hasAffordance soma:Closing .
+ex:kitchenCounter a obot:Component ;
+    obot:hasAffordance soma:Pulling .
+ex:microWave a obot:Component ;
+    obot:hasAffordance soma:Pushing .
+ex:sink a obot:Component ;
+    obot:hasAffordance soma:Holding .
+ex:window a obot:Component ;
+    obot:hasAffordance soma:Opening .
+ex:window a obot:Component ;
+    obot:hasAffordance soma:Closing .
 
 ex:kitchen dul:hasComponent ex:diningTable .
 ex:kitchen dul:hasComponent ex:fridge .

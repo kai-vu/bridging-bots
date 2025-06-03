@@ -1,35 +1,35 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:kitchen a psr:Environment .
-ex:diningTable a psr:Component ;
+ex:kitchen a obot:Environment .
+ex:diningTable a obot:Component ;
     rdfs:label "Dining Table"@en .
-ex:refrigerator a psr:Component ;
+ex:refrigerator a obot:Component ;
     rdfs:label "Refrigerator"@en .
-ex:microWaveOven a psr:Component ;
+ex:microWaveOven a obot:Component ;
     rdfs:label "Micro Wave Oven"@en .
-ex:toaster a psr:Component ;
+ex:toaster a obot:Component ;
     rdfs:label "Toaster"@en .
-ex:sink a psr:Component ;
+ex:sink a obot:Component ;
     rdfs:label "Sink"@en .
-ex:window a psr:Component ;
+ex:window a obot:Component ;
     rdfs:label "Window"@en .
-ex:kitchenCounter a psr:Component ;
+ex:kitchenCounter a obot:Component ;
     rdfs:label "Kitchen Counter"@en .
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
     rdfs:label "Cabinet"@en .
-ex:packagedFoodProduct a psr:Component ;
+ex:packagedFoodProduct a obot:Component ;
     rdfs:label "Packaged Food Product"@en .
-ex:plasticBottle a psr:Component ;
+ex:plasticBottle a obot:Component ;
     rdfs:label "Plastic Bottle"@en .
-ex:cup a psr:Component ;
+ex:cup a obot:Component ;
     rdfs:label "Cup"@en .
-ex:foodItem a psr:Component ;
+ex:foodItem a obot:Component ;
     rdfs:label "Food Item"@en .
 
 ex:kitchen dul:hasComponent ex:diningTable .

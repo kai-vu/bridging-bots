@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,56 +8,56 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "Identify misplaced items"@en ;
-    psr:actsOn ex:miscItems ;
-    psr:isAffordedBy soma:Grasping .
+    obot:actsOn ex:miscItems ;
+    obot:isAffordedBy soma:Grasping .
 
-ex:miscItems a psr:Component ;
+ex:miscItems a obot:Component ;
     rdfs:label "Miscellaneous items"@en .
 
 ex:action2 a dul:Action ;
     rdfs:label "Pick up misplaced items"@en ;
-    psr:actsOn ex:miscItems ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:action3 .
+    obot:actsOn ex:miscItems ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:action3 .
 
 ex:action3 a dul:Action ;
     rdfs:label "Put down items in standard storage locations"@en ;
-    psr:actsOn ex:storageLocations ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows ex:action2 .
+    obot:actsOn ex:storageLocations ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows ex:action2 .
 
-ex:storageLocations a psr:Component ;
+ex:storageLocations a obot:Component ;
     rdfs:label "Standard storage locations"@en .
 
 ex:action4 a dul:Action ;
     rdfs:label "Open cabinets"@en ;
-    psr:actsOn ex:cabinets ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes ex:action5 .
+    obot:actsOn ex:cabinets ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes ex:action5 .
 
-ex:cabinets a psr:Component ;
+ex:cabinets a obot:Component ;
     rdfs:label "Cabinets"@en .
 
 ex:action5 a dul:Action ;
     rdfs:label "Place items in cabinets"@en ;
-    psr:actsOn ex:cabinets ;
-    psr:isAffordedBy soma:Pushing ;
-    psr:follows ex:action4 .
+    obot:actsOn ex:cabinets ;
+    obot:isAffordedBy soma:Pushing ;
+    obot:follows ex:action4 .
 
 ex:action6 a dul:Action ;
     rdfs:label "Close cabinets"@en ;
-    psr:actsOn ex:cabinets ;
-    psr:isAffordedBy soma:Closing ;
-    psr:follows ex:action5 .
+    obot:actsOn ex:cabinets ;
+    obot:isAffordedBy soma:Closing ;
+    obot:follows ex:action5 .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1 ;
-    psr:hasAction ex:action2 ;
-    psr:hasAction ex:action3 ;
-    psr:hasAction ex:action4 ;
-    psr:hasAction ex:action5 ;
-    psr:hasAction ex:action6 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1 ;
+    obot:hasAction ex:action2 ;
+    obot:hasAction ex:action3 ;
+    obot:hasAction ex:action4 ;
+    obot:hasAction ex:action5 ;
+    obot:hasAction ex:action6 .
 
-ex:instruction a psr:Instruction ;
-    psr:hasWorkflow ex:workflow ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en .
+ex:instruction a obot:Instruction ;
+    obot:hasWorkflow ex:workflow ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en .

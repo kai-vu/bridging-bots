@@ -11,20 +11,20 @@
             sh:resultMessage "Node ex:PickUpMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpMisplacedItem1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
@@ -34,12 +34,12 @@
             sh:resultMessage "Node ex:PickUpMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpMisplacedItem2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
@@ -49,28 +49,28 @@
             sh:resultMessage "Node ex:PutAwayMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutAwayMisplacedItem1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpMisplacedItem2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
@@ -80,12 +80,12 @@
             sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/IdentifyMisplacedItems> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
@@ -95,12 +95,12 @@
             sh:resultMessage "Node ex:PutAwayMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutAwayMisplacedItem2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutAwayMisplacedItem2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
@@ -111,7 +111,7 @@
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
             sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
@@ -121,12 +121,12 @@
             sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/IdentifyMisplacedItems> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
             sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
@@ -134,7 +134,7 @@
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
             sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
@@ -142,7 +142,7 @@
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
             sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
@@ -152,30 +152,30 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenWorkflow->psr:hasAction" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultMessage "Less than 1 values on ex:RestoreKitchenWorkflow->obot:hasAction" ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
             sh:sourceShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
                     sh:minCount 1 ;
-                    sh:path <https://w3id.org/psr-action#hasAction> ] ],
+                    sh:path <https://w3id.org/OntoBOT#hasAction> ] ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenInstruction> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->psr:hasWorkflow" ;
-            sh:resultPath <https://w3id.org/psr-action#hasWorkflow> ;
+            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->obot:hasWorkflow" ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasWorkflow> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape [ sh:class <https://w3id.org/psr-action#Workflow> ;
+            sh:sourceShape [ sh:class <https://w3id.org/OntoBOT#Workflow> ;
                     sh:minCount 1 ;
-                    sh:path <https://w3id.org/psr-action#hasWorkflow> ] ],
+                    sh:path <https://w3id.org/OntoBOT#hasWorkflow> ] ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/RestoreKitchenInstruction> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->psr:hasNaturalLanguage" ;
-            sh:resultPath <https://w3id.org/psr-action#hasNaturalLanguage> ;
+            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->obot:hasNaturalLanguage" ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasNaturalLanguage> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
             sh:sourceShape [ sh:minCount 1 ;
-                    sh:path <https://w3id.org/psr-action#hasNaturalLanguage> ] ] .
+                    sh:path <https://w3id.org/OntoBOT#hasNaturalLanguage> ] ] .
 
 [] a sh:ValidationReport ;
     sh:conforms false ;
@@ -184,12 +184,12 @@
             sh:resultMessage "Node ex:Action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action10> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -199,28 +199,28 @@
             sh:resultMessage "Node ex:Action28 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action28> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action19> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Mug_Orange> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Bottle_Evian> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -230,19 +230,19 @@
             sh:resultMessage "Node ex:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action23> ;
             sh:resultMessage "Node ex:Action23 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action23> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action12> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -252,12 +252,12 @@
             sh:resultMessage "Node ex:Action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action11> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -267,91 +267,91 @@
             sh:resultMessage "Node ex:Action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action12> ;
             sh:resultMessage "Node ex:Action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action12> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action26> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action15> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Box_RiceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action23> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Jar_AdditionalJam> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action20> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Jar_BonneMaman> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action18> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Mug_Orange> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action13> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -361,35 +361,35 @@
             sh:resultMessage "Node ex:Action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action10> ;
             sh:resultMessage "Node ex:Action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action10> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action19> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action16> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Box_Chucky> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action24> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -399,34 +399,34 @@
             sh:resultMessage "Node ex:Action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action14> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action24> ;
             sh:resultMessage "Node ex:Action24 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action24> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action22> ;
             sh:resultMessage "Node ex:Action22 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action22> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action16> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -436,27 +436,27 @@
             sh:resultMessage "Node ex:Action19 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action19> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action16> ;
             sh:resultMessage "Node ex:Action16 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action16> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action13> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -466,44 +466,44 @@
             sh:resultMessage "Node ex:Action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action15> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Bottle_Evian> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action25> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Pitcher_Clear> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action27> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/WineGlass> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action18> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -513,51 +513,51 @@
             sh:resultMessage "Node ex:Action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action11> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action21> ;
             sh:resultMessage "Node ex:Action21 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action21> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Jar_BonneMaman> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action17> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Box_Chucky> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action22> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -567,12 +567,12 @@
             sh:resultMessage "Node ex:Action20 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action20> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action21> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -582,19 +582,19 @@
             sh:resultMessage "Node ex:Action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action9> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action8> ;
             sh:resultMessage "Node ex:Action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action14> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -604,52 +604,52 @@
             sh:resultMessage "Node ex:Action27 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action27> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action21> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action17> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action25> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Jar_AdditionalJam> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action26> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -659,20 +659,20 @@
             sh:resultMessage "Node ex:Action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action24> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -682,35 +682,35 @@
             sh:resultMessage "Node ex:Action25 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action25> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action15> ;
             sh:resultMessage "Node ex:Action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action15> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action12> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action28> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action20> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -720,28 +720,28 @@
             sh:resultMessage "Node ex:Action17 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action17> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action11> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action22> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
@@ -751,35 +751,35 @@
             sh:resultMessage "Node ex:Action18 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action18> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action13> ;
             sh:resultMessage "Node ex:Action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action13> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action23> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Box_Shortbread> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action14> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
             sh:value <http://example.org/data/Box_RiceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Action27> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
@@ -789,7 +789,7 @@
             sh:resultMessage "Node ex:Action26 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/Action26> ] .
 
 [] a sh:ValidationReport ;
@@ -799,8 +799,8 @@
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -810,20 +810,20 @@
             sh:resultMessage "Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/plasticBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -833,20 +833,20 @@
             sh:resultMessage "Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action15> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -856,49 +856,49 @@
             sh:resultMessage "Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action1> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
             sh:resultMessage "Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action13> ;
             sh:resultMessage "Node ex:action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action13> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action11> ;
             sh:resultMessage "Node ex:action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action11> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/foodItem> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -908,12 +908,12 @@
             sh:resultMessage "Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action9> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -923,36 +923,36 @@
             sh:resultMessage "Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action10> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action11> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
@@ -962,12 +962,12 @@
             sh:resultMessage "Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
@@ -977,52 +977,52 @@
             sh:resultMessage "Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/foodItem> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/packagedFoodProduct> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/plasticBottle> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/cup> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -1032,12 +1032,12 @@
             sh:resultMessage "Node ex:action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action15> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
@@ -1047,12 +1047,12 @@
             sh:resultMessage "Node ex:action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action12> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action12> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -1062,12 +1062,12 @@
             sh:resultMessage "Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
@@ -1077,35 +1077,35 @@
             sh:resultMessage "Node ex:action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action14> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
             sh:resultMessage "Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
             sh:value <http://example.org/data/packagedFoodProduct> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
@@ -1118,28 +1118,28 @@
             sh:resultMessage "Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action5> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
@@ -1149,12 +1149,12 @@
             sh:resultMessage "Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action8> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
@@ -1164,36 +1164,36 @@
             sh:resultMessage "Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action3> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
@@ -1203,12 +1203,12 @@
             sh:resultMessage "Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action10> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
@@ -1218,12 +1218,12 @@
             sh:resultMessage "Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action4> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
@@ -1233,170 +1233,170 @@
             sh:resultMessage "Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action7> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action6> ;
             sh:resultMessage "Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action6> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action2> ;
             sh:resultMessage "Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action2> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action9> ;
             sh:resultMessage "Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action9> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/action1> ;
             sh:resultMessage "Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/action1> ] .
 
 [] a sh:ValidationReport ;
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action7> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action7> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object4> ],
+            sh:value <https://w3id.org/OntoBOT#Object4> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action8> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action8> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object4> ],
+            sh:value <https://w3id.org/OntoBOT#Object4> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action7> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action7> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action2> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action2> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action3> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action3> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object2> ],
+            sh:value <https://w3id.org/OntoBOT#Object2> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action1> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action1> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object1> ],
+            sh:value <https://w3id.org/OntoBOT#Object1> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action4> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action4> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object2> ],
+            sh:value <https://w3id.org/OntoBOT#Object2> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action1> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action1> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action4> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action4> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action3> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action3> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action6> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action6> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action5> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action5> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object3> ],
+            sh:value <https://w3id.org/OntoBOT#Object3> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action6> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action6> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object3> ],
+            sh:value <https://w3id.org/OntoBOT#Object3> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action8> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action8> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action1> ;
-            sh:resultMessage "Node psr:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action1> ;
+            sh:resultMessage "Node obot:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
-            sh:value <https://w3id.org/psr-action#Action1> ],
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
+            sh:value <https://w3id.org/OntoBOT#Action1> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action2> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action2> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/psr-action#Object1> ],
+            sh:value <https://w3id.org/OntoBOT#Object1> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/psr-action#Action5> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/OntoBOT#Action5> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
@@ -1409,27 +1409,27 @@
             sh:resultMessage "Node ex:PickUpBoxOfRiceBubbles must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpBoxOfRiceBubbles> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
             sh:resultMessage "Node ex:PutDownJarOfJamInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownJarOfJamInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownAluminumFoilInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/aluminumFoil> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownYellowMugInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
@@ -1439,21 +1439,21 @@
             sh:resultMessage "Node ex:PutDownAluminumFoilInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownAluminumFoilInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/Workflow> ;
-            sh:resultMessage "Less than 1 values on ex:Workflow->psr:hasAction" ;
-            sh:resultPath <https://w3id.org/psr-action#hasAction> ;
+            sh:resultMessage "Less than 1 values on ex:Workflow->obot:hasAction" ;
+            sh:resultPath <https://w3id.org/OntoBOT#hasAction> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
             sh:sourceShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
                     sh:minCount 1 ;
-                    sh:path <https://w3id.org/psr-action#hasAction> ] ],
+                    sh:path <https://w3id.org/OntoBOT#hasAction> ] ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1463,43 +1463,43 @@
             sh:resultMessage "Node ex:PutDownPlateInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownPlateInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
             sh:resultMessage "Node ex:PutDownBoxOfRiceBubblesInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownYellowMugInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/yellowMug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPlateFromCounter> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/plate> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
@@ -1509,12 +1509,12 @@
             sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/IdentifyMisplacedItems> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarOfJam> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1524,27 +1524,27 @@
             sh:resultMessage "Node ex:PutDownBoxOfShortbreadInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
             sh:resultMessage "Node ex:PickUpBoxOfShortbread must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpBoxOfShortbread> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1554,12 +1554,12 @@
             sh:resultMessage "Node ex:PutDownBoxOfJelloInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownBoxOfJelloInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfRiceBubbles> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1569,35 +1569,35 @@
             sh:resultMessage "Node ex:PutDownYellowMugInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PutDownYellowMugInCabinet> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpYellowMug> ;
             sh:resultMessage "Node ex:PickUpYellowMug must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpYellowMug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfJello> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpJarOfJam> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfRiceBubbles> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
@@ -1607,12 +1607,12 @@
             sh:resultMessage "Node ex:PickUpBoxOfJello must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpBoxOfJello> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownAluminumFoilInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
@@ -1622,68 +1622,68 @@
             sh:resultMessage "Node ex:PickUpJarOfJam must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpJarOfJam> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfJelloInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpYellowMug> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/yellowMug> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpYellowMug> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfJelloInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/boxOfJello> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpAluminumFoil> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfJello> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/boxOfJello> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPlateInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/plate> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpAluminumFoil> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1693,36 +1693,36 @@
             sh:resultMessage "Node ex:PickUpAluminumFoil must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpAluminumFoil> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
             sh:value <http://example.org/data/boxOfShortbread> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PickUpPlateFromCounter> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownPlateInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Affordance" ;
-            sh:resultPath <https://w3id.org/psr-action#isAffordedBy> ;
+            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultPath <https://w3id.org/OntoBOT#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
@@ -1732,12 +1732,12 @@
             sh:resultMessage "Node ex:PickUpPlateFromCounter must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/psr-action#ActionShape> ;
+            sh:sourceShape <https://w3id.org/OntoBOT#ActionShape> ;
             sh:value <http://example.org/data/PickUpPlateFromCounter> ],
         [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ;
-            sh:resultMessage "Value does not have class psr:Component" ;
-            sh:resultPath <https://w3id.org/psr-action#actsOn> ;
+            sh:resultMessage "Value does not have class obot:Component" ;
+            sh:resultPath <https://w3id.org/OntoBOT#actsOn> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:ClassConstraintComponent ;
             sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
@@ -1749,45 +1749,45 @@
 [] a sh:ValidationReport ;
     sh:conforms true .
 
-_:n656b9316b9824af98eec7e1a138ba0bbb11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:n656b9316b9824af98eec7e1a138ba0bbb11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 
-_:n656b9316b9824af98eec7e1a138ba0bbb12 sh:class <https://w3id.org/psr-action#Component> ;
+_:n656b9316b9824af98eec7e1a138ba0bbb12 sh:class <https://w3id.org/OntoBOT#Component> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#actsOn> .
+    sh:path <https://w3id.org/OntoBOT#actsOn> .
 
 _:n840f3cbb38114a06b9a423096dbe15d1b3 sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#hasAction> .
+    sh:path <https://w3id.org/OntoBOT#hasAction> .
 
-_:n01cd78488b834dad94897482d42bd5d1b11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:n01cd78488b834dad94897482d42bd5d1b11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 
-_:n01cd78488b834dad94897482d42bd5d1b12 sh:class <https://w3id.org/psr-action#Component> ;
+_:n01cd78488b834dad94897482d42bd5d1b12 sh:class <https://w3id.org/OntoBOT#Component> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#actsOn> .
+    sh:path <https://w3id.org/OntoBOT#actsOn> .
 
-_:nc7b30f763c4947f1913af8f8999fd72cb11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:nc7b30f763c4947f1913af8f8999fd72cb11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 
-_:n6a193066078a418296c5d8d9fbbf4d88b12 sh:class <https://w3id.org/psr-action#Component> ;
+_:n6a193066078a418296c5d8d9fbbf4d88b12 sh:class <https://w3id.org/OntoBOT#Component> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#actsOn> .
+    sh:path <https://w3id.org/OntoBOT#actsOn> .
 
-_:n7e556a7facf14b80ae229d18d9ddf2b1b11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:n7e556a7facf14b80ae229d18d9ddf2b1b11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 
-_:n7e556a7facf14b80ae229d18d9ddf2b1b12 sh:class <https://w3id.org/psr-action#Component> ;
+_:n7e556a7facf14b80ae229d18d9ddf2b1b12 sh:class <https://w3id.org/OntoBOT#Component> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#actsOn> .
+    sh:path <https://w3id.org/OntoBOT#actsOn> .
 
-_:n6a193066078a418296c5d8d9fbbf4d88b11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:n6a193066078a418296c5d8d9fbbf4d88b11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 
-_:n6cd6684660864bc184fd68915d3f3ef5b12 sh:class <https://w3id.org/psr-action#Component> ;
+_:n6cd6684660864bc184fd68915d3f3ef5b12 sh:class <https://w3id.org/OntoBOT#Component> ;
     sh:minCount 1 ;
-    sh:path <https://w3id.org/psr-action#actsOn> .
+    sh:path <https://w3id.org/OntoBOT#actsOn> .
 
-_:n6cd6684660864bc184fd68915d3f3ef5b11 sh:class <https://w3id.org/psr-action#Affordance> ;
-    sh:path <https://w3id.org/psr-action#isAffordedBy> .
+_:n6cd6684660864bc184fd68915d3f3ef5b11 sh:class <https://w3id.org/OntoBOT#Affordance> ;
+    sh:path <https://w3id.org/OntoBOT#isAffordedBy> .
 

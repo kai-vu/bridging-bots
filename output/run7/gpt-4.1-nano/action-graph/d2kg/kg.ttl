@@ -5,101 +5,101 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
 # Step 1: Identify all misplaced items
-ex:IdentifyMisplacedItems a psr:Action ;
+ex:IdentifyMisplacedItems a obot:Action ;
     rdfs:label "Identify all misplaced items in the kitchen."@en ;
-    psr:actsOn ex:BoxOfJello, ex:CartonOfAlpenSalz, ex:RiceBubblesPackaging, ex:StrawberryJamJar, ex:PlasticWaterBottle, ex:Pitcher, ex:WineGlass ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:BoxOfJello, ex:CartonOfAlpenSalz, ex:RiceBubblesPackaging, ex:StrawberryJamJar, ex:PlasticWaterBottle, ex:Pitcher, ex:WineGlass ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpBoxOfJello a psr:Action ;
+ex:PickUpBoxOfJello a obot:Action ;
     rdfs:label "Picking up the box of Jello pudding mix."@en ;
-    psr:actsOn ex:BoxOfJello ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:BoxOfJello ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpCartonOfAlpenSalz a psr:Action ;
+ex:PickUpCartonOfAlpenSalz a obot:Action ;
     rdfs:label "Picking up the carton of Alpen Salz."@en ;
-    psr:actsOn ex:CartonOfAlpenSalz ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:CartonOfAlpenSalz ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpRiceBubblesPackaging a psr:Action ;
+ex:PickUpRiceBubblesPackaging a obot:Action ;
     rdfs:label "Picking up the packaging of rice bubbles."@en ;
-    psr:actsOn ex:RiceBubblesPackaging ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:RiceBubblesPackaging ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpStrawberryJamJar a psr:Action ;
+ex:PickUpStrawberryJamJar a obot:Action ;
     rdfs:label "Picking up the small jar of strawberry jam."@en ;
-    psr:actsOn ex:StrawberryJamJar ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:StrawberryJamJar ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpPlasticWaterBottle a psr:Action ;
+ex:PickUpPlasticWaterBottle a obot:Action ;
     rdfs:label "Picking up the plastic water bottle."@en ;
-    psr:actsOn ex:PlasticWaterBottle ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:PlasticWaterBottle ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpPitcher a psr:Action ;
+ex:PickUpPitcher a obot:Action ;
     rdfs:label "Picking up the pitcher."@en ;
-    psr:actsOn ex:Pitcher ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Pitcher ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:PickUpWineGlass a psr:Action ;
+ex:PickUpWineGlass a obot:Action ;
     rdfs:label "Picking up the wine glass."@en ;
-    psr:actsOn ex:WineGlass ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:WineGlass ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PickingUp .
 
 # Step 2: Return items to their storage locations based on type and function
 
-ex:ReturnBoxOfJelloToStorage a psr:Action ;
+ex:ReturnBoxOfJelloToStorage a obot:Action ;
     rdfs:label "Returning the box of Jello pudding mix to its storage location."@en ;
-    psr:actsOn ex:BoxOfJello ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:BoxOfJello ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnAlpenSalzToPantry a psr:Action ;
+ex:ReturnAlpenSalzToPantry a obot:Action ;
     rdfs:label "Returning the carton of Alpen Salz to pantry storage."@en ;
-    psr:actsOn ex:CartonOfAlpenSalz ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:CartonOfAlpenSalz ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnRiceBubblesPackagingToStorage a psr:Action ;
+ex:ReturnRiceBubblesPackagingToStorage a obot:Action ;
     rdfs:label "Returning the rice bubbles packaging to its storage."@en ;
-    psr:actsOn ex:RiceBubblesPackaging ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:RiceBubblesPackaging ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnStrawberryJamJarToKitchenCabinet a psr:Action ;
+ex:ReturnStrawberryJamJarToKitchenCabinet a obot:Action ;
     rdfs:label "Returning the strawberry jam jar to the kitchen cabinet."@en ;
-    psr:actsOn ex:StrawberryJamJar ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:StrawberryJamJar ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnWaterBottleToRefrigerator a psr:Action ;
+ex:ReturnWaterBottleToRefrigerator a obot:Action ;
     rdfs:label "Returning the plastic water bottle to the refrigerator."@en ;
-    psr:actsOn ex:PlasticWaterBottle ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:PlasticWaterBottle ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnPitcherToStorage a psr:Action ;
+ex:ReturnPitcherToStorage a obot:Action ;
     rdfs:label "Returning the pitcher to the storage cabinet."@en ;
-    psr:actsOn ex:Pitcher ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Pitcher ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ReturnWineGlassToStorage a psr:Action ;
+ex:ReturnWineGlassToStorage a obot:Action ;
     rdfs:label "Returning the wine glass to the storage."@en ;
-    psr:actsOn ex:WineGlass ;
-    psr:isPerformedBy ex:RobotAgent ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:WineGlass ;
+    obot:isPerformedBy ex:RobotAgent ;
+    obot:isAffordedBy soma:PuttingDown .
 
 # Step 3: Ensure actions follow logical order and are atomic, as in sequence
 # (Sequence implied by 'precedes' property)
@@ -129,10 +129,10 @@ _:rest6 rdf:first ex:PickUpPitcher ;
 _:rest7 rdf:first ex:PickUpWineGlass ;
     rdf:rest nil .
 
-ex:DefineTaskWorkflow a psr:Workflow ;
+ex:DefineTaskWorkflow a obot:Workflow ;
     rdfs:label "Workflow for restoring kitchen to organized state"@en ;
-    psr:hasAction ex:IdentifyMisplacedItems, ex:PickUpBoxOfJello, ex:PickUpCartonOfAlpenSalz, ex:PickUpRiceBubblesPackaging, ex:PickUpStrawberryJamJar, ex:PickUpPlasticWaterBottle, ex:PickUpPitcher, ex:PickUpWineGlass, ex:ReturnBoxOfJelloToStorage, ex:ReturnAlpenSalzToPantry, ex:ReturnRiceBubblesPackagingToStorage, ex:ReturnStrawberryJamJarToKitchenCabinet, ex:ReturnWaterBottleToRefrigerator, ex:ReturnPitcherToStorage, ex:ReturnWineGlassToStorage .
+    obot:hasAction ex:IdentifyMisplacedItems, ex:PickUpBoxOfJello, ex:PickUpCartonOfAlpenSalz, ex:PickUpRiceBubblesPackaging, ex:PickUpStrawberryJamJar, ex:PickUpPlasticWaterBottle, ex:PickUpPitcher, ex:PickUpWineGlass, ex:ReturnBoxOfJelloToStorage, ex:ReturnAlpenSalzToPantry, ex:ReturnRiceBubblesPackagingToStorage, ex:ReturnStrawberryJamJarToKitchenCabinet, ex:ReturnWaterBottleToRefrigerator, ex:ReturnPitcherToStorage, ex:ReturnWineGlassToStorage .
 
-ex:AssignWorkflowToInstruction a psr:Instruction ;
+ex:AssignWorkflowToInstruction a obot:Instruction ;
     rdfs:label "Assign the workflow to the instruction"@en ;
-    psr:hasWorkflow ex:DefineTaskWorkflow .
+    obot:hasWorkflow ex:DefineTaskWorkflow .

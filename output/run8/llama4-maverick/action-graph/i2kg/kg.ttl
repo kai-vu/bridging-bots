@@ -5,67 +5,67 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 
-psr:Instruction_1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow_1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+obot:Instruction_1 a obot:Instruction ;
+    obot:hasWorkflow obot:Workflow_1 ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
 
-psr:Workflow_1 a psr:Workflow ;
-    psr:hasAction psr:Action_1, psr:Action_2, psr:Action_3, psr:Action_4, psr:Action_5, psr:Action_6, psr:Action_7, psr:Action_8 .
+obot:Workflow_1 a obot:Workflow ;
+    obot:hasAction obot:Action_1, obot:Action_2, obot:Action_3, obot:Action_4, obot:Action_5, obot:Action_6, obot:Action_7, obot:Action_8 .
 
-psr:Action_1 a dul:Action ;
+obot:Action_1 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_1 ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn obot:Object_1 ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up Object_1"@en .
-psr:Action_2 a dul:Action ;
+obot:Action_2 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_1 ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn obot:Object_1 ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down Object_1"@en ;
-    psr:follows psr:Action_1 .
-psr:Action_3 a dul:Action ;
+    obot:follows obot:Action_1 .
+obot:Action_3 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_2 ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn obot:Object_2 ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up Object_2"@en ;
-    psr:follows psr:Action_2 .
-psr:Action_4 a dul:Action ;
+    obot:follows obot:Action_2 .
+obot:Action_4 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_2 ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn obot:Object_2 ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down Object_2"@en ;
-    psr:follows psr:Action_3 .
-psr:Action_5 a dul:Action ;
+    obot:follows obot:Action_3 .
+obot:Action_5 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_3 ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn obot:Object_3 ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up Object_3"@en ;
-    psr:follows psr:Action_4 .
-psr:Action_6 a dul:Action ;
+    obot:follows obot:Action_4 .
+obot:Action_6 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_3 ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn obot:Object_3 ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put down Object_3"@en ;
-    psr:follows psr:Action_5 .
-psr:Action_7 a dul:Action ;
+    obot:follows obot:Action_5 .
+obot:Action_7 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Component_1 ;
-    psr:isAffordedBy soma:Opening ;
+    obot:actsOn obot:Component_1 ;
+    obot:isAffordedBy soma:Opening ;
     rdfs:label "Open Component_1"@en ;
-    psr:follows psr:Action_6 .
-psr:Action_8 a dul:Action ;
+    obot:follows obot:Action_6 .
+obot:Action_8 a dul:Action ;
     soma:isPerformedBy dul:Agent_1 ;
-    psr:actsOn psr:Object_1, psr:Object_2, psr:Object_3 ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn obot:Object_1, obot:Object_2, obot:Object_3 ;
+    obot:isAffordedBy soma:PuttingDown ;
     rdfs:label "Put away objects"@en ;
-    psr:follows psr:Action_7 .
+    obot:follows obot:Action_7 .
 
 dul:Agent_1 a dul:Agent .
 
-psr:Object_1 a psr:Object .
-psr:Object_2 a psr:Object .
-psr:Object_3 a psr:Object .
+obot:Object_1 a obot:Object .
+obot:Object_2 a obot:Object .
+obot:Object_3 a obot:Object .
 
-psr:Component_1 a psr:Component .
+obot:Component_1 a obot:Component .

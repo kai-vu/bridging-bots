@@ -5,60 +5,60 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 
-psr:RestoreKitchenOrder_Instruction a psr:Instruction ;
-    psr:hasWorkflow psr:RestoreKitchenOrder_Workflow .
+obot:RestoreKitchenOrder_Instruction a obot:Instruction ;
+    obot:hasWorkflow obot:RestoreKitchenOrder_Workflow .
 
-psr:RestoreKitchenOrder_Workflow a psr:Workflow ;
-    psr:hasAction psr:PickUp_Bottle_Action ;
-    psr:hasAction psr:PutAway_Bottle_Action ;
-    psr:hasAction psr:PickUp_Box_Action ;
-    psr:hasAction psr:PutAway_Box_Action ;
-    psr:hasAction psr:PickUp_Jar_Action ;
-    psr:hasAction psr:PutAway_Jar_Action .
+obot:RestoreKitchenOrder_Workflow a obot:Workflow ;
+    obot:hasAction obot:PickUp_Bottle_Action ;
+    obot:hasAction obot:PutAway_Bottle_Action ;
+    obot:hasAction obot:PickUp_Box_Action ;
+    obot:hasAction obot:PutAway_Box_Action ;
+    obot:hasAction obot:PickUp_Jar_Action ;
+    obot:hasAction obot:PutAway_Jar_Action .
 
-psr:PickUp_Bottle_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Bottle_Object ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes psr:PutAway_Bottle_Action .
+obot:PickUp_Bottle_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Bottle_Object ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes obot:PutAway_Bottle_Action .
 
-psr:PutAway_Bottle_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Bottle_Object ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:PickUp_Bottle_Action .
+obot:PutAway_Bottle_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Bottle_Object ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:PickUp_Bottle_Action .
 
-psr:PickUp_Box_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Box_Object ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes psr:PutAway_Box_Action .
+obot:PickUp_Box_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Box_Object ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes obot:PutAway_Box_Action .
 
-psr:PutAway_Box_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Box_Object ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:PickUp_Box_Action .
+obot:PutAway_Box_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Box_Object ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:PickUp_Box_Action .
 
-psr:PickUp_Jar_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Jar_Object ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes psr:PutAway_Jar_Action .
+obot:PickUp_Jar_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Jar_Object ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes obot:PutAway_Jar_Action .
 
-psr:PutAway_Jar_Action a dul:Action ;
-    soma:isPerformedBy psr:Robot_Agent ;
-    psr:actsOn psr:Jar_Object ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:follows psr:PickUp_Jar_Action .
+obot:PutAway_Jar_Action a dul:Action ;
+    soma:isPerformedBy obot:Robot_Agent ;
+    obot:actsOn obot:Jar_Object ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:follows obot:PickUp_Jar_Action .
 
-psr:Robot_Agent a dul:Agent .
+obot:Robot_Agent a dul:Agent .
 
-psr:Bottle_Object a psr:Object .
-psr:Box_Object a psr:Object .
-psr:Jar_Object a psr:Object .
+obot:Bottle_Object a obot:Object .
+obot:Box_Object a obot:Object .
+obot:Jar_Object a obot:Object .
 
-soma:PickingUp a psr:Affordance .
-soma:PuttingDown a psr:Affordance .
+soma:PickingUp a obot:Affordance .
+soma:PuttingDown a obot:Affordance .

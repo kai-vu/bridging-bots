@@ -3,10 +3,10 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnv a psr:Environment ;
+ex:KitchenEnv a obot:Environment ;
    dul:hasComponent ex:Fridge,
                     ex:Countertop,
                     ex:WallCabinet,
@@ -30,84 +30,84 @@ ex:KitchenEnv a psr:Environment ;
                     ex:Glass,
                     ex:TeaBox .
 
-ex:Fridge a psr:Appliance ;
-   psr:hasAffordance soma:Opening,
+ex:Fridge a obot:Appliance ;
+   obot:hasAffordance soma:Opening,
                       soma:Closing .
 
-ex:Countertop a psr:Furniture .
+ex:Countertop a obot:Furniture .
 
-ex:WallCabinet a psr:Furniture ;
-   psr:hasAffordance soma:Opening,
+ex:WallCabinet a obot:Furniture ;
+   obot:hasAffordance soma:Opening,
                       soma:Closing .
 
-ex:LowerCabinet a psr:Furniture ;
-   psr:hasAffordance soma:Opening,
+ex:LowerCabinet a obot:Furniture ;
+   obot:hasAffordance soma:Opening,
                       soma:Closing .
 
-ex:DiningTable a psr:Furniture .
+ex:DiningTable a obot:Furniture .
 
-ex:DiningChair1 a psr:Furniture .
-ex:DiningChair2 a psr:Furniture .
-ex:DiningChair3 a psr:Furniture .
-ex:DiningChair4 a psr:Furniture .
+ex:DiningChair1 a obot:Furniture .
+ex:DiningChair2 a obot:Furniture .
+ex:DiningChair3 a obot:Furniture .
+ex:DiningChair4 a obot:Furniture .
 
-ex:JelloBox a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:JelloBox a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:StrawberryJam a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:StrawberryJam a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:AlpenSalt a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:AlpenSalt a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:ChuckyCereal a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:ChuckyCereal a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:RiceBubbles a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:RiceBubbles a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:PlateStack a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:PlateStack a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:Pot a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:Pot a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:Mug a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:Mug a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:EvianBottle a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:EvianBottle a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:FruitBowl a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:FruitBowl a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:Pitcher a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:Pitcher a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:Glass a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:Glass a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:TeaBox a psr:Object ;
-   psr:hasAffordance soma:PickingUp,
+ex:TeaBox a obot:Object ;
+   obot:hasAffordance soma:PickingUp,
                       soma:PuttingDown .
 
-ex:CountertopSurface a psr:CurrentLocation ;
-   psr:onTopOf ex:Countertop .
+ex:CountertopSurface a obot:CurrentLocation ;
+   obot:onTopOf ex:Countertop .
 
-ex:TableSurface a psr:CurrentLocation ;
-   psr:onTopOf ex:DiningTable .
+ex:TableSurface a obot:CurrentLocation ;
+   obot:onTopOf ex:DiningTable .
 
 ex:JelloBox dul:hasLocation ex:CountertopSurface .
 ex:StrawberryJam dul:hasLocation ex:CountertopSurface .

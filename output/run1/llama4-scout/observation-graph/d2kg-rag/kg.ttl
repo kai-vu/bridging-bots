@@ -1,29 +1,29 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
   rdfs:label "Kitchen"@en .
 
-ex:DiningRoom a psr:Environment ;
+ex:DiningRoom a obot:Environment ;
   rdfs:label "Dining Room"@en .
 
 ex:Kitchen a geo:sfContains ex:DiningRoom ;
   rdfs:comment "The kitchen and dining room are adjacent."@en .
 
-ex:BlackCabinets a psr:Component ;
+ex:BlackCabinets a obot:Component ;
   rdfs:label "Black Cabinets"@en ;
   ex:location ex:Kitchen .
 
-ex:BlueHandles a psr:Affordance ;
+ex:BlueHandles a obot:Affordance ;
   rdfs:label "Blue Handles"@en ;
-  psr:hasAffordance ex:BlackCabinets .
+  obot:hasAffordance ex:BlackCabinets .
 
-ex:BeigeMarbleCountertop a psr:Component ;
+ex:BeigeMarbleCountertop a obot:Component ;
   rdfs:label "Beige Marble Countertop"@en ;
   ex:location ex:Kitchen ;
   geo:sfContains ex:Sink ;
@@ -33,102 +33,102 @@ ex:BeigeMarbleCountertop a psr:Component ;
   geo:sfContains ex:RiceBubblesCereal ;
   geo:sfContains ex:Jello .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
   rdfs:label "Sink"@en ;
   ex:location ex:BeigeMarbleCountertop .
 
-ex:SilverFaucet a psr:Component ;
+ex:SilverFaucet a obot:Component ;
   rdfs:label "Silver Faucet"@en ;
   ex:location ex:Sink .
 
-ex:Pot a psr:Component ;
+ex:Pot a obot:Component ;
   rdfs:label "Pot"@en ;
   ex:location ex:BeigeMarbleCountertop .
 
-ex:Stove a psr:Component ;
+ex:Stove a obot:Component ;
   rdfs:label "Stove"@en ;
   ex:location ex:Kitchen ;
   geo:sfContains ex:Pot .
 
-ex:YellowCup a psr:Component ;
+ex:YellowCup a obot:Component ;
   rdfs:label "Yellow Cup"@en ;
   ex:location ex:BeigeMarbleCountertop .
 
-ex:RedAndWhiteJar a psr:Component ;
+ex:RedAndWhiteJar a obot:Component ;
   rdfs:label "Red and White Jar"@en ;
   ex:location ex:BeigeMarbleCountertop ;
   rdfs:label "Chunky Monkey"@en .
 
-ex:RiceBubblesCereal a psr:Component ;
+ex:RiceBubblesCereal a obot:Component ;
   rdfs:label "Rice Bubbles Cereal"@en ;
   ex:location ex:BeigeMarbleCountertop .
 
-ex:Jello a psr:Component ;
+ex:Jello a obot:Component ;
   rdfs:label "Jello"@en ;
   ex:location ex:BeigeMarbleCountertop .
 
-ex:WoodenFrame a psr:Component ;
+ex:WoodenFrame a obot:Component ;
   rdfs:label "Wooden Frame"@en ;
   ex:location ex:Kitchen .
 
-ex:BrownRangeHood a psr:Component ;
+ex:BrownRangeHood a obot:Component ;
   rdfs:label "Brown Range Hood"@en ;
   ex:location ex:Kitchen .
 
-ex:Refrigerator a psr:Component ;
+ex:Refrigerator a obot:Component ;
   rdfs:label "Refrigerator"@en ;
   ex:location ex:Kitchen ;
-  psr:onTopOf ex:BlackCabinets .
+  obot:onTopOf ex:BlackCabinets .
 
-ex:WhiteWalls a psr:Component ;
+ex:WhiteWalls a obot:Component ;
   rdfs:label "White Walls"@en ;
   ex:location ex:Kitchen .
 
-ex:DarkWoodParquetFloor a psr:Component ;
+ex:DarkWoodParquetFloor a obot:Component ;
   rdfs:label "Dark Wood Parquet Floor"@en ;
   ex:location ex:Kitchen .
 
-ex:LightFixture a psr:Component ;
+ex:LightFixture a obot:Component ;
   rdfs:label "Light Fixture"@en ;
   ex:location ex:Kitchen .
 
-ex:WoodenTable a psr:Component ;
+ex:WoodenTable a obot:Component ;
   rdfs:label "Wooden Table"@en ;
   ex:location ex:DiningRoom .
 
-ex:WhiteChairs a psr:Component ;
+ex:WhiteChairs a obot:Component ;
   rdfs:label "White Chairs"@en ;
   ex:location ex:DiningRoom ;
-  psr:onTopOf ex:WoodenTable .
+  obot:onTopOf ex:WoodenTable .
 
-ex:BottleOfEvianWater a psr:Component ;
+ex:BottleOfEvianWater a obot:Component ;
   rdfs:label "Bottle of Evian Water"@en ;
   ex:location ex:WoodenTable .
 
-ex:CartonOfEggs a psr:Component ;
+ex:CartonOfEggs a obot:Component ;
   rdfs:label "Carton of Eggs"@en ;
   ex:location ex:WoodenTable .
 
-ex:BoxOfShortbreadCookies a psr:Component ;
+ex:BoxOfShortbreadCookies a obot:Component ;
   rdfs:label "Box of Shortbread Cookies"@en ;
   ex:location ex:WoodenTable .
 
-ex:AnotherBox a psr:Component ;
+ex:AnotherBox a obot:Component ;
   rdfs:label "Another Box"@en ;
   ex:location ex:WoodenTable .
 
-ex:Kitchen psr:hasComponent ex:BlackCabinets ;
-  ex:Kitchen psr:hasComponent ex:BeigeMarbleCountertop ;
-  ex:Kitchen psr:hasComponent ex:Refrigerator ;
-  ex:Kitchen psr:hasComponent ex:WoodenFrame ;
-  ex:Kitchen psr:hasComponent ex:BrownRangeHood ;
-  ex:Kitchen psr:hasComponent ex:WhiteWalls ;
-  ex:Kitchen psr:hasComponent ex:DarkWoodParquetFloor ;
-  ex:Kitchen psr:hasComponent ex:LightFixture .
+ex:Kitchen obot:hasComponent ex:BlackCabinets ;
+  ex:Kitchen obot:hasComponent ex:BeigeMarbleCountertop ;
+  ex:Kitchen obot:hasComponent ex:Refrigerator ;
+  ex:Kitchen obot:hasComponent ex:WoodenFrame ;
+  ex:Kitchen obot:hasComponent ex:BrownRangeHood ;
+  ex:Kitchen obot:hasComponent ex:WhiteWalls ;
+  ex:Kitchen obot:hasComponent ex:DarkWoodParquetFloor ;
+  ex:Kitchen obot:hasComponent ex:LightFixture .
 
-ex:DiningRoom psr:hasComponent ex:WoodenTable ;
-ex:DiningRoom psr:hasComponent ex:WhiteChairs ;
-ex:DiningRoom psr:hasComponent ex:BottleOfEvianWater ;
-ex:DiningRoom psr:hasComponent ex:CartonOfEggs ;
-ex:DiningRoom psr:hasComponent ex:BoxOfShortbreadCookies ;
-ex:DiningRoom psr:hasComponent ex:AnotherBox .
+ex:DiningRoom obot:hasComponent ex:WoodenTable ;
+ex:DiningRoom obot:hasComponent ex:WhiteChairs ;
+ex:DiningRoom obot:hasComponent ex:BottleOfEvianWater ;
+ex:DiningRoom obot:hasComponent ex:CartonOfEggs ;
+ex:DiningRoom obot:hasComponent ex:BoxOfShortbreadCookies ;
+ex:DiningRoom obot:hasComponent ex:AnotherBox .

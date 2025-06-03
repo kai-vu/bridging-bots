@@ -1,38 +1,38 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction .
+ex:RestoreKitchenTask a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
   rdfs:label "Identify Misplaced Items"@en ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Grasping ;
-  psr:followedBy ex:PickUpItem1Action .
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Grasping ;
+  obot:followedBy ex:PickUpItem1Action .
 
 ex:PickUpItem1Action a dul:Action ;
   rdfs:label "Pick Up Item 1"@en ;
-  psr:actsOn ex:jarOfJam ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem1Action .
+  obot:actsOn ex:jarOfJam ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem1Action .
 
 ex:PutDownItem1Action a dul:Action ;
   rdfs:label "Put Down Item 1"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:jarOfJam a psr:Object ;
+ex:jarOfJam a obot:Object ;
   rdfs:label "Jar of Jam"@en .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
   rdfs:label "Cabinet"@en .
 
 ex:IdentifyMisplacedItemsAction ex:performedBy ex:Robot .
@@ -44,186 +44,186 @@ ex:PickUpItem1Action ex:performedBy ex:Robot .
 
 ex:PutDownItem1Action ex:performedBy ex:Robot .
 
-ex:jarOfJam psr:locatedIn ex:KitchenArea .
+ex:jarOfJam obot:locatedIn ex:KitchenArea .
 
-ex:cabinet psr:locatedIn ex:KitchenArea .
+ex:cabinet obot:locatedIn ex:KitchenArea .
 
-ex:boxOfJello a psr:Object ;
+ex:boxOfJello a obot:Object ;
   rdfs:label "Box of Jello"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:boxOfAlpenSalt a psr:Object ;
+ex:boxOfAlpenSalt a obot:Object ;
   rdfs:label "Box of Alpen Salt"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:boxOfRiceBubbles a psr:Object ;
+ex:boxOfRiceBubbles a obot:Object ;
   rdfs:label "Box of Rice Bubbles"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:jarOfJam2 a psr:Object ;
+ex:jarOfJam2 a obot:Object ;
   rdfs:label "Jar of Jam 2"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:boxOfShortbreadCookies a psr:Object ;
+ex:boxOfShortbreadCookies a obot:Object ;
   rdfs:label "Box of Shortbread Cookies"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:stackOfPlates a psr:Object ;
+ex:stackOfPlates a obot:Object ;
   rdfs:label "Stack of Plates"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:bottleOfWater1 a psr:Object ;
+ex:bottleOfWater1 a obot:Object ;
   rdfs:label "Bottle of Water 1"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:bottleOfWater2 a psr:Object ;
+ex:bottleOfWater2 a obot:Object ;
   rdfs:label "Bottle of Water 2 (Milk)"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:milkBottle a psr:Object ;
+ex:milkBottle a obot:Object ;
   rdfs:label "Milk Bottle"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:cookbook a psr:Object ;
+ex:cookbook a obot:Object ;
   rdfs:label "Cookbook"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:puzzleBox a psr:Object ;
+ex:puzzleBox a obot:Object ;
   rdfs:label "Puzzle Box"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:diningArea a psr:Component ;
+ex:diningArea a obot:Component ;
   rdfs:label "Dining Area"@en .
 
 ex:PickUpItem2Action a dul:Action ;
   rdfs:label "Pick Up Item 2"@en ;
-  psr:actsOn ex:boxOfJello ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem2Action .
+  obot:actsOn ex:boxOfJello ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem2Action .
 
 ex:PutDownItem2Action a dul:Action ;
   rdfs:label "Put Down Item 2"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem3Action a dul:Action ;
   rdfs:label "Pick Up Item 3"@en ;
-  psr:actsOn ex:boxOfAlpenSalt ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem3Action .
+  obot:actsOn ex:boxOfAlpenSalt ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem3Action .
 
 ex:PutDownItem3Action a dul:Action ;
   rdfs:label "Put Down Item 3"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem4Action a dul:Action ;
   rdfs:label "Pick Up Item 4"@en ;
-  psr:actsOn ex:boxOfRiceBubbles ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem4Action .
+  obot:actsOn ex:boxOfRiceBubbles ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem4Action .
 
 ex:PutDownItem4Action a dul:Action ;
   rdfs:label "Put Down Item 4"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem5Action a dul:Action ;
   rdfs:label "Pick Up Item 5"@en ;
-  psr:actsOn ex:jarOfJam2 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem5Action .
+  obot:actsOn ex:jarOfJam2 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem5Action .
 
 ex:PutDownItem5Action a dul:Action ;
   rdfs:label "Put Down Item 5"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem6Action a dul:Action ;
   rdfs:label "Pick Up Item 6"@en ;
-  psr:actsOn ex:boxOfShortbreadCookies ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem6Action .
+  obot:actsOn ex:boxOfShortbreadCookies ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem6Action .
 
 ex:PutDownItem6Action a dul:Action ;
   rdfs:label "Put Down Item 6"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem7Action a dul:Action ;
   rdfs:label "Pick Up Item 7"@en ;
-  psr:actsOn ex:stackOfPlates ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem7Action .
+  obot:actsOn ex:stackOfPlates ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem7Action .
 
 ex:PutDownItem7Action a dul:Action ;
   rdfs:label "Put Down Item 7"@en ;
-  psr:actsOn ex:cabinet ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:cabinet ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem8Action a dul:Action ;
   rdfs:label "Pick Up Item 8"@en ;
-  psr:actsOn ex:bottleOfWater1 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem8Action .
+  obot:actsOn ex:bottleOfWater1 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem8Action .
 
 ex:PutDownItem8Action a dul:Action ;
   rdfs:label "Put Down Item 8"@en ;
-  psr:actsOn ex:refrigerator ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:refrigerator ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem9Action a dul:Action ;
   rdfs:label "Pick Up Item 9"@en ;
-  psr:actsOn ex:bottleOfWater2 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem9Action .
+  obot:actsOn ex:bottleOfWater2 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem9Action .
 
 ex:PutDownItem9Action a dul:Action ;
   rdfs:label "Put Down Item 9"@en ;
-  psr:actsOn ex:refrigerator ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:refrigerator ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem10Action a dul:Action ;
   rdfs:label "Pick Up Item 10"@en ;
-  psr:actsOn ex:milkBottle ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem10Action .
+  obot:actsOn ex:milkBottle ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem10Action .
 
 ex:PutDownItem10Action a dul:Action ;
   rdfs:label "Put Down Item 10"@en ;
-  psr:actsOn ex:refrigerator ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:refrigerator ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem11Action a dul:Action ;
   rdfs:label "Pick Up Item 11"@en ;
-  psr:actsOn ex:cookbook ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem11Action .
+  obot:actsOn ex:cookbook ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem11Action .
 
 ex:PutDownItem11Action a dul:Action ;
   rdfs:label "Put Down Item 11"@en ;
-  psr:actsOn ex:bookshelf ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:bookshelf ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpItem12Action a dul:Action ;
   rdfs:label "Pick Up Item 12"@en ;
-  psr:actsOn ex:puzzleBox ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:PutDownItem12Action .
+  obot:actsOn ex:puzzleBox ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:PutDownItem12Action .
 
 ex:PutDownItem12Action a dul:Action ;
   rdfs:label "Put Down Item 12"@en ;
-  psr:actsOn ex:table ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:actsOn ex:table ;
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:refrigerator a psr:Appliance ;
+ex:refrigerator a obot:Appliance ;
   rdfs:label "Refrigerator"@en ;
-  psr:locatedIn ex:KitchenArea .
+  obot:locatedIn ex:KitchenArea .
 
-ex:bookshelf a psr:Furniture ;
+ex:bookshelf a obot:Furniture ;
   rdfs:label "Bookshelf"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .
 
-ex:table a psr:Furniture ;
+ex:table a obot:Furniture ;
   rdfs:label "Table"@en ;
-  psr:locatedIn ex:diningArea .
+  obot:locatedIn ex:diningArea .

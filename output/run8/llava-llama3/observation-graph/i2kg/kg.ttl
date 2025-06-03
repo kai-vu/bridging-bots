@@ -1,6 +1,6 @@
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:   <http://example.org/data/> .
+@prefix obot:   <http://example.org/data/> .
 
 @namespace psr "http://example.org/data/" .
 
@@ -9,31 +9,31 @@
 
 <http://example.org/data/table> a owl:Component ;
   rdfs:label "Table"@en ;
-  psr:isWithin <http://example.org/data/room> .
+  obot:isWithin <http://example.org/data/room> .
 
 <http://example.org/data/room> a owl:Environment ;
   rdfs:label "Room"@en ;
-  psr:isWithin <http://example.org/data/building> .
+  obot:isWithin <http://example.org/data/building> .
 
 <http://example.org/data/building> a owl:Environment ;
   rdfs:label "Building"@en ;
-  psr:hasLocation <http://example.org/data/outdoors> .
+  obot:hasLocation <http://example.org/data/outdoors> .
 
 <http://example.org/data/outdoors> a owl:Location ;
   rdfs:label "Outdoors"@en .
 
 <http://example.org/data/desk_chair> a owl:Component ;
   rdfs:label "Desk Chair"@en ;
-  psr:isWithin <http://example.org/data/room> ;
-  psr:hasAffordance <http://example.org/data/pulling> ;
-  psr:hasAffordance <http://example.org/data/pushing> .
+  obot:isWithin <http://example.org/data/room> ;
+  obot:hasAffordance <http://example.org/data/pulling> ;
+  obot:hasAffordance <http://example.org/data/pushing> .
 
 <http://example.org/data/floor_lamp> a owl:Component ;
   rdfs:label "Floor Lamp"@en ;
-  psr:isWithin <http://example.org/data/room> ;
-  psr:hasAffordance <http://example.org/data/turning_on> .
+  obot:isWithin <http://example.org/data/room> ;
+  obot:hasAffordance <http://example.org/data/turning_on> .
 
 <http://example.org/data/bookshelf> a owl:Component ;
   rdfs:label "Bookshelf"@en ;
-  psr:isWithin <http://example.org/data/room> ;
-  psr:hasAffordance <http://example.org/data/picking_up> .
+  obot:isWithin <http://example.org/data/room> ;
+  obot:hasAffordance <http://example.org/data/picking_up> .

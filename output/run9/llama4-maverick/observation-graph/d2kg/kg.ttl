@@ -3,101 +3,101 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Countertop, ex:Refrigerator, ex:Sink, ex:StoveTop, ex:RangeHood, ex:DiningTable, ex:Faucet, ex:JarOfJam, ex:BoxOfJello, ex:BoxOfSalt, ex:Pot, ex:WhiteChairs, ex:Bottles, ex:BoxOfCrackers, ex:Glass .
 
-ex:Cabinets a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Cabinets a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Countertop a psr:Furniture ;
-    psr:hasAffordance soma:Holding, soma:PuttingDown ;
+ex:Countertop a obot:Furniture ;
+    obot:hasAffordance soma:Holding, soma:PuttingDown ;
     dul:hasLocation ex:Kitchen .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     dul:hasLocation ex:CornerOfKitchen ;
     geo:sfWithin ex:Kitchen ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:Countertop ;
     geo:sfWithin ex:Countertop .
 
-ex:Faucet a psr:Object ;
+ex:Faucet a obot:Object ;
     dul:hasLocation ex:Sink ;
     geo:sfWithin ex:Sink .
 
-ex:StoveTop a psr:Appliance ;
+ex:StoveTop a obot:Appliance ;
     dul:hasLocation ex:Countertop ;
     geo:sfWithin ex:Countertop ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff .
+    obot:hasAffordance soma:TurningOn, soma:TurningOff .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:AboveStoveTop ;
     geo:sfOverlaps ex:StoveTop .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasLocation ex:DiningArea ;
     geo:sfWithin ex:Kitchen ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:WhiteChairs a psr:Furniture ;
+ex:WhiteChairs a obot:Furniture ;
     dul:hasLocation ex:AroundDiningTable ;
     geo:sfWithin ex:DiningArea .
 
-ex:JarOfJam a psr:Object ;
+ex:JarOfJam a obot:Object ;
     dul:hasLocation ex:Countertop ;
     geo:sfWithin ex:Countertop .
 
-ex:BoxOfJello a psr:Object ;
+ex:BoxOfJello a obot:Object ;
     dul:hasLocation ex:Countertop ;
     geo:sfWithin ex:Countertop .
 
-ex:BoxOfSalt a psr:Object ;
+ex:BoxOfSalt a obot:Object ;
     dul:hasLocation ex:Countertop ;
     geo:sfWithin ex:Countertop .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:StoveTop ;
     geo:sfWithin ex:StoveTop .
 
-ex:Bottles a psr:Object ;
+ex:Bottles a obot:Object ;
     dul:hasLocation ex:DiningTable ;
     geo:sfWithin ex:DiningTable .
 
-ex:BoxOfCrackers a psr:Object ;
+ex:BoxOfCrackers a obot:Object ;
     dul:hasLocation ex:DiningTable ;
     geo:sfWithin ex:DiningTable .
 
-ex:Glass a psr:Object ;
+ex:Glass a obot:Object ;
     dul:hasLocation ex:DiningTable ;
     geo:sfWithin ex:DiningTable .
 
-ex:CornerOfKitchen a psr:Location ;
-    psr:onTopOf ex:Floor .
+ex:CornerOfKitchen a obot:Location ;
+    obot:onTopOf ex:Floor .
 
-ex:AboveStoveTop a psr:Location ;
-    psr:onTopOf ex:StoveTop .
+ex:AboveStoveTop a obot:Location ;
+    obot:onTopOf ex:StoveTop .
 
-ex:AroundDiningTable a psr:Location ;
+ex:AroundDiningTable a obot:Location ;
     geo:sfWithin ex:DiningTable .
 
-ex:DiningArea a psr:Location ;
+ex:DiningArea a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:Floor a psr:Component ;
+ex:Floor a obot:Component ;
     dul:hasLocation ex:Kitchen .
 
-ex:DarkGrayCabinets a psr:Component ;
+ex:DarkGrayCabinets a obot:Component ;
     dul:hasLocation ex:Kitchen .
 
-ex:LightColoredCountertops a psr:Component ;
+ex:LightColoredCountertops a obot:Component ;
     dul:hasLocation ex:Kitchen .
 
-ex:WhiteWalls a psr:Component ;
+ex:WhiteWalls a obot:Component ;
     dul:hasLocation ex:Kitchen .
 
-ex:DarkWoodParquet a psr:Component ;
+ex:DarkWoodParquet a obot:Component ;
     dul:hasLocation ex:Floor .

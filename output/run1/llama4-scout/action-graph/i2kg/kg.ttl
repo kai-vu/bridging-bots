@@ -5,17 +5,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 
 ### Knowledge Graph of Actions
 
 ## Classes and Object Properties
 
-psr:Instruction a owl:Class, dul:Entity ;
+obot:Instruction a owl:Class, dul:Entity ;
  rdfs:label "Instruction"@en ;
  rdfs:comment "An instruction is a command or directive given to a robot."@en .
 
-psr:Workflow a owl:Class, dul:Entity ;
+obot:Workflow a owl:Class, dul:Entity ;
  rdfs:subClassOf dul:Workflow ;
  rdfs:label "Workflow"@en ;
  rdfs:comment "A workflow is a sequence of tasks or processes that are carried out to fulfil the instruction."@en .
@@ -28,54 +28,54 @@ dul:Agent a owl:Class, dul:Entity ;
  rdfs:label "Agent"@en ;
  rdfs:comment "An agent performing an action."@en .
 
-psr:Component a owl:Class, dul:Entity ;
+obot:Component a owl:Class, dul:Entity ;
  rdfs:label "Component"@en ;
  rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions."@en .
 
-psr:Appliance a psr:Component ;
+obot:Appliance a obot:Component ;
  rdfs:label "Appliance"@en ;
  rdfs:comment "An appliance is a type of component."@en .
 
-psr:Furniture a psr:Component ;
+obot:Furniture a obot:Component ;
  rdfs:label "Furniture"@en ;
  rdfs:comment "A furniture is a type of component."@en .
 
-psr:Object a psr:Component ;
+obot:Object a obot:Component ;
  rdfs:label "Object"@en ;
  rdfs:comment "An object is a type of component."@en .
 
-psr:Affordance a owl:Class, dul:Entity ;
+obot:Affordance a owl:Class, dul:Entity ;
  rdfs:label "Affordance"@en ;
  rdfs:comment "An affordance is a property of an object that indicates how it can be used."@en .
 
-soma:Closing a psr:Affordance ;
+soma:Closing a obot:Affordance ;
  rdfs:label "Closing"@en ;
  rdfs:comment "Closing is an affordance that enables a component to be closed."@en .
 
-soma:Opening a psr:Affordance ;
+soma:Opening a obot:Affordance ;
  rdfs:label "Opening"@en ;
  rdfs:comment "Opening is an affordance that enables a component to be opened."@en .
 
-psr:hasWorkflow a owl:ObjectProperty ;
- rdfs:domain psr:Instruction ;
- rdfs:range psr:Workflow ;
+obot:hasWorkflow a owl:ObjectProperty ;
+ rdfs:domain obot:Instruction ;
+ rdfs:range obot:Workflow ;
  rdfs:label "has workflow"@en ;
  rdfs:comment "An instruction has a workflow that needs to be executed."@en .
 
-psr:hasAction a owl:ObjectProperty ;
- rdfs:domain psr:Workflow ;
+obot:hasAction a owl:ObjectProperty ;
+ rdfs:domain obot:Workflow ;
  rdfs:range dul:Action ;
  rdfs:label "has action"@en ;
  rdfs:comment "A workflow has one or multiple clear atomic actions."@en .
 
-psr:precedes a owl:ObjectProperty ;
+obot:precedes a owl:ObjectProperty ;
  rdfs:subPropertyOf dul:precedes ;
  rdfs:domain dul:Action ;
  rdfs:range dul:Action ;
  rdfs:label "precedes" ;
  rdfs:comment "An action can precede another action."@en .
 
-psr:follows a owl:ObjectProperty ;
+obot:follows a owl:ObjectProperty ;
  rdfs:subPropertyOf dul:follows ;
  rdfs:domain dul:Action ;
  rdfs:range dul:Action ;
@@ -88,22 +88,22 @@ soma:isPerformedBy a owl:ObjectProperty ;
  rdfs:label "is performed by"@en ;
  rdfs:comment "An action is performed by an agent."@en .
 
-psr:actsOn a owl:ObjectProperty ;
+obot:actsOn a owl:ObjectProperty ;
  rdfs:domain dul:Action ;
- rdfs:range psr:Component ;
+ rdfs:range obot:Component ;
  rdfs:label "acts on"@en ;
  rdfs:comment "An action acts on a component."@en .
 
-psr:isAffordedBy a owl:ObjectProperty ;
+obot:isAffordedBy a owl:ObjectProperty ;
  rdfs:domain dul:Action ;
- rdfs:range psr:Affordance ;
+ rdfs:range obot:Affordance ;
  rdfs:label "is afforded by"@en ;
  rdfs:comment "An action is afforded by an affordance."@en .
 
 ## Data Properties
 
-psr:hasNaturalLanguage a owl:DatatypeProperty ;
- rdfs:domain psr:Instruction ;
+obot:hasNaturalLanguage a owl:DatatypeProperty ;
+ rdfs:domain obot:Instruction ;
  rdfs:range xsd:string ;
  rdfs:label "has natural language"@en ;
  rdfs:comment "The instruction is expressed in a natural language."@en .
@@ -111,101 +111,101 @@ psr:hasNaturalLanguage a owl:DatatypeProperty ;
 ## Individuals and Actions
 
 ### Instruction
-psr:RestoreKitchen a psr:Instruction ;
+obot:RestoreKitchen a obot:Instruction ;
  rdfs:label "Restore Kitchen"@en ;
- psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations."@en .
+ obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations."@en .
 
 ### Workflow
-psr:OrganizeKitchen a psr:Workflow ;
+obot:OrganizeKitchen a obot:Workflow ;
  rdfs:label "Organize Kitchen Workflow"@en .
 
 ### Actions
-psr:PickUpWaterBottle a dul:Action ;
+obot:PickUpWaterBottle a dul:Action ;
  rdfs:label "Pick Up Water Bottle"@en ;
- psr:actsOn <https://example.org/Object/WaterBottle> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/WaterBottle> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpMarmite a dul:Action ;
+obot:PickUpMarmite a dul:Action ;
  rdfs:label "Pick Up Marmite"@en ;
- psr:actsOn <https://example.org/Object/Marmite> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/Marmite> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpJello a dul:Action ;
+obot:PickUpJello a dul:Action ;
  rdfs:label "Pick Up Jello"@en ;
- psr:actsOn <https://example.org/Object/Jello> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/Jello> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpAlpenSalt a dul:Action ;
+obot:PickUpAlpenSalt a dul:Action ;
  rdfs:label "Pick Up Alpen Salt"@en ;
- psr:actsOn <https://example.org/Object/AlpenSalt> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/AlpenSalt> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpRiceBubbles a dul:Action ;
+obot:PickUpRiceBubbles a dul:Action ;
  rdfs:label "Pick Up Rice Bubbles"@en ;
- psr:actsOn <https://example.org/Object/RiceBubbles> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/RiceBubbles> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpShortbread a dul:Action ;
+obot:PickUpShortbread a dul:Action ;
  rdfs:label "Pick Up Shortbread"@en ;
- psr:actsOn <https://example.org/Object/Shortbread> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/Shortbread> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PickUpChucky a dul:Action ;
+obot:PickUpChucky a dul:Action ;
  rdfs:label "Pick Up Chucky"@en ;
- psr:actsOn <https://example.org/Object/Chucky> ;
- psr:isAffordedBy soma:PickingUp .
+ obot:actsOn <https://example.org/Object/Chucky> ;
+ obot:isAffordedBy soma:PickingUp .
 
-psr:PutDownWaterBottleFridge a dul:Action ;
+obot:PutDownWaterBottleFridge a dul:Action ;
  rdfs:label "Put Down Water Bottle in Fridge"@en ;
- psr:actsOn <https://example.org/Object/WaterBottle> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/WaterBottle> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownMarmiteCabinet a dul:Action ;
+obot:PutDownMarmiteCabinet a dul:Action ;
  rdfs:label "Put Down Marmite in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/Marmite> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/Marmite> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownJelloCabinet a dul:Action ;
+obot:PutDownJelloCabinet a dul:Action ;
  rdfs:label "Put Down Jello in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/Jello> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/Jello> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownAlpenSaltCabinet a dul:Action ;
+obot:PutDownAlpenSaltCabinet a dul:Action ;
  rdfs:label "Put Down Alpen Salt in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/AlpenSalt> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/AlpenSalt> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownRiceBubblesCabinet a dul:Action ;
+obot:PutDownRiceBubblesCabinet a dul:Action ;
  rdfs:label "Put Down Rice Bubbles in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/RiceBubbles> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/RiceBubbles> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownShortbreadCabinet a dul:Action ;
+obot:PutDownShortbreadCabinet a dul:Action ;
  rdfs:label "Put Down Shortbread in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/Shortbread> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/Shortbread> ;
+ obot:isAffordedBy soma:PuttingDown .
 
-psr:PutDownChuckyCabinet a dul:Action ;
+obot:PutDownChuckyCabinet a dul:Action ;
  rdfs:label "Put Down Chucky in Cabinet"@en ;
- psr:actsOn <https://example.org/Object/Chucky> ;
- psr:isAffordedBy soma:PuttingDown .
+ obot:actsOn <https://example.org/Object/Chucky> ;
+ obot:isAffordedBy soma:PuttingDown .
 
 ## Workflow and Action Sequence
 
-psr:RestoreKitchen psr:hasWorkflow psr:OrganizeKitchen .
+obot:RestoreKitchen obot:hasWorkflow obot:OrganizeKitchen .
 
-psr:OrganizeKitchen psr:hasAction psr:PickUpWaterBottle .
-psr:OrganizeKitchen psr:hasAction psr:PickUpMarmite .
-psr:OrganizeKitchen psr:hasAction psr:PickUpJello .
-psr:OrganizeKitchen psr:hasAction psr:PickUpAlpenSalt .
-psr:OrganizeKitchen psr:hasAction psr:PickUpRiceBubbles .
-psr:OrganizeKitchen psr:hasAction psr:PickUpShortbread .
-psr:OrganizeKitchen psr:hasAction psr:PickUpChucky .
+obot:OrganizeKitchen obot:hasAction obot:PickUpWaterBottle .
+obot:OrganizeKitchen obot:hasAction obot:PickUpMarmite .
+obot:OrganizeKitchen obot:hasAction obot:PickUpJello .
+obot:OrganizeKitchen obot:hasAction obot:PickUpAlpenSalt .
+obot:OrganizeKitchen obot:hasAction obot:PickUpRiceBubbles .
+obot:OrganizeKitchen obot:hasAction obot:PickUpShortbread .
+obot:OrganizeKitchen obot:hasAction obot:PickUpChucky .
 
-psr:PickUpWaterBottle psr:precedes psr:PutDownWaterBottleFridge .
-psr:PickUpMarmite psr:precedes psr:PutDownMarmiteCabinet .
-psr:PickUpJello psr:precedes psr:PutDownJelloCabinet .
-psr:PickUpAlpenSalt psr:precedes psr:PutDownAlpenSaltCabinet .
-psr:PickUpRiceBubbles psr:precedes psr:PutDownRiceBubblesCabinet .
-psr:PickUpShortbread psr:precedes psr:PutDownShortbreadCabinet .
-psr:PickUpChucky psr:precedes psr:PutDownChuckyCabinet .
+obot:PickUpWaterBottle obot:precedes obot:PutDownWaterBottleFridge .
+obot:PickUpMarmite obot:precedes obot:PutDownMarmiteCabinet .
+obot:PickUpJello obot:precedes obot:PutDownJelloCabinet .
+obot:PickUpAlpenSalt obot:precedes obot:PutDownAlpenSaltCabinet .
+obot:PickUpRiceBubbles obot:precedes obot:PutDownRiceBubblesCabinet .
+obot:PickUpShortbread obot:precedes obot:PutDownShortbreadCabinet .
+obot:PickUpChucky obot:precedes obot:PutDownChuckyCabinet .

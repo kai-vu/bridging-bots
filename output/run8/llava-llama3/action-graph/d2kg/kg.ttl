@@ -5,101 +5,101 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:instruction1 a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state" ;
-    psr:hasWorkflow ex:workflow1 .
+ex:instruction1 a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state" ;
+    obot:hasWorkflow ex:workflow1 .
 
-ex:workflow1 a psr:Workflow ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10, ex:action11, ex:action12 .
+ex:workflow1 a obot:Workflow ;
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6, ex:action7, ex:action8, ex:action9, ex:action10, ex:action11, ex:action12 .
 
 ex:action1 a dul:Action ;
-    psr:precedes ex:action2 ;
+    obot:precedes ex:action2 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Closing .
 
 ex:action2 a dul:Action ;
-    psr:precedes ex:action3 ;
+    obot:precedes ex:action3 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:fridge ;
-    psr:isAffordedBy soma:Opening .
+    obot:actsOn ex:fridge ;
+    obot:isAffordedBy soma:Opening .
 
 ex:action3 a dul:Action ;
-    psr:precedes ex:action4 ;
+    obot:precedes ex:action4 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:milkBottle ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:milkBottle ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action4 a dul:Action ;
-    psr:precedes ex:action5 ;
+    obot:precedes ex:action5 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:milkBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:shelf1 .
+    obot:actsOn ex:milkBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:shelf1 .
 
 ex:action5 a dul:Action ;
-    psr:precedes ex:action6 ;
+    obot:precedes ex:action6 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:box1 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:box1 ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action6 a dul:Action ;
-    psr:precedes ex:action7 ;
+    obot:precedes ex:action7 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:box1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:cabinet1 .
+    obot:actsOn ex:box1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:cabinet1 .
 
 ex:action7 a dul:Action ;
-    psr:precedes ex:action8 ;
+    obot:precedes ex:action8 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:bottle1 ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:bottle1 ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action8 a dul:Action ;
-    psr:precedes ex:action9 ;
+    obot:precedes ex:action9 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:bottle1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:counter1 .
+    obot:actsOn ex:bottle1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:counter1 .
 
 ex:action9 a dul:Action ;
-    psr:precedes ex:action10 ;
+    obot:precedes ex:action10 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:paperTowel ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:paperTowel ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action10 a dul:Action ;
-    psr:precedes ex:action11 ;
+    obot:precedes ex:action11 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:paperTowel ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:counter1 .
+    obot:actsOn ex:paperTowel ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:counter1 .
 
 ex:action11 a dul:Action ;
-    psr:precedes ex:action12 ;
+    obot:precedes ex:action12 ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:book ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:book ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:action12 a dul:Action ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:agent1 ;
-    psr:actsOn ex:book ;
-    psr:actsOn ex:bookshelf1 .
+    obot:actsOn ex:book ;
+    obot:actsOn ex:bookshelf1 .
 
 ex:agent1 a dul:Agent .
 
-ex:fridge a psr:Appliance .
-ex:milkBottle a psr:Object .
-ex:box1 a psr:Object .
-ex:bottle1 a psr:Object .
-ex:paperTowel a psr:Object .
-ex:book a psr:Object .
-ex:counter1 a psr:Component .
-ex:shelf1 a psr:Component .
-ex:cabinet1 a psr:Component .
-ex:bookshelf1 a psr:Component .
+ex:fridge a obot:Appliance .
+ex:milkBottle a obot:Object .
+ex:box1 a obot:Object .
+ex:bottle1 a obot:Object .
+ex:paperTowel a obot:Object .
+ex:book a obot:Object .
+ex:counter1 a obot:Component .
+ex:shelf1 a obot:Component .
+ex:cabinet1 a obot:Component .
+ex:bookshelf1 a obot:Component .

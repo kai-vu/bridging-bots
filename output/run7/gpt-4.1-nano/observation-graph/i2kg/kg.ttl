@@ -3,25 +3,25 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://www.psr.org/ontology#> .
+@prefix obot:    <http://www.psr.org/ontology#> .
 
 @prefix ex: <http://example.org/data/> .
 
 # Environment
-ex:Environment1 a psr:Environment ;
+ex:Environment1 a obot:Environment ;
     rdfs:label "Living Room"@en ;
     dul:hasComponent ex:Cabinet, ex:KitchenCounter, ex:Table .
 
 # Components
-ex:Cabinet a psr:Furniture ;
+ex:Cabinet a obot:Furniture ;
     rdfs:label "Kitchen Cabinet"@en ;
     dul:hasLocation ex:CabinetLocation .
 
-ex:KitchenCounter a psr:Furniture ;
+ex:KitchenCounter a obot:Furniture ;
     rdfs:label "Kitchen Counter"@en ;
     dul:hasLocation ex:CounterLocation .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation ex:TableLocation .
 
@@ -36,36 +36,36 @@ ex:TableLocation a soma:Location ;
     rdfs:label "Table Location"@en .
 
 # Equipment and objects
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en ;
     dul:hasLocation ex:RefrigeratorLocation ;
-    psr:hasAffordance soma:Opening .
+    obot:hasAffordance soma:Opening .
 
 ex:RefrigeratorLocation a soma:Location ;
     rdfs:label "Refrigerator Location"@en .
 
-ex:Box of Jello a psr:Object ;
+ex:Box of Jello a obot:Object ;
     rdfs:label "Jello Box"@en ;
     dul:hasLocation ex:JelloBoxLocation .
 
 ex:JelloBoxLocation a soma:Location ;
     rdfs:label "Jello Box Location"@en .
 
-ex:Box of Shortbread a psr:Object ;
+ex:Box of Shortbread a obot:Object ;
     rdfs:label "Shortbread Box"@en ;
     dul:hasLocation ex:ShortbreadBoxLocation .
 
 ex:ShortbreadBoxLocation a soma:Location ;
     rdfs:label "Shortbread Box Location"@en .
 
-ex:EvianWaterBottle a psr:Object ;
+ex:EvianWaterBottle a obot:Object ;
     rdfs:label "Evian Water Bottle"@en ;
     dul:hasLocation ex:WaterBottleLocation .
 
 ex:WaterBottleLocation a soma:Location ;
     rdfs:label "Water Bottle Location"@en .
 
-ex:PlateStack a psr:Object ;
+ex:PlateStack a obot:Object ;
     rdfs:label "Stack of Plates"@en ;
     dul:hasLocation ex:PlateStackLocation .
 
@@ -73,7 +73,7 @@ ex:PlateStackLocation a soma:Location ;
     rdfs:label "Plate Stack Location"@en .
 
 # Additional environment object
-ex:KitchenDoor a psr:Object ;
+ex:KitchenDoor a obot:Object ;
     rdfs:label "Kitchen Door"@en ;
     dul:hasLocation ex:DoorLocation .
 

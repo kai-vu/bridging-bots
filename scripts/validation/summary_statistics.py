@@ -167,17 +167,17 @@ if __name__ == '__main__':
     ontology_action_graph = "../../ontology/ontoActionGraph.ttl"
 
     required_class_observation = [
-        {URIRef("https://w3id.org/psr-action#Environment")},
+        {URIRef("https://w3id.org/OntoBOT#Environment")},
         {
-            URIRef("https://w3id.org/psr-action#Component"),
-            URIRef("https://w3id.org/psr-action#Appliance"),
-            URIRef("https://w3id.org/psr-action#Furniture"),
-            URIRef("https://w3id.org/psr-action#Object"),
+            URIRef("https://w3id.org/OntoBOT#Component"),
+            URIRef("https://w3id.org/OntoBOT#Appliance"),
+            URIRef("https://w3id.org/OntoBOT#Furniture"),
+            URIRef("https://w3id.org/OntoBOT#Object"),
         },
         {
             URIRef("http://www.ease-crc.org/ont/SOMA.owl#Location"),
-            URIRef("https://w3id.org/psr-action#CurrentLocation"),
-            URIRef("https://w3id.org/psr-action#StandardLocation"),
+            URIRef("https://w3id.org/OntoBOT#CurrentLocation"),
+            URIRef("https://w3id.org/OntoBOT#StandardLocation"),
         },
         {
             URIRef("http://www.ease-crc.org/ont/SOMA.owl#Affordance"),
@@ -194,10 +194,10 @@ if __name__ == '__main__':
     ]
     required_property_observation = [
         {URIRef("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent")},
-        {URIRef("https://w3id.org/psr-action#hasAffordance")},
+        {URIRef("https://w3id.org/OntoBOT#hasAffordance")},
         {
             URIRef("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"),
-            URIRef("https://w3id.org/psr-action#onTopOf"),
+            URIRef("https://w3id.org/OntoBOT#onTopOf"),
             URIRef("http://www.opengis.net/ont/geosparql#sfContains"),
             URIRef("http://www.opengis.net/ont/geosparql#sfWithin"),
             URIRef("http://www.opengis.net/ont/geosparql#sfOverlaps"),
@@ -205,15 +205,15 @@ if __name__ == '__main__':
     ]
 
     required_class_action = [
-        {URIRef("https://w3id.org/psr-action#Instruction")},
-        {URIRef("https://w3id.org/psr-action#Workflow")},
+        {URIRef("https://w3id.org/OntoBOT#Instruction")},
+        {URIRef("https://w3id.org/OntoBOT#Workflow")},
         {URIRef("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action")},
         {URIRef("http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent")},
         {
-            URIRef("https://w3id.org/psr-action#Component"),
-            URIRef("https://w3id.org/psr-action#Appliance"),
-            URIRef("https://w3id.org/psr-action#Furniture"),
-            URIRef("https://w3id.org/psr-action#Object"),
+            URIRef("https://w3id.org/OntoBOT#Component"),
+            URIRef("https://w3id.org/OntoBOT#Appliance"),
+            URIRef("https://w3id.org/OntoBOT#Furniture"),
+            URIRef("https://w3id.org/OntoBOT#Object"),
         },
         {
             URIRef("http://www.ease-crc.org/ont/SOMA.owl#Affordance"),
@@ -229,14 +229,14 @@ if __name__ == '__main__':
         },
     ]
     required_property_action = [
-        {URIRef("https://w3id.org/psr-action#hasWorkflow")},
-        {URIRef("https://w3id.org/psr-action#hasAction")},
-        {URIRef("https://w3id.org/psr-action#precedes")},
-        {URIRef("https://w3id.org/psr-action#follows")},
+        {URIRef("https://w3id.org/OntoBOT#hasWorkflow")},
+        {URIRef("https://w3id.org/OntoBOT#hasAction")},
+        {URIRef("https://w3id.org/OntoBOT#precedes")},
+        {URIRef("https://w3id.org/OntoBOT#follows")},
         {URIRef("http://www.ease-crc.org/ont/SOMA.owl#isPerformedBy")},
-        {URIRef("https://w3id.org/psr-action#actsOn")},
-        {URIRef("https://w3id.org/psr-action#isAffordedBy")},
-        {URIRef("https://w3id.org/psr-action#hasNaturalLanguage")},
+        {URIRef("https://w3id.org/OntoBOT#actsOn")},
+        {URIRef("https://w3id.org/OntoBOT#isAffordedBy")},
+        {URIRef("https://w3id.org/OntoBOT#hasNaturalLanguage")},
     ]
     
     main(files_observation_graph, output_observation, 

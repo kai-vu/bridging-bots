@@ -3,70 +3,70 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Countertop, ex:Refrigerator, ex:Sink, ex:Stove, ex:KitchenHood, ex:DiningTable, ex:Door .
 
-ex:Cabinets a psr:Furniture ;
+ex:Cabinets a obot:Furniture ;
     dul:hasLocation ex:Kitchen .
 
-ex:Countertop a psr:Furniture ;
+ex:Countertop a obot:Furniture ;
     dul:hasLocation ex:Kitchen ;
     dul:hasComponent ex:BoxJELLO, ex:JarRaspberryJam, ex:BoxAlpenSalt, ex:StackWhitePlates .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     dul:hasLocation ex:Kitchen .
 
-ex:BoxJELLO a psr:Object ;
+ex:BoxJELLO a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:JarRaspberryJam a psr:Object ;
+ex:JarRaspberryJam a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:BoxAlpenSalt a psr:Object ;
+ex:BoxAlpenSalt a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:StackWhitePlates a psr:Object ;
+ex:StackWhitePlates a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:Countertop .
 
-ex:Stove a psr:Appliance ;
+ex:Stove a obot:Appliance ;
     dul:hasLocation ex:Kitchen ;
     dul:hasComponent ex:Pot .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:Stove .
 
-ex:KitchenHood a psr:Appliance ;
+ex:KitchenHood a obot:Appliance ;
     dul:hasLocation ex:Kitchen .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasLocation ex:Kitchen ;
     dul:hasComponent ex:BottleWater, ex:WineGlass, ex:CoffeeMug, ex:Plate, ex:Knife, ex:BoxSkonnbread .
 
-ex:BottleWater a psr:Object ;
+ex:BottleWater a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:CoffeeMug a psr:Object ;
+ex:CoffeeMug a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Knife a psr:Object ;
+ex:Knife a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:BoxSkonnbread a psr:Object ;
+ex:BoxSkonnbread a obot:Object ;
     dul:hasLocation ex:DiningTable .
 
-ex:Door a psr:Object ;
+ex:Door a obot:Object ;
     dul:hasLocation ex:Kitchen .
 
 ex:Cabinets dul:hasLocation ex:Kitchen .
@@ -74,7 +74,7 @@ ex:Refrigerator dul:hasLocation ex:Cabinets .
 ex:Countertop dul:hasLocation ex:Cabinets .
 ex:Sink geo:sfWithin ex:Countertop .
 ex:Stove geo:sfWithin ex:Countertop .
-ex:Pot psr:onTopOf ex:Stove .
+ex:Pot obot:onTopOf ex:Stove .
 ex:Refrigerator geo:sfWithin ex:Kitchen .
 ex:DiningTable geo:sfWithin ex:Kitchen .
 ex:Door geo:sfWithin ex:Kitchen .
@@ -88,31 +88,31 @@ ex:Pot dul:hasLocation ex:CurrentLocation_6 .
 ex:DiningTable dul:hasLocation ex:CurrentLocation_7 .
 ex:Door dul:hasLocation ex:CurrentLocation_8 .
 
-ex:CurrentLocation_1 a psr:CurrentLocation .
-ex:CurrentLocation_2 a psr:CurrentLocation .
-ex:CurrentLocation_3 a psr:CurrentLocation .
-ex:CurrentLocation_4 a psr:CurrentLocation .
-ex:CurrentLocation_5 a psr:CurrentLocation .
-ex:CurrentLocation_6 a psr:CurrentLocation .
-ex:CurrentLocation_7 a psr:CurrentLocation .
-ex:CurrentLocation_8 a psr:CurrentLocation .
+ex:CurrentLocation_1 a obot:CurrentLocation .
+ex:CurrentLocation_2 a obot:CurrentLocation .
+ex:CurrentLocation_3 a obot:CurrentLocation .
+ex:CurrentLocation_4 a obot:CurrentLocation .
+ex:CurrentLocation_5 a obot:CurrentLocation .
+ex:CurrentLocation_6 a obot:CurrentLocation .
+ex:CurrentLocation_7 a obot:CurrentLocation .
+ex:CurrentLocation_8 a obot:CurrentLocation .
 
-ex:Cabinets psr:hasAffordance soma:Holding .
-ex:Countertop psr:hasAffordance soma:Holding .
-ex:Refrigerator psr:hasAffordance soma:Opening, soma:Closing .
-ex:Sink psr:hasAffordance soma:Holding .
-ex:Stove psr:hasAffordance soma:TurningOn, soma:TurningOff .
-ex:Pot psr:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
-ex:DiningTable psr:hasAffordance soma:Holding .
-ex:Door psr:hasAffordance soma:Opening, soma:Closing .
+ex:Cabinets obot:hasAffordance soma:Holding .
+ex:Countertop obot:hasAffordance soma:Holding .
+ex:Refrigerator obot:hasAffordance soma:Opening, soma:Closing .
+ex:Sink obot:hasAffordance soma:Holding .
+ex:Stove obot:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:Pot obot:hasAffordance soma:Holding, soma:PickingUp, soma:PuttingDown .
+ex:DiningTable obot:hasAffordance soma:Holding .
+ex:Door obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:BoxJELLO psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:JarRaspberryJam psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:BoxAlpenSalt psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:StackWhitePlates psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:BottleWater psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:WineGlass psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:CoffeeMug psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:Plate psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:Knife psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
-ex:BoxSkonnbread psr:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BoxJELLO obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:JarRaspberryJam obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BoxAlpenSalt obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:StackWhitePlates obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BottleWater obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:WineGlass obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:CoffeeMug obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:Plate obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:Knife obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .
+ex:BoxSkonnbread obot:hasAffordance soma:PickingUp, soma:PuttingDown, soma:Grasping .

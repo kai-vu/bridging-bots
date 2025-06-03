@@ -1,138 +1,138 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItems .
+ex:RestoreKitchenTask a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItems .
 
 ex:IdentifyMisplacedItems a dul:Action ;
   rdfs:label "Identify Misplaced Items"@en ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Grasping ;
-  psr:followedBy ex:PickUpMisplacedItems .
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Grasping ;
+  obot:followedBy ex:PickUpMisplacedItems .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
 ex:PickUpMisplacedItems a dul:Action ;
   rdfs:label "Pick Up Misplaced Items"@en ;
-  psr:actsOn ex:MisplacedItem ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:followedBy ex:DetermineStorageLocation .
+  obot:actsOn ex:MisplacedItem ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:followedBy ex:DetermineStorageLocation .
 
-ex:MisplacedItem a psr:Component ;
+ex:MisplacedItem a obot:Component ;
   rdfs:label "Misplaced Item"@en .
 
 ex:DetermineStorageLocation a dul:Action ;
   rdfs:label "Determine Storage Location"@en ;
-  psr:actsOn ex:MisplacedItem ;
-  psr:isAffordedBy soma:Opening ;
-  psr:followedBy ex:StoreItem .
+  obot:actsOn ex:MisplacedItem ;
+  obot:isAffordedBy soma:Opening ;
+  obot:followedBy ex:StoreItem .
 
 ex:StoreItem a dul:Action ;
   rdfs:label "Store Item"@en ;
-  psr:actsOn ex:MisplacedItem ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:precedes ex:CheckKitchenStatus .
+  obot:actsOn ex:MisplacedItem ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:precedes ex:CheckKitchenStatus .
 
 ex:CheckKitchenStatus a dul:Action ;
   rdfs:label "Check Kitchen Status"@en ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Opening ;
-  psr:followedBy ex:RepeatTaskIfNeeded .
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Opening ;
+  obot:followedBy ex:RepeatTaskIfNeeded .
 
 ex:RepeatTaskIfNeeded a dul:Action ;
   rdfs:label "Repeat Task If Needed"@en ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Closing .
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Closing .
 
-ex:yellowMug a psr:Object ;
+ex:yellowMug a obot:Object ;
   rdfs:label "Yellow Mug"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:boxOfShortbread a psr:Object ;
+ex:boxOfShortbread a obot:Object ;
   rdfs:label "Box of Shortbread"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:jarOfJam a psr:Object ;
+ex:jarOfJam a obot:Object ;
   rdfs:label "Jar of Jam"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:boxOfRiceBubbles a psr:Object ;
+ex:boxOfRiceBubbles a obot:Object ;
   rdfs:label "Box of Rice Bubbles"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:boxOfJello a psr:Object ;
+ex:boxOfJello a obot:Object ;
   rdfs:label "Box of Jello"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:aluminumFoil a psr:Object ;
+ex:aluminumFoil a obot:Object ;
   rdfs:label "Aluminum Foil"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:plate a psr:Object ;
+ex:plate a obot:Object ;
   rdfs:label "Plate"@en ;
   ex:locatedIn ex:KitchenArea .
 
-ex:bottleOfWater a psr:Object ;
+ex:bottleOfWater a obot:Object ;
   rdfs:label "Bottle of Water"@en ;
   ex:locatedIn ex:DiningArea .
 
-ex:plateOnTable a psr:Object ;
+ex:plateOnTable a obot:Object ;
   rdfs:label "Plate on Table"@en ;
   ex:locatedIn ex:DiningArea .
 
-ex:wineGlass a psr:Object ;
+ex:wineGlass a obot:Object ;
   rdfs:label "Wine Glass"@en ;
   ex:locatedIn ex:DiningArea .
 
-ex:boxOfChocolates a psr:Object ;
+ex:boxOfChocolates a obot:Object ;
   rdfs:label "Box of Chocolates"@en ;
   ex:locatedIn ex:DiningArea .
 
-ex:plateWithCups a psr:Object ;
+ex:plateWithCups a obot:Object ;
   rdfs:label "Plate with Cups"@en ;
   ex:locatedIn ex:DiningArea .
 
-ex:standardStorageLocation a psr:Component ;
+ex:standardStorageLocation a obot:Component ;
   rdfs:label "Standard Storage Location"@en .
 
-ex:yellowMug psr:follows ex:PickUpMisplacedItems ;
-  ex:yellowMug psr:actsOn ex:standardStorageLocation .
+ex:yellowMug obot:follows ex:PickUpMisplacedItems ;
+  ex:yellowMug obot:actsOn ex:standardStorageLocation .
 
-ex:boxOfShortbread psr:follows ex:PickUpMisplacedItems ;
-  ex:boxOfShortbread psr:actsOn ex:standardStorageLocation .
+ex:boxOfShortbread obot:follows ex:PickUpMisplacedItems ;
+  ex:boxOfShortbread obot:actsOn ex:standardStorageLocation .
 
-ex:jarOfJam psr:follows ex:PickUpMisplacedItems ;
-  ex:jarOfJam psr:actsOn ex:standardStorageLocation .
+ex:jarOfJam obot:follows ex:PickUpMisplacedItems ;
+  ex:jarOfJam obot:actsOn ex:standardStorageLocation .
 
-ex:boxOfRiceBubbles psr:follows ex:PickUpMisplacedItems ;
-  ex:boxOfRiceBubbles psr:actsOn ex:standardStorageLocation .
+ex:boxOfRiceBubbles obot:follows ex:PickUpMisplacedItems ;
+  ex:boxOfRiceBubbles obot:actsOn ex:standardStorageLocation .
 
-ex:boxOfJello psr:follows ex:PickUpMisplacedItems ;
-  ex:boxOfJello psr:actsOn ex:standardStorageLocation .
+ex:boxOfJello obot:follows ex:PickUpMisplacedItems ;
+  ex:boxOfJello obot:actsOn ex:standardStorageLocation .
 
-ex:aluminumFoil psr:follows ex:PickUpMisplacedItems ;
-  ex:aluminumFoil psr:actsOn ex:standardStorageLocation .
+ex:aluminumFoil obot:follows ex:PickUpMisplacedItems ;
+  ex:aluminumFoil obot:actsOn ex:standardStorageLocation .
 
-ex:plate psr:follows ex:PickUpMisplacedItems ;
-  ex:plate psr:actsOn ex:standardStorageLocation .
+ex:plate obot:follows ex:PickUpMisplacedItems ;
+  ex:plate obot:actsOn ex:standardStorageLocation .
 
-ex:bottleOfWater psr:follows ex:PickUpMisplacedItems ;
-  ex:bottleOfWater psr:actsOn ex:standardStorageLocation .
+ex:bottleOfWater obot:follows ex:PickUpMisplacedItems ;
+  ex:bottleOfWater obot:actsOn ex:standardStorageLocation .
 
-ex:plateOnTable psr:follows ex:PickUpMisplacedItems ;
-  ex:plateOnTable psr:actsOn ex:standardStorageLocation .
+ex:plateOnTable obot:follows ex:PickUpMisplacedItems ;
+  ex:plateOnTable obot:actsOn ex:standardStorageLocation .
 
-ex:wineGlass psr:follows ex:PickUpMisplacedItems ;
-  ex:wineGlass psr:actsOn ex:standardStorageLocation .
+ex:wineGlass obot:follows ex:PickUpMisplacedItems ;
+  ex:wineGlass obot:actsOn ex:standardStorageLocation .
 
-ex:boxOfChocolates psr:follows ex:PickUpMisplacedItems ;
-  ex:boxOfChocolates psr:actsOn ex:standardStorageLocation .
+ex:boxOfChocolates obot:follows ex:PickUpMisplacedItems ;
+  ex:boxOfChocolates obot:actsOn ex:standardStorageLocation .
 
-ex:plateWithCups psr:follows ex:PickUpMisplacedItems ;
-  ex:plateWithCups psr:actsOn ex:standardStorageLocation .
+ex:plateWithCups obot:follows ex:PickUpMisplacedItems ;
+  ex:plateWithCups obot:actsOn ex:standardStorageLocation .

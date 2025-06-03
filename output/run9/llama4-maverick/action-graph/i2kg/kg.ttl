@@ -5,81 +5,81 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 
-psr:Instruction1 a psr:Instruction ;
-    psr:hasWorkflow psr:Workflow1 ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
+obot:Instruction1 a obot:Instruction ;
+    obot:hasWorkflow obot:Workflow1 ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."@en .
 
-psr:Workflow1 a psr:Workflow ;
-    psr:hasAction psr:Action1, psr:Action2, psr:Action3, psr:Action4, psr:Action5, psr:Action6, psr:Action7, psr:Action8 ;
-    dul:precedes psr:Action2, psr:Action3, psr:Action4, psr:Action5, psr:Action6, psr:Action7, psr:Action8 .
+obot:Workflow1 a obot:Workflow ;
+    obot:hasAction obot:Action1, obot:Action2, obot:Action3, obot:Action4, obot:Action5, obot:Action6, obot:Action7, obot:Action8 ;
+    dul:precedes obot:Action2, obot:Action3, obot:Action4, obot:Action5, obot:Action6, obot:Action7, obot:Action8 .
 
-psr:Action1 a dul:Action ;
+obot:Action1 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object1 ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn obot:Object1 ;
+    obot:isAffordedBy soma:PickingUp ;
     rdfs:label "Pick up the water bottle from the table"@en .
 
-psr:Action2 a dul:Action ;
+obot:Action2 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    dul:follows psr:Action1 ;
+    obot:actsOn obot:Object1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    dul:follows obot:Action1 ;
     rdfs:label "Put the water bottle in the cabinet"@en .
 
-psr:Action3 a dul:Action ;
+obot:Action3 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object2 ;
-    psr:isAffordedBy soma:PickingUp ;
-    dul:follows psr:Action2 ;
+    obot:actsOn obot:Object2 ;
+    obot:isAffordedBy soma:PickingUp ;
+    dul:follows obot:Action2 ;
     rdfs:label "Pick up the snack box from the table"@en .
 
-psr:Action4 a dul:Action ;
+obot:Action4 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object2 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    dul:follows psr:Action3 ;
+    obot:actsOn obot:Object2 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    dul:follows obot:Action3 ;
     rdfs:label "Put the snack box in the cabinet"@en .
 
-psr:Action5 a dul:Action ;
+obot:Action5 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object3 ;
-    psr:isAffordedBy soma:PickingUp ;
-    dul:follows psr:Action4 ;
+    obot:actsOn obot:Object3 ;
+    obot:isAffordedBy soma:PickingUp ;
+    dul:follows obot:Action4 ;
     rdfs:label "Pick up the jar from the counter"@en .
 
-psr:Action6 a dul:Action ;
+obot:Action6 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object3 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    dul:follows psr:Action5 ;
+    obot:actsOn obot:Object3 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    dul:follows obot:Action5 ;
     rdfs:label "Put the jar in the cabinet"@en .
 
-psr:Action7 a dul:Action ;
+obot:Action7 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object4 ;
-    psr:isAffordedBy soma:PickingUp ;
-    dul:follows psr:Action6 ;
+    obot:actsOn obot:Object4 ;
+    obot:isAffordedBy soma:PickingUp ;
+    dul:follows obot:Action6 ;
     rdfs:label "Pick up the cup from the counter"@en .
 
-psr:Action8 a dul:Action ;
+obot:Action8 a dul:Action ;
     soma:isPerformedBy dul:Agent1 ;
-    psr:actsOn psr:Object4 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    dul:follows psr:Action7 ;
+    obot:actsOn obot:Object4 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    dul:follows obot:Action7 ;
     rdfs:label "Put the cup in the cabinet"@en .
 
 dul:Agent1 a dul:Agent .
 
-psr:Object1 a psr:Object ;
+obot:Object1 a obot:Object ;
     rdfs:label "Water bottle"@en .
 
-psr:Object2 a psr:Object ;
+obot:Object2 a obot:Object ;
     rdfs:label "Snack box"@en .
 
-psr:Object3 a psr:Object ;
+obot:Object3 a obot:Object ;
     rdfs:label "Jar"@en .
 
-psr:Object4 a psr:Object ;
+obot:Object4 a obot:Object ;
     rdfs:label "Cup"@en .

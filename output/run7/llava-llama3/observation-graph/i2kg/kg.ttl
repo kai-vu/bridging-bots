@@ -1,82 +1,82 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <http://example.org/data/> .
+@prefix obot: <http://example.org/data/> .
 
 <http://www.w3.org/2002/07/owl#Environment> a owl:Class .
-[a owl:Class, a rdfs:label "Environment" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+[a owl:Class, a rdfs:label "Environment" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
 <http://www.w3.org/2002/07/owl#Component> a owl:Class .
-[a owl:Class, a rdfs:label "Component" ] a psr:Entity ;
-    psr:hasAffordance psr:Affordance.
+[a owl:Class, a rdfs:label "Component" ] a obot:Entity ;
+    obot:hasAffordance obot:Affordance.
 
 <http://www.w3.org/2000/01/rdf-schema#Affordance> a owl:Class .
-[a owl:Class, a rdfs:label "Affordance" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+[a owl:Class, a rdfs:label "Affordance" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
 <http://www.w3.org/2000/01/rdf-schema#Action> a owl:Class .
-[a owl:Class, a rdfs:label "Action" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+[a owl:Class, a rdfs:label "Action" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:Closing a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Closing a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Opening a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Opening a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Delivering a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Delivering a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Holding a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Holding a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:PickingUp a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:PickingUp a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:PuttingDown a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:PuttingDown a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Pulling a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Pulling a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Grasping a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://example.org/data/>obot:Grasping a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://www.w3.org/2000/01/rdf-schema#Action> psr:Pulling a owl:ObjectProperty .
-[a owl:ObjectProperty, a rdfs:domain psr:Affordance, a rdfs:range psr:Component] .
+<http://www.w3.org/2000/01/rdf-schema#Action> obot:Pulling a owl:ObjectProperty .
+[a owl:ObjectProperty, a rdfs:domain obot:Affordance, a rdfs:range obot:Component] .
 
-<http://example.org/data/>psr:Closing a owl:Action.
-[a owl:Action, a rdfs:label "Close" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:Closing a owl:Action.
+[a owl:Action, a rdfs:label "Close" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:Opening a owl:Action.
-[a owl:Action, a rdfs:label "Open" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:Opening a owl:Action.
+[a owl:Action, a rdfs:label "Open" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:Delivering a owl:Action.
-[a owl:Action, a rdfs:label "Deliver" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:Delivering a owl:Action.
+[a owl:Action, a rdfs:label "Deliver" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:Holding a owl:Action.
-[a owl:Action, a rdfs:label "Hold" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:Holding a owl:Action.
+[a owl:Action, a rdfs:label "Hold" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:PickingUp a owl:Action.
-[a owl:Action, a rdfs:label "Pick up" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:PickingUp a owl:Action.
+[a owl:Action, a rdfs:label "Pick up" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:PuttingDown a owl:Action.
-[a owl:Action, a rdfs:label "Put down" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:PuttingDown a owl:Action.
+[a owl:Action, a rdfs:label "Put down" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
-<http://example.org/data/>psr:Grasping a owl:Action.
-[a owl:Action, a rdfs:label "Grasp" ] a psr:Entity ;
-    psr:hasComponent psr:Component.
+<http://example.org/data/>obot:Grasping a owl:Action.
+[a owl:Action, a rdfs:label "Grasp" ] a obot:Entity ;
+    obot:hasComponent obot:Component.
 
 <http://www.w3.org/2000/01/rdf-schema#Location> a owl:Class .
-[a owl:Class, a rdfs:label "Location" ] a psr:Entity ;
-    psr:onTopOf psr:Component.
+[a owl:Class, a rdfs:label "Location" ] a obot:Entity ;
+    obot:onTopOf obot:Component.
 
 <http://www.w3.org/2000/01/rdf-schema#Furniture> a owl:Class .
-[a owl:Class, a rdfs:label "Furniture" ] a psr:Entity ;
-    psr:onTopOf psr:Component.
+[a owl:Class, a rdfs:label "Furniture" ] a obot:Entity ;
+    obot:onTopOf obot:Component.

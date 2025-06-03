@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,76 +8,76 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "Open Refrigerator"@en ;
-    psr:actsOn ex:refrigerator ;
-    psr:isAffordedBy soma:Opening .
+    obot:actsOn ex:refrigerator ;
+    obot:isAffordedBy soma:Opening .
 
-ex:refrigerator a psr:Appliance ;
+ex:refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en .
 
 ex:action2 a dul:Action ;
     rdfs:label "Take Out Misplaced Items"@en ;
-    psr:actsOn ex:misplacedItems ;
-    psr:isAffordedBy soma:Grasping .
+    obot:actsOn ex:misplacedItems ;
+    obot:isAffordedBy soma:Grasping .
 
-ex:misplacedItems a psr:Object ;
+ex:misplacedItems a obot:Object ;
     rdfs:label "Misplaced Items"@en .
 
 ex:action3 a dul:Action ;
     rdfs:label "Close Refrigerator"@en ;
-    psr:actsOn ex:refrigerator ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:refrigerator ;
+    obot:isAffordedBy soma:Closing .
 
 ex:action4 a dul:Action ;
     rdfs:label "Put Away Items in Cabinets"@en ;
-    psr:actsOn ex:cabinets ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:cabinets ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:cabinets a psr:Furniture ;
+ex:cabinets a obot:Furniture ;
     rdfs:label "Cabinets"@en .
 
 ex:action5 a dul:Action ;
     rdfs:label "Pick Up Items from Countertop"@en ;
-    psr:actsOn ex:countertopItems ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:countertopItems ;
+    obot:isAffordedBy soma:PickingUp .
 
-ex:countertopItems a psr:Object ;
+ex:countertopItems a obot:Object ;
     rdfs:label "Countertop Items"@en .
 
 ex:action6 a dul:Action ;
     rdfs:label "Put Away Items in Cabinets"@en ;
-    psr:actsOn ex:cabinets ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:cabinets ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:action7 a dul:Action ;
     rdfs:label "Push Chairs Under Table"@en ;
-    psr:actsOn ex:chairs ;
-    psr:isAffordedBy soma:Pushing .
+    obot:actsOn ex:chairs ;
+    obot:isAffordedBy soma:Pushing .
 
-ex:chairs a psr:Furniture ;
+ex:chairs a obot:Furniture ;
     rdfs:label "Chairs"@en .
 
 ex:action8 a dul:Action ;
     rdfs:label "Put Away Books on Table"@en ;
-    psr:actsOn ex:books ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:books ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:books a psr:Object ;
+ex:books a obot:Object ;
     rdfs:label "Books"@en .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1 ;
-    psr:hasAction ex:action2 ;
-    psr:hasAction ex:action3 ;
-    psr:hasAction ex:action4 ;
-    psr:hasAction ex:action5 ;
-    psr:hasAction ex:action6 ;
-    psr:hasAction ex:action7 ;
-    psr:hasAction ex:action8 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1 ;
+    obot:hasAction ex:action2 ;
+    obot:hasAction ex:action3 ;
+    obot:hasAction ex:action4 ;
+    obot:hasAction ex:action5 ;
+    obot:hasAction ex:action6 ;
+    obot:hasAction ex:action7 ;
+    obot:hasAction ex:action8 .
 
-ex:action1 psr:precedes ex:action2 .
-ex:action2 psr:precedes ex:action3 .
-ex:action3 psr:precedes ex:action4 .
-ex:action4 psr:precedes ex:action5 .
-ex:action5 psr:precedes ex:action6 .
-ex:action6 psr:precedes ex:action7 .
-ex:action7 psr:precedes ex:action8 .
+ex:action1 obot:precedes ex:action2 .
+ex:action2 obot:precedes ex:action3 .
+ex:action3 obot:precedes ex:action4 .
+ex:action4 obot:precedes ex:action5 .
+ex:action5 obot:precedes ex:action6 .
+ex:action6 obot:precedes ex:action7 .
+ex:action7 obot:precedes ex:action8 .

@@ -3,76 +3,76 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Refrigerator, ex:Table, ex:Chairs, ex:Bottle, ex:Pitcher, ex:WineGlass, ex:Plate, ex:Crackers, ex:Pot, ex:Stove, ex:Sink, ex:RangeHood, ex:Mirror, ex:Door, ex:LightSource, ex:Floor .
 
-ex:Cabinets a psr:Appliance ;
+ex:Cabinets a obot:Appliance ;
     dul:hasLocation ex:Kitchen .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
     dul:hasLocation ex:Kitchen ;
     geo:sfWithin ex:Cabinets .
 
-ex:Table a psr:Furniture ;
+ex:Table a obot:Furniture ;
     dul:hasLocation ex:Kitchen ;
     dul:hasComponent ex:Chairs .
 
-ex:Chairs a psr:Furniture ;
+ex:Chairs a obot:Furniture ;
     dul:hasLocation ex:Table .
 
-ex:Bottle a psr:Object ;
+ex:Bottle a obot:Object ;
     dul:hasLocation ex:Pitcher ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Pitcher a psr:Object ;
+ex:Pitcher a obot:Object ;
     dul:hasLocation ex:Table ;
     dul:hasComponent ex:Bottle ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     dul:hasLocation ex:Table ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Plate a psr:Object ;
+ex:Plate a obot:Object ;
     dul:hasLocation ex:Table ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Crackers a psr:Object ;
+ex:Crackers a obot:Object ;
     dul:hasLocation ex:Table ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:Stove ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:Stove a psr:Appliance ;
+ex:Stove a obot:Appliance ;
     dul:hasLocation ex:Kitchen ;
     dul:hasComponent ex:Pot .
 
-ex:Sink a psr:Object ;
+ex:Sink a obot:Object ;
     dul:hasLocation ex:Counter ;
-    psr:hasAffordance soma:Holding .
+    obot:hasAffordance soma:Holding .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:Stove .
 
-ex:Mirror a psr:Object ;
+ex:Mirror a obot:Object ;
     dul:hasLocation ex:Wall .
 
-ex:Door a psr:Object ;
+ex:Door a obot:Object ;
     dul:hasLocation ex:Wall ;
-    psr:hasAffordance soma:Opening .
+    obot:hasAffordance soma:Opening .
 
-ex:LightSource a psr:Object ;
+ex:LightSource a obot:Object ;
     dul:hasLocation ex:Ceiling .
 
-ex:Floor a psr:Object ;
+ex:Floor a obot:Object ;
     dul:hasLocation ex:Kitchen .
 
-ex:Counter a psr:Object ;
+ex:Counter a obot:Object ;
     dul:hasLocation ex:Cabinets ;
     dul:hasComponent ex:Sink .
 
@@ -80,11 +80,11 @@ ex:Cabinets dul:hasComponent ex:Counter .
 
 ex:Table dul:hasComponent ex:Bottle, ex:Pitcher, ex:WineGlass, ex:Plate, ex:Crackers .
 
-ex:Pitcher psr:onTopOf ex:Table .
+ex:Pitcher obot:onTopOf ex:Table .
 
-ex:Pot psr:onTopOf ex:Stove .
+ex:Pot obot:onTopOf ex:Stove .
 
-ex:Sink psr:onTopOf ex:Counter .
+ex:Sink obot:onTopOf ex:Counter .
 
 ex:RangeHood geo:sfOverlaps ex:Stove .
 

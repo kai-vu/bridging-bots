@@ -3,96 +3,96 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/psr-action#> .
+@prefix obot:    <https://w3id.org/OntoBOT#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:kitchen a psr:Environment ;
+ex:kitchen a obot:Environment ;
     dul:hasComponent ex:sink, ex:coffeeMaker, ex:cabinets, ex:refrigerator, ex:smallBox, ex:table, ex:vase, ex:chair, ex:oven, ex:shelf, ex:box .
 
-ex:sink a psr:Component ;
+ex:sink a obot:Component ;
     dul:hasLocation ex:sinkLocation ;
-    psr:hasAffordance soma:Closing, soma:Opening .
+    obot:hasAffordance soma:Closing, soma:Opening .
 
-ex:sinkLocation a psr:CurrentLocation ;
+ex:sinkLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:coffeeMaker a psr:Component ;
+ex:coffeeMaker a obot:Component ;
     dul:hasLocation ex:coffeeMakerLocation ;
-    psr:hasAffordance soma:Delivering .
+    obot:hasAffordance soma:Delivering .
 
-ex:coffeeMakerLocation a psr:CurrentLocation ;
+ex:coffeeMakerLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
-    psr:onTopOf ex:countertop .
+    obot:onTopOf ex:countertop .
 
-ex:countertop a psr:Component ;
+ex:countertop a obot:Component ;
     dul:hasLocation ex:countertopLocation .
 
-ex:countertopLocation a psr:CurrentLocation ;
+ex:countertopLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:cabinets a psr:Component ;
+ex:cabinets a obot:Component ;
     dul:hasLocation ex:cabinetsLocation .
 
-ex:cabinetsLocation a psr:CurrentLocation ;
+ex:cabinetsLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
     geo:sfAbove ex:sinkLocation .
 
-ex:refrigerator a psr:Component ;
+ex:refrigerator a obot:Component ;
     dul:hasLocation ex:refrigeratorLocation ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:refrigeratorLocation a psr:CurrentLocation ;
+ex:refrigeratorLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
-    psr:onTopOf ex:floor .
+    obot:onTopOf ex:floor .
 
-ex:floor a psr:Component ;
+ex:floor a obot:Component ;
     dul:hasLocation ex:floorLocation .
 
-ex:floorLocation a psr:CurrentLocation ;
+ex:floorLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:smallBox a psr:Component ;
+ex:smallBox a obot:Component ;
     dul:hasLocation ex:smallBoxLocation .
 
-ex:smallBoxLocation a psr:CurrentLocation ;
+ex:smallBoxLocation a obot:CurrentLocation ;
     geo:sfOnTopOf ex:refrigerator .
 
-ex:table a psr:Component ;
+ex:table a obot:Component ;
     dul:hasLocation ex:tableLocation .
 
-ex:tableLocation a psr:CurrentLocation ;
+ex:tableLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen .
 
-ex:vase a psr:Component ;
+ex:vase a obot:Component ;
     dul:hasLocation ex:vaseLocation .
 
-ex:vaseLocation a psr:CurrentLocation ;
+ex:vaseLocation a obot:CurrentLocation ;
     geo:sfOnTopOf ex:table .
 
-ex:chair a psr:Component ;
+ex:chair a obot:Component ;
     dul:hasLocation ex:chairLocation .
 
-ex:chairLocation a psr:CurrentLocation ;
+ex:chairLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
     geo:sfNear ex:table .
 
-ex:oven a psr:Component ;
+ex:oven a obot:Component ;
     dul:hasLocation ex:ovenLocation ;
-    psr:hasAffordance soma:Delivering .
+    obot:hasAffordance soma:Delivering .
 
-ex:ovenLocation a psr:CurrentLocation ;
+ex:ovenLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
     geo:sfOpposite ex:sinkLocation .
 
-ex:shelf a psr:Component ;
+ex:shelf a obot:Component ;
     dul:hasLocation ex:shelfLocation .
 
-ex:shelfLocation a psr:CurrentLocation ;
+ex:shelfLocation a obot:CurrentLocation ;
     geo:sfWithin ex:kitchen ;
     geo:sfAbove ex:oven .
 
-ex:box a psr:Component ;
+ex:box a obot:Component ;
     dul:hasLocation ex:boxLocation .
 
-ex:boxLocation a psr:CurrentLocation ;
+ex:boxLocation a obot:CurrentLocation ;
     geo:sfOnTopOf ex:shelf .

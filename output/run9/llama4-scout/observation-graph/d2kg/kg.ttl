@@ -3,13 +3,13 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
   dul:hasComponent ex:Kitchen .
 
-ex:Kitchen a psr:Component ;
+ex:Kitchen a obot:Component ;
   rdfs:label "Kitchen"@en ;
   dul:hasComponent ex:Cabinets ;
   dul:hasComponent ex:Countertop ;
@@ -17,11 +17,11 @@ ex:Kitchen a psr:Component ;
   dul:hasComponent ex:Stove ;
   dul:hasComponent ex:Refrigerator .
 
-ex:Cabinets a psr:Component ;
+ex:Cabinets a obot:Component ;
   rdfs:label "Black Cabinets"@en ;
   dul:hasLocation ex:KitchenLocation .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Tan Marble Countertop"@en ;
   dul:hasLocation ex:KitchenLocation ;
   dul:hasComponent ex:YellowMug ;
@@ -32,52 +32,52 @@ ex:Countertop a psr:Component ;
   dul:hasComponent ex:AluminumFoil ;
   dul:hasComponent ex:Plate .
 
-ex:YellowMug a psr:Component ;
+ex:YellowMug a obot:Component ;
   rdfs:label "Yellow Mug"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:ShortbreadBox a psr:Component ;
+ex:ShortbreadBox a obot:Component ;
   rdfs:label "Box of Shortbread"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:JamJar a psr:Component ;
+ex:JamJar a obot:Component ;
   rdfs:label "Jar of Jam"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:RiceBubblesBox a psr:Component ;
+ex:RiceBubblesBox a obot:Component ;
   rdfs:label "Box of Rice Bubbles"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:JelloBox a psr:Component ;
+ex:JelloBox a obot:Component ;
   rdfs:label "Box of Jello"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:AluminumFoil a psr:Component ;
+ex:AluminumFoil a obot:Component ;
   rdfs:label "Aluminum Foil"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:Plate a psr:Component ;
+ex:Plate a obot:Component ;
   rdfs:label "Plate"@en ;
   dul:hasLocation ex:CountertopLocation .
 
-ex:Sink a psr:Component ;
+ex:Sink a obot:Component ;
   rdfs:label "Sink"@en ;
   dul:hasLocation ex:KitchenLocation .
 
-ex:Stove a psr:Component ;
+ex:Stove a obot:Component ;
   rdfs:label "Stove"@en ;
   dul:hasLocation ex:KitchenLocation .
 
-ex:Refrigerator a psr:Component ;
+ex:Refrigerator a obot:Component ;
   rdfs:label "White Refrigerator"@en ;
   dul:hasLocation ex:KitchenLocation .
 
-ex:DiningArea a psr:Component ;
+ex:DiningArea a obot:Component ;
   rdfs:label "Dining Area"@en ;
   dul:hasComponent ex:Table ;
   dul:hasComponent ex:Chairs .
 
-ex:Table a psr:Component ;
+ex:Table a obot:Component ;
   rdfs:label "Wooden Table"@en ;
   dul:hasLocation ex:DiningAreaLocation ;
   dul:hasComponent ex:WaterBottle ;
@@ -86,66 +86,66 @@ ex:Table a psr:Component ;
   dul:hasComponent ex:ChocolatesBox ;
   dul:hasComponent ex:CupsPlate .
 
-ex:Chairs a psr:Component ;
+ex:Chairs a obot:Component ;
   rdfs:label "Four White Chairs"@en ;
   dul:hasLocation ex:DiningAreaLocation .
 
-ex:WaterBottle a psr:Component ;
+ex:WaterBottle a obot:Component ;
   rdfs:label "Bottle of Water"@en ;
   dul:hasLocation ex:TableLocation .
 
-ex:PlateOnTable a psr:Component ;
+ex:PlateOnTable a obot:Component ;
   rdfs:label "Plate"@en ;
   dul:hasLocation ex:TableLocation .
 
-ex:WineGlass a psr:Component ;
+ex:WineGlass a obot:Component ;
   rdfs:label "Wine Glass"@en ;
   dul:hasLocation ex:TableLocation .
 
-ex:ChocolatesBox a psr:Component ;
+ex:ChocolatesBox a obot:Component ;
   rdfs:label "Box of Chocolates"@en ;
   dul:hasLocation ex:TableLocation .
 
-ex:CupsPlate a psr:Component ;
+ex:CupsPlate a obot:Component ;
   rdfs:label "Plate with Cups"@en ;
   dul:hasLocation ex:TableLocation .
 
-ex:KitchenLocation a psr:StandardLocation ;
+ex:KitchenLocation a obot:StandardLocation ;
   rdfs:label "Kitchen Location"@en .
 
-ex:CountertopLocation a psr:StandardLocation ;
+ex:CountertopLocation a obot:StandardLocation ;
   rdfs:label "Countertop Location"@en ;
-  psr:onTopOf ex:Countertop .
+  obot:onTopOf ex:Countertop .
 
-ex:TableLocation a psr:StandardLocation ;
+ex:TableLocation a obot:StandardLocation ;
   rdfs:label "Table Location"@en .
 
-ex:DiningAreaLocation a psr:StandardLocation ;
+ex:DiningAreaLocation a obot:StandardLocation ;
   rdfs:label "Dining Area Location"@en .
 
-ex:Wall a psr:Component ;
+ex:Wall a obot:Component ;
   rdfs:label "Wall"@en ;
   dul:hasLocation ex:EnvironmentLocation .
 
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
   rdfs:label "Door"@en ;
   dul:hasLocation ex:EnvironmentLocation .
 
-ex:EnvironmentLocation a psr:StandardLocation ;
+ex:EnvironmentLocation a obot:StandardLocation ;
   rdfs:label "Environment Location"@en .
 
-ex:Kitchen ex:KitchenLocation psr:onTopOf ex:Kitchen .
+ex:Kitchen ex:KitchenLocation obot:onTopOf ex:Kitchen .
 
-ex:Cabinets ex:KitchenLocation psr:onTopOf ex:Cabinets .
+ex:Cabinets ex:KitchenLocation obot:onTopOf ex:Cabinets .
 
-ex:Countertop ex:KitchenLocation psr:onTopOf ex:Countertop .
+ex:Countertop ex:KitchenLocation obot:onTopOf ex:Countertop .
 
-ex:Sink ex:KitchenLocation psr:onTopOf ex:Sink .
+ex:Sink ex:KitchenLocation obot:onTopOf ex:Sink .
 
-ex:Stove ex:KitchenLocation psr:onTopOf ex:Stove .
+ex:Stove ex:KitchenLocation obot:onTopOf ex:Stove .
 
-ex:Refrigerator ex:KitchenLocation psr:onTopOf ex:Refrigerator .
+ex:Refrigerator ex:KitchenLocation obot:onTopOf ex:Refrigerator .
 
-ex:Table ex:DiningAreaLocation psr:onTopOf ex:Table .
+ex:Table ex:DiningAreaLocation obot:onTopOf ex:Table .
 
-ex:Chairs ex:DiningAreaLocation psr:onTopOf ex:Chairs .
+ex:Chairs ex:DiningAreaLocation obot:onTopOf ex:Chairs .

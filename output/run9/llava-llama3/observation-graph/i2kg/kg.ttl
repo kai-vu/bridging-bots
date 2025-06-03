@@ -2,73 +2,73 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: <http://www.opengis.net/ont/> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
-@prefix psr: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obot: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/data/psr:Environment> a owl:Class ;
+<http://example.org/data/obot:Environment> a owl:Class ;
   rdfs:subClassOf owl:Class ;
   rdfs:comment "An environment is an area or context in which components are found." .
 
 <http://example.org/data/soma:Location> a owl:Class ;
-  rdfs:subClassOf psr:Component ;
+  rdfs:subClassOf obot:Component ;
   rdfs:comment "A location is a specific component within the environment" .
 
-<http://example.org/data/psr:Component> a owl:Class ;
+<http://example.org/data/obot:Component> a owl:Class ;
   rdfs:subClassOf owl:Class ;
   rdfs:comment "A component is a part of an environment that can be used to perform tasks or actions." .
 
-<http://example.org/data/soma:CurrentLocation> psr:Component .
+<http://example.org/data/soma:CurrentLocation> obot:Component .
 
-<http://example.org/data/psr:Appliance> a owl:Class ;
-  rdfs:subClassOf psr:Component ;
+<http://example.org/data/obot:Appliance> a owl:Class ;
+  rdfs:subClassOf obot:Component ;
   rdfs:comment "An appliance is a type of component." .
 
 <http://example.org/data/soma:Furniture> a owl:Class ;
-  rdfs:subClassOf psr:Component ;
+  rdfs:subClassOf obot:Component ;
   rdfs:comment "A furniture is a type of component." .
 
-<http://example.org/data/psr:Object> a owl:Class ;
-  rdfs:subClassOf psr:Component ;
+<http://example.org/data/obot:Object> a owl:Class ;
+  rdfs:subClassOf obot:Component ;
   rdfs:comment "An object is a type of component." .
 
 <http://example.org/data/soma:LocationA> a soma:Location ;
   rdfs:comment "The current location" .
 
-<http://example.org/data/psr:Affordance> a owl:Class ;
-  rdfs:subClassOf psr:Component ;
+<http://example.org/data/obot:Affordance> a owl:Class ;
+  rdfs:subClassOf obot:Component ;
   rdfs:comment "An affordance is a property of an object that indicates how it can be used." .
 
-<http://example.org/data/soma:ClosingA> a psr:Affordance ;
+<http://example.org/data/soma:ClosingA> a obot:Affordance ;
   rdfs:comment "The closing affordance" .
 
-<http://example.org/data/soma:OpeningA> a psr:Affordance ;
+<http://example.org/data/soma:OpeningA> a obot:Affordance ;
   rdfs:comment "The opening affordance" .
 
-<http://example.org/data/soma:DeliveringA> a psr:Affordance ;
+<http://example.org/data/soma:DeliveringA> a obot:Affordance ;
   rdfs:comment "The delivering affordance" .
 
-<http://example.org/data/soma:HoldingA> a psr:Affordance ;
+<http://example.org/data/soma:HoldingA> a obot:Affordance ;
   rdfs:comment "The holding affordance" .
 
-<http://example.org/data/soma:PickingUpA> a psr:Affordance ;
+<http://example.org/data/soma:PickingUpA> a obot:Affordance ;
   rdfs:comment "The picking up affordance" .
 
-<http://example.org/data/soma:PuttingDownA> a psr:Affordance ;
+<http://example.org/data/soma:PuttingDownA> a obot:Affordance ;
   rdfs:comment "The putting down affordance" .
 
-<http://example.org/data/soma:PushingA> a psr:Affordance ;
+<http://example.org/data/soma:PushingA> a obot:Affordance ;
   rdfs:comment "The pushing affordance" .
 
-<http://example.org/data/soma:GraspingA> a psr:Affordance ;
+<http://example.org/data/soma:GraspingA> a obot:Affordance ;
   rdfs:comment "The grasping affordance" .
 
 <http://example.org/data/soma:OnTopOfA> a soma:Location ;
-  geo:sfWithin <http://example.org/data/psr:Component> ;
+  geo:sfWithin <http://example.org/data/obot:Component> ;
   rdfs:comment "The location is on top of another component" .
 
 <http://example.org/data/soma:InsideA> a soma:Location ;
-  geo:sfWithin <http://example.org/data/psr:Component> ;
+  geo:sfWithin <http://example.org/data/obot:Component> ;
   rdfs:comment "The location is inside another component" .
 
 <http://example.org/data/soma:NextToA> a soma:Location ;
-  geo:sfOverlaps <http://example.org/data/psr:Component> ;
+  geo:sfOverlaps <http://example.org/data/obot:Component> ;
   rdfs:comment "The location overlaps with another component" .

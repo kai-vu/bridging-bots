@@ -1,75 +1,75 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItems .
+ex:RestoreKitchenTask a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItems .
 
 ex:IdentifyMisplacedItems a dul:Action ;
   rdfs:label "Identify Misplaced Items"@en ;
-  psr:actsOn ex:Kitchen ;
-  psr:isAffordedBy soma:Grasping ;
-  psr:follows ex:EnterKitchen .
+  obot:actsOn ex:Kitchen ;
+  obot:isAffordedBy soma:Grasping ;
+  obot:follows ex:EnterKitchen .
 
 ex:EnterKitchen a dul:Action ;
   rdfs:label "Enter Kitchen"@en ;
-  psr:actsOn ex:Kitchen ;
-  psr:isAffordedBy soma:Opening .
+  obot:actsOn ex:Kitchen ;
+  obot:isAffordedBy soma:Opening .
 
-ex:Kitchen a psr:Component ;
+ex:Kitchen a obot:Component ;
   rdfs:label "Kitchen"@en .
 
-ex:MisplacedItem1 a psr:Object ;
+ex:MisplacedItem1 a obot:Object ;
   rdfs:label "Yellow Cup"@en .
 
-ex:MisplacedItem2 a psr:Object ;
+ex:MisplacedItem2 a obot:Object ;
   rdfs:label "Bottle of Evian Water"@en .
 
 ex:PickUpYellowCup a dul:Action ;
   rdfs:label "Pick Up Yellow Cup"@en ;
-  psr:actsOn ex:MisplacedItem1 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:IdentifyMisplacedItems .
+  obot:actsOn ex:MisplacedItem1 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:IdentifyMisplacedItems .
 
 ex:PickUpBottleOfEvianWater a dul:Action ;
   rdfs:label "Pick Up Bottle of Evian Water"@en ;
-  psr:actsOn ex:MisplacedItem2 ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:IdentifyMisplacedItems .
+  obot:actsOn ex:MisplacedItem2 ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:IdentifyMisplacedItems .
 
 ex:MoveToStorageLocation1 a dul:Action ;
   rdfs:label "Move to Storage Location 1"@en ;
-  psr:actsOn ex:MisplacedItem1 ;
-  psr:isAffordedBy soma:Pushing ;
-  psr:follows ex:PickUpYellowCup .
+  obot:actsOn ex:MisplacedItem1 ;
+  obot:isAffordedBy soma:Pushing ;
+  obot:follows ex:PickUpYellowCup .
 
 ex:MoveToStorageLocation2 a dul:Action ;
   rdfs:label "Move to Storage Location 2"@en ;
-  psr:actsOn ex:MisplacedItem2 ;
-  psr:isAffordedBy soma:Pushing ;
-  psr:follows ex:PickUpBottleOfEvianWater .
+  obot:actsOn ex:MisplacedItem2 ;
+  obot:isAffordedBy soma:Pushing ;
+  obot:follows ex:PickUpBottleOfEvianWater .
 
 ex:PutDownYellowCup a dul:Action ;
   rdfs:label "Put Down Yellow Cup"@en ;
-  psr:actsOn ex:MisplacedItem1 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveToStorageLocation1 .
+  obot:actsOn ex:MisplacedItem1 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveToStorageLocation1 .
 
 ex:PutDownBottleOfEvianWater a dul:Action ;
   rdfs:label "Put Down Bottle of Evian Water"@en ;
-  psr:actsOn ex:MisplacedItem2 ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveToStorageLocation2 .
+  obot:actsOn ex:MisplacedItem2 ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveToStorageLocation2 .
 
-ex:StandardStorageLocation1 a psr:Component ;
+ex:StandardStorageLocation1 a obot:Component ;
   rdfs:label "Standard Storage Location 1"@en .
 
-ex:StandardStorageLocation2 a psr:Component ;
+ex:StandardStorageLocation2 a obot:Component ;
   rdfs:label "Standard Storage Location 2"@en .
 
-ex:RestoreKitchenTask psr:follows ex:PutDownYellowCup .
-ex:RestoreKitchenTask psr:follows ex:PutDownBottleOfEvianWater .
+ex:RestoreKitchenTask obot:follows ex:PutDownYellowCup .
+ex:RestoreKitchenTask obot:follows ex:PutDownBottleOfEvianWater .

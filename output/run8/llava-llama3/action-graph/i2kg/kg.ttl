@@ -1,4 +1,4 @@
-@prefix psr: <http://example.com/psr#> .
+@prefix obot: <http://example.com/psr#> .
 @prefix dul: <http://example.com/dul#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -6,92 +6,92 @@
 # Instance data for the environment, objects and relevant affordances.
 
 # A kitchen environment as a whole.
-psr:Environment a psr:Environment ;
+obot:Environment a obot:Environment ;
     rdfs:label "Kitchen"@en ;
-    psr:hasWorkflow a psr:Workflow ;
-        psr:follows psr:Action ;
+    obot:hasWorkflow a obot:Workflow ;
+        obot:follows obot:Action ;
             rdfs:comment "The kitchen workflow.".
 
 # The main appliances in the kitchen.
 
 # A refrigerator as an object.
-psr:Refrigerator a psr:Object ;
+obot:Refrigerator a obot:Object ;
     rdfs:label "Refrigerator"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The refrigerator is a component of the kitchen.".
 
 # A stove as an object.
-psr:Stove a psr:Object ;
+obot:Stove a obot:Object ;
     rdfs:label "Stove"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The stove is a component of the kitchen.".
 
 # A sink as an object.
-psr:Sink a psr:Object ;
+obot:Sink a obot:Object ;
     rdfs:label "Sink"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The sink is a component of the kitchen.".
 
 # The countertops as a surface for objects.
-psr:Countertop a psr:Object ;
+obot:Countertop a obot:Object ;
     rdfs:label "Countertop"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The countertop is a component of the kitchen.".
 
 # The cabinets as storage locations for objects.
-psr:Cabinet a psr:Object ;
+obot:Cabinet a obot:Object ;
     rdfs:label "Cabinet"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The cabinet is a component of the kitchen.".
 
 # The items that need to be organized in the kitchen.
 
 # Food items in the refrigerator.
-psr:FoodItem a psr:Object ;
+obot:FoodItem a obot:Object ;
     rdfs:label "Food Item"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The food item is a component of the kitchen.".
 
 # Utensils in the drawer.
-psr:Utensil a psr:Object ;
+obot:Utensil a obot:Object ;
     rdfs:label "Utensil"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The utensil is a component of the kitchen.".
 
 # The dishes in the sink.
-psr:Dish a psr:Object ;
+obot:Dish a obot:Object ;
     rdfs:label "Dish"@en ;
-    dul:isAffordedBy a psr:Component ;
+    dul:isAffordedBy a obot:Component ;
         rdfs:comment "The dish is a component of the kitchen.".
 
 # Actions required to restore the kitchen to an organized state.
 
 # Identifying misplaced items and returning them to their standard storage locations.
-psr:IdentifyMisplacedItem a psr:Action ;
+obot:IdentifyMisplacedItem a obot:Action ;
     rdfs:label "Identify Misplaced Item"@en ;
-    dul:precedes a psr:Action ;
+    dul:precedes a obot:Action ;
         rdfs:comment "The action precedes the action.".
 
 # Returning food items to the refrigerator.
-psr:ReturnFoodItemToRefrigerator a psr:Action ;
+obot:ReturnFoodItemToRefrigerator a obot:Action ;
     rdfs:label "Return Food Item to Refrigerator"@en ;
-    dul:precedes a psr:Action ;
+    dul:precedes a obot:Action ;
         rdfs:comment "The action precedes the action.".
 
 # Returning utensils to the drawer.
-psr:ReturnUtensilToDrawer a psr:Action ;
+obot:ReturnUtensilToDrawer a obot:Action ;
     rdfs:label "Return Utensil to Drawer"@en ;
-    dul:precedes a psr:Action ;
+    dul:precedes a obot:Action ;
         rdfs:comment "The action precedes the action.".
 
 # Washing dishes in the sink.
-psr:WashDishes a psr:Action ;
+obot:WashDishes a obot:Action ;
     rdfs:label "Wash Dishes"@en ;
-    dul:precedes a psr:Action ;
+    dul:precedes a obot:Action ;
         rdfs:comment "The action precedes the action.".
 
 # Organizing cabinets based on the type and function of objects.
-psr:OrganizeCabinets a psr:Action ;
+obot:OrganizeCabinets a obot:Action ;
     rdfs:label "Organize Cabinets"@en ;
-    dul:follows a psr:Action ;
+    dul:follows a obot:Action ;
         rdfs:comment "The action follows the action.".

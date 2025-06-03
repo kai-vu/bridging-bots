@@ -5,137 +5,137 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:Workflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:Workflow .
 
-ex:Workflow a psr:Workflow .
+ex:Workflow a obot:Workflow .
 
 ex:IdentifyMisplacedItems a dul:Action ;
-  psr:actsOn ex:kitchen ;
+  obot:actsOn ex:kitchen ;
   soma:isPerformedBy ex:Robot .
 
-ex:kitchen a psr:Component .
+ex:kitchen a obot:Component .
 
 ex:Robot a dul:Agent .
 
-ex:Workflow ex:psr:hasAction ex:IdentifyMisplacedItems .
+ex:Workflow ex:obot:hasAction ex:IdentifyMisplacedItems .
 
 ex:PickUpYellowMug a dul:Action ;
-  psr:actsOn ex:yellowMug ;
+  obot:actsOn ex:yellowMug ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:yellowMug a psr:Object .
+ex:yellowMug a obot:Object .
 
 ex:PutDownYellowMugInCabinet a dul:Action ;
-  psr:actsOn ex:yellowMug ;
+  obot:actsOn ex:yellowMug ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:blackCabinet a psr:Component .
+ex:blackCabinet a obot:Component .
 
 ex:PickUpJarOfJam a dul:Action ;
-  psr:actsOn ex:jarOfJam ;
+  obot:actsOn ex:jarOfJam ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:jarOfJam a psr:Object .
+ex:jarOfJam a obot:Object .
 
 ex:PutDownJarOfJamInCabinet a dul:Action ;
-  psr:actsOn ex:jarOfJam ;
+  obot:actsOn ex:jarOfJam ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpBoxOfShortbread a dul:Action ;
-  psr:actsOn ex:boxOfShortbread ;
+  obot:actsOn ex:boxOfShortbread ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:boxOfShortbread a psr:Object .
+ex:boxOfShortbread a obot:Object .
 
 ex:PutDownBoxOfShortbreadInCabinet a dul:Action ;
-  psr:actsOn ex:boxOfShortbread ;
+  obot:actsOn ex:boxOfShortbread ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpBoxOfRiceBubbles a dul:Action ;
-  psr:actsOn ex:boxOfRiceBubbles ;
+  obot:actsOn ex:boxOfRiceBubbles ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:boxOfRiceBubbles a psr:Object .
+ex:boxOfRiceBubbles a obot:Object .
 
 ex:PutDownBoxOfRiceBubblesInCabinet a dul:Action ;
-  psr:actsOn ex:boxOfRiceBubbles ;
+  obot:actsOn ex:boxOfRiceBubbles ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpBoxOfJello a dul:Action ;
-  psr:actsOn ex:boxOfJello ;
+  obot:actsOn ex:boxOfJello ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:boxOfJello a psr:Object .
+ex:boxOfJello a obot:Object .
 
 ex:PutDownBoxOfJelloInCabinet a dul:Action ;
-  psr:actsOn ex:boxOfJello ;
+  obot:actsOn ex:boxOfJello ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpAluminumFoil a dul:Action ;
-  psr:actsOn ex:aluminumFoil ;
+  obot:actsOn ex:aluminumFoil ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:aluminumFoil a psr:Object .
+ex:aluminumFoil a obot:Object .
 
 ex:PutDownAluminumFoilInCabinet a dul:Action ;
-  psr:actsOn ex:aluminumFoil ;
+  obot:actsOn ex:aluminumFoil ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpPlateFromCounter a dul:Action ;
-  psr:actsOn ex:plate ;
+  obot:actsOn ex:plate ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isAffordedBy soma:PickingUp .
 
-ex:plate a psr:Object .
+ex:plate a obot:Object .
 
 ex:PutDownPlateInCabinet a dul:Action ;
-  psr:actsOn ex:plate ;
+  obot:actsOn ex:plate ;
   soma:isPerformedBy ex:Robot ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isAffordedBy soma:PuttingDown .
 
-ex:Workflow ex:psr:hasAction ex:PickUpYellowMug .
-ex:Workflow ex:psr:hasAction ex:PutDownYellowMugInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpJarOfJam .
-ex:Workflow ex:psr:hasAction ex:PutDownJarOfJamInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpBoxOfShortbread .
-ex:Workflow ex:psr:hasAction ex:PutDownBoxOfShortbreadInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpBoxOfRiceBubbles .
-ex:Workflow ex:psr:hasAction ex:PutDownBoxOfRiceBubblesInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpBoxOfJello .
-ex:Workflow ex:psr:hasAction ex:PutDownBoxOfJelloInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpAluminumFoil .
-ex:Workflow ex:psr:hasAction ex:PutDownAluminumFoilInCabinet .
-ex:Workflow ex:psr:hasAction ex:PickUpPlateFromCounter .
-ex:Workflow ex:psr:hasAction ex:PutDownPlateInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpYellowMug .
+ex:Workflow ex:obot:hasAction ex:PutDownYellowMugInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpJarOfJam .
+ex:Workflow ex:obot:hasAction ex:PutDownJarOfJamInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpBoxOfShortbread .
+ex:Workflow ex:obot:hasAction ex:PutDownBoxOfShortbreadInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpBoxOfRiceBubbles .
+ex:Workflow ex:obot:hasAction ex:PutDownBoxOfRiceBubblesInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpBoxOfJello .
+ex:Workflow ex:obot:hasAction ex:PutDownBoxOfJelloInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpAluminumFoil .
+ex:Workflow ex:obot:hasAction ex:PutDownAluminumFoilInCabinet .
+ex:Workflow ex:obot:hasAction ex:PickUpPlateFromCounter .
+ex:Workflow ex:obot:hasAction ex:PutDownPlateInCabinet .
 
-ex:PickUpYellowMug psr:follows ex:IdentifyMisplacedItems .
-ex:PutDownYellowMugInCabinet psr:follows ex:PickUpYellowMug .
-ex:PickUpJarOfJam psr:follows ex:PutDownYellowMugInCabinet .
-ex:PutDownJarOfJamInCabinet psr:follows ex:PickUpJarOfJam .
-ex:PickUpBoxOfShortbread psr:follows ex:PutDownJarOfJamInCabinet .
-ex:PutDownBoxOfShortbreadInCabinet psr:follows ex:PickUpBoxOfShortbread .
-ex:PickUpBoxOfRiceBubbles psr:follows ex:PutDownBoxOfShortbreadInCabinet .
-ex:PutDownBoxOfRiceBubblesInCabinet psr:follows ex:PickUpBoxOfRiceBubbles .
-ex:PickUpBoxOfJello psr:follows ex:PutDownBoxOfRiceBubblesInCabinet .
-ex:PutDownBoxOfJelloInCabinet psr:follows ex:PickUpBoxOfJello .
-ex:PickUpAluminumFoil psr:follows ex:PutDownBoxOfJelloInCabinet .
-ex:PutDownAluminumFoilInCabinet psr:follows ex:PickUpAluminumFoil .
-ex:PickUpPlateFromCounter psr:follows ex:PutDownAluminumFoilInCabinet .
-ex:PutDownPlateInCabinet psr:follows ex:PickUpPlateFromCounter .
+ex:PickUpYellowMug obot:follows ex:IdentifyMisplacedItems .
+ex:PutDownYellowMugInCabinet obot:follows ex:PickUpYellowMug .
+ex:PickUpJarOfJam obot:follows ex:PutDownYellowMugInCabinet .
+ex:PutDownJarOfJamInCabinet obot:follows ex:PickUpJarOfJam .
+ex:PickUpBoxOfShortbread obot:follows ex:PutDownJarOfJamInCabinet .
+ex:PutDownBoxOfShortbreadInCabinet obot:follows ex:PickUpBoxOfShortbread .
+ex:PickUpBoxOfRiceBubbles obot:follows ex:PutDownBoxOfShortbreadInCabinet .
+ex:PutDownBoxOfRiceBubblesInCabinet obot:follows ex:PickUpBoxOfRiceBubbles .
+ex:PickUpBoxOfJello obot:follows ex:PutDownBoxOfRiceBubblesInCabinet .
+ex:PutDownBoxOfJelloInCabinet obot:follows ex:PickUpBoxOfJello .
+ex:PickUpAluminumFoil obot:follows ex:PutDownBoxOfJelloInCabinet .
+ex:PutDownAluminumFoilInCabinet obot:follows ex:PickUpAluminumFoil .
+ex:PickUpPlateFromCounter obot:follows ex:PutDownAluminumFoilInCabinet .
+ex:PutDownPlateInCabinet obot:follows ex:PickUpPlateFromCounter .

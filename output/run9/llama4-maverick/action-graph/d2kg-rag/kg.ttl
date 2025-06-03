@@ -1,51 +1,51 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItems ;
-    psr:hasAction ex:PickUpMisplacedItem1 ;
-    psr:hasAction ex:PutAwayMisplacedItem1 ;
-    psr:hasAction ex:PickUpMisplacedItem2 ;
-    psr:hasAction ex:PutAwayMisplacedItem2 .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItems ;
+    obot:hasAction ex:PickUpMisplacedItem1 ;
+    obot:hasAction ex:PutAwayMisplacedItem1 ;
+    obot:hasAction ex:PickUpMisplacedItem2 ;
+    obot:hasAction ex:PutAwayMisplacedItem2 .
 
 ex:IdentifyMisplacedItems a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:KitchenEnvironment .
+    obot:actsOn ex:KitchenEnvironment .
 
 ex:PickUpMisplacedItem1 a soma:PickingUp ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JarOfJam .
+    obot:actsOn ex:JarOfJam .
 
 ex:PutAwayMisplacedItem1 a soma:PuttingDown ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JarOfJam ;
-    psr:follows ex:PickUpMisplacedItem1 .
+    obot:actsOn ex:JarOfJam ;
+    obot:follows ex:PickUpMisplacedItem1 .
 
 ex:PickUpMisplacedItem2 a soma:PickingUp ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:BoxOfCrackers ;
-    psr:follows ex:PutAwayMisplacedItem1 .
+    obot:actsOn ex:BoxOfCrackers ;
+    obot:follows ex:PutAwayMisplacedItem1 .
 
 ex:PutAwayMisplacedItem2 a soma:PuttingDown ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:BoxOfCrackers ;
-    psr:follows ex:PickUpMisplacedItem2 .
+    obot:actsOn ex:BoxOfCrackers ;
+    obot:follows ex:PickUpMisplacedItem2 .
 
-ex:KitchenEnvironment a psr:Component .
+ex:KitchenEnvironment a obot:Component .
 ex:Robot a dul:Agent .
-ex:JarOfJam a psr:Object .
-ex:BoxOfCrackers a psr:Object .
+ex:JarOfJam a obot:Object .
+ex:BoxOfCrackers a obot:Object .
 
-ex:PickUpMisplacedItem1 psr:isAffordedBy soma:PickingUp .
-ex:PutAwayMisplacedItem1 psr:isAffordedBy soma:PuttingDown .
-ex:PickUpMisplacedItem2 psr:isAffordedBy soma:PickingUp .
-ex:PutAwayMisplacedItem2 psr:isAffordedBy soma:PuttingDown .
+ex:PickUpMisplacedItem1 obot:isAffordedBy soma:PickingUp .
+ex:PutAwayMisplacedItem1 obot:isAffordedBy soma:PuttingDown .
+ex:PickUpMisplacedItem2 obot:isAffordedBy soma:PickingUp .
+ex:PutAwayMisplacedItem2 obot:isAffordedBy soma:PuttingDown .

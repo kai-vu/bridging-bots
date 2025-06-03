@@ -1,100 +1,100 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Cabinets, ex:Refrigerator, ex:Table, ex:Chairs, ex:Bottle, ex:Pitcher, ex:WineGlass, ex:Plate, ex:PacketOfCrackers, ex:Pot, ex:Stove, ex:Sink, ex:RangeHood, ex:Mirror, ex:Door, ex:LightSource, ex:Floor .
 
-ex:Cabinets a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:Cabinets a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:Refrigerator a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Refrigerator a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     geo:sfWithin ex:Kitchen .
 
-ex:Table a psr:Furniture ;
-    psr:hasAffordance soma:PuttingDown, soma:PickingUp ;
+ex:Table a obot:Furniture ;
+    obot:hasAffordance soma:PuttingDown, soma:PickingUp ;
     dul:hasLocation ex:DiningArea .
 
-ex:Chairs a psr:Furniture ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:Chairs a obot:Furniture ;
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:Bottle a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding ;
+ex:Bottle a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding ;
     geo:sfWithin ex:Pitcher .
 
-ex:Pitcher a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding, soma:PuttingDown ;
+ex:Pitcher a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding, soma:PuttingDown ;
     dul:hasLocation ex:Table .
 
-ex:WineGlass a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding ;
+ex:WineGlass a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding ;
     dul:hasLocation ex:Table .
 
-ex:Plate a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding ;
+ex:Plate a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding ;
     dul:hasLocation ex:Table .
 
-ex:PacketOfCrackers a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding ;
+ex:PacketOfCrackers a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding ;
     dul:hasLocation ex:Table .
 
-ex:Pot a psr:Object ;
-    psr:hasAffordance soma:Grasping, soma:Holding ;
+ex:Pot a obot:Object ;
+    obot:hasAffordance soma:Grasping, soma:Holding ;
     dul:hasLocation ex:Stove .
 
-ex:Stove a psr:Appliance ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:Stove a obot:Appliance ;
+    obot:hasAffordance soma:TurningOn, soma:TurningOff .
 
-ex:Sink a psr:Object ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff ;
+ex:Sink a obot:Object ;
+    obot:hasAffordance soma:TurningOn, soma:TurningOff ;
     dul:hasLocation ex:Counter .
 
-ex:RangeHood a psr:Appliance ;
-    psr:hasAffordance soma:TurningOn, soma:TurningOff ;
+ex:RangeHood a obot:Appliance ;
+    obot:hasAffordance soma:TurningOn, soma:TurningOff ;
     dul:hasLocation ex:AboveStove .
 
-ex:Mirror a psr:Object ;
+ex:Mirror a obot:Object ;
     dul:hasLocation ex:Wall .
 
-ex:Door a psr:Object ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Door a obot:Object ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:RightWall .
 
-ex:LightSource a psr:Object ;
+ex:LightSource a obot:Object ;
     dul:hasLocation ex:Ceiling .
 
-ex:Floor a psr:Object ;
+ex:Floor a obot:Object ;
     dul:hasLocation ex:Kitchen .
 
-ex:Counter a psr:Location ;
+ex:Counter a obot:Location ;
     geo:sfContains ex:Sink .
 
-ex:DiningArea a psr:Location ;
+ex:DiningArea a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:RightWall a psr:Location ;
+ex:RightWall a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:Ceiling a psr:Location ;
+ex:Ceiling a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:AboveStove a psr:Location ;
+ex:AboveStove a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
 ex:Cabinets dul:hasLocation ex:Kitchen .
 ex:Refrigerator dul:hasLocation ex:BesideCabinets .
 ex:Table dul:hasLocation ex:DiningArea .
 
-ex:BesideCabinets a psr:Location ;
+ex:BesideCabinets a obot:Location ;
     geo:sfWithin ex:Kitchen .
 
-ex:CurrentLocationOfBottle a psr:CurrentLocation ;
-    psr:onTopOf ex:Pitcher .
+ex:CurrentLocationOfBottle a obot:CurrentLocation ;
+    obot:onTopOf ex:Pitcher .
 
-ex:CurrentLocationOfPot a psr:CurrentLocation ;
-    psr:onTopOf ex:Stove .
+ex:CurrentLocationOfPot a obot:CurrentLocation ;
+    obot:onTopOf ex:Stove .

@@ -1,5 +1,5 @@
 @prefix ex:    <http://example.org/kb/> .
-@prefix psr:   <https://w3id.org/psr-action#> .
+@prefix psr:   <https://w3id.org/OntoBOT#> .
 @prefix soma:  <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .

@@ -5,199 +5,199 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction ;
-  psr:hasAction ex:ReturnItemsToStorageAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction ;
+  obot:hasAction ex:ReturnItemsToStorageAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItems ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItems ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:Robot a dul:Agent .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:MisplacedItems a psr:Object ;
+ex:MisplacedItems a obot:Object ;
   rdfs:label "Misplaced Items"@en .
 
-ex:YellowCup a psr:Object ;
+ex:YellowCup a obot:Object ;
   rdfs:label "Yellow Cup"@en ;
   ex:locatedIn ex:Countertop .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Countertop"@en .
 
-ex:StandardStorageLocation a psr:Component ;
+ex:StandardStorageLocation a obot:Component ;
   rdfs:label "Standard Storage Location"@en .
 
 ex:IdentifyYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveYellowCupToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyYellowCupAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyYellowCupAction .
 
-ex:RedAndWhiteJar a psr:Object ;
+ex:RedAndWhiteJar a obot:Object ;
   rdfs:label "Red-and-white Jar"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveRedAndWhiteJarToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyRedAndWhiteJarAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyRedAndWhiteJarAction .
 
-ex:BlueAndWhiteBox a psr:Object ;
+ex:BlueAndWhiteBox a obot:Object ;
   rdfs:label "Blue-and-white Box"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveBlueAndWhiteBoxToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyBlueAndWhiteBoxAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyBlueAndWhiteBoxAction .
 
-ex:RedBox a psr:Object ;
+ex:RedBox a obot:Object ;
   rdfs:label "Red Box"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyRedBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveRedBoxToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyRedBoxAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyRedBoxAction .
 
-ex:StackOfWhitePlates a psr:Object ;
+ex:StackOfWhitePlates a obot:Object ;
   rdfs:label "Stack of White Plates"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyStackOfWhitePlatesAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveStackOfWhitePlatesToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyStackOfWhitePlatesAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyStackOfWhitePlatesAction .
 
-ex:BottleOfEvianWater a psr:Object ;
+ex:BottleOfEvianWater a obot:Object ;
   rdfs:label "Bottle of Evian Water"@en ;
   ex:locatedIn ex:Table .
 
-ex:PlateWithMugAndSpoon a psr:Object ;
+ex:PlateWithMugAndSpoon a obot:Object ;
   rdfs:label "Plate with Mug and Spoon"@en ;
   ex:locatedIn ex:Table .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
   rdfs:label "Book"@en ;
   ex:locatedIn ex:Table .
 
-ex:BowlOfFruit a psr:Object ;
+ex:BowlOfFruit a obot:Object ;
   rdfs:label "Bowl of Fruit"@en ;
   ex:locatedIn ex:Table .
 
 ex:MoveBottleOfEvianWaterToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:IdentifyMisplacedItemsAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:MovePlateWithMugAndSpoonToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MoveBottleOfEvianWaterToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MoveBottleOfEvianWaterToStorageAction .
 
 ex:MoveBookToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Book ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MovePlateWithMugAndSpoonToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Book ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MovePlateWithMugAndSpoonToStorageAction .
 
 ex:MoveBowlOfFruitToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MoveBookToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MoveBookToStorageAction .
 
 ex:PutDownBottleOfEvianWaterAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBottleOfEvianWaterToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBottleOfEvianWaterToStorageAction .
 
 ex:PutDownPlateWithMugAndSpoonAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MovePlateWithMugAndSpoonToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MovePlateWithMugAndSpoonToStorageAction .
 
 ex:PutDownBookAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Book ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBookToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Book ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBookToStorageAction .
 
 ex:PutDownBowlOfFruitAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBowlOfFruitToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBowlOfFruitToStorageAction .
 
 ex:PutDownYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveYellowCupToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveYellowCupToStorageAction .
 
 ex:PutDownRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveRedAndWhiteJarToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveRedAndWhiteJarToStorageAction .
 
 ex:PutDownBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBlueAndWhiteBoxToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBlueAndWhiteBoxToStorageAction .
 
 ex:PutDownRedBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
+  obot:isPerformedBy ex:Robot ;
   ps@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
@@ -205,195 +205,195 @@ ex:PutDownRedBoxAction a dul:Action ;
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenInstruction a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+ex:RestoreKitchenInstruction a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction ;
-  psr:hasAction ex:ReturnItemsToStorageAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction ;
+  obot:hasAction ex:ReturnItemsToStorageAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:MisplacedItems ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:MisplacedItems ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:RobotAgent a dul:Agent .
 
-ex:KitchenArea a psr:Component .
+ex:KitchenArea a obot:Component .
 
-ex:MisplacedItems a psr:Object .
+ex:MisplacedItems a obot:Object .
 
-ex:YellowCup a psr:Object ;
+ex:YellowCup a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:RedAndWhiteJar a psr:Object ;
+ex:RedAndWhiteJar a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:BlueAndWhiteBox a psr:Object ;
+ex:BlueAndWhiteBox a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:RedBoxChucky a psr:Object ;
+ex:RedBoxChucky a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:RedBoxJello a psr:Object ;
+ex:RedBoxJello a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:StackOfWhitePlates a psr:Object ;
+ex:StackOfWhitePlates a obot:Object ;
   ex:locatedIn ex:KitchenArea .
 
-ex:BottleOfEvianWater a psr:Object ;
+ex:BottleOfEvianWater a obot:Object ;
   ex:locatedIn ex:DiningArea .
 
-ex:PlateWithMugAndSpoon a psr:Object ;
+ex:PlateWithMugAndSpoon a obot:Object ;
   ex:locatedIn ex:DiningArea .
 
-ex:BookChocolateCakeMurder a psr:Object ;
+ex:BookChocolateCakeMurder a obot:Object ;
   ex:locatedIn ex:DiningArea .
 
-ex:BowlOfFruit a psr:Object ;
+ex:BowlOfFruit a obot:Object ;
   ex:locatedIn ex:DiningArea .
 
 ex:PickUpYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:IdentifyMisplacedItemsAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:PickUpRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpYellowCupAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpYellowCupAction .
 
 ex:PickUpBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpRedAndWhiteJarAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpRedAndWhiteJarAction .
 
 ex:PickUpRedBoxChuckyAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedBoxChucky ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpBlueAndWhiteBoxAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedBoxChucky ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpBlueAndWhiteBoxAction .
 
 ex:PickUpRedBoxJelloAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedBoxJello ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpRedBoxChuckyAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedBoxJello ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpRedBoxChuckyAction .
 
 ex:PickUpStackOfWhitePlatesAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpRedBoxJelloAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpRedBoxJelloAction .
 
 ex:PutDownYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpYellowCupAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpYellowCupAction .
 
 ex:PutDownRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownYellowCupAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownYellowCupAction .
 
 ex:PutDownBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownRedAndWhiteJarAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownRedAndWhiteJarAction .
 
 ex:PutDownRedBoxChuckyAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedBoxChucky ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownBlueAndWhiteBoxAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedBoxChucky ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownBlueAndWhiteBoxAction .
 
 ex:PutDownRedBoxJelloAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:RedBoxJello ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownRedBoxChuckyAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:RedBoxJello ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownRedBoxChuckyAction .
 
 ex:PutDownStackOfWhitePlatesAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownRedBoxJelloAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownRedBoxJelloAction .
 
 ex:MoveToDiningAreaAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:DiningArea ;
-  psr:isAffordedBy soma:Moving .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:DiningArea ;
+  obot:isAffordedBy soma:Moving .
 
 ex:PickUpBottleOfEvianWaterAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MoveToDiningAreaAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MoveToDiningAreaAction .
 
 ex:PickUpPlateWithMugAndSpoonAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpBottleOfEvianWaterAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpBottleOfEvianWaterAction .
 
 ex:PickUpBookChocolateCakeMurderAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BookChocolateCakeMurder ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpPlateWithMugAndSpoonAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BookChocolateCakeMurder ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpPlateWithMugAndSpoonAction .
 
 ex:PickUpBowlOfFruitAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:PickUpBookChocolateCakeMurderAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:PickUpBookChocolateCakeMurderAction .
 
 ex:PutDownBottleOfEvianWaterAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PickUpBottleOfEvianWaterAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PickUpBottleOfEvianWaterAction .
 
 ex:PutDownPlateWithMugAndSpoonAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownBottleOfEvianWaterAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownBottleOfEvianWaterAction .
 
 ex:PutDownBookChocolateCakeMurderAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BookChocolateCakeMurder ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownPlateWithMugAndSpoonAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BookChocolateCakeMurder ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownPlateWithMugAndSpoonAction .
 
 ex:PutDownBowlOfFruitAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:PutDownBookChocolateCakeMurderAction .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:PutDownBookChocolateCakeMurderAction .
 
 ex:MoveToKitchenAreaAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:Moving .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:Moving .
 
-ex:RestoreKitchenInstruction psr:hasWorkflow ex:RestoreKitchenWorkflow .
-ex:RestoreKitchenWorkflow psr:hasAction ex:IdentifyMisplacedItemsAction .
-ex:RestoreKitchenWorkflow psr:hasAction ex:ReturnItemsToStorageAction .
+ex:RestoreKitchenInstruction obot:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenWorkflow obot:hasAction ex:IdentifyMisplacedItemsAction .
+ex:RestoreKitchenWorkflow obot:hasAction ex:ReturnItemsToStorageAction .
 ex:ReturnItems@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
@@ -401,207 +401,207 @@ ex:ReturnItems@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/psr-action#> .
+@prefix obot: <https://w3id.org/OntoBOT#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction ;
-  psr:hasAction ex:ReturnItemsToStorageAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction ;
+  obot:hasAction ex:ReturnItemsToStorageAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:KitchenArea ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:KitchenArea ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:MisplacedItems ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:MisplacedItems ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:Robot a dul:Agent .
 
-ex:KitchenArea a psr:Component ;
+ex:KitchenArea a obot:Component ;
   rdfs:label "Kitchen Area"@en .
 
-ex:MisplacedItems a psr:Object ;
+ex:MisplacedItems a obot:Object ;
   rdfs:label "Misplaced Items"@en .
 
-ex:YellowCup a psr:Object ;
+ex:YellowCup a obot:Object ;
   rdfs:label "Yellow Cup"@en ;
   ex:locatedIn ex:Countertop .
 
-ex:Countertop a psr:Component ;
+ex:Countertop a obot:Component ;
   rdfs:label "Countertop"@en .
 
-ex:StandardStorageLocation a psr:Component ;
+ex:StandardStorageLocation a obot:Component ;
   rdfs:label "Standard Storage Location"@en .
 
 ex:IdentifyYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveYellowCupToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyYellowCupAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyYellowCupAction .
 
-ex:RedAndWhiteJar a psr:Object ;
+ex:RedAndWhiteJar a obot:Object ;
   rdfs:label "Red-and-white Jar"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveRedAndWhiteJarToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyRedAndWhiteJarAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyRedAndWhiteJarAction .
 
-ex:BlueAndWhiteBox a psr:Object ;
+ex:BlueAndWhiteBox a obot:Object ;
   rdfs:label "Blue-and-white Box"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveBlueAndWhiteBoxToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyBlueAndWhiteBoxAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyBlueAndWhiteBoxAction .
 
-ex:RedBox a psr:Object ;
+ex:RedBox a obot:Object ;
   rdfs:label "Red Box"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyRedBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveRedBoxToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyRedBoxAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyRedBoxAction .
 
-ex:StackOfWhitePlates a psr:Object ;
+ex:StackOfWhitePlates a obot:Object ;
   rdfs:label "Stack of White Plates"@en ;
   ex:locatedIn ex:Countertop .
 
 ex:IdentifyStackOfWhitePlatesAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:MoveStackOfWhitePlatesToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyStackOfWhitePlatesAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyStackOfWhitePlatesAction .
 
-ex:BottleOfEvianWater a psr:Object ;
+ex:BottleOfEvianWater a obot:Object ;
   rdfs:label "Bottle of Evian Water"@en ;
   ex:locatedIn ex:Table .
 
-ex:PlateWithMugAndSpoon a psr:Object ;
+ex:PlateWithMugAndSpoon a obot:Object ;
   rdfs:label "Plate with Mug and Spoon"@en ;
   ex:locatedIn ex:Table .
 
-ex:Book a psr:Object ;
+ex:Book a obot:Object ;
   rdfs:label "Book"@en ;
   ex:locatedIn ex:Table .
 
-ex:BowlOfFruit a psr:Object ;
+ex:BowlOfFruit a obot:Object ;
   rdfs:label "Bowl of Fruit"@en ;
   ex:locatedIn ex:Table .
 
 ex:MoveBottleOfEvianWaterToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:IdentifyMisplacedItemsAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:MovePlateWithMugAndSpoonToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MoveBottleOfEvianWaterToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MoveBottleOfEvianWaterToStorageAction .
 
 ex:MoveBookToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Book ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MovePlateWithMugAndSpoonToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Book ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MovePlateWithMugAndSpoonToStorageAction .
 
 ex:MoveBowlOfFruitToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PickingUp ;
-  psr:follows ex:MoveBookToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PickingUp ;
+  obot:follows ex:MoveBookToStorageAction .
 
 ex:PutDownBottleOfEvianWaterAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BottleOfEvianWater ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBottleOfEvianWaterToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BottleOfEvianWater ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBottleOfEvianWaterToStorageAction .
 
 ex:PutDownPlateWithMugAndSpoonAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:PlateWithMugAndSpoon ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MovePlateWithMugAndSpoonToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:PlateWithMugAndSpoon ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MovePlateWithMugAndSpoonToStorageAction .
 
 ex:PutDownBookAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:Book ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBookToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:Book ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBookToStorageAction .
 
 ex:PutDownBowlOfFruitAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BowlOfFruit ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBowlOfFruitToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BowlOfFruit ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBowlOfFruitToStorageAction .
 
 ex:PutDownYellowCupAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:YellowCup ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveYellowCupToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:YellowCup ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveYellowCupToStorageAction .
 
 ex:PutDownRedAndWhiteJarAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedAndWhiteJar ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveRedAndWhiteJarToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedAndWhiteJar ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveRedAndWhiteJarToStorageAction .
 
 ex:PutDownBlueAndWhiteBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:BlueAndWhiteBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveBlueAndWhiteBoxToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:BlueAndWhiteBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveBlueAndWhiteBoxToStorageAction .
 
 ex:PutDownRedBoxAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:RedBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveRedBoxToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:RedBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveRedBoxToStorageAction .
 
 ex:PutDownStackOfWhitePlatesAction a dul:Action ;
-  psr:isPerformedBy ex:Robot ;
-  psr:actsOn ex:StackOfWhitePlates ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:MoveStackOfWhitePlatesToStorageAction .
+  obot:isPerformedBy ex:Robot ;
+  obot:actsOn ex:StackOfWhitePlates ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:MoveStackOfWhitePlatesToStorageAction .
 
-ex:RestoreKitchenTask psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask obot:hasWorkflow ex:RestoreKitchenWorkflow .
