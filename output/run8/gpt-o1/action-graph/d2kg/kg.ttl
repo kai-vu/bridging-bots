@@ -1,4 +1,4 @@
-@prefix obot: <https://w3id.org/OntoBOT#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix ex: <http://example.org/data/> .

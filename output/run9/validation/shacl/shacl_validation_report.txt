@@ -1706,7 +1706,7 @@ Conforms: True
 === ERROR validating: ../../output/llama4-scout/action-graph/i2kg/kg.ttl ===
 BadSyntax: at line 147 of <>:
 Bad syntax (expected directive or statement) at ^ in:
-"...b'xpressed in a natural language."@en .\n\n### Knowledge Graph\n\n'^b'```turtle\n@prefix obot: <https://w3id.org/OntoBOT#> .\n@pre'..."
+"...b'xpressed in a natural language."@en .\n\n### Knowledge Graph\n\n'^b'```turtle\n@prefix obot: <https://w3id.org/onto-bot#> .\n@pre'..."
 
 === Validation Report for: ../../output/llama4-scout/action-graph/d2kg/kg.ttl ===
 Validation Report

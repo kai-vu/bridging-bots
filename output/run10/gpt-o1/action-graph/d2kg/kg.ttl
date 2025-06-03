@@ -1,4 +1,4 @@
-@prefix psr: <https://w3id.org/OntoBOT#> .
+@prefix psr: <https://w3id.org/onto-bot#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

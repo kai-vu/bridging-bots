@@ -1,5 +1,5 @@
 @prefix ex: <http://example.org/data/> .
-@prefix psr: <https://w3id.org/OntoBOT#> .
+@prefix psr: <https://w3id.org/onto-bot#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

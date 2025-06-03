@@ -1,0 +1,542 @@
+File,ConstraintType,ViolationMessage
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Kitchen not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Room2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Cabinet2->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Kitchen->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Room1->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Cabinet1->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Floor->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Room2->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Countertop2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Countertop1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Door not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Window not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Refrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:VentHood not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Cabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Microwave not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Oven not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Table not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:Chairs not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:VentHood->psr:hasAffordance
+../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Window->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Counter not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Door not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Table not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Stove not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Refrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Chair not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Cabinet not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Sink not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Counter->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Object->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Cabinet->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Furniture->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Door->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Appliance->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Sink->psr:hasAffordance
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Counter->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Object->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Cabinet->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Furniture->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Door->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on psr:Appliance->dul:hasLocation
+../../output/llama4-scout/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Sink->dul:hasLocation
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Cabinet2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Cabinet1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Stove not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Refrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningTable not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Sink not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Wall1->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:CounterTop2->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:CounterTop1->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Wall1->dul:hasLocation
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Laptop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:DiningChairs not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Book not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Lemons not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:LightFixture not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:DiningTable not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WoodenFloor not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:MarbleCountertop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:KitchenCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Refrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:MarbleCountertop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:WoodenFloor not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:KitchenCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:WhiteWall not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:WhiteRefrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:DiningRoomTable not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:WhiteChairs not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Value ex:RoundLightFixture not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:DiningRoomTable->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:DarkGreyCabinetsUnderneath->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Book->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BoxOfJello->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BoxOfCrackers->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:MarbleCountertop->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BoxOfAlpenSalt->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:KitchenCabinetsHandles->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BoxOfRiceBubbles->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Jar->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:WhiteWall->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:StackOfPlates->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:WhiteChairs->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BottleOfWater->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Pot->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Laptop->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:RoundLightFixture->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:KitchenCountertop->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:CartonOfMilk->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:KitchenExhaustHood->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Stove->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:BowlOfLemons->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:WoodenFloor->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:WoodenFramedMirror->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:WhiteRefrigerator->psr:hasAffordance
+../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:Sink->psr:hasAffordance
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Counter not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:RiceBubblesBox1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Door1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:JelloBox1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Mug1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Pot1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningTable not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Window1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningChair2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:JamJar1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:RangeHood not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:FruitBowl1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:PlateSet1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Fridge not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningChair4 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Salt1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningChair3 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:UpperCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Glass1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:DiningChair1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:WaterBottle1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:LowerCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:ChuckyCrispBox1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Pitcher1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,"Value ex:Sink not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Window1->psr:hasAffordance
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Door1->dul:hasLocation
+../../output/gpt-o1/observation-graph/i2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:Window1->dul:hasLocation
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Countertop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:LargeWaterBottle not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:MetalSink not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:StackedWhitePlates not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Stovetop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:SmHolder not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:Refrigerator not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WhiteBowlOfOranges not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:BlackBaseCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:PlainWhiteWalls not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:BlackWallCabinets not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:BoxOfSnackCookieMix not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:RoundCeilingLightFixture not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:ContainerOfSaltAlpen not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:CerealBoxRiceBubbles not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:JarOfJam1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WoodenFramedRangeHood not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WhiteUpholsteredChairs not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:PantryCabinet not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:OrangeMug not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:CookingPot not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WoodParquetFloor not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:JarOfStrawberryJam2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:SimpleWhiteDoor not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:SilveryDeviceLaptop not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:ClearPitcher not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:WoodenDiningTable not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:EmptyWineGlass not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:CerealBoxChuckyHarps2 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:BoxOfStrawberryJello not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/gpt-o1/observation-graph/d2kg/kg.ttl,UnknownConstraint,"Value ex:CerealBoxChuckyHarps1 not in list ['psr:Appliance', 'psr:Object', 'psr:Component', 'psr:Furniture']"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:instruction->psr:hasNaturalLanguage
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node psr:pick_up_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node psr:pick_up_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node psr:place_item_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node psr:place_item_2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownWhitePlateOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownAlpenSaltAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownYellowMugAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpBoxJello2Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownChuckyPuzzleBoxAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpWhitePlateOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:MisplacedItemsIdentification must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpPuzzleBoxOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:IdentifyMisplacedItemsAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownBottleWaterAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpYellowMugAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpRiceBubblesAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownJarRedWhiteLidAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownPuzzleBoxOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownBoxJello2Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpBoxJello1Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpChuckyPuzzleBoxAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownBoxJello1Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownTwoWhiteCupsAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpPlateStackAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpMugOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:EnterKitchenAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpBottleWaterAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownMugOnTableAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpJarRedWhiteLidAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownJarRedLidAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpJarRedLidAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpAlpenSaltAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PickUpTwoWhiteCupsAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownPlateStackAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:PutDownRiceBubblesAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node psr:Action_1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:PickUpMisplacedItem1Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:None must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:PutAwayMisplacedItem1Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:PickUpMisplacedItem2Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:IdentifyMisplacedItemsAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:PutAwayMisplacedItem2Action must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Less than 1 values on ex:None->psr:actsOn
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Less than 1 values on ex:RestoreKitchenTask->psr:hasNaturalLanguage
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class dul:Action
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,Value does not have class dul:Action
+../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl,UnknownConstraint,"Node ex:IdentifyMisplacedItemsAction must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action18 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action22 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action21 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action19 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action31 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action17 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action25 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action30 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action29 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action26 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action32 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action23 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action27 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action16 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action28 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action24 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,"Node ex:Action20 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/i2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action16 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action20 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action24 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action23 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action28 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action18 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action25 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action22 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action19 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action21 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action26 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action17 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action27 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,"Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(""1"", datatype=xsd:integer) ; sh:path dul:follows ] ]"
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Affordance
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component
+../../output/gpt-o1/action-graph/d2kg/kg.ttl,UnknownConstraint,Value does not have class psr:Component

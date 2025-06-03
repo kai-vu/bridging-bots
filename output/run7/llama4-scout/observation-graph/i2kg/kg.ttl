@@ -3,7 +3,7 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obot: <https://w3id.org/OntoBOT#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
 obot:Environment a owl:Class, dul:Entity ;
@@ -224,7 +224,7 @@ ex:component_Stove dul:hasLocation@prefix owl: <http://www.w3.org/2002/07/owl#> 
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obot: <https://w3id.org/OntoBOT#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
 obot:Environment a owl:Class, dul:Entity ;
@@ -431,7 +431,7 @@ ex:component_Stove rdfs:label "Kitchen Stove"@en ;
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obot: <https://w3id.org/OntoBOT#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
 obot:Environment a owl:Class, dul:Entity ;
@@ -641,7 +641,7 @@ ex:Kitchen dul:hasComponent ex:Countertop2 .
 ex:Kitchen dul:hasComponent ex:Sink .
 ex:Kitchen dul:hasComponent ex:Stove .
 
-ex:Countertop1 dul@prefix obot: <https://w3id.org/OntoBOT#> .
+ex:Countertop1 dul@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
@@ -883,7 +883,7 @@ ex:Mirror
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obot: <https://w3id.org/OntoBOT#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
 obot:Environment a owl:Class, dul:Entity ;
