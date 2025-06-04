@@ -1,92 +1,92 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:kitchen a psr:Environment ;
+ex:kitchen a obot:Environment ;
     rdfs:label "Kitchen"@en ;
     dul:hasComponent ex:blackCountertop, ex:sink, ex:oven1, ex:oven2, ex:fridge, ex:boxECO, ex:diningTable, ex:chair, ex:bottle, ex:boxOnTable, ex:book, ex:openCabinet, ex:cups, ex:bowls, ex:cannedGoods, ex:cerealBox .
 
-ex:diningArea a psr:Environment ;
+ex:diningArea a obot:Environment ;
     rdfs:label "Dining Area"@en ;
     dul:hasComponent ex:whiteCountertop, ex:cabinets, ex:lightFixture .
 
-ex:blackCountertop a psr:Component ;
+ex:blackCountertop a obot:Component ;
     rdfs:label "Black Countertop"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:sink a psr:Component ;
+ex:sink a obot:Component ;
     rdfs:label "Sink"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:oven1 a psr:Component ;
+ex:oven1 a obot:Component ;
     rdfs:label "Oven 1"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:oven2 a psr:Component ;
+ex:oven2 a obot:Component ;
     rdfs:label "Oven 2"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:fridge a psr:Component ;
+ex:fridge a obot:Component ;
     rdfs:label "Fridge"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:boxECO a psr:Component ;
+ex:boxECO a obot:Component ;
     rdfs:label "Box ECO"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:diningTable a psr:Component ;
+ex:diningTable a obot:Component ;
     rdfs:label "Dining Table"@en ;
     dul:hasLocation ex:diningAreaLocation .
 
-ex:chair a psr:Component ;
+ex:chair a obot:Component ;
     rdfs:label "Chair"@en ;
     dul:hasLocation ex:diningAreaLocation .
 
-ex:bottle a psr:Component ;
+ex:bottle a obot:Component ;
     rdfs:label "Bottle"@en ;
     dul:hasLocation ex:diningTableLocation .
 
-ex:boxOnTable a psr:Component ;
+ex:boxOnTable a obot:Component ;
     rdfs:label "Box on Table"@en ;
     dul:hasLocation ex:diningTableLocation .
 
-ex:book a psr:Component ;
+ex:book a obot:Component ;
     rdfs:label "Book"@en ;
     dul:hasLocation ex:diningTableLocation .
 
-ex:openCabinet a psr:Component ;
+ex:openCabinet a obot:Component ;
     rdfs:label "Open Cabinet"@en ;
     dul:hasLocation ex:kitchenLocation .
 
-ex:cups a psr:Component ;
+ex:cups a obot:Component ;
     rdfs:label "Cups"@en ;
     dul:hasLocation ex:openCabinetLocation .
 
-ex:bowls a psr:Component ;
+ex:bowls a obot:Component ;
     rdfs:label "Bowls"@en ;
     dul:hasLocation ex:openCabinetLocation .
 
-ex:cannedGoods a psr:Component ;
+ex:cannedGoods a obot:Component ;
     rdfs:label "Canned Goods"@en ;
     dul:hasLocation ex:openCabinetLocation .
 
-ex:cerealBox a psr:Component ;
+ex:cerealBox a obot:Component ;
     rdfs:label "Cereal Box"@en ;
     dul:hasLocation ex:openCabinetLocation .
 
-ex:whiteCountertop a psr:Component ;
+ex:whiteCountertop a obot:Component ;
     rdfs:label "White Countertop"@en ;
     dul:hasLocation ex:diningAreaLocation .
 
-ex:cabinets a psr:Component ;
+ex:cabinets a obot:Component ;
     rdfs:label "Cabinets"@en ;
     dul:hasLocation ex:diningAreaLocation .
 
-ex:lightFixture a psr:Component ;
+ex:lightFixture a obot:Component ;
     rdfs:label "Light Fixture"@en ;
     dul:hasLocation ex:diningAreaLocation .
 

@@ -3,102 +3,102 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 
 @prefix : <http://example.org/data/> .
 
 # Define environment
-:environment a psr:Environment .
+:environment a obot:Environment .
 
 # Define components in the environment
-:refrigerator a psr:Appliance ;
+:refrigerator a obot:Appliance ;
     dul:hasLocation :currentLocationRefrigerator ;
     rdfs:label "Refrigerator" .
 
-:table a psr:Furniture ;
+:table a obot:Furniture ;
     dul:hasLocation :currentLocationTable ;
     rdfs:label "Kitchen Table" .
 
-:cupboard a psr:Furniture ;
+:cupboard a obot:Furniture ;
     dul:hasLocation :currentLocationCupboard ;
     rdfs:label "Cupboard" .
 
 # Define locations
-:currentLocationRefrigerator a psr:CurrentLocation ;
+:currentLocationRefrigerator a obot:CurrentLocation ;
     geo:sfContains :refrigerator .
 
-:currentLocationTable a psr:CurrentLocation ;
+:currentLocationTable a obot:CurrentLocation ;
     geo:sfContains :table .
 
-:currentLocationCupboard a psr:CurrentLocation ;
+:currentLocationCupboard a obot:CurrentLocation ;
     geo:sfContains :cupboard .
 
 # Standard locations
-:standardLocationRefrigerator a psr:StandardLocation .
+:standardLocationRefrigerator a obot:StandardLocation .
 
-:standardLocationTable a psr:StandardLocation .
+:standardLocationTable a obot:StandardLocation .
 
-:standardLocationCupboard a psr:StandardLocation .
+:standardLocationCupboard a obot:StandardLocation .
 
 # Objects on the kitchen table
-:plate a psr:Object ;
+:plate a obot:Object ;
     rdfs:label "Plate" .
 
-:spoon a psr:Object ;
+:spoon a obot:Object ;
     rdfs:label "Spoon" .
 
 # Locations of objects
-:plateLocation a psr:CurrentLocation ;
+:plateLocation a obot:CurrentLocation ;
     geo:sfContains :plate ;
     geo:sfOnTopOf :table .
 
-:spoonLocation a psr:CurrentLocation ;
+:spoonLocation a obot:CurrentLocation ;
     geo:sfContains :spoon ;
     geo:sfOnTopOf :table .
 
 # Objects in the cupboard
-:jar a psr:Object ;
+:jar a obot:Object ;
     rdfs:label "Jar" .
 
-:cup a psr:Object ;
+:cup a obot:Object ;
     rdfs:label "Cup" .
 
-:jarLocation a psr:CurrentLocation ;
+:jarLocation a obot:CurrentLocation ;
     geo:sfContains :jar ;
     geo:sfOnTopOf :cupboard .
 
-:cupLocation a psr:CurrentLocation ;
+:cupLocation a obot:CurrentLocation ;
     geo:sfContains :cup ;
     geo:sfOnTopOf :cupboard .
 
 # Define affordances for objects
-:door a psr:Component ;
+:door a obot:Component ;
     rdfs:label "Refrigerator Door" ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-:plate psr:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .
+:plate obot:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .
 
-:jar psr:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .
+:jar obot:hasAffordance soma:Holding, soma:PuttingDown, soma:PickingUp .
 
 # Relations of object location
 :refrigeratorLocatedIn a geo:sfContains ;
-    rdfs:domain psr:Location ;
-    rdfs:range psr:Component ;
+    rdfs:domain obot:Location ;
+    rdfs:range obot:Component ;
     rdfs:label "Refrigerator contains" ;
     geo:sfContains :refrigerator .
 
 :tableContainsObjects a geo:sfContains ;
-    rdfs:domain psr:Location ;
-    rdfs:range psr:Object ;
+    rdfs:domain obot:Location ;
+    rdfs:range obot:Object ;
     rdfs:label "Table contains objects" .
 
 :cupboardContainsObjects a geo:sfContains ;
-    rdfs:domain psr:Location ;
-    rdfs:range psr:Object ;
+    rdfs:domain obot:Location ;
+    rdfs:range obot:Object ;
     rdfs:label "Cupboard contains objects" .
 
 # Environment components
-:environment psr:hasComponent :refrigerator, :table, :cupboard .
+:environment obot:hasComponent :refrigerator, :table, :cupboard .
 
 # Relations between locations and components
 :refrigerator hasLocation :currentLocationRefrigerator .

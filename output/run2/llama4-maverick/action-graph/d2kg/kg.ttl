@@ -5,114 +5,114 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:IdentifyMisplacedItemsAction ;
-    psr:hasAction ex:ReturnItemsToStorageLocationsAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:IdentifyMisplacedItemsAction ;
+    obot:hasAction ex:ReturnItemsToStorageLocationsAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-    psr:precedes ex:ReturnItemsToStorageLocationsAction ;
+    obot:precedes ex:ReturnItemsToStorageLocationsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems .
+    obot:actsOn ex:MisplacedItems .
 
 ex:ReturnItemsToStorageLocationsAction a dul:Action ;
-    psr:follows ex:IdentifyMisplacedItemsAction ;
+    obot:follows ex:IdentifyMisplacedItemsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:MisplacedItems .
+    obot:actsOn ex:MisplacedItems .
 
 ex:PickUpPotAction a dul:Action ;
-    psr:precedes ex:PutAwayPotAction ;
+    obot:precedes ex:PutAwayPotAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Pot ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Pot ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayPotAction a dul:Action ;
-    psr:follows ex:PickUpPotAction ;
+    obot:follows ex:PickUpPotAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Pot ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Pot ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpBoxesAction a dul:Action ;
-    psr:precedes ex:PutAwayBoxesAction ;
+    obot:precedes ex:PutAwayBoxesAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Boxes ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Boxes ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayBoxesAction a dul:Action ;
-    psr:follows ex:PickUpBoxesAction ;
+    obot:follows ex:PickUpBoxesAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Boxes ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Boxes ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpJarsAction a dul:Action ;
-    psr:precedes ex:PutAwayJarsAction ;
+    obot:precedes ex:PutAwayJarsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Jars ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Jars ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayJarsAction a dul:Action ;
-    psr:follows ex:PickUpJarsAction ;
+    obot:follows ex:PickUpJarsAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Jars ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Jars ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpPlatesAction a dul:Action ;
-    psr:precedes ex:PutAwayPlatesAction ;
+    obot:precedes ex:PutAwayPlatesAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Plates ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Plates ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayPlatesAction a dul:Action ;
-    psr:follows ex:PickUpPlatesAction ;
+    obot:follows ex:PickUpPlatesAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:Plates ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Plates ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpGallonOfWaterAction a dul:Action ;
-    psr:precedes ex:PutAwayGallonOfWaterAction ;
+    obot:precedes ex:PutAwayGallonOfWaterAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:GallonOfWater ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:GallonOfWater ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayGallonOfWaterAction a dul:Action ;
-    psr:follows ex:PickUpGallonOfWaterAction ;
+    obot:follows ex:PickUpGallonOfWaterAction ;
     soma:isPerformedBy ex:RobotAgent ;
-    psr:actsOn ex:GallonOfWater ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:GallonOfWater ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:RobotAgent a dul:Agent .
 
-ex:MisplacedItems a psr:Component .
-ex:Pot a psr:Object .
-ex:Boxes a psr:Object .
-ex:Jars a psr:Object .
-ex:Plates a psr:Object .
-ex:GallonOfWater a psr:Object .
+ex:MisplacedItems a obot:Component .
+ex:Pot a obot:Object .
+ex:Boxes a obot:Object .
+ex:Jars a obot:Object .
+ex:Plates a obot:Object .
+ex:GallonOfWater a obot:Object .
 
-ex:KitchenCabinets a psr:Furniture .
-ex:CounterTops a psr:Furniture .
-ex:Refrigerator a psr:Appliance .
-ex:InductionCooker a psr:Appliance .
-ex:Sink a psr:Furniture .
-ex:RangeHood a psr:Appliance .
-ex:KitchenCupboard a psr:Furniture .
-ex:DiningTable a psr:Furniture .
-ex:WhiteChairs a psr:Furniture .
+ex:KitchenCabinets a obot:Furniture .
+ex:CounterTops a obot:Furniture .
+ex:Refrigerator a obot:Appliance .
+ex:InductionCooker a obot:Appliance .
+ex:Sink a obot:Furniture .
+ex:RangeHood a obot:Appliance .
+ex:KitchenCupboard a obot:Furniture .
+ex:DiningTable a obot:Furniture .
+ex:WhiteChairs a obot:Furniture .
 
-ex:IdentifyMisplacedItemsAction psr:follows ex:RestoreKitchenTask .
+ex:IdentifyMisplacedItemsAction obot:follows ex:RestoreKitchenTask .
 
-ex:ReturnItemsToStorageLocationsAction psr:precedes ex:PutAwayPotAction .
-ex:PutAwayPotAction psr:precedes ex:PickUpBoxesAction .
-ex:PickUpBoxesAction psr:precedes ex:PutAwayBoxesAction .
-ex:PutAwayBoxesAction psr:precedes ex:PickUpJarsAction .
-ex:PickUpJarsAction psr:precedes ex:PutAwayJarsAction .
-ex:PutAwayJarsAction psr:precedes ex:PickUpPlatesAction .
-ex:PickUpPlatesAction psr:precedes ex:PutAwayPlatesAction .
-ex:PutAwayPlatesAction psr:precedes ex:PickUpGallonOfWaterAction .
-ex:PickUpGallonOfWaterAction psr:precedes ex:PutAwayGallonOfWaterAction .
+ex:ReturnItemsToStorageLocationsAction obot:precedes ex:PutAwayPotAction .
+ex:PutAwayPotAction obot:precedes ex:PickUpBoxesAction .
+ex:PickUpBoxesAction obot:precedes ex:PutAwayBoxesAction .
+ex:PutAwayBoxesAction obot:precedes ex:PickUpJarsAction .
+ex:PickUpJarsAction obot:precedes ex:PutAwayJarsAction .
+ex:PutAwayJarsAction obot:precedes ex:PickUpPlatesAction .
+ex:PickUpPlatesAction obot:precedes ex:PutAwayPlatesAction .
+ex:PutAwayPlatesAction obot:precedes ex:PickUpGallonOfWaterAction .
+ex:PickUpGallonOfWaterAction obot:precedes ex:PutAwayGallonOfWaterAction .

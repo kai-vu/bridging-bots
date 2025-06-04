@@ -1,5 +1,5 @@
 @prefix ex:    <http://example.org/kb/> .
-@prefix psr:   <https://w3id.org/onto-bot#> .
+@prefix obot:   <https://w3id.org/onto-bot#> .
 @prefix soma:  <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,32 +12,32 @@
 
 ex:Robot a dul:Agent .
 
-ex:Fridge a psr:Appliance .
-ex:Cabinet a psr:Furniture .
+ex:Fridge a obot:Appliance .
+ex:Cabinet a obot:Furniture .
 
-ex:WaterBottle a psr:Object .
-ex:CerealBox1 a psr:Object .
-ex:CerealBox2 a psr:Object .
-ex:JamJar a psr:Object .
-ex:JelloBox a psr:Object .
-ex:Salt a psr:Object .
-ex:Pot a psr:Object .
-ex:Mug a psr:Object .
-ex:Plates a psr:Object .
-ex:TeaBox a psr:Object .
-ex:Pitcher a psr:Object .
-ex:Glass a psr:Object .
+ex:WaterBottle a obot:Object .
+ex:CerealBox1 a obot:Object .
+ex:CerealBox2 a obot:Object .
+ex:JamJar a obot:Object .
+ex:JelloBox a obot:Object .
+ex:Salt a obot:Object .
+ex:Pot a obot:Object .
+ex:Mug a obot:Object .
+ex:Plates a obot:Object .
+ex:TeaBox a obot:Object .
+ex:Pitcher a obot:Object .
+ex:Glass a obot:Object .
 
 ################################################################################
 ## INSTRUCTION AND WORKFLOW
 ################################################################################
 
-ex:Instruction1 a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."^^xsd:string ;
-    psr:hasWorkflow ex:Workflow1 .
+ex:Instruction1 a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."^^xsd:string ;
+    obot:hasWorkflow ex:Workflow1 .
 
-ex:Workflow1 a psr:Workflow ;
-    psr:hasAction ex:Action1,
+ex:Workflow1 a obot:Workflow ;
+    obot:hasAction ex:Action1,
                   ex:Action2,
                   ex:Action3,
                   ex:Action4,
@@ -73,194 +73,194 @@ ex:Workflow1 a psr:Workflow ;
 ### 1. Pick up water bottle
 ex:Action1 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterBottle ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action2 .
+    obot:actsOn ex:WaterBottle ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action2 .
 
 ### 2. Open fridge
 ex:Action2 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Fridge ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes ex:Action3 .
+    obot:actsOn ex:Fridge ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes ex:Action3 .
 
 ### 3. Put water bottle in fridge
 ex:Action3 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action4 .
+    obot:actsOn ex:WaterBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action4 .
 
 ### 4. Close fridge
 ex:Action4 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Fridge ;
-    psr:isAffordedBy soma:Closing ;
-    psr:precedes ex:Action5 .
+    obot:actsOn ex:Fridge ;
+    obot:isAffordedBy soma:Closing ;
+    obot:precedes ex:Action5 .
 
 ### 5. Open cabinet
 ex:Action5 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Cabinet ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes ex:Action6 .
+    obot:actsOn ex:Cabinet ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes ex:Action6 .
 
 ### 6. Pick up cereal box 1
 ex:Action6 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:CerealBox1 ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action7 .
+    obot:actsOn ex:CerealBox1 ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action7 .
 
 ### 7. Put cereal box 1 in cabinet
 ex:Action7 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:CerealBox1 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action8 .
+    obot:actsOn ex:CerealBox1 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action8 .
 
 ### 8. Pick up cereal box 2
 ex:Action8 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:CerealBox2 ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action9 .
+    obot:actsOn ex:CerealBox2 ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action9 .
 
 ### 9. Put cereal box 2 in cabinet
 ex:Action9 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:CerealBox2 ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action10 .
+    obot:actsOn ex:CerealBox2 ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action10 .
 
 ### 10. Pick up jam jar
 ex:Action10 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JamJar ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action11 .
+    obot:actsOn ex:JamJar ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action11 .
 
 ### 11. Put jam jar in cabinet
 ex:Action11 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JamJar ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action12 .
+    obot:actsOn ex:JamJar ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action12 .
 
 ### 12. Pick up jello box
 ex:Action12 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JelloBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action13 .
+    obot:actsOn ex:JelloBox ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action13 .
 
 ### 13. Put jello box in cabinet
 ex:Action13 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JelloBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action14 .
+    obot:actsOn ex:JelloBox ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action14 .
 
 ### 14. Pick up salt
 ex:Action14 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Salt ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action15 .
+    obot:actsOn ex:Salt ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action15 .
 
 ### 15. Put salt in cabinet
 ex:Action15 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Salt ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action16 .
+    obot:actsOn ex:Salt ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action16 .
 
 ### 16. Pick up pot
 ex:Action16 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pot ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action17 .
+    obot:actsOn ex:Pot ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action17 .
 
 ### 17. Put pot in cabinet
 ex:Action17 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pot ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action18 .
+    obot:actsOn ex:Pot ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action18 .
 
 ### 18. Pick up mug
 ex:Action18 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action19 .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action19 .
 
 ### 19. Put mug in cabinet
 ex:Action19 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action20 .
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action20 .
 
 ### 20. Pick up plates
 ex:Action20 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Plates ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action21 .
+    obot:actsOn ex:Plates ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action21 .
 
 ### 21. Put plates in cabinet
 ex:Action21 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Plates ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action22 .
+    obot:actsOn ex:Plates ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action22 .
 
 ### 22. Pick up tea box
 ex:Action22 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:TeaBox ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action23 .
+    obot:actsOn ex:TeaBox ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action23 .
 
 ### 23. Put tea box in cabinet
 ex:Action23 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:TeaBox ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action24 .
+    obot:actsOn ex:TeaBox ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action24 .
 
 ### 24. Pick up pitcher
 ex:Action24 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action25 .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action25 .
 
 ### 25. Put pitcher in cabinet
 ex:Action25 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Pitcher ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action26 .
+    obot:actsOn ex:Pitcher ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action26 .
 
 ### 26. Pick up glass
 ex:Action26 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Glass ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:Action27 .
+    obot:actsOn ex:Glass ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:Action27 .
 
 ### 27. Put glass in cabinet
 ex:Action27 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Glass ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:Action28 .
+    obot:actsOn ex:Glass ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:Action28 .
 
 ### 28. Close cabinet
 ex:Action28 a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Cabinet ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:Cabinet ;
+    obot:isAffordedBy soma:Closing .

@@ -1,180 +1,180 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
-    psr:hasWorkflow ex:RestoreKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state"@en ;
+    obot:hasWorkflow ex:RestoreKitchenWorkflow .
 
-ex:RestoreKitchenWorkflow a psr:Workflow ;
-    psr:hasAction ex:PickUpChickyBoxAction ;
-    psr:hasAction ex:PickUpRiceBubblesBoxAction ;
-    psr:hasAction ex:PickUpJelloBoxAction ;
-    psr:hasAction ex:PutAwayChickyBoxAction ;
-    psr:hasAction ex:PutAwayRiceBubblesBoxAction ;
-    psr:hasAction ex:PutAwayJelloBoxAction ;
-    psr:hasAction ex:PickUpJarsAction ;
-    psr:hasAction ex:PutAwayJarsAction ;
-    psr:hasAction ex:PickUpPlatesAction ;
-    psr:hasAction ex:PutAwayPlatesAction ;
-    psr:hasAction ex:PickUpWaterGallonOnCounterAction ;
-    psr:hasAction ex:PutAwayWaterGallonOnCounterAction ;
-    psr:hasAction ex:PickUpShortbreadBoxAction ;
-    psr:hasAction ex:PutAwayShortbreadBoxAction ;
-    psr:hasAction ex:PickUpJugAction ;
-    psr:hasAction ex:PutAwayJugAction ;
-    psr:hasAction ex:PickUpWineGlassAction ;
-    psr:hasAction ex:PutAwayWineGlassAction ;
-    psr:hasAction ex:PickUpPlateOnTableAction ;
-    psr:hasAction ex:PutAwayPlateOnTableAction ;
-    psr:hasAction ex:PickUpWaterGallonOnTableAction ;
-    psr:hasAction ex:PutAwayWaterGallonOnTableAction .
+ex:RestoreKitchenWorkflow a obot:Workflow ;
+    obot:hasAction ex:PickUpChickyBoxAction ;
+    obot:hasAction ex:PickUpRiceBubblesBoxAction ;
+    obot:hasAction ex:PickUpJelloBoxAction ;
+    obot:hasAction ex:PutAwayChickyBoxAction ;
+    obot:hasAction ex:PutAwayRiceBubblesBoxAction ;
+    obot:hasAction ex:PutAwayJelloBoxAction ;
+    obot:hasAction ex:PickUpJarsAction ;
+    obot:hasAction ex:PutAwayJarsAction ;
+    obot:hasAction ex:PickUpPlatesAction ;
+    obot:hasAction ex:PutAwayPlatesAction ;
+    obot:hasAction ex:PickUpWaterGallonOnCounterAction ;
+    obot:hasAction ex:PutAwayWaterGallonOnCounterAction ;
+    obot:hasAction ex:PickUpShortbreadBoxAction ;
+    obot:hasAction ex:PutAwayShortbreadBoxAction ;
+    obot:hasAction ex:PickUpJugAction ;
+    obot:hasAction ex:PutAwayJugAction ;
+    obot:hasAction ex:PickUpWineGlassAction ;
+    obot:hasAction ex:PutAwayWineGlassAction ;
+    obot:hasAction ex:PickUpPlateOnTableAction ;
+    obot:hasAction ex:PutAwayPlateOnTableAction ;
+    obot:hasAction ex:PickUpWaterGallonOnTableAction ;
+    obot:hasAction ex:PutAwayWaterGallonOnTableAction .
 
 ex:PickUpChickyBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ChickyBox ;
-    psr:follows ex:None ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:ChickyBox ;
+    obot:follows ex:None ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayChickyBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ChickyBox ;
-    psr:follows ex:PickUpChickyBoxAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:ChickyBox ;
+    obot:follows ex:PickUpChickyBoxAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpRiceBubblesBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:RiceBubblesBox ;
-    psr:follows ex:PutAwayChickyBoxAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:RiceBubblesBox ;
+    obot:follows ex:PutAwayChickyBoxAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayRiceBubblesBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:RiceBubblesBox ;
-    psr:follows ex:PickUpRiceBubblesBoxAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:RiceBubblesBox ;
+    obot:follows ex:PickUpRiceBubblesBoxAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpJelloBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JelloBox ;
-    psr:follows ex:PutAwayRiceBubblesBoxAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:JelloBox ;
+    obot:follows ex:PutAwayRiceBubblesBoxAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayJelloBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:JelloBox ;
-    psr:follows ex:PickUpJelloBoxAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:JelloBox ;
+    obot:follows ex:PickUpJelloBoxAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpJarsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jars ;
-    psr:follows ex:PutAwayJelloBoxAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Jars ;
+    obot:follows ex:PutAwayJelloBoxAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayJarsAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jars ;
-    psr:follows ex:PickUpJarsAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Jars ;
+    obot:follows ex:PickUpJarsAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpPlatesAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Plates ;
-    psr:follows ex:PutAwayJarsAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Plates ;
+    obot:follows ex:PutAwayJarsAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayPlatesAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Plates ;
-    psr:follows ex:PickUpPlatesAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Plates ;
+    obot:follows ex:PickUpPlatesAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpWaterGallonOnCounterAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterGallonOnCounter ;
-    psr:follows ex:PutAwayPlatesAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:WaterGallonOnCounter ;
+    obot:follows ex:PutAwayPlatesAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayWaterGallonOnCounterAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterGallonOnCounter ;
-    psr:follows ex:PickUpWaterGallonOnCounterAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:WaterGallonOnCounter ;
+    obot:follows ex:PickUpWaterGallonOnCounterAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpShortbreadBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ShortbreadBox ;
-    psr:follows ex:PutAwayWaterGallonOnCounterAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:ShortbreadBox ;
+    obot:follows ex:PutAwayWaterGallonOnCounterAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayShortbreadBoxAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:ShortbreadBox ;
-    psr:follows ex:PickUpShortbreadBoxAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:ShortbreadBox ;
+    obot:follows ex:PickUpShortbreadBoxAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpJugAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jug ;
-    psr:follows ex:PutAwayShortbreadBoxAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:Jug ;
+    obot:follows ex:PutAwayShortbreadBoxAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayJugAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:Jug ;
-    psr:follows ex:PickUpJugAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:Jug ;
+    obot:follows ex:PickUpJugAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpWineGlassAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WineGlass ;
-    psr:follows ex:PutAwayJugAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:WineGlass ;
+    obot:follows ex:PutAwayJugAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayWineGlassAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WineGlass ;
-    psr:follows ex:PickUpWineGlassAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:WineGlass ;
+    obot:follows ex:PickUpWineGlassAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpPlateOnTableAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:PlateOnTable ;
-    psr:follows ex:PutAwayWineGlassAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:PlateOnTable ;
+    obot:follows ex:PutAwayWineGlassAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayPlateOnTableAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:PlateOnTable ;
-    psr:follows ex:PickUpPlateOnTableAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:PlateOnTable ;
+    obot:follows ex:PickUpPlateOnTableAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
 ex:PickUpWaterGallonOnTableAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterGallonOnTable ;
-    psr:follows ex:PutAwayPlateOnTableAction ;
-    psr:isAffordedBy soma:PickingUp .
+    obot:actsOn ex:WaterGallonOnTable ;
+    obot:follows ex:PutAwayPlateOnTableAction ;
+    obot:isAffordedBy soma:PickingUp .
 
 ex:PutAwayWaterGallonOnTableAction a dul:Action ;
     soma:isPerformedBy ex:Robot ;
-    psr:actsOn ex:WaterGallonOnTable ;
-    psr:follows ex:PickUpWaterGallonOnTableAction ;
-    psr:isAffordedBy soma:PuttingDown .
+    obot:actsOn ex:WaterGallonOnTable ;
+    obot:follows ex:PickUpWaterGallonOnTableAction ;
+    obot:isAffordedBy soma:PuttingDown .
 
-ex:ChickyBox a psr:Component .
-ex:RiceBubblesBox a psr:Component .
-ex:JelloBox a psr:Component .
-ex:Jars a psr:Component .
-ex:Plates a psr:Component .
-ex:WaterGallonOnCounter a psr:Component .
-ex:ShortbreadBox a psr:Component .
-ex:Jug a psr:Component .
-ex:WineGlass a psr:Component .
-ex:PlateOnTable a psr:Component .
-ex:WaterGallonOnTable a psr:Component .
+ex:ChickyBox a obot:Component .
+ex:RiceBubblesBox a obot:Component .
+ex:JelloBox a obot:Component .
+ex:Jars a obot:Component .
+ex:Plates a obot:Component .
+ex:WaterGallonOnCounter a obot:Component .
+ex:ShortbreadBox a obot:Component .
+ex:Jug a obot:Component .
+ex:WineGlass a obot:Component .
+ex:PlateOnTable a obot:Component .
+ex:WaterGallonOnTable a obot:Component .
 ex:Robot a dul:Agent .

@@ -1,0 +1,472 @@
+@prefix ns1: <http://example.org/validation/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/IdentifyMisplacedItems> ;
+            sh:resultMessage "Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:neb45840aa39041c3baa3f55923b3499eb16 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/PutAwayItems> ;
+            sh:resultMessage "Less than 1 values on ex:PutAwayItems->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:neb45840aa39041c3baa3f55923b3499eb16 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/PickUpMisplacedItems> ;
+            sh:resultMessage "Less than 1 values on ex:PickUpMisplacedItems->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:neb45840aa39041c3baa3f55923b3499eb16 ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/DiningTable> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/BoxOfCereal> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/DiningTable> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Stove> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Spoon> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Chair> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Bowl> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Refrigerator> ;
+            sh:resultMessage "Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/FoodPackaging> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/PaperTowelDispenser> ;
+            sh:resultMessage "Node soma:Pulling must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Cabinet> ;
+            sh:resultMessage "Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/PaperTowelDispenser> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Cup> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Chair> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Counter> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Cabinet> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Counter> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Refrigerator> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Bowl> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/BoxOfCereal> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/FoodPackaging> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Stove> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Cup> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Spoon> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:na6c925ac3fe84ba7aef16c00352a3b46b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenArea> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/BlackCabinets> ;
+            sh:resultMessage "Less than 1 values on ex:BlackCabinets->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenAreaFloor> ;
+            sh:resultMessage "Less than 1 values on ex:KitchenAreaFloor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/DiningAreaFloor> ;
+            sh:resultMessage "Less than 1 values on ex:DiningAreaFloor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenDiningEnvironment> ;
+            sh:resultMessage "Node ex:PartialWall must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ] , [ sh:class obot:Environment ]" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:or ( [ sh:class <https://w3id.org/onto-bot#Component> ] [ sh:class <https://w3id.org/onto-bot#Appliance> ] [ sh:class <https://w3id.org/onto-bot#Furniture> ] [ sh:class <https://w3id.org/onto-bot#Object> ] [ sh:class <https://w3id.org/onto-bot#Environment> ] ) ;
+                    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ] ;
+            sh:value <http://example.org/data/PartialWall> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CountertopSupport> ;
+            sh:resultMessage "Less than 1 values on ex:CountertopSupport->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Mirror> ;
+            sh:resultMessage "Less than 1 values on ex:Mirror->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Sink> ;
+            sh:resultMessage "Less than 1 values on ex:Sink->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenArea> ;
+            sh:resultMessage "Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/VentHood> ;
+            sh:resultMessage "Less than 1 values on ex:VentHood->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n22575ab0d16c4238be58eef797057171b33 ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Environment> ;
+            sh:resultMessage "Less than 1 values on ex:Environment->dul:hasComponent" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:or ( [ sh:class <https://w3id.org/onto-bot#Component> ] [ sh:class <https://w3id.org/onto-bot#Appliance> ] [ sh:class <https://w3id.org/onto-bot#Furniture> ] [ sh:class <https://w3id.org/onto-bot#Object> ] [ sh:class <https://w3id.org/onto-bot#Environment> ] ) ;
+                    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ] ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/action-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-4.1-nano/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/observation-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/action-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/IdentifyMisplacedItemsAction> ;
+            sh:resultMessage "Less than 1 values on ex:IdentifyMisplacedItemsAction->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:path <https://w3id.org/onto-bot#isAffordedBy> ] ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/action-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/action-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/observation-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llava-llama3/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-4.1-nano/observation-graph/i2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Kitchen> ;
+            sh:resultMessage "Less than 1 values on ex:Kitchen->dul:hasComponent" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:or ( [ sh:class <https://w3id.org/onto-bot#Component> ] [ sh:class <https://w3id.org/onto-bot#Appliance> ] [ sh:class <https://w3id.org/onto-bot#Furniture> ] [ sh:class <https://w3id.org/onto-bot#Object> ] [ sh:class <https://w3id.org/onto-bot#Environment> ] ) ;
+                    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ] ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-scout/action-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/llama4-maverick/action-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run3/gpt-o1/action-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+_:N099d9fb09bf84992a8cb530bfafde4f5 rdf:first [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ] ) .
+
+_:N0c8f22b117724adf97c83344b5b40d6e sh:class <http://www.ease-crc.org/ont/SOMA.owl#Opening> .
+
+_:N0e4050eb9a7b4bb7aec3e8a21be402d0 rdf:first [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Delivering> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Holding> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ] ) .
+
+_:N1292da3f3218459b930cd4093d94563b rdf:first [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Holding> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] _:Na4834863e21141d9a0629deba4c7acc1 _:Nf0c531d0f9a1413b8050c8f4f5790d0c _:Ne776b4aa1ee0425f88357ee9e421ec69 ) .
+
+_:N2c1c680d4c2e4d01a463ac726cad46ca sh:class <http://www.ease-crc.org/ont/SOMA.owl#Opening> .
+
+_:N2d53f05e9846416b9ffa9df93a88c881 rdf:first [ sh:class <https://w3id.org/onto-bot#Affordance> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Closing> ] _:N2c1c680d4c2e4d01a463ac726cad46ca [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Delivering> ] _:N83a7b2f483154b8fae620d4f295efcb2 _:N976a396da59a49389000b05e75c820cb _:N84716349f67a401a8e9c06596effb108 _:Na4834863e21141d9a0629deba4c7acc1 _:Nf0c531d0f9a1413b8050c8f4f5790d0c _:Ne776b4aa1ee0425f88357ee9e421ec69 ) .
+
+_:N52cf79c053764b11ba7c48842553f587 rdf:first _:N0c8f22b117724adf97c83344b5b40d6e ;
+    rdf:rest _:N0e4050eb9a7b4bb7aec3e8a21be402d0 .
+
+_:N61dd0e7080f1431fa1d20799bcdfe9ed sh:class <https://w3id.org/onto-bot#Affordance> .
+
+_:N8cfed73e454049f1ab2e56aee70acb50 rdf:first _:N61dd0e7080f1431fa1d20799bcdfe9ed ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Closing> ] _:N0c8f22b117724adf97c83344b5b40d6e _:N18e32e7b62aa4809a2eb99e031ec29b9 _:Nd65ecea096af40e69fc1b055de1e1116 _:Ne5b94b1c80274a9cb4d90945a598f26e _:N6426da8144734bccaedcb16f80135cf1 _:N3c882fcb1c3249769bd71b6104598a7e _:N559c868b2f634189a098b59d2ea43f04 _:N98e5ba9949d4480c821f1a1206de7f19 ) .
+
+_:n22575ab0d16c4238be58eef797057171b12 sh:or _:N8cfed73e454049f1ab2e56aee70acb50 ;
+    sh:path <https://w3id.org/onto-bot#hasAffordance> .
+
+_:neb45840aa39041c3baa3f55923b3499eb16 sh:minCount 1 ;
+    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+
+_:n22575ab0d16c4238be58eef797057171b33 sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+
+_:na6c925ac3fe84ba7aef16c00352a3b46b12 sh:or _:N2d53f05e9846416b9ffa9df93a88c881 ;
+    sh:path <https://w3id.org/onto-bot#hasAffordance> .
+

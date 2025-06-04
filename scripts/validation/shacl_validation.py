@@ -5,67 +5,24 @@ import os
 
 from pyshacl import validate
 from rdflib import Graph
+from rdflib import Namespace, Literal, URIRef
 
 
-output_txt = "../../output/validation/shacl/shacl_validation_report.txt"
-output_csv = "../../output/validation/shacl/shacl_validation_report.csv"
-output_ttl = "../../output/validation/shacl/shacl_validation_report.ttl"
+runs = ["run1", "run2", "run3", "run4", "run5", "run6", "run7", "run8", "run9", "run10"]
 
-files_observation_graph = [
-    # llava-llama3
-    "../../output/llava-llama3/observation-graph/dpe/kg.ttl",
-    "../../output/llava-llama3/observation-graph/i2kg/kg.ttl",
-    "../../output/llava-llama3/observation-graph/d2kg/kg.ttl",
-    "../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl",
-    # llama4-scout
-    "../../output/llama4-scout/observation-graph/dpe/kg.ttl",
-    "../../output/llama4-scout/observation-graph/i2kg/kg.ttl",
-    "../../output/llama4-scout/observation-graph/d2kg/kg.ttl",
-    "../../output/llama4-scout/observation-graph/d2kg-rag/kg.ttl",
-    # llama4-maverick
-    "../../output/llama4-maverick/observation-graph/dpe/kg.ttl",
-    "../../output/llama4-maverick/observation-graph/i2kg/kg.ttl",
-    "../../output/llama4-maverick/observation-graph/d2kg/kg.ttl",
-    "../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl",
-    # gpt-o1
-    "../../output/gpt-o1/observation-graph/i2kg/kg.ttl",
-    "../../output/gpt-o1/observation-graph/d2kg/kg.ttl",
-    "../../output/gpt-o1/observation-graph/d2kg-rag/kg.ttl",
-    # gpt-4.1-nano
-    "../../output/gpt-4.1-nano/observation-graph/i2kg/kg.ttl",
-    "../../output/gpt-4.1-nano/observation-graph/d2kg/kg.ttl",
-    "../../output/gpt-4.1-nano/observation-graph/d2kg-rag/kg.ttl",
-]
-shapes_observation_graph = "../../ontology/shacl-shapes/shapesObservationGraph.ttl"
-ontology_observation_graph = "../../ontology/ontoObservationGraph.ttl"
+models = ["llava-llama3", "llama4-scout", "llama4-maverick", "gpt-o1", "gpt-4.1-nano"]
+graph_types = ["observation-graph", "action-graph"]
+methods = ["dpe", "i2kg", "d2kg", "d2kg-rag"]
 
-files_action_graph = [
-    # llava-llama3
-    "../../output/llava-llama3/action-graph/dpe/kg.ttl",
-    "../../output/llava-llama3/action-graph/i2kg/kg.ttl",
-    "../../output/llava-llama3/action-graph/d2kg/kg.ttl",
-    "../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl",
-    # llama4-scout
-    "../../output/llama4-scout/action-graph/dpe/kg.ttl",
-    "../../output/llama4-scout/action-graph/i2kg/kg.ttl",
-    "../../output/llama4-scout/action-graph/d2kg/kg.ttl",
-    "../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl",
-    # llama4-maverick
-    "../../output/llama4-maverick/action-graph/dpe/kg.ttl",
-    "../../output/llama4-maverick/action-graph/i2kg/kg.ttl",
-    "../../output/llama4-maverick/action-graph/d2kg/kg.ttl",
-    "../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl",
-    # gpt-o1
-    "../../output/gpt-o1/action-graph/i2kg/kg.ttl",
-    "../../output/gpt-o1/action-graph/d2kg/kg.ttl",
-    "../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl",
-    # gpt-4.1-nano
-    "../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl",
-    "../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl",
-    "../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl",
-]
-shapes_action_graph = "../../ontology/shacl-shapes/shapesActionGraph.ttl"
-ontology_action_graph = "../../ontology/ontoActionGraph.ttl"
+shapes_files = {
+    "observation-graph": "../../ontology/shacl-shapes/shapesObservationGraph.ttl",
+    "action-graph": "../../ontology/shacl-shapes/shapesActionGraph.ttl"
+}
+ontology_files = {
+    "observation-graph": "../../ontology/ontoObservationGraph.ttl",
+    "action-graph": "../../ontology/ontoActionGraph.ttl"
+}
+
 
 def validate_graph(g_file, sg_file, og_file, log_file_path):
     try:
@@ -98,48 +55,82 @@ def validate_graph(g_file, sg_file, og_file, log_file_path):
         print(f"[ERROR] Could not validate {g_file}: {e}")
         return None
 
-def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path, csv_rows, output_ttl):
-    final_results_graph = Graph()
+def run_all_validations(file_list, shapes_file, ontology_file, result_txt_path):
+    result_rows = []
+    results_graph = Graph()
+    EX = Namespace("http://example.org/validation/")
+
     for file in file_list:
         print(f"Validating: {file}")
         result = validate_graph(file, shapes_file, ontology_file, result_txt_path)
-        
+
         if result is None:
-            csv_rows.append({
-                "file": file,
-                "conforms": "ERROR"
-            })
+            result_rows.append({"file": file, "conforms": "ERROR"})
             continue
 
-        conforms, results_graph, results_text = result
-        final_results_graph += results_graph
+        conforms, r_graph, results_text = result
+
+        for s in r_graph.subjects(predicate=URIRef("http://www.w3.org/ns/shacl#conforms")):
+            r_graph.add((s, EX.sourceFile, Literal(file)))
+            break
+
+        results_graph += r_graph
 
         with open(result_txt_path, "a") as out_txt:
             out_txt.write(f"=== Validation Report for: {file} ===\n")
             out_txt.write(results_text)
             out_txt.write("\n\n")
 
-        csv_rows.append({
-            "file": file,
-            "conforms": conforms
-        })
+        result_rows.append({"file": file, "conforms": conforms})
+
+    return results_graph, result_rows
+
+
+for run in runs:
+    print(f"\n=== Running validation for {run} ===")
+
+    output_txt = f"../../output/{run}/validation/shacl/shacl_validation_report.txt"
+    output_csv = f"../../output/{run}/validation/shacl/shacl_validation_report.csv"
+    output_ttl = f"../../output/{run}/validation/shacl/shacl_validation_report.ttl"
+
+    os.makedirs(os.path.dirname(output_txt), exist_ok=True)
+
+    with open(output_txt, "w") as f:
+        f.write(f"SHACL Validation Report for {run}\n\n")
+
+    final_results_graph = Graph()
+    csv_data = []
+
+    for graph_type in graph_types:
+        files_to_validate = []
+
+        for model in models:
+            for method in methods:
+                file_path = f"../../output/{run}/{model}/{graph_type}/{method}/kg.ttl"
+                if os.path.exists(file_path):
+                    files_to_validate.append(file_path)
+                else:
+                    print(f"[WARNING] File not found: {file_path}")
+
+        results_graph, result_rows = run_all_validations(
+            files_to_validate,
+            shapes_files[graph_type],
+            ontology_files[graph_type],
+            output_txt
+        )
+
+        final_results_graph += results_graph
+        csv_data.extend(result_rows)
+
     final_results_graph.serialize(destination=output_ttl, format="turtle")
 
-        
-os.makedirs(os.path.dirname(output_txt), exist_ok=True)
-with open(output_txt, "w") as f:
-    f.write("SHACL Validation Report\n\n")
+    with open(output_csv, "w", newline="") as csvfile:
+        fieldnames = ["file", "conforms"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(csv_data)
 
-csv_data = []
-run_all_validations(files_observation_graph, shapes_observation_graph, ontology_observation_graph, output_txt, csv_data, output_ttl)
-run_all_validations(files_action_graph, shapes_action_graph, ontology_action_graph, output_txt, csv_data, output_ttl)
-
-with open(output_csv, "w", newline="") as csvfile:
-    fieldnames = ["file", "conforms"]
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(csv_data)
-
-print("Validation complete. Results saved to:")
-print(f" - Text: {output_txt}")
-print(f" - CSV:  {output_csv}")
+    print(f"Validation complete for {run}. Results saved to:")
+    print(f" - Text: {output_txt}")
+    print(f" - CSV:  {output_csv}")
+    print(f" - TTL:  {output_ttl}")

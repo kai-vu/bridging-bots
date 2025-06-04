@@ -5,15 +5,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Instruction_RestoreKitchen a psr:Instruction ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
-    psr:hasWorkflow ex:Workflow_RestoreKitchen .
+ex:Instruction_RestoreKitchen a obot:Instruction ;
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function. Prioritize actions according to logical task order, and perform each step atomically."^^xsd:string ;
+    obot:hasWorkflow ex:Workflow_RestoreKitchen .
 
-ex:Workflow_RestoreKitchen a psr:Workflow ;
-    psr:hasAction ex:OpenPantryDoor,
+ex:Workflow_RestoreKitchen a obot:Workflow ;
+    obot:hasAction ex:OpenPantryDoor,
                   ex:PickUpMug,
                   ex:PutDownMugInPantry,
                   ex:PickUpChuckyHaros,
@@ -44,185 +44,185 @@ ex:Workflow_RestoreKitchen a psr:Workflow ;
 
 ex:Robot1 a dul:Agent .
 
-ex:PantryCabinet a psr:Furniture .
-ex:Fridge a psr:Appliance .
+ex:PantryCabinet a obot:Furniture .
+ex:Fridge a obot:Appliance .
 
-ex:Mug a psr:Object .
-ex:ChuckyHaros a psr:Object .
-ex:RiceBubbles a psr:Object .
-ex:StrawberryJam a psr:Object .
-ex:WhitePlates a psr:Object .
-ex:Jello a psr:Object .
-ex:AlpenSalt a psr:Object .
-ex:MetalPot a psr:Object .
-ex:ShortbreadCookies a psr:Object .
-ex:GlassPitcher a psr:Object .
-ex:WineGlass a psr:Object .
-ex:EvianWaterBottle a psr:Object .
+ex:Mug a obot:Object .
+ex:ChuckyHaros a obot:Object .
+ex:RiceBubbles a obot:Object .
+ex:StrawberryJam a obot:Object .
+ex:WhitePlates a obot:Object .
+ex:Jello a obot:Object .
+ex:AlpenSalt a obot:Object .
+ex:MetalPot a obot:Object .
+ex:ShortbreadCookies a obot:Object .
+ex:GlassPitcher a obot:Object .
+ex:WineGlass a obot:Object .
+ex:EvianWaterBottle a obot:Object .
 
 ex:OpenPantryDoor a dul:Action ;
-    psr:actsOn ex:PantryCabinet ;
-    psr:isAffordedBy soma:Opening ;
+    obot:actsOn ex:PantryCabinet ;
+    obot:isAffordedBy soma:Opening ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpMug .
+    obot:precedes ex:PickUpMug .
 
 ex:PickUpMug a dul:Action ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownMugInPantry .
+    obot:precedes ex:PutDownMugInPantry .
 
 ex:PutDownMugInPantry a dul:Action ;
-    psr:actsOn ex:Mug ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:Mug ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpChuckyHaros .
+    obot:precedes ex:PickUpChuckyHaros .
 
 ex:PickUpChuckyHaros a dul:Action ;
-    psr:actsOn ex:ChuckyHaros ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:ChuckyHaros ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownChuckyHarosInPantry .
+    obot:precedes ex:PutDownChuckyHarosInPantry .
 
 ex:PutDownChuckyHarosInPantry a dul:Action ;
-    psr:actsOn ex:ChuckyHaros ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:ChuckyHaros ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpRiceBubbles .
+    obot:precedes ex:PickUpRiceBubbles .
 
 ex:PickUpRiceBubbles a dul:Action ;
-    psr:actsOn ex:RiceBubbles ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:RiceBubbles ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownRiceBubblesInPantry .
+    obot:precedes ex:PutDownRiceBubblesInPantry .
 
 ex:PutDownRiceBubblesInPantry a dul:Action ;
-    psr:actsOn ex:RiceBubbles ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:RiceBubbles ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpStrawberryJam .
+    obot:precedes ex:PickUpStrawberryJam .
 
 ex:PickUpStrawberryJam a dul:Action ;
-    psr:actsOn ex:StrawberryJam ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:StrawberryJam ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownStrawberryJamInPantry .
+    obot:precedes ex:PutDownStrawberryJamInPantry .
 
 ex:PutDownStrawberryJamInPantry a dul:Action ;
-    psr:actsOn ex:StrawberryJam ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:StrawberryJam ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpWhitePlates .
+    obot:precedes ex:PickUpWhitePlates .
 
 ex:PickUpWhitePlates a dul:Action ;
-    psr:actsOn ex:WhitePlates ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:WhitePlates ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownWhitePlatesInPantry .
+    obot:precedes ex:PutDownWhitePlatesInPantry .
 
 ex:PutDownWhitePlatesInPantry a dul:Action ;
-    psr:actsOn ex:WhitePlates ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:WhitePlates ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpJello .
+    obot:precedes ex:PickUpJello .
 
 ex:PickUpJello a dul:Action ;
-    psr:actsOn ex:Jello ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:Jello ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownJelloInPantry .
+    obot:precedes ex:PutDownJelloInPantry .
 
 ex:PutDownJelloInPantry a dul:Action ;
-    psr:actsOn ex:Jello ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:Jello ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpAlpenSalt .
+    obot:precedes ex:PickUpAlpenSalt .
 
 ex:PickUpAlpenSalt a dul:Action ;
-    psr:actsOn ex:AlpenSalt ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:AlpenSalt ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownAlpenSaltInPantry .
+    obot:precedes ex:PutDownAlpenSaltInPantry .
 
 ex:PutDownAlpenSaltInPantry a dul:Action ;
-    psr:actsOn ex:AlpenSalt ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:AlpenSalt ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpMetalPot .
+    obot:precedes ex:PickUpMetalPot .
 
 ex:PickUpMetalPot a dul:Action ;
-    psr:actsOn ex:MetalPot ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:MetalPot ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownMetalPotInPantry .
+    obot:precedes ex:PutDownMetalPotInPantry .
 
 ex:PutDownMetalPotInPantry a dul:Action ;
-    psr:actsOn ex:MetalPot ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:MetalPot ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpShortbreadCookies .
+    obot:precedes ex:PickUpShortbreadCookies .
 
 ex:PickUpShortbreadCookies a dul:Action ;
-    psr:actsOn ex:ShortbreadCookies ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:ShortbreadCookies ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownShortbreadCookiesInPantry .
+    obot:precedes ex:PutDownShortbreadCookiesInPantry .
 
 ex:PutDownShortbreadCookiesInPantry a dul:Action ;
-    psr:actsOn ex:ShortbreadCookies ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:ShortbreadCookies ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpGlassPitcher .
+    obot:precedes ex:PickUpGlassPitcher .
 
 ex:PickUpGlassPitcher a dul:Action ;
-    psr:actsOn ex:GlassPitcher ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:GlassPitcher ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownGlassPitcherInPantry .
+    obot:precedes ex:PutDownGlassPitcherInPantry .
 
 ex:PutDownGlassPitcherInPantry a dul:Action ;
-    psr:actsOn ex:GlassPitcher ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:GlassPitcher ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpWineGlass .
+    obot:precedes ex:PickUpWineGlass .
 
 ex:PickUpWineGlass a dul:Action ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownWineGlassInPantry .
+    obot:precedes ex:PutDownWineGlassInPantry .
 
 ex:PutDownWineGlassInPantry a dul:Action ;
-    psr:actsOn ex:WineGlass ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:WineGlass ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:ClosePantryDoor .
+    obot:precedes ex:ClosePantryDoor .
 
 ex:ClosePantryDoor a dul:Action ;
-    psr:actsOn ex:PantryCabinet ;
-    psr:isAffordedBy soma:Closing ;
+    obot:actsOn ex:PantryCabinet ;
+    obot:isAffordedBy soma:Closing ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:OpenFridge .
+    obot:precedes ex:OpenFridge .
 
 ex:OpenFridge a dul:Action ;
-    psr:actsOn ex:Fridge ;
-    psr:isAffordedBy soma:Opening ;
+    obot:actsOn ex:Fridge ;
+    obot:isAffordedBy soma:Opening ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PickUpEvianWaterBottle .
+    obot:precedes ex:PickUpEvianWaterBottle .
 
 ex:PickUpEvianWaterBottle a dul:Action ;
-    psr:actsOn ex:EvianWaterBottle ;
-    psr:isAffordedBy soma:PickingUp ;
+    obot:actsOn ex:EvianWaterBottle ;
+    obot:isAffordedBy soma:PickingUp ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:PutDownEvianWaterBottleInFridge .
+    obot:precedes ex:PutDownEvianWaterBottleInFridge .
 
 ex:PutDownEvianWaterBottleInFridge a dul:Action ;
-    psr:actsOn ex:EvianWaterBottle ;
-    psr:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:EvianWaterBottle ;
+    obot:isAffordedBy soma:PuttingDown ;
     soma:isPerformedBy ex:Robot1 ;
-    psr:precedes ex:CloseFridge .
+    obot:precedes ex:CloseFridge .
 
 ex:CloseFridge a dul:Action ;
-    psr:actsOn ex:Fridge ;
-    psr:isAffordedBy soma:Closing ;
+    obot:actsOn ex:Fridge ;
+    obot:isAffordedBy soma:Closing ;
     soma:isPerformedBy ex:Robot1 .

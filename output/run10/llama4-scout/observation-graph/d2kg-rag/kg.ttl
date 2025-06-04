@@ -122,7 +122,7 @@ ex:WhiteWalls a obot:Object ;
   rdfs:label "White Walls"@en ;
   obot:CurrentLocation ex:KitchenAndDiningArea .
 
-ex:Kitchen sobot:geo:sfContains ex:DarkBrownCupboards ;
+ex:Kitchen geo:sfContains ex:DarkBrownCupboards ;
   ex:Kitchen geo:sfContains ex:Countertop ;
   ex:Kitchen geo:sfContains ex:WhiteFridge .
 

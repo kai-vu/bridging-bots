@@ -5,138 +5,138 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 
-psr:RestoreKitchenOrganization a psr:Instruction ;
-    psr:hasWorkflow psr:KitchenOrganizationWorkflow .
+obot:RestoreKitchenOrganization a obot:Instruction ;
+    obot:hasWorkflow obot:KitchenOrganizationWorkflow .
 
-psr:KitchenOrganizationWorkflow a psr:Workflow ;
-    psr:hasAction psr:PickUpJelloBoxFromTable, psr:PutJelloBoxInCabinet, psr:PickUpWaterBottleFromTable, psr:PutWaterBottleInCabinet, 
-                  psr:PickUpChuckyBoxFromCounter, psr:PutChuckyBoxInCabinet, psr:PickUpJellyBoxFromCounter, psr:PutJellyBoxInCabinet,
-                  psr:PickUpCrackersBoxFromCounter, psr:PutCrackersBoxInCabinet, psr:PickUpMarmaladeJarFromCounter, psr:PutMarmaladeJarInCabinet,
-                  psr:PickUpRiceBubblesBoxFromCounter, psr:PutRiceBubblesBoxInCabinet, psr:PickUpOrangeMugFromCounter, psr:PutOrangeMugInCabinet,
-                  psr:PickUpCupsFromCounter, psr:PutCupsInCabinet, psr:PickUpPlatesFromCounter, psr:PutPlatesInCabinet .
+obot:KitchenOrganizationWorkflow a obot:Workflow ;
+    obot:hasAction obot:PickUpJelloBoxFromTable, obot:PutJelloBoxInCabinet, obot:PickUpWaterBottleFromTable, obot:PutWaterBottleInCabinet, 
+                  obot:PickUpChuckyBoxFromCounter, obot:PutChuckyBoxInCabinet, obot:PickUpJellyBoxFromCounter, obot:PutJellyBoxInCabinet,
+                  obot:PickUpCrackersBoxFromCounter, obot:PutCrackersBoxInCabinet, obot:PickUpMarmaladeJarFromCounter, obot:PutMarmaladeJarInCabinet,
+                  obot:PickUpRiceBubblesBoxFromCounter, obot:PutRiceBubblesBoxInCabinet, obot:PickUpOrangeMugFromCounter, obot:PutOrangeMugInCabinet,
+                  obot:PickUpCupsFromCounter, obot:PutCupsInCabinet, obot:PickUpPlatesFromCounter, obot:PutPlatesInCabinet .
 
-psr:PickUpJelloBoxFromTable a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:JelloBox ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpJelloBoxFromTable a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:JelloBox ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutJelloBoxInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:JelloBox ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutJelloBoxInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:JelloBox ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpWaterBottleFromTable a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:WaterBottle ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpWaterBottleFromTable a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:WaterBottle ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutWaterBottleInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:WaterBottle ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutWaterBottleInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:WaterBottle ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpChuckyBoxFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:ChuckyBox ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpChuckyBoxFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:ChuckyBox ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutChuckyBoxInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:ChuckyBox ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutChuckyBoxInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:ChuckyBox ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpJellyBoxFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:JellyBox ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpJellyBoxFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:JellyBox ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutJellyBoxInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:JellyBox ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutJellyBoxInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:JellyBox ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpCrackersBoxFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:CrackersBox ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpCrackersBoxFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:CrackersBox ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutCrackersBoxInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:CrackersBox ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutCrackersBoxInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:CrackersBox ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpMarmaladeJarFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:MarmaladeJar ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpMarmaladeJarFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:MarmaladeJar ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutMarmaladeJarInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:MarmaladeJar ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutMarmaladeJarInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:MarmaladeJar ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpRiceBubblesBoxFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:RiceBubblesBox ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpRiceBubblesBoxFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:RiceBubblesBox ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutRiceBubblesBoxInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:RiceBubblesBox ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutRiceBubblesBoxInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:RiceBubblesBox ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpOrangeMugFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:OrangeMug ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpOrangeMugFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:OrangeMug ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutOrangeMugInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:OrangeMug ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutOrangeMugInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:OrangeMug ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpCupsFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:Cups ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpCupsFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:Cups ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutCupsInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:Cups ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutCupsInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:Cups ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpPlatesFromCounter a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:Plates ;
-    psr:isAffordedBy soma:PickingUp .
+obot:PickUpPlatesFromCounter a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:Plates ;
+    obot:isAffordedBy soma:PickingUp .
 
-psr:PutPlatesInCabinet a dul:Action ;
-    soma:isPerformedBy psr:Robot ;
-    psr:actsOn psr:Plates ;
-    psr:isAffordedBy soma:PuttingDown .
+obot:PutPlatesInCabinet a dul:Action ;
+    soma:isPerformedBy obot:Robot ;
+    obot:actsOn obot:Plates ;
+    obot:isAffordedBy soma:PuttingDown .
 
-psr:PickUpJelloBoxFromTable psr:precedes psr:PutJelloBoxInCabinet .
-psr:PickUpWaterBottleFromTable psr:precedes psr:PutWaterBottleInCabinet .
-psr:PickUpChuckyBoxFromCounter psr:precedes psr:PutChuckyBoxInCabinet .
-psr:PickUpJellyBoxFromCounter psr:precedes psr:PutJellyBoxInCabinet .
-psr:PickUpCrackersBoxFromCounter psr:precedes psr:PutCrackersBoxInCabinet .
-psr:PickUpMarmaladeJarFromCounter psr:precedes psr:PutMarmaladeJarInCabinet .
-psr:PickUpRiceBubblesBoxFromCounter psr:precedes psr:PutRiceBubblesBoxInCabinet .
-psr:PickUpOrangeMugFromCounter psr:precedes psr:PutOrangeMugInCabinet .
-psr:PickUpCupsFromCounter psr:precedes psr:PutCupsInCabinet .
-psr:PickUpPlatesFromCounter psr:precedes psr:PutPlatesInCabinet .
+obot:PickUpJelloBoxFromTable obot:precedes obot:PutJelloBoxInCabinet .
+obot:PickUpWaterBottleFromTable obot:precedes obot:PutWaterBottleInCabinet .
+obot:PickUpChuckyBoxFromCounter obot:precedes obot:PutChuckyBoxInCabinet .
+obot:PickUpJellyBoxFromCounter obot:precedes obot:PutJellyBoxInCabinet .
+obot:PickUpCrackersBoxFromCounter obot:precedes obot:PutCrackersBoxInCabinet .
+obot:PickUpMarmaladeJarFromCounter obot:precedes obot:PutMarmaladeJarInCabinet .
+obot:PickUpRiceBubblesBoxFromCounter obot:precedes obot:PutRiceBubblesBoxInCabinet .
+obot:PickUpOrangeMugFromCounter obot:precedes obot:PutOrangeMugInCabinet .
+obot:PickUpCupsFromCounter obot:precedes obot:PutCupsInCabinet .
+obot:PickUpPlatesFromCounter obot:precedes obot:PutPlatesInCabinet .
 
-psr:JelloBox a psr:Object .
-psr:WaterBottle a psr:Object .
-psr:ChuckyBox a psr:Object .
-psr:JellyBox a psr:Object .
-psr:CrackersBox a psr:Object .
-psr:MarmaladeJar a psr:Object .
-psr:RiceBubblesBox a psr:Object .
-psr:OrangeMug a psr:Object .
-psr:Cups a psr:Object .
-psr:Plates a psr:Object .
-psr:Robot a dul:Agent .
-psr:KitchenCabinet a psr:Component .
+obot:JelloBox a obot:Object .
+obot:WaterBottle a obot:Object .
+obot:ChuckyBox a obot:Object .
+obot:JellyBox a obot:Object .
+obot:CrackersBox a obot:Object .
+obot:MarmaladeJar a obot:Object .
+obot:RiceBubblesBox a obot:Object .
+obot:OrangeMug a obot:Object .
+obot:Cups a obot:Object .
+obot:Plates a obot:Object .
+obot:Robot a dul:Agent .
+obot:KitchenCabinet a obot:Component .

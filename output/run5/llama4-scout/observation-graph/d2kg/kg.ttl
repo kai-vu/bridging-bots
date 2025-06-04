@@ -3,138 +3,138 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
   rdfs:label "Kitchen Environment"@en .
 
-ex:Kitchen a psr:Component, ex:KitchenEnvironment ;
+ex:Kitchen a obot:Component, ex:KitchenEnvironment ;
   rdfs:label "Kitchen"@en ;
   dul:hasLocation ex:KitchenLocation .
 
-ex:KitchenLocation a psr:Location ;
+ex:KitchenLocation a obot:Location ;
   rdfs:label "Kitchen Location"@en .
 
-ex:DiningArea a psr:Component, ex:KitchenEnvironment ;
+ex:DiningArea a obot:Component, ex:KitchenEnvironment ;
   rdfs:label "Dining Area"@en ;
   dul:hasLocation ex:DiningAreaLocation .
 
-ex:DiningAreaLocation a psr:Location ;
+ex:DiningAreaLocation a obot:Location ;
   rdfs:label "Dining Area Location"@en ;
   geo:sfWithin ex:KitchenEnvironment .
 
-ex:Refrigerator a psr:Appliance, ex:Kitchen ;
+ex:Refrigerator a obot:Appliance, ex:Kitchen ;
   rdfs:label "Refrigerator"@en ;
   dul:hasLocation ex:RefrigeratorLocation ;
-  psr:hasAffordance soma:Opening .
+  obot:hasAffordance soma:Opening .
 
-ex:RefrigeratorLocation a psr:Location ;
+ex:RefrigeratorLocation a obot:Location ;
   rdfs:label "Refrigerator Location"@en ;
-  psr:onTopOf ex:KitchenCabinets ;
+  obot:onTopOf ex:KitchenCabinets ;
   geo:sfWithin ex:KitchenLocation .
 
-ex:KitchenCabinets a psr:Furniture, ex:Kitchen ;
+ex:KitchenCabinets a obot:Furniture, ex:Kitchen ;
   rdfs:label "Cabinets"@en ;
   dul:hasLocation ex:KitchenCabinetsLocation .
 
-ex:KitchenCabinetsLocation a psr:Location ;
+ex:KitchenCabinetsLocation a obot:Location ;
   rdfs:label "Kitchen Cabinets Location"@en ;
   geo:sfWithin ex:KitchenLocation .
 
-ex:Table a psr:Furniture, ex:DiningArea ;
+ex:Table a obot:Furniture, ex:DiningArea ;
   rdfs:label "Table"@en ;
   dul:hasLocation ex:TableLocation ;
-  psr:hasAffordance soma:PuttingDown .
+  obot:hasAffordance soma:PuttingDown .
 
-ex:TableLocation a psr:Location ;
+ex:TableLocation a obot:Location ;
   rdfs:label "Table Location"@en ;
   geo:sfWithin ex:DiningAreaLocation .
 
-ex:Chair1 a psr:Object, ex:DiningArea ;
+ex:Chair1 a obot:Object, ex:DiningArea ;
   rdfs:label "Chair 1"@en ;
   dul:hasLocation ex:Chair1Location .
 
-ex:Chair1Location a psr:Location ;
+ex:Chair1Location a obot:Location ;
   rdfs:label "Chair 1 Location"@en ;
   geo:sfWithin ex:TableLocation .
 
-ex:Chair2 a psr:Object, ex:DiningArea ;
+ex:Chair2 a obot:Object, ex:DiningArea ;
   rdfs:label "Chair 2"@en ;
   dul:hasLocation ex:Chair2Location .
 
-ex:Chair2Location a psr:Location ;
+ex:Chair2Location a obot:Location ;
   rdfs:label "Chair 2 Location"@en ;
   geo:sfWithin ex:TableLocation .
 
-ex:Chair3 a psr:Object, ex:DiningArea ;
+ex:Chair3 a obot:Object, ex:DiningArea ;
   rdfs:label "Chair 3"@en ;
   dul:hasLocation ex:Chair3Location .
 
-ex:Chair3Location a psr:Location ;
+ex:Chair3Location a obot:Location ;
   rdfs:label "Chair 3 Location"@en ;
   geo:sfWithin ex:TableLocation .
 
-ex:Chair4 a psr:Object, ex:DiningArea ;
+ex:Chair4 a obot:Object, ex:DiningArea ;
   rdfs:label "Chair 4"@en ;
   dul:hasLocation ex:Chair4Location .
 
-ex:Chair4Location a psr:Location ;
+ex:Chair4Location a obot:Location ;
   rdfs:label "Chair 4 Location"@en ;
   geo:sfWithin ex:TableLocation .
 
-ex:Sink a psr:Appliance, ex:Kitchen ;
+ex:Sink a obot:Appliance, ex:Kitchen ;
   rdfs:label "Sink"@en ;
   dul:hasLocation ex:SinkLocation .
 
-ex:SinkLocation a psr:Location ;
+ex:SinkLocation a obot:Location ;
   rdfs:label "Sink Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-ex:Stove a psr:Appliance, ex:Kitchen ;
+ex:Stove a obot:Appliance, ex:Kitchen ;
   rdfs:label "Stove"@en ;
   dul:hasLocation ex:StoveLocation .
 
-ex:StoveLocation a psr:Location ;
+ex:StoveLocation a obot:Location ;
   rdfs:label "Stove Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-ex:CerealBox a psr:Object, ex:Kitchen ;
+ex:CerealBox a obot:Object, ex:Kitchen ;
   rdfs:label "Cereal Box"@en ;
   dul:hasLocation ex:CerealBoxLocation .
 
-ex:CerealBoxLocation a psr:Location ;
+ex:CerealBoxLocation a obot:Location ;
   rdfs:label "Cereal Box Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-ex:MilkBottle a psr:Object, ex:Kitchen ;
+ex:MilkBottle a obot:Object, ex:Kitchen ;
   rdfs:label "Milk Bottle"@en ;
   dul:hasLocation ex:MilkBottleLocation .
 
-ex:MilkBottleLocation a psr:Location ;
+ex:MilkBottleLocation a obot:Location ;
   rdfs:label "Milk Bottle Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-ex:Plates a psr:Object, ex:Kitchen ;
+ex:Plates a obot:Object, ex:Kitchen ;
   rdfs:label "Plates"@en ;
   dul:hasLocation ex:PlatesLocation .
 
-ex:PlatesLocation a psr:Location ;
+ex:PlatesLocation a obot:Location ;
   rdfs:label "Plates Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-ex:JamJar a psr:Object, ex:Kitchen ;
+ex:JamJar a obot:Object, ex:Kitchen ;
   rdfs:label "Jam Jar"@en ;
   dul:hasLocation ex:JamJarLocation .
 
-ex:JamJarLocation a psr:Location ;
+ex:JamJarLocation a obot:Location ;
   rdfs:label "Jam Jar Location"@en ;
   geo:sfWithin ex:KitchenCabinetsLocation .
 
-psr:hasComponent ex:KitchenEnvironment ex:Kitchen .
-psr:hasComponent ex:KitchenEnvironment ex:DiningArea .
-psr:hasAffordance ex:Refrigerator soma:Opening .
-psr:hasAffordance ex:Table soma:PuttingDown .
+obot:hasComponent ex:KitchenEnvironment ex:Kitchen .
+obot:hasComponent ex:KitchenEnvironment ex:DiningArea .
+obot:hasAffordance ex:Refrigerator soma:Opening .
+obot:hasAffordance ex:Table soma:PuttingDown .
 dul:hasLocation ex:Refrigerator ex:RefrigeratorLocation .
 dul:hasLocation ex:Table ex:TableLocation .
 dul:hasLocation ex:Chair1 ex:Chair1Location .
@@ -147,7 +147,7 @@ dul:hasLocation ex:CerealBox ex:CerealBoxLocation .
 dul:hasLocation ex:MilkBottle ex:MilkBottleLocation .
 dul:hasLocation ex:Plates ex:PlatesLocation .
 dul:hasLocation ex:JamJar ex:JamJarLocation .
-psr:onTopOf ex:RefrigeratorLocation ex:KitchenCabinets .
+obot:onTopOf ex:RefrigeratorLocation ex:KitchenCabinets .
 geo:sfContains ex:KitchenLocation ex:KitchenCabinetsLocation .
 geo:sfContains ex:KitchenLocation ex:SinkLocation .
 geo:sfContains ex:KitchenLocation ex:StoveLocation .

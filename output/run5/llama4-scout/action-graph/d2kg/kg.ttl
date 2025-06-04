@@ -5,100 +5,100 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:RestoreKitchenTask a psr:Instruction ;
-  psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
-  psr:hasWorkflow ex:OrganizeKitchenWorkflow .
+ex:RestoreKitchenTask a obot:Instruction ;
+  obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function."@en ;
+  obot:hasWorkflow ex:OrganizeKitchenWorkflow .
 
-ex:OrganizeKitchenWorkflow a psr:Workflow ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction ;
-  psr:hasAction ex:ReturnItemsToStorageAction .
+ex:OrganizeKitchenWorkflow a obot:Workflow ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction ;
+  obot:hasAction ex:ReturnItemsToStorageAction .
 
 ex:IdentifyMisplacedItemsAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:KitchenEnvironment ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:KitchenEnvironment ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:MisplacedItem ;
-  psr:isAffordedBy soma:PuttingDown .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:MisplacedItem ;
+  obot:isAffordedBy soma:PuttingDown .
 
 ex:RobotAgent a dul:Agent .
 
-ex:KitchenEnvironment a psr:Component .
+ex:KitchenEnvironment a obot:Component .
 
-ex:MisplacedItem a psr:Object .
+ex:MisplacedItem a obot:Object .
 
 ex:IdentifyMisplacedItemsAction1 a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:CerealBox ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:CerealBox ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:IdentifyMisplacedItemsAction2 a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BottleOfMilk ;
-  psr:isAffordedBy soma:PickingUp .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BottleOfMilk ;
+  obot:isAffordedBy soma:PickingUp .
 
 ex:ReturnItemsToStorageAction1 a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:CerealBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyMisplacedItemsAction1 .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:CerealBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyMisplacedItemsAction1 .
 
 ex:ReturnItemsToStorageAction2 a dul:Action ;
-  psr:isPerformedBy ex:RobotAgent ;
-  psr:actsOn ex:BottleOfMilk ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyMisplacedItemsAction2 .
+  obot:isPerformedBy ex:RobotAgent ;
+  obot:actsOn ex:BottleOfMilk ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyMisplacedItemsAction2 .
 
-ex:CerealBox a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+ex:CerealBox a obot:Object ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:BottleOfMilk a psr:Object ;
-  psr:isAffordedBy soma:PickingUp .
+ex:BottleOfMilk a obot:Object ;
+  obot:isAffordedBy soma:PickingUp .
 
-ex:RefrigeratorStorage a psr:Component .
+ex:RefrigeratorStorage a obot:Component .
 
-ex:CerealBoxStorage a psr:Component .
+ex:CerealBoxStorage a obot:Component .
 
-ex:MilkStorage a psr:Component .
+ex:MilkStorage a obot:Component .
 
 ex:ReturnItemsToStorageAction1
-  psr:actsOn ex:CerealBox ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyMisplacedItemsAction .
+  obot:actsOn ex:CerealBox ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyMisplacedItemsAction .
 
 ex:ReturnItemsToStorageAction2 
-  psr:actsOn ex:BottleOfMilk ;
-  psr:isAffordedBy soma:PuttingDown ;
-  psr:follows ex:IdentifyMisplacedItemsAction .
+  obot:actsOn ex:BottleOfMilk ;
+  obot:isAffordedBy soma:PuttingDown ;
+  obot:follows ex:IdentifyMisplacedItemsAction .
 
-ex:CerealBox psr:hasAffordance soma:PickingUp, soma:PuttingDown .
-ex:BottleOfMilk psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:CerealBox obot:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:BottleOfMilk obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:RefrigeratorStorage psr:hasAffordance soma:Opening, soma:Closing .
-ex:CerealBoxStorage psr:hasAffordance soma:Opening, soma:Closing .
-ex:MilkStorage psr:hasAffordance soma:Opening, soma:Closing .
+ex:RefrigeratorStorage obot:hasAffordance soma:Opening, soma:Closing .
+ex:CerealBoxStorage obot:hasAffordance soma:Opening, soma:Closing .
+ex:MilkStorage obot:hasAffordance soma:Opening, soma:Closing .
 
 ex:OrganizeKitchenWorkflow 
-  psr:hasAction ex:IdentifyMisplacedItemsAction1 ;
-  psr:hasAction ex:ReturnItemsToStorageAction1 ;
-  psr:hasAction ex:IdentifyMisplacedItemsAction2 ;
-  psr:hasAction ex:ReturnItemsToStorageAction2 .
+  obot:hasAction ex:IdentifyMisplacedItemsAction1 ;
+  obot:hasAction ex:ReturnItemsToStorageAction1 ;
+  obot:hasAction ex:IdentifyMisplacedItemsAction2 ;
+  obot:hasAction ex:ReturnItemsToStorageAction2 .
 
 ex:IdentifyMisplacedItemsAction1 
-  psr:precedes ex:ReturnItemsToStorageAction1 .
+  obot:precedes ex:ReturnItemsToStorageAction1 .
 
 ex:ReturnItemsToStorageAction1 
-  psr:follows ex:IdentifyMisplacedItemsAction1 ;
-  psr:precedes ex:IdentifyMisplacedItemsAction2 .
+  obot:follows ex:IdentifyMisplacedItemsAction1 ;
+  obot:precedes ex:IdentifyMisplacedItemsAction2 .
 
 ex:IdentifyMisplacedItemsAction2 
-  psr:follows ex:ReturnItemsToStorageAction1 ;
-  psr:precedes ex:ReturnItemsToStorageAction2 .
+  obot:follows ex:ReturnItemsToStorageAction1 ;
+  obot:precedes ex:ReturnItemsToStorageAction2 .
 
 ex:ReturnItemsToStorageAction2 
-  psr:follows ex:IdentifyMisplacedItemsAction2 .
+  obot:follows ex:IdentifyMisplacedItemsAction2 .

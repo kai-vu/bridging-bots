@@ -1,53 +1,53 @@
-@prefix psr: <http://psr.example.org/>
+@prefix obot: <http://psr.example.org/>
 @prefix owl: <http://www.w3.org/2002/01/rdf-schema#>
 @prefix dul: <http://www.dul.com/ontology#>
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # Define the prefixes
-psr: psr.example.org/ ;
+obot: psr.example.org/ ;
 owl: rdf-schema.org/;
 dul: <http://www.dul.com/ontology#>;
 xsd: xmlschema.org/;
 
 # Define the classes
-owl:Instruction a psr:Instruction ;
-psr:Instruction a owl:Class ;
-psr:Workflow a psr:Instruction ;
-dul:Action a psr:Instruction ;
-dul:Agent a psr:Instruction ;
-dul:Component a psr:Instruction ;
-dul:Affordance a psr:Instruction ;
-owl:Entity a psr:Instruction ;
+owl:Instruction a obot:Instruction ;
+obot:Instruction a owl:Class ;
+obot:Workflow a obot:Instruction ;
+dul:Action a obot:Instruction ;
+dul:Agent a obot:Instruction ;
+dul:Component a obot:Instruction ;
+dul:Affordance a obot:Instruction ;
+owl:Entity a obot:Instruction ;
 
 # Define the properties
-psr:hasWorkflow a psr:Instruction psr:Workflow ;
-psr:hasAction a psr:Instruction dul:Action ;
-psr:precedes a psr:Instruction dul:Action ;
-psr:follows a psr:Instruction dul:Action ;
-psr:isPerformedBy a psr:Instruction dul:Agent ;
-psr:actsOn a psr:Instruction dul:Component ;
-psr:isAffordedBy a psr:Instruction dul:Affordance ;
+obot:hasWorkflow a obot:Instruction obot:Workflow ;
+obot:hasAction a obot:Instruction dul:Action ;
+obot:precedes a obot:Instruction dul:Action ;
+obot:follows a obot:Instruction dul:Action ;
+obot:isPerformedBy a obot:Instruction dul:Agent ;
+obot:actsOn a obot:Instruction dul:Component ;
+obot:isAffordedBy a obot:Instruction dul:Affordance ;
 
 # Define the data properties
-owl:hasNaturalLanguage a psr:Instruction xsd:string ;
+owl:hasNaturalLanguage a obot:Instruction xsd:string ;
 
 # Assuming the robot must first identify all misplaced items, then categorize them by type and function, and finally return each item to its standard storage location based on their type and function.
 # The sequence of actions below represents this process:
-dul:Action a psr:Instruction ;
+dul:Action a obot:Instruction ;
   dul:label "Identify misplaced items"@en .
-  psr:precedes dul:Action dul:Action ;
-  psr:follows dul:Action dul:Action ;
-  psr:isPerformedBy dul:Agent ;
-  psr:actsOn dul:Component ;
-dul:Affordance a psr:Instruction dul:Action ;
+  obot:precedes dul:Action dul:Action ;
+  obot:follows dul:Action dul:Action ;
+  obot:isPerformedBy dul:Agent ;
+  obot:actsOn dul:Component ;
+dul:Affordance a obot:Instruction dul:Action ;
   dul:label "Categorize items by type and function"@en .
-  psr:precedes dul:Action dul:Action ;
-  psr:follows dul:Action dul:Action ;
-  psr:isAffordedBy dul:Agent ;
-  psr:actsOn dul:Component ;
-dul:Action a psr:Instruction ;
+  obot:precedes dul:Action dul:Action ;
+  obot:follows dul:Action dul:Action ;
+  obot:isAffordedBy dul:Agent ;
+  obot:actsOn dul:Component ;
+dul:Action a obot:Instruction ;
   dul:label "Return each item to its standard storage location"@en .
-  psr:precedes dul:Action dul:Action ;
-  psr:follows dul:Action dul:Action ;
-  psr:isPerformedBy dul:Agent ;
-  psr:actsOn dul:Component ;
+  obot:precedes dul:Action dul:Action ;
+  obot:follows dul:Action dul:Action ;
+  obot:isPerformedBy dul:Agent ;
+  obot:actsOn dul:Component ;

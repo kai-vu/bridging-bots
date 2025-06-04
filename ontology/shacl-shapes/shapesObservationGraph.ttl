@@ -11,8 +11,13 @@ obot:EnvironmentShape a sh:NodeShape ;
     sh:targetClass obot:Environment ;
     sh:property [
         sh:path dul:hasComponent ;
-        sh:in (obot:Component obot:Appliance
-                obot:Furniture obot:Object) ;
+        sh:or (
+            [ sh:class obot:Component ]
+            [ sh:class obot:Appliance ]
+            [ sh:class obot:Furniture ]
+            [ sh:class obot:Object ]
+            [ sh:class obot:Environment]
+        ) ;
         sh:minCount 1 ;
     ] .
 
@@ -21,10 +26,18 @@ obot:ComponentShape a sh:NodeShape ;
     sh:targetClass obot:Component ;
     sh:property [
         sh:path obot:hasAffordance ;
-        sh:in (obot:Affordance soma:Closing soma:Opening 
-                soma:Delivering soma:Holding soma:PickingUp
-                soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping) ;
-        sh:minCount 1 ;
+        sh:or (
+            [ sh:class obot:Affordance ]
+            [ sh:class soma:Closing ]
+            [ sh:class soma:Opening ]
+            [ sh:class soma:Delivering ]
+            [ sh:class soma:Holding ]
+            [ sh:class soma:PickingUp ]
+            [ sh:class soma:PuttingDown ]
+            [ sh:class soma:Pulling ]
+            [ sh:class soma:Pushing ]
+            [ sh:class soma:Grasping ]
+        ) ;
     ] ;
     sh:property [
         sh:path dul:hasLocation ;
@@ -37,18 +50,38 @@ obot:LocationShape a sh:NodeShape ;
     sh:targetClass obot:Location ;
     sh:property [
         sh:path obot:onTopOf ;
-        sh:class obot:Component ;
+        sh:or (
+            [ sh:class obot:Component ]
+            [ sh:class obot:Appliance ]
+            [ sh:class obot:Furniture ]
+            [ sh:class obot:Object ]
+        ) ;
     ] ;
     sh:property [
         sh:path geo:sfContains ;
-        sh:class obot:Component ;
+        sh:or (
+            [ sh:class obot:Component ]
+            [ sh:class obot:Appliance ]
+            [ sh:class obot:Furniture ]
+            [ sh:class obot:Object ]
+        ) ;
     ] ;
     sh:property [
         sh:path geo:sfWithin ;
-        sh:class obot:Component ;
+        sh:or (
+            [ sh:class obot:Component ]
+            [ sh:class obot:Appliance ]
+            [ sh:class obot:Furniture ]
+            [ sh:class obot:Object ]
+        ) ;
     ] ;
     sh:property [
         sh:path geo:sfOverlaps ;
-        sh:class obot:Component ;
+        sh:or (
+            [ sh:class obot:Component ]
+            [ sh:class obot:Appliance ]
+            [ sh:class obot:Furniture ]
+            [ sh:class obot:Object ]
+        ) ;
     ] .
 

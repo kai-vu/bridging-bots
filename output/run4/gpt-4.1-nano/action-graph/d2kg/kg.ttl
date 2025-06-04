@@ -13,7 +13,7 @@ ex:IdentifyMisplacedItems a obot:Action ;
     rdfs:label "Identify misplaced items"@en ;
     rdfs:comment "The robot identifies all misplaced items on the countertop."@en .
 
-ex:IdentifyMisplacedItems actsOn ex:FoodItemsOnCounter ;
+ex:IdentifyMisplacedItems obot:actsOn ex:FoodItemsOnCounter ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 2: Pick up each misplaced item (example: jar)
@@ -21,7 +21,7 @@ ex:PickUpJar a obot:Action ;
     rdfs:label "Pick up jar"@en ;
     rdfs:comment "Robot picks up the jar from the countertop."@en .
 
-ex:PickUpJar actsOn ex:Jar ;
+ex:PickUpJar obot:actsOn ex:Jar ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 3: Move the jar to its standard storage location (e.g., cabinet or pantry)
@@ -29,56 +29,56 @@ ex:StoreJar a obot:Action ;
     rdfs:label "Store jar in pantry"@en ;
     rdfs:comment "Robot places the jar into its standard storage location."@en .
 
-ex:StoreJar actsOn ex:Jar ;
+ex:StoreJar obot:actsOn ex:Jar ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 4: Repeat pick up and store actions for other misplaced items (e.g., Jell-O box, salt packet, cereal box, water bottle, etc.)
 ex:PickUpJellOBox a obot:Action ;
     rdfs:label "Pick up Jell-O box"@en .
 
-ex:PickUpJellOBox actsOn ex:JellOBox ;
+ex:PickUpJellOBox obot:actsOn ex:JellOBox ;
     rdfs:isPerformedBy ex:Robot .
 
 ex:StoreJellOBox a obot:Action ;
     rdfs:label "Store Jell-O box in pantry"@en .
 
-ex:StoreJellOBox actsOn ex:JellOBox ;
+ex:StoreJellOBox obot:actsOn ex:JellOBox ;
     rdfs:isPerformedBy ex:Robot .
 
 ex:PickUpSaltPacket a obot:Action ;
     rdfs:label "Pick up salt packet"@en .
 
-ex:PickUpSaltPacket actsOn ex:SaltPacket ;
+ex:PickUpSaltPacket obot:actsOn ex:SaltPacket ;
     rdfs:colors:performedBy ex:Robot .
 
 ex:StoreSaltPacket a obot:Action ;
     rdfs:label "Store salt packet in pantry"@en .
 
-ex:StoreSaltPacket actsOn ex:SaltPacket ;
+ex:StoreSaltPacket obot:actsOn ex:SaltPacket ;
     rdfs:isPerformedBy ex:Robot .
 
 ex:PickUpCerealBox a obot:Action ;
     rdfs:label "Pick up cereal box"@en .
 
-ex:PickUpCerealBox actsOn ex:CerealBox ;
+ex:PickUpCerealBox obot:actsOn ex:CerealBox ;
     rdfs:isPerformedBy ex:Robot .
 
 ex:StoreCerealBox a obot:Action ;
     rdfs:label "Store cereal box in pantry"@en .
 
-ex:StoreCerealBox actsOn ex:CerealBox ;
+ex:StoreCerealBox obot:actsOn ex:CerealBox ;
     rdfs:requires ex:Pantry .
 
 ex:PickUpWaterBottle a obot:Action ;
     rdfs:label "Pick up water bottle"@en .
 
-ex:PickUpWaterBottle actsOn ex:WaterBottle ;
+ex:PickUpWaterBottle obot:actsOn ex:WaterBottle ;
     rdfs:isPerformedBy ex:Robot .
 
 ex:StoreWaterBottle a obot:Action ;
     rdfs:label "Store water bottle in pantry"@en .
 
-ex:StoreWaterBottle actsOn ex:WaterBottle ;
+ex:StoreWaterBottle obot:actsOn ex:WaterBottle ;
     rdfs:requires ex:Pantry .
 
 # Action 5: Confirm all items are placed correctly; if not, repeat steps
@@ -86,7 +86,7 @@ ex:VerifyRestoration a obot:Action ;
     rdfs:label "Verify environment organization"@en ;
     rdfs:comment "Robot verifies if all items are correctly stored."@en .
 
-ex:VerifyRestoration actsOn ex:AllItems ;
+ex:VerifyRestoration obot:actsOn ex:AllItems ;
     rdfs:isPerformedBy ex:Robot .
 
 # Action 6: Finalize the process
@@ -94,7 +94,7 @@ ex:CompleteRestoration a obot:Action ;
     rdfs:label "Complete restoration"@en ;
     rdfs:comment "Robot completes the task after verifying all items are in place."@en .
 
-ex:CompleteRestoration actsOn ex:AllItems ;
+ex:CompleteRestoration obot:actsOn ex:AllItems ;
     rdfs:isPerformedBy ex:Robot .
 
 # Summary: Sequence of actions

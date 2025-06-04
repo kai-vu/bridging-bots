@@ -1,294 +1,103 @@
-SHACL Validation Report
+SHACL Validation Report for run9
 
-=== Validation Report for: ../../output/llava-llama3/observation-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/observation-graph/dpe/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== ERROR validating: ../../output/llava-llama3/observation-graph/i2kg/kg.ttl ===
+=== ERROR validating: ../../output/run9/llava-llama3/observation-graph/i2kg/kg.ttl ===
 BadSyntax: at line 19 of <>:
 Bad syntax (objectList expected) at ^ in:
-"...b'<http://example.org/data/soma:CurrentLocation> obot:Component'^b' .\n\n<http://example.org/data/obot:Appliance> a owl:Class ;\n  '..."
+"...b'http://example.org/data/soma:CurrentLocation> obot:Component'^b' .\n\n<http://example.org/data/obot:Appliance> a owl:Class ;\n '..."
 
-=== Validation Report for: ../../output/llava-llama3/observation-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/observation-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
 Results (9):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:floor
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:sink
+	Value Node: soma:Holding
 	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:floor->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Message: Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:cabinet
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:diningTable
+	Value Node: soma:Grasping
 	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:cabinet->obot:hasAffordance
+	Message: Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:window
+	Value Node: soma:Opening
+	Result Path: obot:hasAffordance
+	Message: Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:window
+	Value Node: soma:Closing
+	Result Path: obot:hasAffordance
+	Message: Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:fridge
+	Value Node: soma:Opening
+	Result Path: obot:hasAffordance
+	Message: Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:fridge
+	Value Node: soma:Closing
+	Result Path: obot:hasAffordance
+	Message: Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:microWave
+	Value Node: soma:Pushing
+	Result Path: obot:hasAffordance
+	Message: Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:kitchenCounter
+	Value Node: soma:Pulling
+	Result Path: obot:hasAffordance
+	Message: Node soma:Pulling must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
 	Focus Node: ex:floor
 	Result Path: dul:hasLocation
 	Message: Less than 1 values on ex:floor->dul:hasLocation
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:window
-	Result Path: dul:hasComponent
-	Message: Value ex:window not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:diningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:diningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:cabinet
-	Result Path: dul:hasComponent
-	Message: Value ex:cabinet not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:sink
-	Result Path: dul:hasComponent
-	Message: Value ex:sink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:fridge
-	Result Path: dul:hasComponent
-	Message: Value ex:fridge not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:kitchenCounter
-	Result Path: dul:hasComponent
-	Message: Value ex:kitchenCounter not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
 
 
-=== Validation Report for: ../../output/llava-llama3/observation-graph/d2kg-rag/kg.ttl ===
-Validation Report
-Conforms: False
-Results (24):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:window
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:window->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:packagedFoodProduct
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:packagedFoodProduct->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:microWaveOven
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:microWaveOven->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:diningTable
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:diningTable->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:toaster
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:toaster->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:foodItem
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:foodItem->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:plasticBottle
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:plasticBottle->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:cabinet
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:cabinet->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:cup
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:cup->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:sink
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:sink->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:kitchenCounter
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:kitchenCounter->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:refrigerator
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:refrigerator->obot:hasAffordance
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:window
-	Result Path: dul:hasComponent
-	Message: Value ex:window not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:packagedFoodProduct
-	Result Path: dul:hasComponent
-	Message: Value ex:packagedFoodProduct not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:microWaveOven
-	Result Path: dul:hasComponent
-	Message: Value ex:microWaveOven not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:diningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:diningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:foodItem
-	Result Path: dul:hasComponent
-	Message: Value ex:foodItem not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:kitchenCounter
-	Result Path: dul:hasComponent
-	Message: Value ex:kitchenCounter not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:toaster
-	Result Path: dul:hasComponent
-	Message: Value ex:toaster not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:plasticBottle
-	Result Path: dul:hasComponent
-	Message: Value ex:plasticBottle not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:cabinet
-	Result Path: dul:hasComponent
-	Message: Value ex:cabinet not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:sink
-	Result Path: dul:hasComponent
-	Message: Value ex:sink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:cup
-	Result Path: dul:hasComponent
-	Message: Value ex:cup not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:kitchen
-	Value Node: ex:refrigerator
-	Result Path: dul:hasComponent
-	Message: Value ex:refrigerator not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-
-
-=== Validation Report for: ../../output/llama4-scout/observation-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/observation-graph/d2kg-rag/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== Validation Report for: ../../output/llama4-scout/observation-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-scout/observation-graph/dpe/kg.ttl ===
+Validation Report
+Conforms: True
+
+
+=== Validation Report for: ../../output/run9/llama4-scout/observation-graph/i2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (10):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: obot:Object
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on obot:Object->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Cabinet
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Cabinet->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Counter
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Counter->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: obot:Furniture
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on obot:Furniture->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Sink
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Sink->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: obot:Appliance
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on obot:Appliance->obot:hasAffordance
+Results (3):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: obot:Object
+	Focus Node: obot:Appliance
 	Result Path: dul:hasLocation
-	Message: Less than 1 values on obot:Object->dul:hasLocation
+	Message: Less than 1 values on obot:Appliance->dul:hasLocation
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
@@ -298,69 +107,85 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: obot:Appliance
+	Focus Node: obot:Object
 	Result Path: dul:hasLocation
-	Message: Less than 1 values on obot:Appliance->dul:hasLocation
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Refrigerator
-	Result Path: dul:hasComponent
-	Message: Value ex:Refrigerator not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
+	Message: Less than 1 values on obot:Object->dul:hasLocation
 
 
-=== ERROR validating: ../../output/llama4-scout/observation-graph/d2kg/kg.ttl ===
+=== ERROR validating: ../../output/run9/llama4-scout/observation-graph/d2kg/kg.ttl ===
 BadSyntax: at line 137 of <>:
 Bad syntax (expected '.' or '}' or ']' at end of statement) at ^ in:
-"...b't Location"@en .\n\nex:Kitchen ex:KitchenLocation obot:onTopOf '^b'ex:Kitchen .\n\nex:Cabinets ex:KitchenLocation obot:onTopOf ex:'..."
+"...b' Location"@en .\n\nex:Kitchen ex:KitchenLocation obot:onTopOf '^b'ex:Kitchen .\n\nex:Cabinets ex:KitchenLocation obot:onTopOf ex'..."
 
-=== Validation Report for: ../../output/llama4-scout/observation-graph/d2kg-rag/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-scout/observation-graph/d2kg-rag/kg.ttl ===
 Validation Report
 Conforms: False
-Results (25):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+Results (12):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:WhiteWalls
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] [ sh:class obot:Environment ] ) ; sh:path dul:hasComponent ]
+	Focus Node: ex:Environment
+	Value Node: ex:Kitchen
+	Result Path: dul:hasComponent
+	Message: Node ex:Kitchen must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ] , [ sh:class obot:Environment ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] [ sh:class obot:Environment ] ) ; sh:path dul:hasComponent ]
+	Focus Node: ex:Environment
+	Value Node: ex:DiningArea
+	Result Path: dul:hasComponent
+	Message: Node ex:DiningArea must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ] , [ sh:class obot:Environment ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] ) ; sh:path geo:sfWithin ]
+	Focus Node: ex:Kitchen
+	Value Node: ex:Environment
+	Result Path: geo:sfWithin
+	Message: Node ex:Environment must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] ) ; sh:path geo:sfWithin ]
+	Focus Node: ex:DiningArea
+	Value Node: ex:Environment
+	Result Path: geo:sfWithin
+	Message: Node ex:Environment must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:KitchenCabinets
+	Value Node: soma:Opening
 	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:WhiteWalls->obot:hasAffordance
+	Message: Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:WoodenFloor
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:WoodenFloor->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:KitchenWall
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:KitchenWall->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
 	Focus Node: ex:MarbleCountertop
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:MarbleCountertop->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:DiningAreaWall
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:DiningAreaWall->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Door
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Door->obot:hasAffordance
+	Result Path: dul:hasLocation
+	Message: Less than 1 values on ex:MarbleCountertop->dul:hasLocation
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
 	Focus Node: ex:KitchenCabinets
 	Result Path: dul:hasLocation
 	Message: Less than 1 values on ex:KitchenCabinets->dul:hasLocation
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
+	Focus Node: ex:Door
+	Result Path: dul:hasLocation
+	Message: Less than 1 values on ex:Door->dul:hasLocation
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
+	Focus Node: ex:DiningAreaWall
+	Result Path: dul:hasLocation
+	Message: Less than 1 values on ex:DiningAreaWall->dul:hasLocation
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
+	Focus Node: ex:KitchenWall
+	Result Path: dul:hasLocation
+	Message: Less than 1 values on ex:KitchenWall->dul:hasLocation
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
@@ -373,396 +198,78 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: ex:WoodenFloor
 	Result Path: dul:hasLocation
 	Message: Less than 1 values on ex:WoodenFloor->dul:hasLocation
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: ex:KitchenWall
-	Result Path: dul:hasLocation
-	Message: Less than 1 values on ex:KitchenWall->dul:hasLocation
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: ex:MarbleCountertop
-	Result Path: dul:hasLocation
-	Message: Less than 1 values on ex:MarbleCountertop->dul:hasLocation
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: ex:DiningAreaWall
-	Result Path: dul:hasLocation
-	Message: Less than 1 values on ex:DiningAreaWall->dul:hasLocation
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
-	Focus Node: ex:Door
-	Result Path: dul:hasLocation
-	Message: Less than 1 values on ex:Door->dul:hasLocation
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Environment
-	Value Node: ex:DiningArea
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningArea not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Environment
-	Value Node: ex:Kitchen
-	Result Path: dul:hasComponent
-	Message: Value ex:Kitchen not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfWithin ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:Environment
-	Result Path: geo:sfWithin
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfWithin ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Environment
-	Result Path: geo:sfWithin
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:WoodenTable
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:WhiteChair4
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:WhiteChair3
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:WhiteChair2
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:WhiteChair1
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Sink
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Refrigerator
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfOverlaps ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Stove
-	Result Path: geo:sfOverlaps
-	Message: Value does not have class obot:Component
 
 
-=== Validation Report for: ../../output/llama4-maverick/observation-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/observation-graph/dpe/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== Validation Report for: ../../output/llama4-maverick/observation-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/observation-graph/i2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (12):
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+Results (6):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop2
+	Value Node: soma:Holding
+	Result Path: obot:hasAffordance
+	Message: Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:CounterTop1
-	Result Path: dul:hasComponent
-	Message: Value ex:CounterTop1 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop2
+	Value Node: soma:PuttingDown
+	Result Path: obot:hasAffordance
+	Message: Node soma:PuttingDown must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Cabinet2
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinet2 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop2
+	Value Node: soma:PickingUp
+	Result Path: obot:hasAffordance
+	Message: Node soma:PickingUp must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Cabinet1
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinet1 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop1
+	Value Node: soma:PuttingDown
+	Result Path: obot:hasAffordance
+	Message: Node soma:PuttingDown must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Sink
-	Result Path: dul:hasComponent
-	Message: Value ex:Sink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop1
+	Value Node: soma:Holding
+	Result Path: obot:hasAffordance
+	Message: Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:CounterTop2
-	Result Path: dul:hasComponent
-	Message: Value ex:CounterTop2 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Cabinet3
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinet3 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Fridge
-	Result Path: dul:hasComponent
-	Message: Value ex:Fridge not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:DiningRoom
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:DiningRoom
-	Value Node: ex:Chair2
-	Result Path: dul:hasComponent
-	Message: Value ex:Chair2 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:DiningRoom
-	Value Node: ex:Chair3
-	Result Path: dul:hasComponent
-	Message: Value ex:Chair3 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:DiningRoom
-	Value Node: ex:Chair1
-	Result Path: dul:hasComponent
-	Message: Value ex:Chair1 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
+	Source Shape: [ sh:or ( [ sh:class obot:Affordance ] [ sh:class soma:Closing ] [ sh:class soma:Opening ] [ sh:class soma:Delivering ] [ sh:class soma:Holding ] [ sh:class soma:PickingUp ] [ sh:class soma:PuttingDown ] [ sh:class soma:Pulling ] [ sh:class soma:Pushing ] [ sh:class soma:Grasping ] ) ; sh:path obot:hasAffordance ]
+	Focus Node: ex:CounterTop1
+	Value Node: soma:PickingUp
+	Result Path: obot:hasAffordance
+	Message: Node soma:PickingUp must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]
 
 
-=== Validation Report for: ../../output/llama4-maverick/observation-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/observation-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (24):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+Results (1):
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:WhiteWalls
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:WhiteWalls->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:LightColoredCountertops
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:LightColoredCountertops->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:DarkGrayCabinets
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:DarkGrayCabinets->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Floor
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Floor->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:DarkWoodParquet
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:DarkWoodParquet->obot:hasAffordance
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:JarOfJam
-	Result Path: dul:hasComponent
-	Message: Value ex:JarOfJam not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:BoxOfSalt
-	Result Path: dul:hasComponent
-	Message: Value ex:BoxOfSalt not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Pot
-	Result Path: dul:hasComponent
-	Message: Value ex:Pot not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Sink
-	Result Path: dul:hasComponent
-	Message: Value ex:Sink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:BoxOfJello
-	Result Path: dul:hasComponent
-	Message: Value ex:BoxOfJello not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:BoxOfCrackers
-	Result Path: dul:hasComponent
-	Message: Value ex:BoxOfCrackers not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Glass
-	Result Path: dul:hasComponent
-	Message: Value ex:Glass not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Refrigerator
-	Result Path: dul:hasComponent
-	Message: Value ex:Refrigerator not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Countertop
-	Result Path: dul:hasComponent
-	Message: Value ex:Countertop not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Cabinets
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinets not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Bottles
-	Result Path: dul:hasComponent
-	Message: Value ex:Bottles not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:StoveTop
-	Result Path: dul:hasComponent
-	Message: Value ex:StoveTop not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Faucet
-	Result Path: dul:hasComponent
-	Message: Value ex:Faucet not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:WhiteChairs
-	Result Path: dul:hasComponent
-	Message: Value ex:WhiteChairs not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:RangeHood
-	Result Path: dul:hasComponent
-	Message: Value ex:RangeHood not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path obot:onTopOf ]
-	Focus Node: ex:AboveStoveTop
-	Value Node: ex:StoveTop
-	Result Path: obot:onTopOf
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfWithin ]
-	Focus Node: ex:AroundDiningTable
-	Value Node: ex:DiningTable
-	Result Path: geo:sfWithin
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfWithin ]
+	Source Shape: [ sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] ) ; sh:path geo:sfWithin ]
 	Focus Node: ex:DiningArea
 	Value Node: ex:Kitchen
 	Result Path: geo:sfWithin
-	Message: Value does not have class obot:Component
+	Message: Node ex:Kitchen must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]
 
 
-=== Validation Report for: ../../output/llama4-maverick/observation-graph/d2kg-rag/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/observation-graph/d2kg-rag/kg.ttl ===
 Validation Report
 Conforms: False
-Results (14):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Walls
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Walls->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:Floor
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:Floor->obot:hasAffordance
+Results (2):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
@@ -775,149 +282,17 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: ex:Floor
 	Result Path: dul:hasLocation
 	Message: Less than 1 values on ex:Floor->dul:hasLocation
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Walls
-	Result Path: dul:hasComponent
-	Message: Value ex:Walls not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Sink
-	Result Path: dul:hasComponent
-	Message: Value ex:Sink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Refrigerator
-	Result Path: dul:hasComponent
-	Message: Value ex:Refrigerator not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Countertop
-	Result Path: dul:hasComponent
-	Message: Value ex:Countertop not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Cabinets
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinets not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:StoveTop
-	Result Path: dul:hasComponent
-	Message: Value ex:StoveTop not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Floor
-	Result Path: dul:hasComponent
-	Message: Value ex:Floor not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:RangeHood
-	Result Path: dul:hasComponent
-	Message: Value ex:RangeHood not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:DiningArea
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
 
 
-=== Validation Report for: ../../output/gpt-o1/observation-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-o1/observation-graph/i2kg/kg.ttl ===
+Validation Report
+Conforms: True
+
+
+=== Validation Report for: ../../output/run9/gpt-o1/observation-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (7):
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningChair4
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningChair4 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:KitchenCounter
-	Result Path: dul:hasComponent
-	Message: Value ex:KitchenCounter not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningChair2
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningChair2 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningChair1
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningChair1 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:DiningChair3
-	Result Path: dul:hasComponent
-	Message: Value ex:DiningChair3 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:Kitchen
-	Value Node: ex:Fridge
-	Result Path: dul:hasComponent
-	Message: Value ex:Fridge not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-
-
-=== Validation Report for: ../../output/gpt-o1/observation-graph/d2kg/kg.ttl ===
-Validation Report
-Conforms: False
-Results (49):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:WoodenFramedWindow
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:WoodenFramedWindow->obot:hasAffordance
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Affordamce soma:Closing soma:Opening soma:Delivering soma:Holding soma:PickingUp soma:PuttingDown soma:Pulling soma:Pushing soma:Grasping ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAffordance ]
-	Focus Node: ex:WhiteDoor
-	Result Path: obot:hasAffordance
-	Message: Less than 1 values on ex:WhiteDoor->obot:hasAffordance
+Results (2):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
 	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:BlankNodeOrIRI ; sh:path dul:hasLocation ]
@@ -930,1926 +305,155 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
 	Focus Node: ex:WhiteDoor
 	Result Path: dul:hasLocation
 	Message: Less than 1 values on ex:WhiteDoor->dul:hasLocation
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:CerealBoxRiceBubbles
-	Result Path: dul:hasComponent
-	Message: Value ex:CerealBoxRiceBubbles not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:StackOfWhitePlates
-	Result Path: dul:hasComponent
-	Message: Value ex:StackOfWhitePlates not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WhiteDoor
-	Result Path: dul:hasComponent
-	Message: Value ex:WhiteDoor not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:Lemon
-	Result Path: dul:hasComponent
-	Message: Value ex:Lemon not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:PlasticWaterBottleEvian
-	Result Path: dul:hasComponent
-	Message: Value ex:PlasticWaterBottleEvian not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:JamJar2
-	Result Path: dul:hasComponent
-	Message: Value ex:JamJar2 not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:MetalPot
-	Result Path: dul:hasComponent
-	Message: Value ex:MetalPot not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:ClearPitcher
-	Result Path: dul:hasComponent
-	Message: Value ex:ClearPitcher not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:Cabinetry
-	Result Path: dul:hasComponent
-	Message: Value ex:Cabinetry not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:OrangeMug
-	Result Path: dul:hasComponent
-	Message: Value ex:OrangeMug not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:BoxJello
-	Result Path: dul:hasComponent
-	Message: Value ex:BoxJello not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:KitchenCounter
-	Result Path: dul:hasComponent
-	Message: Value ex:KitchenCounter not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:CerealBoxChucky
-	Result Path: dul:hasComponent
-	Message: Value ex:CerealBoxChucky not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WhiteCaddy
-	Result Path: dul:hasComponent
-	Message: Value ex:WhiteCaddy not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:SquareBoxShortbread
-	Result Path: dul:hasComponent
-	Message: Value ex:SquareBoxShortbread not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WhiteFruitBowl
-	Result Path: dul:hasComponent
-	Message: Value ex:WhiteFruitBowl not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WhiteUpholsteredChairs
-	Result Path: dul:hasComponent
-	Message: Value ex:WhiteUpholsteredChairs not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WoodenDiningTable
-	Result Path: dul:hasComponent
-	Message: Value ex:WoodenDiningTable not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:VentHood
-	Result Path: dul:hasComponent
-	Message: Value ex:VentHood not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:StainlessSteelSink
-	Result Path: dul:hasComponent
-	Message: Value ex:StainlessSteelSink not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:ContainerAlpenSalz
-	Result Path: dul:hasComponent
-	Message: Value ex:ContainerAlpenSalz not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WoodenFramedWindow
-	Result Path: dul:hasComponent
-	Message: Value ex:WoodenFramedWindow not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:Oranges
-	Result Path: dul:hasComponent
-	Message: Value ex:Oranges not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:Refrigerator
-	Result Path: dul:hasComponent
-	Message: Value ex:Refrigerator not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:WineGlass
-	Result Path: dul:hasComponent
-	Message: Value ex:WineGlass not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:Stovetop
-	Result Path: dul:hasComponent
-	Message: Value ex:Stovetop not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
-	Focus Node: ex:KitchenEnvironment
-	Value Node: ex:JarBonneMaman
-	Result Path: dul:hasComponent
-	Message: Value ex:JarBonneMaman not in list ['obot:Object', 'obot:Component', 'obot:Appliance', 'obot:Furniture']
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:StovetopLocation
-	Value Node: ex:MetalPot
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:FruitBowlLocation
-	Value Node: ex:Oranges
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:FruitBowlLocation
-	Value Node: ex:Lemon
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:PlasticWaterBottleEvian
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:WhiteCaddy
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:SquareBoxShortbread
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:WhiteFruitBowl
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:WineGlass
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:DiningTableSurface
-	Value Node: ex:ClearPitcher
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:CerealBoxRiceBubbles
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:StackOfWhitePlates
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:JamJar2
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:CerealBoxChucky
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:ContainerAlpenSalz
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:Stovetop
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:JarBonneMaman
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:OrangeMug
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:path geo:sfContains ]
-	Focus Node: ex:KitchenCounterSurface
-	Value Node: ex:BoxJello
-	Result Path: geo:sfContains
-	Message: Value does not have class obot:Component
 
 
-=== Validation Report for: ../../output/gpt-o1/observation-graph/d2kg-rag/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-o1/observation-graph/d2kg-rag/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== Validation Report for: ../../output/gpt-4.1-nano/observation-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-4.1-nano/observation-graph/i2kg/kg.ttl ===
 Validation Report
 Conforms: False
 Results (1):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:in ( obot:Component obot:Appliance obot:Furniture obot:Object ) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:hasComponent ]
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:or ( [ sh:class obot:Component ] [ sh:class obot:Appliance ] [ sh:class obot:Furniture ] [ sh:class obot:Object ] [ sh:class obot:Environment ] ) ; sh:path dul:hasComponent ]
 	Focus Node: :Environment1
 	Result Path: dul:hasComponent
 	Message: Less than 1 values on :Environment1->dul:hasComponent
 
 
-=== Validation Report for: ../../output/gpt-4.1-nano/observation-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-4.1-nano/observation-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== ERROR validating: ../../output/gpt-4.1-nano/observation-graph/d2kg-rag/kg.ttl ===
+=== ERROR validating: ../../output/run9/gpt-4.1-nano/observation-graph/d2kg-rag/kg.ttl ===
 BadSyntax: at line 51 of <>:
 Bad syntax (expected '.' or '}' or ']' at end of statement) at ^ in:
 "...b'oor ; :locatedIn data:Environment ; :separates data:Kitchen '^b'from data:DiningArea ; :hasDesign "simple panel" ; :hasHandl'..."
 
-=== Validation Report for: ../../output/llava-llama3/action-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/action-graph/dpe/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== ERROR validating: ../../output/llava-llama3/action-graph/i2kg/kg.ttl ===
+=== ERROR validating: ../../output/run9/llava-llama3/action-graph/i2kg/kg.ttl ===
 BadSyntax: at line 2 of <>:
 Bad syntax (expected '.' or '}' or ']' at end of statement) at ^ in:
 "b'@prefix obot: <http://example.org/psr#>\n'^b'@prefix dul: <http://www.w3.org/2007/gldata/docs/example/dul'..."
 
-=== Validation Report for: ../../output/llava-llama3/action-graph/d2kg/kg.ttl ===
-Validation Report
-Conforms: False
-Results (41):
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action9
-	Value Node: ex:action9
-	Message: Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action2
-	Value Node: ex:action2
-	Message: Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action14
-	Value Node: ex:action14
-	Message: Node ex:action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action1
-	Value Node: ex:action1
-	Message: Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action7
-	Value Node: ex:action7
-	Message: Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action10
-	Value Node: ex:action10
-	Message: Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action12
-	Value Node: ex:action12
-	Message: Node ex:action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action8
-	Value Node: ex:action8
-	Message: Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action11
-	Value Node: ex:action11
-	Message: Node ex:action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action6
-	Value Node: ex:action6
-	Message: Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action15
-	Value Node: ex:action15
-	Message: Node ex:action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action3
-	Value Node: ex:action3
-	Message: Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action13
-	Value Node: ex:action13
-	Message: Node ex:action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action5
-	Value Node: ex:action5
-	Message: Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action4
-	Value Node: ex:action4
-	Message: Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action9
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action2
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action14
-	Value Node: soma:Pushing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action1
-	Value Node: soma:Seeing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action7
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action10
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action12
-	Value Node: soma:Closing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action8
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action11
-	Value Node: soma:Closing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action6
-	Value Node: soma:Seeing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action15
-	Value Node: soma:Seeing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action3
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action13
-	Value Node: soma:Pushing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action5
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action4
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action9
-	Value Node: ex:foodItem
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action2
-	Value Node: ex:packagedFoodProduct
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action14
-	Value Node: ex:toaster
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action1
-	Value Node: ex:diningTable
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action7
-	Value Node: ex:cup
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action10
-	Value Node: ex:foodItem
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action8
-	Value Node: ex:cup
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action3
-	Value Node: ex:packagedFoodProduct
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action13
-	Value Node: ex:microWaveOven
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action5
-	Value Node: ex:plasticBottle
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:action4
-	Value Node: ex:plasticBottle
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-
-
-=== Validation Report for: ../../output/llava-llama3/action-graph/d2kg-rag/kg.ttl ===
-Validation Report
-Conforms: False
-Results (20):
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action9
-	Value Node: ex:action9
-	Message: Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action2
-	Value Node: ex:action2
-	Message: Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action1
-	Value Node: ex:action1
-	Message: Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action7
-	Value Node: ex:action7
-	Message: Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action10
-	Value Node: ex:action10
-	Message: Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action8
-	Value Node: ex:action8
-	Message: Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action6
-	Value Node: ex:action6
-	Message: Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action3
-	Value Node: ex:action3
-	Message: Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action5
-	Value Node: ex:action5
-	Message: Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:action4
-	Value Node: ex:action4
-	Message: Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action9
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action2
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action1
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action7
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action10
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action8
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action6
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action3
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action5
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:action4
-	Value Node: soma:Grasping
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-
-
-=== Validation Report for: ../../output/llama4-scout/action-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/action-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== ERROR validating: ../../output/llama4-scout/action-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llava-llama3/action-graph/d2kg-rag/kg.ttl ===
+Validation Report
+Conforms: True
+
+
+=== Validation Report for: ../../output/run9/llama4-scout/action-graph/dpe/kg.ttl ===
+Validation Report
+Conforms: True
+
+
+=== ERROR validating: ../../output/run9/llama4-scout/action-graph/i2kg/kg.ttl ===
 BadSyntax: at line 147 of <>:
 Bad syntax (expected directive or statement) at ^ in:
-"...b'xpressed in a natural language."@en .\n\n### Knowledge Graph\n\n'^b'```turtle\n@prefix obot: <https://w3id.org/onto-bot#> .\n@pre'..."
+"...b'xpressed in a natural language."@en .\n\n### Knowledge Graph\n\n'^b'```turtle\n@prefix obot: <https://w3id.org/onto-bot#> .\n@pref'..."
 
-=== Validation Report for: ../../output/llama4-scout/action-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-scout/action-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (44):
+Results (2):
 Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:isAffordedBy ]
+	Focus Node: ex:IdentifyMisplacedItems
+	Result Path: obot:isAffordedBy
+	Message: Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy
+Constraint Violation in QualifiedValueShapeConstraintComponent (http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:path obot:hasAction ; sh:qualifiedMinCount Literal("1", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:class dul:Action ] ]
 	Focus Node: ex:Workflow
 	Result Path: obot:hasAction
-	Message: Less than 1 values on ex:Workflow->obot:hasAction
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpYellowMug
-	Value Node: ex:PickUpYellowMug
-	Message: Node ex:PickUpYellowMug must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownBoxOfShortbreadInCabinet
-	Value Node: ex:PutDownBoxOfShortbreadInCabinet
-	Message: Node ex:PutDownBoxOfShortbreadInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:IdentifyMisplacedItems
-	Value Node: ex:IdentifyMisplacedItems
-	Message: Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpBoxOfShortbread
-	Value Node: ex:PickUpBoxOfShortbread
-	Message: Node ex:PickUpBoxOfShortbread must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpBoxOfRiceBubbles
-	Value Node: ex:PickUpBoxOfRiceBubbles
-	Message: Node ex:PickUpBoxOfRiceBubbles must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownYellowMugInCabinet
-	Value Node: ex:PutDownYellowMugInCabinet
-	Message: Node ex:PutDownYellowMugInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpPlateFromCounter
-	Value Node: ex:PickUpPlateFromCounter
-	Message: Node ex:PickUpPlateFromCounter must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownBoxOfJelloInCabinet
-	Value Node: ex:PutDownBoxOfJelloInCabinet
-	Message: Node ex:PutDownBoxOfJelloInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpAluminumFoil
-	Value Node: ex:PickUpAluminumFoil
-	Message: Node ex:PickUpAluminumFoil must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownJarOfJamInCabinet
-	Value Node: ex:PutDownJarOfJamInCabinet
-	Message: Node ex:PutDownJarOfJamInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownAluminumFoilInCabinet
-	Value Node: ex:PutDownAluminumFoilInCabinet
-	Message: Node ex:PutDownAluminumFoilInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpBoxOfJello
-	Value Node: ex:PickUpBoxOfJello
-	Message: Node ex:PickUpBoxOfJello must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpJarOfJam
-	Value Node: ex:PickUpJarOfJam
-	Message: Node ex:PickUpJarOfJam must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownPlateInCabinet
-	Value Node: ex:PutDownPlateInCabinet
-	Message: Node ex:PutDownPlateInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutDownBoxOfRiceBubblesInCabinet
-	Value Node: ex:PutDownBoxOfRiceBubblesInCabinet
-	Message: Node ex:PutDownBoxOfRiceBubblesInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpYellowMug
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownBoxOfShortbreadInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpBoxOfShortbread
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpBoxOfRiceBubbles
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownYellowMugInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpPlateFromCounter
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownBoxOfJelloInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpAluminumFoil
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownJarOfJamInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownAluminumFoilInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpBoxOfJello
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpJarOfJam
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownPlateInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutDownBoxOfRiceBubblesInCabinet
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpYellowMug
-	Value Node: ex:yellowMug
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownBoxOfShortbreadInCabinet
-	Value Node: ex:boxOfShortbread
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpBoxOfShortbread
-	Value Node: ex:boxOfShortbread
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpBoxOfRiceBubbles
-	Value Node: ex:boxOfRiceBubbles
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownYellowMugInCabinet
-	Value Node: ex:yellowMug
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpPlateFromCounter
-	Value Node: ex:plate
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownBoxOfJelloInCabinet
-	Value Node: ex:boxOfJello
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpAluminumFoil
-	Value Node: ex:aluminumFoil
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownJarOfJamInCabinet
-	Value Node: ex:jarOfJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownAluminumFoilInCabinet
-	Value Node: ex:aluminumFoil
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpBoxOfJello
-	Value Node: ex:boxOfJello
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpJarOfJam
-	Value Node: ex:jarOfJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownPlateInCabinet
-	Value Node: ex:plate
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutDownBoxOfRiceBubblesInCabinet
-	Value Node: ex:boxOfRiceBubbles
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
+	Message: Focus node does not conform to shape MinCount 1: [ sh:class dul:Action ]
 
 
-=== ERROR validating: ../../output/llama4-scout/action-graph/d2kg-rag/kg.ttl ===
+=== ERROR validating: ../../output/run9/llama4-scout/action-graph/d2kg-rag/kg.ttl ===
 BadSyntax: at line 105 of <>:
 Bad syntax (expected '.' or '}' or ']' at end of statement) at ^ in:
-"...b'follows ex:PickUpMisplacedItems ;\n  ex:yellowMug obot:actsOn '^b'ex:standardStorageLocation .\n\nex:boxOfShortbread obot:follows'..."
+"...b'ollows ex:PickUpMisplacedItems ;\n  ex:yellowMug obot:actsOn '^b'ex:standardStorageLocation .\n\nex:boxOfShortbread obot:follow'..."
 
-=== Validation Report for: ../../output/llama4-maverick/action-graph/dpe/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/action-graph/dpe/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== Validation Report for: ../../output/llama4-maverick/action-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/action-graph/i2kg/kg.ttl ===
 Validation Report
-Conforms: False
-Results (17):
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: obot:Action1
-	Value Node: obot:Action1
-	Message: Node obot:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action1
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action8
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action3
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action2
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action4
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action5
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action6
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: obot:Action7
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action1
-	Value Node: obot:Object1
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action8
-	Value Node: obot:Object4
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action3
-	Value Node: obot:Object2
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action2
-	Value Node: obot:Object1
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action4
-	Value Node: obot:Object2
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action5
-	Value Node: obot:Object3
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action6
-	Value Node: obot:Object3
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: obot:Action7
-	Value Node: obot:Object4
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
+Conforms: True
 
 
-=== Validation Report for: ../../output/llama4-maverick/action-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/action-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (13):
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+Results (1):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: obot:ActionShape
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:isAffordedBy ]
 	Focus Node: ex:IdentifyMisplacedItems
-	Value Node: ex:IdentifyMisplacedItems
-	Message: Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpMisplacedItem2
-	Value Node: ex:PickUpMisplacedItem2
-	Message: Node ex:PickUpMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PickUpMisplacedItem1
-	Value Node: ex:PickUpMisplacedItem1
-	Message: Node ex:PickUpMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutAwayMisplacedItem1
-	Value Node: ex:PutAwayMisplacedItem1
-	Message: Node ex:PutAwayMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:PutAwayMisplacedItem2
-	Value Node: ex:PutAwayMisplacedItem2
-	Message: Node ex:PutAwayMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpMisplacedItem2
-	Value Node: soma:PickingUp
 	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PickUpMisplacedItem1
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutAwayMisplacedItem1
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:PutAwayMisplacedItem2
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpMisplacedItem2
-	Value Node: ex:BoxOfCrackers
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PickUpMisplacedItem1
-	Value Node: ex:JarOfJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutAwayMisplacedItem1
-	Value Node: ex:JarOfJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:PutAwayMisplacedItem2
-	Value Node: ex:BoxOfCrackers
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
+	Message: Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy
 
 
-=== Validation Report for: ../../output/llama4-maverick/action-graph/d2kg-rag/kg.ttl ===
+=== Validation Report for: ../../output/run9/llama4-maverick/action-graph/d2kg-rag/kg.ttl ===
 Validation Report
 Conforms: False
-Results (5):
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+Results (1):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
-	Focus Node: ex:RestoreKitchenWorkflow
-	Value Node: ex:PickUpMisplacedItem2
-	Result Path: obot:hasAction
-	Message: Value does not have class dul:Action
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
-	Focus Node: ex:RestoreKitchenWorkflow
-	Value Node: ex:PickUpMisplacedItem1
-	Result Path: obot:hasAction
-	Message: Value does not have class dul:Action
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
-	Focus Node: ex:RestoreKitchenWorkflow
-	Value Node: ex:PutAwayMisplacedItem1
-	Result Path: obot:hasAction
-	Message: Value does not have class dul:Action
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
-	Focus Node: ex:RestoreKitchenWorkflow
-	Value Node: ex:PutAwayMisplacedItem2
-	Result Path: obot:hasAction
-	Message: Value does not have class dul:Action
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:isAffordedBy ]
 	Focus Node: ex:IdentifyMisplacedItems
-	Value Node: ex:IdentifyMisplacedItems
-	Message: Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
+	Result Path: obot:isAffordedBy
+	Message: Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy
 
 
-=== ERROR validating: ../../output/gpt-o1/action-graph/i2kg/kg.ttl ===
+=== ERROR validating: ../../output/run9/gpt-o1/action-graph/i2kg/kg.ttl ===
 BadSyntax: at line 40 of <>:
 Bad syntax (Prefix ":" not bound) at ^ in:
-"...b'##########################################################\n\n'^b':Robot1 a dul:Agent .\n\n:Cupboard1 a obot:Furniture .\n:Fridge1'..."
+"...b'##########################################################\n\n'^b':Robot1 a dul:Agent .\n\n:Cupboard1 a obot:Furniture .\n:Fridge'..."
 
-=== Validation Report for: ../../output/gpt-o1/action-graph/d2kg/kg.ttl ===
-Validation Report
-Conforms: False
-Results (80):
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action1
-	Value Node: ex:Action1
-	Message: Node ex:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action22
-	Value Node: ex:Action22
-	Message: Node ex:Action22 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action26
-	Value Node: ex:Action26
-	Message: Node ex:Action26 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action16
-	Value Node: ex:Action16
-	Message: Node ex:Action16 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action14
-	Value Node: ex:Action14
-	Message: Node ex:Action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action13
-	Value Node: ex:Action13
-	Message: Node ex:Action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action2
-	Value Node: ex:Action2
-	Message: Node ex:Action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action24
-	Value Node: ex:Action24
-	Message: Node ex:Action24 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action7
-	Value Node: ex:Action7
-	Message: Node ex:Action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action21
-	Value Node: ex:Action21
-	Message: Node ex:Action21 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action9
-	Value Node: ex:Action9
-	Message: Node ex:Action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action3
-	Value Node: ex:Action3
-	Message: Node ex:Action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action18
-	Value Node: ex:Action18
-	Message: Node ex:Action18 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action11
-	Value Node: ex:Action11
-	Message: Node ex:Action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action20
-	Value Node: ex:Action20
-	Message: Node ex:Action20 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action15
-	Value Node: ex:Action15
-	Message: Node ex:Action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action10
-	Value Node: ex:Action10
-	Message: Node ex:Action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action5
-	Value Node: ex:Action5
-	Message: Node ex:Action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action25
-	Value Node: ex:Action25
-	Message: Node ex:Action25 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action6
-	Value Node: ex:Action6
-	Message: Node ex:Action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action17
-	Value Node: ex:Action17
-	Message: Node ex:Action17 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action4
-	Value Node: ex:Action4
-	Message: Node ex:Action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action19
-	Value Node: ex:Action19
-	Message: Node ex:Action19 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action27
-	Value Node: ex:Action27
-	Message: Node ex:Action27 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action23
-	Value Node: ex:Action23
-	Message: Node ex:Action23 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action12
-	Value Node: ex:Action12
-	Message: Node ex:Action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action28
-	Value Node: ex:Action28
-	Message: Node ex:Action28 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: obot:ActionShape
-	Focus Node: ex:Action8
-	Value Node: ex:Action8
-	Message: Node ex:Action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path dul:follows ] ]
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action1
-	Value Node: soma:Opening
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action22
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action26
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action16
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action14
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action13
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action2
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action24
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action7
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action21
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action9
-	Value Node: soma:Opening
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action3
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action18
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action11
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action20
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action15
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action10
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action5
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action25
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action6
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action17
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action4
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action19
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action27
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action23
-	Value Node: soma:PuttingDown
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action12
-	Value Node: soma:PickingUp
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action28
-	Value Node: soma:Closing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Affordance ; sh:path obot:isAffordedBy ]
-	Focus Node: ex:Action8
-	Value Node: soma:Closing
-	Result Path: obot:isAffordedBy
-	Message: Value does not have class obot:Affordance
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action22
-	Value Node: ex:Box_Shortbread
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action26
-	Value Node: ex:WineGlass
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action16
-	Value Node: ex:Box_Chucky
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action14
-	Value Node: ex:Box_RiceBubbles
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action13
-	Value Node: ex:Container_AlpenSalz
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action2
-	Value Node: ex:Jar_BonneMaman
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action24
-	Value Node: ex:Pitcher_Clear
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action7
-	Value Node: ex:Bottle_Evian
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action21
-	Value Node: ex:Stack_WhitePlates
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action3
-	Value Node: ex:Jar_BonneMaman
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action18
-	Value Node: ex:Mug_Orange
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action11
-	Value Node: ex:Box_JellO
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action20
-	Value Node: ex:Stack_WhitePlates
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action15
-	Value Node: ex:Box_RiceBubbles
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action10
-	Value Node: ex:Box_JellO
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action5
-	Value Node: ex:Jar_AdditionalJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action25
-	Value Node: ex:Pitcher_Clear
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action6
-	Value Node: ex:Bottle_Evian
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action17
-	Value Node: ex:Box_Chucky
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action4
-	Value Node: ex:Jar_AdditionalJam
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action19
-	Value Node: ex:Mug_Orange
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action27
-	Value Node: ex:WineGlass
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action23
-	Value Node: ex:Box_Shortbread
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Component ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:actsOn ]
-	Focus Node: ex:Action12
-	Value Node: ex:Container_AlpenSalz
-	Result Path: obot:actsOn
-	Message: Value does not have class obot:Component
-
-
-=== Validation Report for: ../../output/gpt-o1/action-graph/d2kg-rag/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-o1/action-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: True
 
 
-=== ERROR validating: ../../output/gpt-4.1-nano/action-graph/i2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-o1/action-graph/d2kg-rag/kg.ttl ===
+Validation Report
+Conforms: True
+
+
+=== ERROR validating: ../../output/run9/gpt-4.1-nano/action-graph/i2kg/kg.ttl ===
 BadSyntax: at line 154 of <>:
 Bad syntax (Prefix "ex:" not bound) at ^ in:
 "...b'ct into its designated storage location." .\n\n# Agent: robot\n'^b'ex:Robot a dul:Agent ;\n    rdfs:label "Robot" .\n\n# Workflow:'..."
 
-=== Validation Report for: ../../output/gpt-4.1-nano/action-graph/d2kg/kg.ttl ===
+=== Validation Report for: ../../output/run9/gpt-4.1-nano/action-graph/d2kg/kg.ttl ===
 Validation Report
 Conforms: False
-Results (3):
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+Results (1):
+Constraint Violation in QualifiedValueShapeConstraintComponent (http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent):
 	Severity: sh:Violation
-	Source Shape: [ sh:class dul:Action ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasAction ]
+	Source Shape: [ sh:path obot:hasAction ; sh:qualifiedMinCount Literal("1", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:class dul:Action ] ]
 	Focus Node: ex:RestoreKitchenWorkflow
 	Result Path: obot:hasAction
-	Message: Less than 1 values on ex:RestoreKitchenWorkflow->obot:hasAction
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:class obot:Workflow ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasWorkflow ]
-	Focus Node: ex:RestoreKitchenInstruction
-	Result Path: obot:hasWorkflow
-	Message: Less than 1 values on ex:RestoreKitchenInstruction->obot:hasWorkflow
-Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-	Severity: sh:Violation
-	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path obot:hasNaturalLanguage ]
-	Focus Node: ex:RestoreKitchenInstruction
-	Result Path: obot:hasNaturalLanguage
-	Message: Less than 1 values on ex:RestoreKitchenInstruction->obot:hasNaturalLanguage
+	Message: Focus node does not conform to shape MinCount 1: [ sh:class dul:Action ]
 
 
-=== ERROR validating: ../../output/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl ===
+=== ERROR validating: ../../output/run9/gpt-4.1-nano/action-graph/d2kg-rag/kg.ttl ===
 BadSyntax: at line 7 of <>:
 Bad syntax (Prefix "schema:" not bound) at ^ in:
 "...b': <http://example.org/data/> .\n\nex:IdentifyMisplacedItems a '^b'schema:Action ;\n    schema:hasParticipant ex:kitchen ;\n    s'..."

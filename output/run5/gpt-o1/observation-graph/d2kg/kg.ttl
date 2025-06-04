@@ -2,11 +2,11 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-ex:KitchenAndDining a psr:Environment ;
+ex:KitchenAndDining a obot:Environment ;
     dul:hasComponent ex:BlackCabinet,
                      ex:Countertop,
                      ex:Sink,
@@ -38,97 +38,97 @@ ex:KitchenAndDining a psr:Environment ;
                      ex:CeilingLight,
                      ex:ParquetWoodFloor .
 
-ex:BlackCabinet a psr:Furniture .
-ex:Countertop a psr:Furniture .
-ex:Sink a psr:Appliance .
-ex:Faucet a psr:Appliance .
-ex:Cooktop a psr:Appliance .
-ex:MetalPot a psr:Object .
-ex:RangeHood a psr:Appliance .
-ex:Mug a psr:Object .
-ex:ChuckyHaros a psr:Object .
-ex:RiceBubbles a psr:Object .
-ex:StrawberryJam a psr:Object .
-ex:WhitePlates a psr:Object .
-ex:JelloBox a psr:Object .
-ex:AlpenSaltContainer a psr:Object .
-ex:PantryCabinet a psr:Furniture .
-ex:Refrigerator a psr:Appliance .
-ex:DiningTable a psr:Furniture .
-ex:WhiteChair1 a psr:Furniture .
-ex:WhiteChair2 a psr:Furniture .
-ex:WhiteChair3 a psr:Furniture .
-ex:WhiteChair4 a psr:Furniture .
-ex:WhiteBowl a psr:Object .
-ex:Oranges a psr:Object .
-ex:EvianBottle a psr:Object .
-ex:ShortbreadCookies a psr:Object .
-ex:GlassPitcher a psr:Object .
-ex:StemmedWineGlass a psr:Object .
-ex:Door a psr:Object .
-ex:CeilingLight a psr:Object .
-ex:ParquetWoodFloor a psr:Object .
+ex:BlackCabinet a obot:Furniture .
+ex:Countertop a obot:Furniture .
+ex:Sink a obot:Appliance .
+ex:Faucet a obot:Appliance .
+ex:Cooktop a obot:Appliance .
+ex:MetalPot a obot:Object .
+ex:RangeHood a obot:Appliance .
+ex:Mug a obot:Object .
+ex:ChuckyHaros a obot:Object .
+ex:RiceBubbles a obot:Object .
+ex:StrawberryJam a obot:Object .
+ex:WhitePlates a obot:Object .
+ex:JelloBox a obot:Object .
+ex:AlpenSaltContainer a obot:Object .
+ex:PantryCabinet a obot:Furniture .
+ex:Refrigerator a obot:Appliance .
+ex:DiningTable a obot:Furniture .
+ex:WhiteChair1 a obot:Furniture .
+ex:WhiteChair2 a obot:Furniture .
+ex:WhiteChair3 a obot:Furniture .
+ex:WhiteChair4 a obot:Furniture .
+ex:WhiteBowl a obot:Object .
+ex:Oranges a obot:Object .
+ex:EvianBottle a obot:Object .
+ex:ShortbreadCookies a obot:Object .
+ex:GlassPitcher a obot:Object .
+ex:StemmedWineGlass a obot:Object .
+ex:Door a obot:Object .
+ex:CeilingLight a obot:Object .
+ex:ParquetWoodFloor a obot:Object .
 
 ex:Sink dul:hasLocation ex:SinkLoc .
-ex:SinkLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:SinkLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:Faucet dul:hasLocation ex:FaucetLoc .
-ex:FaucetLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Sink .
+ex:FaucetLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Sink .
 
 ex:MetalPot dul:hasLocation ex:MetalPotLoc .
-ex:MetalPotLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Cooktop .
+ex:MetalPotLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Cooktop .
 
 ex:Mug dul:hasLocation ex:MugLoc .
-ex:MugLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:MugLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:ChuckyHaros dul:hasLocation ex:ChuckyHarosLoc .
-ex:ChuckyHarosLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:ChuckyHarosLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:RiceBubbles dul:hasLocation ex:RiceBubblesLoc .
-ex:RiceBubblesLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:RiceBubblesLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:StrawberryJam dul:hasLocation ex:StrawberryJamLoc .
-ex:StrawberryJamLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:StrawberryJamLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:WhitePlates dul:hasLocation ex:WhitePlatesLoc .
-ex:WhitePlatesLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:WhitePlatesLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:JelloBox dul:hasLocation ex:JelloBoxLoc .
-ex:JelloBoxLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:JelloBoxLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:AlpenSaltContainer dul:hasLocation ex:AlpenSaltContainerLoc .
-ex:AlpenSaltContainerLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:AlpenSaltContainerLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
 ex:WhiteBowl dul:hasLocation ex:WhiteBowlLoc .
-ex:WhiteBowlLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:WhiteBowlLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:Oranges dul:hasLocation ex:OrangesLoc .
-ex:OrangesLoc a psr:CurrentLocation ;
+ex:OrangesLoc a obot:CurrentLocation ;
     geo:sfWithin ex:WhiteBowl .
 
 ex:EvianBottle dul:hasLocation ex:EvianBottleLoc .
-ex:EvianBottleLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:EvianBottleLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:ShortbreadCookies dul:hasLocation ex:ShortbreadCookiesLoc .
-ex:ShortbreadCookiesLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:ShortbreadCookiesLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:GlassPitcher dul:hasLocation ex:GlassPitcherLoc .
-ex:GlassPitcherLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:GlassPitcherLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .
 
 ex:StemmedWineGlass dul:hasLocation ex:StemmedWineGlassLoc .
-ex:StemmedWineGlassLoc a psr:CurrentLocation ;
-    psr:onTopOf ex:DiningTable .
+ex:StemmedWineGlassLoc a obot:CurrentLocation ;
+    obot:onTopOf ex:DiningTable .

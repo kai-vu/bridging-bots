@@ -3,7 +3,7 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obot:    <http://www.psr-action#> .
+@prefix obot:    <http://www.onto-bot#> .
 
 <http://example.org/environment> a obot:Environment ;
     rdfs:label "Living Space"@en ;

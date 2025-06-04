@@ -1,32 +1,32 @@
-@prefix psr: <https://w3id.org/psr> .
+@prefix obot: <https://w3id.org/psr> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdfs:Action <https://w3id.org/psr/action/index.html> .
 @prefix rdfs:Component <https://w3id.org/psr/component/index.html> .
 @prefix rdfs:Affordance <https://w3id.org/psr/affordance/index.html> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix psr:Instruction <https://w3id.org/psr/instruction/index.html> .
-@prefix psr:Workflow <https://w3id.org/psr/workflow/index.html> .
-@prefix psr:ActionType <https://w3id.org/psr/actiontype/index.html> .
+@prefix obot:Instruction <https://w3id.org/psr/instruction/index.html> .
+@prefix obot:Workflow <https://w3id.org/psr/workflow/index.html> .
+@prefix obot:ActionType <https://w3id.org/psr/actiontype/index.html> .
 @prefix rdfs:label <http://www.w3.org/2000/01/rdf-schema#label> .
 @prefix rdfs:comment <http://www.w3.org/2000/01/rdf-schema#comment> .
 
-psr:Instruction a owl:Class ;
-    rdfs:subClassOf psr:Workflow ;
+obot:Instruction a owl:Class ;
+    rdfs:subClassOf obot:Workflow ;
     rdfs:label "Restore kitchen to organized state"@en ;
     rdfs:comment "A workflow that restores the kitchen to an organized state."@en .
 
-psr:Workflow a owl:Class ;
-    rdfs:subClassOf psr:Instruction ;
+obot:Workflow a owl:Class ;
+    rdfs:subClassOf obot:Instruction ;
     rdfs:label "Restore kitchen"@en ;
     rdfs:comment "A workflow that restores the kitchen to an organized state."@en .
 
-psr:Action a owl:Class ;
-    rdfs:subClassOf psr:Workflow ;
+obot:Action a owl:Class ;
+    rdfs:subClassOf obot:Workflow ;
     rdfs:label "Restore kitchen"@en ;
     rdfs:comment "An action that restores the kitchen to an organized state."@en .
 
-psr:Agent a owl:Class ;
-    rdfs:subClassOf psr:Workflow ;
+obot:Agent a owl:Class ;
+    rdfs:subClassOf obot:Workflow ;
     rdfs:label "Robot"@en ;
     rdfs:comment "The robot performing the task."@en .
 

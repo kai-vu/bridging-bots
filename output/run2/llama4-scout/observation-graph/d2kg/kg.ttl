@@ -3,29 +3,29 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenDiningArea a psr:Environment ;
+ex:KitchenDiningArea a obot:Environment ;
   dul:hasComponent ex:Kitchen ;
   dul:hasComponent ex:DiningArea .
 
-ex:Kitchen a psr:Component ;
-  psr:hasAffordance soma:Opening ;
+ex:Kitchen a obot:Component ;
+  obot:hasAffordance soma:Opening ;
   dul:hasLocation ex:KitchenLocation ;
-  psr:onTopOf ex:KitchenFloor .
+  obot:onTopOf ex:KitchenFloor .
 
-ex:KitchenFloor a psr:Component ;
+ex:KitchenFloor a obot:Component ;
   rdfs:label "Brown Wooden Floor"@en .
 
-ex:KitchenWalls a psr:Component ;
+ex:KitchenWalls a obot:Component ;
   rdfs:label "White Walls"@en .
 
-ex:KitchenCounters a psr:Component ;
+ex:KitchenCounters a obot:Component ;
   dul:hasComponent ex:BeigeMarbleCounter ;
   dul:hasComponent ex:DarkGrayCabinets .
 
-ex:BeigeMarbleCounter a psr:Component ;
+ex:BeigeMarbleCounter a obot:Component ;
   dul:hasComponent ex:Pot ;
   dul:hasComponent ex:YellowMug ;
   dul:hasComponent ex:Book_Chucky_1 ;
@@ -33,95 +33,95 @@ ex:BeigeMarbleCounter a psr:Component ;
   dul:hasComponent ex:RiceBubblesCereal ;
   dul:hasComponent ex:Jello .
 
-ex:Pot a psr:Object ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Pot a obot:Object ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:YellowMug a psr:Object ;
-  psr:hasAffordance soma:PickingUp .
+ex:YellowMug a obot:Object ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:Book_Chucky_1 a psr:Object ;
+ex:Book_Chucky_1 a obot:Object ;
   rdfs:label "Chucky"@en ;
-  psr:hasAffordance soma:PickingUp .
+  obot:hasAffordance soma:PickingUp .
 
-ex:Jar_RedLid_1 a psr:Object ;
-  psr:hasAffordance soma:Opening .
+ex:Jar_RedLid_1 a obot:Object ;
+  obot:hasAffordance soma:Opening .
 
-ex:RiceBubblesCereal a psr:Object ;
-  psr:hasAffordance soma:PickingUp .
+ex:RiceBubblesCereal a obot:Object ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:Jello a psr:Object ;
-  psr:hasAffordance soma:Opening .
+ex:Jello a obot:Object ;
+  obot:hasAffordance soma:Opening .
 
-ex:DarkGrayCabinets a psr:Component .
+ex:DarkGrayCabinets a obot:Component .
 
-ex:Refrigerator a psr:Appliance ;
+ex:Refrigerator a obot:Appliance ;
   dul:hasLocation ex:RefrigeratorLocation ;
-  psr:hasAffordance soma:Opening .
+  obot:hasAffordance soma:Opening .
 
-ex:RefrigeratorLocation a psr:Location ;
-  psr:onTopOf ex:KitchenFloor .
+ex:RefrigeratorLocation a obot:Location ;
+  obot:onTopOf ex:KitchenFloor .
 
-ex:Stove a psr:Appliance ;
+ex:Stove a obot:Appliance ;
   dul:hasComponent ex:Pot ;
-  psr:hasAffordance soma:PuttingDown .
+  obot:hasAffordance soma:PuttingDown .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
   dul:hasLocation ex:RangeHoodLocation .
 
-ex:RangeHoodLocation a psr:Location ;
-  psr:onTopOf ex:KitchenCounters .
+ex:RangeHoodLocation a obot:Location ;
+  obot:onTopOf ex:KitchenCounters .
 
-ex:DiningArea a psr:Component ;
+ex:DiningArea a obot:Component ;
   dul:hasComponent ex:WoodenTable ;
   dul:hasComponent ex:WhiteChairs .
 
-ex:WoodenTable a psr:Component ;
+ex:WoodenTable a obot:Component ;
   dul:hasComponent ex:Bottle_EvianWater ;
   dul:hasComponent ex:Plate_with_Bowl ;
   dul:hasComponent ex:ChocolateCakeMix ;
   dul:hasComponent ex:Book .
 
-ex:Bottle_EvianWater a psr:Object ;
-  psr:hasAffordance soma:PickingUp .
+ex:Bottle_EvianWater a obot:Object ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:Plate_with_Bowl a psr:Object ;
-  psr:hasAffordance soma:PuttingDown .
+ex:Plate_with_Bowl a obot:Object ;
+  obot:hasAffordance soma:PuttingDown .
 
-ex:ChocolateCakeMix a psr:Object ;
-  psr:hasAffordance soma:Opening .
+ex:ChocolateCakeMix a obot:Object ;
+  obot:hasAffordance soma:Opening .
 
-ex:Book a psr:Object ;
-  psr:hasAffordance soma:PickingUp .
+ex:Book a obot:Object ;
+  obot:hasAffordance soma:PickingUp .
 
-ex:WhiteChairs a psr:Component .
+ex:WhiteChairs a obot:Component .
 
-ex:Door a psr:Component ;
+ex:Door a obot:Component ;
   dul:hasLocation ex:DoorLocation .
 
-ex:DoorLocation a psr:Location ;
-  psr:onTopOf ex:KitchenDiningAreaFloor .
+ex:DoorLocation a obot:Location ;
+  obot:onTopOf ex:KitchenDiningAreaFloor .
 
-ex:KitchenDiningAreaFloor a psr:Component .
+ex:KitchenDiningAreaFloor a obot:Component .
 
-ex:Book_Chucky_2 a psr:Object ;
+ex:Book_Chucky_2 a obot:Object ;
   dul:hasLocation ex:KitchenCounters ;
-  psr:hasAffordance soma:PickingUp .
+  obot:hasAffordance soma:PickingUp .
 
-ex:Jar_RedLid_2 a psr:Object ;
+ex:Jar_RedLid_2 a obot:Object ;
   dul:hasLocation ex:KitchenCounters ;
-  psr:hasAffordance soma:Opening .
+  obot:hasAffordance soma:Opening .
 
-ex:Stack_of_White_Plates a psr:Object ;
+ex:Stack_of_White_Plates a obot:Object ;
   dul:hasLocation ex:KitchenCounters ;
-  psr:hasAffordance soma:PuttingDown .
+  obot:hasAffordance soma:PuttingDown .
 
-ex:KitchenLocation a psr:Location .
+ex:KitchenLocation a obot:Location .
 
-ex:DiningAreaLocation a psr:Location .
+ex:DiningAreaLocation a obot:Location .
 
-ex:WhiteRefrigerator a psr:Appliance ;
+ex:WhiteRefrigerator a obot:Appliance ;
   dul:hasLocation ex:AgainstTheWallLocation ;
-  psr:hasAffordance soma:Opening .
+  obot:hasAffordance soma:Opening .
 
-ex:AgainstTheWallLocation a psr:Location ;
-  psr:onTopOf ex:KitchenFloor .
+ex:AgainstTheWallLocation a obot:Location ;
+  obot:onTopOf ex:KitchenFloor .

@@ -1,6 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://example.com/psr#> .
+@prefix obot: <https://example.com/psr#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/data/> .
 
@@ -9,32 +9,32 @@
 <http://www.w3.org/2002/07/owl#Location> a owl:Class, rdfs:SubClassOf [ a owl:Class ] .
 <http://www.w3.org/2001/XMLSchema#string> a xsd:Datatype.
 
-<ex:CurrentEnvironment> a psr:Environment .
-<ex:ObjectOnTable> a psr:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .
-<ex:Table> a psr:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .
+<ex:CurrentEnvironment> a obot:Environment .
+<ex:ObjectOnTable> a obot:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .
+<ex:Table> a obot:Component, rdfs:isDefinedBy <ex:CurrentEnvironment> .
 
-<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:OpeningOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:Door> a psr:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:Door> a obot:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:OpeningOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:ClosingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:ClosingOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:Wall> a psr:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:Wall> a obot:Component, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:ClosingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:ClosingOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:OpeningOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:OpeningOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:PullingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:PullingOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:PuttingDownOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:PuttingDownOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:OpeningOnDoor> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:OpeningOnDoor> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:ClosingOnDoor> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:ClosingOnDoor> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:PushingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:PushingOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
 
-<ex:GraspingOnObject> a psr:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .
+<ex:GraspingOnObject> a obot:Affordance, rdfs:isDefinedBy [ a <ex:CurrentEnvironment> ] .

@@ -1,4 +1,4 @@
-@prefix obot: <http://psr-action.com/> .
+@prefix obot: <http://onto-bot.com/> .
 @prefix dul: <http://dul.kr.org.architecture/architecture#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

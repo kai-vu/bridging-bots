@@ -1,1793 +1,507 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://example.org/validation/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-4.1-nano/action-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
+            sh:resultMessage "Focus node does not conform to shape MinCount 1: [ sh:class dul:Action ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:path <https://w3id.org/onto-bot#hasAction> ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ] ] ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-4.1-nano/observation-graph/d2kg/kg.ttl" ;
     sh:conforms true .
 
 [] a sh:ValidationReport ;
-    sh:conforms false ;
-    sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem1> ;
-            sh:resultMessage "Node ex:PickUpMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpMisplacedItem1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem2> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
-            sh:value <http://example.org/data/BoxOfCrackers> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem2> ;
-            sh:resultMessage "Node ex:PickUpMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpMisplacedItem2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem1> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
-            sh:value <http://example.org/data/JarOfJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem1> ;
-            sh:resultMessage "Node ex:PutAwayMisplacedItem1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutAwayMisplacedItem1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpMisplacedItem2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem2> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
-            sh:value <http://example.org/data/BoxOfCrackers> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/IdentifyMisplacedItems> ;
-            sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/IdentifyMisplacedItems> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem1> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb12 ;
-            sh:value <http://example.org/data/JarOfJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem2> ;
-            sh:resultMessage "Node ex:PutAwayMisplacedItem2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutAwayMisplacedItem2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutAwayMisplacedItem2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n656b9316b9824af98eec7e1a138ba0bbb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] .
+    ns1:sourceFile "../../output/run9/gpt-o1/observation-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
 
 [] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-scout/action-graph/d2kg/kg.ttl" ;
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
-            sh:value <http://example.org/data/PickUpMisplacedItem1> ],
-        [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/IdentifyMisplacedItems> ;
-            sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/IdentifyMisplacedItems> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
-            sh:value <http://example.org/data/PutAwayMisplacedItem1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
-            sh:value <http://example.org/data/PickUpMisplacedItem2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Value does not have class dul:Action" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n840f3cbb38114a06b9a423096dbe15d1b3 ;
-            sh:value <http://example.org/data/PutAwayMisplacedItem2> ] .
-
-[] a sh:ValidationReport ;
-    sh:conforms false ;
-    sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenWorkflow> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenWorkflow->obot:hasAction" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
-                    sh:minCount 1 ;
-                    sh:path <https://w3id.org/onto-bot#hasAction> ] ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenInstruction> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->obot:hasWorkflow" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasWorkflow> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape [ sh:class <https://w3id.org/onto-bot#Workflow> ;
-                    sh:minCount 1 ;
-                    sh:path <https://w3id.org/onto-bot#hasWorkflow> ] ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/RestoreKitchenInstruction> ;
-            sh:resultMessage "Less than 1 values on ex:RestoreKitchenInstruction->obot:hasNaturalLanguage" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasNaturalLanguage> ;
+            sh:resultMessage "Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
             sh:sourceShape [ sh:minCount 1 ;
-                    sh:path <https://w3id.org/onto-bot#hasNaturalLanguage> ] ] .
+                    sh:path <https://w3id.org/onto-bot#isAffordedBy> ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Workflow> ;
+            sh:resultMessage "Focus node does not conform to shape MinCount 1: [ sh:class dul:Action ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:path <https://w3id.org/onto-bot#hasAction> ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ] ] ] .
 
 [] a sh:ValidationReport ;
-    sh:conforms false ;
-    sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action2> ;
-            sh:resultMessage "Node ex:Action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action10> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_JellO> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action28> ;
-            sh:resultMessage "Node ex:Action28 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action28> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action19> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Mug_Orange> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action6> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Bottle_Evian> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action7> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action1> ;
-            sh:resultMessage "Node ex:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action23> ;
-            sh:resultMessage "Node ex:Action23 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action23> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action12> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Container_AlpenSalz> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action5> ;
-            sh:resultMessage "Node ex:Action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action5> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action11> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_JellO> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action3> ;
-            sh:resultMessage "Node ex:Action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action3> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action12> ;
-            sh:resultMessage "Node ex:Action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action12> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action3> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action26> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action15> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_RiceBubbles> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action23> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action5> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Jar_AdditionalJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action20> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action9> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action3> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Jar_BonneMaman> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action18> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Mug_Orange> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action13> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Container_AlpenSalz> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action6> ;
-            sh:resultMessage "Node ex:Action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action6> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action10> ;
-            sh:resultMessage "Node ex:Action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action10> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action19> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action16> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_Chucky> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action24> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Pitcher_Clear> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action14> ;
-            sh:resultMessage "Node ex:Action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action14> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action24> ;
-            sh:resultMessage "Node ex:Action24 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action24> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action22> ;
-            sh:resultMessage "Node ex:Action22 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action22> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action10> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action16> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action19> ;
-            sh:resultMessage "Node ex:Action19 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action19> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action16> ;
-            sh:resultMessage "Node ex:Action16 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action16> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action13> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action6> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action4> ;
-            sh:resultMessage "Node ex:Action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action4> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action15> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action7> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Bottle_Evian> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action25> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Pitcher_Clear> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action27> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/WineGlass> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action18> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action11> ;
-            sh:resultMessage "Node ex:Action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action11> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action21> ;
-            sh:resultMessage "Node ex:Action21 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action21> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action2> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Jar_BonneMaman> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action5> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action4> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action17> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_Chucky> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action22> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action20> ;
-            sh:resultMessage "Node ex:Action20 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action20> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action21> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Stack_WhitePlates> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action9> ;
-            sh:resultMessage "Node ex:Action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action9> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action8> ;
-            sh:resultMessage "Node ex:Action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action8> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action14> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action27> ;
-            sh:resultMessage "Node ex:Action27 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action27> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action21> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action17> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action8> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action25> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action4> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Jar_AdditionalJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action26> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/WineGlass> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action7> ;
-            sh:resultMessage "Node ex:Action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action7> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action24> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action25> ;
-            sh:resultMessage "Node ex:Action25 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action25> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action15> ;
-            sh:resultMessage "Node ex:Action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action15> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action12> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action28> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action20> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Stack_WhitePlates> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action17> ;
-            sh:resultMessage "Node ex:Action17 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action17> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action11> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action22> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_Shortbread> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action18> ;
-            sh:resultMessage "Node ex:Action18 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action18> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action13> ;
-            sh:resultMessage "Node ex:Action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action13> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action23> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_Shortbread> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action14> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b12 ;
-            sh:value <http://example.org/data/Box_RiceBubbles> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action27> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6cd6684660864bc184fd68915d3f3ef5b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Action26> ;
-            sh:resultMessage "Node ex:Action26 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/Action26> ] .
-
-[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-o1/observation-graph/d2kg-rag/kg.ttl" ;
     sh:conforms true .
 
 [] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-scout/observation-graph/i2kg/kg.ttl" ;
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:focusNode <https://w3id.org/onto-bot#Object> ;
+            sh:resultMessage "Less than 1 values on obot:Object->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n37a1291fe696470da7ed2547a70dd4c6b33 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:focusNode <https://w3id.org/onto-bot#Furniture> ;
+            sh:resultMessage "Less than 1 values on obot:Furniture->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action4> ],
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n37a1291fe696470da7ed2547a70dd4c6b33 ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
+            sh:focusNode <https://w3id.org/onto-bot#Appliance> ;
+            sh:resultMessage "Less than 1 values on obot:Appliance->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/plasticBottle> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action15> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action8> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Node ex:action13 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action13> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action11> ;
-            sh:resultMessage "Node ex:action11 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action11> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/foodItem> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action9> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action10> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action11> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/toaster> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action3> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/cup> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action7> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/foodItem> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/packagedFoodProduct> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/plasticBottle> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/cup> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action15> ;
-            sh:resultMessage "Node ex:action15 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action15> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action13> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/microWaveOven> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action12> ;
-            sh:resultMessage "Node ex:action12 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action12> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action12> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action6> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action14> ;
-            sh:resultMessage "Node ex:action14 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action14> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action5> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/packagedFoodProduct> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Seeing> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n6a193066078a418296c5d8d9fbbf4d88b12 ;
-            sh:value <http://example.org/data/diningTable> ] .
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n37a1291fe696470da7ed2547a70dd4c6b33 ] .
 
 [] a sh:ValidationReport ;
-    sh:conforms false ;
-    sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Node ex:action5 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action5> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Node ex:action8 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action8> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action3> ;
-            sh:resultMessage "Node ex:action3 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action3> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action5> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action8> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action10> ;
-            sh:resultMessage "Node ex:action10 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action10> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Node ex:action4 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action4> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action4> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:nc7b30f763c4947f1913af8f8999fd72cb11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action7> ;
-            sh:resultMessage "Node ex:action7 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action7> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action6> ;
-            sh:resultMessage "Node ex:action6 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action6> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action2> ;
-            sh:resultMessage "Node ex:action2 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action9> ;
-            sh:resultMessage "Node ex:action9 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action9> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/action1> ;
-            sh:resultMessage "Node ex:action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/action1> ] .
+    ns1:sourceFile "../../output/run9/gpt-o1/action-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
 
 [] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-scout/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-scout/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-o1/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/action-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/observation-graph/d2kg/kg.ttl" ;
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action7> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object4> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action8> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object4> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action7> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action2> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action3> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action1> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action4> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object2> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action1> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action4> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action3> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action6> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action5> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object3> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action6> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object3> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action8> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action1> ;
-            sh:resultMessage "Node obot:Action1 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:focusNode <http://example.org/data/DiningArea> ;
+            sh:resultMessage "Node ex:Kitchen must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]" ;
+            sh:resultPath geo:sfWithin ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <https://w3id.org/onto-bot#Action1> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action2> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
+            sh:sourceShape [ sh:or ( [ sh:class <https://w3id.org/onto-bot#Component> ] [ sh:class <https://w3id.org/onto-bot#Appliance> ] [ sh:class <https://w3id.org/onto-bot#Furniture> ] [ sh:class <https://w3id.org/onto-bot#Object> ] ) ;
+                    sh:path geo:sfWithin ] ;
+            sh:value <http://example.org/data/Kitchen> ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/observation-graph/i2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CounterTop2> ;
+            sh:resultMessage "Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b12 ;
-            sh:value <https://w3id.org/onto-bot#Object1> ],
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Holding> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <https://w3id.org/onto-bot#Action5> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:focusNode <http://example.org/data/CounterTop1> ;
+            sh:resultMessage "Node soma:PickingUp must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n01cd78488b834dad94897482d42bd5d1b11 ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CounterTop2> ;
+            sh:resultMessage "Node soma:PuttingDown must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CounterTop1> ;
+            sh:resultMessage "Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Holding> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CounterTop1> ;
+            sh:resultMessage "Node soma:PuttingDown must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/CounterTop2> ;
+            sh:resultMessage "Node soma:PickingUp must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n69032d2795b24443a3af56cc971d2154b12 ;
             sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] .
 
 [] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-4.1-nano/observation-graph/i2kg/kg.ttl" ;
     sh:conforms false ;
     sh:result [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfRiceBubbles> ;
-            sh:resultMessage "Node ex:PickUpBoxOfRiceBubbles must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpBoxOfRiceBubbles> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
-            sh:resultMessage "Node ex:PutDownJarOfJamInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownJarOfJamInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownAluminumFoilInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/aluminumFoil> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownYellowMugInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownAluminumFoilInCabinet> ;
-            sh:resultMessage "Node ex:PutDownAluminumFoilInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownAluminumFoilInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/Workflow> ;
-            sh:resultMessage "Less than 1 values on ex:Workflow->obot:hasAction" ;
-            sh:resultPath <https://w3id.org/onto-bot#hasAction> ;
+            sh:focusNode <http://example.org/data/Environment1> ;
+            sh:resultMessage "Less than 1 values on :Environment1->dul:hasComponent" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-            sh:sourceShape [ sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
-                    sh:minCount 1 ;
-                    sh:path <https://w3id.org/onto-bot#hasAction> ] ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/jarOfJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownPlateInCabinet> ;
-            sh:resultMessage "Node ex:PutDownPlateInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownPlateInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
-            sh:resultMessage "Node ex:PutDownBoxOfRiceBubblesInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:or ( [ sh:class <https://w3id.org/onto-bot#Component> ] [ sh:class <https://w3id.org/onto-bot#Appliance> ] [ sh:class <https://w3id.org/onto-bot#Furniture> ] [ sh:class <https://w3id.org/onto-bot#Object> ] [ sh:class <https://w3id.org/onto-bot#Environment> ] ) ;
+                    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ] ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/observation-graph/dpe/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/kitchenCounter> ;
+            sh:resultMessage "Node soma:Pulling must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
             sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ],
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownJarOfJamInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:focusNode <http://example.org/data/diningTable> ;
+            sh:resultMessage "Node soma:Grasping must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownYellowMugInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
+            sh:focusNode <http://example.org/data/floor> ;
+            sh:resultMessage "Less than 1 values on ex:floor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/yellowMug> ],
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:nodeKind sh:BlankNodeOrIRI ;
+                    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ] ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpPlateFromCounter> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
+            sh:focusNode <http://example.org/data/fridge> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/plate> ],
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
         [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:focusNode <http://example.org/data/fridge> ;
+            sh:resultMessage "Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
         [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/window> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/sink> ;
+            sh:resultMessage "Node soma:Holding must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Holding> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/window> ;
+            sh:resultMessage "Node soma:Closing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Closing> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/microWave> ;
+            sh:resultMessage "Node soma:Pushing must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n32b2a446492a44418a7ec5fbeef6734fb12 ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/gpt-o1/observation-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/WhiteDoor> ;
+            sh:resultMessage "Less than 1 values on ex:WhiteDoor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n4e3a9c5bc9904a35871b176adc7b51c6b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/WoodenFramedWindow> ;
+            sh:resultMessage "Less than 1 values on ex:WoodenFramedWindow->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n4e3a9c5bc9904a35871b176adc7b51c6b33 ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Floor> ;
+            sh:resultMessage "Less than 1 values on ex:Floor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:ne71d62cbd27f4a2b97eead515586ce8ab33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Walls> ;
+            sh:resultMessage "Less than 1 values on ex:Walls->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:ne71d62cbd27f4a2b97eead515586ce8ab33 ] .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/action-graph/i2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llava-llama3/action-graph/d2kg/kg.ttl" ;
+    sh:conforms true .
+
+[] a sh:ValidationReport ;
+    ns1:sourceFile "../../output/run9/llama4-maverick/action-graph/d2kg/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
             sh:focusNode <http://example.org/data/IdentifyMisplacedItems> ;
-            sh:resultMessage "Node ex:IdentifyMisplacedItems must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/IdentifyMisplacedItems> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpJarOfJam> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/jarOfJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ;
-            sh:resultMessage "Node ex:PutDownBoxOfShortbreadInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
-            sh:resultMessage "Node ex:PickUpBoxOfShortbread must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpBoxOfShortbread> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
+            sh:resultMessage "Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy" ;
             sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
             sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfRiceBubblesInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfRiceBubbles> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfJelloInCabinet> ;
-            sh:resultMessage "Node ex:PutDownBoxOfJelloInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownBoxOfJelloInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfRiceBubbles> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfRiceBubbles> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownYellowMugInCabinet> ;
-            sh:resultMessage "Node ex:PutDownYellowMugInCabinet must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PutDownYellowMugInCabinet> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpYellowMug> ;
-            sh:resultMessage "Node ex:PickUpYellowMug must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpYellowMug> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfJello> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpJarOfJam> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfRiceBubbles> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfJello> ;
-            sh:resultMessage "Node ex:PickUpBoxOfJello must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpBoxOfJello> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownAluminumFoilInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpJarOfJam> ;
-            sh:resultMessage "Node ex:PickUpJarOfJam must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpJarOfJam> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfJelloInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpYellowMug> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/yellowMug> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpYellowMug> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfJelloInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfJello> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpAluminumFoil> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfJello> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfJello> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownPlateInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/plate> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpAluminumFoil> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/aluminumFoil> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpAluminumFoil> ;
-            sh:resultMessage "Node ex:PickUpAluminumFoil must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpAluminumFoil> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpBoxOfShortbread> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfShortbread> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpPlateFromCounter> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownPlateInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Affordance" ;
-            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b11 ;
-            sh:value <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PickUpPlateFromCounter> ;
-            sh:resultMessage "Node ex:PickUpPlateFromCounter must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:precedes ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dul:follows ] ]" ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:OrConstraintComponent ;
-            sh:sourceShape <https://w3id.org/onto-bot#ActionShape> ;
-            sh:value <http://example.org/data/PickUpPlateFromCounter> ],
-        [ a sh:ValidationResult ;
-            sh:focusNode <http://example.org/data/PutDownBoxOfShortbreadInCabinet> ;
-            sh:resultMessage "Value does not have class obot:Component" ;
-            sh:resultPath <https://w3id.org/onto-bot#actsOn> ;
-            sh:resultSeverity sh:Violation ;
-            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-            sh:sourceShape _:n7e556a7facf14b80ae229d18d9ddf2b1b12 ;
-            sh:value <http://example.org/data/boxOfShortbread> ] .
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:path <https://w3id.org/onto-bot#isAffordedBy> ] ] .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    ns1:sourceFile "../../output/run9/llama4-maverick/action-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/IdentifyMisplacedItems> ;
+            sh:resultMessage "Less than 1 values on ex:IdentifyMisplacedItems->obot:isAffordedBy" ;
+            sh:resultPath <https://w3id.org/onto-bot#isAffordedBy> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:path <https://w3id.org/onto-bot#isAffordedBy> ] ] .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    ns1:sourceFile "../../output/run9/llama4-scout/observation-graph/d2kg-rag/kg.ttl" ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/DiningArea> ;
+            sh:resultMessage "Node ex:Environment must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]" ;
+            sh:resultPath geo:sfWithin ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b52 ;
+            sh:value <http://example.org/data/Environment> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Environment> ;
+            sh:resultMessage "Node ex:Kitchen must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ] , [ sh:class obot:Environment ]" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b1 ;
+            sh:value <http://example.org/data/Kitchen> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/WhiteWalls> ;
+            sh:resultMessage "Less than 1 values on ex:WhiteWalls->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenWall> ;
+            sh:resultMessage "Less than 1 values on ex:KitchenWall->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Door> ;
+            sh:resultMessage "Less than 1 values on ex:Door->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Kitchen> ;
+            sh:resultMessage "Node ex:Environment must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ]" ;
+            sh:resultPath geo:sfWithin ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b52 ;
+            sh:value <http://example.org/data/Environment> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/MarbleCountertop> ;
+            sh:resultMessage "Less than 1 values on ex:MarbleCountertop->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/DiningAreaWall> ;
+            sh:resultMessage "Less than 1 values on ex:DiningAreaWall->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenCabinets> ;
+            sh:resultMessage "Less than 1 values on ex:KitchenCabinets->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/WoodenFloor> ;
+            sh:resultMessage "Less than 1 values on ex:WoodenFloor->dul:hasLocation" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b33 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/Environment> ;
+            sh:resultMessage "Node ex:DiningArea must conform to one or more shapes in [ sh:class obot:Component ] , [ sh:class obot:Appliance ] , [ sh:class obot:Furniture ] , [ sh:class obot:Object ] , [ sh:class obot:Environment ]" ;
+            sh:resultPath <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape _:n637d590fddf148b2845dbcf209e97d33b1 ;
+            sh:value <http://example.org/data/DiningArea> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://example.org/data/KitchenCabinets> ;
+            sh:resultMessage "Node soma:Opening must conform to one or more shapes in [ sh:class obot:Affordance ] , [ sh:class soma:Closing ] , [ sh:class soma:Opening ] , [ sh:class soma:Delivering ] , [ sh:class soma:Holding ] , [ sh:class soma:PickingUp ] , [ sh:class soma:PuttingDown ] , [ sh:class soma:Pulling ] , [ sh:class soma:Pushing ] , [ sh:class soma:Grasping ]" ;
+            sh:resultPath <https://w3id.org/onto-bot#hasAffordance> ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape [ sh:or ( [ sh:class <https://w3id.org/onto-bot#Affordance> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Closing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Opening> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Delivering> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Holding> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ] ) ;
+                    sh:path <https://w3id.org/onto-bot#hasAffordance> ] ;
+            sh:value <http://www.ease-crc.org/ont/SOMA.owl#Opening> ] .
 
-_:n656b9316b9824af98eec7e1a138ba0bbb11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N000d5d4ce3a64b07a9994a1809a79100 rdf:first [ sh:class <https://w3id.org/onto-bot#Furniture> ] ;
+    rdf:rest ( [ sh:class <https://w3id.org/onto-bot#Object> ] [ sh:class <https://w3id.org/onto-bot#Environment> ] ) .
 
-_:n656b9316b9824af98eec7e1a138ba0bbb12 sh:class <https://w3id.org/onto-bot#Component> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#actsOn> .
+_:N006083a2a56e4a1792a7a2c7d70088c3 rdf:first [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Holding> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ] ) .
 
-_:n840f3cbb38114a06b9a423096dbe15d1b3 sh:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#hasAction> .
+_:N0404a760b3fe4117982a41ab8a3fd2ff sh:class <http://www.ease-crc.org/ont/SOMA.owl#Holding> .
 
-_:n01cd78488b834dad94897482d42bd5d1b11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N05f9a3a07a634e728d06bd5dd1901828 sh:class <http://www.ease-crc.org/ont/SOMA.owl#Opening> .
 
-_:n01cd78488b834dad94897482d42bd5d1b12 sh:class <https://w3id.org/onto-bot#Component> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#actsOn> .
+_:N07355b11f8524064bd3e1d91ce0f2425 sh:class <http://www.ease-crc.org/ont/SOMA.owl#Delivering> .
 
-_:nc7b30f763c4947f1913af8f8999fd72cb11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N07bffc6a17854f1bb4e6ce73ea51e002 rdf:first [ sh:class <https://w3id.org/onto-bot#Furniture> ] ;
+    rdf:rest ( [ sh:class <https://w3id.org/onto-bot#Object> ] ) .
 
-_:n6a193066078a418296c5d8d9fbbf4d88b12 sh:class <https://w3id.org/onto-bot#Component> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#actsOn> .
+_:N0c25db45bf7a479080071677dcbefcde sh:class <http://www.ease-crc.org/ont/SOMA.owl#Closing> .
 
-_:n7e556a7facf14b80ae229d18d9ddf2b1b11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N0f5713ecc3944855a32daac9eb2525b3 rdf:first [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Closing> ] ;
+    rdf:rest ( [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Opening> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Delivering> ] _:N0404a760b3fe4117982a41ab8a3fd2ff [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PickingUp> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#PuttingDown> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pulling> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Pushing> ] [ sh:class <http://www.ease-crc.org/ont/SOMA.owl#Grasping> ] ) .
 
-_:n7e556a7facf14b80ae229d18d9ddf2b1b12 sh:class <https://w3id.org/onto-bot#Component> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#actsOn> .
+_:N165d87444ee24d02a723756f8314c2f2 sh:class <https://w3id.org/onto-bot#Appliance> .
 
-_:n6a193066078a418296c5d8d9fbbf4d88b11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N1e65f1f35e38417f9becfad2dddeca1d rdf:first [ sh:class <https://w3id.org/onto-bot#Affordance> ] ;
+    rdf:rest ( _:N0c25db45bf7a479080071677dcbefcde _:N05f9a3a07a634e728d06bd5dd1901828 _:N07355b11f8524064bd3e1d91ce0f2425 _:N55c64e8fb84745e29dc176dbf5ad92ae _:Nf4a5d453fd7b4f9e99dee55898344978 _:N28a62ca3f4974300b48732bb1e7e6aae _:N2a8ec442d9ad45a0a2264c63a0bd9198 _:N2d3b1cc2ef1f44ea8d138bd8e0fb791e _:Ne756d59e1c944c0fbb37bf72454fde93 ) .
 
-_:n6cd6684660864bc184fd68915d3f3ef5b12 sh:class <https://w3id.org/onto-bot#Component> ;
-    sh:minCount 1 ;
-    sh:path <https://w3id.org/onto-bot#actsOn> .
+_:N45305de53f3142f19c56e60ead5cd734 sh:class <https://w3id.org/onto-bot#Component> .
 
-_:n6cd6684660864bc184fd68915d3f3ef5b11 sh:class <https://w3id.org/onto-bot#Affordance> ;
-    sh:path <https://w3id.org/onto-bot#isAffordedBy> .
+_:N6aa8cb0f13844c5fa6555d5bd74d5ae4 rdf:first [ sh:class <https://w3id.org/onto-bot#Appliance> ] ;
+    rdf:rest _:N000d5d4ce3a64b07a9994a1809a79100 .
+
+_:N6b6068384cf6423f9c59bec3c70e2280 rdf:first _:N165d87444ee24d02a723756f8314c2f2 ;
+    rdf:rest _:N07bffc6a17854f1bb4e6ce73ea51e002 .
+
+_:N8126eede1f0646f7817a653201b5c8ac sh:class <https://w3id.org/onto-bot#Affordance> .
+
+_:N853f10e8fe6a4e1ebb748426b0e8ea38 rdf:first _:N45305de53f3142f19c56e60ead5cd734 ;
+    rdf:rest _:N6aa8cb0f13844c5fa6555d5bd74d5ae4 .
+
+_:Nac326c6942f44906a78cccc977fda81d rdf:first _:N8126eede1f0646f7817a653201b5c8ac ;
+    rdf:rest _:N0f5713ecc3944855a32daac9eb2525b3 .
+
+_:Nb6e4ba9dd9d74294ab083cd7825e3fa8 rdf:first [ sh:class <https://w3id.org/onto-bot#Component> ] ;
+    rdf:rest _:N6b6068384cf6423f9c59bec3c70e2280 .
+
+_:n4e3a9c5bc9904a35871b176adc7b51c6b33 sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+
+_:n637d590fddf148b2845dbcf209e97d33b1 sh:minCount 1 ;
+    sh:or _:N853f10e8fe6a4e1ebb748426b0e8ea38 ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent> .
+
+_:n637d590fddf148b2845dbcf209e97d33b52 sh:or _:Nb6e4ba9dd9d74294ab083cd7825e3fa8 ;
+    sh:path geo:sfWithin .
+
+_:ne71d62cbd27f4a2b97eead515586ce8ab33 sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+
+_:n37a1291fe696470da7ed2547a70dd4c6b33 sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+
+_:n69032d2795b24443a3af56cc971d2154b12 sh:or _:Nac326c6942f44906a78cccc977fda81d ;
+    sh:path <https://w3id.org/onto-bot#hasAffordance> .
+
+_:n637d590fddf148b2845dbcf209e97d33b33 sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+
+_:n32b2a446492a44418a7ec5fbeef6734fb12 sh:or _:N1e65f1f35e38417f9becfad2dddeca1d ;
+    sh:path <https://w3id.org/onto-bot#hasAffordance> .
 

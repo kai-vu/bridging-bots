@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,87 +8,87 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "Identify misplaced items"@en ;
-    psr:isAffordedBy soma:Grasping .
+    obot:isAffordedBy soma:Grasping .
 
 ex:action2 a dul:Action ;
     rdfs:label "Pick up bottle"@en ;
-    psr:actsOn ex:bottle ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:action3 .
+    obot:actsOn ex:bottle ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:action3 .
 
-ex:bottle a psr:Component ;
+ex:bottle a obot:Component ;
     rdfs:label "Bottle"@en .
 
 ex:action3 a dul:Action ;
     rdfs:label "Put down bottle"@en ;
-    psr:actsOn ex:bottle ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:action4 .
+    obot:actsOn ex:bottle ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:action4 .
 
 ex:action4 a dul:Action ;
     rdfs:label "Pick up box on table"@en ;
-    psr:actsOn ex:boxOnTable ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:action5 .
+    obot:actsOn ex:boxOnTable ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:action5 .
 
-ex:boxOnTable a psr:Component ;
+ex:boxOnTable a obot:Component ;
     rdfs:label "Box on table"@en .
 
 ex:action5 a dul:Action ;
     rdfs:label "Put down box on table"@en ;
-    psr:actsOn ex:boxOnTable ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:action6 .
+    obot:actsOn ex:boxOnTable ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:action6 .
 
 ex:action6 a dul:Action ;
     rdfs:label "Pick up book"@en ;
-    psr:actsOn ex:book ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:action7 .
+    obot:actsOn ex:book ;
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:action7 .
 
-ex:book a psr:Component ;
+ex:book a obot:Component ;
     rdfs:label "Book"@en .
 
 ex:action7 a dul:Action ;
     rdfs:label "Put down book"@en ;
-    psr:actsOn ex:book ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:precedes ex:action8 .
+    obot:actsOn ex:book ;
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:precedes ex:action8 .
 
 ex:action8 a dul:Action ;
     rdfs:label "Open cabinet"@en ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Opening ;
-    psr:precedes ex:action9 .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Opening ;
+    obot:precedes ex:action9 .
 
-ex:cabinet a psr:Component ;
+ex:cabinet a obot:Component ;
     rdfs:label "Cabinet"@en .
 
 ex:action9 a dul:Action ;
     rdfs:label "Place items in cabinet"@en ;
-    psr:actsOn ex:items ;
-    psr:isAffordedBy soma:Pushing ;
-    psr:precedes ex:action10 .
+    obot:actsOn ex:items ;
+    obot:isAffordedBy soma:Pushing ;
+    obot:precedes ex:action10 .
 
-ex:items a psr:Component ;
+ex:items a obot:Component ;
     rdfs:label "Items"@en .
 
 ex:action10 a dul:Action ;
     rdfs:label "Close cabinet"@en ;
-    psr:actsOn ex:cabinet ;
-    psr:isAffordedBy soma:Closing .
+    obot:actsOn ex:cabinet ;
+    obot:isAffordedBy soma:Closing .
 
-ex:workflow a psr:Workflow ;
-    psr:hasAction ex:action1 ;
-    psr:hasAction ex:action2 ;
-    psr:hasAction ex:action3 ;
-    psr:hasAction ex:action4 ;
-    psr:hasAction ex:action5 ;
-    psr:hasAction ex:action6 ;
-    psr:hasAction ex:action7 ;
-    psr:hasAction ex:action8 ;
-    psr:hasAction ex:action9 ;
-    psr:hasAction ex:action10 .
+ex:workflow a obot:Workflow ;
+    obot:hasAction ex:action1 ;
+    obot:hasAction ex:action2 ;
+    obot:hasAction ex:action3 ;
+    obot:hasAction ex:action4 ;
+    obot:hasAction ex:action5 ;
+    obot:hasAction ex:action6 ;
+    obot:hasAction ex:action7 ;
+    obot:hasAction ex:action8 ;
+    obot:hasAction ex:action9 ;
+    obot:hasAction ex:action10 .
 
-ex:instruction a psr:Instruction ;
-    psr:hasWorkflow ex:workflow .
+ex:instruction a obot:Instruction ;
+    obot:hasWorkflow ex:workflow .

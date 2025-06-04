@@ -1,6 +1,6 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,43 +8,43 @@
 
 ex:action1 a dul:Action ;
     rdfs:label "Identify misplaced items" ;
-    psr:isAffordedBy soma:Grasping .
+    obot:isAffordedBy soma:Grasping .
 
 ex:action2 a dul:Action ;
     rdfs:label "Pick up item" ;
-    psr:isAffordedBy soma:PickingUp ;
-    psr:precedes ex:action3 .
+    obot:isAffordedBy soma:PickingUp ;
+    obot:precedes ex:action3 .
 
 ex:action3 a dul:Action ;
     rdfs:label "Identify item type and function" ;
-    psr:actsOn ex:item .
+    obot:actsOn ex:item .
 
-ex:item a psr:Component ;
+ex:item a obot:Component ;
     rdfs:label "Item" .
 
 ex:action4 a dul:Action ;
     rdfs:label "Determine standard storage location" ;
-    psr:precedes ex:action5 .
+    obot:precedes ex:action5 .
 
 ex:action5 a dul:Action ;
     rdfs:label "Move item to storage location" ;
-    psr:isAffordedBy soma:Pushing ;
-    psr:actsOn ex:item .
+    obot:isAffordedBy soma:Pushing ;
+    obot:actsOn ex:item .
 
-ex:storageLocation a psr:Component ;
+ex:storageLocation a obot:Component ;
     rdfs:label "Storage Location" .
 
 ex:action6 a dul:Action ;
     rdfs:label "Put down item" ;
-    psr:isAffordedBy soma:PuttingDown ;
-    psr:actsOn ex:item ;
-    psr:follows ex:action5 .
+    obot:isAffordedBy soma:PuttingDown ;
+    obot:actsOn ex:item ;
+    obot:follows ex:action5 .
 
-ex:workflow a psr:Workflow ;
+ex:workflow a obot:Workflow ;
     rdfs:label "Kitchen organization workflow" ;
-    psr:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6 .
+    obot:hasAction ex:action1, ex:action2, ex:action3, ex:action4, ex:action5, ex:action6 .
 
-ex:instruction a psr:Instruction ;
+ex:instruction a obot:Instruction ;
     rdfs:label "Restore kitchen to organized state" ;
-    psr:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
-    psr:hasWorkflow ex:workflow .
+    obot:hasNaturalLanguage "Restore the kitchen to an organized state by identifying all misplaced items and returning them to their standard storage locations based on their type and function." ;
+    obot:hasWorkflow ex:workflow .

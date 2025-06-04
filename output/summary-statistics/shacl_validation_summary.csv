@@ -1,0 +1,37 @@
+model,graph_type,setting,total_runs,passed_runs,failed_runs,total_violations,top_focus_nodes,top_constraint_components,top_result_paths
+llava-llama3,action-graph,dpe,10,10,0,0,,,
+llama4-maverick,observation-graph,i2kg,10,5,5,26,"http://example.org/data/CounterTop1 (4), http://example.org/data/CounterTop2 (4), http://example.org/data/Countertop1 (3)","OrConstraintComponent (22), MinCountConstraintComponent (4)","hasAffordance (12), sfWithin (10), hasLocation (4)"
+gpt-o1,action-graph,d2kg-rag,10,10,0,0,,,
+gpt-o1,action-graph,d2kg,10,10,0,0,,,
+gpt-4.1-nano,observation-graph,d2kg-rag,5,5,0,0,,,
+gpt-o1,observation-graph,d2kg,10,5,5,18,"http://example.org/data/KitchenDining (6), http://example.org/data/KitchenDiningEnvironment (3), http://example.org/data/Door (2)","OrConstraintComponent (9), MinCountConstraintComponent (9)","hasComponent (9), hasLocation (9)"
+llama4-maverick,action-graph,i2kg,10,10,0,0,,,
+llava-llama3,observation-graph,i2kg,1,1,0,0,,,
+gpt-4.1-nano,observation-graph,i2kg,6,4,2,2,"http://example.org/data/Kitchen (1), http://example.org/data/Environment1 (1)",MinCountConstraintComponent (2),hasComponent (2)
+llava-llama3,action-graph,d2kg-rag,10,8,2,6,"http://example.org/data/action1 (2), http://example.org/data/action4 (2), http://example.org/data/action3 (1)",MinCountConstraintComponent (6),"actsOn (4), isAffordedBy (2)"
+llama4-scout,observation-graph,d2kg,8,0,8,61,"http://example.org/data/Countertop (5), http://example.org/data/Kitchen (4), http://example.org/data/Sink (4)","MinCountConstraintComponent (32), OrConstraintComponent (29)","hasLocation (28), hasAffordance (14), sfWithin (14)"
+llava-llama3,observation-graph,d2kg-rag,10,7,3,40,"http://example.org/data/Countertop1 (3), http://example.org/data/Countertop2 (3), http://example.org/data/sink (2)",OrConstraintComponent (40),hasAffordance (40)
+llama4-maverick,observation-graph,d2kg,10,6,4,15,"http://example.org/data/Ceiling (2), http://example.org/data/KitchenCabinets (1), http://example.org/data/CounterTopWithSink (1)","OrConstraintComponent (8), MinCountConstraintComponent (7)","hasLocation (7), sfWithin (6), sfOverlaps (1)"
+gpt-4.1-nano,action-graph,i2kg,4,1,3,22,"http://example.org/data/Action3 (2), http://example.org/data/Action5 (2), http://example.org/data/Action4 (2)",MinCountConstraintComponent (22),"isAffordedBy (17), actsOn (5)"
+llama4-maverick,observation-graph,d2kg-rag,10,5,5,11,"http://example.org/data/WhiteWalls (2), http://example.org/data/BrownParquetFloor (1), http://example.org/data/RightWall (1)","OrConstraintComponent (6), MinCountConstraintComponent (5)","hasLocation (5), sfWithin (5), hasAffordance (1)"
+llava-llama3,observation-graph,d2kg,9,2,7,55,"http://example.org/data/sink (5), http://example.org/data/window (4), http://example.org/data/refrigerator (4)","OrConstraintComponent (48), MinCountConstraintComponent (7)","hasAffordance (46), hasLocation (5), hasComponent (2)"
+llama4-scout,action-graph,d2kg-rag,7,5,2,9,"http://example.org/data/Restore_Kitchen_Task (1), http://example.org/data/IdentifyMisplacedItems (1), http://example.org/data/FindRedBoxChucky (1)","MinCountConstraintComponent (8), QualifiedMinCountConstraintComponent (1)","isAffordedBy (8), hasAction (1)"
+llama4-maverick,action-graph,d2kg,10,2,8,23,"http://example.org/data/IdentifyMisplacedItemsAction (5), http://example.org/data/IdentifyMisplacedItems (3), http://example.org/data/None (2)",MinCountConstraintComponent (23),"isAffordedBy (22), actsOn (1)"
+llama4-scout,observation-graph,i2kg,7,1,6,22,"https://w3id.org/onto-bot#Furniture (5), https://w3id.org/onto-bot#Object (5), https://w3id.org/onto-bot#Appliance (5)",MinCountConstraintComponent (22),hasLocation (22)
+llama4-scout,action-graph,i2kg,6,5,1,12,"file:///Users/brain/Documents/GitHub/PSR-Action-Ontology/output/run8/llama4-scout/action-graph/i2kg/kg.ttl#PickUpAction3 (1), file:///Users/brain/Documents/GitHub/PSR-Action-Ontology/output/run8/llama4-scout/action-graph/i2kg/kg.ttl#PickUpAction4 (1), file:///Users/brain/Documents/GitHub/PSR-Action-Ontology/output/run8/llama4-scout/action-graph/i2kg/kg.ttl#PickUpAction5 (1)",MinCountConstraintComponent (12),isAffordedBy (12)
+llama4-maverick,action-graph,dpe,10,10,0,0,,,
+gpt-o1,observation-graph,i2kg,10,9,1,6,"http://example.org/data/Door1 (5), http://example.org/data/Window1 (1)","OrConstraintComponent (4), MinCountConstraintComponent (2)","hasAffordance (4), hasLocation (2)"
+llama4-scout,action-graph,dpe,10,10,0,0,,,
+llama4-scout,action-graph,d2kg,6,4,2,5,"http://example.org/data/Move_Back_To_Kitchen (1), http://example.org/data/Organize_Remaining_Items (1), http://example.org/data/Move_To_Dining_Room (1)","MinCountConstraintComponent (4), QualifiedMinCountConstraintComponent (1)","actsOn (3), isAffordedBy (1), hasAction (1)"
+llava-llama3,action-graph,d2kg,10,10,0,0,,,
+gpt-4.1-nano,action-graph,d2kg,6,2,4,40,"http://example.org/data/MoveToStorageForJELLO (2), http://example.org/data/MoveToSaltStorage (2), ex:placeRiceBubblesAction (1)","MinCountConstraintComponent (38), ClassConstraintComponent (1), QualifiedMinCountConstraintComponent (1)","isAffordedBy (36), actsOn (2), hasWorkflow (1)"
+llama4-scout,observation-graph,dpe,10,10,0,0,,,
+llava-llama3,observation-graph,dpe,10,10,0,0,,,
+llama4-maverick,action-graph,d2kg-rag,10,2,8,16,"http://example.org/data/IdentifyMisplacedItemsAction (4), http://example.org/data/None (4), http://example.org/data/IdentifyMisplacedItems (2)",MinCountConstraintComponent (16),"isAffordedBy (14), actsOn (2)"
+gpt-o1,observation-graph,d2kg-rag,10,10,0,0,,,
+gpt-o1,action-graph,i2kg,9,9,0,0,,,
+llama4-maverick,observation-graph,dpe,10,10,0,0,,,
+gpt-4.1-nano,observation-graph,d2kg,8,8,0,0,,,
+llama4-scout,observation-graph,d2kg-rag,8,2,6,41,"http://example.org/data/Environment (4), http://example.org/data/Sink (3), http://example.org/data/Cabinets (3)","MinCountConstraintComponent (25), OrConstraintComponent (16)","hasLocation (20), sfWithin (8), hasComponent (7)"
+gpt-4.1-nano,action-graph,d2kg-rag,2,2,0,0,,,
+llava-llama3,action-graph,i2kg,2,2,0,0,,,

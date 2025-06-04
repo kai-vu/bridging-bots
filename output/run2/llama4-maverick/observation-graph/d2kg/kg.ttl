@@ -3,73 +3,73 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:DarkGrayCabinets, ex:WhiteRefrigerator, ex:BeigeMarbleCounterTop, ex:Sink, ex:InductionCooker, ex:Pot, ex:RangeHood, ex:Cupboard, ex:Boxes, ex:Jars, ex:StackOfPlates, ex:GallonOfWater, ex:DiningTable, ex:WhiteChairs, ex:RoundLight .
 
-ex:DarkGrayCabinets a psr:Furniture .
-ex:WhiteRefrigerator a psr:Appliance .
-ex:BeigeMarbleCounterTop a psr:Furniture .
-ex:Sink a psr:Object ;
+ex:DarkGrayCabinets a obot:Furniture .
+ex:WhiteRefrigerator a obot:Appliance .
+ex:BeigeMarbleCounterTop a obot:Furniture .
+ex:Sink a obot:Object ;
     dul:hasLocation ex:LeftSideOfCounter .
-ex:InductionCooker a psr:Appliance ;
+ex:InductionCooker a obot:Appliance ;
     dul:hasLocation ex:CounterTopRightOfSink .
-ex:Pot a psr:Object ;
+ex:Pot a obot:Object ;
     dul:hasLocation ex:InductionCooker .
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:AboveInductionCooker .
-ex:Cupboard a psr:Furniture ;
+ex:Cupboard a obot:Furniture ;
     dul:hasLocation ex:AboveCounterWithSink .
-ex:Boxes a psr:Object ;
+ex:Boxes a obot:Object ;
     dul:hasLocation ex:CounterTop .
-ex:Jars a psr:Object ;
+ex:Jars a obot:Object ;
     dul:hasLocation ex:CounterTop .
-ex:StackOfPlates a psr:Object ;
+ex:StackOfPlates a obot:Object ;
     dul:hasLocation ex:CounterTop .
-ex:GallonOfWater a psr:Object ;
+ex:GallonOfWater a obot:Object ;
     dul:hasLocation ex:CounterTop, ex:DiningTable .
-ex:DiningTable a psr:Furniture .
-ex:WhiteChairs a psr:Furniture .
-ex:RoundLight a psr:Object ;
+ex:DiningTable a obot:Furniture .
+ex:WhiteChairs a obot:Furniture .
+ex:RoundLight a obot:Object ;
     dul:hasLocation ex:WhiteCeiling .
 
-ex:CounterTop a psr:Component .
-ex:LeftSideOfCounter a psr:Location ;
+ex:CounterTop a obot:Component .
+ex:LeftSideOfCounter a obot:Location ;
     geo:sfWithin ex:CounterTop .
-ex:CounterTopRightOfSink a psr:Location ;
+ex:CounterTopRightOfSink a obot:Location ;
     geo:sfWithin ex:CounterTop ;
     geo:sfOverlaps ex:LeftSideOfCounter .
-ex:AboveInductionCooker a psr:Location ;
-    psr:onTopOf ex:InductionCooker .
-ex:AboveCounterWithSink a psr:Location ;
-    psr:onTopOf ex:CounterTopWithSink .
-ex:CounterTopWithSink a psr:Component ;
+ex:AboveInductionCooker a obot:Location ;
+    obot:onTopOf ex:InductionCooker .
+ex:AboveCounterWithSink a obot:Location ;
+    obot:onTopOf ex:CounterTopWithSink .
+ex:CounterTopWithSink a obot:Component ;
     geo:sfContains ex:Sink .
 
-ex:DiningTable a psr:Furniture ;
+ex:DiningTable a obot:Furniture ;
     dul:hasComponent ex:BoxOfShortbread, ex:Jug, ex:WineGlass, ex:Plate, ex:GallonOfWater .
 
-ex:BoxOfShortbread a psr:Object .
-ex:Jug a psr:Object .
-ex:WineGlass a psr:Object .
-ex:Plate a psr:Object .
+ex:BoxOfShortbread a obot:Object .
+ex:Jug a obot:Object .
+ex:WineGlass a obot:Object .
+ex:Plate a obot:Object .
 
 ex:WhiteRefrigerator dul:hasLocation ex:BetweenKitchenCabinets .
-ex:BetweenKitchenCabinets a psr:Location ;
+ex:BetweenKitchenCabinets a obot:Location ;
     geo:sfWithin ex:KitchenCabinets .
-ex:KitchenCabinets a psr:Component ;
+ex:KitchenCabinets a obot:Component ;
     dul:hasComponent ex:DarkGrayCabinets .
 
-ex:Boxes psr:hasAffordance soma:Holding .
-ex:Jars psr:hasAffordance soma:Holding .
-ex:StackOfPlates psr:hasAffordance soma:Holding .
-ex:Pot psr:hasAffordance soma:Holding, soma:Grasping .
-ex:WhiteRefrigerator psr:hasAffordance soma:Opening, soma:Closing .
-ex:Cupboard psr:hasAffordance soma:Opening, soma:Closing .
-ex:InductionCooker psr:hasAffordance soma:TurningOn, soma:TurningOff .
-ex:RangeHood psr:hasAffordance soma:TurningOn, soma:TurningOff .
-ex:Sink psr:hasAffordance soma:TurningOn, soma:TurningOff .
-ex:DiningTable psr:hasAffordance soma:Holding .
-ex:WhiteChairs psr:hasAffordance soma:Moving .
+ex:Boxes obot:hasAffordance soma:Holding .
+ex:Jars obot:hasAffordance soma:Holding .
+ex:StackOfPlates obot:hasAffordance soma:Holding .
+ex:Pot obot:hasAffordance soma:Holding, soma:Grasping .
+ex:WhiteRefrigerator obot:hasAffordance soma:Opening, soma:Closing .
+ex:Cupboard obot:hasAffordance soma:Opening, soma:Closing .
+ex:InductionCooker obot:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:RangeHood obot:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:Sink obot:hasAffordance soma:TurningOn, soma:TurningOff .
+ex:DiningTable obot:hasAffordance soma:Holding .
+ex:WhiteChairs obot:hasAffordance soma:Moving .

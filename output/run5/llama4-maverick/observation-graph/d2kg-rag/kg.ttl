@@ -1,71 +1,71 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:KitchenEnvironment a psr:Environment ;
+ex:KitchenEnvironment a obot:Environment ;
     dul:hasComponent ex:BlackKitchenCabinets, ex:WhiteRefrigerator, ex:BeigeMarbleCountertop, ex:StackOfWhitePlates, ex:JarOfJam1, ex:BoxOfJello, ex:BoxOfSalt, ex:WoodenDiningTable, ex:WhiteChairs, ex:PlasticBottle, ex:Carton, ex:Mug, ex:WineGlass, ex:RangeHood, ex:YellowCup, ex:BoxOfCrackers, ex:JarOfJam2, ex:BrownWoodenParquetFlooring, ex:WhiteWalls, ex:CircularLight .
 
-ex:BlackKitchenCabinets a psr:Furniture ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+ex:BlackKitchenCabinets a obot:Furniture ;
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:WhiteRefrigerator a psr:Appliance ;
+ex:WhiteRefrigerator a obot:Appliance ;
     dul:hasLocation ex:NextToBlackKitchenCabinets ;
-    psr:hasAffordance soma:Opening, soma:Closing .
+    obot:hasAffordance soma:Opening, soma:Closing .
 
-ex:BeigeMarbleCountertop a psr:Furniture ;
+ex:BeigeMarbleCountertop a obot:Furniture ;
     dul:hasLocation ex:OnTopOfBlackKitchenCabinets .
 
-ex:StackOfWhitePlates a psr:Object ;
+ex:StackOfWhitePlates a obot:Object ;
     dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
 
-ex:JarOfJam1 a psr:Object ;
+ex:JarOfJam1 a obot:Object ;
     dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
 
-ex:BoxOfJello a psr:Object ;
+ex:BoxOfJello a obot:Object ;
     dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
 
-ex:BoxOfSalt a psr:Object ;
+ex:BoxOfSalt a obot:Object ;
     dul:hasLocation ex:OnTopOfBeigeMarbleCountertop .
 
-ex:WoodenDiningTable a psr:Furniture ;
-    psr:hasAffordance soma:PickingUp, soma:PuttingDown .
+ex:WoodenDiningTable a obot:Furniture ;
+    obot:hasAffordance soma:PickingUp, soma:PuttingDown .
 
-ex:WhiteChairs a psr:Furniture ;
+ex:WhiteChairs a obot:Furniture ;
     dul:hasLocation ex:AroundWoodenDiningTable .
 
-ex:PlasticBottle a psr:Object ;
+ex:PlasticBottle a obot:Object ;
     dul:hasLocation ex:OnTopOfWoodenDiningTable .
 
-ex:Carton a psr:Object ;
+ex:Carton a obot:Object ;
     dul:hasLocation ex:OnTopOfWoodenDiningTable .
 
-ex:Mug a psr:Object ;
+ex:Mug a obot:Object ;
     dul:hasLocation ex:OnTopOfWoodenDiningTable .
 
-ex:WineGlass a psr:Object ;
+ex:WineGlass a obot:Object ;
     dul:hasLocation ex:OnTopOfWoodenDiningTable .
 
-ex:RangeHood a psr:Appliance ;
+ex:RangeHood a obot:Appliance ;
     dul:hasLocation ex:AboveStove .
 
-ex:YellowCup a psr:Object ;
+ex:YellowCup a obot:Object ;
     dul:hasLocation ex:NextToSink .
 
-ex:BoxOfCrackers a psr:Object ;
+ex:BoxOfCrackers a obot:Object ;
     dul:hasLocation ex:NextToSink .
 
-ex:JarOfJam2 a psr:Object ;
+ex:JarOfJam2 a obot:Object ;
     dul:hasLocation ex:NextToSink .
 
-ex:BrownWoodenParquetFlooring a psr:Furniture .
+ex:BrownWoodenParquetFlooring a obot:Furniture .
 
-ex:WhiteWalls a psr:Component .
+ex:WhiteWalls a obot:Component .
 
-ex:CircularLight a psr:Object ;
+ex:CircularLight a obot:Object ;
     dul:hasLocation ex:OnTheCeiling .
 
 ex:NextToBlackKitchenCabinets a soma:Location ;

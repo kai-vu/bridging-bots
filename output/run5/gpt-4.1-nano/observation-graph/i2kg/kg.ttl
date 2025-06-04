@@ -3,54 +3,54 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix :       <http://example.org/data/> .
 
 ##############################
 # Environment and Locations
 ##############################
 
-:diningRoom a psr:Environment ;
+:diningRoom a obot:Environment ;
     rdfs:label "Dining Room"@en .
 
-:floorLevel a psr:StandardLocation ;
+:floorLevel a obot:StandardLocation ;
     rdfs:label "Floor Level"@en .
 
-:currentPos a psr:CurrentLocation ;
+:currentPos a obot:CurrentLocation ;
     rdfs:label "Current Position"@en .
 
-:table a psr:Object ;
+:table a obot:Object ;
     rdfs:label "Dining Table"@en .
 
-:wall a psr:Object ;
+:wall a obot:Object ;
     rdfs:label "Wall"@en .
 
 ##############################
 # Components (Objects)
 ##############################
 
-:refrigerator a psr:Appliance ;
+:refrigerator a obot:Appliance ;
     rdfs:label "Refrigerator"@en .
 
-:table a psr:Furniture ;
+:table a obot:Furniture ;
     rdfs:label "Dining Table"@en .
 
-:kitchenCounter a psr:Furniture ;
+:kitchenCounter a obot:Furniture ;
     rdfs:label "Kitchen Counter"@en .
 
-:plate a psr:Object ;
+:plate a obot:Object ;
     rdfs:label "Plate"@en .
 
-:box ofJelly a psr:Object ;
+:box ofJelly a obot:Object ;
     rdfs:label "Jelly Box"@en .
 
-:bottleWater a psr:Object ;
+:bottleWater a obot:Object ;
     rdfs:label "Water Bottle"@en .
 
-:box ofRiceBubbles a psr:Object ;
+:box ofRiceBubbles a obot:Object ;
     rdfs:label "Rice Bubbles Box"@en .
 
-:box ofChocolate a psr:Object ;
+:box ofChocolate a obot:Object ;
     rdfs:label "Chocolate Box"@en .
 
 ##############################
@@ -82,7 +82,7 @@
 # Relations: Environment Components and Locations
 ##############################
 
-:environment a psr:Environment ;
+:environment a obot:Environment ;
     dul:hasComponent :refrigerator, :kitchenCounter, :table .
 
 :refrigerator :hasLocation :refrigeratorLoc .
@@ -113,10 +113,10 @@
 # Object Relationships (e.g., on top of, within)
 ##############################
 
-:plate a psr:Object ;
+:plate a obot:Object ;
     rdfs:label "Plate"@en .
 
-:plateOnTable a psr:Location ;
+:plateOnTable a obot:Location ;
     rdfs:label "on the table"@en .
 
 :plate :onTopOf :table .
@@ -130,10 +130,10 @@
 # Affordances (if applicable, example actions)
 ##############################
 
-:refrigerator psr:hasAffordance soma:Opening .
-:refrigerator psr:hasAffordance soma:Closing .
+:refrigerator obot:hasAffordance soma:Opening .
+:refrigerator obot:hasAffordance soma:Closing .
 
-:door a psr:Object ;
+:door a obot:Object ;
     rdfs:label "Refrigerator Door"@en .
 
 :door soma:Opening :refrigerator .

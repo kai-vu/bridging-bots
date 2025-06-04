@@ -3,10 +3,10 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
-ex:Kitchen a psr:Environment ;
+ex:Kitchen a obot:Environment ;
     dul:hasComponent ex:Fridge ,
                      ex:Door ,
                      ex:Cabinet1 ,
@@ -31,100 +31,100 @@ ex:Kitchen a psr:Environment ;
                      ex:WaterBottle ,
                      ex:FruitBowl .
 
-ex:Fridge a psr:Appliance ;
-    psr:hasAffordance soma:Opening ,
+ex:Fridge a obot:Appliance ;
+    obot:hasAffordance soma:Opening ,
                        soma:Closing .
 
-ex:Door a psr:Object ;
-    psr:hasAffordance soma:Opening ,
+ex:Door a obot:Object ;
+    obot:hasAffordance soma:Opening ,
                        soma:Closing .
 
-ex:Cabinet1 a psr:Furniture ;
-    psr:hasAffordance soma:Opening ,
+ex:Cabinet1 a obot:Furniture ;
+    obot:hasAffordance soma:Opening ,
                        soma:Closing .
 
-ex:Sink a psr:Appliance .
+ex:Sink a obot:Appliance .
 
-ex:RangeHood a psr:Appliance .
+ex:RangeHood a obot:Appliance .
 
-ex:Stove a psr:Appliance .
+ex:Stove a obot:Appliance .
 
-ex:Countertop a psr:Furniture .
+ex:Countertop a obot:Furniture .
 
-ex:Table a psr:Furniture .
+ex:Table a obot:Furniture .
 
-ex:Chair1 a psr:Furniture .
-ex:Chair2 a psr:Furniture .
-ex:Chair3 a psr:Furniture .
-ex:Chair4 a psr:Furniture .
+ex:Chair1 a obot:Furniture .
+ex:Chair2 a obot:Furniture .
+ex:Chair3 a obot:Furniture .
+ex:Chair4 a obot:Furniture .
 
-ex:Jam1 a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Jam1 a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:Jam2 a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Jam2 a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:Jello a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Jello a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:Salt a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Salt a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:CerealBox1 a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:CerealBox1 a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:CerealBox2 a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:CerealBox2 a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:Plates a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Plates a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping .
 
-ex:Pot a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Pot a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping ,
                        soma:Holding .
 
-ex:Mug a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:Mug a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping ,
                        soma:Holding .
 
-ex:WaterBottle a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:WaterBottle a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping ,
                        soma:Holding .
 
-ex:FruitBowl a psr:Object ;
-    psr:hasAffordance soma:PickingUp ,
+ex:FruitBowl a obot:Object ;
+    obot:hasAffordance soma:PickingUp ,
                        soma:PuttingDown ,
                        soma:Grasping ,
                        soma:Holding .
 
-ex:CountertopLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Countertop .
+ex:CountertopLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Countertop .
 
-ex:StoveLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Stove .
+ex:StoveLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Stove .
 
-ex:TableLocation a psr:CurrentLocation ;
-    psr:onTopOf ex:Table .
+ex:TableLocation a obot:CurrentLocation ;
+    obot:onTopOf ex:Table .
 
 ex:Jam1 dul:hasLocation ex:CountertopLocation .
 ex:Jam2 dul:hasLocation ex:CountertopLocation .

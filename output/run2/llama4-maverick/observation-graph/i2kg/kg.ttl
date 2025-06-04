@@ -3,126 +3,126 @@
 @prefix soma: <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr: <https://w3id.org/onto-bot#> .
+@prefix obot: <https://w3id.org/onto-bot#> .
 @prefix ex: <http://example.org/data/> .
 
-ex:Environment1 a psr:Environment ;
+ex:Environment1 a obot:Environment ;
     dul:hasComponent ex:Cabinet1, ex:Cabinet2, ex:Cabinet3, ex:Cabinet4, ex:Refrigerator1, ex:Table1, ex:Chair1, ex:Chair2, ex:Chair3, ex:Sink1, ex:Hood1, ex:Jar1, ex:Box1, ex:Box2, ex:Box3, ex:Box4, ex:Box5, ex:Box6, ex:Bottle1, ex:Mug1, ex:Glass1, ex:Pitcher1, ex:Pan1, ex:Plate1 .
 
-ex:Cabinet1 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet1 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Location1 .
 
-ex:Cabinet2 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet2 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Location2 .
 
-ex:Cabinet3 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet3 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Location3 .
 
-ex:Cabinet4 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Cabinet4 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Location4 .
 
-ex:Refrigerator1 a psr:Appliance ;
-    psr:hasAffordance soma:Opening, soma:Closing ;
+ex:Refrigerator1 a obot:Appliance ;
+    obot:hasAffordance soma:Opening, soma:Closing ;
     dul:hasLocation ex:Location5 .
 
-ex:Table1 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:Table1 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:Location6 .
 
-ex:Chair1 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:Chair1 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:Location7 .
 
-ex:Chair2 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:Chair2 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:Location8 .
 
-ex:Chair3 a psr:Furniture ;
-    psr:hasAffordance soma:Supporting ;
+ex:Chair3 a obot:Furniture ;
+    obot:hasAffordance soma:Supporting ;
     dul:hasLocation ex:Location9 .
 
-ex:Sink1 a psr:Appliance ;
-    psr:hasAffordance soma:Containing ;
+ex:Sink1 a obot:Appliance ;
+    obot:hasAffordance soma:Containing ;
     dul:hasLocation ex:Location10 .
 
-ex:Hood1 a psr:Appliance ;
-    psr:hasAffordance soma:Ventilating ;
+ex:Hood1 a obot:Appliance ;
+    obot:hasAffordance soma:Ventilating ;
     dul:hasLocation ex:Location11 .
 
-ex:Jar1 a psr:Object ;
+ex:Jar1 a obot:Object ;
     dul:hasLocation ex:Location12 .
 
-ex:Box1 a psr:Object ;
+ex:Box1 a obot:Object ;
     dul:hasLocation ex:Location13 .
 
-ex:Box2 a psr:Object ;
+ex:Box2 a obot:Object ;
     dul:hasLocation ex:Location14 .
 
-ex:Box3 a psr:Object ;
+ex:Box3 a obot:Object ;
     dul:hasLocation ex:Location15 .
 
-ex:Box4 a psr:Object ;
+ex:Box4 a obot:Object ;
     dul:hasLocation ex:Location16 .
 
-ex:Box5 a psr:Object ;
+ex:Box5 a obot:Object ;
     dul:hasLocation ex:Location17 .
 
-ex:Box6 a psr:Object ;
+ex:Box6 a obot:Object ;
     dul:hasLocation ex:Location18 .
 
-ex:Bottle1 a psr:Object ;
+ex:Bottle1 a obot:Object ;
     dul:hasLocation ex:Location19 .
 
-ex:Mug1 a psr:Object ;
+ex:Mug1 a obot:Object ;
     dul:hasLocation ex:Location20 .
 
-ex:Glass1 a psr:Object ;
+ex:Glass1 a obot:Object ;
     dul:hasLocation ex:Location21 .
 
-ex:Pitcher1 a psr:Object ;
+ex:Pitcher1 a obot:Object ;
     dul:hasLocation ex:Location22 .
 
-ex:Pan1 a psr:Object ;
+ex:Pan1 a obot:Object ;
     dul:hasLocation ex:Location23 .
 
-ex:Plate1 a psr:Object ;
+ex:Plate1 a obot:Object ;
     dul:hasLocation ex:Location24 .
 
-ex:Location1 psr:onTopOf ex:Cabinet1 .
-ex:Location2 psr:onTopOf ex:Cabinet2 .
-ex:Location3 psr:onTopOf ex:Cabinet3 .
-ex:Location4 psr:onTopOf ex:Cabinet4 .
-ex:Location5 psr:onTopOf ex:Refrigerator1 .
+ex:Location1 obot:onTopOf ex:Cabinet1 .
+ex:Location2 obot:onTopOf ex:Cabinet2 .
+ex:Location3 obot:onTopOf ex:Cabinet3 .
+ex:Location4 obot:onTopOf ex:Cabinet4 .
+ex:Location5 obot:onTopOf ex:Refrigerator1 .
 ex:Location6 geo:sfContains ex:Table1 .
 ex:Location7 geo:sfWithin ex:Table1 .
 ex:Location8 geo:sfWithin ex:Table1 .
 ex:Location9 geo:sfWithin ex:Table1 .
 ex:Location10 geo:sfWithin ex:Countertop1 .
 ex:Location11 geo:sfWithin ex:Wall1 .
-ex:Location12 psr:onTopOf ex:Countertop1 .
-ex:Location13 psr:onTopOf ex:Countertop1 .
-ex:Location14 psr:onTopOf ex:Countertop1 .
-ex:Location15 psr:onTopOf ex:Countertop1 .
-ex:Location16 psr:onTopOf ex:Countertop1 .
-ex:Location17 psr:onTopOf ex:Countertop1 .
-ex:Location18 psr:onTopOf ex:Countertop1 .
-ex:Location19 psr:onTopOf ex:Table1 .
-ex:Location20 psr:onTopOf ex:Table1 .
-ex:Location21 psr:onTopOf ex:Table1 .
-ex:Location22 psr:onTopOf ex:Table1 .
-ex:Location23 psr:onTopOf ex:Stove1 .
-ex:Location24 psr:onTopOf ex:Table1 .
+ex:Location12 obot:onTopOf ex:Countertop1 .
+ex:Location13 obot:onTopOf ex:Countertop1 .
+ex:Location14 obot:onTopOf ex:Countertop1 .
+ex:Location15 obot:onTopOf ex:Countertop1 .
+ex:Location16 obot:onTopOf ex:Countertop1 .
+ex:Location17 obot:onTopOf ex:Countertop1 .
+ex:Location18 obot:onTopOf ex:Countertop1 .
+ex:Location19 obot:onTopOf ex:Table1 .
+ex:Location20 obot:onTopOf ex:Table1 .
+ex:Location21 obot:onTopOf ex:Table1 .
+ex:Location22 obot:onTopOf ex:Table1 .
+ex:Location23 obot:onTopOf ex:Stove1 .
+ex:Location24 obot:onTopOf ex:Table1 .
 
-ex:Countertop1 a psr:Furniture ;
+ex:Countertop1 a obot:Furniture ;
     dul:hasLocation ex:Location25 .
 
-ex:Stove1 a psr:Appliance ;
-    psr:hasAffordance soma:Heating ;
+ex:Stove1 a obot:Appliance ;
+    obot:hasAffordance soma:Heating ;
     dul:hasLocation ex:Location26 .
 
-ex:Wall1 a psr:Component ;
+ex:Wall1 a obot:Component ;
     dul:hasLocation ex:Location27 .

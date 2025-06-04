@@ -5,16 +5,16 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <https://w3id.org/onto-bot#> .
+@prefix obot:    <https://w3id.org/onto-bot#> .
 @prefix :       <http://example.org/data/> .
 
 # Step 1: Identify misplaced objects and plan retrieval
-:IdentifyMisplacedItems a psr:Instruction ;
+:IdentifyMisplacedItems a obot:Instruction ;
     rdfs:label "Identify misplaced items in the environment"@en .
 
-:Workflow1 a psr:Workflow ;
+:Workflow1 a obot:Workflow ;
     rdfs:label "Identify and locate misplaced items"@en ;
-    psr:hasAction :actionIdentifyItems .
+    obot:hasAction :actionIdentifyItems .
 
 :actionIdentifyItems a dul:Action ;
     rdfs:label "Identify misplaced items"@en .
@@ -50,11 +50,11 @@
 :PickUpFoodItemsOnTable a dul:Action ;
     rdfs:label "Pick up food items from the table"@en .
 
-:hasAction1 a psr:Workflow ;
-    psr:hasAction :IdentifyMisplacedItems, :actionIdentifyItems, :IdentifyRedJar, :IdentifyJelloBox, :IdentifyBlueCarton, :IdentifyStrawberryBanana, :IdentifyFoodItemsOnTable .
+:hasAction1 a obot:Workflow ;
+    obot:hasAction :IdentifyMisplacedItems, :actionIdentifyItems, :IdentifyRedJar, :IdentifyJelloBox, :IdentifyBlueCarton, :IdentifyStrawberryBanana, :IdentifyFoodItemsOnTable .
 
 # Step 3: Move to storage locations
-:NavigateToKitchenStorage a psr:Instruction ;
+:NavigateToKitchenStorage a obot:Instruction ;
     rdfs:label "Navigate to kitchen storage locations"@en .
 
 :MoveToCabinets a dul:Action ;
@@ -66,23 +66,23 @@
 :MoveToTable a dul:Action ;
     rdfs:label "Move to dining table"@en .
 
-:hasAction2 a psr:Workflow ;
-    psr:hasAction :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable .
+:hasAction2 a obot:Workflow ;
+    obot:hasAction :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable .
 
 # Step 4: Return each item to its standard storage location
-:PlaceRedJar in psr:actsOn :Cabinet ;
+:PlaceRedJar in obot:actsOn :Cabinet ;
     rdfs:label "Place red jar of preserves into the cabinet"@en .
 
-:PlaceJelloBox in psr:actsOn :Cabinet ;
+:PlaceJelloBox in obot:actsOn :Cabinet ;
     rdfs:label "Place JELLO box into the cabinet"@en .
 
-:PlaceBlueCarton in psr:actsOn :Refrigerator ;
+:PlaceBlueCarton in obot:actsOn :Refrigerator ;
     rdfs:label "Place blue carton of Alpen Salz into the refrigerator"@en .
 
-:PlaceStrawberryBanana in psr:actsOn :Cabinet ;
+:PlaceStrawberryBanana in obot:actsOn :Cabinet ;
     rdfs:label "Place strawberry-flavored banana product into the cabinet"@en .
 
-:PlaceFoodItemsOnTable in psr:actsOn :Table ;
+:PlaceFoodItemsOnTable in obot:actsOn :Table ;
     rdfs:label "Return food items to the table"@en .
 
 # Step 5: Atomically perform each returning action
@@ -102,17 +102,17 @@
     rdfs:label "Return food items to the table"@en .
 
 # Step 6: Complete the task with a final instruction
-:CompleteRestoration a psr:Instruction ;
+:CompleteRestoration a obot:Instruction ;
     rdfs:label "Complete the kitchen restoration"@en .
 
 # Link actions to the workflow
-:hasAction3 a psr:Workflow ;
-    psr:hasAction :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
+:hasAction3 a obot:Workflow ;
+    obot:hasAction :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
 
 # The sequence of actions
-:SequenceOfActions a psr:Workflow ;
+:SequenceOfActions a obot:Workflow ;
     rdfs:label "Sequence of actions for kitchen organization"@en ;
-    psr:hasAction :IdentifyMisplacedItems, :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable, :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
+    obot:hasAction :IdentifyMisplacedItems, :NavigateToKitchenStorage, :MoveToCabinets, :MoveToRefrigerator, :MoveToTable, :ReturnRedJar, :ReturnJelloBox, :ReturnBlueCarton, :ReturnStrawberryBanana, :ReturnFoodItems, :CompleteRestoration .
 
 # Note: Each action node can be linked via 'precedes' property to define order if desired.
 # For simplicity, the core sequence is listed above.

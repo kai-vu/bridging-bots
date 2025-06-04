@@ -11,11 +11,9 @@ obot:InstructionShape a sh:NodeShape ;
     sh:property [
         sh:path obot:hasWorkflow ;
         sh:class obot:Workflow ;
-        sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path obot:hasNaturalLanguage ;
-        sh:minCount 1 ;
     ] .
 
 # WORKFLOW SHAPE
@@ -23,8 +21,10 @@ obot:WorkflowShape a sh:NodeShape ;
     sh:targetClass obot:Workflow ;
     sh:property [
         sh:path obot:hasAction ;
-        sh:class dul:Action ;
-        sh:minCount 1 ;
+        sh:qualifiedValueShape [
+            sh:class dul:Action ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
     ] .
 
 # ACTION SHAPE
@@ -33,24 +33,22 @@ obot:ActionShape a sh:NodeShape ;
     sh:or (
         [ sh:property [
             sh:path dul:precedes ;
-            sh:minCount 1 ;
         ] ]
+        [ sh:targetSubjectsOf dul:precedes ]
         [ sh:property [
             sh:path dul:follows ;
-            sh:minCount 1 ;
         ] ]
+        [ sh:targetSubjectsOf dul:follows ]
     ) ;
     sh:property [
         sh:path soma:isPerformedBy ;
-        sh:class dul:Agent ;
     ] ;
     sh:property [
         sh:path obot:isAffordedBy ;
-        sh:class obot:Affordance ;
+        sh:minCount 1 ;
     ] ;
     sh:property [
         sh:path obot:actsOn ;
-        sh:class obot:Component ;
         sh:minCount 1 ;
     ] .
 

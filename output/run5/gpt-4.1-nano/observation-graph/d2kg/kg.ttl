@@ -3,25 +3,25 @@
 @prefix soma:   <http://www.ease-crc.org/ont/SOMA.owl#> .
 @prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix psr:    <http://w3id.org/psr-action#> .
+@prefix obot:    <http://w3id.org/onto-bot#> .
 @prefix ex:     <http://example.org/data/> .
 
 ##############################
 # Environment as a whole
 ##############################
 
-ex:kitchenEnvironment a psr:Environment ;
+ex:kitchenEnvironment a obot:Environment ;
     rdfs:label "Kitchen Environment"@en .
 
 ##############################
 # Cabinets
 ##############################
 
-ex:upperCabinets a psr:Component ;
+ex:upperCabinets a obot:Component ;
     rdfs:label "Upper Cabinets"@en ;
     rdfs:comment "Dark-colored cabinets above the countertop."@en .
 
-ex:cabinetLocation a psr:StandardLocation ;
+ex:cabinetLocation a obot:StandardLocation ;
     rdfs:label "Upper Cabinets Location"@en .
 
 ex:assignLocationCabinets a dul:hasLocation ;
@@ -32,35 +32,35 @@ ex:assignLocationCabinets a dul:hasLocation ;
 # Countertop and Food Items on it
 ##############################
 
-ex:countertop a psr:Component ;
+ex:countertop a obot:Component ;
     rdfs:label "Countertop"@en ;
     rdfs:comment "Beige countertop in the kitchen."@en .
 
 # Food items
-ex:redJarPreserves a psr:Object ;
+ex:redJarPreserves a obot:Object ;
     rdfs:label "Red Jar of Preserves"@en .
 
 ex:preservesOnCountertop a dul:hasLocation ;
     dul:hasLocation ex:countertop ;
     a owl:ObjectProperty .
 
-ex:redLid a psr:Affordance ;
+ex:redLid a obot:Affordance ;
     rdfs:label "Lid of the Jar"@en .
 
-ex:foodJarPreservesWithLid a psr:Object ;
+ex:foodJarPreservesWithLid a obot:Object ;
     rdfs:label "Food Jar with Lid"@en ;
-    psr:hasAffordance ex:redLid .
+    obot:hasAffordance ex:redLid .
 
-ex:redWhiteBox a psr:Object ;
+ex:redWhiteBox a obot:Object ;
     rdfs:label "Red and White Box labeled 'JELLO'"@en .
 
-ex:boxJELLO a psr:Object ;
+ex:boxJELLO a obot:Object ;
     rdfs:label "JELLO Box"@en .
 
-ex:blueCartonAlpenSalt a psr:Object ;
+ex:blueCartonAlpenSalt a obot:Object ;
     rdfs:label "Blue Carton of Alpen Salz"@en .
 
-ex:redStrawberryBananaProduct a psr:Object ;
+ex:redStrawberryBananaProduct a obot:Object ;
     rdfs:label "Red Strawberry-Flavored Banana Product"@en .
 
 # Position on countertop
@@ -72,10 +72,10 @@ ex:foodItemsOnCounter a dul:hasLocation ;
 # Refrigerator
 ##############################
 
-ex:whiteRefrigerator a psr:Object ;
+ex:whiteRefrigerator a obot:Object ;
     rdfs:label "White Refrigerator"@en .
 
-ex:refrigeratorNextToWall a psr:Location ;
+ex:refrigeratorNextToWall a obot:Location ;
     rdfs:label "Refrigerator Position"@en .
 
 ex:refrigeratorPosition a dul:hasLocation ;
@@ -86,45 +86,45 @@ ex:refrigeratorPosition a dul:hasLocation ;
 # Floor
 ##############################
 
-ex:floor a psr:Component ;
+ex:floor a obot:Component ;
     rdfs:label "Floor"@en .
 
 ##############################
 # Dining Table and Items
 ##############################
 
-ex:diningTable a psr:Object ;
+ex:diningTable a obot:Object ;
     rdfs:label "Wooden Dining Table"@en .
 
 ex:tableItems a dul:hasLocation ;
     dul:hasLocation ex:tableSurface ;
     a owl:ObjectProperty .
 
-ex:tableSurface a psr:Location ;
+ex:tableSurface a obot:Location ;
     rdfs:label "Table Surface"@en .
 
-ex:riceBubblesBox a psr:Object ;
+ex:riceBubblesBox a obot:Object ;
     rdfs:label "Box labeled 'Rice Bubbles'"@en .
 
-ex:chuckyBox a psr:Object ;
+ex:chuckyBox a obot:Object ;
     rdfs:label "Red Box labeled 'Chucky'"@en .
 
-ex:jamJar a psr:Object ;
+ex:jamJar a obot:Object ;
     rdfs:label "Jar of Jam/Jelly"@en .
 
-ex:drinkGlass1 a psr:Object ;
+ex:drinkGlass1 a obot:Object ;
     rdfs:label "Drinking Glass 1"@en .
 
-ex:drinkGlass2 a psr:Object ;
+ex:drinkGlass2 a obot:Object ;
     rdfs:label "Drinking Glass 2"@en .
 
-ex:ceramicPitcher a psr:Object ;
+ex:ceramicPitcher a obot:Object ;
     rdfs:label "Ceramic Pitcher"@en .
 
-ex:blackSpoon a psr:Object ;
+ex:blackSpoon a obot:Object ;
     rdfs:label "Small Black Spoon"@en .
 
-ex:foodContainers a psr:Object ;
+ex:foodContainers a obot:Object ;
     rdfs:label "Additional Food Containers/Snack Boxes"@en .
 
 # Assign items to table
@@ -164,10 +164,10 @@ ex:foodContainersOnTable a dul:hasLocation ;
 # Chairs
 ##############################
 
-ex:whiteUpholsteredChair a psr:Object ;
+ex:whiteUpholsteredChair a obot:Object ;
     rdfs:label "White Upholstered Chair"@en .
 
-ex:chairLocation a psr:Location ;
+ex:chairLocation a obot:Location ;
     rdfs:label "Chair Facing Kitchen"@en .
 
 ex:chairPosition a dul:hasLocation ;
@@ -178,13 +178,13 @@ ex:chairPosition a dul:hasLocation ;
 # Walls and Doors
 ##############################
 
-ex:whiteWall a psr:Component ;
+ex:whiteWall a obot:Component ;
     rdfs:label "White Wall"@en .
 
-ex:door a psr:Object ;
+ex:door a obot:Object ;
     rdfs:label "Door"@en .
 
-ex:doorPosition a psr:Location ;
+ex:doorPosition a obot:Location ;
     rdfs:label "Location of Door"@en .
 
 ex:doorLocation a dul:hasLocation ;
@@ -195,10 +195,10 @@ ex:doorLocation a dul:hasLocation ;
 # Ceiling Light Fixture
 ##############################
 
-ex:ceilingLightFixture a psr:Object ;
+ex:ceilingLightFixture a obot:Object ;
     rdfs:label "Ceiling Light Fixture"@en .
 
-ex:lightFixtureLocation a psr:Location ;
+ex:lightFixtureLocation a obot:Location ;
     rdfs:label "Ceiling Light Location"@en .
 
 ex:lightFixturePosition a dul:hasLocation ;
@@ -212,49 +212,49 @@ ex:lightFixturePosition a dul:hasLocation ;
 # Environment contains the cabinets
 ex:environmentHasCabinets a dul:hasComponent ;
     dul:hasComponent ex:upperCabinets ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains the countertop
 ex:environmentHasCountertop a dul:hasComponent ;
     dul:hasComponent ex:countertop ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains the floor
 ex:environmentHasFloor a dul:hasComponent ;
     dul:hasComponent ex:floor ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains refrigerator
 ex:environmentHasRefrigerator a dul:hasComponent ;
     dul:hasComponent ex:whiteRefrigerator ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains dining table
 ex:environmentHasTable a dul:hasComponent ;
     dul:hasComponent ex:diningTable ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains wall and door
 ex:environmentHasWall a dul:hasComponent ;
     dul:hasComponent ex:whiteWall ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 ex:environmentHasDoor a dul:hasComponent ;
     dul:hasComponent ex:door ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Environment contains ceiling light
 ex:environmentHasLightFixture a dul:hasComponent ;
     dul:hasComponent ex:ceilingLightFixture ;
-    rdfs:domain psr:Environment ;
-    rdfs:range psr:Component .
+    rdfs:domain obot:Environment ;
+    rdfs:range obot:Component .
 
 # Assign locations
 ex:assignRefrigeratorLocation a dul:hasLocation ;
