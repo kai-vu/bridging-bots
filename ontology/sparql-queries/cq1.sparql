@@ -1,6 +1,0 @@
-PREFIX obot: <https://w3id.org/onto-bot#>
-PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
-
-SELECT ?obj WHERE {
-  ?environment dul:hasComponent ?obj
-}

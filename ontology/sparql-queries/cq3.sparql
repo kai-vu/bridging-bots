@@ -1,7 +1,0 @@
-PREFIX obot: <https://w3id.org/onto-bot#>
-PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
-
-SELECT ?action ?actionLabel WHERE {
-  ?action a dul:Action ;
-    rdfs:label ?actionLabel .
-}

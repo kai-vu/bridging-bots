@@ -83,4 +83,4 @@ for (model, graph_type, setting), data in aggregated.items():
     })
 
 df = pd.DataFrame(summary)
-df.to_csv("shacl_validation_summary_by_config.csv", index=False)
+df.to_csv("../../output/summary-statistics/shacl_validation_summary.csv", index=False)
