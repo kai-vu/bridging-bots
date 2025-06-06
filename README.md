@@ -18,7 +18,7 @@ Service robots must interpret complex environments and plan actions accordingly.
 - **Multimodal large language models (MLLMs)**
 - **Ontology-based symbolic reasoning**
 
-The goal: to explore how robots can construct robust, context-aware knowledge of their environment and generate action sequences that are interpretable, transferable, and adaptable across platforms.
+The goal: to explore how neural models and symbolic representations can be effectively combined to generate structured, context-aware representations of environments and action sequences for service robots. 
 
 ---
 
