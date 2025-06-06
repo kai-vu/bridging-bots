@@ -24,7 +24,8 @@ The goal: to explore how robots can construct robust, context-aware knowledge of
 
 ## ⚙️ Pipeline
 
-![Workflow Overview](https://github.com/user-attachments/assets/b4bcfc27-34be-44c5-95c1-c7e187afe107)
+![Workflow Overview](https://github.com/user-attachments/assets/271d14ff-d5d3-464a-a594-e359bcab354f)
+
 
 > The figure summarizes the symbolic integration paths for generating structured KGs from different input modalities.
 
