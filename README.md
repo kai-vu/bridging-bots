@@ -24,7 +24,7 @@ The goal: to explore how robots can construct robust, context-aware knowledge of
 
 ## ⚙️ Pipeline
 
-![Workflow Overview](https://github.com/user-attachments/assets/924a3637-408e-4f4c-b5ea-e1cbf72bff19)
+![Workflow Overview](https://github.com/user-attachments/assets/b4bcfc27-34be-44c5-95c1-c7e187afe107)
 
 > The figure summarizes the symbolic integration paths for generating structured KGs from different input modalities.
 
@@ -56,14 +56,14 @@ Each model was tested using 4 integration methods:
 
 ---
 
-## 🏗️ Example: Input to KG
+## Example: Input to KG
 
 ![Example](https://github.com/user-attachments/assets/6648c08f-d48d-4f61-8623-2d39b7a4b499)
 
 From multiple viewpoints of a Webots kitchen simulation, the system generates:
 
-- 🔍 A **symbolic description** of the environment  
-- 🧹 A **sequence of robot actions** (e.g., Pick up jar → Open fridge → Put jar inside)
+- A **symbolic description** of the environment  
+- A **sequence of robot actions** (e.g., Pick up jar → Open fridge → Put jar inside)
 
 Each element in the resulting graph follows the formal **OntoBOT ontology**.
 
@@ -83,17 +83,17 @@ Each element in the resulting graph follows the formal **OntoBOT ontology**.
 ---
 
 ## Repository Structure
-
+```
 bridging-bots/
 │
-├── ontology/ # OntoBOT ontology files (TTL, SHACL)
+├── ontology/ # OntoBOT ontology files (TTL, SHACL) 
 ├── images/ # SImulation environment screenshots 
 ├── output/ # Generated KGs (observation & action graphs)
 ├── scripts/ # Model interaction and KG construction scripts
 ├── webotsFiles/ # Webots simulation scripts
 ├── LICENSE
 └── README.md # This file
-
+```
 ---
 
 If you use this work, please cite our paper:
